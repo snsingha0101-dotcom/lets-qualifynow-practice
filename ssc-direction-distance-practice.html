@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Direction & Distance Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#102a43;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(16,42,67,0.18);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 11px;
+    border-radius:6px;
+    font-size:14px;
+    transition:.25s;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    text-align:center;
+    padding:58px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:.95;
+}
+
+.hero .hindi{
+    display:block;
+    margin-top:7px;
+    font-size:17px;
+}
+
+/* MAIN */
+
+.container{
+    max-width:1050px;
+    margin:40px auto;
+    padding:0 18px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #d9e2ec;
+    box-shadow:0 4px 14px rgba(16,42,67,.06);
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro p{
+    margin-bottom:10px;
+}
+
+.hindi-line{
+    display:block;
+    margin-top:5px;
+    color:#52606d;
+}
+
+.level{
+    margin-top:15px;
+    padding:12px 15px;
+    background:#eef6fb;
+    border-left:4px solid #173f5f;
+    border-radius:7px;
+}
+
+/* SECTION */
+
+.category-title{
+    background:#173f5f;
+    color:white;
+    padding:13px 18px;
+    border-radius:9px;
+    margin:35px 0 18px;
+    font-size:21px;
+}
+
+/* QUESTION */
+
+.question{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 3px 12px rgba(16,42,67,.05);
+    transition:.25s;
+}
+
+.question:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(16,42,67,.09);
+}
+
+.q-number{
+    color:#102a43;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.q-text{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:15px;
+    color:#243b53;
+}
+
+.q-hindi{
+    display:block;
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px dashed #d9e2ec;
+    color:#52606d;
+    font-weight:600;
+}
+
+/* OPTIONS */
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #d9e2ec;
+    background:#f7f9fc;
+    padding:10px 13px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:all .2s ease;
+    user-select:none;
+}
+
+.option:hover{
+    background:#d9eaf7;
+    border-color:#829ab1;
+}
+
+.option.selected{
+    border-color:#173f5f;
+    background:#d9eaf7;
+    font-weight:bold;
+}
+
+.option.correct{
+    background:#e6f4ea;
+    border-color:#2e7d32;
+    color:#1b5e20;
+    font-weight:bold;
+}
+
+.option.wrong{
+    background:#fdecea;
+    border-color:#c62828;
+    color:#b71c1c;
+    font-weight:bold;
+}
+
+/* ANSWER */
+
+.answer{
+    display:none;
+    margin-top:16px;
+    padding:14px;
+    background:#eef6fb;
+    border-left:4px solid #173f5f;
+    border-radius:7px;
+}
+
+.answer strong{
+    color:#102a43;
+}
+
+.answer-hindi{
+    display:block;
+    margin-top:5px;
+    color:#52606d;
+    font-weight:600;
+}
+
+.solution{
+    display:none;
+    margin-top:12px;
+    color:#52606d;
+}
+
+.solution-hindi{
+    display:block;
+    margin-top:12px;
+    padding-top:10px;
+    border-top:1px dashed #d9e2ec;
+}
+
+/* RESULT MESSAGE */
+
+.result-message{
+    margin-top:12px;
+    padding:10px 12px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.result-message.correct-message{
+    background:#e6f4ea;
+    color:#1b5e20;
+}
+
+.result-message.wrong-message{
+    background:#fdecea;
+    color:#b71c1c;
+}
+
+/* RESULT BOX */
+
+.result-box{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:28px;
+    margin-top:40px;
+    box-shadow:0 4px 15px rgba(16,42,67,.07);
+    text-align:center;
+}
+
+.result-box h2{
+    color:#102a43;
+    margin-bottom:22px;
+}
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:22px;
+}
+
+.result-item{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:9px;
+    padding:15px 10px;
+}
+
+.result-item strong{
+    display:block;
+    font-size:24px;
+    color:#102a43;
+    margin-bottom:5px;
+}
+
+.result-item span{
+    color:#52606d;
+    font-size:14px;
+}
+
+.reset-btn{
+    border:none;
+    background:#102a43;
+    color:white;
+    padding:11px 22px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.25s;
+}
+
+.reset-btn:hover{
+    background:#173f5f;
+}
+
+/* NOTE */
+
+.note{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    padding:20px;
+    border-radius:10px;
+    margin-top:30px;
+}
+
+.note h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.note p{
+    margin-bottom:8px;
+}
+
+/* BACK */
+
+.back{
+    text-align:center;
+    margin:35px 0;
+}
+
+.back a{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:7px;
+    transition:.25s;
+}
+
+.back a:hover{
+    background:#173f5f;
+}
+
+/* FOOTER */
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:50px;
+}
+
+footer p{
+    margin:4px 0;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    .result-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+LET'S QUALIFYNOW
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="study-material.html">Study Material</a>
+<a href="live-classes.html">Live Classes</a>
+<a href="test-series.html">Test Series</a>
+<a href="exams.html">Exams</a>
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>🧭 SSC Direction & Distance Practice</h1>
+
+<p>
+50 Exam-Oriented Questions with Answers & Detailed Solutions
+<span class="hindi">
+50 परीक्षा-उन्मुख प्रश्न उत्तर एवं विस्तृत समाधान सहित
+</span>
+</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="intro">
+
+<h2>📘 SSC Direction & Distance Practice Set</h2>
+
+<p>
+This practice set covers Basic Directions, Distance Calculation, Turning Problems, Shortest Distance, Position-Based Questions, Shadow-Based Questions and Mixed Higher-Level Direction & Distance questions.
+</p>
+
+<span class="hindi-line">
+इस Practice Set में Basic Directions, Distance Calculation, Turning Problems, Shortest Distance, Position-Based Questions, Shadow-Based Questions और Mixed Higher-Level Direction & Distance questions शामिल हैं।
+</span>
+
+<div class="level">
+
+<strong>Level:</strong> Basic → Moderate → Advanced → SSC Exam Level
+
+<span class="hindi-line">
+<strong>स्तर:</strong> Basic → Moderate → Advanced → SSC Exam Level
+</span>
+
+</div>
+
+<br>
+
+<p>
+<strong>Instruction:</strong> Select an option. The answer and detailed solution will appear only after you attempt the question.
+</p>
+
+<span class="hindi-line">
+<strong>निर्देश:</strong> एक option चुनें। Answer और detailed solution केवल question attempt करने के बाद दिखाई देगा।
+</span>
+
+</div>
+
+
+<div id="questionsContainer"></div>
+
+
+<!-- RESULT -->
+
+<div class="result-box">
+
+<h2>📊 Your Practice Result / आपका Practice Result</h2>
+
+<div class="result-grid">
+
+<div class="result-item">
+<strong id="score">0 / 50</strong>
+<span>Score / स्कोर</span>
+</div>
+
+<div class="result-item">
+<strong id="attempted">0</strong>
+<span>Attempted / प्रयास</span>
+</div>
+
+<div class="result-item">
+<strong id="correct">0</strong>
+<span>Correct / सही</span>
+</div>
+
+<div class="result-item">
+<strong id="wrong">0</strong>
+<span>Wrong / गलत</span>
+</div>
+
+</div>
+
+<button class="reset-btn" id="resetBtn">
+Reset Practice / दोबारा शुरू करें
+</button>
+
+</div>
+
+
+<!-- STRATEGY -->
+
+<div class="note">
+
+<h3>📌 Practice Strategy / अभ्यास रणनीति</h3>
+
+<p>
+For Direction & Distance questions, first make a clear direction diagram. Keep North at the top, South at the bottom, East on the right and West on the left.
+</p>
+
+<span class="hindi-line">
+Direction & Distance questions में सबसे पहले एक clear direction diagram बनाइए। North को ऊपर, South को नीचे, East को दाईं ओर और West को बाईं ओर रखें।
+</span>
+
+<p style="margin-top:12px;">
+<strong>Exam Tip:</strong> In turning questions, carefully identify clockwise and anticlockwise turns. In distance questions, subtract movements in opposite directions and use the Pythagoras theorem for perpendicular movements.
+</p>
+
+<span class="hindi-line">
+<strong>Exam Tip:</strong> Turning questions में clockwise और anticlockwise को ध्यान से identify करें। Distance questions में opposite directions की distances को subtract करें और perpendicular movements के लिए Pythagoras theorem का प्रयोग करें।
+</span>
+
+</div>
+
+
+<div class="back">
+
+<a href="ssc-topic-wise-practice.html">
+← Back to SSC Topic-wise Practice
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p><strong>LET'S QUALIFYNOW</strong></p>
+
+<p>
+Reasoning Preparation for SSC • Banking • Railway • Defence • State Government Exams
+</p>
+
+<p>
+© 2026 Let's QualifyNow. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   QUESTION DATA
+========================================================= */
+
+const questionData = [
+
+/* 1 */
+{
+q:"Ravi is facing North. He turns 90° clockwise. Which direction is he facing now?",
+h:"रवि उत्तर की ओर मुख करके खड़ा है। वह 90° clockwise मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"West / पश्चिम",
+"East / पूर्व",
+"South / दक्षिण",
+"North / उत्तर"
+],
+a:"B",
+s:"From North, a 90° clockwise turn takes Ravi towards East.",
+sh:"उत्तर से 90° clockwise turn करने पर रवि पूर्व दिशा में होगा।"
+},
+
+/* 2 */
+{
+q:"A person is facing East. He turns 90° anticlockwise. Which direction is he facing?",
+h:"एक व्यक्ति पूर्व की ओर मुख करके खड़ा है। वह 90° anticlockwise मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"South / दक्षिण",
+"West / पश्चिम",
+"North / उत्तर",
+"North-East / उत्तर-पूर्व"
+],
+a:"C",
+s:"From East, a 90° anticlockwise turn leads to North.",
+sh:"पूर्व से 90° anticlockwise turn करने पर उत्तर दिशा आती है।"
+},
+
+/* 3 */
+{
+q:"A man is facing South. He turns 180°. Which direction is he facing now?",
+h:"एक व्यक्ति दक्षिण की ओर मुख करके खड़ा है। वह 180° मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"East / पूर्व",
+"West / पश्चिम",
+"South / दक्षिण",
+"North / उत्तर"
+],
+a:"D",
+s:"A 180° turn changes the direction to its opposite. The opposite of South is North.",
+sh:"180° turn करने पर दिशा अपनी opposite direction में बदल जाती है। दक्षिण की opposite direction उत्तर है।"
+},
+
+/* 4 */
+{
+q:"A person is facing West. He turns 90° clockwise. Which direction is he facing?",
+h:"एक व्यक्ति पश्चिम की ओर मुख करके खड़ा है। वह 90° clockwise मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"North / उत्तर",
+"South / दक्षिण",
+"East / पूर्व",
+"North-East / उत्तर-पूर्व"
+],
+a:"A",
+s:"From West, a 90° clockwise turn takes the person to North.",
+sh:"पश्चिम से 90° clockwise turn करने पर व्यक्ति उत्तर दिशा में होगा।"
+},
+
+/* 5 */
+{
+q:"A boy is facing North-East. He turns 90° clockwise. Which direction is he facing?",
+h:"एक लड़का उत्तर-पूर्व की ओर मुख करके खड़ा है। वह 90° clockwise मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"North-West / उत्तर-पश्चिम",
+"South-East / दक्षिण-पूर्व",
+"South-West / दक्षिण-पश्चिम",
+"North / उत्तर"
+],
+a:"B",
+s:"From North-East, a 90° clockwise turn leads to South-East.",
+sh:"उत्तर-पूर्व से 90° clockwise turn करने पर दक्षिण-पूर्व दिशा आती है।"
+},
+
+/* 6 */
+{
+q:"A person is facing South-West. He turns 90° anticlockwise. Which direction is he facing?",
+h:"एक व्यक्ति दक्षिण-पश्चिम की ओर मुख करके खड़ा है। वह 90° anticlockwise मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"North-East / उत्तर-पूर्व",
+"North-West / उत्तर-पश्चिम",
+"South-East / दक्षिण-पूर्व",
+"South / दक्षिण"
+],
+a:"C",
+s:"From South-West, a 90° anticlockwise turn leads to South-East.",
+sh:"दक्षिण-पश्चिम से 90° anticlockwise turn करने पर दक्षिण-पूर्व दिशा आती है।"
+},
+
+/* 7 */
+{
+q:"A man is facing South-East. He turns 90° anticlockwise. Which direction is he facing?",
+h:"एक व्यक्ति दक्षिण-पूर्व की ओर मुख करके खड़ा है। वह 90° anticlockwise मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"North-West / उत्तर-पश्चिम",
+"South-West / दक्षिण-पश्चिम",
+"South / दक्षिण",
+"North-East / उत्तर-पूर्व"
+],
+a:"D",
+s:"From South-East, a 90° anticlockwise turn leads to North-East.",
+sh:"दक्षिण-पूर्व से 90° anticlockwise turn करने पर उत्तर-पूर्व दिशा आती है।"
+},
+
+/* 8 */
+{
+q:"A person is facing North-West. He turns 180°. Which direction is he facing?",
+h:"एक व्यक्ति उत्तर-पश्चिम की ओर मुख करके खड़ा है। वह 180° मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"South-East / दक्षिण-पूर्व",
+"North-East / उत्तर-पूर्व",
+"South-West / दक्षिण-पश्चिम",
+"West / पश्चिम"
+],
+a:"A",
+s:"The direction opposite to North-West is South-East.",
+sh:"उत्तर-पश्चिम की opposite direction दक्षिण-पूर्व है।"
+},
+
+/* 9 */
+{
+q:"If a person is facing East and turns 270° clockwise, which direction will he face?",
+h:"यदि कोई व्यक्ति पूर्व की ओर मुख करके खड़ा है और 270° clockwise मुड़ता है, तो वह किस दिशा की ओर मुख करेगा?",
+o:[
+"South / दक्षिण",
+"North / उत्तर",
+"West / पश्चिम",
+"South-West / दक्षिण-पश्चिम"
+],
+a:"B",
+s:"270° clockwise is equivalent to 90° anticlockwise. From East, 90° anticlockwise gives North.",
+sh:"270° clockwise = 90° anticlockwise। पूर्व से 90° anticlockwise करने पर उत्तर आता है।"
+},
+
+/* 10 */
+{
+q:"A person is facing North. He turns 45° clockwise and then another 45° clockwise. Which direction is he facing?",
+h:"एक व्यक्ति उत्तर की ओर मुख करके खड़ा है। वह 45° clockwise और फिर 45° clockwise मुड़ता है। अब वह किस दिशा की ओर है?",
+o:[
+"North-West / उत्तर-पश्चिम",
+"South-East / दक्षिण-पूर्व",
+"East / पूर्व",
+"West / पश्चिम"
+],
+a:"C",
+s:"Total turn = 45° + 45° = 90° clockwise. North + 90° clockwise = East.",
+sh:"कुल turn = 45° + 45° = 90° clockwise। उत्तर से 90° clockwise करने पर पूर्व आता है।"
+},
+
+/* 11 */
+{
+q:"Ravi walks 5 km towards North and then 3 km towards East. In which direction is he from the starting point?",
+h:"रवि 5 km उत्तर की ओर और फिर 3 km पूर्व की ओर चलता है। वह starting point से किस दिशा में है?",
+o:[
+"North-West / उत्तर-पश्चिम",
+"North-East / उत्तर-पूर्व",
+"South-East / दक्षिण-पूर्व",
+"South-West / दक्षिण-पश्चिम"
+],
+a:"B",
+s:"He is 5 km North and 3 km East of the starting point. Therefore, his position is in the North-East direction.",
+sh:"वह starting point से 5 km उत्तर और 3 km पूर्व में है। इसलिए उसकी स्थिति उत्तर-पूर्व दिशा में है।"
+},
+
+/* 12 */
+{
+q:"A man walks 8 km towards South and then 5 km towards West. In which direction is he from his starting point?",
+h:"एक व्यक्ति 8 km दक्षिण और फिर 5 km पश्चिम की ओर चलता है। वह starting point से किस दिशा में है?",
+o:[
+"North-West / उत्तर-पश्चिम",
+"South-East / दक्षिण-पूर्व",
+"South-West / दक्षिण-पश्चिम",
+"North-East / उत्तर-पूर्व"
+],
+a:"C",
+s:"He moves South and then West. Therefore, his final position is in the South-West direction.",
+sh:"वह दक्षिण और फिर पश्चिम की ओर जाता है। इसलिए उसकी अंतिम स्थिति दक्षिण-पश्चिम दिशा में है।"
+},
+
+/* 13 */
+{
+q:"A person walks 10 km East and then 6 km West. How far is he from the starting point?",
+h:"एक व्यक्ति 10 km पूर्व और फिर 6 km पश्चिम चलता है। वह starting point से कितनी दूर है?",
+o:[
+"4 km / 4 km",
+"16 km / 16 km",
+"6 km / 6 km",
+"10 km / 10 km"
+],
+a:"A",
+s:"Net distance = 10 − 6 = 4 km. He is 4 km East of the starting point.",
+sh:"Net distance = 10 − 6 = 4 km। वह starting point से 4 km पूर्व में है।"
+},
+
+/* 14 */
+{
+q:"A man walks 12 km North and then 7 km South. How far is he from the starting point?",
+h:"एक व्यक्ति 12 km उत्तर और फिर 7 km दक्षिण चलता है। वह starting point से कितनी दूर है?",
+o:[
+"19 km / 19 km",
+"7 km South / 7 km दक्षिण",
+"12 km North / 12 km उत्तर",
+"5 km North / 5 km उत्तर"
+],
+a:"D",
+s:"Net movement = 12 − 7 = 5 km North.",
+sh:"Net movement = 12 − 7 = 5 km उत्तर।"
+},
+
+/* 15 */
+{
+q:"A person walks 6 km North and then 8 km East. What is the shortest distance between his final position and the starting point?",
+h:"एक व्यक्ति 6 km उत्तर और फिर 8 km पूर्व चलता है। उसकी final position और starting point के बीच shortest distance कितनी है?",
+o:[
+"8 km / 8 km",
+"12 km / 12 km",
+"10 km / 10 km",
+"14 km / 14 km"
+],
+a:"C",
+s:"Using Pythagoras theorem: Distance = √(6² + 8²) = √(36 + 64) = √100 = 10 km.",
+sh:"Pythagoras theorem से: Distance = √(6² + 8²) = √(36 + 64) = √100 = 10 km।"
+},
+
+/* 16 */
+{
+q:"A man walks 9 km South and then 12 km East. What is the shortest distance from his starting point?",
+h:"एक व्यक्ति 9 km दक्षिण और फिर 12 km पूर्व चलता है। starting point से shortest distance कितनी है?",
+o:[
+"12 km / 12 km",
+"15 km / 15 km",
+"21 km / 21 km",
+"3 km / 3 km"
+],
+a:"B",
+s:"Distance = √(9² + 12²) = √(81 + 144) = √225 = 15 km.",
+sh:"Distance = √(9² + 12²) = √(81 + 144) = √225 = 15 km।"
+},
+
+/* 17 */
+{
+q:"A person travels 7 km East, 7 km North, 7 km West and finally 7 km South. Where is he with respect to his starting point?",
+h:"एक व्यक्ति 7 km पूर्व, 7 km उत्तर, 7 km पश्चिम और अंत में 7 km दक्षिण जाता है। वह starting point के सापेक्ष कहाँ है?",
+o:[
+"7 km East / 7 km पूर्व",
+"7 km North / 7 km उत्तर",
+"14 km away / 14 km दूर",
+"At the starting point / Starting point पर"
+],
+a:"D",
+s:"East and West movements cancel each other. North and South movements also cancel each other. Therefore, he returns to the starting point.",
+sh:"East और West की movements एक-दूसरे को cancel करती हैं। North और South की movements भी cancel हो जाती हैं। इसलिए वह वापस starting point पर आ जाता है।"
+},
+
+/* 18 */
+{
+q:"A man moves 15 km East and then 8 km West. How far and in which direction is he from the starting point?",
+h:"एक व्यक्ति 15 km पूर्व और फिर 8 km पश्चिम जाता है। वह starting point से कितनी दूर और किस दिशा में है?",
+o:[
+"7 km East / 7 km पूर्व",
+"7 km West / 7 km पश्चिम",
+"23 km East / 23 km पूर्व",
+"8 km East / 8 km पूर्व"
+],
+a:"A",
+s:"Net movement = 15 − 8 = 7 km East.",
+sh:"Net movement = 15 − 8 = 7 km पूर्व।"
+},
+
+/* 19 */
+{
+q:"A person walks 20 km North and then 15 km South. How far and in which direction is he from the starting point?",
+h:"एक व्यक्ति 20 km उत्तर और फिर 15 km दक्षिण चलता है। वह starting point से कितनी दूर और किस दिशा में है?",
+o:[
+"5 km South / 5 km दक्षिण",
+"35 km North / 35 km उत्तर",
+"5 km North / 5 km उत्तर",
+"15 km North / 15 km उत्तर"
+],
+a:"C",
+s:"Net movement = 20 − 15 = 5 km North.",
+sh:"Net movement = 20 − 15 = 5 km उत्तर।"
+},
+
+/* 20 */
+{
+q:"A man walks 5 km East and 12 km North. What is the shortest distance between his final position and the starting point?",
+h:"एक व्यक्ति 5 km पूर्व और 12 km उत्तर चलता है। उसकी final position और starting point के बीच shortest distance कितनी है?",
+o:[
+"12 km / 12 km",
+"13 km / 13 km",
+"17 km / 17 km",
+"7 km / 7 km"
+],
+a:"B",
+s:"Distance = √(5² + 12²) = √(25 + 144) = √169 = 13 km.",
+sh:"Distance = √(5² + 12²) = √(25 + 144) = √169 = 13 km।"
+},
+
+/* 21 */
+{
+q:"A person starts facing North. He turns 90° clockwise, then 90° anticlockwise. Which direction is he facing now?",
+h:"एक व्यक्ति उत्तर की ओर मुख करके शुरू करता है। वह 90° clockwise और फिर 90° anticlockwise मुड़ता है। अब वह किस दिशा की ओर है?",
+o:[
+"North / उत्तर",
+"East / पूर्व",
+"South / दक्षिण",
+"West / पश्चिम"
+],
+a:"A",
+s:"North → 90° clockwise → East. East → 90° anticlockwise → North.",
+sh:"उत्तर → 90° clockwise → पूर्व। पूर्व → 90° anticlockwise → उत्तर।"
+},
+
+/* 22 */
+{
+q:"A man faces East. He turns 45° clockwise, then 90° clockwise. Which direction is he facing?",
+h:"एक व्यक्ति पूर्व की ओर मुख करता है। वह 45° clockwise और फिर 90° clockwise मुड़ता है। अब वह किस दिशा में है?",
+o:[
+"North / उत्तर",
+"South / दक्षिण",
+"North-West / उत्तर-पश्चिम",
+"South-West / दक्षिण-पश्चिम"
+],
+a:"D",
+s:"Total turn = 45° + 90° = 135° clockwise. From East, 135° clockwise leads to South-West.",
+sh:"कुल turn = 45° + 90° = 135° clockwise। पूर्व से 135° clockwise करने पर दक्षिण-पश्चिम आता है।"
+},
+
+/* 23 */
+{
+q:"A person is facing South. He turns 45° anticlockwise. Which direction does he face?",
+h:"एक व्यक्ति दक्षिण की ओर मुख करके खड़ा है। वह 45° anticlockwise मुड़ता है। अब वह किस दिशा की ओर मुख करेगा?",
+o:[
+"South-West / दक्षिण-पश्चिम",
+"South-East / दक्षिण-पूर्व",
+"North-East / उत्तर-पूर्व",
+"North-West / उत्तर-पश्चिम"
+],
+a:"B",
+s:"A 45° anticlockwise turn from South gives South-East.",
+sh:"दक्षिण से 45° anticlockwise turn करने पर दक्षिण-पूर्व आता है।"
+},
+
+/* 24 */
+{
+q:"A person is facing West. He turns 45° anticlockwise. Which direction is he facing?",
+h:"एक व्यक्ति पश्चिम की ओर मुख करके खड़ा है। वह 45° anticlockwise मुड़ता है। अब वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"North-West / उत्तर-पश्चिम",
+"North-East / उत्तर-पूर्व",
+"South-West / दक्षिण-पश्चिम",
+"South-East / दक्षिण-पूर्व"
+],
+a:"C",
+s:"From West, 45° anticlockwise gives South-West.",
+sh:"पश्चिम से 45° anticlockwise करने पर दक्षिण-पश्चिम आता है।"
+},
+
+/* 25 */
+{
+q:"A man faces North-East. He turns 135° clockwise. Which direction is he facing?",
+h:"एक व्यक्ति उत्तर-पूर्व की ओर मुख करके खड़ा है। वह 135° clockwise मुड़ता है। अब वह किस दिशा में है?",
+o:[
+"South / दक्षिण",
+"North / उत्तर",
+"West / पश्चिम",
+"South-West / दक्षिण-पश्चिम"
+],
+a:"A",
+s:"North-East → 90° clockwise → South-East. Another 45° clockwise → South.",
+sh:"उत्तर-पूर्व → 90° clockwise → दक्षिण-पूर्व। फिर 45° clockwise → दक्षिण।"
+},
+
+/* 26 */
+{
+q:"A person faces South-West. He turns 135° clockwise. Which direction is he facing?",
+h:"एक व्यक्ति दक्षिण-पश्चिम की ओर मुख करके खड़ा है। वह 135° clockwise मुड़ता है। अब वह किस दिशा में है?",
+o:[
+"East / पूर्व",
+"North / उत्तर",
+"South / दक्षिण",
+"North-West / उत्तर-पश्चिम"
+],
+a:"B",
+s:"South-West → 90° clockwise → North-West. Another 45° clockwise → North.",
+sh:"दक्षिण-पश्चिम → 90° clockwise → उत्तर-पश्चिम। फिर 45° clockwise → उत्तर।"
+},
+
+/* 27 */
+{
+q:"A person is facing North-West. He turns 45° clockwise and then 90° anticlockwise. Which direction is he facing finally?",
+h:"एक व्यक्ति उत्तर-पश्चिम की ओर मुख करके खड़ा है। वह 45° clockwise और फिर 90° anticlockwise मुड़ता है। अंत में वह किस दिशा में है?",
+o:[
+"North / उत्तर",
+"West / पश्चिम",
+"South-West / दक्षिण-पश्चिम",
+"South-East / दक्षिण-पूर्व"
+],
+a:"B",
+s:"North-West → 45° clockwise → North. North → 90° anticlockwise → West.",
+sh:"उत्तर-पश्चिम → 45° clockwise → उत्तर। उत्तर → 90° anticlockwise → पश्चिम।"
+},
+
+/* 28 */
+{
+q:"A man is facing South-East. He turns 90° clockwise. Which direction is he facing?",
+h:"एक व्यक्ति दक्षिण-पूर्व की ओर मुख करके खड़ा है। वह 90° clockwise मुड़ता है। अब वह किस दिशा में है?",
+o:[
+"South / दक्षिण",
+"South-West / दक्षिण-पश्चिम",
+"North-East / उत्तर-पूर्व",
+"North-West / उत्तर-पश्चिम"
+],
+a:"B",
+s:"From South-East, a 90° clockwise turn leads to South-West.",
+sh:"दक्षिण-पूर्व से 90° clockwise turn करने पर दक्षिण-पश्चिम आता है।"
+},
+
+/* 29 */
+{
+q:"A person is facing North. He turns 270° anticlockwise. Which direction is he facing?",
+h:"एक व्यक्ति उत्तर की ओर मुख करके खड़ा है। वह 270° anticlockwise मुड़ता है। अब वह किस दिशा में है?",
+o:[
+"East / पूर्व",
+"West / पश्चिम",
+"South / दक्षिण",
+"North-East / उत्तर-पूर्व"
+],
+a:"A",
+s:"270° anticlockwise is equivalent to 90° clockwise. North → 90° clockwise → East.",
+sh:"270° anticlockwise = 90° clockwise। उत्तर से 90° clockwise करने पर पूर्व आता है।"
+},
+
+/* 30 */
+{
+q:"A person is facing East. He turns 180° and then 90° clockwise. Which direction is he facing?",
+h:"एक व्यक्ति पूर्व की ओर मुख करके खड़ा है। वह 180° और फिर 90° clockwise मुड़ता है। अब वह किस दिशा की ओर है?",
+o:[
+"North / उत्तर",
+"South / दक्षिण",
+"East / पूर्व",
+"West / पश्चिम"
+],
+a:"A",
+s:"East → 180° → West. West → 90° clockwise → North.",
+sh:"पूर्व → 180° → पश्चिम। पश्चिम से 90° clockwise → उत्तर।"
+},
+
+/* 31 */
+{
+q:"A man walks 8 km North and then 15 km East. What is the shortest distance from his starting point?",
+h:"एक व्यक्ति 8 km उत्तर और फिर 15 km पूर्व चलता है। starting point से shortest distance कितनी है?",
+o:[
+"16 km / 16 km",
+"18 km / 18 km",
+"17 km / 17 km",
+"23 km / 23 km"
+],
+a:"C",
+s:"Distance = √(8² + 15²) = √(64 + 225) = √289 = 17 km.",
+sh:"Distance = √(8² + 15²) = √(64 + 225) = √289 = 17 km।"
+},
+
+/* 32 */
+{
+q:"A person walks 7 km South and 24 km West. What is the shortest distance between his final position and the starting point?",
+h:"एक व्यक्ति 7 km दक्षिण और 24 km पश्चिम चलता है। उसकी final position और starting point के बीच shortest distance कितनी है?",
+o:[
+"24 km / 24 km",
+"25 km / 25 km",
+"31 km / 31 km",
+"17 km / 17 km"
+],
+a:"B",
+s:"Distance = √(7² + 24²) = √(49 + 576) = √625 = 25 km.",
+sh:"Distance = √(7² + 24²) = √(49 + 576) = √625 = 25 km।"
+},
+
+/* 33 */
+{
+q:"Ravi walks 9 km East and then 12 km North. In which direction is he from the starting point?",
+h:"रवि 9 km पूर्व और फिर 12 km उत्तर चलता है। वह starting point से किस दिशा में है?",
+o:[
+"North-East / उत्तर-पूर्व",
+"South-East / दक्षिण-पूर्व",
+"North-West / उत्तर-पश्चिम",
+"South-West / दक्षिण-पश्चिम"
+],
+a:"A",
+s:"He is East as well as North of the starting point. Therefore, he is in the North-East direction.",
+sh:"वह starting point से पूर्व और उत्तर दोनों ओर है। इसलिए वह उत्तर-पूर्व दिशा में है।"
+},
+
+/* 34 */
+{
+q:"A person walks 12 km West and then 5 km South. In which direction is he from his starting point?",
+h:"एक व्यक्ति 12 km पश्चिम और फिर 5 km दक्षिण चलता है। वह starting point से किस दिशा में है?",
+o:[
+"North-West / उत्तर-पश्चिम",
+"South-East / दक्षिण-पूर्व",
+"West / पश्चिम",
+"South-West / दक्षिण-पश्चिम"
+],
+a:"D",
+s:"He moves West and South. Therefore his final position is in the South-West direction.",
+sh:"वह पश्चिम और दक्षिण की ओर जाता है। इसलिए उसकी final position दक्षिण-पश्चिम दिशा में है।"
+},
+
+/* 35 */
+{
+q:"A man walks 16 km North and 12 km East. What is the shortest distance from the starting point?",
+h:"एक व्यक्ति 16 km उत्तर और 12 km पूर्व चलता है। starting point से shortest distance कितनी है?",
+o:[
+"18 km / 18 km",
+"24 km / 24 km",
+"20 km / 20 km",
+"28 km / 28 km"
+],
+a:"C",
+s:"Distance = √(16² + 12²) = √(256 + 144) = √400 = 20 km.",
+sh:"Distance = √(16² + 12²) = √(256 + 144) = √400 = 20 km।"
+},
+
+/* 36 */
+{
+q:"A man walks 18 km South and then 24 km East. What is the shortest distance from the starting point?",
+h:"एक व्यक्ति 18 km दक्षिण और फिर 24 km पूर्व चलता है। starting point से shortest distance कितनी है?",
+o:[
+"24 km / 24 km",
+"30 km / 30 km",
+"42 km / 42 km",
+"6 km / 6 km"
+],
+a:"B",
+s:"Distance = √(18² + 24²) = √(324 + 576) = √900 = 30 km.",
+sh:"Distance = √(18² + 24²) = √(324 + 576) = √900 = 30 km।"
+},
+
+/* 37 */
+{
+q:"A person walks 10 km East, then 10 km North, then 10 km West. How far is he from the starting point?",
+h:"एक व्यक्ति 10 km पूर्व, फिर 10 km उत्तर और फिर 10 km पश्चिम चलता है। वह starting point से कितनी दूर है?",
+o:[
+"10 km / 10 km",
+"20 km / 20 km",
+"30 km / 30 km",
+"0 km / 0 km"
+],
+a:"A",
+s:"East 10 km and West 10 km cancel each other. He remains 10 km North of the starting point. Therefore distance = 10 km.",
+sh:"East 10 km और West 10 km cancel हो जाते हैं। वह starting point से 10 km उत्तर में रहता है। इसलिए distance = 10 km।"
+},
+
+/* 38 */
+{
+q:"A person walks 15 km West, then 15 km South and finally 15 km East. How far is he from the starting point?",
+h:"एक व्यक्ति 15 km पश्चिम, फिर 15 km दक्षिण और अंत में 15 km पूर्व चलता है। वह starting point से कितनी दूर है?",
+o:[
+"15 km West / 15 km पश्चिम",
+"30 km South / 30 km दक्षिण",
+"15 km East / 15 km पूर्व",
+"15 km South / 15 km दक्षिण"
+],
+a:"D",
+s:"West 15 km and East 15 km cancel each other. He remains 15 km South of the starting point.",
+sh:"West 15 km और East 15 km cancel हो जाते हैं। वह starting point से 15 km दक्षिण में रहता है।"
+},
+
+/* 39 */
+{
+q:"A man walks 20 km North, 15 km East and then 20 km South. How far is he from the starting point?",
+h:"एक व्यक्ति 20 km उत्तर, 15 km पूर्व और फिर 20 km दक्षिण चलता है। वह starting point से कितनी दूर है?",
+o:[
+"20 km North / 20 km उत्तर",
+"15 km East / 15 km पूर्व",
+"35 km / 35 km",
+"5 km East / 5 km पूर्व"
+],
+a:"B",
+s:"North 20 km and South 20 km cancel each other. Therefore only 15 km East remains.",
+sh:"North 20 km और South 20 km cancel हो जाते हैं। इसलिए केवल 15 km पूर्व बचता है।"
+},
+
+/* 40 */
+{
+q:"A person walks 6 km East, 8 km North, 6 km West and 3 km South. How far is he from the starting point?",
+h:"एक व्यक्ति 6 km पूर्व, 8 km उत्तर, 6 km पश्चिम और 3 km दक्षिण चलता है। वह starting point से कितनी दूर है?",
+o:[
+"3 km North / 3 km उत्तर",
+"6 km North / 6 km उत्तर",
+"5 km North / 5 km उत्तर",
+"5 km South / 5 km दक्षिण"
+],
+a:"C",
+s:"East 6 km and West 6 km cancel. North 8 km − South 3 km = 5 km North. Therefore he is 5 km North of the starting point.",
+sh:"East 6 km और West 6 km cancel। North 8 km − South 3 km = 5 km उत्तर। इसलिए वह starting point से 5 km उत्तर में है।"
+},
+
+/* 41 */
+{
+q:"In the morning, a person is standing facing the rising Sun. Which direction is he facing?",
+h:"सुबह एक व्यक्ति उगते हुए सूर्य की ओर मुख करके खड़ा है। वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"West / पश्चिम",
+"East / पूर्व",
+"North / उत्तर",
+"South / दक्षिण"
+],
+a:"B",
+s:"The Sun rises in the East. Therefore, the person is facing East.",
+sh:"सूर्य पूर्व में उगता है। इसलिए व्यक्ति पूर्व दिशा की ओर मुख कर रहा है।"
+},
+
+/* 42 */
+{
+q:"In the evening, a person is standing facing the setting Sun. Which direction is he facing?",
+h:"शाम को एक व्यक्ति डूबते हुए सूर्य की ओर मुख करके खड़ा है। वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"West / पश्चिम",
+"East / पूर्व",
+"North / उत्तर",
+"South / दक्षिण"
+],
+a:"A",
+s:"The Sun sets in the West. Therefore, the person is facing West.",
+sh:"सूर्य पश्चिम में अस्त होता है। इसलिए व्यक्ति पश्चिम दिशा की ओर मुख कर रहा है।"
+},
+
+/* 43 */
+{
+q:"In the morning, a man is standing with his back towards the Sun. Which direction is he facing?",
+h:"सुबह एक व्यक्ति सूर्य की ओर पीठ करके खड़ा है। वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"East / पूर्व",
+"North / उत्तर",
+"West / पश्चिम",
+"South / दक्षिण"
+],
+a:"C",
+s:"In the morning the Sun is in the East. If the Sun is behind the person, the person must be facing the opposite direction, i.e. West.",
+sh:"सुबह सूर्य पूर्व में होता है। यदि सूर्य व्यक्ति के पीछे है, तो व्यक्ति opposite direction यानी पश्चिम की ओर मुख कर रहा होगा।"
+},
+
+/* 44 */
+{
+q:"In the evening, a person is standing with his back towards the setting Sun. Which direction is he facing?",
+h:"शाम को एक व्यक्ति डूबते हुए सूर्य की ओर पीठ करके खड़ा है। वह किस दिशा की ओर मुख कर रहा है?",
+o:[
+"West / पश्चिम",
+"North / उत्तर",
+"South / दक्षिण",
+"East / पूर्व"
+],
+a:"D",
+s:"The setting Sun is in the West. If West is behind the person, he is facing East.",
+sh:"डूबता हुआ सूर्य पश्चिम में होता है। यदि पश्चिम व्यक्ति के पीछे है, तो वह पूर्व की ओर मुख कर रहा है।"
+},
+
+/* 45 */
+{
+q:"If a person is facing North, which direction will be on his right side?",
+h:"यदि कोई व्यक्ति उत्तर की ओर मुख करके खड़ा है, तो उसकी right side पर कौन-सी दिशा होगी?",
+o:[
+"East / पूर्व",
+"West / पश्चिम",
+"South / दक्षिण",
+"North / उत्तर"
+],
+a:"A",
+s:"When a person faces North, East is on his right side.",
+sh:"जब व्यक्ति उत्तर की ओर मुख करता है, तो उसकी right side पर पूर्व दिशा होती है।"
+},
+
+/* 46 */
+{
+q:"If a person is facing South, which direction will be on his left side?",
+h:"यदि कोई व्यक्ति दक्षिण की ओर मुख करके खड़ा है, तो उसकी left side पर कौन-सी दिशा होगी?",
+o:[
+"West / पश्चिम",
+"South-East / दक्षिण-पूर्व",
+"East / पूर्व",
+"North-East / उत्तर-पूर्व"
+],
+a:"C",
+s:"When a person faces South, East is on his left side.",
+sh:"जब व्यक्ति दक्षिण की ओर मुख करता है, तो उसकी left side पर पूर्व दिशा होती है।"
+},
+
+/* 47 */
+{
+q:"A person is facing East. Which direction will be on his left side?",
+h:"एक व्यक्ति पूर्व की ओर मुख करके खड़ा है। उसकी left side पर कौन-सी दिशा होगी?",
+o:[
+"South / दक्षिण",
+"North / उत्तर",
+"West / पश्चिम",
+"South-East / दक्षिण-पूर्व"
+],
+a:"B",
+s:"When facing East, North is on the left side.",
+sh:"जब व्यक्ति पूर्व की ओर मुख करता है, तो उसकी left side पर उत्तर दिशा होती है।"
+},
+
+/* 48 */
+{
+q:"A person is facing West. Which direction will be on his right side?",
+h:"एक व्यक्ति पश्चिम की ओर मुख करके खड़ा है। उसकी right side पर कौन-सी दिशा होगी?",
+o:[
+"South / दक्षिण",
+"East / पूर्व",
+"North / उत्तर",
+"North-East / उत्तर-पूर्व"
+],
+a:"C",
+s:"When facing West, North is on the right side.",
+sh:"जब व्यक्ति पश्चिम की ओर मुख करता है, तो उसकी right side पर उत्तर दिशा होती है।"
+},
+
+/* 49 */
+{
+q:"A person starts from point A and walks 10 km North. He then turns right and walks 10 km. He again turns right and walks 10 km. In which direction is he from point A?",
+h:"एक व्यक्ति point A से 10 km उत्तर की ओर चलता है। फिर वह right turn लेकर 10 km चलता है। वह फिर right turn लेकर 10 km चलता है। अब वह point A से किस दिशा में है?",
+o:[
+"North / उत्तर",
+"South / दक्षिण",
+"East / पूर्व",
+"West / पश्चिम"
+],
+a:"C",
+s:"Start at A. 10 km North → position is North of A. Turn right → East and walk 10 km. Turn right again → South and walk 10 km. The North and South movements cancel each other. Therefore he is 10 km East of A.",
+sh:"A से 10 km उत्तर जाने के बाद right turn लेने पर वह पूर्व की ओर 10 km जाता है। फिर right turn लेने पर दक्षिण की ओर 10 km जाता है। North और South की movements cancel हो जाती हैं। इसलिए वह A से 10 km पूर्व में है।"
+},
+
+/* 50 */
+{
+q:"A man walks 10 km North, then 10 km East, then 10 km South and finally 10 km West. Where is he with respect to his starting point?",
+h:"एक व्यक्ति 10 km उत्तर, फिर 10 km पूर्व, फिर 10 km दक्षिण और अंत में 10 km पश्चिम चलता है। वह starting point के सापेक्ष कहाँ है?",
+o:[
+"At the starting point / Starting point पर",
+"10 km East / 10 km पूर्व",
+"10 km North / 10 km उत्तर",
+"10 km South / 10 km दक्षिण"
+],
+a:"A",
+s:"North 10 km and South 10 km cancel each other. East 10 km and West 10 km also cancel each other. Therefore the man returns to the starting point.",
+sh:"North 10 km और South 10 km एक-दूसरे को cancel करते हैं। East 10 km और West 10 km भी एक-दूसरे को cancel करते हैं। इसलिए व्यक्ति वापस starting point पर आ जाता है।"
+}
+
+];
+
+
+/* =========================================================
+   CATEGORY TITLES
+========================================================= */
+
+const categories = {
+    1:"🧭 A. Basic Direction & Turning / मूल दिशा एवं Turning",
+    11:"📏 B. Distance & Simple Movement / दूरी एवं सरल Movement",
+    21:"🔄 C. Turning & Direction-Based Problems / Turning एवं Direction Problems",
+    31:"📐 D. Shortest Distance & Position / Shortest Distance एवं Position",
+    41:"🌅 E. Position, Shadow & Special Direction Questions / Position, Shadow एवं Special Direction",
+    49:"🧠 F. Mixed & Higher-Level Direction Problems / Mixed एवं Higher-Level Direction Problems"
+};
+
+
+/* =========================================================
+   RENDER QUESTIONS
+========================================================= */
+
+const container = document.getElementById("questionsContainer");
+
+questionData.forEach((item,index)=>{
+
+    const number = index + 1;
+
+    if(categories[number]){
+        const category = document.createElement("div");
+        category.className = "category-title";
+        category.textContent = categories[number];
+        container.appendChild(category);
+    }
+
+    const question = document.createElement("div");
+    question.className = "question";
+    question.dataset.answer = item.a;
+
+    question.innerHTML = `
+
+        <div class="q-number">
+            Question ${number}
+        </div>
+
+        <div class="q-text">
+            ${item.q}
+            <span class="q-hindi">
+                ${item.h}
+            </span>
+        </div>
+
+        <div class="options">
+
+            ${item.o.map((option,optionIndex)=>{
+
+                const letter = String.fromCharCode(65 + optionIndex);
+
+                return `
+                    <div class="option" data-option="${letter}">
+                        (${letter}) ${option}
+                    </div>
+                `;
+
+            }).join("")}
+
+        </div>
+
+        <div class="result-holder"></div>
+
+        <div class="answer">
+
+            <strong>
+                Answer: (${item.a}) ${item.o[item.a.charCodeAt(0)-65]}
+            </strong>
+
+            <span class="answer-hindi">
+                उत्तर: (${item.a}) ${item.o[item.a.charCodeAt(0)-65]}
+            </span>
+
+            <div class="solution">
+
+                <strong>English Solution:</strong><br>
+                ${item.s}
+
+                <span class="solution-hindi">
+                    <strong>हिंदी समाधान:</strong><br>
+                    ${item.sh}
+                </span>
+
+            </div>
+
+        </div>
+    `;
+
+    container.appendChild(question);
+
+});
+
+
+/* =========================================================
+   PRACTICE LOGIC
+========================================================= */
+
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+
+function updateResult(){
+
+    document.getElementById("score").textContent =
+        correct + " / 50";
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+}
+
+
+document.querySelectorAll(".question").forEach(question=>{
+
+    const options = question.querySelectorAll(".option");
+
+    options.forEach(option=>{
+
+        option.addEventListener("click",function(){
+
+            /* One-time attempt */
+            if(question.dataset.attempted === "true"){
+                return;
+            }
+
+            question.dataset.attempted = "true";
+
+            attempted++;
+
+            const selected = this.dataset.option;
+            const answer = question.dataset.answer;
+
+            /* Selected option */
+            this.classList.add("selected");
+
+            /* Correct / Wrong */
+            if(selected === answer){
+
+                correct++;
+
+                this.classList.add("correct");
+
+            }else{
+
+                wrong++;
+
+                this.classList.add("wrong");
+
+                options.forEach(opt=>{
+
+                    if(opt.dataset.option === answer){
+                        opt.classList.add("correct");
+                    }
+
+                });
+
+            }
+
+            /* Disable further attempts */
+            options.forEach(opt=>{
+                opt.style.pointerEvents = "none";
+            });
+
+
+            /* Result message */
+
+            const resultHolder =
+                question.querySelector(".result-holder");
+
+            if(selected === answer){
+
+                resultHolder.innerHTML = `
+                    <div class="result-message correct-message">
+                        ✅ Correct Answer! / सही उत्तर!
+                    </div>
+                `;
+
+            }else{
+
+                resultHolder.innerHTML = `
+                    <div class="result-message wrong-message">
+                        ❌ Incorrect / गलत।
+                        Correct Answer: (${answer})
+                    </div>
+                `;
+
+            }
+
+
+            /* Show answer and solution */
+
+            question.querySelector(".answer").style.display = "block";
+
+            question.querySelector(".solution").style.display = "block";
+
+
+            /* Update result */
+
+            updateResult();
+
+        });
+
+    });
+
+});
+
+
+/* =========================================================
+   RESET PRACTICE
+========================================================= */
+
+document.getElementById("resetBtn").addEventListener("click",function(){
+
+    attempted = 0;
+    correct = 0;
+    wrong = 0;
+
+    document.querySelectorAll(".question").forEach(question=>{
+
+        question.dataset.attempted = "false";
+
+        question.querySelectorAll(".option").forEach(option=>{
+
+            option.classList.remove(
+                "selected",
+                "correct",
+                "wrong"
+            );
+
+            option.style.pointerEvents = "auto";
+
+        });
+
+        question.querySelector(".result-holder").innerHTML = "";
+
+        question.querySelector(".answer").style.display = "none";
+
+        question.querySelector(".solution").style.display = "none";
+
+    });
+
+    updateResult();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+
+/* Initial result */
+
+updateResult();
+
+</script>
+
+</body>
+</html>
