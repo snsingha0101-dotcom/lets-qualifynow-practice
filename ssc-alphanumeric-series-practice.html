@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Alphanumeric Series Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+.navbar{
+    background:#102a43;
+    padding:15px 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:9px 15px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    background:#173f5f;
+}
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:17px;
+}
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:30px auto;
+}
+
+.intro{
+    background:white;
+    border-left:6px solid #52606d;
+    padding:22px;
+    border-radius:10px;
+    box-shadow:0 3px 12px rgba(36,59,83,0.08);
+    margin-bottom:25px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.intro p{
+    color:#52606d;
+}
+
+.progress-box{
+    background:#d9eaf7;
+    border:1px solid #829ab1;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.progress-box h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+#progressText{
+    font-weight:bold;
+    color:#173f5f;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+    background:#e1e8ed;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:12px;
+}
+
+#progressFill{
+    height:100%;
+    width:0%;
+    background:#52606d;
+    transition:0.3s;
+}
+
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 3px 12px rgba(36,59,83,0.07);
+}
+
+.question-number{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    padding:5px 11px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.series{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    padding:14px;
+    border-radius:8px;
+    margin:12px 0;
+    font-weight:bold;
+    color:#102a43;
+    text-align:center;
+    letter-spacing:0.5px;
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#243b53;
+    margin-bottom:14px;
+}
+
+.option{
+    display:block;
+    border:1px solid #d9e2ec;
+    padding:11px 14px;
+    margin:8px 0;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.2s;
+    background:white;
+}
+
+.option:hover{
+    background:#f7f9fc;
+    border-color:#829ab1;
+}
+
+.option input{
+    margin-right:9px;
+}
+
+.correct{
+    background:#e1e8ed !important;
+    border-color:#52606d !important;
+}
+
+.wrong{
+    background:#f7f9fc !important;
+    border-color:#829ab1 !important;
+}
+
+.explanation{
+    display:none;
+    background:#d9eaf7;
+    border-left:5px solid #173f5f;
+    padding:14px;
+    margin-top:14px;
+    border-radius:7px;
+    color:#243b53;
+}
+
+.explanation strong{
+    color:#102a43;
+}
+
+.check-btn{
+    margin-top:12px;
+    background:#173f5f;
+    color:white;
+    border:none;
+    padding:9px 16px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.check-btn:hover{
+    background:#102a43;
+}
+
+.result{
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.final-box{
+    background:#102a43;
+    color:white;
+    padding:30px;
+    text-align:center;
+    border-radius:12px;
+    margin:35px 0;
+}
+
+.final-box h2{
+    margin-bottom:10px;
+}
+
+.reset-btn{
+    background:white;
+    color:#102a43;
+    border:none;
+    padding:11px 20px;
+    border-radius:7px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+@media(max-width:700px){
+    .navbar{
+        padding:10px;
+    }
+
+    .navbar a{
+        font-size:12px;
+        padding:7px 9px;
+    }
+
+    .hero h1{
+        font-size:25px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    .series{
+        font-size:14px;
+        overflow-x:auto;
+    }
+
+    .question{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="study-material.html">Study Material</a>
+    <a href="live-classes.html">Live Classes</a>
+    <a href="test-series.html">Test Series</a>
+    <a href="exams.html">Exams</a>
+    <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb" target="_blank">YouTube</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>📌 SSC Alphanumeric Series Practice</h1>
+    <p>
+        SSC Alphanumeric Series questions with exam-oriented practice,
+        logical approach, pattern identification and step-by-step solutions.
+    </p>
+</section>
+
+<div class="container">
+
+<!-- INTRO -->
+<div class="intro">
+    <h2>📚 Alphanumeric Series Practice Set</h2>
+    <p>
+        Alphanumeric Series में letters, numbers और symbols को एक arrangement
+        में दिया जाता है। Questions में position, left-right counting,
+        numbers/letters को हटाना, बीच के elements की counting और
+        arrangement-based logic पूछा जाता है।
+    </p>
+    <br>
+    <p>
+        यह practice set <strong>SSC CGL, CHSL, CPO, MTS और GD</strong>
+        जैसी परीक्षाओं के लिए exam-oriented practice के उद्देश्य से बनाया गया है।
+    </p>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-box">
+    <h3>📊 Your Practice Progress</h3>
+    <div id="progressText">0 / 50 Questions Answered</div>
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+</div>
+
+
+<!-- Q1 -->
+<div class="question-card" id="q1">
+<span class="question-number">Q1</span>
+<div class="series">A 7 B 3 C 9 D 5 E 2 F 8 G 4</div>
+<div class="question">Which element is immediately after D?</div>
+
+<label class="option"><input type="radio" name="q1" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q1" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q1" value="C"> C) E</label>
+<label class="option"><input type="radio" name="q1" value="D"> D) 2</label>
+
+<button class="check-btn" onclick="checkAnswer(1,'B')">Check Answer</button>
+<div class="result" id="result1"></div>
+<div class="explanation" id="exp1">
+<strong>Answer: B) 5</strong><br>
+D के तुरंत बाद 5 है।
+</div>
+</div>
+
+
+<!-- Q2 -->
+<div class="question-card" id="q2">
+<span class="question-number">Q2</span>
+<div class="series">A 4 7 9 B C D 3 E 8 F 2 G</div>
+<div class="question">How many numbers are immediately preceded by a letter?</div>
+
+<label class="option"><input type="radio" name="q2" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q2" value="B"> B) 6</label>
+<label class="option"><input type="radio" name="q2" value="C"> C) 5</label>
+<label class="option"><input type="radio" name="q2" value="D"> D) 3</label>
+
+<button class="check-btn" onclick="checkAnswer(2,'C')">Check Answer</button>
+<div class="result" id="result2"></div>
+<div class="explanation" id="exp2">
+<strong>Answer: C) 5</strong><br>
+Numbers जो immediately letter के बाद हैं: 4, 7, 3, 8, 2 → कुल 5।
+</div>
+</div>
+
+
+<!-- Q3 -->
+<div class="question-card" id="q3">
+<span class="question-number">Q3</span>
+<div class="series">B 6 D 8 F 3 H 5 J 7 L</div>
+<div class="question">What is the 5th element to the right of the 3rd element from the left?</div>
+
+<label class="option"><input type="radio" name="q3" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q3" value="B"> B) H</label>
+<label class="option"><input type="radio" name="q3" value="C"> C) J</label>
+<label class="option"><input type="radio" name="q3" value="D"> D) 7</label>
+
+<button class="check-btn" onclick="checkAnswer(3,'A')">Check Answer</button>
+<div class="result" id="result3"></div>
+<div class="explanation" id="exp3">
+<strong>Answer: A) 5</strong><br>
+3rd element = D. D से right में: 8(1), F(2), 3(3), H(4), 5(5)। इसलिए answer 5।
+</div>
+</div>
+
+
+<!-- Q4 -->
+<div class="question-card" id="q4">
+<span class="question-number">Q4</span>
+<div class="series">A 5 B C 7 D 9 E F 3 G 8</div>
+<div class="question">How many letters are immediately followed by a number?</div>
+
+<label class="option"><input type="radio" name="q4" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q4" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q4" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q4" value="D"> D) 3</label>
+
+<button class="check-btn" onclick="checkAnswer(4,'B')">Check Answer</button>
+<div class="result" id="result4"></div>
+<div class="explanation" id="exp4">
+<strong>Answer: B) 5</strong><br>
+A, C, D, F और G के बाद numbers हैं। कुल 5।
+</div>
+</div>
+
+
+<!-- Q5 -->
+<div class="question-card" id="q5">
+<span class="question-number">Q5</span>
+<div class="series">A 4 C 7 F 2 H 9 K 5 M</div>
+<div class="question">If all numbers are removed, which is the 4th element from the left?</div>
+
+<label class="option"><input type="radio" name="q5" value="A"> A) F</label>
+<label class="option"><input type="radio" name="q5" value="B"> B) H</label>
+<label class="option"><input type="radio" name="q5" value="C"> C) K</label>
+<label class="option"><input type="radio" name="q5" value="D"> D) C</label>
+
+<button class="check-btn" onclick="checkAnswer(5,'B')">Check Answer</button>
+<div class="result" id="result5"></div>
+<div class="explanation" id="exp5">
+<strong>Answer: B) H</strong><br>
+Numbers हटाने पर: A, C, F, H, K, M। 4th element H है।
+</div>
+</div>
+
+
+<!-- Q6 -->
+<div class="question-card" id="q6">
+<span class="question-number">Q6</span>
+<div class="series">B 7 C 5 D 9 E 4 F 8 G 2 H 6 I 1 J</div>
+<div class="question">Which element is exactly midway between B and J?</div>
+
+<label class="option"><input type="radio" name="q6" value="A"> A) E</label>
+<label class="option"><input type="radio" name="q6" value="B"> B) F</label>
+<label class="option"><input type="radio" name="q6" value="C"> C) G</label>
+<label class="option"><input type="radio" name="q6" value="D"> D) 8</label>
+
+<button class="check-btn" onclick="checkAnswer(6,'B')">Check Answer</button>
+<div class="result" id="result6"></div>
+<div class="explanation" id="exp6">
+<strong>Answer: B) F</strong><br>
+B और J के बीच arrangement का middle element F है।
+</div>
+</div>
+
+
+<!-- Q7 -->
+<div class="question-card" id="q7">
+<span class="question-number">Q7</span>
+<div class="series">A @ 5 B # 7 C $ 9 D % 3 E</div>
+<div class="question">How many symbols are present in the arrangement?</div>
+
+<label class="option"><input type="radio" name="q7" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q7" value="B"> B) 4</label>
+<label class="option"><input type="radio" name="q7" value="C"> C) 5</label>
+<label class="option"><input type="radio" name="q7" value="D"> D) 2</label>
+
+<button class="check-btn" onclick="checkAnswer(7,'B')">Check Answer</button>
+<div class="result" id="result7"></div>
+<div class="explanation" id="exp7">
+<strong>Answer: B) 4</strong><br>
+Symbols हैं: @, #, $, % → कुल 4।
+</div>
+</div>
+
+
+<!-- Q8 -->
+<div class="question-card" id="q8">
+<span class="question-number">Q8</span>
+<div class="series">A 4 B 6 C 8 D 2 E 5 F 7 G 9 H 3</div>
+<div class="question">If the first half of the arrangement is reversed, what will be the 3rd element?</div>
+
+<label class="option"><input type="radio" name="q8" value="A"> A) 8</label>
+<label class="option"><input type="radio" name="q8" value="B"> B) C</label>
+<label class="option"><input type="radio" name="q8" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q8" value="D"> D) 2</label>
+
+<button class="check-btn" onclick="checkAnswer(8,'A')">Check Answer</button>
+<div class="result" id="result8"></div>
+<div class="explanation" id="exp8">
+<strong>Answer: A) 8</strong><br>
+First half: A,4,B,6,C,8,D,2। Reverse करने पर 2,D,8,C,6,B,4,A। 3rd = 8।
+</div>
+</div>
+
+
+<!-- Q9 -->
+<div class="question-card" id="q9">
+<span class="question-number">Q9</span>
+<div class="series">A 2 B 5 C 7 D 4 E 8 F 3 G 9 H 6</div>
+<div class="question">How many numbers are between the 2nd letter from the left and the 3rd letter from the right?</div>
+
+<label class="option"><input type="radio" name="q9" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q9" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q9" value="C"> C) 4</label>
+<label class="option"><input type="radio" name="q9" value="D"> D) 6</label>
+
+<button class="check-btn" onclick="checkAnswer(9,'C')">Check Answer</button>
+<div class="result" id="result9"></div>
+<div class="explanation" id="exp9">
+<strong>Answer: C) 4</strong><br>
+2nd letter left = B और 3rd letter right = F। इनके बीच numbers: 5, 7, 4, 8 → 4।
+</div>
+</div>
+
+
+<!-- Q10 -->
+<div class="question-card" id="q10">
+<span class="question-number">Q10</span>
+<div class="series">A 3 B 6 C 9 D 2 E 7 F 4 G 8 H 5 I 1 J</div>
+<div class="question">Which element is 6th to the left of the 5th element from the right?</div>
+
+<label class="option"><input type="radio" name="q10" value="A"> A) B</label>
+<label class="option"><input type="radio" name="q10" value="B"> B) C</label>
+<label class="option"><input type="radio" name="q10" value="C"> C) D</label>
+<label class="option"><input type="radio" name="q10" value="D"> D) E</label>
+
+<button class="check-btn" onclick="checkAnswer(10,'D')">Check Answer</button>
+<div class="result" id="result10"></div>
+<div class="explanation" id="exp10">
+<strong>Answer: D) E</strong><br>
+5th from right = H। H से 6 elements left: 8(1), G(2), 4(3), F(4), 7(5), E(6)। इसलिए E।
+</div>
+</div>
+
+
+<!-- Q11 -->
+<div class="question-card" id="q11">
+<span class="question-number">Q11</span>
+<div class="series">3 A 5 B C 7 D 8 E F 2 G</div>
+<div class="question">How many letters are immediately preceded by numbers?</div>
+
+<label class="option"><input type="radio" name="q11" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q11" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q11" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q11" value="D"> D) 3</label>
+
+<button class="check-btn" onclick="checkAnswer(11,'B')">Check Answer</button>
+<div class="result" id="result11"></div>
+<div class="explanation" id="exp11">
+<strong>Answer: B) 5</strong><br>
+Numbers के तुरंत बाद आने वाले letters: A, B, D, E, G → 5।
+</div>
+</div>
+
+
+<!-- Q12 -->
+<div class="question-card" id="q12">
+<span class="question-number">Q12</span>
+<div class="series">A 6 B 3 C 8 D 5 E 2 F 9 G 4 H 7</div>
+<div class="question">If all letters are removed, which is the 4th number from the left?</div>
+
+<label class="option"><input type="radio" name="q12" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q12" value="B"> B) 8</label>
+<label class="option"><input type="radio" name="q12" value="C"> C) 9</label>
+<label class="option"><input type="radio" name="q12" value="D"> D) 4</label>
+
+<button class="check-btn" onclick="checkAnswer(12,'A')">Check Answer</button>
+<div class="result" id="result12"></div>
+<div class="explanation" id="exp12">
+<strong>Answer: A) 5</strong><br>
+Numbers: 6, 3, 8, 5, 2, 9, 4, 7। 4th = 5।
+</div>
+</div>
+
+
+<!-- Q13 -->
+<div class="question-card" id="q13">
+<span class="question-number">Q13</span>
+<div class="series">A 7 B 4 C 9 D 2 E 6 F 3 G 8 H 5</div>
+<div class="question">What is the 3rd element to the right of the 4th element from the left?</div>
+
+<label class="option"><input type="radio" name="q13" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q13" value="B"> B) F</label>
+<label class="option"><input type="radio" name="q13" value="C"> C) G</label>
+<label class="option"><input type="radio" name="q13" value="D"> D) D</label>
+
+<button class="check-btn" onclick="checkAnswer(13,'D')">Check Answer</button>
+<div class="result" id="result13"></div>
+<div class="explanation" id="exp13">
+<strong>Answer: D) D</strong><br>
+4th element = 4। इसके right में: C(1), 9(2), D(3)। इसलिए D।
+</div>
+</div>
+
+
+<!-- Q14 -->
+<div class="question-card" id="q14">
+<span class="question-number">Q14</span>
+<div class="series">A 4 B 7 8 C 3 D 9 E 6 F 2 G</div>
+<div class="question">How many numbers are immediately followed by a letter?</div>
+
+<label class="option"><input type="radio" name="q14" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q14" value="B"> B) 6</label>
+<label class="option"><input type="radio" name="q14" value="C"> C) 7</label>
+<label class="option"><input type="radio" name="q14" value="D"> D) 4</label>
+
+<button class="check-btn" onclick="checkAnswer(14,'B')">Check Answer</button>
+<div class="result" id="result14"></div>
+<div class="explanation" id="exp14">
+<strong>Answer: B) 6</strong><br>
+Numbers जिनके तुरंत बाद letter है: 4, 8, 3, 9, 6, 2 → कुल 6।
+</div>
+</div>
+
+
+<!-- Q15 -->
+<div class="question-card" id="q15">
+<span class="question-number">Q15</span>
+<div class="series">A 2 B 5 C 8 D 3 E 7 F 4 G 9 H 6</div>
+<div class="question">How many elements are there between C and G?</div>
+
+<label class="option"><input type="radio" name="q15" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q15" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q15" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q15" value="D"> D) 7</label>
+
+<button class="check-btn" onclick="checkAnswer(15,'C')">Check Answer</button>
+<div class="result" id="result15"></div>
+<div class="explanation" id="exp15">
+<strong>Answer: C) 6</strong><br>
+C और G के बीच: 8, D, 3, E, 7, F → कुल 6 elements।
+</div>
+</div>
+
+
+<!-- Q16 -->
+<div class="question-card" id="q16">
+<span class="question-number">Q16</span>
+<div class="series">A 2 B 5 C 4 D 7 E 6 F 9 G 3 H 8 I 1 J</div>
+<div class="question">If all even numbers are removed, which is the 5th element from the left?</div>
+
+<label class="option"><input type="radio" name="q16" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q16" value="B"> B) 7</label>
+<label class="option"><input type="radio" name="q16" value="C"> C) 9</label>
+<label class="option"><input type="radio" name="q16" value="D"> D) 3</label>
+
+<button class="check-btn" onclick="checkAnswer(16,'B')">Check Answer</button>
+<div class="result" id="result16"></div>
+<div class="explanation" id="exp16">
+<strong>Answer: B) 7</strong><br>
+Even numbers हटाने पर: A, B, 5, D, 7, F, 9, G, 3, I, 1, J। 5th = 7।
+</div>
+</div>
+
+
+<!-- Q17 -->
+<div class="question-card" id="q17">
+<span class="question-number">Q17</span>
+<div class="series">A 3 B 6 C 9 D 2 E 5 F 8 G 4 H 7 I 1 J</div>
+<div class="question">How many letters are between the 3rd number from the left and the 2nd number from the right?</div>
+
+<label class="option"><input type="radio" name="q17" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q17" value="B"> B) 4</label>
+<label class="option"><input type="radio" name="q17" value="C"> C) 5</label>
+<label class="option"><input type="radio" name="q17" value="D"> D) 6</label>
+
+<button class="check-btn" onclick="checkAnswer(17,'B')">Check Answer</button>
+<div class="result" id="result17"></div>
+<div class="explanation" id="exp17">
+<strong>Answer: B) 4</strong><br>
+3rd number from left = 9। 2nd number from right = 7। इनके बीच letters E, F, G, H हैं → 4 letters।
+</div>
+</div>
+
+
+<!-- Q18 -->
+<div class="question-card" id="q18">
+<span class="question-number">Q18</span>
+<div class="series">A 5 B 7 C 2 D 9 E 4 F 8 G 3 H 6 I 1 J</div>
+<div class="question">Which element is 4th to the right of the 2nd number from the left?</div>
+
+<label class="option"><input type="radio" name="q18" value="A"> A) F</label>
+<label class="option"><input type="radio" name="q18" value="B"> B) 9</label>
+<label class="option"><input type="radio" name="q18" value="C"> C) G</label>
+<label class="option"><input type="radio" name="q18" value="D"> D) 3</label>
+
+<button class="check-btn" onclick="checkAnswer(18,'B')">Check Answer</button>
+<div class="result" id="result18"></div>
+<div class="explanation" id="exp18">
+<strong>Answer: B) 9</strong><br>
+2nd number from left = 7। उसके right में: C(1), 2(2), D(3), 9(4)। इसलिए 9।
+</div>
+</div>
+
+
+<!-- Q19 -->
+<div class="question-card" id="q19">
+<span class="question-number">Q19</span>
+<div class="series">A 5 B 7 C 3 D 9 E 4 F 8</div>
+<div class="question">Which is the 2nd element from the left?</div>
+
+<label class="option"><input type="radio" name="q19" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q19" value="B"> B) B</label>
+<label class="option"><input type="radio" name="q19" value="C"> C) 7</label>
+<label class="option"><input type="radio" name="q19" value="D"> D) 3</label>
+
+<button class="check-btn" onclick="checkAnswer(19,'A')">Check Answer</button>
+<div class="result" id="result19"></div>
+<div class="explanation" id="exp19">
+<strong>Answer: A) 5</strong><br>
+Arrangement का 2nd element 5 है।
+</div>
+</div>
+
+
+<!-- Q20 -->
+<div class="question-card" id="q20">
+<span class="question-number">Q20</span>
+<div class="series">A 3 B 7 C 2 D 9 E 4 F 8 G 5 H 6</div>
+<div class="question">How many elements are there between A and H?</div>
+
+<label class="option"><input type="radio" name="q20" value="A"> A) 12</label>
+<label class="option"><input type="radio" name="q20" value="B"> B) 13</label>
+<label class="option"><input type="radio" name="q20" value="C"> C) 14</label>
+<label class="option"><input type="radio" name="q20" value="D"> D) 15</label>
+
+<button class="check-btn" onclick="checkAnswer(20,'B')">Check Answer</button>
+<div class="result" id="result20"></div>
+<div class="explanation" id="exp20">
+<strong>Answer: B) 13</strong><br>
+A position 1 पर और H position 15 पर है। बीच में 15 − 1 − 1 = 13 elements।
+</div>
+</div>
+
+
+<!-- Q21 -->
+<div class="question-card" id="q21">
+<span class="question-number">Q21</span>
+<div class="series">A 4 B 8 C 2 D 7 E 5 F 9 G 3 H 6 I 1 J</div>
+<div class="question">Which element is the 7th from the left?</div>
+
+<label class="option"><input type="radio" name="q21" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q21" value="B"> B) D</label>
+<label class="option"><input type="radio" name="q21" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q21" value="D"> D) H</label>
+
+<button class="check-btn" onclick="checkAnswer(21,'B')">Check Answer</button>
+<div class="result" id="result21"></div>
+<div class="explanation" id="exp21">
+<strong>Answer: B) D</strong><br>
+Counting: A(1), 4(2), B(3), 8(4), C(5), 2(6), D(7)। इसलिए D।
+</div>
+</div>
+
+
+<!-- Q22 -->
+<div class="question-card" id="q22">
+<span class="question-number">Q22</span>
+<div class="series">A 5 B 7 C 2 D 9 E 4 F 8 G 6 H 3</div>
+<div class="question">How many letters are present in the arrangement?</div>
+
+<label class="option"><input type="radio" name="q22" value="A"> A) 6</label>
+<label class="option"><input type="radio" name="q22" value="B"> B) 8</label>
+<label class="option"><input type="radio" name="q22" value="C"> C) 7</label>
+<label class="option"><input type="radio" name="q22" value="D"> D) 9</label>
+
+<button class="check-btn" onclick="checkAnswer(22,'B')">Check Answer</button>
+<div class="result" id="result22"></div>
+<div class="explanation" id="exp22">
+<strong>Answer: B) 8</strong><br>
+Letters A से H तक हैं → कुल 8 letters।
+</div>
+</div>
+
+
+<!-- Q23 -->
+<div class="question-card" id="q23">
+<span class="question-number">Q23</span>
+<div class="series">A 3 B 7 C 5 D 8 E 2 F 9</div>
+<div class="question">Which element is immediately after C?</div>
+
+<label class="option"><input type="radio" name="q23" value="A"> A) B</label>
+<label class="option"><input type="radio" name="q23" value="B"> B) 7</label>
+<label class="option"><input type="radio" name="q23" value="C"> C) 5</label>
+<label class="option"><input type="radio" name="q23" value="D"> D) D</label>
+
+<button class="check-btn" onclick="checkAnswer(23,'C')">Check Answer</button>
+<div class="result" id="result23"></div>
+<div class="explanation" id="exp23">
+<strong>Answer: C) 5</strong><br>
+C के तुरंत बाद 5 है।
+</div>
+</div>
+
+
+<!-- Q24 -->
+<div class="question-card" id="q24">
+<span class="question-number">Q24</span>
+<div class="series">A 3 B 5 C 8 D 7 E 9 F 2</div>
+<div class="question">Which letter is immediately after 8?</div>
+
+<label class="option"><input type="radio" name="q24" value="A"> A) C</label>
+<label class="option"><input type="radio" name="q24" value="B"> B) D</label>
+<label class="option"><input type="radio" name="q24" value="C"> C) E</label>
+<label class="option"><input type="radio" name="q24" value="D"> D) F</label>
+
+<button class="check-btn" onclick="checkAnswer(24,'B')">Check Answer</button>
+<div class="result" id="result24"></div>
+<div class="explanation" id="exp24">
+<strong>Answer: B) D</strong><br>
+8 के तुरंत बाद D है।
+</div>
+</div>
+
+
+<!-- Q25 -->
+<div class="question-card" id="q25">
+<span class="question-number">Q25</span>
+<div class="series">A 1 B 4 C 3 D 8 E 5 F 6 G 7 H 2 I 9 J</div>
+<div class="question">If all odd numbers are removed, which is the 3rd element from the left?</div>
+
+<label class="option"><input type="radio" name="q25" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q25" value="B"> B) D</label>
+<label class="option"><input type="radio" name="q25" value="C"> C) 8</label>
+<label class="option"><input type="radio" name="q25" value="D"> D) F</label>
+
+<button class="check-btn" onclick="checkAnswer(25,'A')">Check Answer</button>
+<div class="result" id="result25"></div>
+<div class="explanation" id="exp25">
+<strong>Answer: A) 4</strong><br>
+Odd numbers हटाने पर: A, B, 4, D, 8, F, 6, H, 2, J। 3rd = 4।
+</div>
+</div>
+
+
+<!-- Q26 -->
+<div class="question-card" id="q26">
+<span class="question-number">Q26</span>
+<div class="series">A 3 B 7 C 5 D 8 E 2 F 9 G 4 H</div>
+<div class="question">How many numbers are immediately preceded and followed by letters?</div>
+
+<label class="option"><input type="radio" name="q26" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q26" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q26" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q26" value="D"> D) 7</label>
+
+<button class="check-btn" onclick="checkAnswer(26,'C')">Check Answer</button>
+<div class="result" id="result26"></div>
+<div class="explanation" id="exp26">
+<strong>Answer: C) 6</strong><br>
+Qualifying numbers: 3, 7, 5, 2, 9, 4 → कुल 6।
+</div>
+</div>
+
+
+<!-- Q27 -->
+<div class="question-card" id="q27">
+<span class="question-number">Q27</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">Which element is 2nd to the left of the 6th element from the right?</div>
+
+<label class="option"><input type="radio" name="q27" value="A"> A) C</label>
+<label class="option"><input type="radio" name="q27" value="B"> B) E</label>
+<label class="option"><input type="radio" name="q27" value="C"> C) F</label>
+<label class="option"><input type="radio" name="q27" value="D"> D) 2</label>
+
+<button class="check-btn" onclick="checkAnswer(27,'C')">Check Answer</button>
+<div class="result" id="result27"></div>
+<div class="explanation" id="exp27">
+<strong>Answer: C) F</strong><br>
+6th from right = G. G से 2nd left = F।
+</div>
+</div>
+
+
+<!-- Q28 -->
+<div class="question-card" id="q28">
+<span class="question-number">Q28</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6</div>
+<div class="question">Which element is the 3rd from the right?</div>
+
+<label class="option"><input type="radio" name="q28" value="A"> A) G</label>
+<label class="option"><input type="radio" name="q28" value="B"> B) 3</label>
+<label class="option"><input type="radio" name="q28" value="C"> C) F</label>
+<label class="option"><input type="radio" name="q28" value="D"> D) 8</label>
+
+<button class="check-btn" onclick="checkAnswer(28,'A')">Check Answer</button>
+<div class="result" id="result28"></div>
+<div class="explanation" id="exp28">
+<strong>Answer: A) G</strong><br>
+Right से counting: H(1), 6(2), G(3)। इसलिए G।
+</div>
+</div>
+
+
+<!-- Q29 -->
+<div class="question-card" id="q29">
+<span class="question-number">Q29</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">How many elements are there between the 2nd letter from the left and the 2nd letter from the right?</div>
+
+<label class="option"><input type="radio" name="q29" value="A"> A) 11</label>
+<label class="option"><input type="radio" name="q29" value="B"> B) 12</label>
+<label class="option"><input type="radio" name="q29" value="C"> C) 13</label>
+<label class="option"><input type="radio" name="q29" value="D"> D) 14</label>
+
+<button class="check-btn" onclick="checkAnswer(29,'C')">Check Answer</button>
+<div class="result" id="result29"></div>
+<div class="explanation" id="exp29">
+<strong>Answer: C) 13</strong><br>
+2nd letter left = B (position 3)। 2nd letter right = I (position 17)। बीच में 17 − 3 − 1 = 13।
+</div>
+</div>
+
+
+<!-- Q30 -->
+<div class="question-card" id="q30">
+<span class="question-number">Q30</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H</div>
+<div class="question">If all numbers are arranged in descending order, which will be the 4th number?</div>
+
+<label class="option"><input type="radio" name="q30" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q30" value="B"> B) 7</label>
+<label class="option"><input type="radio" name="q30" value="C"> C) 8</label>
+<label class="option"><input type="radio" name="q30" value="D"> D) 6</label>
+
+<button class="check-btn" onclick="checkAnswer(30,'D')">Check Answer</button>
+<div class="result" id="result30"></div>
+<div class="explanation" id="exp30">
+<strong>Answer: D) 6</strong><br>
+Numbers: 4,7,2,9,5,8,3,6। Descending: 9,8,7,6,5,4,3,2। 4th = 6।
+</div>
+</div>
+
+
+<!-- Q31 -->
+<div class="question-card" id="q31">
+<span class="question-number">Q31</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">Which element is immediately to the right of the 5th letter?</div>
+
+<label class="option"><input type="radio" name="q31" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q31" value="B"> B) F</label>
+<label class="option"><input type="radio" name="q31" value="C"> C) 8</label>
+<label class="option"><input type="radio" name="q31" value="D"> D) E</label>
+
+<button class="check-btn" onclick="checkAnswer(31,'A')">Check Answer</button>
+<div class="result" id="result31"></div>
+<div class="explanation" id="exp31">
+<strong>Answer: A) 5</strong><br>
+5th letter = E। E के तुरंत right में 5 है।
+</div>
+</div>
+
+
+<!-- Q32 -->
+<div class="question-card" id="q32">
+<span class="question-number">Q32</span>
+<div class="series">A 3 B 7 C 5 D 8 E 2 F 9 G 4 H</div>
+<div class="question">How many elements are there between the first number and the last letter?</div>
+
+<label class="option"><input type="radio" name="q32" value="A"> A) 10</label>
+<label class="option"><input type="radio" name="q32" value="B"> B) 11</label>
+<label class="option"><input type="radio" name="q32" value="C"> C) 12</label>
+<label class="option"><input type="radio" name="q32" value="D"> D) 13</label>
+
+<button class="check-btn" onclick="checkAnswer(32,'C')">Check Answer</button>
+<div class="result" id="result32"></div>
+<div class="explanation" id="exp32">
+<strong>Answer: C) 12</strong><br>
+First number = 3 (position 2)। Last letter H (position 15)। बीच में 15 − 2 − 1 = 12।
+</div>
+</div>
+
+
+<!-- Q33 -->
+<div class="question-card" id="q33">
+<span class="question-number">Q33</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">If all numbers are removed, which is the 4th letter from the right?</div>
+
+<label class="option"><input type="radio" name="q33" value="A"> A) G</label>
+<label class="option"><input type="radio" name="q33" value="B"> B) F</label>
+<label class="option"><input type="radio" name="q33" value="C"> C) H</label>
+<label class="option"><input type="radio" name="q33" value="D"> D) E</label>
+
+<button class="check-btn" onclick="checkAnswer(33,'A')">Check Answer</button>
+<div class="result" id="result33"></div>
+<div class="explanation" id="exp33">
+<strong>Answer: A) G</strong><br>
+Letters A-J हैं। Right से: J(1), I(2), H(3), G(4)।
+</div>
+</div>
+
+
+<!-- Q34 -->
+<div class="question-card" id="q34">
+<span class="question-number">Q34</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8</div>
+<div class="question">How many numbers are between A and F?</div>
+
+<label class="option"><input type="radio" name="q34" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q34" value="B"> B) 4</label>
+<label class="option"><input type="radio" name="q34" value="C"> C) 5</label>
+<label class="option"><input type="radio" name="q34" value="D"> D) 6</label>
+
+<button class="check-btn" onclick="checkAnswer(34,'B')">Check Answer</button>
+<div class="result" id="result34"></div>
+<div class="explanation" id="exp34">
+<strong>Answer: B) 4</strong><br>
+A और F के बीच numbers: 4, 7, 2, 9 → कुल 4।
+</div>
+</div>
+
+
+<!-- Q35 -->
+<div class="question-card" id="q35">
+<span class="question-number">Q35</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">Which element is 5th to the right of C?</div>
+
+<label class="option"><input type="radio" name="q35" value="A"> A) F</label>
+<label class="option"><input type="radio" name="q35" value="B"> B) 8</label>
+<label class="option"><input type="radio" name="q35" value="C"> C) G</label>
+<label class="option"><input type="radio" name="q35" value="D"> D) 5</label>
+
+<button class="check-btn" onclick="checkAnswer(35,'A')">Check Answer</button>
+<div class="result" id="result35"></div>
+<div class="explanation" id="exp35">
+<strong>Answer: A) F</strong><br>
+C से right: D(1), 9(2), E(3), 5(4), F(5)। इसलिए F।
+</div>
+</div>
+
+
+<!-- Q36 -->
+<div class="question-card" id="q36">
+<span class="question-number">Q36</span>
+<div class="series">A B 4 C D 7 E F 2 G H 9 I</div>
+<div class="question">How many consecutive letter pairs are present?</div>
+
+<label class="option"><input type="radio" name="q36" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q36" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q36" value="C"> C) 4</label>
+<label class="option"><input type="radio" name="q36" value="D"> D) 6</label>
+
+<button class="check-btn" onclick="checkAnswer(36,'C')">Check Answer</button>
+<div class="result" id="result36"></div>
+<div class="explanation" id="exp36">
+<strong>Answer: C) 4</strong><br>
+Consecutive pairs: AB, CD, EF, GH → कुल 4।
+</div>
+</div>
+
+
+<!-- Q37 -->
+<div class="question-card" id="q37">
+<span class="question-number">Q37</span>
+<div class="series">A 3 B 7 C 5 D 8 E 2 F 9 G 4</div>
+<div class="question">Which element is immediately before E?</div>
+
+<label class="option"><input type="radio" name="q37" value="A"> A) D</label>
+<label class="option"><input type="radio" name="q37" value="B"> B) 8</label>
+<label class="option"><input type="radio" name="q37" value="C"> C) 2</label>
+<label class="option"><input type="radio" name="q37" value="D"> D) 5</label>
+
+<button class="check-btn" onclick="checkAnswer(37,'B')">Check Answer</button>
+<div class="result" id="result37"></div>
+<div class="explanation" id="exp37">
+<strong>Answer: B) 8</strong><br>
+E के तुरंत पहले 8 है।
+</div>
+</div>
+
+
+<!-- Q38 -->
+<div class="question-card" id="q38">
+<span class="question-number">Q38</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6</div>
+<div class="question">If the entire arrangement is reversed, which is the 4th element?</div>
+
+<label class="option"><input type="radio" name="q38" value="A"> A) G</label>
+<label class="option"><input type="radio" name="q38" value="B"> B) 8</label>
+<label class="option"><input type="radio" name="q38" value="C"> C) F</label>
+<label class="option"><input type="radio" name="q38" value="D"> D) 5</label>
+
+<button class="check-btn" onclick="checkAnswer(38,'A')">Check Answer</button>
+<div class="result" id="result38"></div>
+<div class="explanation" id="exp38">
+<strong>Answer: A) G</strong><br>
+Reverse arrangement: 6, H, 3, G, 8, F, 5, E, 9, D, 2, C, 7, B, 4, A। 4th = G।
+</div>
+</div>
+
+
+<!-- Q39 -->
+<div class="question-card" id="q39">
+<span class="question-number">Q39</span>
+<div class="series">A 3 B 7 C 5 D 8 E 2 F 9 G 4 H</div>
+<div class="question">How many numbers have letters immediately on both sides?</div>
+
+<label class="option"><input type="radio" name="q39" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q39" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q39" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q39" value="D"> D) 7</label>
+
+<button class="check-btn" onclick="checkAnswer(39,'C')">Check Answer</button>
+<div class="result" id="result39"></div>
+<div class="explanation" id="exp39">
+<strong>Answer: C) 6</strong><br>
+3, 7, 5, 2, 9 और 4 के दोनों sides पर letters हैं। कुल 6।
+</div>
+</div>
+
+
+<!-- Q40 -->
+<div class="question-card" id="q40">
+<span class="question-number">Q40</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">Which element is 2nd to the right of the 3rd number from the left?</div>
+
+<label class="option"><input type="radio" name="q40" value="A"> A) D</label>
+<label class="option"><input type="radio" name="q40" value="B"> B) 9</label>
+<label class="option"><input type="radio" name="q40" value="C"> C) E</label>
+<label class="option"><input type="radio" name="q40" value="D"> D) 5</label>
+
+<button class="check-btn" onclick="checkAnswer(40,'B')">Check Answer</button>
+<div class="result" id="result40"></div>
+<div class="explanation" id="exp40">
+<strong>Answer: B) 9</strong><br>
+3rd number from left = 2। इसके right में: D(1), 9(2)। इसलिए 9।
+</div>
+</div>
+
+
+<!-- Q41 -->
+<div class="question-card" id="q41">
+<span class="question-number">Q41</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6</div>
+<div class="question">How many letters are immediately preceded and followed by numbers?</div>
+
+<label class="option"><input type="radio" name="q41" value="A"> A) 2</label>
+<label class="option"><input type="radio" name="q41" value="B"> B) 3</label>
+<label class="option"><input type="radio" name="q41" value="C"> C) 4</label>
+<label class="option"><input type="radio" name="q41" value="D"> D) 5</label>
+
+<button class="check-btn" onclick="checkAnswer(41,'B')">Check Answer</button>
+<div class="result" id="result41"></div>
+<div class="explanation" id="exp41">
+<strong>Answer: B) 3</strong><br>
+B, D और F के दोनों sides पर numbers हैं। कुल 3।
+</div>
+</div>
+
+
+<!-- Q42 -->
+<div class="question-card" id="q42">
+<span class="question-number">Q42</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">If all numbers are removed, which is the 6th letter from the left?</div>
+
+<label class="option"><input type="radio" name="q42" value="A"> A) F</label>
+<label class="option"><input type="radio" name="q42" value="B"> B) E</label>
+<label class="option"><input type="radio" name="q42" value="C"> C) G</label>
+<label class="option"><input type="radio" name="q42" value="D"> D) H</label>
+
+<button class="check-btn" onclick="checkAnswer(42,'A')">Check Answer</button>
+<div class="result" id="result42"></div>
+<div class="explanation" id="exp42">
+<strong>Answer: A) F</strong><br>
+Numbers हटाने पर A, B, C, D, E, F, G, H, I, J। 6th = F।
+</div>
+</div>
+
+
+<!-- Q43 -->
+<div class="question-card" id="q43">
+<span class="question-number">Q43</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6</div>
+<div class="question">Which letter is immediately to the left of the 4th number?</div>
+
+<label class="option"><input type="radio" name="q43" value="A"> A) D</label>
+<label class="option"><input type="radio" name="q43" value="B"> B) E</label>
+<label class="option"><input type="radio" name="q43" value="C"> C) F</label>
+<label class="option"><input type="radio" name="q43" value="D"> D) C</label>
+
+<button class="check-btn" onclick="checkAnswer(43,'A')">Check Answer</button>
+<div class="result" id="result43"></div>
+<div class="explanation" id="exp43">
+<strong>Answer: A) D</strong><br>
+Numbers: 4(1), 7(2), 2(3), 9(4)। 9 के तुरंत left में D है।
+</div>
+</div>
+
+
+<!-- Q44 -->
+<div class="question-card" id="q44">
+<span class="question-number">Q44</span>
+<div class="series">A 3 B 7 C 2 D 9 E 5 F 8 G 4 H</div>
+<div class="question">How many letters are between the first number and the last number?</div>
+
+<label class="option"><input type="radio" name="q44" value="A"> A) 5</label>
+<label class="option"><input type="radio" name="q44" value="B"> B) 6</label>
+<label class="option"><input type="radio" name="q44" value="C"> C) 7</label>
+<label class="option"><input type="radio" name="q44" value="D"> D) 8</label>
+
+<button class="check-btn" onclick="checkAnswer(44,'C')">Check Answer</button>
+<div class="result" id="result44"></div>
+<div class="explanation" id="exp44">
+<strong>Answer: C) 7</strong><br>
+First number = 3 और last number = 4। इनके बीच B, C, D, E, F, G, H → 7 letters।
+</div>
+</div>
+
+
+<!-- Q45 -->
+<div class="question-card" id="q45">
+<span class="question-number">Q45</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6</div>
+<div class="question">If all letters are removed, which is the 3rd number from the left?</div>
+
+<label class="option"><input type="radio" name="q45" value="A"> A) 2</label>
+<label class="option"><input type="radio" name="q45" value="B"> B) 7</label>
+<label class="option"><input type="radio" name="q45" value="C"> C) 9</label>
+<label class="option"><input type="radio" name="q45" value="D"> D) 5</label>
+
+<button class="check-btn" onclick="checkAnswer(45,'A')">Check Answer</button>
+<div class="result" id="result45"></div>
+<div class="explanation" id="exp45">
+<strong>Answer: A) 2</strong><br>
+Numbers: 4, 7, 2, 9, 5, 8, 3, 6। 3rd = 2।
+</div>
+</div>
+
+
+<!-- Q46 -->
+<div class="question-card" id="q46">
+<span class="question-number">Q46</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6</div>
+<div class="question">Which element is 4th to the left of the 3rd element from the right?</div>
+
+<label class="option"><input type="radio" name="q46" value="A"> A) D</label>
+<label class="option"><input type="radio" name="q46" value="B"> B) E</label>
+<label class="option"><input type="radio" name="q46" value="C"> C) 5</label>
+<label class="option"><input type="radio" name="q46" value="D"> D) 8</label>
+
+<button class="check-btn" onclick="checkAnswer(46,'C')">Check Answer</button>
+<div class="result" id="result46"></div>
+<div class="explanation" id="exp46">
+<strong>Answer: C) 5</strong><br>
+3rd from right = G। G से left में: F(1), 8(2), E(3), 5(4)। इसलिए 5।
+</div>
+</div>
+
+
+<!-- Q47 -->
+<div class="question-card" id="q47">
+<span class="question-number">Q47</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1</div>
+<div class="question">How many elements are between the 3rd number from the left and the 3rd number from the right?</div>
+
+<label class="option"><input type="radio" name="q47" value="A"> A) 4</label>
+<label class="option"><input type="radio" name="q47" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q47" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q47" value="D"> D) 7</label>
+
+<button class="check-btn" onclick="checkAnswer(47,'D')">Check Answer</button>
+<div class="result" id="result47"></div>
+<div class="explanation" id="exp47">
+<strong>Answer: D) 7</strong><br>
+3rd number from left = 2 (position 6)। 3rd number from right = 3 (position 14)। इनके बीच 14 − 6 − 1 = 7 elements।
+</div>
+</div>
+
+
+<!-- Q48 -->
+<div class="question-card" id="q48">
+<span class="question-number">Q48</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6</div>
+<div class="question">Which element is 2nd to the right of F?</div>
+
+<label class="option"><input type="radio" name="q48" value="A"> A) G</label>
+<label class="option"><input type="radio" name="q48" value="B"> B) 3</label>
+<label class="option"><input type="radio" name="q48" value="C"> C) H</label>
+<label class="option"><input type="radio" name="q48" value="D"> D) 6</label>
+
+<button class="check-btn" onclick="checkAnswer(48,'A')">Check Answer</button>
+<div class="result" id="result48"></div>
+<div class="explanation" id="exp48">
+<strong>Answer: A) G</strong><br>
+F के right में पहला element 8 और दूसरा element G है। इसलिए G।
+</div>
+</div>
+
+
+<!-- Q49 -->
+<div class="question-card" id="q49">
+<span class="question-number">Q49</span>
+<div class="series">A 3 B 7 C 2 D 9 E 5 F 8 G 4 H 6</div>
+<div class="question">How many numbers are between B and G?</div>
+
+<label class="option"><input type="radio" name="q49" value="A"> A) 3</label>
+<label class="option"><input type="radio" name="q49" value="B"> B) 5</label>
+<label class="option"><input type="radio" name="q49" value="C"> C) 4</label>
+<label class="option"><input type="radio" name="q49" value="D"> D) 6</label>
+
+<button class="check-btn" onclick="checkAnswer(49,'C')">Check Answer</button>
+<div class="result" id="result49"></div>
+<div class="explanation" id="exp49">
+<strong>Answer: C) 4</strong><br>
+B और G के बीच numbers: 2, 9, 5, 8 → कुल 4।
+</div>
+</div>
+
+
+<!-- Q50 -->
+<div class="question-card" id="q50">
+<span class="question-number">Q50</span>
+<div class="series">A 4 B 7 C 2 D 9 E 5 F 8 G 3 H 6 I 1 J</div>
+<div class="question">Which element is the 5th from the right?</div>
+
+<label class="option"><input type="radio" name="q50" value="A"> A) I</label>
+<label class="option"><input type="radio" name="q50" value="B"> B) H</label>
+<label class="option"><input type="radio" name="q50" value="C"> C) 6</label>
+<label class="option"><input type="radio" name="q50" value="D"> D) 1</label>
+
+<button class="check-btn" onclick="checkAnswer(50,'B')">Check Answer</button>
+<div class="result" id="result50"></div>
+<div class="explanation" id="exp50">
+<strong>Answer: B) H</strong><br>
+Right से counting: J(1), 1(2), I(3), 6(4), H(5)। इसलिए H।
+</div>
+</div>
+
+
+<!-- FINAL -->
+<div class="final-box">
+    <h2>🎯 Practice Completed</h2>
+    <p id="finalScore">Answer all 50 questions to see your score.</p>
+    <button class="reset-btn" onclick="resetTest()">🔄 Reset Practice</button>
+</div>
+
+</div>
+
+<footer>
+    <p><strong>Let's QualifyNow</strong></p>
+    <p>SSC • Banking • Railway • State Level Exams</p>
+    <p>Reasoning by N Saurabh Sir</p>
+</footer>
+
+
+<script>
+
+let answered = 0;
+let correct = 0;
+
+const totalQuestions = 50;
+
+function checkAnswer(questionNumber, correctAnswer){
+
+    const selected = document.querySelector(
+        'input[name="q' + questionNumber + '"]:checked'
+    );
+
+    const result = document.getElementById("result" + questionNumber);
+    const explanation = document.getElementById("exp" + questionNumber);
+    const card = document.getElementById("q" + questionNumber);
+
+    if(!selected){
+        result.textContent = "⚠️ Please select an answer first.";
+        result.style.color = "#52606d";
+        return;
+    }
+
+    if(card.dataset.checked === "true"){
+        explanation.style.display = "block";
+        return;
+    }
+
+    card.dataset.checked = "true";
+
+    const options = card.querySelectorAll(".option");
+
+    options.forEach(option => {
+
+        const input = option.querySelector("input");
+
+        if(input.value === correctAnswer){
+            option.classList.add("correct");
+        }
+
+        if(input.checked && input.value !== correctAnswer){
+            option.classList.add("wrong");
+        }
+
+        input.disabled = true;
+    });
+
+    if(selected.value === correctAnswer){
+        result.textContent = "✅ Correct Answer!";
+        result.style.color = "#243b53";
+        correct++;
+    }else{
+        result.textContent = "❌ Incorrect Answer!";
+        result.style.color = "#52606d";
+    }
+
+    answered++;
+
+    explanation.style.display = "block";
+
+    updateProgress();
+}
+
+
+function updateProgress(){
+
+    document.getElementById("progressText").textContent =
+        answered + " / " + totalQuestions + " Questions Answered";
+
+    const percentage = (answered / totalQuestions) * 100;
+
+    document.getElementById("progressFill").style.width =
+        percentage + "%";
+
+    if(answered === totalQuestions){
+
+        document.getElementById("finalScore").innerHTML =
+            "🎉 Test Completed!<br><br>" +
+            "<strong>Your Score: " + correct + " / " + totalQuestions + "</strong><br>" +
+            "Accuracy: " +
+            ((correct / totalQuestions) * 100).toFixed(1) +
+            "%";
+    }
+}
+
+
+function resetTest(){
+
+    answered = 0;
+    correct = 0;
+
+    document.querySelectorAll(".question-card").forEach(card => {
+
+        delete card.dataset.checked;
+
+        card.querySelectorAll("input").forEach(input => {
+            input.checked = false;
+            input.disabled = false;
+        });
+
+        card.querySelectorAll(".option").forEach(option => {
+            option.classList.remove("correct");
+            option.classList.remove("wrong");
+        });
+
+        const result = card.querySelector(".result");
+        const explanation = card.querySelector(".explanation");
+
+        result.textContent = "";
+        explanation.style.display = "none";
+    });
+
+    updateProgress();
+
+    document.getElementById("finalScore").textContent =
+        "Answer all 50 questions to see your score.";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
