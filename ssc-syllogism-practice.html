@@ -1,0 +1,2496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Syllogism Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, "Noto Sans Devanagari", Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#102a43;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(16,42,67,0.18);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 11px;
+    border-radius:6px;
+    font-size:14px;
+    transition:.25s;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    text-align:center;
+    padding:58px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* MAIN */
+
+.container{
+    max-width:1050px;
+    margin:40px auto;
+    padding:0 18px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #d9e2ec;
+    box-shadow:0 4px 15px rgba(16,42,67,.06);
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.section-title{
+    color:#102a43;
+    text-align:center;
+    margin:35px 0 20px;
+    font-size:28px;
+}
+
+.category-title{
+    background:#173f5f;
+    color:white;
+    padding:13px 18px;
+    border-radius:9px;
+    margin:35px 0 18px;
+    font-size:21px;
+}
+
+/* QUESTION */
+
+.question{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 3px 12px rgba(16,42,67,.05);
+    transition:.25s;
+}
+
+.question:hover{
+    transform:translateY(-2px);
+    box-shadow:0 7px 18px rgba(16,42,67,.08);
+}
+
+.q-number{
+    color:#102a43;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.q-text{
+    font-size:16px;
+    font-weight:600;
+    color:#243b53;
+    margin-top:10px;
+}
+
+.bilingual{
+    margin-top:4px;
+}
+
+.hindi{
+    margin-top:4px;
+    color:#52606d;
+}
+
+.statement{
+    margin:12px 0;
+    padding:12px 15px;
+    background:#f7f9fc;
+    border-left:4px solid #829ab1;
+    border-radius:6px;
+    white-space:pre-line;
+}
+
+.conclusions{
+    margin:12px 0;
+    padding:12px 15px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:6px;
+    white-space:pre-line;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:16px;
+}
+
+.option{
+    border:1px solid #d9e2ec;
+    background:#f7f9fc;
+    padding:10px 13px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.option:hover{
+    background:#d9eaf7;
+    border-color:#829ab1;
+}
+
+.option.selected{
+    background:#d9eaf7;
+    border-color:#173f5f;
+}
+
+.option.correct{
+    background:#e8f5e9;
+    border-color:#4caf50;
+    color:#1b5e20;
+    font-weight:bold;
+}
+
+.option.wrong{
+    background:#ffebee;
+    border-color:#e57373;
+    color:#b71c1c;
+    font-weight:bold;
+}
+
+.option-hindi{
+    display:block;
+    margin-top:3px;
+    color:#52606d;
+    font-weight:normal;
+}
+
+.result{
+    display:none;
+    margin-top:15px;
+    padding:12px 14px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.result.correct-result{
+    background:#e8f5e9;
+    color:#1b5e20;
+    border-left:4px solid #4caf50;
+}
+
+.result.wrong-result{
+    background:#ffebee;
+    color:#b71c1c;
+    border-left:4px solid #e57373;
+}
+
+.answer{
+    display:none;
+    margin-top:16px;
+    padding:14px;
+    background:#eef6fb;
+    border-left:4px solid #173f5f;
+    border-radius:6px;
+}
+
+.answer strong{
+    color:#102a43;
+}
+
+.solution{
+    margin-top:8px;
+}
+
+.solution-hindi{
+    margin-top:10px;
+    color:#52606d;
+}
+
+/* PRACTICE RESULT */
+
+.score-section{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:25px;
+    margin-top:35px;
+    box-shadow:0 4px 15px rgba(16,42,67,.06);
+    text-align:center;
+}
+
+.score-section h2{
+    color:#102a43;
+    margin-bottom:18px;
+}
+
+.score-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:18px;
+}
+
+.score-box{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:14px 10px;
+}
+
+.score-box strong{
+    display:block;
+    font-size:24px;
+    color:#102a43;
+}
+
+.score-box span{
+    font-size:14px;
+    color:#52606d;
+}
+
+.reset-button{
+    margin-top:20px;
+    padding:11px 20px;
+    background:#102a43;
+    color:white;
+    border:none;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.25s;
+}
+
+.reset-button:hover{
+    background:#173f5f;
+}
+
+.note{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:25px;
+    margin-top:35px;
+    box-shadow:0 3px 12px rgba(16,42,67,.05);
+}
+
+.note h2{
+    color:#102a43;
+    margin-bottom:14px;
+}
+
+.note ul{
+    padding-left:22px;
+}
+
+.note li{
+    margin-bottom:8px;
+}
+
+.back-button{
+    display:inline-block;
+    margin-top:30px;
+    padding:11px 18px;
+    background:#102a43;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    transition:.25s;
+}
+
+.back-button:hover{
+    background:#173f5f;
+}
+
+/* FOOTER */
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+    margin-top:50px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    .category-title{
+        font-size:19px;
+    }
+
+    .score-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            LET'S QUALIFYNOW
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>🧠 SSC Syllogism Practice</h1>
+
+    <p>
+        50 Exam-Oriented Questions with Answers &amp; Detailed Solutions
+        <br>
+        उत्तर एवं विस्तृत समाधान सहित 50 परीक्षा-उन्मुख प्रश्न
+    </p>
+
+</section>
+
+
+<div class="container">
+
+    <div class="intro">
+
+        <h2>
+            SSC Syllogism Practice Set
+            <br>
+            SSC Syllogism अभ्यास सेट
+        </h2>
+
+        <p>
+            This practice set covers important SSC-level questions based on
+            Basic Syllogism, Either-Or, Neither-Nor, Only, Only a Few,
+            Coded Syllogism, Possibility and Advanced Mixed Syllogism.
+        </p>
+
+        <p class="hindi">
+            इस अभ्यास सेट में Basic Syllogism, Either-Or, Neither-Nor,
+            Only, Only a Few, Coded Syllogism, Possibility तथा Advanced
+            Mixed Syllogism पर आधारित SSC स्तर के महत्वपूर्ण प्रश्न शामिल हैं।
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Total Questions: 50</strong>
+            &nbsp; | &nbsp;
+            <strong>Level: SSC Exam Standard</strong>
+        </p>
+
+        <p class="hindi">
+            <strong>कुल प्रश्न: 50</strong>
+            &nbsp; | &nbsp;
+            <strong>स्तर: SSC परीक्षा मानक</strong>
+        </p>
+
+    </div>
+
+
+    <h2 class="section-title">
+        Syllogism Questions / Syllogism के प्रश्न
+    </h2>
+
+    <div id="questionsContainer"></div>
+
+
+    <!-- PRACTICE RESULT -->
+
+    <div class="score-section" id="scoreSection">
+
+        <h2>
+            📊 Your Practice Result
+            <br>
+            आपका Practice Result
+        </h2>
+
+        <div class="score-grid">
+
+            <div class="score-box">
+                <strong id="score">0/50</strong>
+                <span>Score / अंक</span>
+            </div>
+
+            <div class="score-box">
+                <strong id="attempted">0</strong>
+                <span>Attempted / प्रयास किए</span>
+            </div>
+
+            <div class="score-box">
+                <strong id="correct">0</strong>
+                <span>Correct / सही</span>
+            </div>
+
+            <div class="score-box">
+                <strong id="wrong">0</strong>
+                <span>Wrong / गलत</span>
+            </div>
+
+        </div>
+
+        <button class="reset-button" id="resetPractice">
+            🔄 Reset Practice / पुनः शुरू करें
+        </button>
+
+    </div>
+
+
+    <div class="note">
+
+        <h2>
+            Important Syllogism Rules
+            <br>
+            Syllogism के महत्वपूर्ण नियम
+        </h2>
+
+        <ul>
+
+            <li>
+                <strong>All A are B</strong> means A is completely contained within B.
+                <br>
+                <span class="hindi">
+                    <strong>All A are B</strong> का अर्थ है कि A के सभी तत्व B के अंतर्गत आते हैं।
+                </span>
+            </li>
+
+            <li>
+                Under the SSC-style existence convention used in this practice set,
+                All A are B also gives Some A are B and Some B are A.
+                <br>
+                <span class="hindi">
+                    इस अभ्यास सेट में प्रयुक्त SSC-शैली की अस्तित्व मान्यता के अनुसार,
+                    All A are B से Some A are B तथा Some B are A भी माना जाता है।
+                </span>
+            </li>
+
+            <li>
+                <strong>Some A are B</strong> means there is an overlap between A and B.
+                <br>
+                <span class="hindi">
+                    <strong>Some A are B</strong> का अर्थ है कि A और B में कुछ तत्व समान हैं।
+                </span>
+            </li>
+
+            <li>
+                <strong>Some A are B</strong> is reversible: Some B are A.
+                <br>
+                <span class="hindi">
+                    <strong>Some A are B</strong> को उलटा भी लिखा जा सकता है: Some B are A.
+                </span>
+            </li>
+
+            <li>
+                <strong>No A is B</strong> means A and B cannot overlap.
+                <br>
+                <span class="hindi">
+                    <strong>No A is B</strong> का अर्थ है कि A और B में कोई समान तत्व नहीं है।
+                </span>
+            </li>
+
+            <li>
+                <strong>No A is B</strong> is reversible: No B is A.
+                <br>
+                <span class="hindi">
+                    <strong>No A is B</strong> को उलटकर <strong>No B is A</strong> भी लिखा जा सकता है।
+                </span>
+            </li>
+
+            <li>
+                Under the SSC-style existence convention, No A is B can also support
+                Some A are not B when the existence of A is relevant.
+                <br>
+                <span class="hindi">
+                    SSC-शैली की अस्तित्व मान्यता के अनुसार, जब A के अस्तित्व को माना जाता है,
+                    तब No A is B से Some A are not B भी समर्थित हो सकता है।
+                </span>
+            </li>
+
+            <li>
+                <strong>Some A are not B</strong> means at least one A exists outside B.
+                <br>
+                <span class="hindi">
+                    <strong>Some A are not B</strong> का अर्थ है कि कम-से-कम एक A ऐसा है
+                    जो B के अंतर्गत नहीं आता।
+                </span>
+            </li>
+
+            <li>
+                <strong>Only A are B</strong> means All B are A.
+                <br>
+                <span class="hindi">
+                    <strong>Only A are B</strong> का अर्थ है <strong>All B are A</strong>।
+                </span>
+            </li>
+
+            <li>
+                <strong>Only a few A are B</strong> means Some A are B and Some A are not B.
+                <br>
+                <span class="hindi">
+                    <strong>Only a few A are B</strong> का अर्थ है Some A are B तथा
+                    Some A are not B।
+                </span>
+            </li>
+
+            <li>
+                <strong>A Few A are B</strong> means Some A are B; it does not mean All A are B.
+                <br>
+                <span class="hindi">
+                    <strong>A Few A are B</strong> का अर्थ है Some A are B;
+                    इसका अर्थ यह नहीं है कि All A are B।
+                </span>
+            </li>
+
+            <li>
+                <strong>All A are B</strong> is not reversible as All B are A.
+                Its valid particular conversion is Some B are A.
+                <br>
+                <span class="hindi">
+                    <strong>All A are B</strong> को उलटकर All B are A नहीं किया जा सकता।
+                    इसका मान्य particular रूप Some B are A है।
+                </span>
+            </li>
+
+            <li>
+                Possibility conclusions must always be checked against all given statements.
+                <br>
+                <span class="hindi">
+                    Possibility वाले निष्कर्षों को हमेशा दिए गए सभी कथनों के आधार पर जाँचना चाहिए।
+                </span>
+            </li>
+
+            <li>
+                A possibility conclusion is valid when at least one logically
+                consistent arrangement satisfies it.
+                <br>
+                <span class="hindi">
+                    कोई Possibility conclusion तब सही होता है जब कम-से-कम एक ऐसा तार्किक
+                    arrangement संभव हो जो दिए गए सभी कथनों के अनुरूप हो।
+                </span>
+            </li>
+
+            <li>
+                In possibility questions, do not assume any additional relationship
+                between terms that is not supported by the statements.
+                <br>
+                <span class="hindi">
+                    Possibility वाले प्रश्नों में ऐसे किसी अतिरिक्त संबंध को नहीं मानना चाहिए
+                    जिसका समर्थन दिए गए कथनों से नहीं होता है।
+                </span>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <a class="back-button" href="ssc-topic-wise-practice.html">
+        ← Back to SSC Topic-wise Practice
+    </a>
+
+</div>
+
+
+<footer>
+
+    <p><strong>LET'S QUALIFYNOW</strong></p>
+    <p>N Saurabh Sir — Reasoning Faculty</p>
+    <p>SSC • Banking • Railway • Government Exams</p>
+
+</footer>
+
+
+<script>
+
+const sections = [
+
+{
+title:"Part 1: Basic Syllogism / भाग 1: Basic Syllogism",
+questions:[
+
+{
+q:1,
+
+statement:`All pens are books.
+All books are papers.`,
+
+statementHindi:`सभी पेन पुस्तकें हैं।
+सभी पुस्तकें कागज हैं।`,
+
+conclusions:`I. All pens are papers.
+II. Some papers are books.`,
+
+conclusionsHindi:`I. सभी पेन कागज हैं।
+II. कुछ कागज पुस्तकें हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Pens ⊆ Books ⊆ Papers. Therefore I follows. Under the SSC-style existence convention used in this set, All books are papers also gives Some papers are books. Therefore both I and II follow.",
+
+solutionHindi:"Pens ⊆ Books ⊆ Papers. इसलिए I अनुसरण करता है। इस अभ्यास सेट में प्रयुक्त SSC-शैली की अस्तित्व मान्यता के अनुसार, All books are papers से Some papers are books भी प्राप्त होता है। इसलिए I और II दोनों अनुसरण करते हैं।"
+},
+
+{
+q:2,
+
+statement:`Some doctors are writers.
+All writers are artists.`,
+
+statementHindi:`कुछ डॉक्टर लेखक हैं।
+सभी लेखक कलाकार हैं।`,
+
+conclusions:`I. Some doctors are artists.
+II. All artists are writers.`,
+
+conclusionsHindi:`I. कुछ डॉक्टर कलाकार हैं।
+II. सभी कलाकार लेखक हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"Some doctors are writers and all writers are artists. Therefore those doctors who are writers are also artists. II reverses the given universal relation and does not follow.",
+
+solutionHindi:"कुछ डॉक्टर लेखक हैं और सभी लेखक कलाकार हैं। इसलिए जो डॉक्टर लेखक हैं, वे कलाकार भी हैं। II दिए गए सार्वत्रिक संबंध को उलट देता है, इसलिए II अनुसरण नहीं करता।"
+},
+
+{
+q:3,
+
+statement:`All cats are animals.
+No animal is a plant.`,
+
+statementHindi:`सभी बिल्लियाँ जानवर हैं।
+कोई भी जानवर पौधा नहीं है।`,
+
+conclusions:`I. No cat is a plant.
+II. Some plants are not cats.`,
+
+conclusionsHindi:`I. कोई भी बिल्ली पौधा नहीं है।
+II. कुछ पौधे बिल्लियाँ नहीं हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Cats are animals and no animal is a plant. Hence no cat is a plant, so I follows. Under the SSC-style existence convention used in this set, the named plant group is treated as existing; since plants cannot be animals and cats are animals, some plants are not cats. Therefore both I and II follow.",
+
+solutionHindi:"बिल्लियाँ जानवर हैं और कोई भी जानवर पौधा नहीं है। इसलिए कोई भी बिल्ली पौधा नहीं है, अतः I अनुसरण करता है। इस अभ्यास सेट में प्रयुक्त SSC-शैली की अस्तित्व मान्यता के अनुसार पौधों के समूह का अस्तित्व माना जाता है। चूँकि पौधे जानवर नहीं हो सकते और बिल्लियाँ जानवर हैं, इसलिए कुछ पौधे बिल्लियाँ नहीं हैं। अतः I और II दोनों अनुसरण करते हैं।"
+},
+
+{
+q:4,
+
+statement:`Some teachers are singers.
+Some singers are dancers.`,
+
+statementHindi:`कुछ शिक्षक गायक हैं।
+कुछ गायक नर्तक हैं।`,
+
+conclusions:`I. Some teachers are dancers.
+II. Some dancers are singers.`,
+
+conclusionsHindi:`I. कुछ शिक्षक नर्तक हैं।
+II. कुछ नर्तक गायक हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"B",
+
+solution:"Some singers are dancers means some dancers are singers. The teacher-singer group and singer-dancer group need not contain the same people, so I does not follow.",
+
+solutionHindi:"Some singers are dancers का अर्थ है कि कुछ नर्तक गायक हैं। शिक्षक-गायक समूह और गायक-नर्तक समूह में आवश्यक नहीं कि वही व्यक्ति हों, इसलिए I अनुसरण नहीं करता।"
+},
+
+{
+q:5,
+
+statement:`No car is a bicycle.
+Some bicycles are vehicles.`,
+
+statementHindi:`कोई भी कार साइकिल नहीं है।
+कुछ साइकिल वाहन हैं।`,
+
+conclusions:`I. Some vehicles are bicycles.
+II. No vehicle is a car.`,
+
+conclusionsHindi:`I. कुछ वाहन साइकिल हैं।
+II. कोई भी वाहन कार नहीं है।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"Some bicycles are vehicles is reversible, so some vehicles are bicycles. Nothing establishes that every vehicle is not a car.",
+
+solutionHindi:"Some bicycles are vehicles को उलटा लिखा जा सकता है, इसलिए कुछ वाहन साइकिल हैं। ऐसा कोई कथन नहीं है जो यह स्थापित करे कि प्रत्येक वाहन कार नहीं है।"
+},
+
+{
+q:6,
+
+statement:`All roses are flowers.
+Some flowers are red.`,
+
+statementHindi:`सभी गुलाब फूल हैं।
+कुछ फूल लाल हैं।`,
+
+conclusions:`I. Some roses are red.
+II. All roses are flowers.`,
+
+conclusionsHindi:`I. कुछ गुलाब लाल हैं।
+II. सभी गुलाब फूल हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"B",
+
+solution:"II is directly given. Some flowers being red does not establish that any rose is red.",
+
+solutionHindi:"II कथन में सीधे दिया गया है। कुछ फूलों के लाल होने से यह सिद्ध नहीं होता कि कोई गुलाब लाल है।"
+},
+
+{
+q:7,
+
+statement:`Some books are novels.
+All novels are interesting.`,
+
+statementHindi:`कुछ पुस्तकें उपन्यास हैं।
+सभी उपन्यास रोचक हैं।`,
+
+conclusions:`I. Some books are interesting.
+II. Some interesting things are novels.`,
+
+conclusionsHindi:`I. कुछ पुस्तकें रोचक हैं।
+II. कुछ रोचक वस्तुएँ उपन्यास हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Some books are novels and all novels are interesting. Therefore those existing books that are novels are interesting. Hence some books are interesting and some interesting things are novels.",
+
+solutionHindi:"कुछ पुस्तकें उपन्यास हैं और सभी उपन्यास रोचक हैं। इसलिए जो पुस्तकें उपन्यास हैं, वे रोचक भी हैं। अतः कुछ पुस्तकें रोचक हैं और कुछ रोचक वस्तुएँ उपन्यास हैं।"
+},
+
+{
+q:8,
+
+statement:`All engineers are graduates.
+No graduate is unemployed.`,
+
+statementHindi:`सभी इंजीनियर स्नातक हैं।
+कोई भी स्नातक बेरोजगार नहीं है।`,
+
+conclusions:`I. No engineer is unemployed.
+II. Some graduates are engineers.`,
+
+conclusionsHindi:`I. कोई भी इंजीनियर बेरोजगार नहीं है।
+II. कुछ स्नातक इंजीनियर हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Engineers are graduates and graduates cannot be unemployed. Therefore no engineer is unemployed. Under the SSC-style existence convention used in this set, engineers exist; since all engineers are graduates, some graduates are engineers. Therefore both I and II follow.",
+
+solutionHindi:"इंजीनियर स्नातक हैं और कोई भी स्नातक बेरोजगार नहीं है। इसलिए कोई भी इंजीनियर बेरोजगार नहीं है। इस अभ्यास सेट में प्रयुक्त SSC-शैली की अस्तित्व मान्यता के अनुसार इंजीनियरों का अस्तित्व माना जाता है। चूँकि सभी इंजीनियर स्नातक हैं, इसलिए कुछ स्नातक इंजीनियर हैं। अतः I और II दोनों अनुसरण करते हैं।"
+},
+
+{
+q:9,
+
+statement:`Some apples are fruits.
+All fruits are healthy.`,
+
+statementHindi:`कुछ सेब फल हैं।
+सभी फल स्वास्थ्यवर्धक हैं।`,
+
+conclusions:`I. Some apples are healthy.
+II. All healthy things are fruits.`,
+
+conclusionsHindi:`I. कुछ सेब स्वास्थ्यवर्धक हैं।
+II. सभी स्वास्थ्यवर्धक वस्तुएँ फल हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"Some apples are fruits and all fruits are healthy. Therefore some apples are healthy. II reverses the relation and does not follow.",
+
+solutionHindi:"कुछ सेब फल हैं और सभी फल स्वास्थ्यवर्धक हैं। इसलिए कुछ सेब स्वास्थ्यवर्धक हैं। II संबंध को उलट देता है, इसलिए II अनुसरण नहीं करता।"
+},
+
+{
+q:10,
+
+statement:`No student is a teacher.
+Some teachers are writers.`,
+
+statementHindi:`कोई भी विद्यार्थी शिक्षक नहीं है।
+कुछ शिक्षक लेखक हैं।`,
+
+conclusions:`I. Some writers are not students.
+II. No writer is a student.`,
+
+conclusionsHindi:`I. कुछ लेखक विद्यार्थी नहीं हैं।
+II. कोई भी लेखक विद्यार्थी नहीं है।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"The teachers who are writers cannot be students. Therefore some writers are not students. Nothing establishes that every writer is not a student.",
+
+solutionHindi:"जो शिक्षक लेखक हैं, वे विद्यार्थी नहीं हो सकते। इसलिए कुछ लेखक विद्यार्थी नहीं हैं। ऐसा कोई कथन नहीं है जो यह स्थापित करे कि प्रत्येक लेखक विद्यार्थी नहीं है।"
+}
+
+]
+},
+
+{
+title:"Part 2: Either-Or / Neither-Nor / भाग 2: Either-Or / Neither-Nor",
+questions:[
+
+{
+q:11,
+
+statement:`Some A are B.
+No B is C.`,
+
+statementHindi:`कुछ A, B हैं।
+कोई भी B, C नहीं है।`,
+
+conclusions:`I. Some A are not C.
+II. Some A are C.`,
+
+conclusionsHindi:`I. कुछ A, C नहीं हैं।
+II. कुछ A, C हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Either I or II follows","I या II में से कोई एक अनुसरण करता है"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"The A that are B cannot be C because no B is C. Hence some A are not C. II does not follow. This is not a genuine Either-Or case.",
+
+solutionHindi:"जो A, B हैं वे C नहीं हो सकते क्योंकि कोई भी B, C नहीं है। इसलिए कुछ A, C नहीं हैं। II अनुसरण नहीं करता। यह वास्तविक Either-Or स्थिति नहीं है।"
+},
+
+{
+q:12,
+
+statement:`Some P are Q.
+No Q is R.`,
+
+statementHindi:`कुछ P, Q हैं।
+कोई भी Q, R नहीं है।`,
+
+conclusions:`I. Some P are not R.
+II. Some P are R.`,
+
+conclusionsHindi:`I. कुछ P, R नहीं हैं।
+II. कुछ P, R हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"The P-Q objects cannot be R. Therefore some P are not R.",
+
+solutionHindi:"जो P-Q वस्तुएँ हैं वे R नहीं हो सकतीं। इसलिए कुछ P, R नहीं हैं।"
+},
+
+{
+q:13,
+
+statement:`All M are N.
+No N is O.`,
+
+statementHindi:`सभी M, N हैं।
+कोई भी N, O नहीं है।`,
+
+conclusions:`I. No M is O.
+II. Some M are O.`,
+
+conclusionsHindi:`I. कोई भी M, O नहीं है।
+II. कुछ M, O हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"M is contained in N, and N has no overlap with O. Therefore M also has no overlap with O. II directly contradicts this relation.",
+
+solutionHindi:"M, N के अंतर्गत है और N का O के साथ कोई overlap नहीं है। इसलिए M का भी O के साथ कोई overlap नहीं है। II इस संबंध का सीधे विरोध करता है।"
+},
+
+{
+q:14,
+
+statement:`Some X are Y.
+Some Y are Z.`,
+
+statementHindi:`कुछ X, Y हैं।
+कुछ Y, Z हैं।`,
+
+conclusions:`I. Some X are Z.
+II. Some Z are Y.`,
+
+conclusionsHindi:`I. कुछ X, Z हैं।
+II. कुछ Z, Y हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"B",
+
+solution:"Some Y are Z means some Z are Y. The X-Y and Y-Z overlaps need not involve the same objects.",
+
+solutionHindi:"Some Y are Z का अर्थ है कि कुछ Z, Y हैं। X-Y और Y-Z के overlap में आवश्यक नहीं कि वही वस्तुएँ शामिल हों।"
+},
+
+{
+q:15,
+
+statement:`No A is B.
+Some C are A.`,
+
+statementHindi:`कोई भी A, B नहीं है।
+कुछ C, A हैं।`,
+
+conclusions:`I. Some C are not B.
+II. Some C are B.`,
+
+conclusionsHindi:`I. कुछ C, B नहीं हैं।
+II. कुछ C, B हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"The C that are A cannot be B. Therefore some C are not B.",
+
+solutionHindi:"जो C, A हैं वे B नहीं हो सकते। इसलिए कुछ C, B नहीं हैं।"
+},
+
+{
+q:16,
+
+statement:`All D are E.
+Some F are D.`,
+
+statementHindi:`सभी D, E हैं।
+कुछ F, D हैं।`,
+
+conclusions:`I. Some F are E.
+II. Some E are F.`,
+
+conclusionsHindi:`I. कुछ F, E हैं।
+II. कुछ E, F हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Some F are D and all D are E. Therefore those F are also E. Hence some F are E. Some E are F is the reversible form of the same overlap. Therefore both I and II follow.",
+
+solutionHindi:"कुछ F, D हैं और सभी D, E हैं। इसलिए वे F भी E हैं। अतः कुछ F, E हैं। Some E are F उसी overlap का उलटा रूप है। इसलिए I और II दोनों अनुसरण करते हैं।"
+},
+
+{
+q:17,
+
+statement:`Some G are H.
+No H is J.`,
+
+statementHindi:`कुछ G, H हैं।
+कोई भी H, J नहीं है।`,
+
+conclusions:`I. Some G are not J.
+II. Some G are J.`,
+
+conclusionsHindi:`I. कुछ G, J नहीं हैं।
+II. कुछ G, J हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"Some G are H and no H is J. Therefore those G which are H cannot be J. Hence some G are not J.",
+
+solutionHindi:"कुछ G, H हैं और कोई भी H, J नहीं है। इसलिए जो G, H हैं वे J नहीं हो सकते। अतः कुछ G, J नहीं हैं।"
+},
+
+{
+q:18,
+
+statement:`No P is Q.
+No Q is R.`,
+
+statementHindi:`कोई भी P, Q नहीं है।
+कोई भी Q, R नहीं है।`,
+
+conclusions:`I. Some P are R.
+II. Some R are P.`,
+
+conclusionsHindi:`I. कुछ P, R हैं।
+II. कुछ R, P हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"D",
+
+solution:"The statements only prohibit P-Q and Q-R overlap. Nothing requires P-R overlap.",
+
+solutionHindi:"दिए गए कथन केवल P-Q और Q-R के overlap को रोकते हैं। P-R के overlap की कोई आवश्यकता नहीं है।"
+}
+
+]
+},
+
+{
+title:"Part 3: Only / Only a Few / A Few / भाग 3: Only / Only a Few / A Few",
+questions:[
+
+{
+q:19,
+
+statement:`Only doctors are surgeons.`,
+
+statementHindi:`केवल डॉक्टर ही सर्जन हैं।`,
+
+conclusions:`I. All surgeons are doctors.
+II. All doctors are surgeons.`,
+
+conclusionsHindi:`I. सभी सर्जन डॉक्टर हैं।
+II. सभी डॉक्टर सर्जन हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"Only doctors are surgeons means all surgeons are doctors. It does not mean all doctors are surgeons.",
+
+solutionHindi:"Only doctors are surgeons का अर्थ है कि सभी सर्जन डॉक्टर हैं। इसका अर्थ यह नहीं है कि सभी डॉक्टर सर्जन हैं।"
+},
+
+{
+q:20,
+
+statement:`Only a few teachers are writers.`,
+
+statementHindi:`केवल कुछ शिक्षक लेखक हैं।`,
+
+conclusions:`I. Some teachers are writers.
+II. Some teachers are not writers.`,
+
+conclusionsHindi:`I. कुछ शिक्षक लेखक हैं।
+II. कुछ शिक्षक लेखक नहीं हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Only a few A are B means some A are B and some A are not B. Therefore both conclusions follow.",
+
+solutionHindi:"Only a few A are B का अर्थ है कि कुछ A, B हैं और कुछ A, B नहीं हैं। इसलिए दोनों निष्कर्ष अनुसरण करते हैं।"
+},
+
+{
+q:21,
+
+statement:`A few students are athletes.`,
+
+statementHindi:`कुछ विद्यार्थी खिलाड़ी हैं।`,
+
+conclusions:`I. Some students are athletes.
+II. All students are athletes.`,
+
+conclusionsHindi:`I. कुछ विद्यार्थी खिलाड़ी हैं।
+II. सभी विद्यार्थी खिलाड़ी हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"A few establishes that some students are athletes. It does not mean all students are athletes.",
+
+solutionHindi:"A few यह स्थापित करता है कि कुछ विद्यार्थी खिलाड़ी हैं। इसका अर्थ यह नहीं है कि सभी विद्यार्थी खिलाड़ी हैं।"
+},
+
+{
+q:22,
+
+statement:`Only lawyers are judges.
+Some judges are teachers.`,
+
+statementHindi:`केवल वकील ही न्यायाधीश हैं।
+कुछ न्यायाधीश शिक्षक हैं।`,
+
+conclusions:`I. Some teachers are lawyers.
+II. All lawyers are judges.`,
+
+conclusionsHindi:`I. कुछ शिक्षक वकील हैं।
+II. सभी वकील न्यायाधीश हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"A",
+
+solution:"Only lawyers are judges means all judges are lawyers. Some judges are teachers, so those judges are also lawyers. Therefore some teachers are lawyers.",
+
+solutionHindi:"Only lawyers are judges का अर्थ है कि सभी न्यायाधीश वकील हैं। कुछ न्यायाधीश शिक्षक हैं, इसलिए वे न्यायाधीश वकील भी हैं। अतः कुछ शिक्षक वकील हैं।"
+},
+
+{
+q:23,
+
+statement:`Only a few cars are electric.`,
+
+statementHindi:`केवल कुछ कारें इलेक्ट्रिक हैं।`,
+
+conclusions:`I. Some cars are electric.
+II. Some cars are not electric.`,
+
+conclusionsHindi:`I. कुछ कारें इलेक्ट्रिक हैं।
+II. कुछ कारें इलेक्ट्रिक नहीं हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Only a few means some cars are electric and some cars are not electric. Therefore both conclusions follow.",
+
+solutionHindi:"Only a few का अर्थ है कि कुछ कारें इलेक्ट्रिक हैं और कुछ कारें इलेक्ट्रिक नहीं हैं। इसलिए दोनों निष्कर्ष अनुसरण करते हैं।"
+},
+
+{
+q:24,
+
+statement:`Only musicians are composers.
+Some composers are singers.`,
+
+statementHindi:`केवल संगीतकार ही संगीत रचनाकार हैं।
+कुछ संगीत रचनाकार गायक हैं।`,
+
+conclusions:`I. Some singers are musicians.
+II. Some musicians are composers.`,
+
+conclusionsHindi:`I. कुछ गायक संगीतकार हैं।
+II. कुछ संगीतकार संगीत रचनाकार हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Only musicians are composers means all composers are musicians. Some composers are singers, so those composers are also musicians and singers. Therefore both conclusions follow.",
+
+solutionHindi:"Only musicians are composers का अर्थ है कि सभी संगीत रचनाकार संगीतकार हैं। कुछ संगीत रचनाकार गायक हैं, इसलिए वे संगीतकार और गायक दोनों हैं। अतः दोनों निष्कर्ष अनुसरण करते हैं।"
+},
+
+{
+q:25,
+
+statement:`A few books are expensive.
+All expensive things are valuable.`,
+
+statementHindi:`कुछ पुस्तकें महँगी हैं।
+सभी महँगी वस्तुएँ मूल्यवान हैं।`,
+
+conclusions:`I. Some books are valuable.
+II. Some valuable things are books.`,
+
+conclusionsHindi:`I. कुछ पुस्तकें मूल्यवान हैं।
+II. कुछ मूल्यवान वस्तुएँ पुस्तकें हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Some books are expensive and all expensive things are valuable. Therefore some books are valuable. This overlap is reversible, so some valuable things are books.",
+
+solutionHindi:"कुछ पुस्तकें महँगी हैं और सभी महँगी वस्तुएँ मूल्यवान हैं। इसलिए कुछ पुस्तकें मूल्यवान हैं। यह overlap उलटा भी लिखा जा सकता है, इसलिए कुछ मूल्यवान वस्तुएँ पुस्तकें हैं।"
+},
+
+{
+q:26,
+
+statement:`Only engineers are designers.`,
+
+statementHindi:`केवल इंजीनियर ही डिजाइनर हैं।`,
+
+conclusions:`I. All designers are engineers.
+II. Some engineers are designers.`,
+
+conclusionsHindi:`I. सभी डिजाइनर इंजीनियर हैं।
+II. कुछ इंजीनियर डिजाइनर हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"Only engineers are designers means all designers are engineers. Under the SSC-style existence convention used in this set, designers exist. Therefore some designers are engineers, which is the same as some engineers being designers. Hence both I and II follow.",
+
+solutionHindi:"Only engineers are designers का अर्थ है कि सभी डिजाइनर इंजीनियर हैं। इस अभ्यास सेट में प्रयुक्त SSC-शैली की अस्तित्व मान्यता के अनुसार डिजाइनरों का अस्तित्व माना जाता है। इसलिए कुछ डिजाइनर इंजीनियर हैं, अर्थात कुछ इंजीनियर डिजाइनर हैं। अतः I और II दोनों अनुसरण करते हैं।"
+},
+
+{
+q:27,
+
+statement:`Only a few students are singers.`,
+
+statementHindi:`केवल कुछ विद्यार्थी गायक हैं।`,
+
+conclusions:`I. Some students are singers.
+II. Some students are not singers.
+III. All singers are students.`,
+
+conclusionsHindi:`I. कुछ विद्यार्थी गायक हैं।
+II. कुछ विद्यार्थी गायक नहीं हैं।
+III. सभी गायक विद्यार्थी हैं।`,
+
+options:[
+["Only I and II follow","केवल I और II अनुसरण करते हैं"],
+["Only II and III follow","केवल II और III अनुसरण करते हैं"],
+["Only I and III follow","केवल I और III अनुसरण करते हैं"],
+["All I, II and III follow","I, II और III सभी अनुसरण करते हैं"]
+],
+
+answer:"A",
+
+solution:"Only a few students are singers means some students are singers and some students are not singers. It does not establish that every singer is a student. Therefore only I and II follow.",
+
+solutionHindi:"Only a few students are singers का अर्थ है कि कुछ विद्यार्थी गायक हैं और कुछ विद्यार्थी गायक नहीं हैं। यह स्थापित नहीं करता कि प्रत्येक गायक विद्यार्थी है। इसलिए केवल I और II अनुसरण करते हैं।"
+},
+
+{
+q:28,
+
+statement:`Only doctors are surgeons.
+A few surgeons are writers.`,
+
+statementHindi:`केवल डॉक्टर ही सर्जन हैं।
+कुछ सर्जन लेखक हैं।`,
+
+conclusions:`I. Some writers are doctors.
+II. Some doctors are surgeons.`,
+
+conclusionsHindi:`I. कुछ लेखक डॉक्टर हैं।
+II. कुछ डॉक्टर सर्जन हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"All surgeons are doctors. A few surgeons are writers, so some writers are doctors. Since surgeons exist, some doctors are surgeons as well. Therefore both follow.",
+
+solutionHindi:"सभी सर्जन डॉक्टर हैं। कुछ सर्जन लेखक हैं, इसलिए कुछ लेखक डॉक्टर हैं। चूँकि सर्जनों का अस्तित्व है, इसलिए कुछ डॉक्टर सर्जन भी हैं। अतः दोनों निष्कर्ष अनुसरण करते हैं।"
+}
+
+]
+},
+
+{
+title:"Part 4: Symbol-Based Coded Syllogism / भाग 4: Symbol-Based Coded Syllogism",
+questions:[
+
+{
+q:29,
+
+statement:`cold * water
+water % ice`,
+
+statementHindi:`cold * water
+water % ice`,
+
+conclusions:`I. ice % water
+II. water * cold
+III. cold % ice
+IV. ice < cold`,
+
+conclusionsHindi:`I. ice % water
+II. water * cold
+III. cold % ice
+IV. ice < cold`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["I and III follow","I और III अनुसरण करते हैं"],
+["All follow","सभी अनुसरण करते हैं"]
+],
+
+answer:"A",
+
+solution:"water % ice means some water are ice. Since Some A are B is reversible, ice % water follows. cold * water cannot be reversed into water * cold. No existence or overlap between cold and ice is guaranteed.",
+
+solutionHindi:"water % ice का अर्थ है कि कुछ water, ice हैं। चूँकि Some A are B को उलटा किया जा सकता है, इसलिए ice % water अनुसरण करता है। cold * water को उलटकर water * cold नहीं किया जा सकता। cold और ice के बीच किसी अस्तित्व या overlap की गारंटी नहीं है।"
+},
+
+{
+q:30,
+
+statement:`waves * tide
+tide % moon`,
+
+statementHindi:`waves * tide
+tide % moon`,
+
+conclusions:`I. moon % tide
+II. tide % moon
+III. waves % moon
+IV. moon * tide`,
+
+conclusionsHindi:`I. moon % tide
+II. tide % moon
+III. waves % moon
+IV. moon * tide`,
+
+options:[
+["Only I and II follow","केवल I और II अनुसरण करते हैं"],
+["Only III follows","केवल III अनुसरण करता है"],
+["I, II and III follow","I, II और III अनुसरण करते हैं"],
+["All follow","सभी अनुसरण करते हैं"]
+],
+
+answer:"A",
+
+solution:"tide % moon is given, so II follows directly. Some tide are moon is reversible, so moon % tide also follows. waves * tide does not guarantee that any wave belongs to the existing tide-moon overlap. Therefore III and IV do not follow.",
+
+solutionHindi:"tide % moon सीधे दिया गया है, इसलिए II अनुसरण करता है। Some tide are moon को उलटा किया जा सकता है, इसलिए moon % tide भी अनुसरण करता है। waves * tide यह सुनिश्चित नहीं करता कि कोई wave, existing tide-moon overlap का हिस्सा है। इसलिए III और IV अनुसरण नहीं करते।"
+},
+
+{
+q:31,
+
+statement:`apples % fruits
+fruits * healthy`,
+
+statementHindi:`apples % fruits
+fruits * healthy`,
+
+conclusions:`I. fruits % apples
+II. apples % healthy
+III. healthy % fruits
+IV. fruits > apples`,
+
+conclusionsHindi:`I. fruits % apples
+II. apples % healthy
+III. healthy % fruits
+IV. fruits > apples`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only I and II follow","केवल I और II अनुसरण करते हैं"],
+["I, II and III follow","I, II और III अनुसरण करते हैं"],
+["All follow","सभी अनुसरण करते हैं"]
+],
+
+answer:"C",
+
+solution:"apples % fruits gives fruits % apples. All fruits are healthy, so the existing apple-fruit objects are healthy. Hence apples % healthy follows. Those same objects are both healthy and fruits, so healthy % fruits follows. IV does not follow because the statements do not establish that some fruits are outside apples.",
+
+solutionHindi:"apples % fruits से fruits % apples प्राप्त होता है। सभी fruits healthy हैं, इसलिए existing apple-fruit objects healthy भी हैं। अतः apples % healthy अनुसरण करता है। वही objects healthy और fruits दोनों हैं, इसलिए healthy % fruits भी अनुसरण करता है। IV अनुसरण नहीं करता क्योंकि कथन यह स्थापित नहीं करते कि कुछ fruits, apples से बाहर हैं।"
+},
+
+{
+q:32,
+
+statement:`doctors * graduates
+graduates < artists`,
+
+statementHindi:`doctors * graduates
+graduates < artists`,
+
+conclusions:`I. doctors < artists
+II. artists < doctors
+III. doctors % artists
+IV. doctors * artists`,
+
+conclusionsHindi:`I. doctors < artists
+II. artists < doctors
+III. doctors % artists
+IV. doctors * artists`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["I and III follow","I और III अनुसरण करते हैं"],
+["II and IV follow","II और IV अनुसरण करते हैं"]
+],
+
+answer:"A",
+
+solution:"All doctors are graduates and no graduate is an artist. Therefore no doctor is an artist. Hence doctors < artists follows.",
+
+solutionHindi:"सभी doctors graduates हैं और कोई भी graduate artist नहीं है। इसलिए कोई भी doctor artist नहीं है। अतः doctors < artists अनुसरण करता है।"
+},
+
+{
+q:33,
+
+statement:`singers % artists
+artists * performers`,
+
+statementHindi:`singers % artists
+artists * performers`,
+
+conclusions:`I. artists % singers
+II. singers % performers
+III. performers % singers
+IV. singers * performers`,
+
+conclusionsHindi:`I. artists % singers
+II. singers % performers
+III. performers % singers
+IV. singers * performers`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only I and II follow","केवल I और II अनुसरण करते हैं"],
+["I, II and III follow","I, II और III अनुसरण करते हैं"],
+["All follow","सभी अनुसरण करते हैं"]
+],
+
+answer:"C",
+
+solution:"Some singers are artists, so artists % singers. All artists are performers, so those singers are performers. Therefore singers % performers. Since Some singers are performers is reversible, performers % singers also follows. IV does not follow because some singers being performers does not mean all singers are performers.",
+
+solutionHindi:"कुछ singers, artists हैं, इसलिए artists % singers। सभी artists performers हैं, इसलिए वे singers भी performers हैं। अतः singers % performers अनुसरण करता है। Some singers are performers को उलटा किया जा सकता है, इसलिए performers % singers भी अनुसरण करता है। IV अनुसरण नहीं करता क्योंकि कुछ singers के performers होने का अर्थ यह नहीं है कि सभी singers performers हैं।"
+},
+
+{
+q:34,
+
+statement:`books < papers
+papers > books`,
+
+statementHindi:`books < papers
+papers > books`,
+
+conclusions:`I. papers < books
+II. books < papers
+III. books % papers
+IV. papers * books`,
+
+conclusionsHindi:`I. papers < books
+II. books < papers
+III. books % papers
+IV. papers * books`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only I and II follow","केवल I और II अनुसरण करते हैं"],
+["II and III follow","II और III अनुसरण करते हैं"],
+["All follow","सभी अनुसरण करते हैं"]
+],
+
+answer:"B",
+
+solution:"books < papers directly means no books are papers. No A is B is symmetric, so papers < books also follows. The statements do not establish overlap.",
+
+solutionHindi:"books < papers का सीधे अर्थ है कि कोई भी books, papers नहीं हैं। No A is B symmetric होता है, इसलिए papers < books भी अनुसरण करता है। कथन किसी overlap को स्थापित नहीं करते।"
+},
+
+{
+q:35,
+
+statement:`teachers % writers
+writers < singers`,
+
+statementHindi:`teachers % writers
+writers < singers`,
+
+conclusions:`I. writers % teachers
+II. teachers % singers
+III. teachers < singers
+IV. singers % teachers`,
+
+conclusionsHindi:`I. writers % teachers
+II. teachers % singers
+III. teachers < singers
+IV. singers % teachers`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["I and II follow","I और II अनुसरण करते हैं"],
+["III and IV follow","III और IV अनुसरण करते हैं"]
+],
+
+answer:"A",
+
+solution:"Some teachers are writers, so writers % teachers. No writer is a singer, but this does not establish that all teachers are outside singers or that any teacher is a singer.",
+
+solutionHindi:"कुछ teachers, writers हैं, इसलिए writers % teachers। कोई writer singer नहीं है, लेकिन इससे यह स्थापित नहीं होता कि सभी teachers singers से बाहर हैं या कोई teacher singer है।"
+},
+
+{
+q:36,
+
+statement:`pilots * trained
+trained * professionals`,
+
+statementHindi:`pilots * trained
+trained * professionals`,
+
+conclusions:`I. pilots * professionals
+II. professionals * pilots
+III. pilots % professionals
+IV. pilots > professionals`,
+
+conclusionsHindi:`I. pilots * professionals
+II. professionals * pilots
+III. pilots % professionals
+IV. pilots > professionals`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["I and III follow","I और III अनुसरण करते हैं"],
+["III and IV follow","III और IV अनुसरण करते हैं"]
+],
+
+answer:"C",
+
+solution:"Pilots ⊆ Trained ⊆ Professionals. Therefore pilots * professionals. Under the SSC-style existence convention used in this set, pilots exist, so some pilots are professionals. Hence I and III follow. II and IV do not follow.",
+
+solutionHindi:"Pilots ⊆ Trained ⊆ Professionals। इसलिए pilots * professionals। इस अभ्यास सेट में प्रयुक्त SSC-शैली की अस्तित्व मान्यता के अनुसार pilots का अस्तित्व माना जाता है, इसलिए कुछ pilots professionals हैं। अतः I और III अनुसरण करते हैं। II और IV अनुसरण नहीं करते।"
+},
+
+{
+q:37,
+
+statement:`students % readers
+readers < careless`,
+
+statementHindi:`students % readers
+readers < careless`,
+
+conclusions:`I. readers % students
+II. students >? careless
+III. careless % students
+IV. students * careless`,
+
+conclusionsHindi:`I. readers % students
+II. students >? careless
+III. careless % students
+IV. students * careless`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["I and II follow","I और II अनुसरण करते हैं"],
+["III and IV follow","III और IV अनुसरण करते हैं"]
+],
+
+answer:"C",
+
+solution:"students % readers means some students are readers, so readers % students follows. Also, readers < careless means no reader is careless. Therefore the students who are readers are necessarily not careless. Hence Some students are not careless is supported by the statements, so the possibility conclusion students >? careless also follows. III and IV do not follow.",
+
+solutionHindi:"students % readers का अर्थ है कि कुछ students, readers हैं, इसलिए readers % students अनुसरण करता है। साथ ही readers < careless का अर्थ है कि कोई reader careless नहीं है। इसलिए जो students readers हैं, वे निश्चित रूप से careless नहीं हैं। अतः Some students are not careless कथनों से समर्थित है, इसलिए possibility conclusion students >? careless भी अनुसरण करता है। III और IV अनुसरण नहीं करते।"
+},
+
+{
+q:38,
+
+statement:`artists % dancers
+dancers * performers`,
+
+statementHindi:`artists % dancers
+dancers * performers`,
+
+conclusions:`I. dancers % artists
+II. artists % performers
+III. performers % artists
+IV. artists * performers`,
+
+conclusionsHindi:`I. dancers % artists
+II. artists % performers
+III. performers % artists
+IV. artists * performers`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only I and II follow","केवल I और II अनुसरण करते हैं"],
+["I, II and III follow","I, II और III अनुसरण करते हैं"],
+["All follow","सभी अनुसरण करते हैं"]
+],
+
+answer:"C",
+
+solution:"Some artists are dancers, so dancers % artists. All dancers are performers, so those artists are performers. Therefore artists % performers. Since Some artists are performers is reversible, performers % artists also follows. IV does not follow because the conclusion would require all artists to be performers.",
+
+solutionHindi:"कुछ artists, dancers हैं, इसलिए dancers % artists। सभी dancers performers हैं, इसलिए वे artists भी performers हैं। अतः artists % performers अनुसरण करता है। Some artists are performers को उलटा किया जा सकता है, इसलिए performers % artists भी अनुसरण करता है। IV अनुसरण नहीं करता क्योंकि उसके लिए सभी artists का performers होना आवश्यक होगा।"
+}
+
+]
+},
+
+{
+title:"Part 5: Possibility & Advanced Mixed Syllogism / भाग 5: Possibility एवं Advanced Mixed Syllogism",
+questions:[
+
+{
+q:39,
+
+statement:`All A are B.
+Some B are C.`,
+
+statementHindi:`सभी A, B हैं।
+कुछ B, C हैं।`,
+
+conclusions:`I. All A being C is a possibility.`,
+
+conclusionsHindi:`I. सभी A का C होना संभव है।`,
+
+options:[
+["Yes, the conclusion is possible","हाँ, निष्कर्ष संभव है"],
+["No, it is impossible","नहीं, यह असंभव है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"],
+["None of these","इनमें से कोई नहीं"]
+],
+
+answer:"A",
+
+solution:"All A are B and some B are C. The statements do not require every B to be C, so A does not have to overlap C. However, nothing prevents all A from being placed within the B-C region. Therefore All A being C is a possible arrangement, so the conclusion is possible.",
+
+solutionHindi:"All A are B और Some B are C। कथन यह आवश्यक नहीं करते कि प्रत्येक B, C हो, इसलिए A का C के साथ overlap होना आवश्यक नहीं है। फिर भी ऐसा कुछ नहीं है जो सभी A को B-C क्षेत्र में रखने से रोके। इसलिए सभी A का C होना एक संभव arrangement है और निष्कर्ष संभव है।"
+},
+
+{
+q:40,
+
+statement:`No A is B.`,
+
+statementHindi:`कोई भी A, B नहीं है।`,
+
+conclusions:`I. Some A being B is a possibility.`,
+
+conclusionsHindi:`I. कुछ A का B होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"],
+["None of these","इनमें से कोई नहीं"]
+],
+
+answer:"B",
+
+solution:"No A is B directly prohibits any A-B overlap. Therefore some A being B is impossible.",
+
+solutionHindi:"No A is B सीधे तौर पर A और B के किसी भी overlap को रोकता है। इसलिए कुछ A का B होना असंभव है।"
+},
+
+{
+q:41,
+
+statement:`Some A are B.
+No B is C.`,
+
+statementHindi:`कुछ A, B हैं।
+कोई भी B, C नहीं है।`,
+
+conclusions:`I. Some A being C is a possibility.`,
+
+conclusionsHindi:`I. कुछ A का C होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"A",
+
+solution:"The A-B objects cannot be C. However, the statements do not say that every A is B. Therefore another A can be C, making the conclusion possible.",
+
+solutionHindi:"जो A-B वस्तुएँ हैं वे C नहीं हो सकतीं। लेकिन कथन यह नहीं कहते कि प्रत्येक A, B है। इसलिए कोई दूसरा A, C हो सकता है और निष्कर्ष संभव है।"
+},
+
+{
+q:42,
+
+statement:`All P are Q.
+No Q is R.`,
+
+statementHindi:`सभी P, Q हैं।
+कोई भी Q, R नहीं है।`,
+
+conclusions:`I. Some P being R is a possibility.`,
+
+conclusionsHindi:`I. कुछ P का R होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"B",
+
+solution:"Every P is Q and no Q is R. Therefore no P can be R. Hence some P being R is impossible.",
+
+solutionHindi:"प्रत्येक P, Q है और कोई भी Q, R नहीं है। इसलिए कोई भी P, R नहीं हो सकता। अतः कुछ P का R होना असंभव है।"
+},
+
+{
+q:43,
+
+statement:`Some M are N.
+All N are O.`,
+
+statementHindi:`कुछ M, N हैं।
+सभी N, O हैं।`,
+
+conclusions:`I. All M being O is a possibility.`,
+
+conclusionsHindi:`I. सभी M का O होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"],
+["None of these","इनमें से कोई नहीं"]
+],
+
+answer:"A",
+
+solution:"Some M are N and all N are O, so the existing M-N objects are also O. The statements do not require every M to be outside O. Therefore it is possible to place all M within O while satisfying both statements. Hence All M being O is a possible arrangement.",
+
+solutionHindi:"कुछ M, N हैं और सभी N, O हैं, इसलिए जो M-N वस्तुएँ हैं वे O भी हैं। कथन यह आवश्यक नहीं करते कि प्रत्येक M, O से बाहर हो। इसलिए सभी M को O के अंदर रखना संभव है और दोनों कथन संतुष्ट होते हैं। अतः सभी M का O होना संभव है।"
+},
+
+{
+q:44,
+
+statement:`All X are Y.
+Some Y are Z.`,
+
+statementHindi:`सभी X, Y हैं।
+कुछ Y, Z हैं।`,
+
+conclusions:`I. All X being Z is a possibility.`,
+
+conclusionsHindi:`I. सभी X का Z होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"A",
+
+solution:"Nothing prohibits X from overlapping Z. We can arrange all X inside the Y-Z region while satisfying both given statements. Hence the conclusion is possible.",
+
+solutionHindi:"ऐसा कोई कथन नहीं है जो X और Z के overlap को रोकता हो। सभी X को Y-Z क्षेत्र के अंदर रखा जा सकता है और दोनों दिए गए कथन संतुष्ट होते हैं। इसलिए निष्कर्ष संभव है।"
+},
+
+{
+q:45,
+
+statement:`No L is M.
+Some K are L.`,
+
+statementHindi:`कोई भी L, M नहीं है।
+कुछ K, L हैं।`,
+
+conclusions:`I. Some K being M is a possibility.`,
+
+conclusionsHindi:`I. कुछ K का M होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"A",
+
+solution:"The K-L objects cannot be M. But the statements do not say that every K is L. Therefore another K object may be M, making the conclusion possible.",
+
+solutionHindi:"जो K-L वस्तुएँ हैं वे M नहीं हो सकतीं। लेकिन कथन यह नहीं कहते कि प्रत्येक K, L है। इसलिए कोई दूसरा K, M हो सकता है और निष्कर्ष संभव है।"
+},
+
+{
+q:46,
+
+statement:`All A are B.
+Some B are C.
+No C is D.`,
+
+statementHindi:`सभी A, B हैं।
+कुछ B, C हैं।
+कोई भी C, D नहीं है।`,
+
+conclusions:`I. Some A being D is a possibility.`,
+
+conclusionsHindi:`I. कुछ A का D होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"A",
+
+solution:"Some B are C does not mean all B are C. A is only required to be inside B. Therefore A can be placed in the part of B outside C and can overlap D without violating No C is D. Hence the conclusion is possible.",
+
+solutionHindi:"Some B are C का अर्थ यह नहीं है कि सभी B, C हैं। A का केवल B के अंदर होना आवश्यक है। इसलिए A को B के उस हिस्से में रखा जा सकता है जो C से बाहर है और वह D के साथ overlap कर सकता है, बिना No C is D का उल्लंघन किए। अतः निष्कर्ष संभव है।"
+},
+
+{
+q:47,
+
+statement:`Some A are B.
+All B are C.
+No C is D.`,
+
+statementHindi:`कुछ A, B हैं।
+सभी B, C हैं।
+कोई भी C, D नहीं है।`,
+
+conclusions:`I. Some A being D is a possibility.`,
+
+conclusionsHindi:`I. कुछ A का D होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"A",
+
+solution:"The existing A-B objects are C and therefore cannot be D. But the statements do not say that every A is B. Hence another A may be D, making the conclusion possible.",
+
+solutionHindi:"जो A-B वस्तुएँ हैं वे C हैं और इसलिए D नहीं हो सकतीं। लेकिन कथन यह नहीं कहते कि प्रत्येक A, B है। इसलिए कोई दूसरा A, D हो सकता है और निष्कर्ष संभव है।"
+},
+
+{
+q:48,
+
+statement:`All teachers are graduates.
+No graduate is unemployed.`,
+
+statementHindi:`सभी शिक्षक स्नातक हैं।
+कोई भी स्नातक बेरोजगार नहीं है।`,
+
+conclusions:`I. Some teachers being unemployed is a possibility.`,
+
+conclusionsHindi:`I. कुछ शिक्षकों का बेरोजगार होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"B",
+
+solution:"Every teacher is a graduate and no graduate is unemployed. Therefore no teacher can be unemployed. Hence the possibility is impossible.",
+
+solutionHindi:"प्रत्येक शिक्षक स्नातक है और कोई भी स्नातक बेरोजगार नहीं है। इसलिए कोई भी शिक्षक बेरोजगार नहीं हो सकता। अतः यह possibility असंभव है।"
+},
+
+{
+q:49,
+
+statement:`Some P are Q.
+Some Q are R.`,
+
+statementHindi:`कुछ P, Q हैं।
+कुछ Q, R हैं।`,
+
+conclusions:`I. Some P being R is a possibility.`,
+
+conclusionsHindi:`I. कुछ P का R होना संभव है।`,
+
+options:[
+["Yes, possible","हाँ, संभव है"],
+["No, impossible","नहीं, असंभव है"],
+["Certain","निश्चित है"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+
+answer:"A",
+
+solution:"The P-Q and Q-R overlaps can contain a common object without violating either statement. Therefore an object can be P, Q and R, making the conclusion possible.",
+
+solutionHindi:"P-Q और Q-R के overlaps में एक common object हो सकता है और इससे किसी भी कथन का उल्लंघन नहीं होता। इसलिए कोई वस्तु P, Q और R तीनों हो सकती है। अतः निष्कर्ष संभव है।"
+},
+
+{
+q:50,
+
+statement:`All A are B.
+No B is C.
+Some D are C.`,
+
+statementHindi:`सभी A, B हैं।
+कोई भी B, C नहीं है।
+कुछ D, C हैं।`,
+
+conclusions:`I. No A is C.
+II. Some D are not B.`,
+
+conclusionsHindi:`I. कोई भी A, C नहीं है।
+II. कुछ D, B नहीं हैं।`,
+
+options:[
+["Only I follows","केवल I अनुसरण करता है"],
+["Only II follows","केवल II अनुसरण करता है"],
+["Both I and II follow","I और II दोनों अनुसरण करते हैं"],
+["Neither I nor II follows","न तो I और न ही II अनुसरण करता है"]
+],
+
+answer:"C",
+
+solution:"A is contained in B and no B is C, so no A is C. Some D are C and no C is B. Therefore those D are not B. Hence both conclusions follow.",
+
+solutionHindi:"A, B के अंतर्गत है और कोई भी B, C नहीं है, इसलिए कोई भी A, C नहीं है। कुछ D, C हैं और कोई भी C, B नहीं है। इसलिए वे D, B नहीं हैं। अतः दोनों निष्कर्ष अनुसरण करते हैं।"
+}
+
+]
+}
+
+];
+
+
+/* RENDER QUESTIONS */
+
+const container = document.getElementById("questionsContainer");
+
+sections.forEach(section => {
+
+    const heading = document.createElement("div");
+
+    heading.className = "category-title";
+
+    heading.textContent = section.title;
+
+    container.appendChild(heading);
+
+
+    section.questions.forEach(item => {
+
+        const question = document.createElement("div");
+
+        question.className = "question";
+
+        question.dataset.answer = item.answer;
+
+        question.dataset.answered = "false";
+
+
+        let optionsHTML = "";
+
+        item.options.forEach((option,index) => {
+
+            const letter = String.fromCharCode(65 + index);
+
+            optionsHTML += `
+                <div class="option" data-option="${letter}">
+                    <strong>${letter}) ${option[0]}</strong>
+                    <span class="option-hindi">${option[1]}</span>
+                </div>
+            `;
+
+        });
+
+
+        question.innerHTML = `
+            <div class="q-number">
+                Question ${item.q} / प्रश्न ${item.q}
+            </div>
+
+            <div class="q-text">
+                Statements / कथन:
+            </div>
+
+            <div class="statement">
+                <strong>English:</strong><br>
+                ${item.statement}
+                <br><br>
+                <strong>हिंदी:</strong><br>
+                ${item.statementHindi}
+            </div>
+
+            <div class="q-text">
+                Conclusions / निष्कर्ष:
+            </div>
+
+            <div class="conclusions">
+                <strong>English:</strong><br>
+                ${item.conclusions}
+                <br><br>
+                <strong>हिंदी:</strong><br>
+                ${item.conclusionsHindi}
+            </div>
+
+            <div class="options">
+                ${optionsHTML}
+            </div>
+
+            <div class="result"></div>
+
+            <div class="answer">
+
+                <strong>
+                    Answer: (${item.answer}) ${item.options[item.answer.charCodeAt(0)-65][0]}
+                    <br>
+                    सही उत्तर: (${item.answer}) ${item.options[item.answer.charCodeAt(0)-65][1]}
+                </strong>
+
+                <div class="solution">
+
+                    <strong>Solution:</strong><br>
+                    ${item.solution}
+
+                    <div class="solution-hindi">
+
+                        <strong>हिंदी समाधान:</strong><br>
+                        ${item.solutionHindi}
+
+                    </div>
+
+                </div>
+
+            </div>
+        `;
+
+        container.appendChild(question);
+
+    });
+
+});
+
+
+/* SCORE CALCULATION */
+
+let score = 0;
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+const totalQuestions = 50;
+
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        score + "/" + totalQuestions;
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+}
+
+
+/* ANSWER CHECK */
+
+document.querySelectorAll(".question").forEach(question => {
+
+    const options = question.querySelectorAll(".option");
+
+    const correctAnswer = question.dataset.answer;
+
+    const result = question.querySelector(".result");
+
+    const answerBox = question.querySelector(".answer");
+
+
+    options.forEach(option => {
+
+        option.addEventListener("click", function(){
+
+            if(question.dataset.answered === "true"){
+                return;
+            }
+
+            question.dataset.answered = "true";
+
+            const selected = this.dataset.option;
+
+            attempted++;
+
+
+            options.forEach(opt => {
+
+                opt.style.cursor = "default";
+
+                if(opt.dataset.option === correctAnswer){
+
+                    opt.classList.add("correct");
+
+                }
+
+            });
+
+
+            if(selected === correctAnswer){
+
+                correct++;
+
+                score++;
+
+                this.classList.add("selected");
+
+                result.innerHTML =
+                    "✅ Correct Answer! / सही उत्तर!";
+
+                result.className = "result correct-result";
+
+            }else{
+
+                wrong++;
+
+                this.classList.add("wrong");
+
+                result.innerHTML =
+                    "❌ Incorrect. Correct Answer: (" +
+                    correctAnswer +
+                    ") / गलत। सही उत्तर: (" +
+                    correctAnswer +
+                    ")";
+
+                result.className = "result wrong-result";
+
+            }
+
+
+            updateScore();
+
+            result.style.display = "block";
+
+            answerBox.style.display = "block";
+
+        });
+
+    });
+
+});
+
+
+/* RESET PRACTICE */
+
+document.getElementById("resetPractice").addEventListener("click", function(){
+
+    score = 0;
+    attempted = 0;
+    correct = 0;
+    wrong = 0;
+
+    updateScore();
+
+
+    document.querySelectorAll(".question").forEach(question => {
+
+        question.dataset.answered = "false";
+
+
+        question.querySelectorAll(".option").forEach(option => {
+
+            option.classList.remove(
+                "selected",
+                "correct",
+                "wrong"
+            );
+
+            option.style.cursor = "pointer";
+
+        });
+
+
+        const result = question.querySelector(".result");
+
+        result.style.display = "none";
+        result.textContent = "";
+        result.className = "result";
+
+
+        const answerBox = question.querySelector(".answer");
+
+        answerBox.style.display = "none";
+
+    });
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+
+/* INITIAL SCORE */
+
+updateScore();
+
+</script>
+
+</body>
+</html>
