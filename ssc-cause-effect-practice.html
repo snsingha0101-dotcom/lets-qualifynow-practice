@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Cause & Effect Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:7px 10px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+/* HERO */
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:850px;
+    margin:auto;
+}
+
+/* MAIN */
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #d9e2ec;
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro p{
+    color:#52606d;
+    margin-bottom:12px;
+}
+
+.intro ul{
+    margin-left:20px;
+    color:#52606d;
+}
+
+.intro li{
+    margin-bottom:6px;
+}
+
+/* PART */
+.part{
+    margin-bottom:35px;
+}
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    padding:14px 18px;
+    border-left:5px solid #173f5f;
+    border-radius:7px;
+    margin-bottom:18px;
+    font-size:21px;
+}
+
+/* QUESTION CARD */
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(36,59,83,0.05);
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#243b53;
+    margin-bottom:15px;
+}
+
+.question-hindi{
+    display:block;
+    margin-top:6px;
+    color:#52606d;
+    font-weight:normal;
+    font-size:16px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.2s;
+    font-size:15px;
+}
+
+.option:hover{
+    background:#d9eaf7;
+}
+
+.option-hindi{
+    display:block;
+    margin-top:4px;
+    color:#52606d;
+}
+
+.option.correct{
+    background:#d4edda;
+    border-color:#28a745;
+    color:#155724;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#dc3545;
+    color:#721c24;
+}
+
+.solution{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+    color:#243b53;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+.solution-hindi{
+    display:block;
+    margin-top:8px;
+    color:#52606d;
+}
+
+/* SCORE */
+.score-box{
+    background:#102a43;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    margin-bottom:15px;
+}
+
+.score-number{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    font-size:16px;
+}
+
+.stats span{
+    background:#173f5f;
+    padding:8px 14px;
+    border-radius:5px;
+}
+
+/* BUTTONS */
+.button-area{
+    text-align:center;
+    margin:25px 0 40px;
+}
+
+.btn{
+    display:inline-block;
+    border:none;
+    background:#173f5f;
+    color:white;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:15px;
+    margin:5px;
+}
+
+.btn:hover{
+    background:#102a43;
+}
+
+/* NOTE */
+.note{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:30px;
+    color:#52606d;
+}
+
+.note strong{
+    color:#102a43;
+}
+
+/* FOOTER */
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 8px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .stats{
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <div class="logo">LET'S QUALIFYNOW</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <h1>🔗 SSC Cause & Effect Practice</h1>
+
+    <p>
+        50 Exam-Oriented Questions with Answers & Detailed Solutions
+        <br>
+        <span>उत्तर एवं विस्तृत समाधान सहित 50 परीक्षा-उन्मुख प्रश्न</span>
+    </p>
+
+</section>
+
+
+<main class="container">
+
+    <section class="intro">
+
+        <h2>SSC Cause & Effect Practice Set</h2>
+
+        <p>
+            This practice set covers important Cause & Effect patterns
+            commonly asked in SSC and other Government Exams.
+        </p>
+
+        <p>
+            यह अभ्यास सेट SSC और अन्य Government Exams में पूछे जाने वाले
+            महत्वपूर्ण Cause & Effect patterns को कवर करता है।
+        </p>
+
+        <ul>
+            <li>Identify the most appropriate cause of an event.
+                <br>किसी घटना के सबसे उपयुक्त कारण की पहचान करें।</li>
+
+            <li>Identify the most likely effect of a given cause.
+                <br>दिए गए कारण के सबसे संभावित प्रभाव की पहचान करें।</li>
+
+            <li>Understand direct and indirect cause-effect relationships.
+                <br>प्रत्यक्ष और अप्रत्यक्ष Cause-Effect संबंध को समझें।</li>
+
+            <li>Distinguish between cause, effect and unrelated statements.
+                <br>Cause, Effect और असंबंधित कथनों में अंतर करें।</li>
+
+            <li>Apply logical reasoning to real-life situations.
+                <br>वास्तविक जीवन की परिस्थितियों में तार्किक तर्क का प्रयोग करें।</li>
+        </ul>
+
+    </section>
+
+
+    <section class="intro">
+
+        <h2>📌 How to Attempt</h2>
+
+        <p>
+            <strong>कैसे हल करें / How to Attempt</strong>
+        </p>
+
+        <ul>
+            <li>Read the statement carefully.
+                <br>कथन को ध्यानपूर्वक पढ़ें।</li>
+
+            <li>Identify what happened first and what happened because of it.
+                <br>पहचानें कि पहले क्या हुआ और उसके कारण क्या हुआ।</li>
+
+            <li>Choose the option showing the most logical relationship.
+                <br>सबसे तार्किक संबंध दर्शाने वाले विकल्प को चुनें।</li>
+
+            <li>After selecting an option, the correct answer and solution will appear.
+                <br>विकल्प चुनने के बाद सही उत्तर और समाधान दिखाई देगा।</li>
+
+            <li>Try all 50 questions and check your final score.
+                <br>सभी 50 प्रश्न हल करें और अपना अंतिम स्कोर देखें।</li>
+        </ul>
+
+    </section>
+
+
+<!-- PART 1 -->
+
+<section class="part">
+
+<div class="part-title">
+    Part 1 — Basic Cause & Effect
+    <br>
+    <span>भाग 1 — मूल Cause & Effect</span>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q1. Heavy rainfall occurred continuously for three days. Which is the most likely effect?
+<span class="question-hindi">प्रश्न 1. तीन दिनों तक लगातार भारी वर्षा हुई। इसका सबसे संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Increase in snowfall<span class="option-hindi">बर्फबारी में वृद्धि</span></div>
+<div class="option" data-option="B">B. Flooding in low-lying areas<span class="option-hindi">निचले इलाकों में बाढ़</span></div>
+<div class="option" data-option="C">C. Increase in desert area<span class="option-hindi">रेगिस्तानी क्षेत्र में वृद्धि</span></div>
+<div class="option" data-option="D">D. Decrease in water level<span class="option-hindi">जल स्तर में कमी</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Continuous heavy rainfall can cause rivers and drainage systems to overflow, resulting in flooding.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> लगातार भारी वर्षा के कारण नदियाँ और जल निकासी प्रणालियाँ उफन सकती हैं, जिससे बाढ़ आ सकती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q2. A city experienced a sudden power failure for several hours. What is the most likely immediate effect?
+<span class="question-hindi">प्रश्न 2. एक शहर में कई घंटों के लिए अचानक बिजली चली गई। इसका सबसे संभावित तत्काल प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Street traffic increases<span class="option-hindi">सड़क यातायात बढ़ जाता है</span></div>
+<div class="option" data-option="B">B. More rainfall<span class="option-hindi">अधिक वर्षा</span></div>
+<div class="option" data-option="C">C. Street lights stop working<span class="option-hindi">स्ट्रीट लाइटें काम करना बंद कर देती हैं</span></div>
+<div class="option" data-option="D">D. Increase in daylight<span class="option-hindi">दिन के प्रकाश में वृद्धि</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>Street lights require electricity, so a power failure causes them to stop functioning.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> स्ट्रीट लाइटों को बिजली की आवश्यकता होती है, इसलिए बिजली जाने पर वे काम करना बंद कर देती हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q3. The price of petrol increased sharply. Which is a likely effect?
+<span class="question-hindi">प्रश्न 3. पेट्रोल की कीमत में तेज़ी से वृद्धि हुई। इसका संभावित प्रभाव क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Increase in transportation cost<span class="option-hindi">परिवहन लागत में वृद्धि</span></div>
+<div class="option" data-option="B">B. Decrease in fuel price<span class="option-hindi">ईंधन की कीमत में कमी</span></div>
+<div class="option" data-option="C">C. Increase in rainfall<span class="option-hindi">वर्षा में वृद्धि</span></div>
+<div class="option" data-option="D">D. Decrease in road traffic automatically<span class="option-hindi">सड़क यातायात में स्वतः कमी</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Higher petrol prices generally increase the operating cost of vehicles and transportation.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> पेट्रोल की अधिक कीमत सामान्यतः वाहनों और परिवहन की संचालन लागत बढ़ा देती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q4. A large number of students were absent from school because of illness. What could be the cause?
+<span class="question-hindi">प्रश्न 4. बीमारी के कारण बड़ी संख्या में विद्यार्थी स्कूल से अनुपस्थित थे। इसका कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. School examination was cancelled<span class="option-hindi">स्कूल की परीक्षा रद्द कर दी गई</span></div>
+<div class="option" data-option="B">B. School building was painted<span class="option-hindi">स्कूल की इमारत में रंग-रोगन किया गया</span></div>
+<div class="option" data-option="C">C. Students received prizes<span class="option-hindi">विद्यार्थियों को पुरस्कार मिले</span></div>
+<div class="option" data-option="D">D. An infectious disease spread in the area<span class="option-hindi">क्षेत्र में एक संक्रामक बीमारी फैल गई</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>The spread of an infectious disease can cause many students to become ill and remain absent.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> किसी संक्रामक बीमारी के फैलने से कई विद्यार्थी बीमार हो सकते हैं और अनुपस्थित रह सकते हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q5. The roads became slippery after a sudden weather change. What is the most likely cause?
+<span class="question-hindi">प्रश्न 5. अचानक मौसम बदलने के बाद सड़कें फिसलन भरी हो गईं। इसका सबसे संभावित कारण क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Bright sunshine<span class="option-hindi">तेज़ धूप</span></div>
+<div class="option" data-option="B">B. Heavy rain<span class="option-hindi">भारी वर्षा</span></div>
+<div class="option" data-option="C">C. Dry wind<span class="option-hindi">शुष्क हवा</span></div>
+<div class="option" data-option="D">D. Clear sky<span class="option-hindi">साफ़ आकाश</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Rainwater can make road surfaces wet and slippery.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> वर्षा का पानी सड़क की सतह को गीला और फिसलन भरा बना सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q6. The demand for umbrellas increased suddenly. Which is the most likely cause?
+<span class="question-hindi">प्रश्न 6. छातों की मांग अचानक बढ़ गई। इसका सबसे संभावित कारण क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Severe drought<span class="option-hindi">गंभीर सूखा</span></div>
+<div class="option" data-option="B">B. Decrease in humidity<span class="option-hindi">आर्द्रता में कमी</span></div>
+<div class="option" data-option="C">C. Frequent rainfall<span class="option-hindi">बार-बार वर्षा</span></div>
+<div class="option" data-option="D">D. Winter becoming colder<span class="option-hindi">सर्दी का अधिक ठंडा होना</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>Frequent rainfall increases the need for umbrellas.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> बार-बार होने वाली वर्षा से छातों की आवश्यकता बढ़ जाती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q7. A company's sales decreased considerably during a month. Which could be a possible cause?
+<span class="question-hindi">प्रश्न 7. एक कंपनी की बिक्री एक महीने के दौरान काफी कम हो गई। इसका संभावित कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Customers shifted to a competing product<span class="option-hindi">ग्राहकों ने प्रतिस्पर्धी उत्पाद अपनाना शुरू कर दिया</span></div>
+<div class="option" data-option="B">B. Product quality improved<span class="option-hindi">उत्पाद की गुणवत्ता में सुधार हुआ</span></div>
+<div class="option" data-option="C">C. Demand increased<span class="option-hindi">मांग बढ़ गई</span></div>
+<div class="option" data-option="D">D. Advertisement became more effective<span class="option-hindi">विज्ञापन अधिक प्रभावी हो गया</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>If customers shift to competing products, sales of the company can decrease.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> यदि ग्राहक प्रतिस्पर्धी उत्पादों की ओर चले जाते हैं, तो कंपनी की बिक्री कम हो सकती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q8. The school library remained closed for a week. What is a likely effect?
+<span class="question-hindi">प्रश्न 8. स्कूल की लाइब्रेरी एक सप्ताह तक बंद रही। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Students will get more library books<span class="option-hindi">विद्यार्थियों को अधिक लाइब्रेरी की किताबें मिलेंगी</span></div>
+<div class="option" data-option="B">B. Reading facilities will increase<span class="option-hindi">पढ़ने की सुविधाएँ बढ़ जाएँगी</span></div>
+<div class="option" data-option="C">C. Library usage will become impossible during that period<span class="option-hindi">उस अवधि में लाइब्रेरी का उपयोग संभव नहीं होगा</span></div>
+<div class="option" data-option="D">D. Library books will automatically increase<span class="option-hindi">लाइब्रेरी की किताबें अपने आप बढ़ जाएँगी</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>If the library is closed, students cannot use its facilities during the closure period.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> यदि लाइब्रेरी बंद है, तो बंद रहने की अवधि में विद्यार्थी उसकी सुविधाओं का उपयोग नहीं कर सकते।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q9. A factory installed new machines that increased production capacity. What is the likely effect?
+<span class="question-hindi">प्रश्न 9. एक फैक्ट्री ने नई मशीनें लगाईं जिससे उत्पादन क्षमता बढ़ गई। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Production capacity decreases<span class="option-hindi">उत्पादन क्षमता कम हो जाती है</span></div>
+<div class="option" data-option="B">B. Production can increase<span class="option-hindi">उत्पादन बढ़ सकता है</span></div>
+<div class="option" data-option="C">C. Electricity becomes unnecessary<span class="option-hindi">बिजली अनावश्यक हो जाती है</span></div>
+<div class="option" data-option="D">D. Raw materials become unnecessary<span class="option-hindi">कच्चा माल अनावश्यक हो जाता है</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Machines with higher production capacity can enable the factory to produce more goods.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> अधिक उत्पादन क्षमता वाली मशीनें फैक्ट्री को अधिक वस्तुओं का उत्पादन करने में सक्षम बना सकती हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q10. A town's water supply was interrupted for two days. What is the most likely effect?
+<span class="question-hindi">प्रश्न 10. एक कस्बे की जल आपूर्ति दो दिनों तक बाधित रही। इसका सबसे संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. People may face difficulty obtaining water<span class="option-hindi">लोगों को पानी प्राप्त करने में कठिनाई हो सकती है</span></div>
+<div class="option" data-option="B">B. Water availability increases<span class="option-hindi">पानी की उपलब्धता बढ़ जाती है</span></div>
+<div class="option" data-option="C">C. Rainfall becomes certain<span class="option-hindi">वर्षा निश्चित हो जाती है</span></div>
+<div class="option" data-option="D">D. Temperature becomes zero<span class="option-hindi">तापमान शून्य हो जाता है</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>An interruption in water supply can create difficulty in obtaining water for daily use.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> जल आपूर्ति में रुकावट दैनिक उपयोग के लिए पानी प्राप्त करने में कठिनाई पैदा कर सकती है।</span></div>
+</div>
+
+</section>
+
+
+<!-- PART 2 -->
+
+<section class="part">
+
+<div class="part-title">
+    Part 2 — Identify the Cause
+    <br>
+    <span>भाग 2 — कारण की पहचान करें</span>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q11. The roads were heavily congested during the morning. Which could be the most appropriate cause?
+<span class="question-hindi">प्रश्न 11. सुबह के समय सड़कों पर भारी यातायात जाम था। इसका सबसे उपयुक्त कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Very little traffic<span class="option-hindi">बहुत कम यातायात</span></div>
+<div class="option" data-option="B">B. Roads were empty<span class="option-hindi">सड़कें खाली थीं</span></div>
+<div class="option" data-option="C">C. A large number of vehicles were travelling at the same time<span class="option-hindi">एक ही समय में बड़ी संख्या में वाहन चल रहे थे</span></div>
+<div class="option" data-option="D">D. No office was open<span class="option-hindi">कोई कार्यालय खुला नहीं था</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>A large number of vehicles travelling simultaneously can cause heavy traffic congestion.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> एक साथ बड़ी संख्या में वाहनों के चलने से भारी यातायात जाम हो सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q12. The prices of vegetables increased suddenly. Which could be a possible cause?
+<span class="question-hindi">प्रश्न 12. सब्जियों की कीमतें अचानक बढ़ गईं। इसका संभावित कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Supply increased greatly<span class="option-hindi">आपूर्ति बहुत बढ़ गई</span></div>
+<div class="option" data-option="B">B. Vegetable supply decreased due to crop damage<span class="option-hindi">फसल खराब होने के कारण सब्जियों की आपूर्ति कम हो गई</span></div>
+<div class="option" data-option="C">C. Demand became zero<span class="option-hindi">मांग शून्य हो गई</span></div>
+<div class="option" data-option="D">D. More vegetables reached the market<span class="option-hindi">अधिक सब्जियाँ बाजार में पहुँचीं</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Crop damage can reduce supply, which may cause vegetable prices to rise.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> फसल खराब होने से आपूर्ति कम हो सकती है, जिससे सब्जियों की कीमतें बढ़ सकती हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q13. The attendance of employees decreased significantly. What could be the cause?
+<span class="question-hindi">प्रश्न 13. कर्मचारियों की उपस्थिति में काफी कमी आई। इसका कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Attendance increased<span class="option-hindi">उपस्थिति बढ़ गई</span></div>
+<div class="option" data-option="B">B. Working hours were unchanged<span class="option-hindi">काम के घंटे अपरिवर्तित रहे</span></div>
+<div class="option" data-option="C">C. Employees received recognition<span class="option-hindi">कर्मचारियों को सम्मान मिला</span></div>
+<div class="option" data-option="D">D. A transport strike affected commuting<span class="option-hindi">परिवहन हड़ताल से आने-जाने में बाधा हुई</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>A transport strike can make it difficult for employees to reach the workplace.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> परिवहन हड़ताल के कारण कर्मचारियों के लिए कार्यस्थल तक पहुँचना कठिन हो सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q14. The number of visitors to a hill station increased sharply. What could be the cause?
+<span class="question-hindi">प्रश्न 14. किसी हिल स्टेशन पर आने वाले पर्यटकों की संख्या तेजी से बढ़ गई। इसका कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. The weather became pleasant<span class="option-hindi">मौसम सुहावना हो गया</span></div>
+<div class="option" data-option="B">B. The tourist area was closed<span class="option-hindi">पर्यटन क्षेत्र बंद कर दिया गया</span></div>
+<div class="option" data-option="C">C. Hotels stopped accepting visitors<span class="option-hindi">होटलों ने पर्यटकों को लेना बंद कर दिया</span></div>
+<div class="option" data-option="D">D. Roads were completely blocked<span class="option-hindi">सड़कें पूरी तरह अवरुद्ध हो गईं</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Pleasant weather can attract more tourists to a hill station.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> सुहावना मौसम किसी हिल स्टेशन पर अधिक पर्यटकों को आकर्षित कर सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q15. A student scored very low marks in an examination. Which could be a possible cause?
+<span class="question-hindi">प्रश्न 15. एक विद्यार्थी ने परीक्षा में बहुत कम अंक प्राप्त किए। इसका संभावित कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Regular revision<span class="option-hindi">नियमित पुनरावृत्ति</span></div>
+<div class="option" data-option="B">B. Adequate preparation<span class="option-hindi">पर्याप्त तैयारी</span></div>
+<div class="option" data-option="C">C. Lack of preparation<span class="option-hindi">तैयारी की कमी</span></div>
+<div class="option" data-option="D">D. Good understanding of all topics<span class="option-hindi">सभी विषयों की अच्छी समझ</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>Lack of preparation can result in poor performance in an examination.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> तैयारी की कमी के कारण परीक्षा में प्रदर्शन खराब हो सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q16. A shopkeeper reduced the price of a product. What could be the reason?
+<span class="question-hindi">प्रश्न 16. एक दुकानदार ने किसी उत्पाद की कीमत कम कर दी। इसका कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Demand was extremely high<span class="option-hindi">मांग बहुत अधिक थी</span></div>
+<div class="option" data-option="B">B. He wanted to attract more customers<span class="option-hindi">वह अधिक ग्राहकों को आकर्षित करना चाहता था</span></div>
+<div class="option" data-option="C">C. There were no customers anywhere<span class="option-hindi">कहीं भी कोई ग्राहक नहीं था</span></div>
+<div class="option" data-option="D">D. The product became more expensive to purchase<span class="option-hindi">उत्पाद खरीदना अधिक महंगा हो गया</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Reducing price is often used to attract customers and increase sales.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> कीमत कम करना अक्सर ग्राहकों को आकर्षित करने और बिक्री बढ़ाने के लिए किया जाता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q17. The number of passengers using public transport increased. Which could be a cause?
+<span class="question-hindi">प्रश्न 17. सार्वजनिक परिवहन का उपयोग करने वाले यात्रियों की संख्या बढ़ गई। इसका कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Public transport services stopped<span class="option-hindi">सार्वजनिक परिवहन सेवाएँ बंद हो गईं</span></div>
+<div class="option" data-option="B">B. Ticket prices became unavailable<span class="option-hindi">टिकट की कीमतें उपलब्ध नहीं रहीं</span></div>
+<div class="option" data-option="C">C. People stopped travelling<span class="option-hindi">लोगों ने यात्रा करना बंद कर दिया</span></div>
+<div class="option" data-option="D">D. Fuel prices increased significantly<span class="option-hindi">ईंधन की कीमतें काफी बढ़ गईं</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>Higher fuel prices may encourage people to use public transport instead of private vehicles.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> ईंधन की अधिक कीमतें लोगों को निजी वाहनों के बजाय सार्वजनिक परिवहन का उपयोग करने के लिए प्रेरित कर सकती हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q18. A farmer's crop production decreased. Which could be a cause?
+<span class="question-hindi">प्रश्न 18. एक किसान की फसल का उत्पादन कम हो गया। इसका कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Severe drought<span class="option-hindi">गंभीर सूखा</span></div>
+<div class="option" data-option="B">B. Adequate rainfall<span class="option-hindi">पर्याप्त वर्षा</span></div>
+<div class="option" data-option="C">C. Proper irrigation<span class="option-hindi">उचित सिंचाई</span></div>
+<div class="option" data-option="D">D. Good soil conditions<span class="option-hindi">अच्छी मिट्टी की स्थिति</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Severe drought can reduce water availability and damage crops.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> गंभीर सूखा पानी की उपलब्धता कम कर सकता है और फसलों को नुकसान पहुँचा सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q19. The demand for online classes increased. Which could be a possible cause?
+<span class="question-hindi">प्रश्न 19. ऑनलाइन कक्षाओं की मांग बढ़ गई। इसका संभावित कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Internet access disappeared<span class="option-hindi">इंटरनेट की सुविधा समाप्त हो गई</span></div>
+<div class="option" data-option="B">B. Online learning became impossible<span class="option-hindi">ऑनलाइन पढ़ाई असंभव हो गई</span></div>
+<div class="option" data-option="C">C. More students preferred learning from home<span class="option-hindi">अधिक विद्यार्थियों ने घर से पढ़ना पसंद किया</span></div>
+<div class="option" data-option="D">D. Educational content was completely unavailable<span class="option-hindi">शैक्षणिक सामग्री पूरी तरह अनुपलब्ध थी</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>If more students prefer learning from home, demand for online classes can increase.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> यदि अधिक विद्यार्थी घर से पढ़ना पसंद करते हैं, तो ऑनलाइन कक्षाओं की मांग बढ़ सकती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q20. A company introduced a discount and its sales increased. What was the likely reason for the increase?
+<span class="question-hindi">प्रश्न 20. एक कंपनी ने छूट शुरू की और उसकी बिक्री बढ़ गई। बिक्री बढ़ने का संभावित कारण क्या था?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Prices became higher<span class="option-hindi">कीमतें अधिक हो गईं</span></div>
+<div class="option" data-option="B">B. Customers were attracted by lower prices<span class="option-hindi">कम कीमतों से ग्राहक आकर्षित हुए</span></div>
+<div class="option" data-option="C">C. Products became unavailable<span class="option-hindi">उत्पाद अनुपलब्ध हो गए</span></div>
+<div class="option" data-option="D">D. Customers stopped buying<span class="option-hindi">ग्राहकों ने खरीदना बंद कर दिया</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>A discount reduces the effective price and can attract more customers.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> छूट प्रभावी कीमत को कम करती है और अधिक ग्राहकों को आकर्षित कर सकती है।</span></div>
+</div>
+
+</section>
+
+
+<!-- PART 3 -->
+
+<section class="part">
+
+<div class="part-title">
+    Part 3 — Identify the Effect
+    <br>
+    <span>भाग 3 — प्रभाव की पहचान करें</span>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q21. Cause: A major bridge was closed for repairs. What is the most likely effect?
+<span class="question-hindi">प्रश्न 21. कारण: एक प्रमुख पुल मरम्मत के लिए बंद कर दिया गया। इसका सबसे संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Traffic may be diverted to alternative routes<span class="option-hindi">यातायात को वैकल्पिक मार्गों की ओर मोड़ा जा सकता है</span></div>
+<div class="option" data-option="B">B. All roads disappear<span class="option-hindi">सभी सड़कें गायब हो जाती हैं</span></div>
+<div class="option" data-option="C">C. Traffic becomes impossible everywhere<span class="option-hindi">हर जगह यातायात असंभव हो जाता है</span></div>
+<div class="option" data-option="D">D. The bridge becomes longer<span class="option-hindi">पुल लंबा हो जाता है</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>When a major bridge is closed, vehicles generally use alternative routes.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> जब कोई प्रमुख पुल बंद होता है, तो वाहन सामान्यतः वैकल्पिक मार्गों का उपयोग करते हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q22. Cause: The temperature fell below freezing point. What is the likely effect?
+<span class="question-hindi">प्रश्न 22. कारण: तापमान हिमांक बिंदु से नीचे चला गया। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Ice melts immediately<span class="option-hindi">बर्फ तुरंत पिघल जाती है</span></div>
+<div class="option" data-option="B">B. Water always boils<span class="option-hindi">पानी हमेशा उबलता है</span></div>
+<div class="option" data-option="C">C. Water may freeze<span class="option-hindi">पानी जम सकता है</span></div>
+<div class="option" data-option="D">D. Temperature increases automatically<span class="option-hindi">तापमान स्वतः बढ़ जाता है</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>At temperatures below the freezing point, water can turn into ice.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> हिमांक बिंदु से नीचे तापमान होने पर पानी बर्फ में बदल सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q23. Cause: A school started regular weekly tests. What is a likely effect?
+<span class="question-hindi">प्रश्न 23. कारण: एक स्कूल ने नियमित साप्ताहिक परीक्षाएँ शुरू कीं। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Students never practise<span class="option-hindi">विद्यार्थी कभी अभ्यास नहीं करते</span></div>
+<div class="option" data-option="B">B. Students get more opportunities to assess their preparation<span class="option-hindi">विद्यार्थियों को अपनी तैयारी का आकलन करने के अधिक अवसर मिलते हैं</span></div>
+<div class="option" data-option="C">C. Examinations become impossible<span class="option-hindi">परीक्षाएँ असंभव हो जाती हैं</span></div>
+<div class="option" data-option="D">D. Study material disappears<span class="option-hindi">अध्ययन सामग्री गायब हो जाती है</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Regular tests provide students with repeated opportunities to check their preparation and performance.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> नियमित परीक्षाएँ विद्यार्थियों को अपनी तैयारी और प्रदर्शन जाँचने के बार-बार अवसर देती हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q24. Cause: A company failed to maintain its machinery properly. What is a likely effect?
+<span class="question-hindi">प्रश्न 24. कारण: एक कंपनी अपनी मशीनरी का उचित रखरखाव करने में विफल रही। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Machines always become newer<span class="option-hindi">मशीनें हमेशा नई हो जाती हैं</span></div>
+<div class="option" data-option="B">B. Maintenance becomes unnecessary<span class="option-hindi">रखरखाव अनावश्यक हो जाता है</span></div>
+<div class="option" data-option="C">C. Production automatically doubles<span class="option-hindi">उत्पादन स्वतः दोगुना हो जाता है</span></div>
+<div class="option" data-option="D">D. Machinery breakdowns may increase<span class="option-hindi">मशीनरी में खराबी की घटनाएँ बढ़ सकती हैं</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>Poor maintenance increases the possibility of machinery malfunction and breakdown.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> खराब रखरखाव से मशीनरी में खराबी और टूटने की संभावना बढ़ जाती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q25. Cause: The government increased taxes on a particular product. What is a possible effect?
+<span class="question-hindi">प्रश्न 25. कारण: सरकार ने किसी विशेष उत्पाद पर कर बढ़ा दिया। इसका संभावित प्रभाव क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. The price paid by consumers may increase<span class="option-hindi">उपभोक्ताओं द्वारा भुगतान की जाने वाली कीमत बढ़ सकती है</span></div>
+<div class="option" data-option="B">B. The product becomes free<span class="option-hindi">उत्पाद मुफ्त हो जाता है</span></div>
+<div class="option" data-option="C">C. Tax becomes zero<span class="option-hindi">कर शून्य हो जाता है</span></div>
+<div class="option" data-option="D">D. Production is guaranteed to become zero<span class="option-hindi">उत्पादन का शून्य होना निश्चित है</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Higher taxes can increase the final price paid by consumers.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> अधिक कर उपभोक्ताओं द्वारा भुगतान की जाने वाली अंतिम कीमत बढ़ा सकते हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q26. Cause: The city planted many trees along its roads. What is a likely long-term effect?
+<span class="question-hindi">प्रश्न 26. कारण: शहर ने अपनी सड़कों के किनारे बहुत से पेड़ लगाए। इसका संभावित दीर्घकालिक प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Green cover decreases<span class="option-hindi">हरित क्षेत्र कम हो जाता है</span></div>
+<div class="option" data-option="B">B. Trees disappear immediately<span class="option-hindi">पेड़ तुरंत गायब हो जाते हैं</span></div>
+<div class="option" data-option="C">C. Green cover increases<span class="option-hindi">हरित क्षेत्र बढ़ जाता है</span></div>
+<div class="option" data-option="D">D. Roads automatically become shorter<span class="option-hindi">सड़कें स्वतः छोटी हो जाती हैं</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>Planting more trees increases the amount of vegetation and green cover.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> अधिक पेड़ लगाने से वनस्पति और हरित क्षेत्र की मात्रा बढ़ती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q27. Cause: A student revised important topics before the examination. What is a likely effect?
+<span class="question-hindi">प्रश्न 27. कारण: एक विद्यार्थी ने परीक्षा से पहले महत्वपूर्ण विषयों की पुनरावृत्ति की। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Preparation becomes weaker<span class="option-hindi">तैयारी कमजोर हो जाती है</span></div>
+<div class="option" data-option="B">B. Retention and confidence may improve<span class="option-hindi">याद रखने की क्षमता और आत्मविश्वास में सुधार हो सकता है</span></div>
+<div class="option" data-option="C">C. Study time becomes zero<span class="option-hindi">अध्ययन का समय शून्य हो जाता है</span></div>
+<div class="option" data-option="D">D. Questions disappear<span class="option-hindi">प्रश्न गायब हो जाते हैं</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Revision can strengthen retention and increase confidence before an examination.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> पुनरावृत्ति परीक्षा से पहले याद रखने की क्षमता को मजबूत कर सकती है और आत्मविश्वास बढ़ा सकती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q28. Cause: A river overflowed after heavy rainfall. What is a likely effect?
+<span class="question-hindi">प्रश्न 28. कारण: भारी वर्षा के बाद एक नदी उफन गई। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. River water disappears<span class="option-hindi">नदी का पानी गायब हो जाता है</span></div>
+<div class="option" data-option="B">B. Rainfall stops permanently<span class="option-hindi">वर्षा हमेशा के लिए बंद हो जाती है</span></div>
+<div class="option" data-option="C">C. Roads become completely dry<span class="option-hindi">सड़कें पूरी तरह सूखी हो जाती हैं</span></div>
+<div class="option" data-option="D">D. Nearby areas may experience flooding<span class="option-hindi">आसपास के क्षेत्रों में बाढ़ आ सकती है</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>An overflowing river can flood nearby low-lying areas.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> उफनती हुई नदी आसपास के निचले क्षेत्रों में बाढ़ ला सकती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q29. Cause: A store remained closed during its normal business hours. What is a likely effect?
+<span class="question-hindi">प्रश्न 29. कारण: एक दुकान अपने सामान्य व्यावसायिक समय के दौरान बंद रही। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Customers may be unable to purchase goods from that store<span class="option-hindi">ग्राहक उस दुकान से सामान खरीदने में असमर्थ हो सकते हैं</span></div>
+<div class="option" data-option="B">B. Sales definitely double<span class="option-hindi">बिक्री निश्चित रूप से दोगुनी हो जाती है</span></div>
+<div class="option" data-option="C">C. Customers receive unlimited products<span class="option-hindi">ग्राहकों को असीमित उत्पाद मिलते हैं</span></div>
+<div class="option" data-option="D">D. The store becomes larger<span class="option-hindi">दुकान बड़ी हो जाती है</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>A closed store cannot normally serve customers during the closure period.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> बंद दुकान सामान्यतः बंद रहने की अवधि में ग्राहकों को सेवा नहीं दे सकती।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q30. Cause: The school introduced a new sports programme. What is a likely effect?
+<span class="question-hindi">प्रश्न 30. कारण: स्कूल ने एक नया खेल कार्यक्रम शुरू किया। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Sports activities decrease to zero<span class="option-hindi">खेल गतिविधियाँ शून्य हो जाती हैं</span></div>
+<div class="option" data-option="B">B. Students cannot participate in sports<span class="option-hindi">विद्यार्थी खेलों में भाग नहीं ले सकते</span></div>
+<div class="option" data-option="C">C. Opportunities for sports participation may increase<span class="option-hindi">खेलों में भाग लेने के अवसर बढ़ सकते हैं</span></div>
+<div class="option" data-option="D">D. The school stops all physical activities<span class="option-hindi">स्कूल सभी शारीरिक गतिविधियाँ बंद कर देता है</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>A new sports programme can provide additional opportunities for students to participate in sports.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> नया खेल कार्यक्रम विद्यार्थियों को खेलों में भाग लेने के अतिरिक्त अवसर प्रदान कर सकता है।</span></div>
+</div>
+
+</section>
+
+
+<!-- PART 4 -->
+
+<section class="part">
+
+<div class="part-title">
+    Part 4 — Logical Cause & Effect
+    <br>
+    <span>भाग 4 — तार्किक Cause & Effect</span>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q31. Statement: The company reduced working hours because there were fewer orders. Which is the cause?
+<span class="question-hindi">प्रश्न 31. कथन: कम orders होने के कारण कंपनी ने काम के घंटे कम कर दिए। इसमें कारण क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Reduced working hours<span class="option-hindi">काम के घंटे कम करना</span></div>
+<div class="option" data-option="B">B. Fewer orders<span class="option-hindi">कम orders</span></div>
+<div class="option" data-option="C">C. Higher production<span class="option-hindi">अधिक उत्पादन</span></div>
+<div class="option" data-option="D">D. More employees<span class="option-hindi">अधिक कर्मचारी</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Fewer orders led the company to reduce working hours.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> कम orders के कारण कंपनी ने काम के घंटे कम किए। इसलिए कम orders कारण है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q32. Statement: The roads were flooded because the drainage system was blocked. What is the effect?
+<span class="question-hindi">प्रश्न 32. कथन: जल निकासी प्रणाली बंद होने के कारण सड़कें जलमग्न हो गईं। इसमें प्रभाव क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Drainage system was blocked<span class="option-hindi">जल निकासी प्रणाली बंद थी</span></div>
+<div class="option" data-option="B">B. Rainwater entered the drains<span class="option-hindi">वर्षा का पानी नालियों में गया</span></div>
+<div class="option" data-option="C">C. Drainage was cleaned<span class="option-hindi">जल निकासी की सफाई की गई</span></div>
+<div class="option" data-option="D">D. Roads were flooded<span class="option-hindi">सड़कें जलमग्न हो गईं</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>The blocked drainage system was the cause, while flooding of the roads was the effect.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> बंद जल निकासी प्रणाली कारण थी, जबकि सड़कों का जलमग्न होना उसका प्रभाव था।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q33. Statement: The school increased the number of buses, so transportation became easier for students. What was the cause?
+<span class="question-hindi">प्रश्न 33. कथन: स्कूल ने बसों की संख्या बढ़ाई, जिससे विद्यार्थियों के लिए परिवहन आसान हो गया। कारण क्या था?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Increase in the number of buses<span class="option-hindi">बसों की संख्या में वृद्धि</span></div>
+<div class="option" data-option="B">B. Easier transportation<span class="option-hindi">आसान परिवहन</span></div>
+<div class="option" data-option="C">C. Students stopped travelling<span class="option-hindi">विद्यार्थियों ने यात्रा करना बंद कर दिया</span></div>
+<div class="option" data-option="D">D. Roads became smaller<span class="option-hindi">सड़कें छोटी हो गईं</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>The increase in buses caused transportation to become easier.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> बसों की संख्या में वृद्धि के कारण परिवहन आसान हो गया।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q34. Statement: The price of a product decreased, resulting in higher demand. What is the effect?
+<span class="question-hindi">प्रश्न 34. कथन: किसी उत्पाद की कीमत कम हुई, जिसके परिणामस्वरूप मांग बढ़ गई। प्रभाव क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Price decrease<span class="option-hindi">कीमत में कमी</span></div>
+<div class="option" data-option="B">B. Product shortage<span class="option-hindi">उत्पाद की कमी</span></div>
+<div class="option" data-option="C">C. Higher demand<span class="option-hindi">अधिक मांग</span></div>
+<div class="option" data-option="D">D. Tax increase<span class="option-hindi">कर में वृद्धि</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>The statement directly says that lower price resulted in higher demand.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> कथन में सीधे कहा गया है कि कम कीमत के परिणामस्वरूप अधिक मांग हुई।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q35. A factory stopped production temporarily because of a machine breakdown. What is the cause?
+<span class="question-hindi">प्रश्न 35. मशीन खराब होने के कारण एक फैक्ट्री ने अस्थायी रूप से उत्पादन रोक दिया। कारण क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Temporary stoppage of production<span class="option-hindi">उत्पादन का अस्थायी रूप से रुकना</span></div>
+<div class="option" data-option="B">B. Machine breakdown<span class="option-hindi">मशीन की खराबी</span></div>
+<div class="option" data-option="C">C. Increase in production<span class="option-hindi">उत्पादन में वृद्धि</span></div>
+<div class="option" data-option="D">D. New machinery purchase<span class="option-hindi">नई मशीनरी की खरीद</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>The machine breakdown caused production to stop temporarily.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> मशीन की खराबी के कारण उत्पादन अस्थायी रूप से रुक गया।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q36. The government repaired a damaged road, after which traffic movement improved. What is the effect?
+<span class="question-hindi">प्रश्न 36. सरकार ने क्षतिग्रस्त सड़क की मरम्मत की, जिसके बाद यातायात की आवाजाही में सुधार हुआ। प्रभाव क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Road damage<span class="option-hindi">सड़क की क्षति</span></div>
+<div class="option" data-option="B">B. Government action<span class="option-hindi">सरकार की कार्रवाई</span></div>
+<div class="option" data-option="C">C. Road repair<span class="option-hindi">सड़क की मरम्मत</span></div>
+<div class="option" data-option="D">D. Improved traffic movement<span class="option-hindi">यातायात की आवाजाही में सुधार</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>The road repair was followed by improved traffic movement, making it the effect.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> सड़क की मरम्मत के बाद यातायात की आवाजाही में सुधार हुआ, इसलिए यही प्रभाव है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q37. The school cancelled outdoor activities due to heavy rain. What was the cause?
+<span class="question-hindi">प्रश्न 37. भारी वर्षा के कारण स्कूल ने बाहरी गतिविधियाँ रद्द कर दीं। कारण क्या था?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Heavy rain<span class="option-hindi">भारी वर्षा</span></div>
+<div class="option" data-option="B">B. Cancellation of activities<span class="option-hindi">गतिविधियों का रद्द होना</span></div>
+<div class="option" data-option="C">C. Sunny weather<span class="option-hindi">धूप वाला मौसम</span></div>
+<div class="option" data-option="D">D. Sports competition<span class="option-hindi">खेल प्रतियोगिता</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Heavy rain caused the school to cancel outdoor activities.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> भारी वर्षा के कारण स्कूल ने बाहरी गतिविधियाँ रद्द कर दीं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q38. A restaurant received more customers after introducing a new menu. What is the effect?
+<span class="question-hindi">प्रश्न 38. नया menu शुरू करने के बाद एक restaurant में अधिक ग्राहक आने लगे। प्रभाव क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. New menu<span class="option-hindi">नया menu</span></div>
+<div class="option" data-option="B">B. Restaurant closed<span class="option-hindi">restaurant बंद हो गया</span></div>
+<div class="option" data-option="C">C. Increase in customers<span class="option-hindi">ग्राहकों की संख्या में वृद्धि</span></div>
+<div class="option" data-option="D">D. Reduction in menu items<span class="option-hindi">menu items में कमी</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>The increase in customers is the stated effect of introducing the new menu.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> ग्राहकों की संख्या में वृद्धि नया menu शुरू करने का बताया गया प्रभाव है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q39. A farmer used proper irrigation, and the crop yield improved. What was the cause?
+<span class="question-hindi">प्रश्न 39. एक किसान ने उचित सिंचाई की और फसल की उपज में सुधार हुआ। कारण क्या था?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Improved crop yield<span class="option-hindi">फसल की उपज में सुधार</span></div>
+<div class="option" data-option="B">B. Proper irrigation<span class="option-hindi">उचित सिंचाई</span></div>
+<div class="option" data-option="C">C. Crop failure<span class="option-hindi">फसल की विफलता</span></div>
+<div class="option" data-option="D">D. Lack of water<span class="option-hindi">पानी की कमी</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Proper irrigation was the factor that led to improved crop yield.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> उचित सिंचाई वह कारक था जिसके कारण फसल की उपज में सुधार हुआ।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q40. The internet service was interrupted, so online classes were temporarily affected. What is the effect?
+<span class="question-hindi">प्रश्न 40. इंटरनेट सेवा बाधित हुई, इसलिए online classes अस्थायी रूप से प्रभावित हुईं। प्रभाव क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Internet interruption<span class="option-hindi">इंटरनेट सेवा में बाधा</span></div>
+<div class="option" data-option="B">B. Better internet speed<span class="option-hindi">बेहतर इंटरनेट गति</span></div>
+<div class="option" data-option="C">C. New online course<span class="option-hindi">नया online course</span></div>
+<div class="option" data-option="D">D. Online classes were affected<span class="option-hindi">online classes प्रभावित हुईं</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>The interruption of internet service caused online classes to be affected.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> इंटरनेट सेवा में बाधा के कारण online classes प्रभावित हुईं।</span></div>
+</div>
+
+</section>
+
+
+<!-- PART 5 -->
+
+<section class="part">
+
+<div class="part-title">
+    Part 5 — Mixed Cause & Effect
+    <br>
+    <span>भाग 5 — मिश्रित Cause & Effect</span>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q41. The number of road accidents increased during heavy fog. What is the most reasonable cause?
+<span class="question-hindi">प्रश्न 41. घने कोहरे के दौरान सड़क दुर्घटनाओं की संख्या बढ़ गई। इसका सबसे उचित कारण क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Poor visibility<span class="option-hindi">कम दृश्यता</span></div>
+<div class="option" data-option="B">B. Clear visibility<span class="option-hindi">स्पष्ट दृश्यता</span></div>
+<div class="option" data-option="C">C. Empty roads<span class="option-hindi">खाली सड़कें</span></div>
+<div class="option" data-option="D">D. Bright sunshine<span class="option-hindi">तेज़ धूप</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Heavy fog reduces visibility, which can increase the risk of road accidents.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> घना कोहरा दृश्यता को कम करता है, जिससे सड़क दुर्घटनाओं का जोखिम बढ़ सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q42. A student started practising mock tests regularly. Which is a likely effect?
+<span class="question-hindi">प्रश्न 42. एक विद्यार्थी ने नियमित रूप से mock tests का अभ्यास शुरू किया। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Exam practice decreases<span class="option-hindi">परीक्षा अभ्यास कम हो जाता है</span></div>
+<div class="option" data-option="B">B. Time management becomes impossible<span class="option-hindi">समय प्रबंधन असंभव हो जाता है</span></div>
+<div class="option" data-option="C">C. Familiarity with exam conditions may improve<span class="option-hindi">परीक्षा की परिस्थितियों से परिचित होने में सुधार हो सकता है</span></div>
+<div class="option" data-option="D">D. Preparation stops completely<span class="option-hindi">तैयारी पूरी तरह रुक जाती है</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>Regular mock tests provide practice under exam-like conditions and can improve familiarity and time management.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> नियमित mock tests परीक्षा जैसी परिस्थितियों में अभ्यास प्रदान करते हैं और परीक्षा की परिस्थितियों से परिचित होने तथा समय प्रबंधन में सुधार कर सकते हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q43. The supply of a product became limited while demand remained high. What is the likely effect?
+<span class="question-hindi">प्रश्न 43. किसी उत्पाद की आपूर्ति सीमित हो गई जबकि मांग अधिक बनी रही। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Price must become zero<span class="option-hindi">कीमत शून्य होनी चाहिए</span></div>
+<div class="option" data-option="B">B. Price may increase<span class="option-hindi">कीमत बढ़ सकती है</span></div>
+<div class="option" data-option="C">C. Demand becomes zero<span class="option-hindi">मांग शून्य हो जाती है</span></div>
+<div class="option" data-option="D">D. Supply becomes unlimited<span class="option-hindi">आपूर्ति असीमित हो जाती है</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Limited supply combined with high demand can put upward pressure on prices.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> सीमित आपूर्ति और अधिक मांग मिलकर कीमतों पर बढ़ने का दबाव डाल सकती हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q44. A city experienced a shortage of drinking water during summer. Which could be a possible cause?
+<span class="question-hindi">प्रश्न 44. गर्मियों के दौरान एक शहर में पीने के पानी की कमी हो गई। इसका संभावित कारण क्या हो सकता है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Heavy rainfall throughout the season<span class="option-hindi">पूरे मौसम में भारी वर्षा</span></div>
+<div class="option" data-option="B">B. Full reservoirs<span class="option-hindi">पूरी तरह भरे हुए जलाशय</span></div>
+<div class="option" data-option="C">C. Adequate water supply<span class="option-hindi">पर्याप्त जल आपूर्ति</span></div>
+<div class="option" data-option="D">D. Prolonged drought<span class="option-hindi">लंबे समय तक पड़ा सूखा</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>A prolonged drought can reduce available water resources and lead to shortages.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> लंबे समय तक रहने वाला सूखा उपलब्ध जल संसाधनों को कम कर सकता है और पानी की कमी पैदा कर सकता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q45. A company provided training to its employees. What is a likely effect?
+<span class="question-hindi">प्रश्न 45. एक कंपनी ने अपने कर्मचारियों को प्रशिक्षण दिया। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Employees' skills may improve<span class="option-hindi">कर्मचारियों के कौशल में सुधार हो सकता है</span></div>
+<div class="option" data-option="B">B. Employees forget everything immediately<span class="option-hindi">कर्मचारी तुरंत सब कुछ भूल जाते हैं</span></div>
+<div class="option" data-option="C">C. Training becomes impossible<span class="option-hindi">प्रशिक्षण असंभव हो जाता है</span></div>
+<div class="option" data-option="D">D. Work stops permanently<span class="option-hindi">काम हमेशा के लिए बंद हो जाता है</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Training is intended to improve employees' knowledge and skills.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> प्रशिक्षण का उद्देश्य कर्मचारियों के ज्ञान और कौशल में सुधार करना होता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q46. The school introduced strict attendance rules. What is a likely effect?
+<span class="question-hindi">प्रश्न 46. स्कूल ने उपस्थिति के सख्त नियम लागू किए। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Attendance becomes irrelevant<span class="option-hindi">उपस्थिति अप्रासंगिक हो जाती है</span></div>
+<div class="option" data-option="B">B. Students are encouraged to attend regularly<span class="option-hindi">विद्यार्थियों को नियमित रूप से उपस्थित रहने के लिए प्रोत्साहित किया जाता है</span></div>
+<div class="option" data-option="C">C. Attendance records disappear<span class="option-hindi">उपस्थिति के रिकॉर्ड गायब हो जाते हैं</span></div>
+<div class="option" data-option="D">D. School remains closed<span class="option-hindi">स्कूल बंद रहता है</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>Strict attendance rules can encourage students to attend school regularly.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> उपस्थिति के सख्त नियम विद्यार्थियों को नियमित रूप से स्कूल आने के लिए प्रोत्साहित कर सकते हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="D">
+<div class="question">
+Q47. A shop displayed products prominently near the entrance. What is a likely effect?
+<span class="question-hindi">प्रश्न 47. एक दुकान ने प्रवेश द्वार के पास उत्पादों को प्रमुखता से प्रदर्शित किया। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Products become invisible<span class="option-hindi">उत्पाद दिखाई नहीं देते</span></div>
+<div class="option" data-option="B">B. Customers cannot see them<span class="option-hindi">ग्राहक उन्हें नहीं देख सकते</span></div>
+<div class="option" data-option="C">C. Shop necessarily closes<span class="option-hindi">दुकान निश्चित रूप से बंद हो जाती है</span></div>
+<div class="option" data-option="D">D. Customers may notice the products more easily<span class="option-hindi">ग्राहक उत्पादों को अधिक आसानी से देख सकते हैं</span></div>
+</div>
+<div class="solution"><strong>Answer: D</strong><br>Products displayed prominently near the entrance are more visible to customers.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> प्रवेश द्वार के पास प्रमुखता से प्रदर्शित उत्पाद ग्राहकों को अधिक आसानी से दिखाई देते हैं।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="A">
+<div class="question">
+Q48. A city imposed restrictions on vehicles in a highly polluted area. What is a possible objective/effect?
+<span class="question-hindi">प्रश्न 48. एक शहर ने अत्यधिक प्रदूषित क्षेत्र में वाहनों पर प्रतिबंध लगाए। इसका संभावित उद्देश्य/प्रभाव क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Reduce vehicle-related pollution<span class="option-hindi">वाहनों से होने वाले प्रदूषण को कम करना</span></div>
+<div class="option" data-option="B">B. Increase vehicle emissions<span class="option-hindi">वाहनों का उत्सर्जन बढ़ाना</span></div>
+<div class="option" data-option="C">C. Increase traffic deliberately<span class="option-hindi">जानबूझकर यातायात बढ़ाना</span></div>
+<div class="option" data-option="D">D. Eliminate public transport<span class="option-hindi">सार्वजनिक परिवहन को समाप्त करना</span></div>
+</div>
+<div class="solution"><strong>Answer: A</strong><br>Vehicle restrictions in a polluted area are intended to reduce emissions and pollution.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> प्रदूषित क्षेत्र में वाहनों पर प्रतिबंध का उद्देश्य उत्सर्जन और प्रदूषण को कम करना होता है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="B">
+<div class="question">
+Q49. A student began sleeping regularly and maintaining a study schedule. What is a likely effect?
+<span class="question-hindi">प्रश्न 49. एक विद्यार्थी ने नियमित रूप से सोना और अध्ययन की समय-सारणी बनाए रखना शुरू किया। इसका संभावित प्रभाव क्या होगा?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Study routine becomes less organized<span class="option-hindi">अध्ययन की दिनचर्या कम व्यवस्थित हो जाती है</span></div>
+<div class="option" data-option="B">B. Concentration and consistency may improve<span class="option-hindi">एकाग्रता और निरंतरता में सुधार हो सकता है</span></div>
+<div class="option" data-option="C">C. Sleep becomes impossible<span class="option-hindi">नींद असंभव हो जाती है</span></div>
+<div class="option" data-option="D">D. Preparation stops<span class="option-hindi">तैयारी रुक जाती है</span></div>
+</div>
+<div class="solution"><strong>Answer: B</strong><br>A regular sleep pattern and study schedule can support better concentration and consistency.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> नियमित नींद और अध्ययन की समय-सारणी बेहतर एकाग्रता और निरंतरता में सहायक हो सकती है।</span></div>
+</div>
+
+
+<div class="question-card" data-answer="C">
+<div class="question">
+Q50. A company launched a successful advertising campaign, and sales increased afterward. What is the most logical relationship?
+<span class="question-hindi">प्रश्न 50. एक कंपनी ने एक सफल विज्ञापन अभियान शुरू किया और उसके बाद बिक्री बढ़ गई। सबसे तार्किक संबंध क्या है?</span>
+</div>
+<div class="options">
+<div class="option" data-option="A">A. Increased sales caused the advertising campaign<span class="option-hindi">बढ़ी हुई बिक्री के कारण विज्ञापन अभियान शुरू हुआ</span></div>
+<div class="option" data-option="B">B. There is no possible relationship<span class="option-hindi">कोई संभावित संबंध नहीं है</span></div>
+<div class="option" data-option="C">C. The advertising campaign may have contributed to increased sales<span class="option-hindi">विज्ञापन अभियान ने बिक्री बढ़ने में योगदान दिया हो सकता है</span></div>
+<div class="option" data-option="D">D. Sales and advertising can never be related<span class="option-hindi">बिक्री और विज्ञापन का कभी संबंध नहीं हो सकता</span></div>
+</div>
+<div class="solution"><strong>Answer: C</strong><br>A successful advertising campaign can attract customers and may contribute to increased sales.
+<span class="solution-hindi"><strong>हिंदी समाधान:</strong> एक सफल विज्ञापन अभियान ग्राहकों को आकर्षित कर सकता है और बिक्री बढ़ाने में योगदान दे सकता है।</span></div>
+</div>
+
+</section>
+
+
+<!-- SCORE -->
+
+<div class="score-box">
+
+    <h2>📊 Your Result / आपका परिणाम</h2>
+
+    <div class="score-number" id="score">0 / 50</div>
+
+    <div class="stats">
+        <span>Attempted / प्रयास: <b id="attempted">0</b></span>
+        <span>Correct / सही: <b id="correct">0</b></span>
+        <span>Wrong / गलत: <b id="wrong">0</b></span>
+    </div>
+
+    <p id="resultMessage" style="margin-top:18px;">
+        Attempt all questions to check your performance.
+        <br>
+        अपना प्रदर्शन देखने के लिए सभी प्रश्न हल करें।
+    </p>
+
+</div>
+
+
+<div class="button-area">
+
+    <button class="btn" onclick="resetQuiz()">
+        🔄 Reset Practice / पुनः प्रयास
+    </button>
+
+    <a class="btn" href="ssc-topic-wise-practice.html">
+        ← Back to SSC Topic-wise Practice
+    </a>
+
+</div>
+
+
+<div class="note">
+
+    <strong>📌 Note / नोट:</strong>
+    Cause & Effect questions test your ability to identify a logical
+    relationship between an event and its reason or consequence.
+    Always distinguish between the actual cause and the resulting effect.
+
+    <br><br>
+
+    Cause & Effect questions आपकी किसी घटना और उसके कारण या परिणाम के बीच
+    तार्किक संबंध पहचानने की क्षमता की जाँच करते हैं।
+    हमेशा वास्तविक कारण और उसके परिणाम के बीच अंतर करें।
+
+</div>
+
+</main>
+
+
+<footer>
+
+    <p><strong>LET'S QUALIFYNOW</strong></p>
+
+    <p>
+        N Saurabh Sir — Reasoning Faculty
+    </p>
+
+    <p>
+        SSC • Banking • Railway • Government Exams
+    </p>
+
+    <p>
+        Concept Clarity • Practice • Exam-Oriented Preparation
+    </p>
+
+    <p style="margin-top:12px;">
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank">
+            ▶ YouTube: Let's QualifyNow
+        </a>
+    </p>
+
+</footer>
+
+
+<script>
+
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+const totalQuestions = 50;
+
+document.querySelectorAll(".question-card").forEach(card => {
+
+    const options = card.querySelectorAll(".option");
+    const correctAnswer = card.dataset.answer;
+    const solution = card.querySelector(".solution");
+
+    options.forEach(option => {
+
+        option.addEventListener("click", function(){
+
+            if(card.dataset.attempted === "true"){
+                return;
+            }
+
+            card.dataset.attempted = "true";
+
+            attempted++;
+
+            const selected = this.dataset.option;
+
+            options.forEach(opt => {
+
+                if(opt.dataset.option === correctAnswer){
+                    opt.classList.add("correct");
+                }
+
+            });
+
+            if(selected === correctAnswer){
+
+                correct++;
+
+            }else{
+
+                wrong++;
+                this.classList.add("wrong");
+
+            }
+
+            solution.style.display = "block";
+
+            updateScore();
+
+        });
+
+    });
+
+});
+
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        correct + " / " + totalQuestions;
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+    const message = document.getElementById("resultMessage");
+
+    if(attempted === totalQuestions){
+
+        const percentage = (correct / totalQuestions) * 100;
+
+        if(percentage >= 80){
+
+            message.innerHTML =
+                "🎉 Excellent performance! Your Cause & Effect concepts are strong." +
+                "<br>बहुत अच्छा प्रदर्शन! आपके Cause & Effect concepts मजबूत हैं।";
+
+        }else if(percentage >= 60){
+
+            message.innerHTML =
+                "👏 Good performance! Keep practising to improve accuracy." +
+                "<br>अच्छा प्रदर्शन! Accuracy सुधारने के लिए अभ्यास जारी रखें।";
+
+        }else if(percentage >= 40){
+
+            message.innerHTML =
+                "👍 Fair attempt. Revise the concepts and practise more questions." +
+                "<br>ठीक प्रयास। Concepts को revise करें और अधिक questions का अभ्यास करें।";
+
+        }else{
+
+            message.innerHTML =
+                "💪 More practice is needed. Revise the concepts and try again." +
+                "<br>अधिक अभ्यास की आवश्यकता है। Concepts को revise करें और दोबारा प्रयास करें।";
+
+        }
+
+    }else{
+
+        message.innerHTML =
+            "Keep attempting the questions and check your final score." +
+            "<br>प्रश्नों को हल करते रहें और अपना final score देखें।";
+
+    }
+
+}
+
+
+function resetQuiz(){
+
+    attempted = 0;
+    correct = 0;
+    wrong = 0;
+
+    document.querySelectorAll(".question-card").forEach(card => {
+
+        card.dataset.attempted = "false";
+
+        card.querySelectorAll(".option").forEach(option => {
+
+            option.classList.remove("correct");
+            option.classList.remove("wrong");
+
+        });
+
+        card.querySelector(".solution").style.display = "none";
+
+    });
+
+    updateScore();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
