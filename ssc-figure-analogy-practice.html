@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSC Figure Analogy Practice | Let's QualifyNow</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;line-height:1.6}
+header{background:#102a43;color:#fff;padding:16px 4%;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-container{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand-block{flex-shrink:0}
+.brand{font-size:23px;font-weight:bold;letter-spacing:.5px}
+.tagline{font-size:13px;color:#d9eaf7;margin-top:2px}
+nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 15px}
+nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap}
+nav a:hover{color:#d9eaf7;text-decoration:underline}
+.hero{background:#173f5f;color:#fff;text-align:center;padding:30px 16px}
+.hero h1{font-size:27px;margin-bottom:8px}
+.hero p{font-size:15px;color:#e1e8ed}
+.container{width:94%;max-width:1100px;margin:24px auto}
+.intro{background:#fff;border:1px solid #d9e2ec;border-radius:10px;padding:20px;margin-bottom:22px}
+.section-heading{color:#102a43;background:#eef6fb;border-left:5px solid #173f5f;padding:12px 15px;border-radius:5px;margin-bottom:16px;font-size:20px}
+.question-card{background:#fff;border:1px solid #d9e2ec;border-radius:10px;padding:20px;margin-bottom:18px;box-shadow:0 2px 6px rgba(16,42,67,.04)}
+.question-number{color:#173f5f;font-size:17px;font-weight:bold;margin-bottom:8px}
+.question-instruction{margin-bottom:14px;font-size:15px}
+.analogy-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;margin:16px 0}
+.figure-box{min-width:0;border:1px solid #d9e2ec;border-radius:8px;background:#fff;text-align:center;padding:8px 5px}
+.figure-label{color:#173f5f;font-weight:bold;font-size:16px;margin-bottom:4px}
+.figure-box svg{display:block;width:100%;max-width:145px;height:112px;margin:0 auto}
+.question-mark{font-size:42px;color:#173f5f;font-weight:bold;height:112px;display:flex;align-items:center;justify-content:center}
+.options-title{font-weight:bold;margin:14px 0 9px}
+.options-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.option{min-width:0;border:1px solid #d9e2ec;border-radius:8px;padding:8px 7px;cursor:pointer;background:#fff;text-align:center;transition:border-color .15s,background .15s}
+.option:hover{border-color:#627d98;background:#f7f9fc}
+.option-head{font-weight:bold;color:#173f5f;margin-bottom:2px}
+.option svg{display:block;width:100%;max-width:125px;height:100px;margin:0 auto}
+.option.selected{border:2px solid #173f5f;background:#eef6fb;padding:7px 6px}
+.option.correct{border:2px solid #218838;background:#e6f4ea;padding:7px 6px}
+.option.wrong{border:2px solid #c62828;background:#fdecea;padding:7px 6px}
+.submit-btn,.reset-btn{border:none;border-radius:6px;padding:10px 17px;cursor:pointer;font-size:14px;font-weight:bold;margin-top:13px}
+.submit-btn{background:#173f5f;color:#fff}
+.submit-btn:hover{background:#102a43}
+.submit-btn:disabled{opacity:.65;cursor:not-allowed}
+.feedback{margin-top:14px;padding:13px;border-radius:7px;display:none;font-size:14px}
+.feedback.correct-feedback{display:block;background:#e6f4ea;border:1px solid #b7dfc1;color:#155724}
+.feedback.wrong-feedback{display:block;background:#fdecea;border:1px solid #f2b8b5;color:#842029}
+.solution-title{font-weight:bold;margin-bottom:5px}
+.score-box{background:#fff;border:2px solid #173f5f;border-radius:10px;padding:22px;margin:28px 0}
+.score-box h2{color:#102a43;margin-bottom:14px;font-size:23px}
+.score-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.score-item{background:#f7f9fc;border:1px solid #d9e2ec;border-radius:8px;padding:13px 7px;text-align:center}
+.score-item span{display:block;font-size:13px;color:#52606d;margin-bottom:5px}
+.score-item strong{font-size:25px;color:#102a43}
+.reset-btn{background:#52606d;color:#fff}
+.reset-btn:hover{background:#243b53}
+footer{background:#102a43;color:#e1e8ed;text-align:center;padding:18px 10px;font-size:13px;margin-top:30px}
+@media(max-width:900px){
+.header-container{flex-direction:column;align-items:flex-start;gap:12px}
+nav{justify-content:flex-start}
+}
+@media(max-width:700px){
+header{padding:14px 4%}
+.brand{font-size:20px}
+nav{gap:9px 12px}
+nav a{font-size:12px}
+.hero h1{font-size:22px}
+.container{width:96%;margin:16px auto}
+.question-card{padding:13px}
+.analogy-row{gap:5px}
+.figure-box{padding:5px 2px}
+.figure-box svg{height:82px}
+.question-mark{height:82px;font-size:34px}
+.options-grid{gap:6px}
+.option{padding:5px 2px}
+.option svg{height:75px}
+.option-head{font-size:13px}
+.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:390px){
+.analogy-row{gap:3px}
+.figure-box svg{height:70px}
+.question-mark{height:70px;font-size:28px}
+.option svg{height:65px}
+.figure-label{font-size:14px}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="header-container">
+    <div class="brand-block">
+        <div class="brand">LET'S QUALIFYNOW</div>
+        <div class="tagline">You Are Closer To Success</div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ssc-reasoning.html">SSC Reasoning</a>
+        <a href="courses.html">Courses</a>
+        <a href="study-material.html">Study Material</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="test-series.html">Test Series</a>
+        <a href="exams.html">Exams</a>
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+    </nav>
+</div>
+</header>
+
+<section class="hero">
+    <h1>🔷 SSC Figure Analogy Practice</h1>
+    <p>50 Non-Verbal Reasoning Questions with Answers &amp; Explanations</p>
+    <p>50 Questions | 50 Marks | English + हिंदी</p>
+</section>
+
+<main class="container">
+<section class="intro">
+    <h2 class="section-heading">SSC Figure Analogy Practice Set</h2>
+    <p><strong>English:</strong> Study the relationship between figures A and B. Apply the same relationship to figure C and select the correct option.</p>
+    <p style="margin-top:8px"><strong>हिंदी:</strong> आकृति A और B के बीच संबंध पहचानिए। उसी संबंध को आकृति C पर लागू करके सही विकल्प चुनिए।</p>
+    <p style="margin-top:12px"><strong>Instructions / निर्देश:</strong> Each question carries 1 mark. Select one option and click Submit Answer. प्रत्येक प्रश्न 1 अंक का है। एक विकल्प चुनकर उत्तर जाँचें। समाधान उत्तर जमा करने के बाद दिखाई देगा।</p>
+</section>
+
+<h2 class="section-heading">Practice Questions / अभ्यास प्रश्न</h2>
+<div id="questions"></div>
+
+<section class="score-box">
+    <h2>📊 Test Result / परीक्षा परिणाम</h2>
+    <div class="score-grid">
+        <div class="score-item"><span>Correct / सही</span><strong id="correctCount">0</strong></div>
+        <div class="score-item"><span>Wrong / गलत</span><strong id="wrongCount">0</strong></div>
+        <div class="score-item"><span>Attempted / प्रयास किए</span><strong id="attemptedCount">0</strong></div>
+        <div class="score-item"><span>Unattempted / शेष</span><strong id="unattemptedCount">50</strong></div>
+    </div>
+    <p><strong>Marks Obtained / प्राप्त अंक:</strong> <span id="marks">0</span> / 50</p>
+    <p><strong>Accuracy / सटीकता:</strong> <span id="accuracy">0%</span></p>
+    <button class="reset-btn" onclick="resetTest()">Reset Test / दोबारा अभ्यास करें</button>
+</section>
+</main>
+
+<footer>
+LET'S QUALIFYNOW | N Saurabh Sir — Reasoning Faculty
+<br>SSC • Banking • Railway • Government Exams
+</footer>
+
+<script>
+/*
+Figure format:
+shape|rotation|filled|dots|innerMark|horizontalReflection
+
+Inner marks:
+0 = none, 1 = dot, 2 = plus, 3 = cross,
+4 = small triangle, 5 = small square, 6 = small arrow
+
+Transformations:
+R90, R180 = rotation
+M = horizontal reflection
+F = filled/unfilled reversal
+D = add one external dot
+D2 = add two external dots
+I = advance inner-mark sequence by one
+I2 = advance inner-mark sequence by two
+
+The same transformation is applied to A->B and C->answer.
+*/
+
+const questionsData = [
+["R90","arrow|0|0|0|0|0","arrow|180|0|0|0|0"],
+["R180","arrow|45|0|0|0|0","arrow|90|0|0|0|0"],
+["M","arrow|0|0|0|0|0","arrow|90|0|0|0|0"],
+["F","triangle|0|0|0|0|0","pentagon|0|1|0|0|0"],
+["D","circle|0|0|0|0|0","diamond|0|0|2|0|0"],
+["I","square|0|0|0|0|0","hexagon|0|0|0|1|0"],
+["R90+F","arrow|0|0|0|1|0","chevron|0|1|0|0|0"],
+["M+I","arrow|45|0|0|1|0","triangle|0|0|0|2|0"],
+["R180+F","arrow|0|0|0|0|0","parallelogram|45|0|0|1|0"],
+["D2","star|0|0|1|0|0","cross|0|0|0|0|0"],
+
+["R90","chevron|0|0|0|0|0","arrow|270|0|0|0|0"],
+["M","parallelogram|0|0|0|0|0","arrow|0|0|0|0|0"],
+["R180","arrow|0|1|0|0|0","chevron|90|0|0|0|0"],
+["I2","triangle|0|0|0|0|0","pentagon|0|0|0|1|0"],
+["F+D","diamond|0|0|1|0|0","hexagon|0|0|0|1|0"],
+["R90+I","arrow|0|0|0|1|0","arrow|90|0|0|0|0"],
+["M+F","parallelogram|0|0|0|0|0","triangle|0|1|0|0|0"],
+["R180+D","arrow|45|0|0|0|0","star|0|0|1|0|0"],
+["D+I","circle|0|0|0|0|0","square|0|0|1|1|0"],
+["R90+F","chevron|0|0|0|0|0","diamond|180|0|0|1|0"],
+
+["R180+I","arrow|45|0|0|1|0","pentagon|0|0|0|0|0"],
+["M","chevron|0|0|0|0|0","parallelogram|0|0|0|0|0"],
+["R90+D","arrow|0|0|1|0|0","cross|90|0|0|0|0"],
+["F+I","hexagon|0|0|0|1|0","triangle|0|1|0|0|0"],
+["R180+F","arrow|90|0|0|0|0","arrow|0|1|0|0|0"],
+["D2+I","pentagon|0|0|0|0|0","square|0|0|1|1|0"],
+["R90+M","arrow|45|0|0|0|0","chevron|0|0|0|0|0"],
+["I2+F","diamond|0|0|0|1|0","hexagon|0|1|0|0|0"],
+["R180+D2","arrow|0|0|0|0|0","star|45|0|1|0|0"],
+["M+F+I","parallelogram|0|0|0|0|0","triangle|0|1|0|1|0"],
+
+["R90","cross|0|0|0|0|0","arrow|0|0|0|0|0"],
+["R180+F","chevron|0|0|0|0|0","arrow|90|1|0|0|0"],
+["D+I2","circle|0|0|1|0|0","pentagon|0|0|0|0|0"],
+["R90+F","arrow|45|0|0|0|0","parallelogram|0|0|0|1|0"],
+["M+I2","arrow|0|0|0|2|0","triangle|0|0|0|0|0"],
+["R180+I2","arrow|45|0|0|0|0","arrow|90|0|0|1|0"],
+["F+D2","star|0|0|0|0|0","diamond|0|1|1|0|0"],
+["R90+M","chevron|0|0|0|0|0","arrow|180|0|0|0|0"],
+["I+F","square|0|0|0|2|0","hexagon|0|1|0|1|0"],
+["R180+D","arrow|90|0|1|0|0","cross|0|0|0|0|0"],
+
+["M+F","parallelogram|0|1|0|0|0","chevron|0|0|0|0|0"],
+["R90+I2","arrow|0|0|0|1|0","arrow|180|0|0|0|0"],
+["D2+F","pentagon|0|0|0|0|0","star|0|1|1|0|0"],
+["R180+M","arrow|45|0|0|0|0","chevron|0|0|0|0|0"],
+["I+ D","diamond|0|0|0|2|0","circle|0|0|1|3|0"],
+["R90+F+D","arrow|0|0|0|0|0","arrow|90|1|1|0|0"],
+["M+I+F","parallelogram|0|0|0|1|0","triangle|0|1|0|2|0"],
+["R180+I","arrow|90|0|0|1|0","arrow|0|0|0|0|0"],
+["D+F+I2","hexagon|0|0|0|0|0","star|0|1|0|2|0"],
+["R90+M+F","chevron|0|0|0|0|0","arrow|90|1|0|0|0"]
+];
+
+const shapeOrder=["circle","triangle","square","diamond","pentagon","hexagon","star","arrow","cross","chevron","parallelogram"];
+const innerOrder=[0,1,2,3,4,5,6];
+
+const opText={
+R90:{en:"Rotate the figure 90° clockwise.",hi:"आकृति को 90° दक्षिणावर्त घुमाएँ।"},
+R180:{en:"Rotate the figure 180°.",hi:"आकृति को 180° घुमाएँ।"},
+M:{en:"Reflect the figure horizontally.",hi:"आकृति का क्षैतिज प्रतिबिंब बनाएँ।"},
+F:{en:"Reverse the fill: an unfilled figure becomes filled, or vice versa.",hi:"भराव बदलें: खाली आकृति भरी और भरी आकृति खाली बनती है।"},
+D:{en:"Add one dot to the existing external-dot pattern.",hi:"बाहरी बिंदुओं के पैटर्न में एक बिंदु बढ़ाएँ।"},
+D2:{en:"Add two dots to the existing external-dot pattern.",hi:"बाहरी बिंदुओं के पैटर्न में दो बिंदु बढ़ाएँ।"},
+I:{en:"Advance the inner mark by one step in the sequence.",hi:"भीतरी चिह्न को क्रम में एक चरण आगे बढ़ाएँ।"},
+I2:{en:"Advance the inner mark by two steps in the sequence.",hi:"भीतरी चिह्न को क्रम में दो चरण आगे बढ़ाएँ।"}
+};
+
+function parseSpec(str){
+    const p=str.split("|");
+    return {shape:p[0],rot:Number(p[1])||0,fill:Number(p[2])||0,dots:Number(p[3])||0,inner:Number(p[4])||0,flip:Number(p[5])||0};
+}
+function specKey(s){
+    return [s.shape,s.rot,s.fill,s.dots,s.inner,s.flip].join("|");
+}
+function transformOne(input,op){
+    const s={...input};
+    if(op==="R90")s.rot=(s.rot+90)%360;
+    else if(op==="R180")s.rot=(s.rot+180)%360;
+    else if(op==="M")s.flip=1-s.flip;
+    else if(op==="F")s.fill=1-s.fill;
+    else if(op==="D")s.dots=(s.dots+1)%9;
+    else if(op==="D2")s.dots=(s.dots+2)%9;
+    else if(op==="I")s.inner=(s.inner+1)%innerOrder.length;
+    else if(op==="I2")s.inner=(s.inner+2)%innerOrder.length;
+    return s;
+}
+function transform(spec,opString){
+    return opString.split("+").map(x=>x.trim()).reduce((s,op)=>transformOne(s,op),{...spec});
+}
+function polygonPoints(n,cx=50,cy=50,r=29,start=-90){
+    const pts=[];
+    for(let i=0;i<n;i++){
+        const a=(start+i*360/n)*Math.PI/180;
+        pts.push((cx+r*Math.cos(a)).toFixed(2)+","+(cy+r*Math.sin(a)).toFixed(2));
+    }
+    return pts.join(" ");
+}
+function starPoints(){
+    const pts=[];
+    for(let i=0;i<10;i++){
+        const r=i%2===0?31:14;
+        const a=(-90+i*36)*Math.PI/180;
+        pts.push((50+r*Math.cos(a)).toFixed(2)+","+(50+r*Math.sin(a)).toFixed(2));
+    }
+    return pts.join(" ");
+}
+function shapeMarkup(shape,fill){
+    const f=fill?"#243b53":"#ffffff";
+    const common=`fill="${f}" stroke="#102a43" stroke-width="3" stroke-linejoin="round"`;
+    if(shape==="circle")return `<circle cx="50" cy="50" r="29" ${common}/>`;
+    if(shape==="triangle")return `<polygon points="${polygonPoints(3)}" ${common}/>`;
+    if(shape==="square")return `<polygon points="${polygonPoints(4,50,50,29,-45)}" ${common}/>`;
+    if(shape==="diamond")return `<polygon points="50,15 84,50 50,85 16,50" ${common}/>`;
+    if(shape==="pentagon")return `<polygon points="${polygonPoints(5)}" ${common}/>`;
+    if(shape==="hexagon")return `<polygon points="${polygonPoints(6)}" ${common}/>`;
+    if(shape==="star")return `<polygon points="${starPoints()}" ${common}/>`;
+    if(shape==="arrow")return `<polygon points="50,9 79,39 63,39 63,84 37,84 37,39 21,39" ${common}/>`;
+    if(shape==="cross")return `<polygon points="39,12 61,12 61,39 88,39 88,61 61,61 61,88 39,88 39,61 12,61 12,39 39,39" ${common}/>`;
+    if(shape==="chevron")return `<polygon points="19,18 50,18 82,50 50,82 19,82 51,50" ${common}/>`;
+    if(shape==="parallelogram")return `<polygon points="31,20 84,20 69,80 16,80" ${common}/>`;
+    return `<circle cx="50" cy="50" r="29" ${common}/>`;
+}
+function innerMarkup(inner){
+    if(inner===1)return `<circle cx="50" cy="50" r="5" fill="#102a43"/>`;
+    if(inner===2)return `<path d="M40 50 H60 M50 40 V60" stroke="#102a43" stroke-width="4" stroke-linecap="round"/>`;
+    if(inner===3)return `<path d="M41 41 L59 59 M59 41 L41 59" stroke="#102a43" stroke-width="4" stroke-linecap="round"/>`;
+    if(inner===4)return `<polygon points="50,39 61,59 39,59" fill="#243b53" stroke="#102a43" stroke-width="2"/>`;
+    if(inner===5)return `<rect x="43" y="43" width="14" height="14" fill="#243b53" stroke="#102a43" stroke-width="2"/>`;
+    if(inner===6)return `<path d="M50 38 L62 50 L54 50 L54 63 L46 63 L46 50 L38 50 Z" fill="#243b53" stroke="#102a43" stroke-width="1.5"/>`;
+    return "";
+}
+function renderFigure(spec){
+    const s=typeof spec==="string"?parseSpec(spec):spec;
+    const positions=[[15,15],[85,15],[15,85],[85,85],[50,12],[88,50],[50,88],[12,50],[28,12]];
+    let dots="";
+    for(let i=0;i<Math.min(s.dots,positions.length);i++){
+        const p=positions[i];
+        dots+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.8" fill="#102a43"/>`;
+    }
+    return `<svg viewBox="0 0 100 100" role="img" aria-label="Figure analogy diagram">
+        <g transform="${s.flip?"translate(100 0) scale(-1 1)":""}">
+            <g transform="rotate(${s.rot} 50 50)">
+                ${shapeMarkup(s.shape,s.fill)}
+                ${innerMarkup(s.inner)}
+            </g>
+            ${dots}
+        </g>
+    </svg>`;
+}
+function createDistractors(correct){
+    const candidates=[
+        {...correct,rot:(correct.rot+90)%360},
+        {...correct,rot:(correct.rot+180)%360},
+        {...correct,fill:1-correct.fill},
+        {...correct,flip:1-correct.flip},
+        {...correct,dots:(correct.dots+1)%9},
+        {...correct,dots:(correct.dots+2)%9},
+        {...correct,inner:(correct.inner+1)%innerOrder.length},
+        {...correct,inner:(correct.inner+2)%innerOrder.length},
+        {...correct,shape:shapeOrder[(shapeOrder.indexOf(correct.shape)+1)%shapeOrder.length]},
+        {...correct,shape:shapeOrder[(shapeOrder.indexOf(correct.shape)+2)%shapeOrder.length]}
+    ];
+    const out=[];
+    for(const candidate of candidates){
+        const key=specKey(candidate);
+        if(key!==specKey(correct)&&!out.some(x=>specKey(x)===key))out.push(candidate);
+        if(out.length===3)break;
+    }
+    return out;
+}
+function shuffleArray(arr){
+    const result=arr.slice();
+    for(let i=result.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [result[i],result[j]]=[result[j],result[i]];
+    }
+    return result;
+}
+
+const questionStates=[];
+const questionsContainer=document.getElementById("questions");
+
+function renderQuestions(){
+    questionsContainer.innerHTML="";
+    questionStates.length=0;
+
+    questionsData.forEach((row,index)=>{
+        const [op,aText,cText]=row;
+        const a=parseSpec(aText);
+        const b=transform(a,op);
+        const c=parseSpec(cText);
+        const correct=transform(c,op);
+        const options=shuffleArray([correct,...createDistractors(correct)]);
+        const state={selected:null,submitted:false,correctKey:specKey(correct),options,isCorrect:false};
+        questionStates.push(state);
+
+        const card=document.createElement("section");
+        card.className="question-card";
+        card.id=`question-${index+1}`;
+        card.innerHTML=`
+            <div class="question-number">Question ${index+1} / प्रश्न ${index+1}</div>
+            <div class="question-instruction">
+                <strong>English:</strong> Choose the figure that completes the analogy.<br>
+                <strong>हिंदी:</strong> समानता के नियम के अनुसार सही आकृति चुनिए।
+            </div>
+            <div class="analogy-row">
+                <div class="figure-box"><div class="figure-label">A</div>${renderFigure(a)}</div>
+                <div class="figure-box"><div class="figure-label">B</div>${renderFigure(b)}</div>
+                <div class="figure-box"><div class="figure-label">C</div>${renderFigure(c)}</div>
+                <div class="figure-box"><div class="figure-label">?</div><div class="question-mark">?</div></div>
+            </div>
+            <div class="options-title">Options / विकल्प:</div>
+            <div class="options-grid" id="options-${index}"></div>
+            <button class="submit-btn" id="submit-${index}">Submit Answer / उत्तर जाँचें</button>
+            <div class="feedback" id="feedback-${index}" aria-live="polite"></div>
+        `;
+        questionsContainer.appendChild(card);
+
+        const optionContainer=card.querySelector(`#options-${index}`);
+        options.forEach((option,optionIndex)=>{
+            const optionDiv=document.createElement("div");
+            optionDiv.className="option";
+            optionDiv.setAttribute("role","radio");
+            optionDiv.setAttribute("aria-checked","false");
+            optionDiv.tabIndex=0;
+            optionDiv.innerHTML=`<div class="option-head"><span class="radio-mark">◯</span> ${String.fromCharCode(65+optionIndex)}</div>${renderFigure(option)}`;
+
+            function selectOption(){
+                if(state.submitted)return;
+                state.selected=optionIndex;
+                optionContainer.querySelectorAll(".option").forEach(el=>{
+                    el.classList.remove("selected");
+                    el.setAttribute("aria-checked","false");
+                    el.querySelector(".radio-mark").textContent="◯";
+                });
+                optionDiv.classList.add("selected");
+                optionDiv.setAttribute("aria-checked","true");
+                optionDiv.querySelector(".radio-mark").textContent="🔘";
+            }
+            optionDiv.addEventListener("click",selectOption);
+            optionDiv.addEventListener("keydown",event=>{
+                if(event.key==="Enter"||event.key===" "){
+                    event.preventDefault();
+                    selectOption();
+                }
+            });
+            optionContainer.appendChild(optionDiv);
+        });
+        card.querySelector(`#submit-${index}`).addEventListener("click",()=>submitAnswer(index));
+    });
+}
+
+function submitAnswer(index){
+    const state=questionStates[index];
+    if(state.submitted)return;
+    if(state.selected===null){
+        alert("Please select an option first.\nकृपया पहले एक विकल्प चुनें।");
+        return;
+    }
+    state.submitted=true;
+    state.isCorrect=specKey(state.options[state.selected])===state.correctKey;
+
+    const card=document.getElementById(`question-${index+1}`);
+    const optionElements=card.querySelectorAll(".option");
+    optionElements.forEach((el,i)=>{
+        el.classList.remove("selected");
+        if(specKey(state.options[i])===state.correctKey)el.classList.add("correct");
+        if(i===state.selected&&!state.isCorrect)el.classList.add("wrong");
+        el.style.cursor="default";
+        el.tabIndex=-1;
+        el.setAttribute("aria-disabled","true");
+    });
+
+    const button=document.getElementById(`submit-${index}`);
+    button.disabled=true;
+    button.textContent="Answer Submitted / उत्तर जमा हो गया";
+
+    const op=questionsData[index][0];
+    const codes=op.split("+").map(x=>x.trim());
+    const explanations=codes.map(code=>opText[code]).filter(Boolean);
+    const feedback=document.getElementById(`feedback-${index}`);
+    feedback.className="feedback "+(state.isCorrect?"correct-feedback":"wrong-feedback");
+
+    const correctIndex=state.options.findIndex(option=>specKey(option)===state.correctKey);
+    const correctLetter=String.fromCharCode(65+correctIndex);
+    const english=explanations.map(x=>x.en).join(" Then ");
+    const hindi=explanations.map(x=>x.hi).join(" इसके बाद ");
+
+    feedback.innerHTML=`
+        <div class="solution-title">${state.isCorrect?"✓ Correct Answer / सही उत्तर":"✗ Incorrect Answer / गलत उत्तर"}</div>
+        <p><strong>Correct Option / सही विकल्प:</strong> ${correctLetter}</p>
+        <p style="margin-top:7px"><strong>Explanation (English):</strong> From A to B: ${english} Apply the same rule to figure C.</p>
+        <p style="margin-top:7px"><strong>व्याख्या (हिंदी):</strong> A से B में: ${hindi} यही नियम आकृति C पर लागू करें।</p>
+        <p style="margin-top:7px"><strong>Marks / अंक:</strong> ${state.isCorrect?"+1":"0"}</p>
+    `;
+    updateScore();
+}
+
+function updateScore(){
+    let correct=0,wrong=0,attempted=0;
+    questionStates.forEach(state=>{
+        if(state.submitted){
+            attempted++;
+            if(state.isCorrect)correct++;
+            else wrong++;
+        }
+    });
+    const unattempted=questionsData.length-attempted;
+    const accuracy=attempted?Math.round(correct/attempted*100):0;
+    document.getElementById("correctCount").textContent=correct;
+    document.getElementById("wrongCount").textContent=wrong;
+    document.getElementById("attemptedCount").textContent=attempted;
+    document.getElementById("unattemptedCount").textContent=unattempted;
+    document.getElementById("marks").textContent=correct;
+    document.getElementById("accuracy").textContent=accuracy+"%";
+}
+function resetTest(){
+    if(!confirm("Are you sure you want to reset the test?\nक्या आप अभ्यास दोबारा शुरू करना चाहते हैं?"))return;
+    renderQuestions();
+    updateScore();
+    window.scrollTo({top:0,behavior:"smooth"});
+}
+
+renderQuestions();
+updateScore();
+</script>
+</body>
+</html>
