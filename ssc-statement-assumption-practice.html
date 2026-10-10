@@ -1,0 +1,3474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Statement & Assumption Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+header{
+    background:#102a43;
+    color:white;
+    padding:18px 20px;
+}
+
+.header-inner{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 11px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:42px 20px;
+}
+
+.hero h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+    font-size:24px;
+}
+
+.intro p{
+    color:#52606d;
+}
+
+.topic-box{
+    background:#d9eaf7;
+    border-left:5px solid #173f5f;
+    padding:20px;
+    border-radius:8px;
+    margin-bottom:25px;
+}
+
+.topic-box h3{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.topic-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px 25px;
+}
+
+.topic-list div{
+    color:#243b53;
+}
+
+.instructions{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+.instructions h3{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.instructions ul{
+    padding-left:22px;
+}
+
+.instructions li{
+    margin-bottom:7px;
+}
+
+.part-title{
+    background:#102a43;
+    color:white;
+    padding:14px 18px;
+    border-radius:8px;
+    margin:35px 0 18px;
+    font-size:21px;
+}
+
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 2px 5px rgba(36,59,83,.05);
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:16px;
+}
+
+.options{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.option{
+    width:100%;
+    text-align:left;
+    background:white;
+    border:1px solid #829ab1;
+    color:#243b53;
+    border-radius:7px;
+    padding:12px 14px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.2s;
+}
+
+.option:hover:not(:disabled){
+    background:#f7f9fc;
+    border-color:#173f5f;
+}
+
+.option.correct{
+    background:#d9ead3;
+    border-color:#5b8c5a;
+    color:#245324;
+    font-weight:bold;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#b85450;
+    color:#7a1f1f;
+    font-weight:bold;
+}
+
+.option:disabled{
+    cursor:default;
+}
+
+.solution{
+    display:none;
+    margin-top:17px;
+    padding:15px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:6px;
+    color:#52606d;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+.score-box{
+    background:#173f5f;
+    color:white;
+    border-radius:10px;
+    padding:25px;
+    margin:40px 0 25px;
+    text-align:center;
+}
+
+.score-box h2{
+    margin-bottom:18px;
+}
+
+.score{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.stat{
+    background:rgba(255,255,255,.12);
+    padding:12px 20px;
+    border-radius:7px;
+    min-width:120px;
+}
+
+.stat span{
+    display:block;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.action-buttons{
+    text-align:center;
+    margin:25px 0 40px;
+}
+
+.action-btn{
+    display:inline-block;
+    border:none;
+    background:#102a43;
+    color:white;
+    padding:12px 22px;
+    border-radius:7px;
+    cursor:pointer;
+    margin:5px;
+    font-size:15px;
+    text-decoration:none;
+}
+
+.action-btn:hover{
+    background:#173f5f;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:40px;
+}
+
+footer h3{
+    margin-bottom:8px;
+}
+
+footer p{
+    margin:5px 0;
+    color:#d9e2ec;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .topic-list{
+        grid-template-columns:1fr;
+    }
+
+    .question-card{
+        padding:17px;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .stats{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .stat{
+        width:80%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-inner">
+
+        <div class="logo">LET'S QUALIFYNOW</div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
+            <a href="courses.html">Courses</a>
+            <a href="ssc-study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+
+            <a href="https://youtube.com/@letsqualifynow7636" target="_blank">
+                YouTube
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>🧩 SSC Statement &amp; Assumption Practice</h1>
+
+    <p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
+
+</section>
+
+
+<main class="container">
+
+
+    <section class="intro">
+
+        <h2>SSC Statement &amp; Assumption Practice Set</h2>
+
+        <p>
+            This practice set covers important Statement &amp; Assumption patterns
+            commonly asked in SSC and other Government Exams.
+        </p>
+
+    </section>
+
+
+    <section class="topic-box">
+
+        <h3>Statement &amp; Assumption Topics Covered</h3>
+
+        <div class="topic-list">
+
+            <div>Statement and Single Assumption</div>
+            <div>Statement and Two Assumptions</div>
+            <div>Implicit Assumption</div>
+            <div>Necessary Assumption</div>
+            <div>Advertisement Based Statements</div>
+            <div>Notice Based Statements</div>
+            <div>Advice Based Statements</div>
+            <div>Decision Based Statements</div>
+            <div>Request Based Statements</div>
+            <div>Mixed SSC-Level Questions</div>
+
+        </div>
+
+    </section>
+
+
+    <section class="instructions">
+
+        <h3>How to Attempt:</h3>
+
+        <ul>
+
+            <li>Read the statement carefully.</li>
+            <li>Identify what is directly or indirectly taken for granted.</li>
+            <li>Do not use outside information while judging an assumption.</li>
+            <li>An assumption must be logically connected with the statement.</li>
+            <li>Options are shuffled automatically on every page load.</li>
+            <li>No option is selected automatically.</li>
+            <li>After selecting an option, all options of that question are locked.</li>
+            <li>Click one option to check your answer and solution.</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- PART 1 -->
+
+    <h2 class="part-title">
+        📝 Part 1 — Basic Statement &amp; Assumption
+    </h2>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q1. Statement: The school has decided to conduct extra classes for students who are weak in mathematics.<br>
+            कथन: विद्यालय ने गणित में कमजोर छात्रों के लिए अतिरिक्त कक्षाएँ आयोजित करने का निर्णय लिया है।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Some students need additional help in mathematics.<br>
+            I. कुछ छात्रों को गणित में अतिरिक्त सहायता की आवश्यकता है।<br>
+
+            II. Extra classes can help weak students improve.<br>
+            II. अतिरिक्त कक्षाएँ कमजोर छात्रों को सुधार करने में सहायता कर सकती हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. Both I and II are implicit<br>
+            उत्तर: B. I और II दोनों निहित हैं</strong><br><br>
+
+            The decision for extra classes assumes that some students require additional help and that extra teaching can improve their performance.<br>
+            अतिरिक्त कक्षाएँ आयोजित करने का निर्णय यह मानता है कि कुछ छात्रों को अतिरिक्त सहायता की आवश्यकता है और अतिरिक्त शिक्षण से उनके प्रदर्शन में सुधार हो सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q2. Statement: Use public transport to reduce traffic congestion in the city.<br>
+            कथन: शहर में यातायात की भीड़ को कम करने के लिए सार्वजनिक परिवहन का उपयोग करें।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Public transport can reduce the number of private vehicles on the roads.<br>
+            सार्वजनिक परिवहन सड़कों पर निजी वाहनों की संख्या को कम कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is not implicit<br>
+                पूर्वधारणा निहित नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. The statement is impossible<br>
+                कथन असंभव है
+            </button>
+
+            <button class="option" data-option="D">
+                D. The statement is unrelated to traffic<br>
+                कथन का यातायात से कोई संबंध नहीं है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice to use public transport is based on the assumption that it can reduce private vehicle usage and consequently traffic.<br>
+            सार्वजनिक परिवहन का उपयोग करने की सलाह इस पूर्वधारणा पर आधारित है कि इससे निजी वाहनों का उपयोग और परिणामस्वरूप यातायात कम हो सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q3. Statement: The company has launched a new training programme for its employees.<br>
+            कथन: कंपनी ने अपने कर्मचारियों के लिए एक नया प्रशिक्षण कार्यक्रम शुरू किया है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            The company believes that training can improve employee performance.<br>
+            कंपनी का मानना है कि प्रशिक्षण से कर्मचारियों के प्रदर्शन में सुधार हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The company wants to reduce salaries<br>
+                कंपनी वेतन कम करना चाहती है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Employees dislike training<br>
+                कर्मचारियों को प्रशिक्षण पसंद नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Training has no purpose<br>
+                प्रशिक्षण का कोई उद्देश्य नहीं है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            Launching a training programme reasonably assumes that training is expected to improve employee performance or skills.<br>
+            प्रशिक्षण कार्यक्रम शुरू करने से यह उचित रूप से माना जाता है कि प्रशिक्षण से कर्मचारियों के प्रदर्शन या कौशल में सुधार होने की अपेक्षा है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q4. Statement: Buy this water purifier to get clean drinking water at home.<br>
+            कथन: घर पर स्वच्छ पेयजल प्राप्त करने के लिए यह जल शोधक खरीदें।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            The purifier can help provide cleaner drinking water.<br>
+            जल शोधक अधिक स्वच्छ पेयजल उपलब्ध कराने में सहायता कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Everyone owns a purifier<br>
+                प्रत्येक व्यक्ति के पास जल शोधक है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Water is never contaminated<br>
+                पानी कभी दूषित नहीं होता
+            </button>
+
+            <button class="option" data-option="C">
+                C. Purifiers are unnecessary<br>
+                जल शोधक अनावश्यक हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            The advertisement's recommendation depends on the assumption that the purifier can improve the quality of drinking water.<br>
+            विज्ञापन की यह सिफारिश इस पूर्वधारणा पर निर्भर करती है कि जल शोधक पेयजल की गुणवत्ता में सुधार कर सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q5. Statement: The manager advised employees to reach the office before 9:30 a.m.<br>
+            कथन: प्रबंधक ने कर्मचारियों को सुबह 9:30 बजे से पहले कार्यालय पहुँचने की सलाह दी।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Timely arrival of employees is considered important for office work.<br>
+            कार्यालय के कार्य के लिए कर्मचारियों का समय पर पहुँचना महत्वपूर्ण माना जाता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is not implicit<br>
+                पूर्वधारणा निहित नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Employees do not work in the office<br>
+                कर्मचारी कार्यालय में काम नहीं करते
+            </button>
+
+            <button class="option" data-option="D">
+                D. The manager wants the office closed<br>
+                प्रबंधक कार्यालय बंद करना चाहता है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The instruction about reaching before a fixed time assumes that punctual attendance is important.<br>
+            निश्चित समय से पहले पहुँचने का निर्देश इस पूर्वधारणा पर आधारित है कि समय पर उपस्थित होना महत्वपूर्ण है।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 2 -->
+
+    <h2 class="part-title">
+        📢 Part 2 — Advertisement Based Statements
+    </h2>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q6. Statement: Join our online course and improve your examination performance.<br>
+            कथन: हमारे ऑनलाइन पाठ्यक्रम से जुड़ें और अपने परीक्षा प्रदर्शन में सुधार करें।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Students may improve through suitable online preparation.<br>
+            उपयुक्त ऑनलाइन तैयारी के माध्यम से छात्रों के प्रदर्शन में सुधार हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. No student prepares online<br>
+                कोई भी छात्र ऑनलाइन तैयारी नहीं करता
+            </button>
+
+            <button class="option" data-option="B">
+                B. Exams are unnecessary<br>
+                परीक्षाएँ अनावश्यक हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Online courses cannot teach anything<br>
+                ऑनलाइन पाठ्यक्रम कुछ भी नहीं सिखा सकते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            The advertisement assumes that online preparation can contribute to better examination performance.<br>
+            विज्ञापन यह मानता है कि ऑनलाइन तैयारी बेहतर परीक्षा प्रदर्शन में योगदान दे सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q7. Statement: Buy our study material to prepare effectively for the examination.<br>
+            कथन: परीक्षा की प्रभावी तैयारी के लिए हमारी अध्ययन सामग्री खरीदें।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            The study material contains useful examination-related content.<br>
+            अध्ययन सामग्री में परीक्षा से संबंधित उपयोगी सामग्री है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is not implicit<br>
+                पूर्वधारणा निहित नहीं है
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Examinations have been cancelled<br>
+                परीक्षाएँ रद्द कर दी गई हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. Students never use study material<br>
+                छात्र कभी अध्ययन सामग्री का उपयोग नहीं करते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            The recommendation assumes that the material is useful for examination preparation.<br>
+            यह सिफारिश इस पूर्वधारणा पर आधारित है कि अध्ययन सामग्री परीक्षा की तैयारी के लिए उपयोगी है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q8. Statement: Subscribe to our newspaper for complete coverage of current affairs.<br>
+            कथन: समसामयिक घटनाओं की पूर्ण जानकारी के लिए हमारे समाचार-पत्र की सदस्यता लें।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Readers interested in current affairs may find such coverage useful.<br>
+            समसामयिक घटनाओं में रुचि रखने वाले पाठक ऐसी जानकारी को उपयोगी मान सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Newspapers never contain current affairs<br>
+                समाचार-पत्रों में कभी समसामयिक घटनाएँ नहीं होतीं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Readers dislike information<br>
+                पाठकों को जानकारी पसंद नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Current affairs are unrelated to news<br>
+                समसामयिक घटनाओं का समाचारों से कोई संबंध नहीं है
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            The subscription suggestion assumes that readers value current-affairs information.<br>
+            सदस्यता लेने का सुझाव इस पूर्वधारणा पर आधारित है कि पाठक समसामयिक घटनाओं की जानकारी को महत्व देते हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q9. Statement: Install this mobile application to manage your daily tasks easily.<br>
+            कथन: अपने दैनिक कार्यों को आसानी से व्यवस्थित करने के लिए यह मोबाइल एप्लिकेशन इंस्टॉल करें।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            A task-management application can help users organize their tasks.<br>
+            कार्य-प्रबंधन एप्लिकेशन उपयोगकर्ताओं को अपने कार्य व्यवस्थित करने में सहायता कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Mobile applications cannot manage tasks<br>
+                मोबाइल एप्लिकेशन कार्यों का प्रबंधन नहीं कर सकते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Daily tasks do not exist<br>
+                दैनिक कार्य अस्तित्व में नहीं हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. Users never use phones<br>
+                उपयोगकर्ता कभी फोन का उपयोग नहीं करते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The recommendation assumes that the application can help users organize daily tasks.<br>
+            यह सिफारिश इस पूर्वधारणा पर आधारित है कि एप्लिकेशन उपयोगकर्ताओं को दैनिक कार्य व्यवस्थित करने में सहायता कर सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q10. Statement: Use our banking service to make transactions quickly.<br>
+            कथन: लेन-देन शीघ्र करने के लिए हमारी बैंकिंग सेवा का उपयोग करें।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Customers value convenient and quick banking transactions.<br>
+            ग्राहक सुविधाजनक और शीघ्र बैंकिंग लेन-देन को महत्व देते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Customers dislike banking services<br>
+                ग्राहकों को बैंकिंग सेवाएँ पसंद नहीं हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Transactions are impossible<br>
+                लेन-देन असंभव हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Banking has no customers<br>
+                बैंकिंग के कोई ग्राहक नहीं हैं
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            The recommendation is based on the idea that customers value faster and more convenient transactions.<br>
+            यह सिफारिश इस विचार पर आधारित है कि ग्राहक तेज और अधिक सुविधाजनक लेन-देन को महत्व देते हैं।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 3 -->
+
+    <h2 class="part-title">
+        📋 Part 3 — Notice &amp; Announcement Based Statements
+    </h2>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q11. Statement: All students are requested to carry their identity cards during the examination.<br>
+            कथन: सभी छात्रों से परीक्षा के दौरान अपने पहचान-पत्र साथ रखने का अनुरोध किया जाता है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Identity cards may be required for identification during the examination.<br>
+            परीक्षा के दौरान पहचान के लिए पहचान-पत्रों की आवश्यकता हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Students never need identification<br>
+                छात्रों को कभी पहचान की आवश्यकता नहीं होती
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Examinations do not require rules<br>
+                परीक्षाओं में नियमों की आवश्यकता नहीं होती
+            </button>
+
+            <button class="option" data-option="D">
+                D. Identity cards are useless<br>
+                पहचान-पत्र बेकार हैं
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            The instruction to carry identity cards assumes that they may be needed for identification.<br>
+            पहचान-पत्र साथ रखने का निर्देश इस पूर्वधारणा पर आधारित है कि पहचान के लिए उनकी आवश्यकता हो सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q12. Statement: Visitors are requested to maintain silence inside the library.<br>
+            कथन: आगंतुकों से पुस्तकालय के अंदर शांति बनाए रखने का अनुरोध किया जाता है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Silence is considered necessary for a suitable library environment.<br>
+            उपयुक्त पुस्तकालय वातावरण के लिए शांति आवश्यक मानी जाती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Libraries are always noisy<br>
+                पुस्तकालय हमेशा शोरगुल वाले होते हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Visitors cannot read<br>
+                आगंतुक पढ़ नहीं सकते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Silence is unnecessary<br>
+                शांति अनावश्यक है
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            The request to maintain silence assumes that a quiet environment is necessary for reading and study in the library.<br>
+            शांति बनाए रखने का अनुरोध इस पूर्वधारणा पर आधारित है कि पुस्तकालय में पढ़ने और अध्ययन के लिए शांत वातावरण आवश्यक है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q13. Statement: Employees are requested to switch off lights before leaving the office.<br>
+            कथन: कर्मचारियों से कार्यालय छोड़ने से पहले लाइट बंद करने का अनुरोध किया जाता है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Switching off unnecessary lights can save electricity.<br>
+            अनावश्यक लाइट बंद करने से बिजली की बचत हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Electricity cannot be saved<br>
+                बिजली की बचत नहीं की जा सकती
+            </button>
+
+            <button class="option" data-option="C">
+                C. Employees never leave the office<br>
+                कर्मचारी कभी कार्यालय नहीं छोड़ते
+            </button>
+
+            <button class="option" data-option="D">
+                D. Lights are unrelated to electricity<br>
+                लाइट का बिजली से कोई संबंध नहीं है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The instruction is based on the reasonable assumption that unnecessary use of lights consumes electricity.<br>
+            यह निर्देश इस उचित पूर्वधारणा पर आधारित है कि लाइट के अनावश्यक उपयोग से बिजली की खपत होती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q14. Statement: Candidates must report to the examination centre 30 minutes before the examination.<br>
+            कथन: उम्मीदवारों को परीक्षा से 30 मिनट पहले परीक्षा केंद्र पर पहुँचना अनिवार्य है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Candidates may need time for verification and other pre-examination formalities.<br>
+            उम्मीदवारों को सत्यापन और परीक्षा-पूर्व अन्य औपचारिकताओं के लिए समय की आवश्यकता हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Candidates do not need verification<br>
+                उम्मीदवारों को सत्यापन की आवश्यकता नहीं है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Examinations begin before candidates arrive<br>
+                उम्मीदवारों के पहुँचने से पहले परीक्षाएँ शुरू हो जाती हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Examination centres are unnecessary<br>
+                परीक्षा केंद्र अनावश्यक हैं
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            Asking candidates to arrive early assumes that some pre-examination procedures require time.<br>
+            उम्मीदवारों को जल्दी पहुँचने के लिए कहना इस पूर्वधारणा पर आधारित है कि कुछ परीक्षा-पूर्व प्रक्रियाओं में समय लगता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q15. Statement: The office will remain closed on Sunday.<br>
+            कथन: कार्यालय रविवार को बंद रहेगा।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            The organisation normally operates according to a schedule that may include a weekly holiday.<br>
+            संगठन सामान्यतः ऐसी समय-सारणी के अनुसार कार्य करता है जिसमें साप्ताहिक अवकाश शामिल हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The office never opens<br>
+                कार्यालय कभी नहीं खुलता
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Sunday has no significance<br>
+                रविवार का कोई महत्व नहीं है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Employees do not work on any day<br>
+                कर्मचारी किसी भी दिन काम नहीं करते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            The statement indicates a regular working schedule in which Sunday is treated as a holiday.<br>
+            कथन एक नियमित कार्य-सारणी को दर्शाता है जिसमें रविवार को अवकाश माना जाता है।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 4 -->
+
+    <h2 class="part-title">
+        💡 Part 4 — Advice Based Statements
+    </h2>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q16. Statement: Students should revise their lessons regularly to perform well in examinations.<br>
+            कथन: परीक्षाओं में अच्छा प्रदर्शन करने के लिए छात्रों को अपने पाठों का नियमित रूप से पुनरावर्तन करना चाहिए।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Regular revision can improve retention and examination preparation.<br>
+            नियमित पुनरावर्तन से स्मरण-क्षमता और परीक्षा की तैयारी में सुधार हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Students should never study<br>
+                छात्रों को कभी अध्ययन नहीं करना चाहिए
+            </button>
+
+            <button class="option" data-option="B">
+                B. Revision has no value<br>
+                पुनरावर्तन का कोई महत्व नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Examinations do not require preparation<br>
+                परीक्षाओं के लिए तैयारी की आवश्यकता नहीं होती
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice is based on the assumption that revision helps students retain and recall what they have studied.<br>
+            यह सलाह इस पूर्वधारणा पर आधारित है कि पुनरावर्तन छात्रों को पढ़ी हुई बातों को याद रखने और दोहराने में सहायता करता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q17. Statement: People should save some part of their income for emergencies.<br>
+            कथन: लोगों को आपातकालीन परिस्थितियों के लिए अपनी आय का कुछ हिस्सा बचाकर रखना चाहिए।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Unexpected financial needs may arise in the future.<br>
+            भविष्य में अप्रत्याशित वित्तीय आवश्यकताएँ उत्पन्न हो सकती हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Emergencies never occur<br>
+                आपातकालीन परिस्थितियाँ कभी उत्पन्न नहीं होतीं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Saving money is impossible<br>
+                धन बचाना असंभव है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Income is unnecessary<br>
+                आय अनावश्यक है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice to save for emergencies assumes that unexpected financial requirements may occur.<br>
+            आपातकालीन परिस्थितियों के लिए बचत करने की सलाह इस पूर्वधारणा पर आधारित है कि अप्रत्याशित वित्तीय आवश्यकताएँ उत्पन्न हो सकती हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q18. Statement: Drivers should follow traffic rules to reduce road accidents.<br>
+            कथन: सड़क दुर्घटनाओं को कम करने के लिए चालकों को यातायात नियमों का पालन करना चाहिए।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Following traffic rules can contribute to safer road conditions.<br>
+            यातायात नियमों का पालन सुरक्षित सड़क परिस्थितियों में योगदान कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Traffic rules cause accidents<br>
+                यातायात नियम दुर्घटनाओं का कारण बनते हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Drivers never use roads<br>
+                चालक कभी सड़कों का उपयोग नहीं करते
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Road safety is impossible<br>
+                सड़क सुरक्षा असंभव है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice depends on the assumption that obeying traffic rules can reduce unsafe driving behaviour.<br>
+            यह सलाह इस पूर्वधारणा पर आधारित है कि यातायात नियमों का पालन असुरक्षित वाहन चलाने के व्यवहार को कम कर सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q19. Statement: People should drink sufficient water during hot weather.<br>
+            कथन: गर्म मौसम में लोगों को पर्याप्त पानी पीना चाहिए।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Adequate water intake can help maintain normal hydration.<br>
+            पर्याप्त पानी का सेवन शरीर में सामान्य जल-संतुलन बनाए रखने में सहायता कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Water is harmful in hot weather<br>
+                गर्म मौसम में पानी हानिकारक है
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. People never become thirsty<br>
+                लोगों को कभी प्यास नहीं लगती
+            </button>
+
+            <button class="option" data-option="D">
+                D. Weather has no effect on water needs<br>
+                मौसम का पानी की आवश्यकता पर कोई प्रभाव नहीं पड़ता
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice assumes that sufficient water intake helps maintain hydration, particularly in hot conditions.<br>
+            यह सलाह इस पूर्वधारणा पर आधारित है कि पर्याप्त पानी का सेवन विशेष रूप से गर्म परिस्थितियों में शरीर में जल-संतुलन बनाए रखने में सहायता करता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q20. Statement: Candidates should solve previous-year questions before appearing for a competitive examination.<br>
+            कथन: प्रतियोगी परीक्षा में शामिल होने से पहले उम्मीदवारों को पिछले वर्षों के प्रश्न हल करने चाहिए।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Previous-year questions can help candidates understand the examination pattern.<br>
+            पिछले वर्षों के प्रश्न उम्मीदवारों को परीक्षा के पैटर्न को समझने में सहायता कर सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Previous-year questions are useless<br>
+                पिछले वर्षों के प्रश्न बेकार हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Candidates should not practise<br>
+                उम्मीदवारों को अभ्यास नहीं करना चाहिए
+            </button>
+
+            <button class="option" data-option="C">
+                C. Competitive examinations have no pattern<br>
+                प्रतियोगी परीक्षाओं का कोई पैटर्न नहीं होता
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            The recommendation is based on the usefulness of previous-year questions for understanding question patterns and preparation.<br>
+            यह सिफारिश इस बात पर आधारित है कि पिछले वर्षों के प्रश्न प्रश्नों के पैटर्न और तैयारी को समझने में उपयोगी होते हैं।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 5 -->
+
+    <h2 class="part-title">
+        🎯 Part 5 — Decision &amp; Action Based Statements
+    </h2>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q21. Statement: The company decided to introduce flexible working hours for employees.<br>
+            कथन: कंपनी ने कर्मचारियों के लिए लचीले कार्य-समय को लागू करने का निर्णय लिया।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Flexible working hours may help employees manage their work more effectively.<br>
+            लचीले कार्य-समय से कर्मचारियों को अपने कार्य को अधिक प्रभावी ढंग से व्यवस्थित करने में सहायता मिल सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Employees cannot work at different times<br>
+                कर्मचारी अलग-अलग समय पर काम नहीं कर सकते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Flexible hours make work impossible<br>
+                लचीले कार्य-समय से काम करना असंभव हो जाता है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Employees never have scheduling needs<br>
+                कर्मचारियों को कभी समय-सारणी की आवश्यकता नहीं होती
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The decision assumes that flexibility can help employees manage their work and schedules more effectively.<br>
+            यह निर्णय इस पूर्वधारणा पर आधारित है कि लचीलापन कर्मचारियों को अपने कार्य और समय-सारणी को अधिक प्रभावी ढंग से व्यवस्थित करने में सहायता कर सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q22. Statement: The school decided to start a reading club for students.<br>
+            कथन: विद्यालय ने छात्रों के लिए एक पठन क्लब शुरू करने का निर्णय लिया।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Students may benefit from activities that encourage reading.<br>
+            छात्रों को पढ़ने के लिए प्रोत्साहित करने वाली गतिविधियों से लाभ हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Students never read<br>
+                छात्र कभी नहीं पढ़ते
+            </button>
+
+            <button class="option" data-option="B">
+                B. Reading has no educational value<br>
+                पढ़ने का कोई शैक्षणिक महत्व नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Clubs cannot involve students<br>
+                क्लब छात्रों को शामिल नहीं कर सकते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            Starting a reading club assumes that encouraging reading can benefit students.<br>
+            पठन क्लब शुरू करना इस पूर्वधारणा पर आधारित है कि पढ़ने के लिए प्रोत्साहित करने से छात्रों को लाभ हो सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q23. Statement: The railway authority decided to increase the number of ticket counters during peak hours.<br>
+            कथन: रेलवे प्राधिकरण ने व्यस्त समय के दौरान टिकट काउंटरों की संख्या बढ़ाने का निर्णय लिया।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            More counters can help reduce waiting time when passenger demand is high.<br>
+            यात्रियों की मांग अधिक होने पर अधिक काउंटर प्रतीक्षा समय को कम करने में सहायता कर सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Passengers never buy tickets<br>
+                यात्री कभी टिकट नहीं खरीदते
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Ticket counters increase waiting time<br>
+                टिकट काउंटर प्रतीक्षा समय बढ़ाते हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. Peak hours have no passengers<br>
+                व्यस्त समय में कोई यात्री नहीं होता
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            Increasing counters is based on the assumption that additional service points can reduce queues and waiting time.<br>
+            काउंटरों की संख्या बढ़ाना इस पूर्वधारणा पर आधारित है कि अतिरिक्त सेवा केंद्र कतार और प्रतीक्षा समय को कम कर सकते हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q24. Statement: The library decided to extend its working hours during examinations.<br>
+            कथन: पुस्तकालय ने परीक्षाओं के दौरान अपने कार्य-समय को बढ़ाने का निर्णय लिया।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Students may need additional library access during examinations.<br>
+            परीक्षाओं के दौरान छात्रों को पुस्तकालय की अतिरिक्त सुविधा की आवश्यकता हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Students never use libraries<br>
+                छात्र कभी पुस्तकालयों का उपयोग नहीं करते
+            </button>
+
+            <button class="option" data-option="B">
+                B. Examinations reduce the need for study<br>
+                परीक्षाएँ अध्ययन की आवश्यकता को कम करती हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Libraries are unnecessary<br>
+                पुस्तकालय अनावश्यक हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            Extending hours during examinations assumes that students may require more access to library resources.<br>
+            परीक्षाओं के दौरान कार्य-समय बढ़ाना इस पूर्वधारणा पर आधारित है कि छात्रों को पुस्तकालय के संसाधनों तक अधिक पहुँच की आवश्यकता हो सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q25. Statement: The city administration decided to plant more trees along major roads.<br>
+            कथन: नगर प्रशासन ने प्रमुख सड़कों के किनारे अधिक पेड़ लगाने का निर्णय लिया।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Increasing tree cover can contribute to a better urban environment.<br>
+            पेड़ों की संख्या बढ़ाने से बेहतर शहरी वातावरण बनाने में योगदान हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Trees cannot grow in cities<br>
+                शहरों में पेड़ नहीं उग सकते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Roads do not exist<br>
+                सड़कें अस्तित्व में नहीं हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. Tree cover has no environmental value<br>
+                पेड़ों का पर्यावरणीय महत्व नहीं है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The decision to plant trees assumes that additional greenery can improve the urban environment.<br>
+            पेड़ लगाने का निर्णय इस पूर्वधारणा पर आधारित है कि अतिरिक्त हरियाली शहरी वातावरण में सुधार कर सकती है।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 6 -->
+
+    <h2 class="part-title">
+        🔍 Part 6 — Necessary Assumption
+    </h2>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q26. Statement: The shopkeeper reduced the price of the product to increase sales.<br>
+            कथन: दुकानदार ने बिक्री बढ़ाने के लिए उत्पाद की कीमत कम कर दी।<br><br>
+
+            Necessary assumption:<br>
+            आवश्यक पूर्वधारणा:<br>
+
+            Customers may be more willing to buy the product at a lower price.<br>
+            कम कीमत पर ग्राहक उत्पाद खरीदने के लिए अधिक इच्छुक हो सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Customers never compare prices<br>
+                ग्राहक कभी कीमतों की तुलना नहीं करते
+            </button>
+
+            <button class="option" data-option="B">
+                B. The product has no buyers<br>
+                उत्पाद का कोई खरीदार नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Price has no relationship with buying decisions<br>
+                कीमत का खरीद निर्णय से कोई संबंध नहीं है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            The price reduction is intended to increase sales, so it assumes that a lower price can encourage purchases.<br>
+            कीमत कम करने का उद्देश्य बिक्री बढ़ाना है, इसलिए यह माना जाता है कि कम कीमत खरीदारी को प्रोत्साहित कर सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q27. Statement: The school introduced mock tests before the final examination.<br>
+            कथन: विद्यालय ने अंतिम परीक्षा से पहले मॉक टेस्ट शुरू किए।<br><br>
+
+            Necessary assumption:<br>
+            आवश्यक पूर्वधारणा:<br>
+
+            Mock tests can help students practise examination-type questions.<br>
+            मॉक टेस्ट छात्रों को परीक्षा-प्रकार के प्रश्नों का अभ्यास करने में सहायता कर सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Students should never practise<br>
+                छात्रों को कभी अभ्यास नहीं करना चाहिए
+            </button>
+
+            <button class="option" data-option="B">
+                B. Mock tests cannot resemble examinations<br>
+                मॉक टेस्ट परीक्षाओं के समान नहीं हो सकते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Examinations are cancelled<br>
+                परीक्षाएँ रद्द कर दी गई हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            Conducting mock tests before an examination assumes that practice under similar conditions can help students prepare.<br>
+            परीक्षा से पहले मॉक टेस्ट आयोजित करना इस पूर्वधारणा पर आधारित है कि समान परिस्थितियों में अभ्यास छात्रों को तैयारी में सहायता कर सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q28. Statement: The restaurant has introduced online table booking to reduce waiting time for customers.<br>
+            कथन: रेस्तराँ ने ग्राहकों के प्रतीक्षा समय को कम करने के लिए ऑनलाइन टेबल बुकिंग शुरू की है।<br><br>
+
+            Necessary assumption:<br>
+            आवश्यक पूर्वधारणा:<br>
+
+            Advance booking can help organise table availability.<br>
+            अग्रिम बुकिंग टेबल की उपलब्धता को व्यवस्थित करने में सहायता कर सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Customers never wait<br>
+                ग्राहक कभी प्रतीक्षा नहीं करते
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Online booking increases waiting time<br>
+                ऑनलाइन बुकिंग प्रतीक्षा समय बढ़ाती है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Restaurants do not need tables<br>
+                रेस्तराँ को टेबल की आवश्यकता नहीं होती
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            The system is introduced to reduce waiting, so it assumes advance booking can help manage table availability.<br>
+            प्रतीक्षा समय कम करने के लिए यह व्यवस्था शुरू की गई है, इसलिए यह माना जाता है कि अग्रिम बुकिंग टेबल की उपलब्धता को व्यवस्थित करने में सहायता कर सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q29. Statement: The transport department advised people to use buses during peak traffic hours.<br>
+            कथन: परिवहन विभाग ने लोगों को अधिक यातायात वाले समय में बसों का उपयोग करने की सलाह दी।<br><br>
+
+            Necessary assumption:<br>
+            आवश्यक पूर्वधारणा:<br>
+
+            Greater use of buses can reduce the number of private vehicles on roads.<br>
+            बसों के अधिक उपयोग से सड़कों पर निजी वाहनों की संख्या कम हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Buses never carry passengers<br>
+                बसें कभी यात्रियों को नहीं ले जातीं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Private vehicles are never used<br>
+                निजी वाहनों का कभी उपयोग नहीं होता
+            </button>
+
+            <button class="option" data-option="D">
+                D. Traffic cannot be reduced<br>
+                यातायात कम नहीं किया जा सकता
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice is intended to reduce traffic, so it assumes that some people can shift from private vehicles to buses.<br>
+            सलाह का उद्देश्य यातायात कम करना है, इसलिए यह माना जाता है कि कुछ लोग निजी वाहनों से बसों की ओर जा सकते हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q30. Statement: The teacher advised students to make short notes while studying.<br>
+            कथन: शिक्षक ने छात्रों को अध्ययन करते समय संक्षिप्त नोट्स बनाने की सलाह दी।<br><br>
+
+            Necessary assumption:<br>
+            आवश्यक पूर्वधारणा:<br>
+
+            Short notes can help students revise important information later.<br>
+            संक्षिप्त नोट्स छात्रों को बाद में महत्वपूर्ण जानकारी दोहराने में सहायता कर सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Notes always contain incorrect information<br>
+                नोट्स में हमेशा गलत जानकारी होती है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Revision is unnecessary<br>
+                पुनरावर्तन अनावश्यक है
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Students should never write anything<br>
+                छात्रों को कभी कुछ नहीं लिखना चाहिए
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice assumes that making concise notes will make later revision easier.<br>
+            यह सलाह इस पूर्वधारणा पर आधारित है कि संक्षिप्त नोट्स बनाने से बाद में पुनरावर्तन आसान होगा।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 7 -->
+
+    <h2 class="part-title">
+        🧠 Part 7 — Two Assumptions
+    </h2>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q31. Statement: The government launched a campaign asking citizens to conserve water.<br>
+            कथन: सरकार ने नागरिकों से जल संरक्षण करने का आग्रह करते हुए एक अभियान शुरू किया।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Water conservation is considered important.<br>
+            I. जल संरक्षण को महत्वपूर्ण माना जाता है।<br>
+
+            II. Citizens can contribute to water conservation.<br>
+            II. नागरिक जल संरक्षण में योगदान दे सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. Both I and II are implicit<br>
+            उत्तर: B. I और II दोनों निहित हैं</strong><br><br>
+
+            A public campaign for conservation assumes that water conservation is important and that citizens can participate in it.<br>
+            जल संरक्षण के लिए सार्वजनिक अभियान यह मानता है कि जल संरक्षण महत्वपूर्ण है और नागरिक इसमें भाग ले सकते हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q32. Statement: The college introduced career counselling sessions for final-year students.<br>
+            कथन: कॉलेज ने अंतिम वर्ष के छात्रों के लिए करियर परामर्श सत्र शुरू किए।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Final-year students may need guidance about careers.<br>
+            I. अंतिम वर्ष के छात्रों को करियर के संबंध में मार्गदर्शन की आवश्यकता हो सकती है।<br>
+
+            II. Counselling can provide useful career guidance.<br>
+            II. परामर्श उपयोगी करियर मार्गदर्शन प्रदान कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. Both I and II are implicit<br>
+            उत्तर: D. I और II दोनों निहित हैं</strong><br><br>
+
+            Introducing counselling assumes that students may need career guidance and that counselling can provide it.<br>
+            परामर्श शुरू करना इस पूर्वधारणा पर आधारित है कि छात्रों को करियर मार्गदर्शन की आवश्यकता हो सकती है और परामर्श यह मार्गदर्शन प्रदान कर सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q33. Statement: The hospital opened a separate registration counter for senior citizens.<br>
+            कथन: अस्पताल ने वरिष्ठ नागरिकों के लिए एक अलग पंजीकरण काउंटर खोला।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Senior citizens may require easier access to registration.<br>
+            I. वरिष्ठ नागरिकों को पंजीकरण तक आसान पहुँच की आवश्यकता हो सकती है।<br>
+
+            II. A separate counter can make registration more convenient for them.<br>
+            II. अलग काउंटर उनके लिए पंजीकरण को अधिक सुविधाजनक बना सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. Both I and II are implicit<br>
+            उत्तर: A. I और II दोनों निहित हैं</strong><br><br>
+
+            The separate counter is introduced because senior citizens may need easier access and the arrangement can make registration more convenient.<br>
+            अलग काउंटर इसलिए शुरू किया गया है क्योंकि वरिष्ठ नागरिकों को आसान पहुँच की आवश्यकता हो सकती है और यह व्यवस्था पंजीकरण को अधिक सुविधाजनक बना सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q34. Statement: The company started an employee feedback programme.<br>
+            कथन: कंपनी ने कर्मचारी प्रतिक्रिया कार्यक्रम शुरू किया।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Employees can provide useful feedback.<br>
+            I. कर्मचारी उपयोगी प्रतिक्रिया दे सकते हैं।<br>
+
+            II. Management may use such feedback for improvement.<br>
+            II. प्रबंधन सुधार के लिए ऐसी प्रतिक्रिया का उपयोग कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. Both I and II are implicit<br>
+            उत्तर: C. I और II दोनों निहित हैं</strong><br><br>
+
+            A feedback programme assumes that employees can provide useful information and that management can use it for improvement.<br>
+            प्रतिक्रिया कार्यक्रम यह मानता है कि कर्मचारी उपयोगी जानकारी दे सकते हैं और प्रबंधन उसका उपयोग सुधार के लिए कर सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q35. Statement: The municipality installed additional streetlights in a poorly lit area.<br>
+            कथन: नगर पालिका ने कम रोशनी वाले क्षेत्र में अतिरिक्त स्ट्रीट लाइटें लगाईं।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Better lighting can improve visibility.<br>
+            I. बेहतर प्रकाश व्यवस्था दृश्यता में सुधार कर सकती है।<br>
+
+            II. The area requires better illumination.<br>
+            II. इस क्षेत्र में बेहतर प्रकाश व्यवस्था की आवश्यकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. Both I and II are implicit<br>
+            उत्तर: B. I और II दोनों निहित हैं</strong><br><br>
+
+            Installing additional lights assumes that the area needs more illumination and that better lighting can improve visibility.<br>
+            अतिरिक्त लाइटें लगाना इस पूर्वधारणा पर आधारित है कि क्षेत्र को अधिक प्रकाश की आवश्यकता है और बेहतर प्रकाश व्यवस्था दृश्यता में सुधार कर सकती है।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 8 -->
+
+    <h2 class="part-title">
+        📚 Part 8 — Education &amp; Examination Based Statements
+    </h2>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q36. Statement: Students are advised to attempt mock tests regularly before the competitive examination.<br>
+            कथन: छात्रों को प्रतियोगी परीक्षा से पहले नियमित रूप से मॉक टेस्ट देने की सलाह दी जाती है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Regular mock tests can provide useful practice.<br>
+            नियमित मॉक टेस्ट उपयोगी अभ्यास प्रदान कर सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Mock tests are harmful<br>
+                मॉक टेस्ट हानिकारक हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Students never take tests<br>
+                छात्र कभी परीक्षा नहीं देते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Practice is unnecessary<br>
+                अभ्यास अनावश्यक है
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice to take mock tests assumes that repeated practice is useful for examination preparation.<br>
+            मॉक टेस्ट देने की सलाह इस पूर्वधारणा पर आधारित है कि बार-बार अभ्यास परीक्षा की तैयारी के लिए उपयोगी है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q37. Statement: The institute introduced topic-wise tests for students.<br>
+            कथन: संस्थान ने छात्रों के लिए विषयवार परीक्षाएँ शुरू कीं।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Testing individual topics can help students identify areas requiring improvement.<br>
+            अलग-अलग विषयों की परीक्षा छात्रों को सुधार की आवश्यकता वाले क्षेत्रों की पहचान करने में सहायता कर सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Topic-wise tests cannot provide feedback<br>
+                विषयवार परीक्षाएँ प्रतिक्रिया प्रदान नहीं कर सकतीं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Students do not study topics<br>
+                छात्र विषयों का अध्ययन नहीं करते
+            </button>
+
+            <button class="option" data-option="D">
+                D. Tests have no educational purpose<br>
+                परीक्षाओं का कोई शैक्षणिक उद्देश्य नहीं है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            Topic-wise testing is useful when performance in specific areas can be identified and improved.<br>
+            विषयवार परीक्षा तब उपयोगी होती है जब विशेष क्षेत्रों में प्रदर्शन की पहचान करके उसमें सुधार किया जा सके।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q38. Statement: Candidates should read the instructions carefully before starting the examination.<br>
+            कथन: परीक्षा शुरू करने से पहले उम्मीदवारों को निर्देशों को ध्यानपूर्वक पढ़ना चाहिए।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Understanding instructions can help candidates avoid mistakes in attempting the paper.<br>
+            निर्देशों को समझने से उम्मीदवार प्रश्न-पत्र हल करते समय गलतियों से बच सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Instructions are never useful<br>
+                निर्देश कभी उपयोगी नहीं होते
+            </button>
+
+            <button class="option" data-option="B">
+                B. Candidates should ignore instructions<br>
+                उम्मीदवारों को निर्देशों की अनदेखी करनी चाहिए
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Examinations contain no instructions<br>
+                परीक्षाओं में कोई निर्देश नहीं होते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice to read instructions assumes that understanding them can help candidates avoid errors.<br>
+            निर्देश पढ़ने की सलाह इस पूर्वधारणा पर आधारित है कि उन्हें समझने से उम्मीदवार गलतियों से बच सकते हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q39. Statement: The teacher asked students to solve previous-year SSC questions.<br>
+            कथन: शिक्षक ने छात्रों से पिछले वर्षों के SSC प्रश्न हल करने को कहा।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Previous-year questions can give students practice with the type of questions asked in SSC examinations.<br>
+            पिछले वर्षों के प्रश्न छात्रों को SSC परीक्षाओं में पूछे जाने वाले प्रश्नों के प्रकार का अभ्यास प्रदान कर सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. SSC questions never repeat any pattern<br>
+                SSC के प्रश्नों में कभी कोई पैटर्न दोहराया नहीं जाता
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Students should not practise<br>
+                छात्रों को अभ्यास नहीं करना चाहिए
+            </button>
+
+            <button class="option" data-option="D">
+                D. Previous-year questions are irrelevant<br>
+                पिछले वर्षों के प्रश्न अप्रासंगिक हैं
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            The teacher's advice assumes that previous-year questions provide relevant examination practice.<br>
+            शिक्षक की सलाह इस पूर्वधारणा पर आधारित है कि पिछले वर्षों के प्रश्न प्रासंगिक परीक्षा अभ्यास प्रदान करते हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q40. Statement: Students should divide their study time among different subjects according to their needs.<br>
+            कथन: छात्रों को अपनी आवश्यकता के अनुसार विभिन्न विषयों के बीच अध्ययन का समय बाँटना चाहिए।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Different subjects may require different amounts of preparation time.<br>
+            विभिन्न विषयों के लिए तैयारी के समय की आवश्यकता अलग-अलग हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Every subject requires exactly the same preparation time<br>
+                प्रत्येक विषय के लिए बिल्कुल समान तैयारी समय की आवश्यकता होती है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Students should study only one subject<br>
+                छात्रों को केवल एक विषय पढ़ना चाहिए
+            </button>
+
+            <button class="option" data-option="C">
+                C. Study planning is unnecessary<br>
+                अध्ययन की योजना बनाना अनावश्यक है
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            Dividing time according to need assumes that different subjects may require different levels of preparation.<br>
+            आवश्यकता के अनुसार समय बाँटना इस पूर्वधारणा पर आधारित है कि विभिन्न विषयों के लिए तैयारी का स्तर अलग-अलग हो सकता है।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 9 -->
+
+    <h2 class="part-title">
+        🏢 Part 9 — Workplace &amp; Public Service Statements
+    </h2>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q41. Statement: Employees are encouraged to report workplace safety hazards immediately.<br>
+            कथन: कर्मचारियों को कार्यस्थल पर सुरक्षा संबंधी खतरों की तुरंत सूचना देने के लिए प्रोत्साहित किया जाता है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Early reporting of hazards can help prevent accidents or unsafe situations.<br>
+            खतरों की शीघ्र सूचना देने से दुर्घटनाओं या असुरक्षित परिस्थितियों को रोकने में सहायता मिल सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Safety hazards should never be reported<br>
+                सुरक्षा संबंधी खतरों की कभी सूचना नहीं देनी चाहिए
+            </button>
+
+            <button class="option" data-option="C">
+                C. Accidents cannot be prevented<br>
+                दुर्घटनाओं को रोका नहीं जा सकता
+            </button>
+
+            <button class="option" data-option="D">
+                D. Employees cannot identify hazards<br>
+                कर्मचारी खतरों की पहचान नहीं कर सकते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            Encouraging early reporting assumes that timely information can help address hazards before they cause harm.<br>
+            शीघ्र सूचना देने के लिए प्रोत्साहित करना इस पूर्वधारणा पर आधारित है कि समय पर जानकारी मिलने से खतरों को नुकसान पहुँचाने से पहले नियंत्रित किया जा सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q42. Statement: Customers are requested to provide correct contact details while registering for the service.<br>
+            कथन: ग्राहकों से सेवा के लिए पंजीकरण करते समय सही संपर्क विवरण देने का अनुरोध किया जाता है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Correct contact details may be required for communication with customers.<br>
+            ग्राहकों से संपर्क करने के लिए सही संपर्क विवरण की आवश्यकता हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Contact details are never used<br>
+                संपर्क विवरण का कभी उपयोग नहीं किया जाता
+            </button>
+
+            <button class="option" data-option="B">
+                B. Customers cannot communicate<br>
+                ग्राहक संवाद नहीं कर सकते
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Registration does not require information<br>
+                पंजीकरण के लिए जानकारी की आवश्यकता नहीं होती
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            Asking for correct contact details assumes that the organisation may need them to communicate with customers.<br>
+            सही संपर्क विवरण माँगना इस पूर्वधारणा पर आधारित है कि संगठन को ग्राहकों से संपर्क करने के लिए इन विवरणों की आवश्यकता हो सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q43. Statement: The office installed biometric attendance machines.<br>
+            कथन: कार्यालय ने बायोमेट्रिक उपस्थिति मशीनें स्थापित कीं।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Biometric systems can help record employee attendance accurately.<br>
+            बायोमेट्रिक प्रणाली कर्मचारियों की उपस्थिति को सही ढंग से दर्ज करने में सहायता कर सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Attendance is never recorded<br>
+                उपस्थिति कभी दर्ज नहीं की जाती
+            </button>
+
+            <button class="option" data-option="B">
+                B. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Employees never attend the office<br>
+                कर्मचारी कभी कार्यालय नहीं आते
+            </button>
+
+            <button class="option" data-option="D">
+                D. Biometric systems cannot record attendance<br>
+                बायोमेट्रिक प्रणाली उपस्थिति दर्ज नहीं कर सकती
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. The assumption is implicit<br>
+            उत्तर: B. पूर्वधारणा निहित है</strong><br><br>
+
+            Installing biometric attendance systems assumes that they can help record attendance in a reliable manner.<br>
+            बायोमेट्रिक उपस्थिति प्रणाली स्थापित करना इस पूर्वधारणा पर आधारित है कि वे उपस्थिति को विश्वसनीय तरीके से दर्ज करने में सहायता कर सकती हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q44. Statement: The municipal authority asked residents to separate wet and dry waste.<br>
+            कथन: नगर प्राधिकरण ने निवासियों से गीले और सूखे कचरे को अलग-अलग रखने को कहा।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Separating waste can help in its proper management or processing.<br>
+            कचरे को अलग करने से उसके उचित प्रबंधन या प्रसंस्करण में सहायता मिल सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Waste cannot be managed<br>
+                कचरे का प्रबंधन नहीं किया जा सकता
+            </button>
+
+            <button class="option" data-option="B">
+                B. Residents never generate waste<br>
+                निवासी कभी कचरा उत्पन्न नहीं करते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Wet and dry waste are identical<br>
+                गीला और सूखा कचरा एक समान है
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            The instruction assumes that separating different types of waste helps in proper waste management.<br>
+            यह निर्देश इस पूर्वधारणा पर आधारित है कि अलग-अलग प्रकार के कचरे को अलग करने से उचित कचरा प्रबंधन में सहायता मिलती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q45. Statement: The bank advised customers not to share their OTP with anyone.<br>
+            कथन: बैंक ने ग्राहकों को अपना OTP किसी के साथ साझा न करने की सलाह दी।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Sharing an OTP with another person may create a security risk.<br>
+            किसी अन्य व्यक्ति के साथ OTP साझा करने से सुरक्षा जोखिम उत्पन्न हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. OTPs have no security purpose<br>
+                OTP का कोई सुरक्षा उद्देश्य नहीं है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Customers never use banking services<br>
+                ग्राहक कभी बैंकिंग सेवाओं का उपयोग नहीं करते
+            </button>
+
+            <button class="option" data-option="D">
+                D. Sharing OTPs always improves security<br>
+                OTP साझा करने से हमेशा सुरक्षा में सुधार होता है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. The assumption is implicit<br>
+            उत्तर: A. पूर्वधारणा निहित है</strong><br><br>
+
+            The warning not to share OTPs assumes that revealing them can compromise account security.<br>
+            OTP साझा न करने की चेतावनी इस पूर्वधारणा पर आधारित है कि OTP बताने से खाते की सुरक्षा प्रभावित हो सकती है।
+
+        </div>
+
+    </div>
+
+
+    <!-- PART 10 -->
+
+    <h2 class="part-title">
+        🧩 Part 10 — Mixed SSC-Level Statement &amp; Assumption
+    </h2>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q46. Statement: The school has introduced a compulsory orientation session for new students.<br>
+            कथन: विद्यालय ने नए छात्रों के लिए एक अनिवार्य परिचय सत्र शुरू किया है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            New students may need information about the school and its rules.<br>
+            नए छात्रों को विद्यालय और उसके नियमों के बारे में जानकारी की आवश्यकता हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. New students already know everything about the school<br>
+                नए छात्र विद्यालय के बारे में पहले से सब कुछ जानते हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Orientation sessions are completely useless<br>
+                परिचय सत्र पूरी तरह बेकार हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Schools do not have rules<br>
+                विद्यालयों में कोई नियम नहीं होते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            An orientation session is introduced because new students may require information about the institution and its rules.<br>
+            परिचय सत्र इसलिए शुरू किया गया है क्योंकि नए छात्रों को संस्था और उसके नियमों के बारे में जानकारी की आवश्यकता हो सकती है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+
+            Q47. Statement: The railway authority advised passengers to arrive at the station early during festival season.<br>
+            कथन: रेलवे प्राधिकरण ने त्योहारों के मौसम में यात्रियों को स्टेशन पर जल्दी पहुँचने की सलाह दी।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Passenger volume may be higher during festival season, causing additional time requirements.<br>
+            त्योहारों के मौसम में यात्रियों की संख्या अधिक हो सकती है, जिसके कारण अतिरिक्त समय की आवश्यकता हो सकती है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Festivals always reduce passenger numbers<br>
+                त्योहारों के कारण यात्रियों की संख्या हमेशा कम हो जाती है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Passengers do not use railway services<br>
+                यात्री रेलवे सेवाओं का उपयोग नहीं करते
+            </button>
+
+            <button class="option" data-option="C">
+                C. Stations are always empty<br>
+                स्टेशन हमेशा खाली रहते हैं
+            </button>
+
+            <button class="option" data-option="D">
+                D. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: D. The assumption is implicit<br>
+            उत्तर: D. पूर्वधारणा निहित है</strong><br><br>
+
+            Advising early arrival assumes that passenger volume or related formalities may increase during festival periods.<br>
+            जल्दी पहुँचने की सलाह इस पूर्वधारणा पर आधारित है कि त्योहारों के दौरान यात्रियों की संख्या या संबंधित औपचारिकताएँ बढ़ सकती हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+
+            Q48. Statement: A company has started providing skill-development training to employees.<br>
+            कथन: एक कंपनी ने कर्मचारियों को कौशल-विकास प्रशिक्षण देना शुरू किया है।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Employees can develop useful skills through training.<br>
+            I. कर्मचारी प्रशिक्षण के माध्यम से उपयोगी कौशल विकसित कर सकते हैं।<br>
+
+            II. Improved skills may benefit employees or the organisation.<br>
+            II. बेहतर कौशल से कर्मचारियों या संगठन को लाभ हो सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+            <button class="option" data-option="B">
+                B. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="C">
+                C. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: A. Both I and II are implicit<br>
+            उत्तर: A. I और II दोनों निहित हैं</strong><br><br>
+
+            Skill-development training assumes that employees can acquire useful skills and that these skills can provide a benefit.<br>
+            कौशल-विकास प्रशिक्षण यह मानता है कि कर्मचारी उपयोगी कौशल प्राप्त कर सकते हैं और इन कौशलों से लाभ हो सकता है।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+
+            Q49. Statement: The city administration requested citizens to use water carefully during summer.<br>
+            कथन: नगर प्रशासन ने नागरिकों से गर्मियों के दौरान पानी का सावधानीपूर्वक उपयोग करने का अनुरोध किया।<br><br>
+
+            Assumptions:<br>
+            पूर्वधारणाएँ:<br>
+
+            I. Water availability may become more important during summer.<br>
+            I. गर्मियों के दौरान पानी की उपलब्धता अधिक महत्वपूर्ण हो सकती है।<br>
+
+            II. Citizens can contribute to conserving water through careful use.<br>
+            II. नागरिक सावधानीपूर्वक उपयोग के माध्यम से जल संरक्षण में योगदान दे सकते हैं।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Only I is implicit<br>
+                केवल I निहित है
+            </button>
+
+            <button class="option" data-option="B">
+                B. Both I and II are implicit<br>
+                I और II दोनों निहित हैं
+            </button>
+
+            <button class="option" data-option="C">
+                C. Only II is implicit<br>
+                केवल II निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Neither I nor II is implicit<br>
+                न तो I और न ही II निहित है
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: B. Both I and II are implicit<br>
+            उत्तर: B. I और II दोनों निहित हैं</strong><br><br>
+
+            The request assumes that careful water use is important during summer and that citizens can contribute to conservation.<br>
+            यह अनुरोध इस पूर्वधारणा पर आधारित है कि गर्मियों में पानी का सावधानीपूर्वक उपयोग महत्वपूर्ण है और नागरिक जल संरक्षण में योगदान दे सकते हैं।
+
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+
+            Q50. Statement: Candidates are advised to analyse their mistakes after every practice test.<br>
+            कथन: उम्मीदवारों को प्रत्येक अभ्यास परीक्षा के बाद अपनी गलतियों का विश्लेषण करने की सलाह दी जाती है।<br><br>
+
+            Assumption:<br>
+            पूर्वधारणा:<br>
+
+            Analysing mistakes can help candidates identify weaknesses and improve future performance.<br>
+            गलतियों का विश्लेषण उम्मीदवारों को अपनी कमजोरियों की पहचान करने और भविष्य के प्रदर्शन में सुधार करने में सहायता कर सकता है।
+
+        </div>
+
+        <div class="options">
+
+            <button class="option" data-option="A">
+                A. Mistakes should never be analysed<br>
+                गलतियों का कभी विश्लेषण नहीं करना चाहिए
+            </button>
+
+            <button class="option" data-option="B">
+                B. Practice tests cannot provide useful feedback<br>
+                अभ्यास परीक्षाएँ उपयोगी प्रतिक्रिया प्रदान नहीं कर सकतीं
+            </button>
+
+            <button class="option" data-option="C">
+                C. The assumption is implicit<br>
+                पूर्वधारणा निहित है
+            </button>
+
+            <button class="option" data-option="D">
+                D. Candidates cannot improve their performance<br>
+                उम्मीदवार अपने प्रदर्शन में सुधार नहीं कर सकते
+            </button>
+
+        </div>
+
+        <div class="solution">
+
+            <strong>Answer: C. The assumption is implicit<br>
+            उत्तर: C. पूर्वधारणा निहित है</strong><br><br>
+
+            The advice is based on the assumption that analysing mistakes helps candidates identify weaknesses and improve.<br>
+            यह सलाह इस पूर्वधारणा पर आधारित है कि गलतियों का विश्लेषण उम्मीदवारों को अपनी कमजोरियों की पहचान करने और सुधार करने में सहायता करता है।
+
+        </div>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <section class="score-box">
+
+        <h2>Your Score</h2>
+
+        <div class="score" id="score">
+            0 / 50
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <span id="attempted">
+                    0
+                </span>
+
+                Attempted
+
+            </div>
+
+
+            <div class="stat">
+
+                <span id="correct">
+                    0
+                </span>
+
+                Correct
+
+            </div>
+
+
+            <div class="stat">
+
+                <span id="wrong">
+                    0
+                </span>
+
+                Wrong
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="action-buttons">
+
+        <button class="action-btn" onclick="resetQuiz()">
+            Reset Practice
+        </button>
+
+        <a class="action-btn" href="index.html">
+            Back to Home
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    <h3>LET'S QUALIFYNOW</h3>
+
+    <p>N Saurabh Sir — Reasoning Faculty</p>
+
+    <p>SSC • Banking • Railway • Government Exams</p>
+
+    <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
+
+    <p>
+
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank">
+
+            YouTube — Let's QualifyNow
+
+        </a>
+
+    </p>
+
+</footer>
+
+
+<script>
+
+let score = 0;
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+
+/* =========================
+   SHUFFLE OPTIONS
+========================= */
+
+function shuffleOptions(){
+
+    document.querySelectorAll(".question-card").forEach(function(card){
+
+        const container =
+            card.querySelector(".options");
+
+        const options =
+            Array.from(
+                container.querySelectorAll(".option")
+            );
+
+
+        for(let i = options.length - 1; i > 0; i--){
+
+            const j =
+                Math.floor(
+                    Math.random() * (i + 1)
+                );
+
+
+            [options[i], options[j]] =
+            [options[j], options[i]];
+
+        }
+
+
+        options.forEach(function(option){
+
+            container.appendChild(option);
+
+        });
+
+    });
+
+}
+
+
+/* =========================
+   QUESTION LOGIC
+========================= */
+
+function setupQuestions(){
+
+    document.querySelectorAll(".question-card").forEach(function(card){
+
+        const options =
+            card.querySelectorAll(".option");
+
+        const answer =
+            card.dataset.answer;
+
+        card.dataset.attempted = "false";
+
+
+        options.forEach(function(option){
+
+            option.onclick = function(){
+
+                /* PREVENT SECOND ATTEMPT */
+
+                if(card.dataset.attempted === "true"){
+                    return;
+                }
+
+
+                card.dataset.attempted = "true";
+
+                attempted++;
+
+
+                const selected =
+                    option.dataset.option;
+
+
+                const solution =
+                    card.querySelector(".solution");
+
+
+                /* LOCK ALL OPTIONS */
+
+                options.forEach(function(item){
+
+                    item.disabled = true;
+
+                });
+
+
+                /* CORRECT ANSWER */
+
+                if(selected === answer){
+
+                    option.classList.add("correct");
+
+                    correct++;
+
+                    score++;
+
+                }
+
+
+                /* WRONG ANSWER */
+
+                else{
+
+                    option.classList.add("wrong");
+
+
+                    const correctOption =
+                        card.querySelector(
+                            '[data-option="' + answer + '"]'
+                        );
+
+
+                    if(correctOption){
+
+                        correctOption.classList.add("correct");
+
+                    }
+
+
+                    wrong++;
+
+                }
+
+
+                /* SHOW SOLUTION */
+
+                solution.style.display = "block";
+
+
+                /* UPDATE SCORE */
+
+                updateScore();
+
+            };
+
+        });
+
+    });
+
+}
+
+
+/* =========================
+   SCORE UPDATE
+========================= */
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        score + " / 50";
+
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+
+    document.getElementById("correct").textContent =
+        correct;
+
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+}
+
+
+/* =========================
+   RESET QUIZ
+========================= */
+
+function resetQuiz(){
+
+    score = 0;
+
+    attempted = 0;
+
+    correct = 0;
+
+    wrong = 0;
+
+
+    document.querySelectorAll(".question-card").forEach(function(card){
+
+        card.dataset.attempted = "false";
+
+
+        card.querySelectorAll(".option").forEach(function(option){
+
+            option.classList.remove("correct");
+
+            option.classList.remove("wrong");
+
+            option.disabled = false;
+
+        });
+
+
+        const solution =
+            card.querySelector(".solution");
+
+
+        solution.style.display = "none";
+
+    });
+
+
+    /* SHUFFLE AGAIN */
+
+    shuffleOptions();
+
+
+    /* SCORE RESET */
+
+    updateScore();
+
+}
+
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+shuffleOptions();
+
+setupQuestions();
+
+updateScore();
+
+</script>
+
+</body>
+</html>
