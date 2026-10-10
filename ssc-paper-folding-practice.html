@@ -1,0 +1,754 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Paper Folding Practice | Let's QualifyNow</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:#f7f9fc;
+ color:#243b53;
+ line-height:1.6;
+}
+
+header{
+ background:#102a43;
+ color:#fff;
+ padding:15px 5%;
+}
+
+.header-inner{
+ max-width:1200px;
+ margin:auto;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
+ flex-wrap:wrap;
+}
+
+.brand{font-size:22px;font-weight:bold}
+
+nav{display:flex;gap:14px;flex-wrap:wrap}
+
+nav a{
+ color:#fff;
+ text-decoration:none;
+ font-size:13px;
+}
+
+nav a:hover{color:#d9eaf7;text-decoration:underline}
+
+.hero{
+ background:#173f5f;
+ color:#fff;
+ text-align:center;
+ padding:28px 15px;
+}
+
+.hero h1{font-size:27px;margin-bottom:7px}
+
+.container{
+ max-width:1100px;
+ margin:25px auto;
+ padding:0 15px;
+}
+
+.intro,.question-card{
+ background:#fff;
+ border:1px solid #e1e8ed;
+ border-radius:9px;
+ padding:20px;
+ margin-bottom:18px;
+}
+
+.intro h2{color:#102a43;margin-bottom:8px}
+.intro ul{padding-left:22px;margin-top:10px}
+.intro li{margin:4px 0}
+.hindi{color:#52606d;margin-top:5px}
+
+.part-title{
+ background:#d9eaf7;
+ color:#102a43;
+ border-left:5px solid #173f5f;
+ padding:12px 15px;
+ margin:24px 0 15px;
+ font-size:19px;
+ font-weight:bold;
+}
+
+.question{font-size:17px;font-weight:bold}
+.question-hindi{color:#52606d;margin:5px 0 15px}
+
+.process{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:12px;
+ margin:16px 0;
+}
+
+.step{
+ background:#fbfdff;
+ border:1px solid #d9e2ec;
+ border-radius:8px;
+ padding:10px;
+ text-align:center;
+ min-width:0;
+}
+
+.step-title{
+ font-size:14px;
+ font-weight:bold;
+ color:#173f5f;
+ margin-bottom:8px;
+}
+
+.step svg{
+ display:block;
+ width:100%;
+ max-width:190px;
+ height:auto;
+ margin:auto;
+}
+
+.step-caption{
+ font-size:12px;
+ color:#52606d;
+ margin-top:7px;
+ overflow-wrap:anywhere;
+}
+
+.options-title{font-weight:bold;margin:18px 0 10px}
+
+.options{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:10px;
+}
+
+.option{
+ width:100%;
+ min-height:125px;
+ padding:10px;
+ display:flex;
+ align-items:center;
+ justify-content:flex-start;
+ gap:12px;
+ background:#fff;
+ border:1px solid #d9e2ec;
+ border-radius:7px;
+ color:#243b53;
+ text-align:left;
+ cursor:pointer;
+}
+
+.option:hover:not(:disabled){
+ border-color:#627d98;
+ background:#f7f9fc;
+}
+
+.option-letter{
+ min-width:23px;
+ font-weight:bold;
+ color:#173f5f;
+}
+
+.option svg{
+ width:105px;
+ max-width:calc(100% - 25px);
+ height:auto;
+ display:block;
+ border:1px solid #e1e8ed;
+ border-radius:4px;
+ background:#fff;
+ flex-shrink:0;
+}
+
+.option.correct{background:#e6f4ea;border-color:#238636}
+.option.wrong{background:#fdecea;border-color:#c62828}
+.option:disabled{cursor:default}
+
+.solution{
+ display:none;
+ background:#f7f9fc;
+ border-left:4px solid #627d98;
+ padding:13px;
+ margin-top:14px;
+ border-radius:4px;
+ overflow-wrap:anywhere;
+}
+
+.solution.show{display:block}
+.feedback{font-weight:bold;margin-bottom:6px}
+
+.correct-answer{
+ color:#102a43;
+ font-size:16px;
+ font-weight:bold;
+}
+
+.correct-answer .hindi{
+ display:block;
+ margin-top:5px;
+}
+
+.score-box{
+ background:#102a43;
+ color:#fff;
+ border-radius:9px;
+ padding:22px;
+ margin:25px 0;
+ text-align:center;
+}
+
+.score-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:12px;
+ margin:18px 0;
+}
+
+.score-item{
+ background:#173f5f;
+ padding:12px;
+ border-radius:6px;
+}
+
+.score-item span{
+ display:block;
+ font-size:13px;
+ color:#d9eaf7;
+}
+
+.score-item strong{font-size:23px}
+
+.reset{
+ background:#fff;
+ color:#102a43;
+ border:0;
+ border-radius:5px;
+ padding:11px 22px;
+ font-weight:bold;
+ cursor:pointer;
+}
+
+.reset:hover{background:#d9eaf7}
+
+.note{
+ background:#eef6fb;
+ border:1px solid #d9eaf7;
+ padding:14px;
+ border-radius:7px;
+ margin:18px 0;
+}
+
+footer{
+ background:#102a43;
+ color:#fff;
+ text-align:center;
+ padding:20px;
+ margin-top:30px;
+ font-size:14px;
+}
+
+@media(max-width:700px){
+ .header-inner{justify-content:center;text-align:center}
+ .brand{width:100%;font-size:21px}
+ nav{justify-content:center;gap:9px 12px}
+ nav a{font-size:12px}
+ .hero h1{font-size:23px}
+ .process{grid-template-columns:1fr}
+ .step svg{max-width:200px}
+ .options{grid-template-columns:1fr}
+ .score-grid{grid-template-columns:repeat(2,1fr)}
+ .intro,.question-card{padding:14px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="header-inner">
+  <div class="brand">LET'S QUALIFYNOW</div>
+  <nav>
+   <a href="index.html">Home</a>
+   <a href="ssc-reasoning.html">SSC Reasoning</a>
+   <a href="courses.html">Courses</a>
+   <a href="study-material.html">Study Material</a>
+   <a href="live-classes.html">Live Classes</a>
+   <a href="test-series.html">Test Series</a>
+   <a href="exams.html">Exams</a>
+   <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero">
+ <h1>📄 SSC Paper Folding Practice</h1>
+ <p>50 Practice Questions with Answers &amp; Solutions</p>
+</section>
+
+<main class="container">
+
+ <section class="intro">
+  <h2>SSC Paper Folding Practice Set</h2>
+  <p>Observe the fold lines, folding directions and punch positions. Select the correct pattern after unfolding.</p>
+  <p class="hindi">मोड़ने की रेखाओं, मोड़ने की दिशा और छेदों की स्थिति को ध्यान से देखिए। कागज़ खोलने पर बनने वाला सही पैटर्न चुनिए।</p>
+  <ul>
+   <li>Vertical, horizontal and two-fold questions.</li>
+   <li>Four distinct visual options for every question.</li>
+   <li>Correct answer: +1 mark; no negative marking.</li>
+   <li>Correct option is displayed after selection.</li>
+  </ul>
+ </section>
+
+ <div class="part-title">Paper Folding &amp; Hole Punching | कागज़ मोड़ना और छेद करना</div>
+
+ <div id="questions"></div>
+
+ <section class="score-box">
+  <h2>📊 Test Result | परिणाम</h2>
+  <p>Score updates as you attempt questions.</p>
+  <p class="hindi" style="color:#d9eaf7">प्रश्न हल करने पर आपका स्कोर अपडेट होगा।</p>
+
+  <div class="score-grid">
+   <div class="score-item">
+    <span>Correct | सही</span>
+    <strong id="correct">0</strong>
+   </div>
+   <div class="score-item">
+    <span>Wrong | गलत</span>
+    <strong id="wrong">0</strong>
+   </div>
+   <div class="score-item">
+    <span>Attempted | हल किए</span>
+    <strong id="attempted">0/50</strong>
+   </div>
+   <div class="score-item">
+    <span>Marks | अंक</span>
+    <strong id="marks">0/50</strong>
+   </div>
+  </div>
+
+  <button class="reset" type="button" onclick="resetTest()">↻ Reset Test</button>
+ </section>
+
+ <div class="note">
+  <strong>Practice Tip:</strong> Reflect every hole across each fold line when unfolding the paper.
+  <br>
+  <strong>अभ्यास सुझाव:</strong> कागज़ खोलते समय प्रत्येक छेद को हर मोड़-रेखा के दूसरी ओर प्रतिबिंबित करके देखें।
+ </div>
+
+</main>
+
+<footer>
+ LET'S QUALIFYNOW | N Saurabh Sir — Reasoning Faculty
+ <br>SSC • Banking • Railway • Government Exams
+</footer>
+
+<script>
+/*
+COORDINATE SYSTEM
+The original paper uses x and y coordinates from 0 to 100.
+
+V: Right half folds onto the left.
+H: Bottom half folds upwards.
+VH: Right half folds left, then bottom half folds upwards.
+
+Punch positions are placed only inside the visible folded sheet.
+*/
+
+const foldTypes=[
+ "V","H","V","H","VH","V","H","VH","V","H",
+ "VH","V","H","VH","V","H","VH","V","H","VH",
+ "V","H","VH","V","H","VH","V","H","VH","V",
+ "H","VH","V","H","VH","V","H","VH","V","H",
+ "VH","V","H","VH","V","H","VH","V","H","VH"
+];
+
+function makeCase(i){
+ const f=foldTypes[i];
+ const count=(i%5===0)?2:((i%11===0)?3:1);
+ const holes=[];
+
+ for(let j=0;j<count;j++){
+  let x,y;
+
+  if(f.includes("V")){
+   x=7+((i*11+j*17)%36);
+  }else{
+   x=7+((i*17+j*23)%87);
+  }
+
+  if(f.includes("H")){
+   y=7+((i*13+j*19)%36);
+  }else{
+   y=7+((i*7+j*29)%87);
+  }
+
+  holes.push([x,y]);
+ }
+
+ return {f,p:holes};
+}
+
+const data=Array.from({length:50},(_,i)=>makeCase(i));
+
+function reflectPoints(item){
+ const result=[];
+
+ item.p.forEach(([x,y])=>{
+  const xs=item.f.includes("V")?[x,100-x]:[x];
+  const ys=item.f.includes("H")?[y,100-y]:[y];
+
+  xs.forEach(xx=>{
+   ys.forEach(yy=>{
+    result.push([xx,yy]);
+   });
+  });
+ });
+
+ return canonical(result);
+}
+
+function reflectX(points){
+ return points.map(([x,y])=>[100-x,y]);
+}
+
+function reflectY(points){
+ return points.map(([x,y])=>[x,100-y]);
+}
+
+function canonical(points){
+ return points
+  .map(([x,y])=>[Math.round(x),Math.round(y)])
+  .sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+}
+
+function patternKey(points){
+ return JSON.stringify(canonical(points));
+}
+
+function shiftPoints(points,dx,dy){
+ return points.map(([x,y])=>[
+  Math.max(5,Math.min(95,x+dx)),
+  Math.max(5,Math.min(95,y+dy))
+ ]);
+}
+
+function makeOptions(item,index){
+ const correct=reflectPoints(item);
+ let distractors;
+
+ if(item.f==="V"){
+  distractors=[
+   item.p.map(p=>p.slice()),
+   reflectY(correct),
+   shiftPoints(correct,0,7),
+   shiftPoints(correct,0,-7),
+   reflectX(item.p)
+  ];
+ }else if(item.f==="H"){
+  distractors=[
+   item.p.map(p=>p.slice()),
+   reflectX(correct),
+   shiftPoints(correct,7,0),
+   shiftPoints(correct,-7,0),
+   reflectY(item.p)
+  ];
+ }else{
+  distractors=[
+   item.p.map(p=>p.slice()),
+   reflectX(item.p),
+   reflectY(item.p),
+   shiftPoints(correct,7,0),
+   shiftPoints(correct,0,7),
+   shiftPoints(correct,-7,0),
+   shiftPoints(correct,0,-7)
+  ];
+ }
+
+ const unique=[correct];
+ const used=new Set([patternKey(correct)]);
+
+ function addCandidate(points){
+  const key=patternKey(points);
+  if(!used.has(key)){
+   used.add(key);
+   unique.push(canonical(points));
+  }
+ }
+
+ distractors.forEach(addCandidate);
+
+ let attempt=1;
+ while(unique.length<4&&attempt<100){
+  const dx=((attempt*13)%41)-20;
+  const dy=((attempt*17)%41)-20;
+  addCandidate(shiftPoints(correct,dx,dy));
+  attempt++;
+ }
+
+ const options=unique.slice(0,4);
+ const target=(index*3+1)%4;
+ [options[0],options[target]]=[options[target],options[0]];
+
+ return {
+  options,
+  correct:target,
+  correctPattern:correct
+ };
+}
+
+function svgSheet(points,kind="full"){
+ let width=98;
+ let height=98;
+
+ if(kind==="V")width=48;
+ if(kind==="H")height=48;
+ if(kind==="VH"){width=48;height=48}
+
+ const dots=points.map(([x,y])=>
+  `<circle cx="${x}" cy="${y}" r="3.1"
+   fill="#c62828" stroke="#102a43" stroke-width=".7"/>`
+ ).join("");
+
+ return `
+ <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+  role="img" aria-label="Paper with hole positions">
+  <rect x="1" y="1" width="${width}" height="${height}"
+   fill="#ffffff" stroke="#243b53" stroke-width="1.7"/>
+  ${dots}
+ </svg>`;
+}
+
+function svgBefore(item){
+ let lines="";
+ let arrows="";
+
+ if(item.f==="V"){
+  lines=`
+   <line x1="50" y1="2" x2="50" y2="98"
+    stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>`;
+  arrows=`
+   <path d="M78 50 L57 50 M57 50 L64 43 M57 50 L64 57"
+    fill="none" stroke="#173f5f" stroke-width="2.6"
+    stroke-linecap="round" stroke-linejoin="round"/>`;
+ }else if(item.f==="H"){
+  lines=`
+   <line x1="2" y1="50" x2="98" y2="50"
+    stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>`;
+  arrows=`
+   <path d="M50 78 L50 57 M50 57 L43 64 M50 57 L57 64"
+    fill="none" stroke="#173f5f" stroke-width="2.6"
+    stroke-linecap="round" stroke-linejoin="round"/>`;
+ }else{
+  lines=`
+   <line x1="50" y1="2" x2="50" y2="98"
+    stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>
+   <line x1="2" y1="50" x2="98" y2="50"
+    stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>`;
+  arrows=`
+   <path d="M79 25 L57 25 M57 25 L64 18 M57 25 L64 32"
+    fill="none" stroke="#173f5f" stroke-width="2.6"
+    stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M25 79 L25 57 M25 57 L18 64 M25 57 L32 64"
+    fill="none" stroke="#173f5f" stroke-width="2.6"
+    stroke-linecap="round" stroke-linejoin="round"/>`;
+ }
+
+ return `
+ <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+  role="img" aria-label="Paper before folding">
+  <rect x="1" y="1" width="98" height="98"
+   fill="#ffffff" stroke="#243b53" stroke-width="1.7"/>
+  ${lines}
+  ${arrows}
+ </svg>`;
+}
+
+function svgFolded(item,showHoles){
+ return svgSheet(showHoles?item.p:[],item.f);
+}
+
+function foldInstructions(item){
+ if(item.f==="V"){
+  return {
+   en:"Fold the right half onto the left along the vertical dotted line.",
+   hi:"लंबवत बिंदीदार रेखा पर दाएँ आधे हिस्से को बाईं ओर मोड़ें।"
+  };
+ }
+
+ if(item.f==="H"){
+  return {
+   en:"Fold the bottom half upwards along the horizontal dotted line.",
+   hi:"क्षैतिज बिंदीदार रेखा पर नीचे के आधे हिस्से को ऊपर की ओर मोड़ें।"
+  };
+ }
+
+ return {
+  en:"First fold the right half to the left. Then fold the bottom half upwards.",
+  hi:"पहले दाएँ आधे हिस्से को बाईं ओर मोड़ें। फिर नीचे के आधे हिस्से को ऊपर की ओर मोड़ें।"
+ };
+}
+
+function pointText(points){
+ return points.map(([x,y])=>`(${x}, ${y})`).join("; ");
+}
+
+const prepared=data.map((item,i)=>{
+ const generated=makeOptions(item,i);
+ return {
+  ...item,
+  ...generated,
+  instruction:foldInstructions(item)
+ };
+});
+
+const host=document.getElementById("questions");
+
+prepared.forEach((q,i)=>{
+ const correctLetter=String.fromCharCode(65+q.correct);
+
+ const optionsHTML=q.options.map((points,j)=>`
+  <button class="option" type="button"
+   id="q${i}o${j}" onclick="chooseAnswer(${i},${j})">
+   <span class="option-letter">${String.fromCharCode(65+j)}.</span>
+   ${svgSheet(points)}
+  </button>
+ `).join("");
+
+ host.insertAdjacentHTML("beforeend",`
+  <section class="question-card" id="question${i}">
+   <div class="question">
+    Q${i+1}. The paper is folded as shown and punched at the marked position(s). Which option shows the paper after unfolding?
+   </div>
+   <div class="question-hindi">
+    कागज़ को चित्रानुसार मोड़कर चिह्नित स्थानों पर छेद किया गया है। खोलने पर कौन-सा विकल्प सही होगा?
+   </div>
+
+   <div class="process">
+    <div class="step">
+     <div class="step-title">1. Before Folding | मोड़ने से पहले</div>
+     ${svgBefore(q)}
+     <div class="step-caption">
+      Red dotted line = fold line<br>
+      लाल बिंदीदार रेखा = मोड़ने की रेखा
+      <br><br>
+      Blue arrow = folding direction<br>
+      नीला तीर = मोड़ने की दिशा
+     </div>
+    </div>
+
+    <div class="step">
+     <div class="step-title">2. After Folding | मोड़ने के बाद</div>
+     ${svgFolded(q,false)}
+     <div class="step-caption">
+      ${q.instruction.en}
+      <br><span class="hindi">${q.instruction.hi}</span>
+     </div>
+    </div>
+
+    <div class="step">
+     <div class="step-title">3. After Punching | छेद करने के बाद</div>
+     ${svgFolded(q,true)}
+     <div class="step-caption">
+      Red dots = punch positions<br>
+      लाल बिंदु = छेद करने की स्थिति
+     </div>
+    </div>
+   </div>
+
+   <div class="options-title">
+    Choose the correct unfolded pattern | कागज़ खोलने पर सही पैटर्न चुनें:
+   </div>
+
+   <div class="options">${optionsHTML}</div>
+
+   <div class="solution" id="sol${i}">
+    <div class="feedback" id="feed${i}"></div>
+    <div class="correct-answer">
+     Correct Answer: Option ${correctLetter}
+     <span class="hindi">सही उत्तर: विकल्प ${correctLetter}</span>
+    </div>
+   </div>
+  </section>
+ `);
+});
+
+let correct=0;
+let wrong=0;
+let attempted=0;
+const answered=Array(50).fill(false);
+
+function chooseAnswer(qi,oi){
+ if(answered[qi])return;
+
+ answered[qi]=true;
+ attempted++;
+
+ const q=prepared[qi];
+ const selected=document.getElementById(`q${qi}o${oi}`);
+ const right=document.getElementById(`q${qi}o${q.correct}`);
+ const feedback=document.getElementById(`feed${qi}`);
+ const correctLetter=String.fromCharCode(65+q.correct);
+
+ if(oi===q.correct){
+  correct++;
+  selected.classList.add("correct");
+  feedback.textContent="✓ Correct! | सही उत्तर!";
+  feedback.style.color="#217346";
+ }else{
+  wrong++;
+  selected.classList.add("wrong");
+  right.classList.add("correct");
+  feedback.textContent="✗ Incorrect | गलत उत्तर";
+  feedback.style.color="#c62828";
+ }
+
+ for(let j=0;j<4;j++){
+  document.getElementById(`q${qi}o${j}`).disabled=true;
+ }
+
+ document.getElementById(`sol${qi}`).classList.add("show");
+ updateScore();
+}
+
+function updateScore(){
+ document.getElementById("correct").textContent=correct;
+ document.getElementById("wrong").textContent=wrong;
+ document.getElementById("attempted").textContent=attempted+"/50";
+ document.getElementById("marks").textContent=correct+"/50";
+}
+
+function resetTest(){
+ correct=0;
+ wrong=0;
+ attempted=0;
+ answered.fill(false);
+
+ prepared.forEach((q,i)=>{
+  for(let j=0;j<4;j++){
+   const button=document.getElementById(`q${i}o${j}`);
+   button.disabled=false;
+   button.classList.remove("correct","wrong");
+  }
+
+  document.getElementById(`sol${i}`).classList.remove("show");
+  document.getElementById(`feed${i}`).textContent="";
+ });
+
+ updateScore();
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
