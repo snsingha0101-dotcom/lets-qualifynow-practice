@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Ranking & Order Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+header{
+    background:#102a43;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(16,42,67,0.18);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 11px;
+    border-radius:6px;
+    font-size:14px;
+    transition:.25s;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    text-align:center;
+    padding:58px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:.95;
+    margin-bottom:4px;
+}
+
+.container{
+    max-width:1050px;
+    margin:40px auto;
+    padding:0 18px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #d9e2ec;
+    box-shadow:0 4px 14px rgba(16,42,67,.06);
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro p{
+    margin-bottom:10px;
+}
+
+.q-hindi{
+    display:block;
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px dashed #d9e2ec;
+    color:#52606d;
+    font-weight:600;
+}
+
+.section-title{
+    color:#102a43;
+    text-align:center;
+    margin:35px 0 20px;
+    font-size:28px;
+}
+
+.category-title{
+    background:#173f5f;
+    color:white;
+    padding:13px 18px;
+    border-radius:9px;
+    margin:35px 0 18px;
+    font-size:21px;
+}
+
+.question{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 3px 12px rgba(16,42,67,.05);
+    transition:.25s;
+}
+
+.question:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(16,42,67,.09);
+}
+
+.q-number{
+    color:#102a43;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.q-text{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:15px;
+    color:#243b53;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #d9e2ec;
+    background:#f7f9fc;
+    padding:11px 13px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:all .2s ease;
+    user-select:none;
+}
+
+.option:hover{
+    background:#d9eaf7;
+    border-color:#829ab1;
+}
+
+.option.selected{
+    border-color:#173f5f;
+    background:#d9eaf7;
+    font-weight:bold;
+}
+
+.option.correct{
+    background:#e6f4ea;
+    border-color:#2e7d32;
+    color:#1b5e20;
+}
+
+.option.wrong{
+    background:#fdecea;
+    border-color:#c62828;
+    color:#b71c1c;
+}
+
+.option-hindi{
+    display:block;
+    margin-top:4px;
+    color:#52606d;
+    font-weight:600;
+}
+
+.answer{
+    display:none;
+    margin-top:16px;
+    padding:14px;
+    background:#eef6fb;
+    border-left:4px solid #173f5f;
+    border-radius:7px;
+}
+
+.answer strong{
+    color:#102a43;
+}
+
+.answer-hindi{
+    display:block;
+    margin-top:6px;
+    color:#243b53;
+    font-weight:600;
+}
+
+.solution{
+    display:none;
+    margin-top:14px;
+    color:#52606d;
+}
+
+.solution-hindi{
+    display:block;
+    margin-top:12px;
+    padding-top:10px;
+    border-top:1px dashed #d9e2ec;
+}
+
+.result-message{
+    margin-top:12px;
+    padding:10px 12px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.result-message.correct-message{
+    background:#e6f4ea;
+    color:#1b5e20;
+}
+
+.result-message.wrong-message{
+    background:#fdecea;
+    color:#b71c1c;
+}
+
+/* PRACTICE RESULT */
+
+.practice-result{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:28px 20px;
+    margin-top:35px;
+    box-shadow:0 4px 14px rgba(16,42,67,.07);
+    text-align:center;
+}
+
+.practice-result h2{
+    color:#102a43;
+    margin-bottom:22px;
+}
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    max-width:800px;
+    margin:0 auto 22px;
+}
+
+.result-card{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:9px;
+    padding:15px 10px;
+}
+
+.result-number{
+    display:block;
+    font-size:24px;
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:5px;
+}
+
+.result-label{
+    color:#52606d;
+    font-size:14px;
+    font-weight:600;
+}
+
+.reset-btn{
+    border:none;
+    background:#102a43;
+    color:white;
+    padding:11px 22px;
+    border-radius:7px;
+    font-size:15px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.reset-btn:hover{
+    background:#173f5f;
+}
+
+/* NOTE */
+
+.note{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    padding:20px;
+    border-radius:10px;
+    margin-top:30px;
+}
+
+.note h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.note p{
+    margin:8px 0;
+}
+
+.back{
+    text-align:center;
+    margin:35px 0;
+}
+
+.back a{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:7px;
+    transition:.25s;
+}
+
+.back a:hover{
+    background:#173f5f;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:50px;
+}
+
+footer p{
+    margin:4px 0;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    .result-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+LET'S QUALIFYNOW
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="study-material.html">Study Material</a>
+<a href="live-classes.html">Live Classes</a>
+<a href="test-series.html">Test Series</a>
+<a href="exams.html">Exams</a>
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>🏆 SSC Ranking & Order Practice</h1>
+
+<p>
+50 Exam-Oriented Questions with Answers & Detailed Solutions
+</p>
+
+<p>
+50 परीक्षा-उन्मुख प्रश्न, उत्तर एवं विस्तृत समाधान सहित
+</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="intro">
+
+<h2>📘 SSC Ranking & Order Practice Set</h2>
+
+<p>
+This practice set covers important SSC-level questions based on
+Ranking, Position, Order, Left-Right Position, Top-Bottom Ranking
+and Mixed Ranking & Order concepts.
+</p>
+
+<p class="q-hindi">
+इस Practice Set में Ranking, Position, Order, बाएँ-दाएँ की Position,
+ऊपर-नीचे की Ranking तथा Mixed Ranking & Order से संबंधित
+महत्वपूर्ण SSC-level प्रश्न शामिल हैं।
+</p>
+
+<p>
+<strong>Total Questions:</strong> 50
+&nbsp; | &nbsp;
+<strong>Level:</strong> SSC Exam Standard
+</p>
+
+<p class="q-hindi">
+<strong>कुल प्रश्न:</strong> 50
+&nbsp; | &nbsp;
+<strong>स्तर:</strong> SSC परीक्षा स्तर
+</p>
+
+<p style="margin-top:12px;">
+<strong>Instruction:</strong> Select an option. The answer and detailed
+solution will appear only after you attempt the question.
+</p>
+
+<p class="q-hindi">
+<strong>निर्देश:</strong> एक विकल्प चुनें। उत्तर और विस्तृत समाधान
+केवल प्रश्न attempt करने के बाद दिखाई देंगे।
+</p>
+
+</div>
+
+
+<h2 class="section-title">
+Ranking & Order Questions / Ranking एवं Order के प्रश्न
+</h2>
+
+
+<div id="questionsContainer"></div>
+
+
+<!-- PRACTICE RESULT -->
+
+<div class="practice-result" id="practiceResult">
+
+<h2>
+📊 Your Practice Result / आपका Practice Result
+</h2>
+
+<div class="result-grid">
+
+<div class="result-card">
+<span class="result-number" id="score">0 / 50</span>
+<span class="result-label">Score / स्कोर</span>
+</div>
+
+<div class="result-card">
+<span class="result-number" id="attempted">0</span>
+<span class="result-label">Attempted / प्रयास किए</span>
+</div>
+
+<div class="result-card">
+<span class="result-number" id="correct">0</span>
+<span class="result-label">Correct / सही</span>
+</div>
+
+<div class="result-card">
+<span class="result-number" id="wrong">0</span>
+<span class="result-label">Wrong / गलत</span>
+</div>
+
+</div>
+
+<button class="reset-btn" onclick="resetPractice()">
+Reset Practice / दोबारा शुरू करें
+</button>
+
+</div>
+
+
+<!-- IMPORTANT RULES -->
+
+<div class="note">
+
+<h3>
+📌 Important Ranking & Order Rules / महत्वपूर्ण Ranking एवं Order के नियम
+</h3>
+
+<p>
+<strong>1.</strong>
+Rank from opposite side = Total − Given Rank + 1
+<br>
+विपरीत दिशा से Rank = कुल व्यक्तियों की संख्या − दी गई Rank + 1
+</p>
+
+<p>
+<strong>2.</strong>
+Total persons = Rank from one side + Rank from opposite side − 1
+<br>
+कुल व्यक्ति = एक दिशा की Rank + विपरीत दिशा की Rank − 1
+</p>
+
+<p>
+<strong>3.</strong>
+Persons between two positions = Difference between positions − 1
+<br>
+दो स्थानों के बीच व्यक्तियों की संख्या = दोनों स्थानों का अंतर − 1
+</p>
+
+<p>
+<strong>4.</strong>
+Always convert left/right or top/bottom positions to the same
+reference side before calculating.
+<br>
+Calculation करने से पहले हमेशा left/right या top/bottom की
+positions को एक ही दिशा में बदलें।
+</p>
+
+</div>
+
+
+<div class="back">
+
+<a href="ssc-topic-wise-practice.html">
+← Back to SSC Topic-wise Practice / SSC Topic-wise Practice पर वापस जाएँ
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p><strong>LET'S QUALIFYNOW</strong></p>
+
+<p>
+N Saurabh Sir — Reasoning Faculty
+</p>
+
+<p>
+SSC • Banking • Railway • Government Exams
+</p>
+
+<p>
+© 2026 Let's QualifyNow. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+const questionData = [
+
+/* =========================
+   PART 1
+========================= */
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+In a class of 40 students, Ravi ranks 12th from the top.
+What is his rank from the bottom?
+`,
+h:`
+40 विद्यार्थियों की एक कक्षा में Ravi ऊपर से 12वें स्थान पर है।
+नीचे से उसका स्थान कौन-सा होगा?
+`,
+o:[
+["28th","28वाँ"],
+["30th","30वाँ"],
+["29th","29वाँ"],
+["31st","31वाँ"]
+],
+a:"C",
+ae:"29th",
+ah:"29वाँ",
+se:"Rank from bottom = 40 − 12 + 1 = 29th.",
+sh:"नीचे से स्थान = 40 − 12 + 1 = 29वाँ।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+In a class of 55 students, Neha ranks 18th from the bottom.
+What is her rank from the top?
+`,
+h:`
+55 विद्यार्थियों की एक कक्षा में Neha नीचे से 18वें स्थान पर है।
+ऊपर से उसका स्थान कौन-सा होगा?
+`,
+o:[
+["36th","36वाँ"],
+["38th","38वाँ"],
+["39th","39वाँ"],
+["40th","40वाँ"]
+],
+a:"B",
+ae:"38th",
+ah:"38वाँ",
+se:"Rank from top = 55 − 18 + 1 = 38th.",
+sh:"ऊपर से स्थान = 55 − 18 + 1 = 38वाँ।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+Amit is 15th from the top and 21st from the bottom in a class.
+How many students are there in the class?
+`,
+h:`
+एक कक्षा में Amit ऊपर से 15वें और नीचे से 21वें स्थान पर है।
+कक्षा में कुल कितने विद्यार्थी हैं?
+`,
+o:[
+["35","35"],
+["36","36"],
+["37","37"],
+["38","38"]
+],
+a:"A",
+ae:"35",
+ah:"35",
+se:"Total = 15 + 21 − 1 = 35.",
+sh:"कुल विद्यार्थी = 15 + 21 − 1 = 35।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+In a row of 48 students, P is 17th from the left.
+What is his position from the right?
+`,
+h:`
+48 विद्यार्थियों की एक पंक्ति में P बाएँ से 17वें स्थान पर है।
+दाएँ से उसका स्थान कौन-सा होगा?
+`,
+o:[
+["29th","29वाँ"],
+["31st","31वाँ"],
+["33rd","33वाँ"],
+["32nd","32वाँ"]
+],
+a:"D",
+ae:"32nd",
+ah:"32वाँ",
+se:"Position from right = 48 − 17 + 1 = 32nd.",
+sh:"दाएँ से स्थान = 48 − 17 + 1 = 32वाँ।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+In a class of 60 students, Rohan is 24th from the top.
+How many students are below him?
+`,
+h:`
+60 विद्यार्थियों की कक्षा में Rohan ऊपर से 24वें स्थान पर है।
+उसके नीचे कितने विद्यार्थी हैं?
+`,
+o:[
+["34","34"],
+["35","35"],
+["36","36"],
+["37","37"]
+],
+a:"C",
+ae:"36",
+ah:"36",
+se:"Students below = 60 − 24 = 36.",
+sh:"नीचे विद्यार्थियों की संख्या = 60 − 24 = 36।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+Sita is 13th from the bottom in a class of 42 students.
+How many students are above her?
+`,
+h:`
+42 विद्यार्थियों की कक्षा में Sita नीचे से 13वें स्थान पर है।
+उसके ऊपर कितने विद्यार्थी हैं?
+`,
+o:[
+["29","29"],
+["30","30"],
+["31","31"],
+["28","28"]
+],
+a:"A",
+ae:"29",
+ah:"29",
+se:"Students above = 42 − 13 = 29.",
+sh:"ऊपर विद्यार्थियों की संख्या = 42 − 13 = 29।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+A student ranks 9th from the top and 26th from the bottom.
+How many students are there in the class?
+`,
+h:`
+एक विद्यार्थी ऊपर से 9वें और नीचे से 26वें स्थान पर है।
+कक्षा में कुल कितने विद्यार्थी हैं?
+`,
+o:[
+["33","33"],
+["34","34"],
+["35","35"],
+["36","36"]
+],
+a:"B",
+ae:"34",
+ah:"34",
+se:"Total = 9 + 26 − 1 = 34.",
+sh:"कुल विद्यार्थी = 9 + 26 − 1 = 34।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+In a row of 35 persons, K is 11th from the left.
+How many persons are to his right?
+`,
+h:`
+35 व्यक्तियों की एक पंक्ति में K बाएँ से 11वें स्थान पर है।
+उसके दाईं ओर कितने व्यक्ति हैं?
+`,
+o:[
+["23","23"],
+["25","25"],
+["24","24"],
+["26","26"]
+],
+a:"C",
+ae:"24",
+ah:"24",
+se:"Persons to the right = 35 − 11 = 24.",
+sh:"दाईं ओर व्यक्तियों की संख्या = 35 − 11 = 24।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+In a queue of 45 people, Mohan is 16th from the front.
+What is his position from the back?
+`,
+h:`
+45 लोगों की एक कतार में Mohan आगे से 16वें स्थान पर है।
+पीछे से उसका स्थान कौन-सा होगा?
+`,
+o:[
+["30th","30वाँ"],
+["31st","31वाँ"],
+["32nd","32वाँ"],
+["29th","29वाँ"]
+],
+a:"A",
+ae:"30th",
+ah:"30वाँ",
+se:"Position from back = 45 − 16 + 1 = 30th.",
+sh:"पीछे से स्थान = 45 − 16 + 1 = 30वाँ।"
+},
+
+{
+part:"Part 1: Ranking Basics / Part 1: Ranking के मूल प्रश्न",
+q:`
+In a class, Rahul is 8th from the top and there are 27 students
+below him. How many students are there in the class?
+`,
+h:`
+एक कक्षा में Rahul ऊपर से 8वें स्थान पर है और उसके नीचे 27 विद्यार्थी हैं।
+कक्षा में कुल कितने विद्यार्थी हैं?
+`,
+o:[
+["34","34"],
+["36","36"],
+["37","37"],
+["35","35"]
+],
+a:"D",
+ae:"35",
+ah:"35",
+se:"Total students = 8 + 27 = 35.",
+sh:"कुल विद्यार्थी = 8 + 27 = 35।"
+},
+
+/* =========================
+   PART 2
+========================= */
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a row of 52 students, A is 19th from the left.
+What is his position from the right?
+`,
+h:`
+52 विद्यार्थियों की एक पंक्ति में A बाएँ से 19वें स्थान पर है।
+दाएँ से उसका स्थान कौन-सा होगा?
+`,
+o:[
+["33rd","33वाँ"],
+["34th","34वाँ"],
+["35th","35वाँ"],
+["36th","36वाँ"]
+],
+a:"B",
+ae:"34th",
+ah:"34वाँ",
+se:"Position from right = 52 − 19 + 1 = 34th.",
+sh:"दाएँ से स्थान = 52 − 19 + 1 = 34वाँ।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a row of 64 people, B is 27th from the right.
+What is his position from the left?
+`,
+h:`
+64 लोगों की एक पंक्ति में B दाएँ से 27वें स्थान पर है।
+बाएँ से उसका स्थान कौन-सा होगा?
+`,
+o:[
+["37th","37वाँ"],
+["39th","39वाँ"],
+["38th","38वाँ"],
+["40th","40वाँ"]
+],
+a:"C",
+ae:"38th",
+ah:"38वाँ",
+se:"Position from left = 64 − 27 + 1 = 38th.",
+sh:"बाएँ से स्थान = 64 − 27 + 1 = 38वाँ।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a row, P is 14th from the left and Q is 18th from the right.
+If P is to the left of Q and there are 7 persons between them,
+how many persons are in the row?
+`,
+h:`
+एक पंक्ति में P बाएँ से 14वें और Q दाएँ से 18वें स्थान पर है।
+यदि P, Q के बाईं ओर है और दोनों के बीच 7 व्यक्ति हैं,
+तो पंक्ति में कुल कितने व्यक्ति हैं?
+`,
+o:[
+["39","39"],
+["40","40"],
+["41","41"],
+["42","42"]
+],
+a:"A",
+ae:"39",
+ah:"39",
+se:"Q = 14 + 7 + 1 = 22nd from the left. Total = 22 + 18 − 1 = 39.",
+sh:"Q = 14 + 7 + 1 = बाएँ से 22वाँ। कुल व्यक्ति = 22 + 18 − 1 = 39।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a row of 50 persons, A is 12th from the left and B is 15th
+from the right. If A is to the left of B, how many persons are
+between A and B?
+`,
+h:`
+50 व्यक्तियों की एक पंक्ति में A बाएँ से 12वें और B दाएँ से 15वें स्थान पर है।
+यदि A, B के बाईं ओर है, तो A और B के बीच कितने व्यक्ति हैं?
+`,
+o:[
+["22","22"],
+["23","23"],
+["24","24"],
+["25","25"]
+],
+a:"B",
+ae:"23",
+ah:"23",
+se:"B = 50 − 15 + 1 = 36th from the left. Persons between = 36 − 12 − 1 = 23.",
+sh:"B = 50 − 15 + 1 = बाएँ से 36वाँ। बीच के व्यक्ति = 36 − 12 − 1 = 23।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a class of 72 students, R is 31st from the top.
+What is his rank from the bottom?
+`,
+h:`
+72 विद्यार्थियों की कक्षा में R ऊपर से 31वें स्थान पर है।
+नीचे से उसका स्थान कौन-सा होगा?
+`,
+o:[
+["40th","40वाँ"],
+["42nd","42वाँ"],
+["41st","41वाँ"],
+["43rd","43वाँ"]
+],
+a:"B",
+ae:"42nd",
+ah:"42वाँ",
+se:"Rank from bottom = 72 − 31 + 1 = 42nd.",
+sh:"नीचे से स्थान = 72 − 31 + 1 = 42वाँ।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a row of 46 persons, C is 21st from the left. D is 17th
+from the right. If C is to the left of D, how many persons
+are between them?
+`,
+h:`
+46 व्यक्तियों की एक पंक्ति में C बाएँ से 21वें स्थान पर है। D दाएँ से 17वें स्थान पर है।
+यदि C, D के बाईं ओर है, तो दोनों के बीच कितने व्यक्ति हैं?
+`,
+o:[
+["8","8"],
+["9","9"],
+["10","10"],
+["11","11"]
+],
+a:"A",
+ae:"8",
+ah:"8",
+se:"D = 46 − 17 + 1 = 30th from the left. Persons between = 30 − 21 − 1 = 8.",
+sh:"D = 46 − 17 + 1 = बाएँ से 30वाँ। बीच के व्यक्ति = 30 − 21 − 1 = 8।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+A is 9th from the left in a row. B is 14th from the right.
+If there are 6 persons between A and B and A is to the left
+of B, what is the total number of persons in the row?
+`,
+h:`
+एक पंक्ति में A बाएँ से 9वें स्थान पर है। B दाएँ से 14वें स्थान पर है।
+यदि A और B के बीच 6 व्यक्ति हैं और A, B के बाईं ओर है,
+तो पंक्ति में कुल कितने व्यक्ति हैं?
+`,
+o:[
+["27","27"],
+["28","28"],
+["30","30"],
+["29","29"]
+],
+a:"D",
+ae:"29",
+ah:"29",
+se:"B = 9 + 6 + 1 = 16th from the left. Total = 16 + 14 − 1 = 29.",
+sh:"B = 9 + 6 + 1 = बाएँ से 16वाँ। कुल व्यक्ति = 16 + 14 − 1 = 29।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a queue of 58 people, S is 24th from the front.
+How many people are behind S?
+`,
+h:`
+58 लोगों की एक कतार में S आगे से 24वें स्थान पर है।
+S के पीछे कितने लोग हैं?
+`,
+o:[
+["33","33"],
+["35","35"],
+["34","34"],
+["36","36"]
+],
+a:"C",
+ae:"34",
+ah:"34",
+se:"People behind = 58 − 24 = 34.",
+sh:"पीछे लोगों की संख्या = 58 − 24 = 34।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a class of 45 students, T is 17th from the bottom.
+How many students are above T?
+`,
+h:`
+45 विद्यार्थियों की कक्षा में T नीचे से 17वें स्थान पर है।
+T के ऊपर कितने विद्यार्थी हैं?
+`,
+o:[
+["28","28"],
+["29","29"],
+["30","30"],
+["27","27"]
+],
+a:"A",
+ae:"28",
+ah:"28",
+se:"Students above = 45 − 17 = 28.",
+sh:"ऊपर विद्यार्थियों की संख्या = 45 − 17 = 28।"
+},
+
+{
+part:"Part 2: Left, Right, Top & Bottom Ranking / Part 2: बाएँ, दाएँ, ऊपर एवं नीचे की Ranking",
+q:`
+In a row of 40 persons, M is 13th from the left and N is 12th
+from the right. If M is to the left of N, how many persons are
+between them?
+`,
+h:`
+40 व्यक्तियों की एक पंक्ति में M बाएँ से 13वें और N दाएँ से 12वें स्थान पर है।
+यदि M, N के बाईं ओर है, तो दोनों के बीच कितने व्यक्ति हैं?
+`,
+o:[
+["14","14"],
+["15","15"],
+["16","16"],
+["17","17"]
+],
+a:"B",
+ae:"15",
+ah:"15",
+se:"N = 40 − 12 + 1 = 29th from the left. Persons between = 29 − 13 − 1 = 15.",
+sh:"N = 40 − 12 + 1 = बाएँ से 29वाँ। बीच के व्यक्ति = 29 − 13 − 1 = 15।"
+},
+
+/* =========================
+   PART 3
+========================= */
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+A, B and C are standing in a row. A is to the left of B and C
+is to the right of B. Who is standing in the middle?
+`,
+h:`
+A, B और C एक पंक्ति में खड़े हैं। A, B के बाईं ओर है और C,
+B के दाईं ओर है। बीच में कौन खड़ा है?
+`,
+o:[
+["A","A"],
+["B","B"],
+["C","C"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+a:"B",
+ae:"B",
+ah:"B",
+se:"The order is A − B − C. Therefore, B is in the middle.",
+sh:"क्रम A − B − C है। इसलिए B बीच में है।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+Five persons P, Q, R, S and T are standing in a row.
+P is immediately before Q and R is immediately after Q.
+Who is between P and R?
+`,
+h:`
+P, Q, R, S और T पाँच व्यक्ति एक पंक्ति में खड़े हैं।
+P, Q के ठीक पहले है और R, Q के ठीक बाद है।
+P और R के बीच कौन है?
+`,
+o:[
+["P","P"],
+["R","R"],
+["Q","Q"],
+["S","S"]
+],
+a:"C",
+ae:"Q",
+ah:"Q",
+se:"The order is P − Q − R. Hence Q is between P and R.",
+sh:"क्रम P − Q − R है। इसलिए P और R के बीच Q है।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+Four students A, B, C and D have different heights.
+A is taller than B, B is taller than C, and C is taller than D.
+Who is second tallest?
+`,
+h:`
+A, B, C और D चार विद्यार्थियों की लंबाई अलग-अलग है।
+A, B से लंबा है; B, C से लंबा है; और C, D से लंबा है।
+दूसरे सबसे लंबे विद्यार्थी का नाम क्या है?
+`,
+o:[
+["B","B"],
+["A","A"],
+["C","C"],
+["D","D"]
+],
+a:"A",
+ae:"B",
+ah:"B",
+se:"Order of height: A > B > C > D. Therefore B is second tallest.",
+sh:"लंबाई का क्रम A > B > C > D है। इसलिए B दूसरा सबसे लंबा है।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+In a queue, R is ahead of S and T is behind S.
+Who is standing between R and T?
+`,
+h:`
+एक कतार में R, S से आगे है और T, S के पीछे है।
+R और T के बीच कौन खड़ा है?
+`,
+o:[
+["R","R"],
+["S","S"],
+["T","T"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+a:"B",
+ae:"S",
+ah:"S",
+se:"The order is R − S − T. Hence S is between R and T.",
+sh:"क्रम R − S − T है। इसलिए R और T के बीच S है।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+Arrange the following ages from youngest to oldest:
+18 years, 25 years, 21 years and 30 years.
+`,
+h:`
+निम्न आयु को सबसे कम से सबसे अधिक के क्रम में व्यवस्थित करें:
+18 वर्ष, 25 वर्ष, 21 वर्ष और 30 वर्ष।
+`,
+o:[
+["18, 21, 25, 30","18, 21, 25, 30"],
+["21, 18, 25, 30","21, 18, 25, 30"],
+["18, 25, 21, 30","18, 25, 21, 30"],
+["30, 25, 21, 18","30, 25, 21, 18"]
+],
+a:"A",
+ae:"18, 21, 25, 30",
+ah:"18, 21, 25, 30",
+se:"Youngest to oldest means arranging the ages in ascending order.",
+sh:"सबसे कम आयु से सबसे अधिक आयु का अर्थ है आयु को बढ़ते क्रम में रखना।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+If M comes before N, N comes before O, and O comes before P,
+who comes last?
+`,
+h:`
+यदि M, N से पहले आता है; N, O से पहले आता है; और O, P से
+पहले आता है, तो सबसे अंत में कौन आता है?
+`,
+o:[
+["M","M"],
+["N","N"],
+["O","O"],
+["P","P"]
+],
+a:"D",
+ae:"P",
+ah:"P",
+se:"The order is M − N − O − P.",
+sh:"क्रम M − N − O − P है। इसलिए P सबसे अंत में आता है।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+A is to the left of B and C is between A and B.
+What is the correct order from left to right?
+`,
+h:`
+A, B के बाईं ओर है और C, A तथा B के बीच है।
+बाएँ से दाएँ सही क्रम क्या होगा?
+`,
+o:[
+["A − B − C","A − B − C"],
+["B − C − A","B − C − A"],
+["A − C − B","A − C − B"],
+["C − A − B","C − A − B"]
+],
+a:"C",
+ae:"A − C − B",
+ah:"A − C − B",
+se:"Since C is between A and B, the order is A − C − B.",
+sh:"क्योंकि C, A और B के बीच है, इसलिए क्रम A − C − B होगा।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+Five students P, Q, R, S and T are standing in a row.
+Q is after P but before R. S is after R and T is before P.
+What is the correct order from left to right?
+`,
+h:`
+P, Q, R, S और T पाँच विद्यार्थी एक पंक्ति में खड़े हैं।
+Q, P के बाद लेकिन R से पहले है। S, R के बाद है और T, P से पहले है।
+बाएँ से दाएँ सही क्रम क्या होगा?
+`,
+o:[
+["T − P − Q − R − S","T − P − Q − R − S"],
+["P − T − Q − R − S","P − T − Q − R − S"],
+["T − Q − P − R − S","T − Q − P − R − S"],
+["T − P − R − Q − S","T − P − R − Q − S"]
+],
+a:"A",
+ae:"T − P − Q − R − S",
+ah:"T − P − Q − R − S",
+se:"T is before P, Q is after P but before R, and S is after R.",
+sh:"T, P से पहले है; Q, P के बाद लेकिन R से पहले है; और S, R के बाद है। इसलिए क्रम T − P − Q − R − S होगा।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+In a line, K is immediately to the right of L and M is
+immediately to the right of K. Who is second from L?
+`,
+h:`
+एक पंक्ति में K, L के ठीक दाईं ओर है और M, K के ठीक दाईं ओर है।
+L से दूसरा कौन है?
+`,
+o:[
+["L","L"],
+["K","K"],
+["M","M"],
+["Cannot be determined","निर्धारित नहीं किया जा सकता"]
+],
+a:"C",
+ae:"M",
+ah:"M",
+se:"The order is L − K − M. Therefore M is second from L.",
+sh:"क्रम L − K − M है। इसलिए L से दूसरा M है।"
+},
+
+{
+part:"Part 3: Order & Position / Part 3: Order एवं Position",
+q:`
+If X comes before Y, Y comes before Z, and W comes after Z,
+which person comes first?
+`,
+h:`
+यदि X, Y से पहले आता है; Y, Z से पहले आता है; और W, Z के
+बाद आता है, तो सबसे पहले कौन आता है?
+`,
+o:[
+["X","X"],
+["Y","Y"],
+["Z","Z"],
+["W","W"]
+],
+a:"A",
+ae:"X",
+ah:"X",
+se:"The order is X − Y − Z − W.",
+sh:"क्रम X − Y − Z − W है। इसलिए X सबसे पहले आता है।"
+},
+
+/* =========================
+   PART 4
+========================= */
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+In a class of 50 students, A ranks 18th from the top and B ranks
+22nd from the bottom. If A is above B, how many students are
+between them?
+`,
+h:`
+50 विद्यार्थियों की कक्षा में A ऊपर से 18वें और B नीचे से 22वें स्थान पर है।
+यदि A, B से ऊपर है, तो दोनों के बीच कितने विद्यार्थी हैं?
+`,
+o:[
+["9","9"],
+["11","11"],
+["10","10"],
+["12","12"]
+],
+a:"C",
+ae:"10",
+ah:"10",
+se:"B = 50 − 22 + 1 = 29th from top. Students between = 29 − 18 − 1 = 10.",
+sh:"B = 50 − 22 + 1 = ऊपर से 29वाँ। बीच के विद्यार्थी = 29 − 18 − 1 = 10।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+Five persons A, B, C, D and E are arranged by height.
+A is taller than C but shorter than B. D is shorter than C
+but taller than E. Who is the tallest?
+`,
+h:`
+A, B, C, D और E पाँच व्यक्तियों की लंबाई के अनुसार क्रम बनाया गया है।
+A, C से लंबा लेकिन B से छोटा है। D, C से छोटा लेकिन E से लंबा है।
+सबसे लंबा व्यक्ति कौन है?
+`,
+o:[
+["A","A"],
+["B","B"],
+["C","C"],
+["D","D"]
+],
+a:"B",
+ae:"B",
+ah:"B",
+se:"B > A > C > D > E. Hence B is tallest.",
+sh:"क्रम B > A > C > D > E है। इसलिए B सबसे लंबा है।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+In a row of 60 persons, P is 24th from the left and Q is 19th
+from the right. How many persons are between P and Q,
+if P is to the left of Q?
+`,
+h:`
+60 व्यक्तियों की एक पंक्ति में P बाएँ से 24वें और Q दाएँ से 19वें स्थान पर है।
+यदि P, Q के बाईं ओर है, तो दोनों के बीच कितने व्यक्ति हैं?
+`,
+o:[
+["16","16"],
+["17","17"],
+["18","18"],
+["19","19"]
+],
+a:"B",
+ae:"17",
+ah:"17",
+se:"Q's position from the left = 60 − 19 + 1 = 42nd. Persons between P and Q = 42 − 24 − 1 = 17.",
+sh:"Q का बाएँ से स्थान = 60 − 19 + 1 = 42वाँ। बीच के व्यक्ति = 42 − 24 − 1 = 17।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+A, B, C, D and E are arranged in a line. C is immediately
+before D, B is before C, A is after D and E is before B.
+Who is third in the order?
+`,
+h:`
+A, B, C, D और E एक पंक्ति में व्यवस्थित हैं। C, D के ठीक पहले है;
+B, C से पहले है; A, D के बाद है और E, B से पहले है।
+क्रम में तीसरे स्थान पर कौन है?
+`,
+o:[
+["E","E"],
+["B","B"],
+["C","C"],
+["D","D"]
+],
+a:"C",
+ae:"C",
+ah:"C",
+se:"The order is E − B − C − D − A.",
+sh:"क्रम E − B − C − D − A है। इसलिए तीसरे स्थान पर C है।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+In a class of 70 students, Rahul is 23rd from the top.
+If 5 students ranked above him leave the class, what will be
+his new rank from the top?
+`,
+h:`
+70 विद्यार्थियों की कक्षा में Rahul ऊपर से 23वें स्थान पर है।
+यदि उससे ऊपर के 5 विद्यार्थी कक्षा छोड़ देते हैं,
+तो ऊपर से उसकी नई Rank क्या होगी?
+`,
+o:[
+["17th","17वाँ"],
+["19th","19वाँ"],
+["18th","18वाँ"],
+["20th","20वाँ"]
+],
+a:"C",
+ae:"18th",
+ah:"18वाँ",
+se:"Five students above Rahul leave. New rank = 23 − 5 = 18th.",
+sh:"Rahul से ऊपर के 5 विद्यार्थी चले जाते हैं। नई Rank = 23 − 5 = 18वाँ।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+Six persons P, Q, R, S, T and U stand in a row. P is before Q,
+Q is before R, R is before S, and T is before P. U is after S.
+Who is fourth in the order?
+`,
+h:`
+P, Q, R, S, T और U छह व्यक्ति एक पंक्ति में खड़े हैं। P, Q से पहले;
+Q, R से पहले; R, S से पहले; T, P से पहले और U, S के बाद है।
+क्रम में चौथे स्थान पर कौन है?
+`,
+o:[
+["Q","Q"],
+["R","R"],
+["S","S"],
+["T","T"]
+],
+a:"B",
+ae:"R",
+ah:"R",
+se:"The order is T − P − Q − R − S − U. Therefore, R is fourth.",
+sh:"क्रम T − P − Q − R − S − U है। इसलिए चौथे स्थान पर R है।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+In a row of 55 students, K is 16th from the left. L is 14th
+from the right. If K is to the left of L, how many students
+are between them?
+`,
+h:`
+55 विद्यार्थियों की एक पंक्ति में K बाएँ से 16वें स्थान पर है। L दाएँ से 14वें स्थान पर है।
+यदि K, L के बाईं ओर है, तो दोनों के बीच कितने विद्यार्थी हैं?
+`,
+o:[
+["25","25"],
+["26","26"],
+["27","27"],
+["24","24"]
+],
+a:"A",
+ae:"25",
+ah:"25",
+se:"L = 55 − 14 + 1 = 42nd from the left. Students between = 42 − 16 − 1 = 25.",
+sh:"L = 55 − 14 + 1 = बाएँ से 42वाँ। बीच के विद्यार्थी = 42 − 16 − 1 = 25।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+Five candidates P, Q, R, S and T have different ranks.
+P ranks above Q, Q ranks above R, R ranks above S and
+S ranks above T. Who ranks third?
+`,
+h:`
+P, Q, R, S और T पाँच candidates की अलग-अलग ranks हैं।
+P की rank Q से ऊपर, Q की R से ऊपर, R की S से ऊपर और
+S की T से ऊपर है। तीसरे स्थान पर कौन है?
+`,
+o:[
+["P","P"],
+["Q","Q"],
+["R","R"],
+["S","S"]
+],
+a:"C",
+ae:"R",
+ah:"R",
+se:"Ranking order is P − Q − R − S − T.",
+sh:"Ranking का क्रम P − Q − R − S − T है। इसलिए तीसरे स्थान पर R है।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+In a queue of 48 people, A is 15th from the front.
+B is 11th from the back. How many people are between A and B
+if A is ahead of B?
+`,
+h:`
+48 लोगों की एक कतार में A आगे से 15वें स्थान पर है।
+B पीछे से 11वें स्थान पर है। यदि A, B से आगे है,
+तो दोनों के बीच कितने लोग हैं?
+`,
+o:[
+["21","21"],
+["22","22"],
+["23","23"],
+["24","24"]
+],
+a:"B",
+ae:"22",
+ah:"22",
+se:"B = 48 − 11 + 1 = 38th from the front. People between = 38 − 15 − 1 = 22.",
+sh:"B = 48 − 11 + 1 = आगे से 38वाँ। बीच के लोग = 38 − 15 − 1 = 22।"
+},
+
+{
+part:"Part 4: Ranking & Order Mixed / Part 4: Ranking एवं Order Mixed",
+q:`
+Seven persons A, B, C, D, E, F and G stand in a line.
+A is before B, B is before C, D is after C, E is before A,
+F is after D and G is between C and D. Who is fifth?
+`,
+h:`
+A, B, C, D, E, F और G सात व्यक्ति एक पंक्ति में खड़े हैं।
+A, B से पहले; B, C से पहले; D, C के बाद; E, A से पहले;
+F, D के बाद और G, C तथा D के बीच है। पाँचवें स्थान पर कौन है?
+`,
+o:[
+["G","G"],
+["C","C"],
+["D","D"],
+["F","F"]
+],
+a:"A",
+ae:"G",
+ah:"G",
+se:"The order is E − A − B − C − G − D − F. Therefore G is fifth.",
+sh:"क्रम E − A − B − C − G − D − F है। इसलिए पाँचवें स्थान पर G है।"
+},
+
+/* =========================
+   PART 5
+========================= */
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+In a class of 80 students, A ranks 26th from the top and B ranks
+31st from the bottom. If A ranks above B, how many students are
+between A and B?
+`,
+h:`
+80 विद्यार्थियों की कक्षा में A ऊपर से 26वें और B नीचे से 31वें स्थान पर है।
+यदि A की Rank, B से ऊपर है, तो दोनों के बीच कितने विद्यार्थी हैं?
+`,
+o:[
+["22","22"],
+["23","23"],
+["24","24"],
+["25","25"]
+],
+a:"B",
+ae:"23",
+ah:"23",
+se:"B = 80 − 31 + 1 = 50th from top. Students between = 50 − 26 − 1 = 23.",
+sh:"B = 80 − 31 + 1 = ऊपर से 50वाँ। बीच के विद्यार्थी = 50 − 26 − 1 = 23।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+Eight persons P, Q, R, S, T, U, V and W stand in a line.
+P is before Q, Q is before R, S is after R, T is before P,
+U is after S, V is between R and S, and W is before T.
+Who is sixth?
+`,
+h:`
+P, Q, R, S, T, U, V और W आठ व्यक्ति एक पंक्ति में खड़े हैं।
+P, Q से पहले; Q, R से पहले; S, R के बाद; T, P से पहले;
+U, S के बाद; V, R और S के बीच; और W, T से पहले है।
+छठे स्थान पर कौन है?
+`,
+o:[
+["S","S"],
+["V","V"],
+["U","U"],
+["R","R"]
+],
+a:"B",
+ae:"V",
+ah:"V",
+se:"The order is W − T − P − Q − R − V − S − U. Therefore V is sixth.",
+sh:"क्रम W − T − P − Q − R − V − S − U है। इसलिए छठे स्थान पर V है।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+In a row of 75 people, X is 28th from the left.
+Y is 19th from the right. How many people are between X and Y,
+if X is to the left of Y?
+`,
+h:`
+75 लोगों की एक पंक्ति में X बाएँ से 28वें स्थान पर है।
+Y दाएँ से 19वें स्थान पर है। यदि X, Y के बाईं ओर है,
+तो दोनों के बीच कितने लोग हैं?
+`,
+o:[
+["27","27"],
+["28","28"],
+["29","29"],
+["30","30"]
+],
+a:"B",
+ae:"28",
+ah:"28",
+se:"Y = 75 − 19 + 1 = 57th from the left. People between = 57 − 28 − 1 = 28.",
+sh:"Y = 75 − 19 + 1 = बाएँ से 57वाँ। बीच के लोग = 57 − 28 − 1 = 28।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+Five candidates A, B, C, D and E have different marks.
+A scores more than B but less than C. D scores less than B
+but more than E. Who scores the second highest marks?
+`,
+h:`
+A, B, C, D और E पाँच candidates के अंक अलग-अलग हैं।
+A के अंक B से अधिक लेकिन C से कम हैं। D के अंक B से कम
+लेकिन E से अधिक हैं। दूसरे सबसे अधिक अंक किसके हैं?
+`,
+o:[
+["A","A"],
+["B","B"],
+["C","C"],
+["D","D"]
+],
+a:"A",
+ae:"A",
+ah:"A",
+se:"The order is C > A > B > D > E. Therefore A scores the second highest.",
+sh:"क्रम C > A > B > D > E है। इसलिए दूसरे सबसे अधिक अंक A के हैं।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+In a class of 90 students, P is 34th from the top.
+Q is 27th from the bottom. If P is above Q,
+how many students are between them?
+`,
+h:`
+90 विद्यार्थियों की कक्षा में P ऊपर से 34वें स्थान पर है।
+Q नीचे से 27वें स्थान पर है। यदि P, Q से ऊपर है,
+तो दोनों के बीच कितने विद्यार्थी हैं?
+`,
+o:[
+["28","28"],
+["29","29"],
+["30","30"],
+["31","31"]
+],
+a:"B",
+ae:"29",
+ah:"29",
+se:"Q = 90 − 27 + 1 = 64th from top. Students between = 64 − 34 − 1 = 29.",
+sh:"Q = 90 − 27 + 1 = ऊपर से 64वाँ। बीच के विद्यार्थी = 64 − 34 − 1 = 29।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+Six persons A, B, C, D, E and F are standing in a line.
+B is immediately after A. C is immediately after B.
+D is before A and E is after C. F is between D and A.
+Who is third from the left?
+`,
+h:`
+A, B, C, D, E और F छह व्यक्ति एक पंक्ति में खड़े हैं।
+B, A के ठीक बाद है। C, B के ठीक बाद है। D, A से पहले है
+और E, C के बाद है। F, D और A के बीच है।
+बाएँ से तीसरे स्थान पर कौन है?
+`,
+o:[
+["A","A"],
+["B","B"],
+["C","C"],
+["F","F"]
+],
+a:"A",
+ae:"A",
+ah:"A",
+se:"The order is D − F − A − B − C − E. Therefore A is third from the left.",
+sh:"क्रम D − F − A − B − C − E है। इसलिए बाएँ से तीसरे स्थान पर A है।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+In a queue of 100 candidates, Rahul is 37th from the front.
+If 8 candidates ahead of Rahul are removed, what will be his
+new position from the front?
+`,
+h:`
+100 candidates की एक कतार में Rahul आगे से 37वें स्थान पर है।
+यदि Rahul से आगे के 8 candidates हटा दिए जाएँ,
+तो आगे से उसकी नई position क्या होगी?
+`,
+o:[
+["28th","28वाँ"],
+["31st","31वाँ"],
+["29th","29वाँ"],
+["30th","30वाँ"]
+],
+a:"C",
+ae:"29th",
+ah:"29वाँ",
+se:"New position = 37 − 8 = 29th.",
+sh:"नई position = 37 − 8 = 29वाँ।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+Seven students P, Q, R, S, T, U and V are arranged according
+to their marks. P scores more than Q, Q more than R,
+S more than P, T less than R, U more than S, and V less than T.
+Who has the highest marks?
+`,
+h:`
+P, Q, R, S, T, U और V सात विद्यार्थियों को उनके अंकों के अनुसार
+क्रम में रखा गया है। P के अंक Q से अधिक, Q के R से अधिक,
+S के P से अधिक, T के R से कम, U के S से अधिक और V के T से कम हैं।
+सर्वाधिक अंक किसके हैं?
+`,
+o:[
+["P","P"],
+["S","S"],
+["R","R"],
+["U","U"]
+],
+a:"D",
+ae:"U",
+ah:"U",
+se:"U > S > P > Q > R > T > V. Therefore U has the highest marks.",
+sh:"क्रम U > S > P > Q > R > T > V है। इसलिए U के सर्वाधिक अंक हैं।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+In a row of 68 persons, A is 21st from the left and B is 18th
+from the right. If 4 persons between A and B leave the row,
+how many persons will remain between A and B?
+`,
+h:`
+68 व्यक्तियों की एक पंक्ति में A बाएँ से 21वें और B दाएँ से 18वें स्थान पर है।
+यदि A और B के बीच के 4 व्यक्ति पंक्ति छोड़ देते हैं,
+तो A और B के बीच कितने व्यक्ति बचेंगे?
+`,
+o:[
+["24","24"],
+["25","25"],
+["26","26"],
+["27","27"]
+],
+a:"B",
+ae:"25",
+ah:"25",
+se:"B = 68 − 18 + 1 = 51st from the left. Initially, persons between = 51 − 21 − 1 = 29. If 4 of them leave, remaining = 29 − 4 = 25.",
+sh:"B = 68 − 18 + 1 = बाएँ से 51वाँ। शुरुआत में बीच के व्यक्ति = 51 − 21 − 1 = 29। यदि उनमें से 4 व्यक्ति चले जाएँ, तो शेष = 29 − 4 = 25।"
+},
+
+{
+part:"Part 5: Advanced Ranking & Order / Part 5: Advanced Ranking एवं Order",
+q:`
+Eight candidates A, B, C, D, E, F, G and H have different ranks.
+A ranks above B, B above C, D above A, E below C,
+F above D, G below E and H above F. Who ranks highest?
+`,
+h:`
+A, B, C, D, E, F, G और H आठ candidates की अलग-अलग ranks हैं।
+A की rank B से ऊपर, B की C से ऊपर, D की A से ऊपर,
+E की C से नीचे, F की D से ऊपर, G की E से नीचे और
+H की F से ऊपर है। सर्वोच्च Rank किसकी है?
+`,
+o:[
+["A","A"],
+["D","D"],
+["F","F"],
+["H","H"]
+],
+a:"D",
+ae:"H",
+ah:"H",
+se:"H > F > D > A > B > C > E > G. Therefore H ranks highest.",
+sh:"क्रम H > F > D > A > B > C > E > G है। इसलिए H की Rank सर्वोच्च है।"
+}
+
+];
+
+
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+
+function renderQuestions(){
+
+    const container =
+        document.getElementById("questionsContainer");
+
+    let currentPart = "";
+
+    questionData.forEach(function(item,index){
+
+        const qNumber = index + 1;
+
+        if(item.part !== currentPart){
+
+            currentPart = item.part;
+
+            const category =
+                document.createElement("div");
+
+            category.className = "category-title";
+            category.textContent = item.part;
+
+            container.appendChild(category);
+        }
+
+
+        const question =
+            document.createElement("div");
+
+        question.className = "question";
+
+        question.dataset.answer = item.a;
+        question.dataset.answered = "false";
+
+
+        let optionsHTML = "";
+
+        item.o.forEach(function(option,index){
+
+            const letter =
+                String.fromCharCode(65 + index);
+
+            optionsHTML += `
+                <div class="option"
+                     data-option="${letter}">
+
+                    <strong>(${letter}) ${option[0]}</strong>
+
+                    <span class="option-hindi">
+                        (${letter}) ${option[1]}
+                    </span>
+
+                </div>
+            `;
+        });
+
+
+        question.innerHTML = `
+
+            <div class="q-number">
+                Question ${qNumber} / प्रश्न ${qNumber}
+            </div>
+
+            <div class="q-text">
+                ${item.q}
+                <span class="q-hindi">
+                    ${item.h}
+                </span>
+            </div>
+
+            <div class="options">
+                ${optionsHTML}
+            </div>
+
+            <div class="result-holder"></div>
+
+            <div class="answer">
+
+                <strong>
+                    Answer: (${item.a}) ${item.ae}
+                </strong>
+
+                <span class="answer-hindi">
+                    उत्तर: (${item.a}) ${item.ah}
+                </span>
+
+                <div class="solution">
+
+                    <strong>
+                        English Solution:
+                    </strong>
+
+                    <div>
+                        ${item.se}
+                    </div>
+
+                    <span class="solution-hindi">
+
+                        <strong>
+                            हिंदी समाधान:
+                        </strong>
+
+                        <div>
+                            ${item.sh}
+                        </div>
+
+                    </span>
+
+                </div>
+
+            </div>
+        `;
+
+
+        container.appendChild(question);
+
+    });
+
+
+    attachQuestionEvents();
+
+}
+
+
+function attachQuestionEvents(){
+
+    document
+    .querySelectorAll(".question")
+    .forEach(function(question){
+
+        const options =
+            question.querySelectorAll(".option");
+
+        options.forEach(function(option){
+
+            option.addEventListener("click",function(){
+
+                if(question.dataset.answered === "true"){
+                    return;
+                }
+
+
+                question.dataset.answered = "true";
+
+                attempted++;
+
+
+                const selected =
+                    this.dataset.option;
+
+                const answer =
+                    question.dataset.answer;
+
+
+                this.classList.add("selected");
+
+
+                options.forEach(function(opt){
+                    opt.style.pointerEvents = "none";
+                });
+
+
+                const resultHolder =
+                    question.querySelector(".result-holder");
+
+
+                if(selected === answer){
+
+                    correct++;
+
+                    this.classList.add("correct");
+
+
+                    resultHolder.innerHTML = `
+                        <div class="result-message correct-message">
+                            ✅ Correct Answer! / सही उत्तर!
+                        </div>
+                    `;
+
+                }else{
+
+                    wrong++;
+
+                    this.classList.add("wrong");
+
+
+                    options.forEach(function(opt){
+
+                        if(opt.dataset.option === answer){
+
+                            opt.classList.add("correct");
+
+                        }
+
+                    });
+
+
+                    resultHolder.innerHTML = `
+                        <div class="result-message wrong-message">
+                            ❌ Incorrect / गलत।
+                            Correct Answer: (${answer}) / सही उत्तर: (${answer})
+                        </div>
+                    `;
+
+                }
+
+
+                question.querySelector(".answer")
+                    .style.display = "block";
+
+
+                question.querySelector(".solution")
+                    .style.display = "block";
+
+
+                updateResult();
+
+            });
+
+        });
+
+    });
+
+}
+
+
+function updateResult(){
+
+    document.getElementById("score")
+        .textContent = correct + " / 50";
+
+    document.getElementById("attempted")
+        .textContent = attempted;
+
+    document.getElementById("correct")
+        .textContent = correct;
+
+    document.getElementById("wrong")
+        .textContent = wrong;
+
+}
+
+
+function resetPractice(){
+
+    attempted = 0;
+    correct = 0;
+    wrong = 0;
+
+
+    document
+    .querySelectorAll(".question")
+    .forEach(function(question){
+
+        question.dataset.answered = "false";
+
+
+        const options =
+            question.querySelectorAll(".option");
+
+
+        options.forEach(function(option){
+
+            option.classList.remove(
+                "selected",
+                "correct",
+                "wrong"
+            );
+
+            option.style.pointerEvents = "auto";
+
+        });
+
+
+        const resultHolder =
+            question.querySelector(".result-holder");
+
+        if(resultHolder){
+            resultHolder.innerHTML = "";
+        }
+
+
+        const answer =
+            question.querySelector(".answer");
+
+        if(answer){
+            answer.style.display = "none";
+        }
+
+
+        const solution =
+            question.querySelector(".solution");
+
+        if(solution){
+            solution.style.display = "none";
+        }
+
+    });
+
+
+    updateResult();
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        renderQuestions();
+
+        updateResult();
+
+    }
+);
+
+</script>
+
+</body>
+</html>
