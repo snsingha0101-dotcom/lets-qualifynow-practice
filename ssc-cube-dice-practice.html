@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Cube & Dice Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+header{
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:16px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#d9eaf7;
+}
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:28px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.intro p{
+    margin-bottom:8px;
+}
+
+.intro ul{
+    margin:12px 0 0 20px;
+}
+
+.intro li{
+    margin-bottom:5px;
+}
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    border-left:5px solid #173f5f;
+    padding:14px 18px;
+    border-radius:7px;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+
+.question-number{
+    color:#173f5f;
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:5px;
+}
+
+.question-hindi{
+    font-size:16px;
+    font-weight:600;
+    color:#52606d;
+    margin-bottom:16px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.option{
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    text-align:left;
+    transition:0.2s;
+}
+
+.option:hover:not(:disabled){
+    background:#d9eaf7;
+}
+
+.option.correct{
+    background:#d4edda;
+    border-color:#28a745;
+    color:#155724;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#dc3545;
+    color:#721c24;
+}
+
+.option:disabled{
+    cursor:not-allowed;
+}
+
+.solution{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+    color:#243b53;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+.solution-hindi{
+    margin-top:8px;
+}
+
+.score-box{
+    background:#102a43;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    margin-bottom:8px;
+}
+
+.score-number{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.stat{
+    min-width:90px;
+}
+
+.stat strong{
+    display:block;
+    font-size:22px;
+}
+
+.stat span{
+    font-size:14px;
+}
+
+.reset-btn{
+    margin-top:22px;
+    background:#173f5f;
+    color:white;
+    border:1px solid #829ab1;
+    padding:11px 24px;
+    border-radius:7px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.reset-btn:hover{
+    background:#243b53;
+}
+
+.note{
+    background:white;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    color:#52606d;
+    margin-bottom:35px;
+}
+
+.note p{
+    margin-top:7px;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+        gap:10px 14px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .question-hindi{
+        font-size:15px;
+    }
+
+    .stats{
+        gap:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">LET'S QUALIFYNOW</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636"
+               target="_blank" rel="noopener">YouTube</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>🎲 SSC Cube & Dice Practice</h1>
+    <p>50 Exam-Oriented Questions with Answers & Detailed Solutions</p>
+</section>
+
+<div class="container">
+
+    <div class="intro">
+        <h2>SSC Cube & Dice Practice Set</h2>
+
+        <p>
+            This practice set covers cube painting, painted and unpainted
+            smaller cubes, face visibility, standard dice, opposite faces
+            and dice-based reasoning.
+        </p>
+
+        <p>
+            इस अभ्यास सेट में घन पर रंग करना, रंगे और बिना रंग वाले छोटे घन,
+            दिखाई देने वाले फलक, मानक पासा, विपरीत फलक तथा पासे पर आधारित
+            तर्कशक्ति के प्रश्न शामिल हैं।
+        </p>
+
+        <ul>
+            <li><strong>50 Questions</strong></li>
+            <li><strong>1 Mark</strong> for each correct answer</li>
+            <li><strong>No Negative Marking</strong></li>
+            <li>English + Hindi Questions and Options</li>
+            <li>Detailed English + Hindi Solutions</li>
+        </ul>
+
+        <p style="margin-top:12px;">
+            <strong>Note:</strong>
+            Questions referring to a standard die use opposite pairs
+            (1, 6), (2, 5) and (3, 4).
+        </p>
+
+        <p>
+            <strong>ध्यान दें:</strong>
+            मानक पासे वाले प्रश्नों में विपरीत फलकों के युग्म
+            (1, 6), (2, 5) और (3, 4) माने गए हैं।
+        </p>
+    </div>
+
+    <div class="part-title">
+        SSC Cube & Dice Practice Set — 50 Questions
+    </div>
+
+    <div id="questions-container"></div>
+
+    <div class="score-box">
+        <h2>Your Result</h2>
+
+        <div class="score-number" id="score">0 / 50</div>
+
+        <div class="stats">
+            <div class="stat">
+                <strong id="correct">0</strong>
+                <span>Correct</span>
+            </div>
+
+            <div class="stat">
+                <strong id="wrong">0</strong>
+                <span>Wrong</span>
+            </div>
+
+            <div class="stat">
+                <strong id="attempted">0</strong>
+                <span>Attempted</span>
+            </div>
+
+            <div class="stat">
+                <strong id="unattempted">50</strong>
+                <span>Unattempted</span>
+            </div>
+
+            <div class="stat">
+                <strong id="marks">0</strong>
+                <span>Marks</span>
+            </div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn" type="button">
+            Reset Practice
+        </button>
+    </div>
+
+    <div class="note">
+        <strong>Important:</strong>
+
+        <p>
+            Each question can be attempted only once. After selecting an
+            option, the correct answer and detailed solution will appear.
+        </p>
+
+        <p>
+            प्रत्येक प्रश्न का उत्तर केवल एक बार चुना जा सकता है।
+            विकल्प चुनने के बाद सही उत्तर और विस्तृत समाधान दिखाई देगा।
+        </p>
+
+        <p>
+            <strong>Scoring:</strong>
+            1 mark for every correct answer and no negative marking.
+        </p>
+
+        <p>
+            <strong>अंक गणना:</strong>
+            प्रत्येक सही उत्तर के लिए 1 अंक और गलत उत्तर के लिए कोई
+            नकारात्मक अंक नहीं।
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 LET'S QUALIFYNOW | SSC • Banking • Railway • Government Exams
+</footer>
+
+<script>
+const questions = [];
+
+/* =====================================================
+   CUBE PAINTING QUESTIONS — 1 TO 25
+===================================================== */
+
+function addCubeQuestion(n, type){
+
+    const total = n * n * n;
+    const inner = Math.pow(n - 2, 3);
+    const oneFace = 6 * Math.pow(n - 2, 2);
+    const twoFaces = 12 * (n - 2);
+    const threeFaces = 8;
+    const atLeastOne = total - inner;
+
+    const data = {
+        three: {
+            answer: threeFaces,
+            q: `A cube is painted on all six faces and divided into ${total} equal smaller cubes. How many smaller cubes have paint on exactly three faces?`,
+            h: `एक घन के सभी छह फलकों पर रंग करके उसे ${total} बराबर छोटे घनों में बाँटा गया। कितने छोटे घनों के ठीक तीन फलकों पर रंग होगा?`,
+            e: `Only the 8 corner cubes have exactly three painted faces. Therefore, the answer is 8.`,
+            hi: `केवल 8 कोने वाले छोटे घनों के ठीक तीन फलकों पर रंग होता है। अतः उत्तर 8 है।`
+        },
+
+        two: {
+            answer: twoFaces,
+            q: `A cube is painted on all six faces and divided into ${total} equal smaller cubes. How many smaller cubes have paint on exactly two faces?`,
+            h: `एक घन के सभी छह फलकों पर रंग करके उसे ${total} बराबर छोटे घनों में बाँटा गया। कितने छोटे घनों के ठीक दो फलकों पर रंग होगा?`,
+            e: `The cube has 12 edges. Each edge contributes (n − 2) cubes with exactly two painted faces. Total = 12 × (${n} − 2) = ${twoFaces}.`,
+            hi: `घन में 12 किनारे होते हैं। प्रत्येक किनारे पर (n − 2) छोटे घन होंगे। कुल संख्या = 12 × (${n} − 2) = ${twoFaces}।`
+        },
+
+        one: {
+            answer: oneFace,
+            q: `A cube is painted on all six faces and divided into ${total} equal smaller cubes. How many smaller cubes have paint on exactly one face?`,
+            h: `एक घन के सभी छह फलकों पर रंग करके उसे ${total} बराबर छोटे घनों में बाँटा गया। कितने छोटे घनों के ठीक एक फलक पर रंग होगा?`,
+            e: `Each face contributes (n − 2)² inner-face cubes. Total = 6 × (${n} − 2)² = ${oneFace}.`,
+            hi: `प्रत्येक फलक पर (n − 2)² ऐसे छोटे घन होंगे। कुल संख्या = 6 × (${n} − 2)² = ${oneFace}।`
+        },
+
+        none: {
+            answer: inner,
+            q: `A cube is painted on all six faces and divided into ${total} equal smaller cubes. How many smaller cubes have no paint on any face?`,
+            h: `एक घन के सभी छह फलकों पर रंग करके उसे ${total} बराबर छोटे घनों में बाँटा गया। कितने छोटे घनों के किसी भी फलक पर रंग नहीं होगा?`,
+            e: `The unpainted cubes lie completely inside the original cube. Their number is (n − 2)³ = (${n} − 2)³ = ${inner}.`,
+            hi: `बिना रंग वाले घन मूल घन के अंदर होते हैं। उनकी संख्या = (n − 2)³ = (${n} − 2)³ = ${inner}।`
+        },
+
+        atLeast: {
+            answer: atLeastOne,
+            q: `A cube is painted on all six faces and divided into ${total} equal smaller cubes. How many smaller cubes have paint on at least one face?`,
+            h: `एक घन के सभी छह फलकों पर रंग करके उसे ${total} बराबर छोटे घनों में बाँटा गया। कम-से-कम एक रंगा हुआ फलक कितने छोटे घनों पर होगा?`,
+            e: `Total cubes = ${total}. Unpainted inner cubes = ${inner}. Therefore, at least one painted face = ${total} − ${inner} = ${atLeastOne}.`,
+            hi: `कुल छोटे घन ${total} हैं। बिना रंग वाले अंदरूनी घन ${inner} हैं। अतः कम-से-कम एक रंगा हुआ फलक वाले घन = ${total} − ${inner} = ${atLeastOne}।`
+        }
+    };
+
+    const item = data[type];
+    const answer = item.answer;
+
+    let candidates = [
+        answer,
+        Math.max(0, answer - Math.max(1, n)),
+        answer + Math.max(2, n),
+        answer + Math.max(4, 2 * n)
+    ];
+
+    if(type === "three"){
+        candidates = [4, 6, 8, 12];
+    }
+
+    if(type === "two"){
+        candidates = [
+            Math.max(0, twoFaces - 12),
+            Math.max(0, twoFaces - 6),
+            twoFaces,
+            twoFaces + 12
+        ];
+    }
+
+    if(type === "one"){
+        candidates = [
+            Math.max(0, oneFace - 24),
+            Math.max(0, oneFace - 12),
+            oneFace,
+            oneFace + 24
+        ];
+    }
+
+    if(type === "none"){
+        candidates = [
+            Math.max(0, inner - 1),
+            Math.max(0, inner - n),
+            inner,
+            inner + n
+        ];
+    }
+
+    if(type === "atLeast"){
+        candidates = [
+            Math.max(0, atLeastOne - 2 * n),
+            Math.max(0, atLeastOne - n),
+            atLeastOne,
+            Math.min(total, atLeastOne + n)
+        ];
+    }
+
+    /*
+       Ensure that every option is a valid non-negative count,
+       that the correct answer is included, and that all four
+       options are distinct.
+    */
+
+    candidates = [...new Set(
+        candidates.filter(v =>
+            Number.isInteger(v) &&
+            v >= 0 &&
+            v <= total
+        )
+    )];
+
+    if(!candidates.includes(answer)){
+        candidates.push(answer);
+    }
+
+    let distractors = candidates.filter(v => v !== answer);
+    let distance = 1;
+
+    while(distractors.length < 3){
+
+        const possibleValues = [
+            answer + distance,
+            answer - distance
+        ];
+
+        possibleValues.forEach(value => {
+            if(
+                value >= 0 &&
+                value <= total &&
+                value !== answer &&
+                !distractors.includes(value) &&
+                distractors.length < 3
+            ){
+                distractors.push(value);
+            }
+        });
+
+        distance++;
+    }
+
+    distractors = distractors.slice(0, 3);
+
+    const correctIndex = (questions.length * 3 + n) % 4;
+    const options = [...distractors];
+
+    options.splice(correctIndex, 0, answer);
+
+    questions.push({
+        q: item.q,
+        h: item.h,
+        o: options.map(String),
+        a: correctIndex,
+        e: item.e,
+        hi: item.hi,
+        section: "Cube Painting"
+    });
+}
+
+/* 25 cube questions: 5 types for each cube size from 3 to 7. */
+
+[
+    [3,"three"], [3,"two"], [3,"one"], [3,"none"], [3,"atLeast"],
+    [4,"three"], [4,"two"], [4,"one"], [4,"none"], [4,"atLeast"],
+    [5,"three"], [5,"two"], [5,"one"], [5,"none"], [5,"atLeast"],
+    [6,"three"], [6,"two"], [6,"one"], [6,"none"], [6,"atLeast"],
+    [7,"three"], [7,"two"], [7,"one"], [7,"none"], [7,"atLeast"]
+].forEach(([n,type]) => addCubeQuestion(n,type));
+
+
+/* =====================================================
+   DICE REASONING QUESTIONS — 26 TO 50
+===================================================== */
+
+function addDice(q,h,o,a,e,hi){
+    questions.push({
+        q,h,o,a,e,hi,
+        section:"Dice Reasoning"
+    });
+}
+
+addDice(
+"On a standard die, which number is opposite to 1?",
+"एक मानक पासे में 1 के विपरीत कौन-सी संख्या होती है?",
+["2","4","5","6"],3,
+"On the stated standard die, opposite pairs are (1,6), (2,5) and (3,4). Therefore, 6 is opposite 1.",
+"दिए गए मानक पासे में विपरीत युग्म (1,6), (2,5) और (3,4) हैं। इसलिए 1 के विपरीत 6 है।"
+);
+
+addDice(
+"On a standard die, which number is opposite to 2?",
+"एक मानक पासे में 2 के विपरीत कौन-सी संख्या होती है?",
+["1","3","5","6"],2,
+"The opposite pairs are (1,6), (2,5) and (3,4). Therefore, 5 is opposite 2.",
+"विपरीत युग्म (1,6), (2,5) और (3,4) हैं। इसलिए 2 के विपरीत 5 है।"
+);
+
+addDice(
+"On a standard die, which number is opposite to 3?",
+"एक मानक पासे में 3 के विपरीत कौन-सी संख्या होती है?",
+["1","2","4","6"],2,
+"The face opposite 3 is 4.",
+"3 के विपरीत फलक पर 4 होता है।"
+);
+
+addDice(
+"Which of the following is a correct opposite-face pair on a standard die?",
+"मानक पासे में निम्नलिखित में से कौन-सा विपरीत फलकों का सही युग्म है?",
+["1 and 4","2 and 5","3 and 5","4 and 6"],1,
+"The three opposite pairs are (1,6), (2,5) and (3,4).",
+"तीन विपरीत युग्म (1,6), (2,5) और (3,4) हैं।"
+);
+
+addDice(
+"Which pair cannot be on opposite faces of the stated standard die?",
+"दिए गए मानक पासे में कौन-सा युग्म विपरीत फलकों पर नहीं हो सकता?",
+["1 and 6","2 and 5","3 and 4","1 and 5"],3,
+"Only (1,6), (2,5) and (3,4) are the stated opposite pairs. Therefore, 1 and 5 are not opposite.",
+"केवल (1,6), (2,5) और (3,4) विपरीत युग्म हैं। इसलिए 1 और 5 विपरीत नहीं हैं।"
+);
+
+addDice(
+"What is the sum of the numbers on opposite faces of the stated standard die?",
+"दिए गए मानक पासे के विपरीत फलकों की संख्याओं का योग कितना है?",
+["5","6","7","8"],2,
+"Each stated opposite pair adds up to 7: 1+6, 2+5 and 3+4.",
+"प्रत्येक विपरीत युग्म का योग 7 है: 1+6, 2+5 और 3+4।"
+);
+
+addDice(
+"If 6 is on the top face of a standard die, which number is on the bottom face?",
+"यदि मानक पासे के ऊपरी फलक पर 6 है, तो निचले फलक पर कौन-सी संख्या होगी?",
+["1","2","3","5"],0,
+"Opposite faces 1 and 6 are on opposite sides. Hence, the bottom face is 1.",
+"1 और 6 विपरीत फलक हैं। अतः निचले फलक पर 1 होगा।"
+);
+
+addDice(
+"If 5 is on the bottom face of a standard die, which number is on the top face?",
+"यदि मानक पासे के निचले फलक पर 5 है, तो ऊपरी फलक पर कौन-सी संख्या होगी?",
+["1","2","3","6"],1,
+"The face opposite 5 is 2, so 2 must be on the top.",
+"5 के विपरीत 2 है, इसलिए ऊपरी फलक पर 2 होगा।"
+);
+
+addDice(
+"Which number is opposite to 4 on the stated standard die?",
+"दिए गए मानक पासे में 4 के विपरीत कौन-सी संख्या है?",
+["1","2","3","5"],2,
+"The opposite pair is (3,4).",
+"विपरीत फलकों का युग्म (3,4) है।"
+);
+
+addDice(
+"Which number cannot be adjacent to 1 on the stated standard die?",
+"दिए गए मानक पासे में 1 के आसन्न फलक पर कौन-सी संख्या नहीं हो सकती?",
+["2","3","4","6"],3,
+"Opposite faces are not adjacent. Since 6 is opposite 1, it cannot be adjacent to 1.",
+"विपरीत फलक आसन्न नहीं होते। चूँकि 6, 1 के विपरीत है, इसलिए 6, 1 के आसन्न नहीं हो सकता।"
+);
+
+addDice(
+"Which number cannot be adjacent to 2 on the stated standard die?",
+"दिए गए मानक पासे में 2 के आसन्न फलक पर कौन-सी संख्या नहीं हो सकती?",
+["1","3","5","6"],2,
+"5 is opposite 2. Opposite faces cannot be adjacent.",
+"5, 2 के विपरीत है। विपरीत फलक आसन्न नहीं हो सकते।"
+);
+
+addDice(
+"Which number cannot be adjacent to 3 on the stated standard die?",
+"दिए गए मानक पासे में 3 के आसन्न फलक पर कौन-सी संख्या नहीं हो सकती?",
+["1","2","4","6"],2,
+"4 is opposite 3, so the two faces cannot be adjacent.",
+"4, 3 के विपरीत है, इसलिए दोनों फलक आसन्न नहीं हो सकते।"
+);
+
+addDice(
+"Which pair cannot be visible together on two adjacent faces of the stated standard die?",
+"दिए गए मानक पासे के दो आसन्न फलकों पर कौन-सा युग्म एक साथ दिखाई नहीं दे सकता?",
+["1 and 2","2 and 3","3 and 4","5 and 6"],2,
+"3 and 4 are opposite faces. Opposite faces cannot be visible together as adjacent faces.",
+"3 और 4 विपरीत फलक हैं। विपरीत फलक आसन्न फलकों के रूप में एक साथ दिखाई नहीं दे सकते।"
+);
+
+addDice(
+"Which pair can be on adjacent faces of the stated standard die?",
+"दिए गए मानक पासे में कौन-सा युग्म आसन्न फलकों पर हो सकता है?",
+["1 and 6","2 and 5","3 and 4","1 and 2"],3,
+"1 and 2 are not an opposite pair, so they can be adjacent. The other listed pairs are opposite pairs.",
+"1 और 2 विपरीत युग्म नहीं हैं, इसलिए वे आसन्न हो सकते हैं। अन्य दिए गए युग्म विपरीत हैं।"
+);
+
+addDice(
+"Which set contains all three opposite pairs of the stated standard die?",
+"दिए गए मानक पासे के तीनों विपरीत युग्म किस विकल्प में हैं?",
+["(1,2), (3,4), (5,6)","(1,6), (2,5), (3,4)","(1,5), (2,4), (3,6)","(1,4), (2,6), (3,5)"],1,
+"The opposite pairs are (1,6), (2,5) and (3,4).",
+"विपरीत युग्म (1,6), (2,5) और (3,4) हैं।"
+);
+
+addDice(
+"A standard die has 2 on the top face. Which number must be on the bottom face?",
+"मानक पासे के ऊपरी फलक पर 2 है। निचले फलक पर कौन-सी संख्या अवश्य होगी?",
+["1","3","5","6"],2,
+"The face opposite 2 is 5.",
+"2 के विपरीत फलक पर 5 होता है।"
+);
+
+addDice(
+"A standard die has 3 on the bottom face. Which number must be on the top face?",
+"मानक पासे के निचले फलक पर 3 है। ऊपरी फलक पर कौन-सी संख्या अवश्य होगी?",
+["1","2","4","6"],2,
+"The face opposite 3 is 4.",
+"3 के विपरीत फलक पर 4 होता है।"
+);
+
+/* Q43 — Corrected question and options. */
+
+addDice(
+"Which set contains all the numbers that are adjacent to both 1 and 6 on the stated standard die?",
+"दिए गए मानक पासे में कौन-से विकल्प में वे सभी संख्याएँ हैं जो 1 और 6 दोनों के आसन्न हैं?",
+[
+    "Only 2 and 5 / केवल 2 और 5",
+    "Only 3 and 4 / केवल 3 और 4",
+    "2, 3, 4 and 5 / 2, 3, 4 और 5",
+    "No other numbers / कोई अन्य संख्या नहीं"
+],2,
+"Since 1 and 6 are opposite faces, every other face is adjacent to both of them. Therefore, the numbers are 2, 3, 4 and 5.",
+"चूँकि 1 और 6 विपरीत फलक हैं, इसलिए बाकी सभी फलक इन दोनों के आसन्न हैं। अतः संख्याएँ 2, 3, 4 और 5 हैं।"
+);
+
+addDice(
+"How many faces of a cube-shaped die are adjacent to any one face?",
+"घनाकार पासे के किसी एक फलक के कितने फलक आसन्न होते हैं?",
+["2","3","4","5"],2,
+"A cube has 6 faces. One face is opposite to the selected face; the remaining 4 faces are adjacent to it.",
+"घन के 6 फलक होते हैं। एक फलक चुने गए फलक के विपरीत होता है; शेष 4 फलक उसके आसन्न होते हैं।"
+);
+
+addDice(
+"How many faces are opposite to a given face on a standard die?",
+"मानक पासे में किसी दिए गए फलक के विपरीत कितने फलक होते हैं?",
+["1","2","3","4"],0,
+"Each face has exactly one opposite face.",
+"प्रत्येक फलक का ठीक एक विपरीत फलक होता है।"
+);
+
+addDice(
+"Which statement about opposite faces of a cube-shaped die is correct?",
+"घनाकार पासे के विपरीत फलकों के बारे में कौन-सा कथन सही है?",
+["They share an edge","They share a corner","They do not touch each other","They are always adjacent"],2,
+"Opposite faces are on opposite sides of the cube and do not touch each other.",
+"विपरीत फलक घन की विपरीत दिशाओं में होते हैं और एक-दूसरे को स्पर्श नहीं करते।"
+);
+
+addDice(
+"A die shows 1, 2 and 3 on three faces meeting at one corner. Can 1 and 2 be opposite?",
+"एक पासे के एक ही कोने पर मिलने वाले तीन फलकों पर 1, 2 और 3 हैं। क्या 1 और 2 विपरीत हो सकते हैं?",
+["Yes, always","No, they are adjacent","Only if 3 is opposite 1","Cannot be determined"],1,
+"All three faces meet at the same corner, so each pair among them is adjacent. Therefore, 1 and 2 cannot be opposite.",
+"तीनों फलक एक ही कोने पर मिलते हैं, इसलिए इनके प्रत्येक दो फलक आसन्न हैं। अतः 1 और 2 विपरीत नहीं हो सकते।"
+);
+
+addDice(
+"Three faces of a die meet at one corner. If the faces are 2, 4 and 6, which statement must be true?",
+"पासे के एक कोने पर 2, 4 और 6 वाले तीन फलक मिलते हैं। कौन-सा कथन अवश्य सही होगा?",
+["2 and 4 are opposite","4 and 6 are opposite","2 and 6 are adjacent","All three pairs are adjacent"],3,
+"Any two faces meeting at the same corner are adjacent. Hence, all three pairs are adjacent.",
+"एक ही कोने पर मिलने वाले किन्हीं दो फलकों के बीच आसन्नता होती है। इसलिए तीनों युग्म आसन्न हैं।"
+);
+
+addDice(
+"On a cube-shaped die, two faces that meet along an edge are called:",
+"घनाकार पासे में किनारे पर मिलने वाले दो फलकों को क्या कहते हैं?",
+["Opposite faces","Adjacent faces","Hidden faces","Parallel edges"],1,
+"Two faces sharing an edge are adjacent faces.",
+"किनारे को साझा करने वाले दो फलकों को आसन्न फलक कहते हैं।"
+);
+
+addDice(
+"A cube-shaped die has 6 faces. If one face is on top and one is at the bottom, how many faces remain around the sides?",
+"एक घनाकार पासे के 6 फलक हैं। यदि एक फलक ऊपर और एक नीचे है, तो किनारों पर कितने फलक बचेंगे?",
+["2","3","4","5"],2,
+"Two faces occupy the top and bottom positions. The remaining 6 − 2 = 4 faces surround the sides.",
+"दो फलक ऊपर और नीचे हैं। शेष फलकों की संख्या 6 − 2 = 4 है।"
+);
+
+
+/* =====================================================
+   RENDER QUESTIONS
+===================================================== */
+
+function renderQuestions(){
+
+    const container = document.getElementById("questions-container");
+    container.innerHTML = "";
+
+    questions.forEach((q,index)=>{
+
+        const card = document.createElement("div");
+        card.className = "question-card";
+        card.dataset.answer = q.a;
+
+        card.innerHTML = `
+            <div class="question-number">
+                ${q.section} — Question ${index+1} / ${questions.length}
+            </div>
+
+            <div class="question">${q.q}</div>
+
+            <div class="question-hindi">${q.h}</div>
+
+            <div class="options">
+                ${q.o.map((option,i)=>`
+                    <button class="option"
+                        type="button"
+                        data-index="${i}">
+                        ${String.fromCharCode(65+i)}. ${option}
+                    </button>
+                `).join("")}
+            </div>
+
+            <div class="solution">
+                <strong>Correct Answer:</strong>
+                ${String.fromCharCode(65+q.a)}. ${q.o[q.a]}
+
+                <div style="margin-top:8px;">
+                    <strong>Solution:</strong> ${q.e}
+                </div>
+
+                <div class="solution-hindi">
+                    <strong>सही उत्तर:</strong>
+                    ${String.fromCharCode(65+q.a)}. ${q.o[q.a]}
+
+                    <br>
+                    <strong>समाधान:</strong> ${q.hi}
+                </div>
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+
+    attachOptionEvents();
+}
+
+
+/* =====================================================
+   OPTION EVENTS
+===================================================== */
+
+let correct = 0;
+let wrong = 0;
+let attempted = 0;
+
+function attachOptionEvents(){
+
+    document.querySelectorAll(".option").forEach(option=>{
+
+        option.addEventListener("click",function(){
+
+            const card = this.closest(".question-card");
+
+            if(card.classList.contains("attempted")){
+                return;
+            }
+
+            card.classList.add("attempted");
+            attempted++;
+
+            const selected = Number(this.dataset.index);
+            const answer = Number(card.dataset.answer);
+
+            const allOptions = card.querySelectorAll(".option");
+
+            if(selected === answer){
+                this.classList.add("correct");
+                correct++;
+            }else{
+                this.classList.add("wrong");
+                allOptions[answer].classList.add("correct");
+                wrong++;
+            }
+
+            allOptions.forEach(btn=>{
+                btn.disabled = true;
+            });
+
+            card.querySelector(".solution").style.display = "block";
+
+            updateScore();
+        });
+    });
+}
+
+
+/* =====================================================
+   SCORE CALCULATION
+===================================================== */
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        `${correct} / ${questions.length}`;
+
+    document.getElementById("correct").textContent = correct;
+    document.getElementById("wrong").textContent = wrong;
+    document.getElementById("attempted").textContent = attempted;
+
+    document.getElementById("unattempted").textContent =
+        questions.length - attempted;
+
+    document.getElementById("marks").textContent = correct;
+}
+
+
+/* =====================================================
+   RESET PRACTICE
+===================================================== */
+
+document.getElementById("resetBtn").addEventListener("click",function(){
+
+    correct = 0;
+    wrong = 0;
+    attempted = 0;
+
+    renderQuestions();
+    updateScore();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+});
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+renderQuestions();
+updateScore();
+
+</script>
+
+</body>
+</html>
