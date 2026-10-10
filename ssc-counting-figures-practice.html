@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSC Counting Figures Practice | Let's QualifyNow</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;line-height:1.6}
+
+header{
+    background:#102a43;
+    color:#fff;
+    padding:14px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+.brand{flex-shrink:0}
+header h1{font-size:25px;letter-spacing:.5px}
+header p{font-size:14px;margin-top:4px}
+
+nav{
+    background:#173f5f;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    align-items:center;
+    gap:4px;
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    padding:7px 9px;
+    font-size:13px;
+    border-radius:4px;
+    white-space:nowrap;
+}
+nav a:hover{background:#52606d}
+
+.hero{background:#173f5f;color:white;text-align:center;padding:24px 14px}
+.hero h2{font-size:25px;margin-bottom:8px}
+.hero p{font-size:15px}
+
+.container{max-width:1050px;margin:22px auto;padding:0 14px}
+.instructions,.question,.result-box{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:18px;
+    margin-bottom:18px;
+}
+.instructions h3,.question h3{color:#102a43;margin-bottom:10px}
+.instructions ul{padding-left:22px}
+.instructions li{margin-bottom:5px}
+.question-number{font-weight:bold;color:#173f5f;margin-bottom:8px}
+.question-text{font-size:16px;font-weight:600;margin-bottom:8px}
+.hindi{margin-bottom:12px;color:#52606d}
+
+.diagram{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    border:1px solid #e1e8ed;
+    border-radius:6px;
+    padding:12px;
+    margin:12px auto;
+    max-width:540px;
+    min-height:145px;
+    overflow:auto;
+}
+.diagram svg{
+    display:block;
+    width:100%;
+    max-width:420px;
+    height:auto;
+    max-height:280px;
+}
+
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}
+.option{
+    border:1px solid #d9e2ec;
+    border-radius:6px;
+    padding:10px;
+    background:#f7f9fc;
+    cursor:pointer;
+    text-align:left;
+    color:#243b53;
+    font-size:15px;
+}
+.option:hover{background:#d9eaf7}
+.option.correct{background:#d9ead3;border-color:#6a9b62}
+.option.wrong{background:#f4cccc;border-color:#c56b6b}
+.option:disabled{cursor:default}
+
+.feedback{margin-top:12px;padding:12px;border-radius:6px;display:none}
+.feedback.show{display:block}
+.explanation{margin-top:8px;color:#52606d}
+
+.result-box{text-align:center}
+.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:15px 0}
+.score-item{background:#f7f9fc;border:1px solid #d9e2ec;padding:12px;border-radius:6px}
+.score-item strong{display:block;font-size:23px;color:#102a43}
+
+button.action{
+    background:#173f5f;
+    color:#fff;
+    border:none;
+    padding:11px 18px;
+    border-radius:5px;
+    cursor:pointer;
+    margin:6px;
+    font-size:15px;
+}
+button.action:hover{background:#102a43}
+button.action:disabled{opacity:.6;cursor:not-allowed}
+.back-link{display:inline-block;margin:10px 0 20px;color:#173f5f;font-weight:bold;text-decoration:none}
+
+footer{background:#102a43;color:#fff;text-align:center;padding:22px 12px;margin-top:30px}
+footer p{margin:4px 0;font-size:14px}
+
+@media(max-width:900px){
+    header{align-items:flex-start;flex-direction:column;gap:12px}
+    nav{justify-content:flex-start;width:100%}
+}
+@media(max-width:600px){
+    header h1{font-size:21px}
+    .hero h2{font-size:22px}
+    .options{grid-template-columns:1fr}
+    .score-grid{grid-template-columns:repeat(2,1fr)}
+    nav a{font-size:12px;padding:6px}
+    .container{padding:0 9px}
+    .question{padding:13px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <h1>LET'S QUALIFYNOW</h1>
+        <p>You Are Closer To Success</p>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ssc-reasoning.html">SSC Reasoning Course</a>
+        <a href="courses.html">Courses</a>
+        <a href="study-material.html">Study Material</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="test-series.html">Test Series</a>
+        <a href="exams.html">Exams</a>
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>🔷 SSC Counting Figures Practice</h2>
+    <p>70 Exam-Oriented Questions with Answers &amp; Explanations</p>
+    <p>SSC CGL • CHSL • CPO • MTS • Other Government Exams</p>
+</section>
+
+<main class="container">
+
+    <section class="instructions">
+        <h3>📘 Instructions / निर्देश</h3>
+        <ul>
+            <li>Questions 1–50: Count all possible squares or rectangles formed by the lines.</li>
+            <li>Questions 51–70: Count all triangles of every possible size and orientation in each triangular grid.</li>
+            <li>Count smaller figures as well as larger figures formed by combining smaller parts.</li>
+            <li>प्रश्न 1–50: रेखाओं से बनने वाले सभी वर्गों और आयतों की संख्या गिनिए।</li>
+            <li>प्रश्न 51–70: प्रत्येक त्रिभुजाकार ग्रिड में सभी आकारों और दिशाओं के त्रिभुज गिनिए।</li>
+            <li>Each question carries 1 mark. No negative marking. / प्रत्येक प्रश्न 1 अंक का है। नकारात्मक अंक नहीं हैं।</li>
+        </ul>
+    </section>
+
+    <div id="questionsContainer"></div>
+
+    <section class="result-box" id="resultBox">
+        <h3>📊 Practice Result / अभ्यास परिणाम</h3>
+        <div class="score-grid">
+            <div class="score-item"><strong id="score">0/70</strong>Score</div>
+            <div class="score-item"><strong id="correctCount">0</strong>Correct</div>
+            <div class="score-item"><strong id="attemptedCount">0</strong>Attempted</div>
+            <div class="score-item"><strong id="wrongCount">0</strong>Wrong</div>
+        </div>
+        <p id="resultMessage">Attempt the questions and check your result.</p>
+        <button class="action" onclick="resetTest()">Reset Practice / दोबारा शुरू करें</button>
+    </section>
+
+    <a class="back-link" href="ssc-topic-wise-practice.html">← Back to SSC Topic-wise Practice</a>
+</main>
+
+<footer>
+    <h3>LET'S QUALIFYNOW</h3>
+    <p>N Saurabh Sir | Reasoning Faculty</p>
+    <p>SSC • Banking • Railway • Government Exams</p>
+    <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
+    <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
+</footer>
+
+<script>
+const TOTAL_QUESTIONS = 70;
+
+/* Questions 1–50: original question data retained */
+const questionData = [
+[2,2,"square"],[2,3,"rectangle"],[3,3,"square"],[1,4,"rectangle"],[4,4,"square"],
+[2,4,"rectangle"],[2,2,"rectangle"],[3,2,"rectangle"],[3,3,"rectangle"],[3,4,"rectangle"],
+[1,3,"square"],[1,5,"rectangle"],[4,4,"rectangle"],[2,5,"rectangle"],[3,3,"rectangle"],
+[2,3,"square"],[4,2,"rectangle"],[2,4,"square"],[4,3,"rectangle"],[3,2,"square"],
+[2,2,"square"],[2,3,"square"],[1,6,"rectangle"],[4,4,"square"],[2,6,"rectangle"],
+[1,4,"square"],[3,2,"rectangle"],[3,4,"square"],[4,4,"rectangle"],[2,5,"square"],
+[3,5,"rectangle"],[3,3,"square"],[1,7,"rectangle"],[4,3,"square"],[5,2,"rectangle"],
+[2,4,"square"],[4,5,"rectangle"],[3,5,"square"],[2,7,"rectangle"],[4,4,"square"],
+[3,6,"rectangle"],[2,6,"square"],[5,3,"rectangle"],[3,4,"square"],[4,2,"rectangle"],
+[2,3,"square"],[3,4,"rectangle"],[4,4,"square"],[2,5,"rectangle"],[3,3,"square"]
+];
+
+/* Questions 51–70: triangular lattice divisions and orientation */
+const triangleData = [
+[2,false],[3,true],[4,false],[5,true],[3,false],
+[4,true],[5,false],[2,true],[4,false],[5,true],
+[3,false],[2,true],[5,false],[4,true],[3,false],
+[5,true],[2,false],[4,true],[5,false],[3,true]
+];
+
+function countSquares(rows,cols){
+    let total=0;
+
+    for(let size=1;size<=Math.min(rows,cols);size++){
+        total+=(rows-size+1)*(cols-size+1);
+    }
+
+    return total;
+}
+
+/* Counts rectangles including squares */
+function countRectangles(rows,cols){
+    return rows*(rows+1)/2*cols*(cols+1)/2;
+}
+
+/*
+All triangles in a complete triangular lattice:
+floor(n(n+2)(2n+1)/8)
+This counts triangles of every size and both orientations.
+*/
+function countTriangles(n){
+    return Math.floor(n*(n+2)*(2*n+1)/8);
+}
+
+function makeGrid(rows,cols){
+    const W=360,H=220,pad=22;
+    const cell=Math.min((W-pad*2)/cols,(H-pad*2)/rows);
+    const w=cell*cols,h=cell*rows;
+    const x=(W-w)/2,y=(H-h)/2;
+
+    let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Grid with ${rows} rows and ${cols} columns">`;
+
+    s+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="white" stroke="#243b53" stroke-width="2"/>`;
+
+    for(let c=1;c<cols;c++){
+        const xx=x+c*cell;
+        s+=`<line x1="${xx}" y1="${y}" x2="${xx}" y2="${y+h}" stroke="#243b53" stroke-width="1.7"/>`;
+    }
+
+    for(let r=1;r<rows;r++){
+        const yy=y+r*cell;
+        s+=`<line x1="${x}" y1="${yy}" x2="${x+w}" y2="${yy}" stroke="#243b53" stroke-width="1.7"/>`;
+    }
+
+    return s+"</svg>";
+}
+
+/*
+Correct triangular lattice renderer.
+
+Every vertex is calculated using the three vertices of an
+equilateral triangle. All three families of parallel lines
+are drawn from valid lattice points.
+*/
+function makeTriangleGrid(n,inverted){
+    const W=360,H=240;
+    const A=inverted ? {x:180,y:222} : {x:180,y:18};
+    const B=inverted ? {x:42,y:18} : {x:42,y:222};
+    const C=inverted ? {x:318,y:18} : {x:318,y:222};
+
+    function point(i,j){
+        return {
+            x:A.x+(i/n)*(B.x-A.x)+(j/n)*(C.x-A.x),
+            y:A.y+(i/n)*(B.y-A.y)+(j/n)*(C.y-A.y)
+        };
+    }
+
+    let lines="";
+
+    function drawLine(p1,p2){
+        lines+=`<line x1="${p1.x.toFixed(2)}" y1="${p1.y.toFixed(2)}" x2="${p2.x.toFixed(2)}" y2="${p2.y.toFixed(2)}" stroke="#243b53" stroke-width="1.7" stroke-linecap="round"/>`;
+    }
+
+    /* Family 1: lines parallel to side AB */
+    for(let j=0;j<=n;j++){
+        drawLine(point(0,j),point(n-j,j));
+    }
+
+    /* Family 2: lines parallel to side AC */
+    for(let i=0;i<=n;i++){
+        drawLine(point(i,0),point(i,n-i));
+    }
+
+    /* Family 3: lines parallel to side BC */
+    for(let k=0;k<=n;k++){
+        drawLine(point(0,k),point(k,0));
+    }
+
+    return `
+    <svg viewBox="0 0 ${W} ${H}"
+         role="img"
+         aria-label="${inverted ? "Inverted" : "Upright"} triangular grid with ${n} equal divisions on each side"
+         xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="${W}" height="${H}" fill="#ffffff"/>
+        ${lines}
+    </svg>`;
+}
+
+function makeOptions(correct,seed){
+    const candidates=[
+        correct+1,correct-1,correct+2,correct-2,
+        correct+3,correct-3,correct+4,correct-4,
+        correct+5,correct-5
+    ].filter(n=>n>0&&n!==correct);
+
+    const wrong=[];
+
+    for(const value of candidates){
+        if(!wrong.includes(value))wrong.push(value);
+        if(wrong.length===3)break;
+    }
+
+    const options=[correct,...wrong];
+    const shift=seed%4;
+
+    return options.slice(shift).concat(options.slice(0,shift));
+}
+
+function createGridQuestion(q,index){
+    const number=index+1;
+    const [rows,cols,kind]=q;
+    const isSquare=kind==="square";
+    const correct=isSquare?countSquares(rows,cols):countRectangles(rows,cols);
+
+    const english=isSquare
+        ?"Count the total number of squares in the figure."
+        :"Count the total number of rectangles, including squares, in the figure.";
+
+    const hindi=isSquare
+        ?"आकृति में कुल कितने वर्ग हैं?"
+        :"वर्गों सहित आकृति में कुल कितने आयत हैं?";
+
+    const explanation=isSquare
+        ?`Square count: ${Array.from({length:Math.min(rows,cols)},(_,i)=>`(${rows-i}) × (${cols-i})`).join(" + ")} = ${correct}. / सभी आकारों के वर्गों की संख्या जोड़ने पर कुल ${correct} वर्ग मिलते हैं।`
+        :`Rectangles = [${rows} × (${rows}+1) ÷ 2] × [${cols} × (${cols}+1) ÷ 2] = ${correct}. / आयतों की कुल संख्या = ${correct}।`;
+
+    const options=makeOptions(correct,number*7+rows+cols);
+    const card=document.createElement("section");
+
+    card.className="question";
+    card.id="question-"+number;
+
+    card.innerHTML=`
+        <div class="question-number">Question ${number} of ${TOTAL_QUESTIONS}</div>
+        <div class="question-text">${english}</div>
+        <div class="hindi">${hindi}</div>
+        <div class="diagram">${makeGrid(rows,cols)}</div>
+        <div class="options">
+            ${options.map((value,i)=>`
+                <button type="button" class="option" data-value="${value}"
+                    onclick="answerQuestion(${number},${value},this)">
+                    ${["A","B","C","D"][i]}. ${value}
+                </button>`).join("")}
+        </div>
+        <div class="feedback" id="feedback-${number}"></div>`;
+
+    card.dataset.answer=correct;
+    card.dataset.explanation=explanation;
+
+    document.getElementById("questionsContainer").appendChild(card);
+}
+
+function createTriangleQuestion(q,index){
+    const number=51+index;
+    const [n,inverted]=q;
+    const correct=countTriangles(n);
+    const options=makeOptions(correct,number*11+n);
+
+    const english="Count all the triangles of every possible size in the figure.";
+    const hindi="आकृति में सभी आकारों के कुल कितने त्रिभुज हैं?";
+
+    const orientation=inverted ? "inverted" : "upright";
+
+    const explanation=
+        `The figure is a complete triangular lattice with ${n} equal divisions along each side. Count all upright and inverted triangles of every size. Total = ${correct}. / प्रत्येक भुजा पर ${n} बराबर भाग हैं। सभी आकारों और दोनों दिशाओं के त्रिभुज गिनने पर कुल ${correct} त्रिभुज मिलते हैं।`;
+
+    const card=document.createElement("section");
+
+    card.className="question";
+    card.id="question-"+number;
+
+    card.innerHTML=`
+        <div class="question-number">Question ${number} of ${TOTAL_QUESTIONS}</div>
+        <div class="question-text">${english}</div>
+        <div class="hindi">${hindi}</div>
+        <div class="diagram">${makeTriangleGrid(n,inverted)}</div>
+        <div class="options">
+            ${options.map((value,i)=>`
+                <button type="button" class="option" data-value="${value}"
+                    onclick="answerQuestion(${number},${value},this)">
+                    ${["A","B","C","D"][i]}. ${value}
+                </button>`).join("")}
+        </div>
+        <div class="feedback" id="feedback-${number}"></div>`;
+
+    card.dataset.answer=correct;
+    card.dataset.explanation=explanation;
+    card.dataset.orientation=orientation;
+
+    document.getElementById("questionsContainer").appendChild(card);
+}
+
+const userAnswers={};
+
+questionData.forEach(createGridQuestion);
+triangleData.forEach(createTriangleQuestion);
+
+function answerQuestion(number,value,button){
+    if(userAnswers[number]!==undefined)return;
+
+    userAnswers[number]=value;
+
+    const card=document.getElementById("question-"+number);
+    const correct=Number(card.dataset.answer);
+
+    card.querySelectorAll(".option").forEach(btn=>{
+        btn.disabled=true;
+
+        if(Number(btn.dataset.value)===correct){
+            btn.classList.add("correct");
+        }
+
+        if(btn===button&&value!==correct){
+            btn.classList.add("wrong");
+        }
+    });
+
+    const feedback=document.getElementById("feedback-"+number);
+    feedback.className="feedback show";
+
+    if(value===correct){
+        feedback.innerHTML=`
+            <strong>Correct! / सही उत्तर!</strong>
+            <div>Answer: ${correct}</div>
+            <div class="explanation">${card.dataset.explanation}</div>`;
+    }else{
+        feedback.innerHTML=`
+            <strong>Incorrect. / गलत उत्तर।</strong>
+            <div>Correct Answer: ${correct}</div>
+            <div class="explanation">${card.dataset.explanation}</div>`;
+    }
+
+    updateResult();
+}
+
+function updateResult(){
+    const attempted=Object.keys(userAnswers).length;
+    let correct=0;
+
+    for(let number=1;number<=TOTAL_QUESTIONS;number++){
+        const card=document.getElementById("question-"+number);
+
+        if(userAnswers[number]===Number(card.dataset.answer)){
+            correct++;
+        }
+    }
+
+    const wrong=attempted-correct;
+
+    document.getElementById("score").textContent=correct+"/"+TOTAL_QUESTIONS;
+    document.getElementById("correctCount").textContent=correct;
+    document.getElementById("attemptedCount").textContent=attempted;
+    document.getElementById("wrongCount").textContent=wrong;
+
+    const message=document.getElementById("resultMessage");
+
+    if(attempted===TOTAL_QUESTIONS){
+        const pct=correct/TOTAL_QUESTIONS*100;
+
+        let grade=pct>=80
+            ?"Excellent performance! / शानदार प्रदर्शन!"
+            :pct>=60
+            ?"Good effort! Keep practising. / अच्छा प्रयास, अभ्यास जारी रखें।"
+            :"Keep practising to improve your accuracy. / सटीकता बढ़ाने के लिए अभ्यास जारी रखें।";
+
+        message.textContent=grade+" Final Score: "+correct+"/"+TOTAL_QUESTIONS+" ("+pct.toFixed(1)+"%).";
+    }else{
+        message.textContent=
+            "Attempted "+attempted+" of "+TOTAL_QUESTIONS+" questions. / आपने "+TOTAL_QUESTIONS+" में से "+attempted+" प्रश्न किए हैं।";
+    }
+}
+
+function resetTest(){
+    Object.keys(userAnswers).forEach(key=>delete userAnswers[key]);
+
+    for(let number=1;number<=TOTAL_QUESTIONS;number++){
+        const card=document.getElementById("question-"+number);
+
+        card.querySelectorAll(".option").forEach(btn=>{
+            btn.disabled=false;
+            btn.classList.remove("correct","wrong");
+        });
+
+        const feedback=document.getElementById("feedback-"+number);
+        feedback.className="feedback";
+        feedback.innerHTML="";
+    }
+
+    updateResult();
+    window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
