@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Coding-Decoding Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+header{
+    background:#102a43;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(16,42,67,0.18);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 11px;
+    border-radius:6px;
+    font-size:14px;
+    transition:.25s;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    text-align:center;
+    padding:58px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:.95;
+}
+
+.container{
+    max-width:1050px;
+    margin:40px auto;
+    padding:0 18px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #d9e2ec;
+    box-shadow:0 4px 14px rgba(16,42,67,.06);
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.intro p{
+    margin-bottom:8px;
+}
+
+.section-title{
+    color:#102a43;
+    text-align:center;
+    margin:35px 0 20px;
+    font-size:28px;
+}
+
+.category-title{
+    background:#173f5f;
+    color:white;
+    padding:13px 18px;
+    border-radius:9px;
+    margin:35px 0 18px;
+    font-size:21px;
+}
+
+.question{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 3px 12px rgba(16,42,67,.05);
+    transition:.25s;
+}
+
+.question:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(16,42,67,.09);
+}
+
+.q-number{
+    color:#102a43;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.q-text{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:15px;
+    color:#243b53;
+}
+
+.q-hindi{
+    display:block;
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px dashed #d9e2ec;
+    color:#52606d;
+    font-weight:600;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #d9e2ec;
+    background:#f7f9fc;
+    padding:10px 13px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:all .2s ease;
+    user-select:none;
+}
+
+.option:hover{
+    background:#d9eaf7;
+    border-color:#829ab1;
+}
+
+.option.selected{
+    border-color:#173f5f;
+    background:#d9eaf7;
+    font-weight:bold;
+}
+
+.option.correct{
+    background:#e6f4ea;
+    border-color:#2e7d32;
+    color:#1b5e20;
+}
+
+.option.wrong{
+    background:#fdecea;
+    border-color:#c62828;
+    color:#b71c1c;
+}
+
+.answer{
+    display:none;
+    margin-top:16px;
+    padding:14px;
+    background:#eef6fb;
+    border-left:4px solid #173f5f;
+    border-radius:7px;
+}
+
+.answer strong{
+    color:#102a43;
+}
+
+.answer-hindi{
+    display:block;
+    margin-top:5px;
+}
+
+.solution{
+    display:none;
+    margin-top:12px;
+    color:#52606d;
+}
+
+.solution-hindi{
+    display:block;
+    margin-top:12px;
+    padding-top:10px;
+    border-top:1px dashed #d9e2ec;
+}
+
+.result-message{
+    margin-top:12px;
+    padding:10px 12px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.result-message.correct-message{
+    background:#e6f4ea;
+    color:#1b5e20;
+}
+
+.result-message.wrong-message{
+    background:#fdecea;
+    color:#b71c1c;
+}
+
+.note{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    padding:20px;
+    border-radius:10px;
+    margin-top:30px;
+}
+
+.note h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.note p{
+    margin-bottom:8px;
+}
+
+.back{
+    text-align:center;
+    margin:35px 0;
+}
+
+.back a{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:7px;
+    transition:.25s;
+}
+
+.back a:hover{
+    background:#173f5f;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:50px;
+}
+
+footer p{
+    margin:4px 0;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        padding:17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            LET'S QUALIFYNOW
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+
+    <h1>📝 SSC Coding-Decoding Practice</h1>
+
+    <p>
+        50 Exam-Oriented Questions with Answers & Detailed Solutions
+        <br>
+        50 परीक्षा-उन्मुख प्रश्न उत्तर एवं विस्तृत समाधान सहित
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="intro">
+
+        <h2>📘 SSC Coding-Decoding Practice Set</h2>
+
+        <p>
+            This practice set covers Letter Coding, Number Coding,
+            Word Coding, Artificial Language Coding, Substitution Coding
+            and Mixed Higher-Level Coding-Decoding questions.
+        </p>
+
+        <p class="q-hindi">
+            यह practice set Letter Coding, Number Coding, Word Coding,
+            Artificial Language Coding, Substitution Coding और
+            Mixed Higher-Level Coding-Decoding के questions को cover करता है।
+        </p>
+
+        <p style="margin-top:12px;">
+            <strong>Level:</strong>
+            Basic → Moderate → Advanced → SSC Exam Level
+        </p>
+
+        <p class="q-hindi">
+            <strong>स्तर:</strong>
+            Basic → Moderate → Advanced → SSC Exam Level
+        </p>
+
+        <p style="margin-top:12px;">
+            <strong>Instruction:</strong>
+            Select an option. The answer and detailed solution will appear
+            only after you attempt the question.
+        </p>
+
+        <p class="q-hindi">
+            <strong>निर्देश:</strong>
+            एक option select करें। Question attempt करने के बाद ही
+            answer और detailed solution दिखाई देगा।
+        </p>
+
+    </div>
+
+    <h2 class="section-title">
+        Practice Questions / अभ्यास प्रश्न
+    </h2>
+
+
+    <!-- ===================================================== -->
+    <!-- CATEGORY 1 -->
+    <!-- ===================================================== -->
+
+    <div class="category-title">
+        🔤 A. Letter / Alphabet Coding
+        <br>
+        अक्षर / वर्णमाला Coding
+    </div>
+
+
+    <!-- Q1 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 1 / प्रश्न 1</div>
+
+        <div class="q-text">
+            If CAT is coded as DBU, then how will DOG be coded in the same way?
+
+            <span class="q-hindi">
+                यदि CAT को DBU के रूप में code किया जाता है, तो उसी तरीके से DOG को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) ENH</div>
+            <div class="option">(B) EPH</div>
+            <div class="option">(C) FPH</div>
+            <div class="option">(D) EOG</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) EPH</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) EPH</strong></span>
+
+            <div class="solution">
+                Each letter is moved one step forward:
+                D→E, O→P, G→H.
+                Therefore DOG → <strong>EPH</strong>.
+
+                <span class="solution-hindi">
+                    प्रत्येक letter को एक step आगे बढ़ाया गया है:
+                    D→E, O→P, G→H.
+                    इसलिए DOG → <strong>EPH</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q2 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 2 / प्रश्न 2</div>
+
+        <div class="q-text">
+            If MIND is coded as NJOE, then how will PARK be coded?
+
+            <span class="q-hindi">
+                यदि MIND को NJOE के रूप में code किया जाता है, तो PARK को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) QBRL</div>
+            <div class="option">(B) PBSL</div>
+            <div class="option">(C) QBSL</div>
+            <div class="option">(D) RBSM</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) QBSL</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) QBSL</strong></span>
+
+            <div class="solution">
+                Every letter is increased by 1:
+                P→Q, A→B, R→S, K→L.
+                Hence PARK → <strong>QBSL</strong>.
+
+                <span class="solution-hindi">
+                    प्रत्येक letter को 1 से बढ़ाया गया है:
+                    P→Q, A→B, R→S, K→L.
+                    इसलिए PARK → <strong>QBSL</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q3 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 3 / प्रश्न 3</div>
+
+        <div class="q-text">
+            If ROAD is coded as SPBE, then how will MILK be coded?
+
+            <span class="q-hindi">
+                यदि ROAD को SPBE के रूप में code किया जाता है, तो MILK को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) NJMK</div>
+            <div class="option">(B) MJKL</div>
+            <div class="option">(C) OJML</div>
+            <div class="option">(D) NJML</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) NJML</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) NJML</strong></span>
+
+            <div class="solution">
+                R→S, O→P, A→B, D→E.
+                Therefore every letter moves one step forward.
+
+                M→N, I→J, L→M, K→L.
+
+                Hence MILK → <strong>NJML</strong>.
+
+                <span class="solution-hindi">
+                    R→S, O→P, A→B, D→E.
+                    इसलिए प्रत्येक letter को एक step आगे बढ़ाया गया है।
+
+                    M→N, I→J, L→M, K→L.
+
+                    अतः MILK → <strong>NJML</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q4 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 4 / प्रश्न 4</div>
+
+        <div class="q-text">
+            If FISH is coded as GJTI, then how will BIRD be coded?
+
+            <span class="q-hindi">
+                यदि FISH को GJTI के रूप में code किया जाता है, तो BIRD को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) CJSE</div>
+            <div class="option">(B) CISE</div>
+            <div class="option">(C) BJRD</div>
+            <div class="option">(D) CKSE</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) CJSE</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) CJSE</strong></span>
+
+            <div class="solution">
+                Each letter is replaced by its next letter:
+                B→C, I→J, R→S, D→E.
+                Therefore BIRD → <strong>CJSE</strong>.
+
+                <span class="solution-hindi">
+                    प्रत्येक letter को उसके अगले letter से replace किया गया है:
+                    B→C, I→J, R→S, D→E.
+                    इसलिए BIRD → <strong>CJSE</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q5 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 5 / प्रश्न 5</div>
+
+        <div class="q-text">
+            If ZEBRA is coded by moving every letter one step forward,
+            what will be its code?
+
+            <span class="q-hindi">
+                यदि ZEBRA के प्रत्येक letter को एक step आगे बढ़ाकर code किया जाता है,
+                तो इसका code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) AFCRB</div>
+            <div class="option">(B) AFCSB</div>
+            <div class="option">(C) ZFCSB</div>
+            <div class="option">(D) BFCSB</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) AFCSB</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) AFCSB</strong></span>
+
+            <div class="solution">
+                Z→A, E→F, B→C, R→S, A→B.
+                Hence ZEBRA → <strong>AFCSB</strong>.
+
+                <span class="solution-hindi">
+                    Z→A, E→F, B→C, R→S, A→B.
+                    इसलिए ZEBRA → <strong>AFCSB</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q6 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 6 / प्रश्न 6</div>
+
+        <div class="q-text">
+            If each letter of a word is moved two places forward,
+            how will BOOK be coded?
+
+            <span class="q-hindi">
+                यदि किसी word के प्रत्येक letter को दो places आगे बढ़ाया जाए,
+                तो BOOK को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) DQPM</div>
+            <div class="option">(B) CPPM</div>
+            <div class="option">(C) DQQM</div>
+            <div class="option">(D) EQQN</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) DQQM</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) DQQM</strong></span>
+
+            <div class="solution">
+                B→D, O→Q, O→Q, K→M.
+                Therefore BOOK → <strong>DQQM</strong>.
+
+                <span class="solution-hindi">
+                    B→D, O→Q, O→Q, K→M.
+                    इसलिए BOOK → <strong>DQQM</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q7 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 7 / प्रश्न 7</div>
+
+        <div class="q-text">
+            If each letter is moved two places forward,
+            how will TRAIN be coded?
+
+            <span class="q-hindi">
+                यदि प्रत्येक letter को दो places आगे बढ़ाया जाए,
+                तो TRAIN को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) VTCJP</div>
+            <div class="option">(B) UTCKP</div>
+            <div class="option">(C) VTCLP</div>
+            <div class="option">(D) VTCKP</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) VTCKP</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) VTCKP</strong></span>
+
+            <div class="solution">
+                T→V, R→T, A→C, I→K, N→P.
+                Hence TRAIN → <strong>VTCKP</strong>.
+
+                <span class="solution-hindi">
+                    T→V, R→T, A→C, I→K, N→P.
+                    अतः TRAIN → <strong>VTCKP</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q8 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 8 / प्रश्न 8</div>
+
+        <div class="q-text">
+            If every letter is moved one place backward,
+            how will HOUSE be coded?
+
+            <span class="q-hindi">
+                यदि प्रत्येक letter को एक place पीछे किया जाए,
+                तो HOUSE को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) GNTRD</div>
+            <div class="option">(B) GNTSD</div>
+            <div class="option">(C) HNTRD</div>
+            <div class="option">(D) FMTRC</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) GNTRD</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) GNTRD</strong></span>
+
+            <div class="solution">
+                H→G, O→N, U→T, S→R, E→D.
+                Therefore HOUSE → <strong>GNTRD</strong>.
+
+                <span class="solution-hindi">
+                    H→G, O→N, U→T, S→R, E→D.
+                    इसलिए HOUSE → <strong>GNTRD</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q9 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 9 / प्रश्न 9</div>
+
+        <div class="q-text">
+            In a certain code, the first letter is moved one step forward,
+            the second one step backward, the third one step forward and
+            so on. How will CODE be coded?
+
+            <span class="q-hindi">
+                एक निश्चित code में पहले letter को एक step आगे,
+                दूसरे letter को एक step पीछे, तीसरे letter को एक step आगे
+                और इसी प्रकार आगे बढ़ाया जाता है। CODE को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) DOFD</div>
+            <div class="option">(B) DNED</div>
+            <div class="option">(C) CMFC</div>
+            <div class="option">(D) DNEF</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) DNED</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) DNED</strong></span>
+
+            <div class="solution">
+                C→D, O→N, D→E, E→D.
+                Therefore CODE → <strong>DNED</strong>.
+
+                <span class="solution-hindi">
+                    C→D, O→N, D→E, E→D.
+                    इसलिए CODE → <strong>DNED</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q10 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 10 / प्रश्न 10</div>
+
+        <div class="q-text">
+            In a certain code, the first letter is moved one step backward,
+            the second two steps forward, the third one step backward and
+            the fourth two steps forward. How will MATH be coded?
+
+            <span class="q-hindi">
+                एक निश्चित code में पहले letter को एक step पीछे,
+                दूसरे को दो steps आगे, तीसरे को एक step पीछे और
+                चौथे को दो steps आगे किया जाता है। MATH को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) LCSF</div>
+            <div class="option">(B) NCSJ</div>
+            <div class="option">(C) LCSJ</div>
+            <div class="option">(D) LBTF</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) LCSJ</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) LCSJ</strong></span>
+
+            <div class="solution">
+                M→L, A→C, T→S, H→J.
+                Therefore MATH → <strong>LCSJ</strong>.
+
+                <span class="solution-hindi">
+                    M→L, A→C, T→S, H→J.
+                    इसलिए MATH → <strong>LCSJ</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- CATEGORY 2 -->
+    <!-- ===================================================== -->
+
+    <div class="category-title">
+        🔄 B. Reverse / Opposite Alphabet Coding
+        <br>
+        Reverse / Opposite Alphabet Coding
+    </div>
+
+
+    <!-- Q11 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 11 / प्रश्न 11</div>
+
+        <div class="q-text">
+            If A is coded as Z, B as Y, C as X and so on,
+            how will CAT be coded?
+
+            <span class="q-hindi">
+                यदि A को Z, B को Y, C को X और इसी प्रकार code किया जाता है,
+                तो CAT को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) XZH</div>
+            <div class="option">(B) WZG</div>
+            <div class="option">(C) YZG</div>
+            <div class="option">(D) XZG</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) XZG</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) XZG</strong></span>
+
+            <div class="solution">
+                C→X, A→Z, T→G.
+                Hence CAT → <strong>XZG</strong>.
+
+                <span class="solution-hindi">
+                    C→X, A→Z, T→G.
+                    अतः CAT → <strong>XZG</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q12 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 12 / प्रश्न 12</div>
+
+        <div class="q-text">
+            Using the opposite alphabet rule, how will DOG be coded?
+
+            <span class="q-hindi">
+                Opposite alphabet rule का प्रयोग करते हुए DOG को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) WMS</div>
+            <div class="option">(B) XLT</div>
+            <div class="option">(C) VLT</div>
+            <div class="option">(D) WLT</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) WLT</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) WLT</strong></span>
+
+            <div class="solution">
+                D→W, O→L, G→T.
+                Therefore DOG → <strong>WLT</strong>.
+
+                <span class="solution-hindi">
+                    D→W, O→L, G→T.
+                    इसलिए DOG → <strong>WLT</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q13 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 13 / प्रश्न 13</div>
+
+        <div class="q-text">
+            Using the opposite alphabet rule, how will BRAIN be coded?
+
+            <span class="q-hindi">
+                Opposite alphabet rule का प्रयोग करते हुए BRAIN को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) YJZRM</div>
+            <div class="option">(B) YIZRM</div>
+            <div class="option">(C) XIZRN</div>
+            <div class="option">(D) YIZSN</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) YIZRM</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) YIZRM</strong></span>
+
+            <div class="solution">
+                B→Y, R→I, A→Z, I→R, N→M.
+                Hence BRAIN → <strong>YIZRM</strong>.
+
+                <span class="solution-hindi">
+                    B→Y, R→I, A→Z, I→R, N→M.
+                    इसलिए BRAIN → <strong>YIZRM</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q14 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 14 / प्रश्न 14</div>
+
+        <div class="q-text">
+            Using the opposite alphabet rule, how will SCHOOL be coded?
+
+            <span class="q-hindi">
+                Opposite alphabet rule का प्रयोग करते हुए SCHOOL को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) HXSLLP</div>
+            <div class="option">(B) GXSLLO</div>
+            <div class="option">(C) HXSLLO</div>
+            <div class="option">(D) HWSLLO</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) HXSLLO</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) HXSLLO</strong></span>
+
+            <div class="solution">
+                S→H, C→X, H→S, O→L, O→L, L→O.
+                Therefore SCHOOL → <strong>HXSLLO</strong>.
+
+                <span class="solution-hindi">
+                    S→H, C→X, H→S, O→L, O→L, L→O.
+                    इसलिए SCHOOL → <strong>HXSLLO</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q15 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 15 / प्रश्न 15</div>
+
+        <div class="q-text">
+            Using the opposite alphabet rule, how will ZEBRA be coded?
+
+            <span class="q-hindi">
+                Opposite alphabet rule का प्रयोग करते हुए ZEBRA को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) AUYIZ</div>
+            <div class="option">(B) AVXIZ</div>
+            <div class="option">(C) ZVYIZ</div>
+            <div class="option">(D) AVYIZ</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) AVYIZ</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) AVYIZ</strong></span>
+
+            <div class="solution">
+                Z→A, E→V, B→Y, R→I, A→Z.
+                Hence ZEBRA → <strong>AVYIZ</strong>.
+
+                <span class="solution-hindi">
+                    Z→A, E→V, B→Y, R→I, A→Z.
+                    इसलिए ZEBRA → <strong>AVYIZ</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- CATEGORY 3 -->
+    <!-- ===================================================== -->
+
+    <div class="category-title">
+        🔢 C. Number / Position Coding
+        <br>
+        Number / Position Coding
+    </div>
+
+
+    <!-- Q16 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 16 / प्रश्न 16</div>
+
+        <div class="q-text">
+            If the code of a word is the sum of the positions of its letters
+            in the English alphabet, what is the code of DOG?
+
+            <span class="q-hindi">
+                यदि किसी word का code English alphabet में उसके letters की positions का sum है,
+                तो DOG का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 24</div>
+            <div class="option">(B) 25</div>
+            <div class="option">(C) 26</div>
+            <div class="option">(D) 27</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) 26</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) 26</strong></span>
+
+            <div class="solution">
+                D=4, O=15, G=7.
+                4+15+7 = <strong>26</strong>.
+
+                <span class="solution-hindi">
+                    D=4, O=15, G=7.
+                    4+15+7 = <strong>26</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q17 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 17 / प्रश्न 17</div>
+
+        <div class="q-text">
+            If the code of a word is the sum of the positions of its letters,
+            what is the code of MAP?
+
+            <span class="q-hindi">
+                यदि किसी word का code उसके letters की positions का sum है,
+                तो MAP का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 28</div>
+            <div class="option">(B) 30</div>
+            <div class="option">(C) 32</div>
+            <div class="option">(D) 34</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) 30</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) 30</strong></span>
+
+            <div class="solution">
+                M=13, A=1, P=16.
+                13+1+16 = <strong>30</strong>.
+
+                <span class="solution-hindi">
+                    M=13, A=1, P=16.
+                    13+1+16 = <strong>30</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q18 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 18 / प्रश्न 18</div>
+
+        <div class="q-text">
+            If the code of a word is the sum of the alphabetical positions
+            of its letters, what is the code of CODE?
+
+            <span class="q-hindi">
+                यदि किसी word का code उसके letters की alphabetical positions का sum है,
+                तो CODE का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 25</div>
+            <div class="option">(B) 26</div>
+            <div class="option">(C) 27</div>
+            <div class="option">(D) 28</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) 27</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) 27</strong></span>
+
+            <div class="solution">
+                C=3, O=15, D=4, E=5.
+                3+15+4+5 = <strong>27</strong>.
+
+                <span class="solution-hindi">
+                    C=3, O=15, D=4, E=5.
+                    3+15+4+5 = <strong>27</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q19 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 19 / प्रश्न 19</div>
+
+        <div class="q-text">
+            If CAT is coded as 3-1-20, how will DOG be coded?
+
+            <span class="q-hindi">
+                यदि CAT को 3-1-20 के रूप में code किया जाता है,
+                तो DOG को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 4-15-7</div>
+            <div class="option">(B) 5-14-7</div>
+            <div class="option">(C) 4-14-8</div>
+            <div class="option">(D) 5-15-7</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) 4-15-7</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) 4-15-7</strong></span>
+
+            <div class="solution">
+                The code represents the alphabetical positions directly.
+                D=4, O=15, G=7.
+                Therefore DOG → <strong>4-15-7</strong>.
+
+                <span class="solution-hindi">
+                    Code सीधे alphabetical positions को दर्शाता है।
+                    D=4, O=15, G=7.
+                    इसलिए DOG → <strong>4-15-7</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q20 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 20 / प्रश्न 20</div>
+
+        <div class="q-text">
+            If each word is represented by the sum of the positions of its
+            letters, what is the code of BIRD?
+
+            <span class="q-hindi">
+                यदि प्रत्येक word को उसके letters की positions के sum द्वारा represent किया जाता है,
+                तो BIRD का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 31</div>
+            <div class="option">(B) 32</div>
+            <div class="option">(C) 33</div>
+            <div class="option">(D) 34</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) 33</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) 33</strong></span>
+
+            <div class="solution">
+                B=2, I=9, R=18, D=4.
+                2+9+18+4 = <strong>33</strong>.
+
+                <span class="solution-hindi">
+                    B=2, I=9, R=18, D=4.
+                    2+9+18+4 = <strong>33</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- CATEGORY 4 -->
+    <!-- ===================================================== -->
+
+    <div class="category-title">
+        🧩 D. Artificial / Chinese Language Coding
+        <br>
+        Artificial / Chinese Language Coding
+    </div>
+
+
+    <!-- Q21 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 21 / प्रश्न 21</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "sun rises" = ka lo<br>
+            "sun sets" = ka mi<br><br>
+            What is the code for "sun"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "sun rises" = ka lo<br>
+                "sun sets" = ka mi<br><br>
+                "sun" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) ka</div>
+            <div class="option">(B) lo</div>
+            <div class="option">(C) mi</div>
+            <div class="option">(D) cannot be determined</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) ka</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) ka</strong></span>
+
+            <div class="solution">
+                The common word is "sun" and the common code is "ka".
+                Therefore sun = <strong>ka</strong>.
+
+                <span class="solution-hindi">
+                    दोनों statements में common word "sun" है और common code "ka" है।
+                    इसलिए sun = <strong>ka</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q22 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 22 / प्रश्न 22</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "book good" = ra ti<br>
+            "book new" = ra pu<br><br>
+            What is the code for "good"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "book good" = ra ti<br>
+                "book new" = ra pu<br><br>
+                "good" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) ra</div>
+            <div class="option">(B) ti</div>
+            <div class="option">(C) pu</div>
+            <div class="option">(D) either ra or ti</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) ti</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) ti</strong></span>
+
+            <div class="solution">
+                "book" is common in both statements, so ra = book.
+                Therefore the remaining code ti = <strong>good</strong>.
+
+                <span class="solution-hindi">
+                    दोनों statements में "book" common है, इसलिए ra = book.
+                    बचा हुआ code ti = <strong>good</strong> होगा।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q23 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 23 / प्रश्न 23</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "milk is white" = pa no ki<br>
+            "milk is fresh" = pa no lu<br><br>
+            What is the code for "fresh"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "milk is white" = pa no ki<br>
+                "milk is fresh" = pa no lu<br><br>
+                "fresh" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) pa</div>
+            <div class="option">(B) no</div>
+            <div class="option">(C) ki</div>
+            <div class="option">(D) lu</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) lu</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) lu</strong></span>
+
+            <div class="solution">
+                The common words "milk is" correspond to pa no.
+                Therefore the remaining code lu = <strong>fresh</strong>.
+
+                <span class="solution-hindi">
+                    Common words "milk is" का code pa no है।
+                    इसलिए बचा हुआ code lu = <strong>fresh</strong> है।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q24 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 24 / प्रश्न 24</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "boys play cricket" = se ta mo<br>
+            "girls play hockey" = ri ta nu<br><br>
+            What is the code for "play"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "boys play cricket" = se ta mo<br>
+                "girls play hockey" = ri ta nu<br><br>
+                "play" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) se</div>
+            <div class="option">(B) ta</div>
+            <div class="option">(C) mo</div>
+            <div class="option">(D) nu</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) ta</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) ta</strong></span>
+
+            <div class="solution">
+                "play" is the common word and ta is the common code.
+                Therefore play = <strong>ta</strong>.
+
+                <span class="solution-hindi">
+                    "play" common word है और ta common code है।
+                    इसलिए play = <strong>ta</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q25 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 25 / प्रश्न 25</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "Delhi is large" = ga ni po<br>
+            "Mumbai is large" = su ni po<br>
+            "Delhi is beautiful" = ga ni ra<br><br>
+            What is the code for "is"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "Delhi is large" = ga ni po<br>
+                "Mumbai is large" = su ni po<br>
+                "Delhi is beautiful" = ga ni ra<br><br>
+                "is" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) ga</div>
+            <div class="option">(B) su</div>
+            <div class="option">(C) ni</div>
+            <div class="option">(D) po</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) ni</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) ni</strong></span>
+
+            <div class="solution">
+                "Delhi" appears in the first and third statements,
+                so ga = Delhi.
+
+                "large" appears in the first and second statements,
+                so po = large.
+
+                Therefore the common code for "is" is ni.
+
+                Hence is = <strong>ni</strong>.
+
+                <span class="solution-hindi">
+                    "Delhi" first और third statements में आता है,
+                    इसलिए ga = Delhi.
+
+                    "large" first और second statements में आता है,
+                    इसलिए po = large.
+
+                    इसलिए "is" का common code ni है।
+
+                    अतः is = <strong>ni</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q26 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 26 / प्रश्न 26</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "honest people are respected" = ha be co<br>
+            "honest students are intelligent" = ha de fi<br><br>
+            What is definitely the code for "honest"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "honest people are respected" = ha be co<br>
+                "honest students are intelligent" = ha de fi<br><br>
+                "honest" का निश्चित code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) ha</div>
+            <div class="option">(B) be</div>
+            <div class="option">(C) de</div>
+            <div class="option">(D) fi</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) ha</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) ha</strong></span>
+
+            <div class="solution">
+                "honest" is the common word and ha is the common code.
+                Therefore honest = <strong>ha</strong>.
+
+                <span class="solution-hindi">
+                    "honest" common word है और ha common code है।
+                    इसलिए honest = <strong>ha</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q27 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 27 / प्रश्न 27</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "cars move fast" = jo ku la<br>
+            "trains move fast" = mi ku la<br><br>
+            What is the code for "cars"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "cars move fast" = jo ku la<br>
+                "trains move fast" = mi ku la<br><br>
+                "cars" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) jo</div>
+            <div class="option">(B) ku</div>
+            <div class="option">(C) la</div>
+            <div class="option">(D) mi</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) jo</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) jo</strong></span>
+
+            <div class="solution">
+                "move fast" is common in both sentences and corresponds
+                to ku la.
+                Therefore jo = <strong>cars</strong>.
+
+                <span class="solution-hindi">
+                    दोनों sentences में "move fast" common है और इसका code ku la है।
+                    इसलिए jo = <strong>cars</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q28 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 28 / प्रश्न 28</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "red apple sweet" = ra ko ti<br>
+            "green apple fresh" = su ko ne<br><br>
+            What is the code for "apple"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "red apple sweet" = ra ko ti<br>
+                "green apple fresh" = su ko ne<br><br>
+                "apple" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) ra</div>
+            <div class="option">(B) ko</div>
+            <div class="option">(C) ti</div>
+            <div class="option">(D) ne</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) ko</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) ko</strong></span>
+
+            <div class="solution">
+                "apple" is the common word and ko is the common code.
+                Therefore apple = <strong>ko</strong>.
+
+                <span class="solution-hindi">
+                    "apple" common word है और ko common code है।
+                    इसलिए apple = <strong>ko</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q29 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 29 / प्रश्न 29</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "birds fly high" = ba tu re<br>
+            "birds eat grains" = ba li so<br><br>
+            What is the code for "birds"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "birds fly high" = ba tu re<br>
+                "birds eat grains" = ba li so<br><br>
+                "birds" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) ba</div>
+            <div class="option">(B) tu</div>
+            <div class="option">(C) li</div>
+            <div class="option">(D) so</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) ba</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) ba</strong></span>
+
+            <div class="solution">
+                "birds" is the common word and ba is the common code.
+                Therefore birds = <strong>ba</strong>.
+
+                <span class="solution-hindi">
+                    "birds" common word है और ba common code है।
+                    इसलिए birds = <strong>ba</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q30 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 30 / प्रश्न 30</div>
+
+        <div class="q-text">
+            In a certain language:<br><br>
+            "water is cold" = we ni ca<br>
+            "ice is cold" = zo ni ca<br><br>
+            What is the code for "water"?
+
+            <span class="q-hindi">
+                एक निश्चित language में:<br><br>
+                "water is cold" = we ni ca<br>
+                "ice is cold" = zo ni ca<br><br>
+                "water" का code क्या है?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) we</div>
+            <div class="option">(B) ni</div>
+            <div class="option">(C) ca</div>
+            <div class="option">(D) zo</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) we</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) we</strong></span>
+
+            <div class="solution">
+                "is cold" is common in both statements and corresponds
+                to ni ca.
+                Therefore we = <strong>water</strong>.
+
+                <span class="solution-hindi">
+                    दोनों statements में "is cold" common है और इसका code ni ca है।
+                    इसलिए we = <strong>water</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- CATEGORY 5 -->
+    <!-- ===================================================== -->
+
+    <div class="category-title">
+        🔀 E. Substitution / Rearrangement Coding
+        <br>
+        Substitution / Rearrangement Coding
+    </div>
+
+
+    <!-- Q31 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 31 / प्रश्न 31</div>
+
+        <div class="q-text">
+            If the letters of a word are written in reverse order,
+            how will MARKET be coded?
+
+            <span class="q-hindi">
+                यदि किसी word के letters को reverse order में लिखा जाए,
+                तो MARKET को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) TEKRAM</div>
+            <div class="option">(B) TEKRMA</div>
+            <div class="option">(C) TKEARM</div>
+            <div class="option">(D) TEKARM</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) TEKRAM</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) TEKRAM</strong></span>
+
+            <div class="solution">
+                MARKET reversed is T E K R A M.
+                Therefore MARKET → <strong>TEKRAM</strong>.
+
+                <span class="solution-hindi">
+                    MARKET को reverse करने पर T E K R A M मिलता है।
+                    इसलिए MARKET → <strong>TEKRAM</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q32 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 32 / प्रश्न 32</div>
+
+        <div class="q-text">
+            If the first and last letters of a word are interchanged,
+            how will TRAIN be coded?
+
+            <span class="q-hindi">
+                यदि किसी word के first और last letters को interchange किया जाए,
+                तो TRAIN को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) NRAIT</div>
+            <div class="option">(B) NARIT</div>
+            <div class="option">(C) TRA IN</div>
+            <div class="option">(D) NRIAT</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) NRAIT</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) NRAIT</strong></span>
+
+            <div class="solution">
+                TRAIN → N R A I T after exchanging the first letter T
+                and the last letter N.
+                Therefore TRAIN → <strong>NRAIT</strong>.
+
+                <span class="solution-hindi">
+                    TRAIN में first letter T और last letter N को interchange करने पर
+                    N R A I T प्राप्त होता है।
+                    इसलिए TRAIN → <strong>NRAIT</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q33 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 33 / प्रश्न 33</div>
+
+        <div class="q-text">
+            If the first two letters and the last two letters of a word
+            are interchanged, how will PLANE be coded?
+
+            <span class="q-hindi">
+                यदि किसी word के first two letters और last two letters को
+                interchange किया जाए, तो PLANE को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) NEAPL</div>
+            <div class="option">(B) ENPLA</div>
+            <div class="option">(C) NEPAL</div>
+            <div class="option">(D) EPNAL</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) NEAPL</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) NEAPL</strong></span>
+
+            <div class="solution">
+                PLANE = PL + A + NE.
+
+                Interchanging PL and NE gives:
+                NE + A + PL = <strong>NEAPL</strong>.
+
+                <span class="solution-hindi">
+                    PLANE = PL + A + NE.
+
+                    PL और NE को interchange करने पर:
+                    NE + A + PL = <strong>NEAPL</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q34 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 34 / प्रश्न 34</div>
+
+        <div class="q-text">
+            If the letters of a word are arranged in alphabetical order,
+            how will CODE be written?
+
+            <span class="q-hindi">
+                यदि किसी word के letters को alphabetical order में arrange किया जाए,
+                तो CODE को कैसे लिखा जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) CDEO</div>
+            <div class="option">(B) CDOE</div>
+            <div class="option">(C) CEOD</div>
+            <div class="option">(D) DECO</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) CDEO</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) CDEO</strong></span>
+
+            <div class="solution">
+                Letters of CODE are C, O, D, E.
+
+                Alphabetical order:
+                C, D, E, O.
+
+                Hence CODE → <strong>CDEO</strong>.
+
+                <span class="solution-hindi">
+                    CODE के letters हैं C, O, D, E.
+
+                    Alphabetical order:
+                    C, D, E, O.
+
+                    अतः CODE → <strong>CDEO</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q35 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 35 / प्रश्न 35</div>
+
+        <div class="q-text">
+            If the letters of a word are arranged in reverse alphabetical
+            order, how will BRAIN be written?
+
+            <span class="q-hindi">
+                यदि किसी word के letters को reverse alphabetical order में arrange किया जाए,
+                तो BRAIN को कैसे लिखा जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) RNIAB</div>
+            <div class="option">(B) RINBA</div>
+            <div class="option">(C) RNIBA</div>
+            <div class="option">(D) NIRBA</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) RNIBA</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) RNIBA</strong></span>
+
+            <div class="solution">
+                Letters are B, R, A, I, N.
+
+                Reverse alphabetical order:
+                R, N, I, B, A.
+
+                Therefore BRAIN → <strong>RNIBA</strong>.
+
+                <span class="solution-hindi">
+                    Letters हैं B, R, A, I, N.
+
+                    Reverse alphabetical order:
+                    R, N, I, B, A.
+
+                    इसलिए BRAIN → <strong>RNIBA</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- CATEGORY 6 -->
+    <!-- ===================================================== -->
+
+    <div class="category-title">
+        🧠 F. Mixed & Higher-Level Coding
+        <br>
+        Mixed & Higher-Level Coding
+    </div>
+
+
+    <!-- Q36 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 36 / प्रश्न 36</div>
+
+        <div class="q-text">
+            If each letter is replaced by its alphabetical position and
+            the positions are then added, what is the code of SMART?
+
+            <span class="q-hindi">
+                यदि प्रत्येक letter को उसकी alphabetical position से replace करके
+                उन positions को add किया जाए, तो SMART का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 67</div>
+            <div class="option">(B) 69</div>
+            <div class="option">(C) 70</div>
+            <div class="option">(D) 71</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) 71</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) 71</strong></span>
+
+            <div class="solution">
+                S=19, M=13, A=1, R=18, T=20.
+
+                Total:
+                19+13+1+18+20 = <strong>71</strong>.
+
+                <span class="solution-hindi">
+                    S=19, M=13, A=1, R=18, T=20.
+
+                    Total:
+                    19+13+1+18+20 = <strong>71</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q37 -->
+    <div class="question" data-answer="D">
+
+        <div class="q-number">Question 37 / प्रश्न 37</div>
+
+        <div class="q-text">
+            If each letter is moved one step forward and then the
+            alphabetical positions of the coded letters are added,
+            what is the code of CAT?
+
+            <span class="q-hindi">
+                यदि प्रत्येक letter को एक step आगे बढ़ाया जाए और फिर coded letters की
+                alphabetical positions को add किया जाए, तो CAT का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 24</div>
+            <div class="option">(B) 25</div>
+            <div class="option">(C) 26</div>
+            <div class="option">(D) 27</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (D) 27</strong>
+            <span class="answer-hindi"><strong>उत्तर: (D) 27</strong></span>
+
+            <div class="solution">
+                CAT → DBU.
+
+                D=4, B=2, U=21.
+
+                Total = 4+2+21 = <strong>27</strong>.
+
+                <span class="solution-hindi">
+                    CAT → DBU.
+
+                    D=4, B=2, U=21.
+
+                    Total = 4+2+21 = <strong>27</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q38 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 38 / प्रश्न 38</div>
+
+        <div class="q-text">
+            If each letter of a word is replaced by the letter immediately
+            preceding it in the alphabet, what will be the code of MANGO?
+
+            <span class="q-hindi">
+                यदि किसी word के प्रत्येक letter को alphabet में उसके immediately preceding
+                letter से replace किया जाए, तो MANGO का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) LZMFN</div>
+            <div class="option">(B) LZMFQ</div>
+            <div class="option">(C) MZNFO</div>
+            <div class="option">(D) KYLEM</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) LZMFN</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) LZMFN</strong></span>
+
+            <div class="solution">
+                M→L, A→Z, N→M, G→F, O→N.
+                Therefore MANGO → <strong>LZMFN</strong>.
+
+                <span class="solution-hindi">
+                    M→L, A→Z, N→M, G→F, O→N.
+                    इसलिए MANGO → <strong>LZMFN</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q39 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 39 / प्रश्न 39</div>
+
+        <div class="q-text">
+            If the code of a word is obtained by adding the positions of
+            the first and last letters and then multiplying by the number
+            of letters, what is the code of PLANE?
+
+            <span class="q-hindi">
+                यदि किसी word का code उसके first और last letters की positions को add करके
+                और फिर उसे letters की संख्या से multiply करके प्राप्त किया जाता है,
+                तो PLANE का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 100</div>
+            <div class="option">(B) 105</div>
+            <div class="option">(C) 110</div>
+            <div class="option">(D) 115</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) 105</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) 105</strong></span>
+
+            <div class="solution">
+                First letter P=16.
+                Last letter E=5.
+                Number of letters = 5.
+
+                (16+5)×5 = 21×5 = <strong>105</strong>.
+
+                <span class="solution-hindi">
+                    First letter P=16.
+                    Last letter E=5.
+                    Letters की संख्या = 5.
+
+                    (16+5)×5 = 21×5 = <strong>105</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q40 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 40 / प्रश्न 40</div>
+
+        <div class="q-text">
+            If the code of a word is the product of the alphabetical
+            positions of its first and last letters, what is the code of DOG?
+
+            <span class="q-hindi">
+                यदि किसी word का code उसके first और last letters की alphabetical positions
+                का product है, तो DOG का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 28</div>
+            <div class="option">(B) 32</div>
+            <div class="option">(C) 36</div>
+            <div class="option">(D) 42</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) 28</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) 28</strong></span>
+
+            <div class="solution">
+                First letter D=4.
+                Last letter G=7.
+
+                4×7 = <strong>28</strong>.
+
+                <span class="solution-hindi">
+                    First letter D=4.
+                    Last letter G=7.
+
+                    4×7 = <strong>28</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q41 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 41 / प्रश्न 41</div>
+
+        <div class="q-text">
+            If vowels are replaced by the next vowel and consonants by the
+            next consonant in the alphabet, how will CAT be coded?
+
+            <span class="q-hindi">
+                यदि vowels को next vowel और consonants को alphabet के next consonant
+                से replace किया जाए, तो CAT को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) DEV</div>
+            <div class="option">(B) DEU</div>
+            <div class="option">(C) CEU</div>
+            <div class="option">(D) DBU</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) DEV</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) DEV</strong></span>
+
+            <div class="solution">
+                C → D (next consonant)
+                A → E (next vowel)
+                T → V (next consonant)
+
+                Therefore CAT → <strong>DEV</strong>.
+
+                <span class="solution-hindi">
+                    C → D (next consonant)
+                    A → E (next vowel)
+                    T → V (next consonant)
+
+                    इसलिए CAT → <strong>DEV</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q42 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 42 / प्रश्न 42</div>
+
+        <div class="q-text">
+            If every consonant is moved two steps forward and every vowel
+            is moved one step forward, how will CODE be coded?
+
+            <span class="q-hindi">
+                यदि प्रत्येक consonant को दो steps आगे और प्रत्येक vowel को
+                एक step आगे बढ़ाया जाए, तो CODE को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) EPFF</div>
+            <div class="option">(B) EQFC</div>
+            <div class="option">(C) DQFG</div>
+            <div class="option">(D) EQFG</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) EPFF</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) EPFF</strong></span>
+
+            <div class="solution">
+                C→E (+2)
+                O→P (+1)
+                D→F (+2)
+                E→F (+1)
+
+                Therefore CODE → <strong>EPFF</strong>.
+
+                <span class="solution-hindi">
+                    C→E (+2)
+                    O→P (+1)
+                    D→F (+2)
+                    E→F (+1)
+
+                    इसलिए CODE → <strong>EPFF</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q43 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 43 / प्रश्न 43</div>
+
+        <div class="q-text">
+            If the first letter is moved one step backward, the second
+            two steps backward, the third three steps backward and
+            the fourth four steps backward, how will CODE be coded?
+
+            <span class="q-hindi">
+                यदि पहले letter को एक step पीछे, दूसरे को दो steps पीछे,
+                तीसरे को तीन steps पीछे और चौथे को चार steps पीछे किया जाए,
+                तो CODE को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) BMAA</div>
+            <div class="option">(B) BNAA</div>
+            <div class="option">(C) BNAZ</div>
+            <div class="option">(D) CMAA</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) BMAA</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) BMAA</strong></span>
+
+            <div class="solution">
+                C−1=B,
+                O−2=M,
+                D−3=A,
+                E−4=A.
+
+                Therefore CODE → <strong>BMAA</strong>.
+
+                <span class="solution-hindi">
+                    C−1=B,
+                    O−2=M,
+                    D−3=A,
+                    E−4=A.
+
+                    इसलिए CODE → <strong>BMAA</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q44 -->
+    <div class="question" data-answer="A">
+
+        <div class="q-number">Question 44 / प्रश्न 44</div>
+
+        <div class="q-text">
+            If the letters in odd positions are reversed among themselves
+            and the letters in even positions are reversed among themselves,
+            how will ABCDE be coded?
+
+            <span class="q-hindi">
+                यदि odd positions के letters को आपस में reverse किया जाए और
+                even positions के letters को भी आपस में reverse किया जाए,
+                तो ABCDE को कैसे code किया जाएगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) EBCDA</div>
+            <div class="option">(B) EADCB</div>
+            <div class="option">(C) CBAED</div>
+            <div class="option">(D) EDCBA</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (A) EBCDA</strong>
+            <span class="answer-hindi"><strong>उत्तर: (A) EBCDA</strong></span>
+
+            <div class="solution">
+                Odd-position letters are A, C, E.
+                Reversing them gives E, C, A.
+
+                Even-position letters are B, D.
+                Reversing them gives D, B.
+
+                Placing them back in their original positions:
+
+                Position 1 = E
+                Position 2 = B
+                Position 3 = C
+                Position 4 = D
+                Position 5 = A
+
+                Therefore ABCDE → <strong>EBCDA</strong>.
+
+                <span class="solution-hindi">
+                    Odd-position letters A, C, E हैं।
+                    इन्हें reverse करने पर E, C, A मिलता है।
+
+                    Even-position letters B, D हैं।
+                    इन्हें reverse करने पर D, B मिलता है।
+
+                    अब इन्हें उनकी original positions पर रखने पर:
+
+                    Position 1 = E
+                    Position 2 = B
+                    Position 3 = C
+                    Position 4 = D
+                    Position 5 = A
+
+                    इसलिए ABCDE → <strong>EBCDA</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q45 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 45 / प्रश्न 45</div>
+
+        <div class="q-text">
+            If the opposite alphabet is used and then the positions of the
+            first and last coded letters are added, what is the code of DOG?
+
+            <span class="q-hindi">
+                यदि opposite alphabet का प्रयोग किया जाए और फिर first तथा last
+                coded letters की positions को add किया जाए, तो DOG का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 42</div>
+            <div class="option">(B) 43</div>
+            <div class="option">(C) 44</div>
+            <div class="option">(D) 45</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) 43</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) 43</strong></span>
+
+            <div class="solution">
+                Opposite alphabet:
+
+                D→W = 23
+                G→T = 20
+
+                23+20 = <strong>43</strong>.
+
+                <span class="solution-hindi">
+                    Opposite alphabet:
+
+                    D→W = 23
+                    G→T = 20
+
+                    23+20 = <strong>43</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q46 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 46 / प्रश्न 46</div>
+
+        <div class="q-text">
+            If A=1, B=2, ..., Z=26 and the code of a letter-number pair
+            is obtained by multiplying them, what is the code of H7?
+
+            <span class="q-hindi">
+                यदि A=1, B=2, ..., Z=26 और किसी letter-number pair का code
+                दोनों को multiply करके प्राप्त होता है, तो H7 का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 49</div>
+            <div class="option">(B) 54</div>
+            <div class="option">(C) 56</div>
+            <div class="option">(D) 63</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) 56</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) 56</strong></span>
+
+            <div class="solution">
+                H = 8.
+
+                Therefore:
+                8×7 = <strong>56</strong>.
+
+                <span class="solution-hindi">
+                    H = 8.
+
+                    इसलिए:
+                    8×7 = <strong>56</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q47 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 47 / प्रश्न 47</div>
+
+        <div class="q-text">
+            If A=1, B=2, ..., Z=26 and the code of a word is the sum of the
+            positions of its letters, what is the code of BIRD?
+
+            <span class="q-hindi">
+                यदि A=1, B=2, ..., Z=26 और किसी word का code उसके letters की
+                positions का sum है, तो BIRD का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 31</div>
+            <div class="option">(B) 32</div>
+            <div class="option">(C) 33</div>
+            <div class="option">(D) 34</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) 33</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) 33</strong></span>
+
+            <div class="solution">
+                B=2, I=9, R=18, D=4.
+
+                2+9+18+4 = <strong>33</strong>.
+
+                <span class="solution-hindi">
+                    B=2, I=9, R=18, D=4.
+
+                    2+9+18+4 = <strong>33</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q48 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 48 / प्रश्न 48</div>
+
+        <div class="q-text">
+            If every letter is first replaced by its opposite alphabet
+            letter and then all the resulting positions are added,
+            what is the code of DOG?
+
+            <span class="q-hindi">
+                यदि प्रत्येक letter को पहले उसके opposite alphabet letter से replace किया जाए
+                और फिर प्राप्त सभी positions को add किया जाए, तो DOG का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 53</div>
+            <div class="option">(B) 54</div>
+            <div class="option">(C) 55</div>
+            <div class="option">(D) 56</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) 55</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) 55</strong></span>
+
+            <div class="solution">
+                D→W = 23
+                O→L = 12
+                G→T = 20
+
+                Total = 23+12+20 = <strong>55</strong>.
+
+                <span class="solution-hindi">
+                    D→W = 23
+                    O→L = 12
+                    G→T = 20
+
+                    Total = 23+12+20 = <strong>55</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q49 -->
+    <div class="question" data-answer="C">
+
+        <div class="q-number">Question 49 / प्रश्न 49</div>
+
+        <div class="q-text">
+            In a certain code, only the letters in odd positions of a word
+            are used and their alphabetical positions are added.
+            If CAT gives 23, what will DOG give?
+
+            <span class="q-hindi">
+                एक निश्चित code में केवल word के odd positions वाले letters लिए जाते हैं
+                और उनकी alphabetical positions को add किया जाता है।
+                यदि CAT का code 23 है, तो DOG का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 9</div>
+            <div class="option">(B) 10</div>
+            <div class="option">(C) 11</div>
+            <div class="option">(D) 12</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (C) 11</strong>
+            <span class="answer-hindi"><strong>उत्तर: (C) 11</strong></span>
+
+            <div class="solution">
+                CAT:
+                odd positions = C and T.
+
+                3+20 = 23.
+
+                DOG:
+                odd positions = D and G.
+
+                4+7 = <strong>11</strong>.
+
+                <span class="solution-hindi">
+                    CAT:
+                    odd positions = C और T.
+
+                    3+20 = 23.
+
+                    DOG:
+                    odd positions = D और G.
+
+                    4+7 = <strong>11</strong>।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Q50 -->
+    <div class="question" data-answer="B">
+
+        <div class="q-number">Question 50 / प्रश्न 50</div>
+
+        <div class="q-text">
+            If a word is coded by adding the alphabetical positions of its
+            first and last letters and then multiplying the result by the
+            number of letters, what is the code of PLANE?
+
+            <span class="q-hindi">
+                यदि किसी word का code उसके first और last letters की alphabetical positions
+                को add करके और फिर result को letters की संख्या से multiply करके बनाया जाता है,
+                तो PLANE का code क्या होगा?
+            </span>
+        </div>
+
+        <div class="options">
+            <div class="option">(A) 95</div>
+            <div class="option">(B) 105</div>
+            <div class="option">(C) 115</div>
+            <div class="option">(D) 125</div>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: (B) 105</strong>
+            <span class="answer-hindi"><strong>उत्तर: (B) 105</strong></span>
+
+            <div class="solution">
+                PLANE has 5 letters.
+
+                First letter P = 16.
+                Last letter E = 5.
+
+                (16+5) × 5
+                = 21 × 5
+                = <strong>105</strong>.
+
+                Therefore the correct code is 105.
+
+                <span class="solution-hindi">
+                    PLANE में 5 letters हैं।
+
+                    First letter P = 16.
+                    Last letter E = 5.
+
+                    (16+5) × 5
+                    = 21 × 5
+                    = <strong>105</strong>।
+
+                    इसलिए correct code 105 है।
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- PRACTICE STRATEGY -->
+    <!-- ===================================================== -->
+
+    <div class="note">
+
+        <h3>📌 Practice Strategy / अभ्यास रणनीति</h3>
+
+        <p>
+            In Coding-Decoding questions, first identify whether the coding
+            is based on letter shifting, opposite alphabet, alphabetical
+            position, rearrangement, word relation or artificial language.
+        </p>
+
+        <p>
+            Coding-Decoding questions में पहले यह identify करें कि coding
+            किस rule पर आधारित है — letter shifting, opposite alphabet,
+            alphabetical position, rearrangement, word relation या
+            artificial language.
+        </p>
+
+        <p style="margin-top:12px;">
+            <strong>Exam Tip:</strong>
+            Instead of guessing the rule by looking at the answer,
+            first establish the exact relation from the given examples.
+        </p>
+
+        <p>
+            <strong>परीक्षा टिप:</strong>
+            Answer देखकर rule guess करने के बजाय दिए गए examples से
+            पहले exact relation establish करें।
+        </p>
+
+    </div>
+
+
+    <div class="back">
+
+        <a href="ssc-topic-wise-practice.html">
+            ← Back to SSC Topic-wise Practice
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        <strong>LET'S QUALIFYNOW</strong>
+    </p>
+
+    <p>
+        Reasoning Preparation for SSC • Banking • Railway • Defence • State Government Exams
+    </p>
+
+    <p>
+        © 2026 Let's QualifyNow. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach(function(question){
+
+        const options = question.querySelectorAll(".option");
+        const answerBox = question.querySelector(".answer");
+        const solutionBox = question.querySelector(".solution");
+
+        if(!options.length || !answerBox){
+            return;
+        }
+
+        answerBox.style.display = "none";
+
+        if(solutionBox){
+            solutionBox.style.display = "none";
+        }
+
+        const correctLetter =
+            question.dataset.answer.toUpperCase();
+
+        options.forEach(function(option){
+
+            option.addEventListener("click", function(){
+
+                if(question.dataset.answered === "true"){
+                    return;
+                }
+
+                const optionMatch =
+                    option.textContent.trim().match(/^\(([A-D])\)/i);
+
+                if(!optionMatch){
+                    return;
+                }
+
+                question.dataset.answered = "true";
+
+                const selectedLetter =
+                    optionMatch[1].toUpperCase();
+
+                options.forEach(function(opt){
+                    opt.style.pointerEvents = "none";
+                });
+
+                option.classList.add("selected");
+
+                const resultMessage =
+                    document.createElement("div");
+
+                resultMessage.className =
+                    "result-message";
+
+                if(selectedLetter === correctLetter){
+
+                    option.classList.add("correct");
+
+                    resultMessage.classList.add(
+                        "correct-message"
+                    );
+
+                    resultMessage.innerHTML =
+                        "✅ Correct Answer!<br>✅ सही उत्तर!";
+
+                }else{
+
+                    option.classList.add("wrong");
+
+                    options.forEach(function(opt){
+
+                        const optMatch =
+                            opt.textContent.trim().match(/^\(([A-D])\)/i);
+
+                        if(
+                            optMatch &&
+                            optMatch[1].toUpperCase() === correctLetter
+                        ){
+                            opt.classList.add("correct");
+                        }
+
+                    });
+
+                    resultMessage.classList.add(
+                        "wrong-message"
+                    );
+
+                    resultMessage.innerHTML =
+                        "❌ Incorrect. Correct Answer: (" +
+                        correctLetter +
+                        ")<br>" +
+                        "❌ गलत उत्तर। सही उत्तर: (" +
+                        correctLetter +
+                        ")";
+                }
+
+                question
+                    .querySelector(".options")
+                    .insertAdjacentElement(
+                        "afterend",
+                        resultMessage
+                    );
+
+                answerBox.style.display = "block";
+
+                if(solutionBox){
+                    solutionBox.style.display = "block";
+                }
+
+            });
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
