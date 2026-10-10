@@ -1,0 +1,698 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Paper Cutting Practice | Let's QualifyNow</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:#f7f9fc;
+ color:#243b53;
+ line-height:1.6;
+}
+
+header{
+ background:#102a43;
+ color:#fff;
+ padding:15px 5%;
+}
+
+.header-inner{
+ max-width:1200px;
+ margin:auto;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
+ flex-wrap:wrap;
+}
+
+.brand{font-size:22px;font-weight:bold}
+
+nav{display:flex;gap:14px;flex-wrap:wrap}
+
+nav a{
+ color:#fff;
+ text-decoration:none;
+ font-size:13px;
+}
+
+nav a:hover{color:#d9eaf7;text-decoration:underline}
+
+.hero{
+ background:#173f5f;
+ color:#fff;
+ text-align:center;
+ padding:28px 15px;
+}
+
+.hero h1{font-size:27px;margin-bottom:7px}
+
+.container{
+ max-width:1100px;
+ margin:25px auto;
+ padding:0 15px;
+}
+
+.intro,.question-card{
+ background:#fff;
+ border:1px solid #e1e8ed;
+ border-radius:9px;
+ padding:20px;
+ margin-bottom:18px;
+}
+
+.intro h2{color:#102a43;margin-bottom:8px}
+.intro ul{padding-left:22px;margin-top:10px}
+.intro li{margin:4px 0}
+.hindi{color:#52606d;margin-top:5px}
+
+.part-title{
+ background:#d9eaf7;
+ color:#102a43;
+ border-left:5px solid #173f5f;
+ padding:12px 15px;
+ margin:24px 0 15px;
+ font-size:19px;
+ font-weight:bold;
+}
+
+.question{font-size:17px;font-weight:bold}
+.question-hindi{color:#52606d;margin:5px 0 15px}
+
+.process{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:15px;
+ margin:16px 0;
+}
+
+.step{
+ background:#fbfdff;
+ border:1px solid #d9e2ec;
+ border-radius:8px;
+ padding:12px;
+ text-align:center;
+ min-width:0;
+}
+
+.step-title{
+ font-size:15px;
+ font-weight:bold;
+ color:#173f5f;
+ margin-bottom:8px;
+}
+
+.step svg{
+ display:block;
+ width:100%;
+ max-width:210px;
+ height:auto;
+ margin:auto;
+}
+
+.step-caption{
+ font-size:13px;
+ color:#52606d;
+ margin-top:8px;
+}
+
+.options-title{font-weight:bold;margin:18px 0 10px}
+
+.options{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:10px;
+}
+
+.option{
+ width:100%;
+ min-height:140px;
+ padding:12px;
+ display:flex;
+ align-items:center;
+ gap:12px;
+ background:#fff;
+ border:1px solid #d9e2ec;
+ border-radius:7px;
+ color:#243b53;
+ text-align:left;
+ cursor:pointer;
+}
+
+.option:hover:not(:disabled){
+ border-color:#627d98;
+ background:#f7f9fc;
+}
+
+.option-letter{
+ min-width:24px;
+ font-weight:bold;
+ color:#173f5f;
+}
+
+.option svg{
+ width:130px;
+ max-width:calc(100% - 30px);
+ height:auto;
+ display:block;
+ flex-shrink:1;
+}
+
+.option.correct{background:#e6f4ea;border-color:#238636}
+.option.wrong{background:#fdecea;border-color:#c62828}
+.option:disabled{cursor:default}
+
+.solution{
+ display:none;
+ background:#f7f9fc;
+ border-left:4px solid #627d98;
+ padding:14px;
+ margin-top:15px;
+ border-radius:4px;
+}
+
+.solution.show{display:block}
+.feedback{font-weight:bold;margin-bottom:8px}
+
+.correct-answer{
+ color:#102a43;
+ font-size:16px;
+ font-weight:bold;
+}
+
+.explanation{margin-top:8px}
+
+.score-box{
+ background:#102a43;
+ color:#fff;
+ border-radius:9px;
+ padding:22px;
+ margin:25px 0;
+ text-align:center;
+}
+
+.score-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:12px;
+ margin:18px 0;
+}
+
+.score-item{
+ background:#173f5f;
+ padding:12px;
+ border-radius:6px;
+}
+
+.score-item span{
+ display:block;
+ font-size:13px;
+ color:#d9eaf7;
+}
+
+.score-item strong{font-size:23px}
+
+.reset{
+ background:#fff;
+ color:#102a43;
+ border:0;
+ border-radius:5px;
+ padding:11px 22px;
+ font-weight:bold;
+ cursor:pointer;
+}
+
+.reset:hover{background:#d9eaf7}
+
+.note{
+ background:#eef6fb;
+ border:1px solid #d9eaf7;
+ padding:14px;
+ border-radius:7px;
+ margin:18px 0;
+}
+
+footer{
+ background:#102a43;
+ color:#fff;
+ text-align:center;
+ padding:20px;
+ margin-top:30px;
+ font-size:14px;
+}
+
+@media(max-width:700px){
+ .header-inner{justify-content:center;text-align:center}
+ .brand{width:100%;font-size:21px}
+ nav{justify-content:center;gap:9px 12px}
+ nav a{font-size:12px}
+ .hero h1{font-size:23px}
+ .process{grid-template-columns:1fr}
+ .options{grid-template-columns:1fr}
+ .score-grid{grid-template-columns:repeat(2,1fr)}
+ .intro,.question-card{padding:14px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="header-inner">
+  <div class="brand">LET'S QUALIFYNOW</div>
+  <nav>
+   <a href="index.html">Home</a>
+   <a href="ssc-reasoning.html">SSC Reasoning</a>
+   <a href="courses.html">Courses</a>
+   <a href="study-material.html">Study Material</a>
+   <a href="live-classes.html">Live Classes</a>
+   <a href="test-series.html">Test Series</a>
+   <a href="exams.html">Exams</a>
+   <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero">
+ <h1>✂️ SSC Paper Cutting Practice</h1>
+ <p>50 Practice Questions with Answers &amp; Solutions</p>
+</section>
+
+<main class="container">
+
+ <section class="intro">
+  <h2>SSC Paper Cutting Practice Set</h2>
+
+  <p>
+   Study the original paper, fold lines and cutting marks carefully.
+   Choose the correct pattern formed after unfolding the paper.
+  </p>
+
+  <p class="hindi">
+   मूल कागज़, मोड़ने की रेखाओं और कटिंग के निशानों को ध्यान से देखें।
+   कागज़ खोलने पर बनने वाली सही आकृति चुनें।
+  </p>
+
+  <ul>
+   <li>Paper cutting and unfolding questions.</li>
+   <li>हर प्रश्न में चार विकल्प दिए गए हैं।</li>
+   <li>Correct answer: +1 mark; no negative marking.</li>
+   <li>Answer and explanation appear only after selecting an option.</li>
+  </ul>
+ </section>
+
+ <div class="part-title">
+  Paper Cutting &amp; Unfolding | कागज़ काटना और खोलना
+ </div>
+
+ <div id="questions"></div>
+
+ <section class="score-box">
+  <h2>📊 Test Result | परिणाम</h2>
+
+  <div class="score-grid">
+   <div class="score-item">
+    <span>Correct | सही</span>
+    <strong id="correct">0</strong>
+   </div>
+   <div class="score-item">
+    <span>Wrong | गलत</span>
+    <strong id="wrong">0</strong>
+   </div>
+   <div class="score-item">
+    <span>Attempted | हल किए</span>
+    <strong id="attempted">0/50</strong>
+   </div>
+   <div class="score-item">
+    <span>Marks | अंक</span>
+    <strong id="marks">0/50</strong>
+   </div>
+  </div>
+
+  <button class="reset" type="button" onclick="resetTest()">
+   ↻ Reset Test
+  </button>
+ </section>
+
+ <div class="note">
+  <strong>Practice Tip:</strong>
+  A cut is reflected across each fold line when the paper is unfolded.
+  <br>
+  <strong>अभ्यास सुझाव:</strong>
+  कागज़ खोलने पर कटिंग का प्रतिबिंब प्रत्येक मोड़-रेखा के दूसरी ओर बनता है।
+ </div>
+
+</main>
+
+<footer>
+ LET'S QUALIFYNOW | N Saurabh Sir — Reasoning Faculty
+ <br>SSC • Banking • Railway • Government Exams
+</footer>
+
+<script>
+/*
+Coordinate system:
+The complete paper is a 100 x 100 square.
+
+V: right half folds onto the left.
+H: bottom half folds upwards.
+VH: right half folds left, then bottom half folds upwards.
+
+Cut coordinates are defined on the folded sheet in a local 0–100
+coordinate system. They are mapped onto the actual folded rectangle
+before being reflected to form the answer options.
+*/
+
+const foldTypes=[
+ "V","H","VH","V","H","VH","H","V","VH","H",
+ "V","VH","V","H","VH","V","H","VH","H","V",
+ "VH","H","V","VH","V","H","VH","V","H","VH",
+ "H","V","VH","H","V","VH","V","H","VH","V",
+ "H","VH","V","H","VH","V","VH","H","V","VH"
+];
+
+function makeQuestion(i){
+ const fold=foldTypes[i];
+ const type=i%5;
+ const pos=i%6;
+
+ const d=12+(pos%3)*5;
+ const start=14+((i*11)%48);
+ const len=12+((i*7)%18);
+
+ let points=[];
+
+ if(fold==="V"){
+  const y=Math.min(start,78-len);
+  if(type===0) points=[[0,y],[d,y],[d,y+len],[0,y+len]];
+  else if(type===1) points=[[0,y],[d,y+len/2],[0,y+len]];
+  else if(type===2) points=[[0,y],[d,y],[d/2,y+len],[0,y+len]];
+  else if(type===3) points=[[0,y],[d,y+len/3],[d,y+len],[0,y+len]];
+  else points=[[0,y],[d,y+len],[0,y+len*0.65]];
+ }
+ else if(fold==="H"){
+  const x=Math.min(start,78-len);
+  if(type===0) points=[[x,0],[x+len,0],[x+len,d],[x,d]];
+  else if(type===1) points=[[x,0],[x+len/2,d],[x+len,0]];
+  else if(type===2) points=[[x,0],[x+len,d],[x+len/2,d],[x+len/4,0]];
+  else if(type===3) points=[[x,0],[x+len,0],[x+len*0.7,d],[x+len*0.3,d]];
+  else points=[[x,0],[x+len,d],[x+len*0.45,d*0.65],[x,0]];
+ }
+ else{
+  const edge=i%2===0?"V":"H";
+  const s=12+((i*5)%20);
+  const a=12+((i*9)%26);
+  if(edge==="V"){
+   if(type===0) points=[[0,a],[d,a],[d,a+s],[0,a+s]];
+   else if(type===1) points=[[0,a],[d,a+s/2],[0,a+s]];
+   else if(type===2) points=[[0,a],[d,a],[d/2,a+s],[0,a+s]];
+   else if(type===3) points=[[0,a],[d,a+s/3],[d,a+s],[0,a+s]];
+   else points=[[0,a],[d,a+s],[0,a+s*0.6]];
+  }else{
+   if(type===0) points=[[a,0],[a+s,0],[a+s,d],[a,d]];
+   else if(type===1) points=[[a,0],[a+s/2,d],[a+s,0]];
+   else if(type===2) points=[[a,0],[a+s,d],[a+s/2,d],[a+s/4,0]];
+   else if(type===3) points=[[a,0],[a+s,0],[a+s*0.7,d],[a+s*0.3,d]];
+   else points=[[a,0],[a+s,d],[a+s*0.45,d*0.65],[a,0]];
+  }
+ }
+
+ return {fold,points};
+}
+
+function localToPaper(p,fold){
+ let [u,v]=p;
+ let x=u,y=v;
+
+ if(fold.includes("V")) x=u/2;
+ if(fold.includes("H")) y=v/2;
+
+ return [x,y];
+}
+
+function getPolygons(q,mask){
+ const base=q.points.map(p=>localToPaper(p,q.fold));
+ const copies=[base];
+
+ if(mask.includes("V")){
+  copies.push(base.map(([x,y])=>[100-x,y]));
+ }
+ if(mask.includes("H")){
+  copies.push(base.map(([x,y])=>[x,100-y]));
+ }
+ if(mask.includes("V")&&mask.includes("H")){
+  copies.push(base.map(([x,y])=>[100-x,100-y]));
+ }
+
+ return copies;
+}
+
+function makeSVG(polygons,folded=false,fold=q.fold){
+ let rectW=98,rectH=98,rectX=1,rectY=1;
+
+ if(folded&&fold.includes("V")) rectW=48;
+ if(folded&&fold.includes("H")) rectH=48;
+
+ const shapes=polygons.map(poly=>{
+  const pts=poly.map(p=>p.join(",")).join(" ");
+  return `<polygon points="${pts}" fill="#ffffff"
+    stroke="#c62828" stroke-width="1.7"
+    stroke-linejoin="round"/>`;
+ }).join("");
+
+ return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+  role="img" aria-label="${folded?"Folded paper with cut mark":"Unfolded paper pattern"}">
+  <rect x="${rectX}" y="${rectY}" width="${rectW}" height="${rectH}"
+   fill="#d9eaf7" stroke="#243b53" stroke-width="1.7"/>
+  ${shapes}
+ </svg>`;
+}
+
+function originalSVG(fold){
+ let lines="";
+ let arrows="";
+
+ if(fold.includes("V")){
+  lines+=`<line x1="50" y1="1" x2="50" y2="99"
+    stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>`;
+  arrows+=`<path d="M82 28 L58 28 M58 28 L65 21 M58 28 L65 35"
+    fill="none" stroke="#173f5f" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round"/>`;
+ }
+
+ if(fold.includes("H")){
+  lines+=`<line x1="1" y1="50" x2="99" y2="50"
+    stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>`;
+  arrows+=`<path d="M28 82 L28 58 M28 58 L21 65 M28 58 L35 65"
+    fill="none" stroke="#173f5f" stroke-width="2.5"
+    stroke-linecap="round" stroke-linejoin="round"/>`;
+ }
+
+ return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+  role="img" aria-label="Original paper and fold lines">
+  <rect x="1" y="1" width="98" height="98"
+   fill="#d9eaf7" stroke="#243b53" stroke-width="1.7"/>
+  ${lines}${arrows}
+ </svg>`;
+}
+
+function foldedSVG(q){
+ const pts=q.points.map(([u,v])=>{
+  let x=u,y=v;
+  if(q.fold.includes("V")) x=u/2;
+  if(q.fold.includes("H")) y=v/2;
+  return [x,y];
+ });
+ return makeSVG([pts],true,q.fold);
+}
+
+function foldText(fold){
+ if(fold==="V"){
+  return {
+   en:"Fold the right half to the left along the vertical line.",
+   hi:"दाएँ आधे कागज़ को लंबवत रेखा पर बाईं ओर मोड़ें।"
+  };
+ }
+ if(fold==="H"){
+  return {
+   en:"Fold the bottom half upwards along the horizontal line.",
+   hi:"नीचे के आधे कागज़ को क्षैतिज रेखा पर ऊपर की ओर मोड़ें।"
+  };
+ }
+ return {
+  en:"Fold the right half to the left, then fold the bottom half upwards.",
+  hi:"पहले दाएँ आधे कागज़ को बाईं ओर मोड़ें, फिर नीचे के आधे हिस्से को ऊपर मोड़ें।"
+ };
+}
+
+const prepared=Array.from({length:50},(_,i)=>{
+ const q=makeQuestion(i);
+ const masks=["","V","H","VH"];
+ const shift=(i*3+1)%4;
+ const options=masks.slice(shift).concat(masks.slice(0,shift));
+
+ return {
+  ...q,
+  options,
+  correct:options.indexOf(q.fold),
+  instructions:foldText(q.fold)
+ };
+});
+
+const host=document.getElementById("questions");
+
+prepared.forEach((q,i)=>{
+ const optionsHTML=q.options.map((mask,j)=>{
+  const svg=makeSVG(getPolygons(q,mask),false,q.fold);
+  return `<button class="option" type="button"
+   id="q${i}o${j}" onclick="chooseAnswer(${i},${j})">
+   <span class="option-letter">${String.fromCharCode(65+j)}.</span>
+   ${svg}
+  </button>`;
+ }).join("");
+
+ host.insertAdjacentHTML("beforeend",`
+  <section class="question-card" id="question${i}">
+   <div class="question">
+    Q${i+1}. Which option shows the correct paper after unfolding?
+   </div>
+
+   <div class="question-hindi">
+    प्रश्न ${i+1}. कागज़ खोलने पर कौन-सी आकृति बनेगी?
+   </div>
+
+   <div class="process">
+    <div class="step">
+     <div class="step-title">1. Original Paper | मूल कागज़</div>
+     ${originalSVG(q.fold)}
+     <div class="step-caption">
+      Red dotted line = Fold line<br>
+      लाल बिंदीदार रेखा = मोड़ने की रेखा
+     </div>
+    </div>
+
+    <div class="step">
+     <div class="step-title">2. Folded Paper &amp; Cut | मुड़ा कागज़ और कटिंग</div>
+     ${foldedSVG(q)}
+     <div class="step-caption">
+      Red outline = Cut mark<br>
+      लाल रेखा = काटने का निशान<br><br>
+      ${q.instructions.en}<br>
+      <span class="hindi">${q.instructions.hi}</span>
+     </div>
+    </div>
+   </div>
+
+   <div class="options-title">
+    Choose the correct pattern | सही आकृति चुनें:
+   </div>
+
+   <div class="options">${optionsHTML}</div>
+
+   <div class="solution" id="sol${i}">
+    <div class="feedback" id="feed${i}"></div>
+    <div class="correct-answer" id="answer${i}"></div>
+    <div class="explanation" id="explain${i}"></div>
+   </div>
+  </section>
+ `);
+});
+
+let correct=0;
+let wrong=0;
+let attempted=0;
+const answered=Array(50).fill(false);
+
+function chooseAnswer(qi,oi){
+ if(answered[qi])return;
+
+ answered[qi]=true;
+ attempted++;
+
+ const q=prepared[qi];
+ const selected=document.getElementById(`q${qi}o${oi}`);
+ const right=document.getElementById(`q${qi}o${q.correct}`);
+ const feedback=document.getElementById(`feed${qi}`);
+
+ if(oi===q.correct){
+  correct++;
+  selected.classList.add("correct");
+  feedback.textContent="✓ Correct Answer! | सही उत्तर!";
+  feedback.style.color="#217346";
+ }else{
+  wrong++;
+  selected.classList.add("wrong");
+  right.classList.add("correct");
+  feedback.textContent="✗ Incorrect Answer | आपका उत्तर गलत है";
+  feedback.style.color="#c62828";
+ }
+
+ for(let j=0;j<4;j++){
+  document.getElementById(`q${qi}o${j}`).disabled=true;
+ }
+
+ const letter=String.fromCharCode(65+q.correct);
+ document.getElementById(`answer${qi}`).innerHTML=
+  `Correct Answer: Option ${letter}<br>
+   <span class="hindi">सही उत्तर: विकल्प ${letter}</span>`;
+
+ let method="vertical fold line";
+ let hindiMethod="लंबवत मोड़-रेखा";
+
+ if(q.fold==="H"){
+  method="horizontal fold line";
+  hindiMethod="क्षैतिज मोड़-रेखा";
+ }else if(q.fold==="VH"){
+  method="both vertical and horizontal fold lines";
+  hindiMethod="लंबवत और क्षैतिज दोनों मोड़-रेखाएँ";
+ }
+
+ document.getElementById(`explain${qi}`).innerHTML=
+  `<strong>Explanation:</strong> Reflect the cut across the ${method} to obtain the unfolded pattern.
+   <br><strong>समाधान:</strong> कागज़ खोलते समय कटिंग को ${hindiMethod} के दूसरी ओर प्रतिबिंबित करें।`;
+
+ document.getElementById(`sol${qi}`).classList.add("show");
+ updateScore();
+}
+
+function updateScore(){
+ document.getElementById("correct").textContent=correct;
+ document.getElementById("wrong").textContent=wrong;
+ document.getElementById("attempted").textContent=attempted+"/50";
+ document.getElementById("marks").textContent=correct+"/50";
+}
+
+function resetTest(){
+ correct=0;
+ wrong=0;
+ attempted=0;
+ answered.fill(false);
+
+ prepared.forEach((q,i)=>{
+  for(let j=0;j<4;j++){
+   const button=document.getElementById(`q${i}o${j}`);
+   button.disabled=false;
+   button.classList.remove("correct","wrong");
+  }
+
+  document.getElementById(`sol${i}`).classList.remove("show");
+  document.getElementById(`feed${i}`).textContent="";
+  document.getElementById(`answer${i}`).textContent="";
+  document.getElementById(`explain${i}`).textContent="";
+ });
+
+ updateScore();
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
+```
