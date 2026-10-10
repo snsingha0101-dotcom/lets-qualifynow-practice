@@ -1,0 +1,1130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Clock Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#102a43;
+    color:#fff;
+    padding:15px 20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d9eaf7;
+    text-decoration:underline;
+}
+
+/* HERO */
+.hero{
+    background:#173f5f;
+    color:#fff;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* MAIN CONTAINER */
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro-card{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:28px;
+    box-shadow:0 3px 10px rgba(16,42,67,0.06);
+}
+
+.intro-card h2{
+    color:#102a43;
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.intro-card p{
+    margin-bottom:12px;
+}
+
+.intro-card ul{
+    padding-left:24px;
+    margin:12px 0;
+}
+
+.intro-card li{
+    margin-bottom:5px;
+}
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    border-left:5px solid #173f5f;
+    padding:14px 18px;
+    border-radius:7px;
+    font-size:21px;
+    margin-bottom:22px;
+}
+
+/* QUESTION CARD */
+.question-card{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 3px 10px rgba(16,42,67,0.05);
+}
+
+.question-number{
+    color:#173f5f;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.question-en{
+    font-size:17px;
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.question-hi{
+    font-size:16px;
+    font-weight:bold;
+    color:#52606d;
+    margin-bottom:16px;
+}
+
+.options-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+.option-btn{
+    width:100%;
+    text-align:left;
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    font-size:15px;
+    cursor:pointer;
+    line-height:1.5;
+    transition:background 0.2s,border 0.2s;
+}
+
+.option-btn:hover:not(:disabled){
+    background:#d9eaf7;
+}
+
+.option-btn:disabled{
+    cursor:default;
+    opacity:1;
+}
+
+.option-btn.correct{
+    background:#d4edda;
+    border:2px solid #28a745;
+    color:#155724;
+    font-weight:bold;
+}
+
+.option-btn.wrong{
+    background:#f8d7da;
+    border:2px solid #dc3545;
+    color:#721c24;
+}
+
+.solution{
+    display:none;
+    margin-top:18px;
+    padding:16px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:6px;
+}
+
+.solution h4{
+    color:#102a43;
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.solution p{
+    margin-bottom:9px;
+    overflow-wrap:anywhere;
+}
+
+.solution p:last-child{
+    margin-bottom:0;
+}
+
+.correct-answer{
+    color:#155724;
+    font-weight:bold;
+}
+
+/* RESULT BOX */
+.result-box{
+    background:#102a43;
+    color:#fff;
+    text-align:center;
+    padding:28px 20px;
+    border-radius:10px;
+    margin:40px 0 25px;
+}
+
+.result-box h2{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.score-number{
+    font-size:38px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:12px;
+    margin:24px 0;
+}
+
+.stat-card{
+    background:#173f5f;
+    padding:15px 8px;
+    border-radius:8px;
+}
+
+.stat-label{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.stat-value{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.reset-btn{
+    background:#fff;
+    color:#102a43;
+    border:none;
+    padding:12px 24px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:18px;
+}
+
+.reset-btn:hover{
+    background:#d9eaf7;
+}
+
+.note-card{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:18px;
+    margin-bottom:30px;
+    color:#52606d;
+}
+
+.note-card p{
+    margin-bottom:8px;
+}
+
+.note-card p:last-child{
+    margin-bottom:0;
+}
+
+/* FOOTER */
+footer{
+    background:#102a43;
+    color:#fff;
+    text-align:center;
+    padding:20px 15px;
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+    .header-inner{
+        flex-direction:column;
+    }
+
+    .logo{
+        white-space:normal;
+        text-align:center;
+    }
+
+    nav{
+        justify-content:center;
+        gap:10px 14px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .container{
+        margin:25px auto;
+    }
+
+    .intro-card{
+        padding:19px;
+    }
+
+    .intro-card h2{
+        font-size:21px;
+    }
+
+    .part-title{
+        font-size:19px;
+    }
+
+    .question-card{
+        padding:16px;
+    }
+
+    .options-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .stat-card:last-child{
+        grid-column:1/-1;
+    }
+
+    .score-number{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">LET'S QUALIFYNOW</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636"
+               target="_blank" rel="noopener">YouTube</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>🕒 SSC Clock Practice</h1>
+    <p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
+    <p>घड़ी पर आधारित 50 महत्वपूर्ण प्रश्न, उत्तर एवं विस्तृत समाधान</p>
+</section>
+
+<main class="container">
+
+    <section class="intro-card">
+        <h2>SSC Clock Practice Set | घड़ी अभ्यास सेट</h2>
+
+        <p>
+            This practice set covers important Clock concepts for SSC CGL,
+            CHSL, CPO, MTS and other Government Exams.
+        </p>
+
+        <p>
+            यह अभ्यास सेट SSC CGL, CHSL, CPO, MTS तथा अन्य सरकारी परीक्षाओं
+            के लिए घड़ी के महत्वपूर्ण प्रश्नों पर आधारित है।
+        </p>
+
+        <ul>
+            <li>Angle Between Clock Hands | घड़ी के काँटों के बीच कोण</li>
+            <li>Mirror Image of Clock | घड़ी का दर्पण प्रतिबिंब</li>
+            <li>Movement of Clock Hands | घड़ी के काँटों की गति</li>
+            <li>Coincidence of Hands | काँटों का एक साथ होना</li>
+            <li>Right Angle and Straight Angle | समकोण एवं सरल कोण</li>
+            <li>Time-Based Clock Problems | समय पर आधारित घड़ी के प्रश्न</li>
+        </ul>
+
+        <p>
+            <strong>Instructions:</strong> Select one option for each question.
+            The answer and solution will appear after your attempt.
+        </p>
+
+        <p>
+            <strong>निर्देश:</strong> प्रत्येक प्रश्न के लिए एक विकल्प चुनें।
+            उत्तर देने के बाद सही उत्तर और समाधान दिखाई देगा।
+        </p>
+
+        <p><strong>Total Questions: 50 | Maximum Marks: 50</strong></p>
+        <p><strong>Marking:</strong> +1 for each correct answer; no negative marking.</p>
+        <p><strong>अंक:</strong> प्रत्येक सही उत्तर के लिए 1 अंक; गलत उत्तर पर कोई नकारात्मक अंक नहीं।</p>
+    </section>
+
+    <h2 class="part-title">Part 1: Clock Questions | भाग 1: घड़ी के प्रश्न</h2>
+
+    <div id="questions-container"></div>
+
+    <section class="result-box" id="result-box">
+        <h2>Your Result | आपका परिणाम</h2>
+
+        <p>Complete the practice set to review your performance.</p>
+        <p>अपना प्रदर्शन देखने के लिए अभ्यास सेट पूरा करें।</p>
+
+        <div class="score-number" id="score">0 / 50</div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Correct | सही</div>
+                <div class="stat-value" id="correct-count">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Wrong | गलत</div>
+                <div class="stat-value" id="wrong-count">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Attempted | प्रयास</div>
+                <div class="stat-value" id="attempted-count">0</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Unattempted | शेष</div>
+                <div class="stat-value" id="unattempted-count">50</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Marks | अंक</div>
+                <div class="stat-value" id="marks-count">0</div>
+            </div>
+        </div>
+
+        <p id="completion-message">
+            You have attempted 0 of 50 questions.
+            | आपने 50 में से 0 प्रश्न हल किए हैं।
+        </p>
+
+        <button class="reset-btn" id="reset-btn" type="button">
+            Reset Practice | दोबारा अभ्यास करें
+        </button>
+    </section>
+
+    <section class="note-card">
+        <p><strong>Important Note:</strong> Clock-angle questions use the standard 12-hour analog clock.</p>
+        <p><strong>महत्वपूर्ण:</strong> घड़ी के कोण वाले प्रश्नों में सामान्य 12 घंटे वाली घड़ी का प्रयोग किया गया है।</p>
+
+        <p>
+            <strong>Formula:</strong>
+            Hour-hand angle = 30H + 0.5M.
+            Minute-hand angle = 6M.
+            The smaller angle is the smaller of their angular difference and 360° minus that difference.
+        </p>
+
+        <p>
+            <strong>सूत्र:</strong>
+            घंटे की सुई का कोण = 30H + 0.5M।
+            मिनट की सुई का कोण = 6M।
+            छोटा कोण निकालने के लिए दोनों कोणों के अंतर और 360° में से उस अंतर को घटाकर प्राप्त कोण में से छोटा कोण लें।
+        </p>
+
+        <p>
+            <strong>Marking:</strong> +1 for each correct answer; no negative marking.
+            | प्रत्येक सही उत्तर के लिए 1 अंक; नकारात्मक अंक नहीं।
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 LET'S QUALIFYNOW | SSC • Banking • Railway • Government Exams
+</footer>
+
+<script>
+"use strict";
+
+const questions = [];
+
+/* HELPER FUNCTIONS */
+
+function formatTime(totalMinutes){
+    totalMinutes = ((totalMinutes % 720) + 720) % 720;
+
+    const hour = Math.floor(totalMinutes / 60) || 12;
+    const minute = Math.round(totalMinutes % 60);
+
+    return String(hour).padStart(2, "0") + ":" +
+           String(minute).padStart(2, "0");
+}
+
+function angleAt(hour, minute){
+    const hourAngle = ((hour % 12) * 30) + (minute * 0.5);
+    const minuteAngle = minute * 6;
+
+    const difference = Math.abs(hourAngle - minuteAngle);
+    const smallerAngle = Math.min(difference, 360 - difference);
+
+    return Math.round(smallerAngle * 100) / 100;
+}
+
+function timeToMinutes(time){
+    const parts = time.split(":");
+    let hour = Number(parts[0]);
+    const minute = Number(parts[1]);
+
+    if(hour === 12) hour = 0;
+
+    return hour * 60 + minute;
+}
+
+function numericOptions(correct, offsets){
+    const result = [correct];
+
+    offsets.forEach(offset => {
+        const value = Math.round((correct + offset) * 100) / 100;
+
+        if(value >= 0 && !result.includes(value) && result.length < 4){
+            result.push(value);
+        }
+    });
+
+    let extra = 1;
+
+    while(result.length < 4){
+        const value = Math.round((correct + extra) * 100) / 100;
+
+        if(!result.includes(value)){
+            result.push(value);
+        }
+
+        extra++;
+    }
+
+    return result;
+}
+
+function timeOptions(correct){
+    const value = timeToMinutes(correct);
+    const candidates = [
+        value,
+        value + 5,
+        value - 5,
+        value + 10,
+        value - 10,
+        value + 15,
+        value - 15,
+        value + 20
+    ];
+
+    const result = [];
+
+    candidates.forEach(item => {
+        const option = formatTime(item);
+
+        if(!result.includes(option) && result.length < 4){
+            result.push(option);
+        }
+    });
+
+    return result;
+}
+
+function rotateOptions(options, seed){
+    const result = options.slice();
+    const rotations = seed % result.length;
+
+    for(let i = 0; i < rotations; i++){
+        result.push(result.shift());
+    }
+
+    return result;
+}
+
+function addQuestion(en, hi, options, answer, explanationEn, explanationHi){
+    const correctValue = String(answer);
+    let cleaned = [];
+
+    options.forEach(item => {
+        const value = String(item);
+
+        if(!cleaned.includes(value)){
+            cleaned.push(value);
+        }
+    });
+
+    if(!cleaned.includes(correctValue)){
+        cleaned.unshift(correctValue);
+    }
+
+    cleaned = cleaned.slice(0, 4);
+
+    while(cleaned.length < 4){
+        const alternative = "Option " + (cleaned.length + 1);
+
+        if(!cleaned.includes(alternative)){
+            cleaned.push(alternative);
+        }
+    }
+
+    questions.push({
+        en,
+        hi,
+        options: rotateOptions(cleaned, questions.length),
+        answer: correctValue,
+        explanationEn,
+        explanationHi
+    });
+}
+
+/* QUESTIONS 1–20: ANGLE BETWEEN CLOCK HANDS */
+
+const angleQuestions = [
+    {h:3,m:0},
+    {h:6,m:0},
+    {h:9,m:0},
+    {h:2,m:30},
+    {h:4,m:20},
+    {h:5,m:20},
+    {h:7,m:30},
+    {h:8,m:20},
+    {h:10,m:10},
+    {h:11,m:20},
+    {h:1,m:15},
+    {h:2,m:20},
+    {h:3,m:15},
+    {h:4,m:40},
+    {h:5,m:45},
+    {h:6,m:20},
+    {h:7,m:10},
+    {h:8,m:45},
+    {h:9,m:20},
+    {h:10,m:30}
+];
+
+angleQuestions.forEach(item => {
+    const hourAngle = ((item.h % 12) * 30) + (item.m * 0.5);
+    const minuteAngle = item.m * 6;
+    const rawDifference = Math.abs(hourAngle - minuteAngle);
+    const correct = Math.min(rawDifference, 360 - rawDifference);
+    const time = item.h + ":" + String(item.m).padStart(2, "0");
+
+    const explanationEn =
+        "Hour-hand angle = 30 × " + (item.h % 12) + " + 0.5 × " +
+        item.m + " = " + hourAngle + "°. Minute-hand angle = 6 × " +
+        item.m + " = " + minuteAngle + "°. Their angular difference is " +
+        rawDifference + "°. " +
+        (rawDifference > 180
+            ? "The smaller angle = 360° − " + rawDifference + "° = " + correct + "°."
+            : "The smaller angle is " + correct + "°.");
+
+    const explanationHi =
+        "घंटे की सुई का कोण = 30 × " + (item.h % 12) + " + 0.5 × " +
+        item.m + " = " + hourAngle + "°। मिनट की सुई का कोण = 6 × " +
+        item.m + " = " + minuteAngle + "°। दोनों कोणों का अंतर " +
+        rawDifference + "° है। " +
+        (rawDifference > 180
+            ? "छोटा कोण = 360° − " + rawDifference + "° = " + correct + "°।"
+            : "अतः छोटा कोण " + correct + "° है।");
+
+    addQuestion(
+        "What is the smaller angle between the clock hands at " + time + "?",
+        time + " बजे घड़ी की दोनों सुइयों के बीच छोटा कोण कितना होगा?",
+        numericOptions(correct, [30,-30,60,-60,15,-15,45]),
+        correct,
+        explanationEn,
+        explanationHi
+    );
+});
+
+/* QUESTIONS 21–30: MIRROR IMAGE */
+
+const mirrorQuestions = [
+    "02:30","03:20","04:15","05:40","06:25",
+    "07:10","08:35","09:45","10:20","11:15"
+];
+
+mirrorQuestions.forEach(time => {
+    const original = timeToMinutes(time);
+    const mirrorMinutes = (720 - original) % 720;
+    const correct = formatTime(mirrorMinutes);
+
+    addQuestion(
+        "What is the mirror image time of " + time + " on an analog clock?",
+        "घड़ी में " + time + " का दर्पण प्रतिबिंब समय क्या होगा?",
+        timeOptions(correct),
+        correct,
+        "For a 12-hour analog clock, mirror image time = 11:60 − the given time. Therefore, 11:60 − " +
+        time + " = " + correct + ".",
+        "12 घंटे वाली घड़ी में दर्पण प्रतिबिंब समय = 11:60 − दिया गया समय। इसलिए 11:60 − " +
+        time + " = " + correct + "।"
+    );
+});
+
+/* QUESTIONS 31–35: MINUTE-HAND MOVEMENT */
+
+const minuteMovement = [10,15,25,35,45];
+
+minuteMovement.forEach(minutes => {
+    const correct = minutes * 6;
+
+    addQuestion(
+        "Through how many degrees does the minute hand move in " +
+        minutes + " minutes?",
+        minutes + " मिनट में मिनट की सुई कितने डिग्री घूमती है?",
+        numericOptions(correct, [30,-30,60,-60,15,-15,45]),
+        correct,
+        "The minute hand moves 360° in 60 minutes, so its speed is 6° per minute. In " +
+        minutes + " minutes, it moves " + minutes + " × 6 = " + correct + "°.",
+        "मिनट की सुई 60 मिनट में 360° घूमती है, इसलिए इसकी गति 6° प्रति मिनट है। " +
+        minutes + " मिनट में कोण = " + minutes + " × 6 = " + correct + "°।"
+    );
+});
+
+/* QUESTIONS 36–40: HOUR-HAND MOVEMENT */
+
+const hourMovement = [1,2,3,4,6];
+
+hourMovement.forEach(hours => {
+    const correct = hours * 30;
+    const hourText = hours === 1 ? "hour" : "hours";
+
+    addQuestion(
+        "Through how many degrees does the hour hand move in " +
+        hours + " " + hourText + "?",
+        hours + " घंटे में घंटे की सुई कितने डिग्री घूमती है?",
+        numericOptions(correct, [30,-30,60,-60,15,-15,45]),
+        correct,
+        "The hour hand completes 360° in 12 hours, so its speed is 30° per hour. In " +
+        hours + " " + hourText + ", it moves " + hours + " × 30 = " + correct + "°.",
+        "घंटे की सुई 12 घंटे में 360° घूमती है, इसलिए इसकी गति 30° प्रति घंटा है। " +
+        hours + " घंटे में कोण = " + hours + " × 30 = " + correct + "°।"
+    );
+});
+
+/* QUESTIONS 41–45: COINCIDENCE OF HANDS */
+
+const coincidenceQuestions = [
+    {h:1},
+    {h:2},
+    {h:3},
+    {h:4},
+    {h:5}
+];
+
+coincidenceQuestions.forEach(item => {
+    const minutes = (60 * item.h) / 11;
+    const wholeMinutes = Math.floor(minutes);
+    const seconds = Math.round((minutes - wholeMinutes) * 60);
+
+    let roundedMinutes = wholeMinutes;
+    let roundedSeconds = seconds;
+
+    if(roundedSeconds === 60){
+        roundedMinutes++;
+        roundedSeconds = 0;
+    }
+
+    const answerText = roundedMinutes + " min " +
+        String(roundedSeconds).padStart(2, "0") + " sec";
+
+    const otherTimes = [
+        {h:1, text:"5 min 27 sec"},
+        {h:2, text:"10 min 55 sec"},
+        {h:3, text:"16 min 22 sec"},
+        {h:4, text:"21 min 49 sec"},
+        {h:5, text:"27 min 16 sec"},
+        {h:7, text:"38 min 11 sec"}
+    ];
+
+    const options = [answerText];
+
+    otherTimes.forEach(other => {
+        if(other.h !== item.h &&
+           !options.includes(other.text) &&
+           options.length < 4){
+            options.push(other.text);
+        }
+    });
+
+    addQuestion(
+        "Approximately how long after " + item.h +
+        " o'clock will the two hands coincide?",
+        item.h + " बजे के बाद दोनों सुइयाँ लगभग कितने समय बाद एक साथ होंगी?",
+        options,
+        answerText,
+        "At " + item.h + " o'clock, the hands are " +
+        (item.h * 30) + "° apart. Their relative speed is 6 − 0.5 = 5.5° per minute. Time = " +
+        (item.h * 30) + " ÷ 5.5 = " + minutes.toFixed(4) +
+        " minutes, approximately " + answerText + ".",
+        item.h + " बजे दोनों सुइयों के बीच " +
+        (item.h * 30) + "° का अंतर होता है। उनकी सापेक्ष गति 6 − 0.5 = 5.5° प्रति मिनट है। समय = " +
+        (item.h * 30) + " ÷ 5.5 = " + minutes.toFixed(4) +
+        " मिनट, अर्थात लगभग " + answerText + "।"
+    );
+});
+
+/* QUESTIONS 46–50 */
+
+/* Q46: Angle at 4:00 */
+{
+    const correct = 120;
+
+    addQuestion(
+        "What is the smaller angle between the hands at 4:00?",
+        "4:00 बजे घड़ी की दोनों सुइयों के बीच छोटा कोण कितना होगा?",
+        [90,120,150,60],
+        correct,
+        "At 4:00, the hour hand is at 4 × 30 = 120° and the minute hand is at 0°. The smaller angle is 120°.",
+        "4:00 बजे घंटे की सुई 4 × 30 = 120° पर और मिनट की सुई 0° पर होती है। अतः छोटा कोण 120° है।"
+    );
+}
+
+/* Q47: Coincidence after 7 o'clock */
+{
+    const correct = "38 min 11 sec";
+
+    addQuestion(
+        "Approximately how long after 7 o'clock will the hands coincide?",
+        "7 बजे के बाद दोनों सुइयाँ लगभग कितने समय बाद एक साथ होंगी?",
+        ["32 min 44 sec","38 min 11 sec","43 min 38 sec","27 min 16 sec"],
+        correct,
+        "At 7:00, the hands are 210° apart. Time to coincide = 210 ÷ 5.5 = 38.1818 minutes, approximately 38 minutes 11 seconds.",
+        "7:00 बजे दोनों सुइयों के बीच 210° का अंतर है। एक साथ होने का समय = 210 ÷ 5.5 = 38.1818 मिनट, अर्थात लगभग 38 मिनट 11 सेकंड।"
+    );
+}
+
+/* Q48: First right angle between 2 and 3 */
+{
+    const correct = "2:27:16";
+
+    addQuestion(
+        "Approximately when between 2 and 3 o'clock will the hands first form a right angle?",
+        "2 और 3 बजे के बीच दोनों सुइयाँ पहली बार लगभग किस समय समकोण बनाएँगी?",
+        ["2:16:22","2:21:49","2:27:16","2:32:44"],
+        correct,
+        "At 2:00, the hands are 60° apart. To form a 90° angle for the first time, the minute hand must gain 150° relative to the hour hand. Time = 150 ÷ 5.5 = 27.2727 minutes, approximately 27 minutes 16 seconds after 2:00.",
+        "2:00 बजे दोनों सुइयों के बीच 60° का अंतर है। पहली बार 90° का कोण बनाने के लिए मिनट की सुई को घंटे की सुई के सापेक्ष 150° आगे बढ़ना होगा। समय = 150 ÷ 5.5 = 27.2727 मिनट, अर्थात 2 बजे के लगभग 27 मिनट 16 सेकंड बाद।"
+    );
+}
+
+/* Q49: Opposite hands between 4 and 5 */
+{
+    const correct = "4:54:33";
+
+    addQuestion(
+        "Approximately when between 4 and 5 o'clock will the hands be opposite each other?",
+        "4 और 5 बजे के बीच दोनों सुइयाँ लगभग किस समय एक-दूसरे के विपरीत होंगी?",
+        ["4:43:38","4:49:05","4:54:33","4:38:11"],
+        correct,
+        "At 4:00, the hour hand is at 120° and the minute hand is at 0°. For the hands to be opposite, the minute hand must gain 300° relative to the hour hand. Relative speed = 6 − 0.5 = 5.5° per minute. Therefore, 5.5t = 300, so t = 300 ÷ 5.5 = 54.5454 minutes, approximately 4:54:33.",
+        "4:00 बजे घंटे की सुई 120° पर और मिनट की सुई 0° पर होती है। दोनों सुइयों को विपरीत स्थिति में पहुँचने के लिए मिनट की सुई को घंटे की सुई के सापेक्ष 300° आगे बढ़ना होगा। सापेक्ष गति = 6 − 0.5 = 5.5° प्रति मिनट। इसलिए 5.5t = 300, अर्थात t = 300 ÷ 5.5 = 54.5454 मिनट। सही समय लगभग 4:54:33 बजे है।"
+    );
+}
+
+/* Q50: Angle at 7:20 */
+{
+    const correct = 100;
+
+    addQuestion(
+        "What is the smaller angle between the hands at 7:20?",
+        "7:20 बजे घड़ी की दोनों सुइयों के बीच छोटा कोण कितना होगा?",
+        [80,110,100,120],
+        correct,
+        "Hour-hand angle = 7 × 30 + 20 × 0.5 = 220°. Minute-hand angle = 20 × 6 = 120°. Difference = 100°, so the smaller angle is 100°.",
+        "घंटे की सुई का कोण = 7 × 30 + 20 × 0.5 = 220°। मिनट की सुई का कोण = 20 × 6 = 120°। अंतर 100° है, इसलिए छोटा कोण 100° है।"
+    );
+}
+
+/* VALIDATE QUESTION DATA */
+
+if(questions.length !== 50){
+    throw new Error(
+        "Question count error: expected 50, got " + questions.length
+    );
+}
+
+questions.forEach((question, index) => {
+    if(question.options.length !== 4){
+        throw new Error(
+            "Question " + (index + 1) + " must have four options."
+        );
+    }
+
+    if(new Set(question.options).size !== 4){
+        throw new Error(
+            "Question " + (index + 1) + " has duplicate options."
+        );
+    }
+
+    if(question.options.filter(option => option === question.answer).length !== 1){
+        throw new Error(
+            "Question " + (index + 1) + " has an invalid answer key."
+        );
+    }
+
+    if(!question.en || !question.hi ||
+       !question.explanationEn || !question.explanationHi){
+        throw new Error(
+            "Question " + (index + 1) + " has missing bilingual content."
+        );
+    }
+});
+
+/* RENDER QUESTIONS */
+
+const questionsContainer = document.getElementById("questions-container");
+
+let attempted = new Set();
+let correctCount = 0;
+let wrongCount = 0;
+
+function renderQuestions(){
+    questionsContainer.innerHTML = "";
+
+    questions.forEach((q, index) => {
+        const card = document.createElement("section");
+        card.className = "question-card";
+        card.id = "question-" + index;
+
+        const number = document.createElement("div");
+        number.className = "question-number";
+        number.textContent = "Question " + (index + 1) + " / 50";
+
+        const english = document.createElement("p");
+        english.className = "question-en";
+        english.textContent = q.en;
+
+        const hindi = document.createElement("p");
+        hindi.className = "question-hi";
+        hindi.textContent = q.hi;
+
+        const optionsGrid = document.createElement("div");
+        optionsGrid.className = "options-grid";
+
+        const solution = document.createElement("div");
+        solution.className = "solution";
+
+        const solutionHeading = document.createElement("h4");
+        solutionHeading.textContent = "Solution | समाधान";
+
+        const correctIndex = q.options.indexOf(q.answer);
+
+        const answerLine = document.createElement("p");
+        answerLine.className = "correct-answer";
+        answerLine.textContent =
+            "Correct Answer / सही उत्तर: (" +
+            String.fromCharCode(65 + correctIndex) + ") " + q.answer;
+
+        const explanationEn = document.createElement("p");
+        explanationEn.textContent = "Explanation: " + q.explanationEn;
+
+        const explanationHi = document.createElement("p");
+        explanationHi.textContent = "व्याख्या: " + q.explanationHi;
+
+        solution.appendChild(solutionHeading);
+        solution.appendChild(answerLine);
+        solution.appendChild(explanationEn);
+        solution.appendChild(explanationHi);
+
+        q.options.forEach((option, optionIndex) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "option-btn";
+            button.textContent =
+                "(" + String.fromCharCode(65 + optionIndex) + ") " + option;
+
+            button.addEventListener("click", function(){
+                if(attempted.has(index)){
+                    return;
+                }
+
+                attempted.add(index);
+
+                if(option === q.answer){
+                    correctCount++;
+                }else{
+                    wrongCount++;
+                }
+
+                Array.from(optionsGrid.children).forEach((otherButton, i) => {
+                    otherButton.disabled = true;
+
+                    if(q.options[i] === q.answer){
+                        otherButton.classList.add("correct");
+                    }
+                });
+
+                if(option !== q.answer){
+                    button.classList.add("wrong");
+                }
+
+                solution.style.display = "block";
+                updateResult();
+            });
+
+            optionsGrid.appendChild(button);
+        });
+
+        card.appendChild(number);
+        card.appendChild(english);
+        card.appendChild(hindi);
+        card.appendChild(optionsGrid);
+        card.appendChild(solution);
+
+        questionsContainer.appendChild(card);
+    });
+
+    updateResult();
+}
+
+/* RESULT CALCULATION */
+
+function updateResult(){
+    const attemptedCount = attempted.size;
+    const unattemptedCount = questions.length - attemptedCount;
+
+    document.getElementById("score").textContent =
+        correctCount + " / " + questions.length;
+
+    document.getElementById("correct-count").textContent =
+        correctCount;
+
+    document.getElementById("wrong-count").textContent =
+        wrongCount;
+
+    document.getElementById("attempted-count").textContent =
+        attemptedCount;
+
+    document.getElementById("unattempted-count").textContent =
+        unattemptedCount;
+
+    document.getElementById("marks-count").textContent =
+        correctCount;
+
+    const messageEn = attemptedCount === questions.length
+        ? "Practice complete! You attempted all 50 questions."
+        : "You have attempted " + attemptedCount +
+          " of " + questions.length + " questions.";
+
+    const messageHi = attemptedCount === questions.length
+        ? "अभ्यास पूरा हुआ! आपने सभी 50 प्रश्न हल कर लिए हैं।"
+        : "आपने " + questions.length + " में से " +
+          attemptedCount + " प्रश्न हल किए हैं।";
+
+    document.getElementById("completion-message").textContent =
+        messageEn + " | " + messageHi;
+}
+
+/* RESET PRACTICE */
+
+function resetPractice(){
+    attempted = new Set();
+    correctCount = 0;
+    wrongCount = 0;
+
+    renderQuestions();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+document.getElementById("reset-btn").addEventListener("click", resetPractice);
+
+renderQuestions();
+</script>
+
+</body>
+</html>
