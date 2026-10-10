@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Figure Classification Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:7px 10px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:850px;
+    margin:auto;
+}
+
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #d9e2ec;
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro p{
+    color:#52606d;
+    margin-bottom:12px;
+}
+
+.intro ul{
+    margin-left:20px;
+    color:#52606d;
+}
+
+.intro li{
+    margin-bottom:6px;
+}
+
+.part{
+    margin-bottom:35px;
+}
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    padding:14px 18px;
+    border-left:5px solid #173f5f;
+    border-radius:7px;
+    margin-bottom:18px;
+    font-size:21px;
+}
+
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(36,59,83,0.05);
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#243b53;
+    margin-bottom:15px;
+}
+
+.figure-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin:18px 0;
+}
+
+.figure-box{
+    border:1px solid #d9e2ec;
+    background:#f7f9fc;
+    border-radius:8px;
+    padding:10px;
+    text-align:center;
+}
+
+.figure-label{
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:5px;
+    font-size:15px;
+}
+
+.figure-box svg{
+    width:100%;
+    max-width:150px;
+    height:120px;
+    display:block;
+    margin:auto;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.2s;
+    font-size:15px;
+}
+
+.option:hover{
+    background:#d9eaf7;
+}
+
+.option.correct{
+    background:#d4edda;
+    border-color:#28a745;
+    color:#155724;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#dc3545;
+    color:#721c24;
+}
+
+.solution{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+    color:#243b53;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+.score-box{
+    background:#102a43;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    margin-bottom:15px;
+}
+
+.score-number{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    font-size:16px;
+}
+
+.stats span{
+    background:#173f5f;
+    padding:8px 14px;
+    border-radius:5px;
+}
+
+.button-area{
+    text-align:center;
+    margin:25px 0 40px;
+}
+
+.btn{
+    display:inline-block;
+    border:none;
+    background:#173f5f;
+    color:white;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:15px;
+    margin:5px;
+}
+
+.btn:hover{
+    background:#102a43;
+}
+
+.note{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:30px;
+    color:#52606d;
+}
+
+.note strong{
+    color:#102a43;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 8px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .figure-row{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .stats{
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+
+<div class="logo">LET'S QUALIFYNOW</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="ssc-reasoning.html">SSC Reasoning</a>
+<a href="courses.html">Courses</a>
+<a href="study-material.html">Study Material</a>
+<a href="live-classes.html">Live Classes</a>
+<a href="test-series.html">Test Series</a>
+<a href="exams.html">Exams</a>
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+</nav>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1>🧩 SSC Figure Classification Practice</h1>
+
+<p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="intro">
+
+<h2>SSC Figure Classification Practice Set</h2>
+
+<p>
+This practice set contains figure-based classification questions designed for SSC CGL and other Government Exams. In each question, three figures follow a common structural rule while one figure is different.
+</p>
+
+<ul>
+<li>Shape and structural classification</li>
+<li>Symmetry and orientation based classification</li>
+<li>Internal line and region based figures</li>
+<li>Dot, intersection and enclosure patterns</li>
+<li>Open and closed figure relationships</li>
+<li>Nested and embedded figure classification</li>
+<li>Rotation and positional relationships</li>
+<li>Mixed SSC CGL level non-verbal reasoning patterns</li>
+</ul>
+
+</div>
+
+
+<div class="note">
+
+<strong>📌 How to Attempt</strong>
+
+<ul style="margin:10px 0 0 20px;">
+
+<li>Observe all four figures carefully.</li>
+<li>Three figures follow one common structural rule and one figure is different.</li>
+<li>Do not judge the figures only by their size or orientation.</li>
+<li>Pay attention to lines, symmetry, regions, dots, intersections, enclosure and internal arrangement.</li>
+<li>After selecting an option, the correct answer and detailed solution will appear.</li>
+<li>Options are shuffled automatically while the correct answer remains logically unchanged.</li>
+<li>Try all 50 questions and check your final score.</li>
+
+</ul>
+
+</div>
+
+
+<div id="quiz"></div>
+
+
+<div class="score-box">
+
+<h2>📊 Practice Result / अभ्यास परिणाम</h2>
+
+<div class="score-number" id="score">0 / 50</div>
+
+<div class="stats">
+
+<span>Attempted / प्रयास: <b id="attempted">0</b></span>
+<span>Correct / सही: <b id="correct">0</b></span>
+<span>Wrong / गलत: <b id="wrong">0</b></span>
+
+</div>
+
+</div>
+
+
+<div class="button-area">
+
+<button class="btn" onclick="resetQuiz()">🔄 Reset Practice / पुनः प्रयास करें</button>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<strong>LET'S QUALIFYNOW</strong><br>
+
+N Saurabh Sir — Reasoning Faculty<br>
+
+SSC • Banking • Railway • Government Exams<br><br>
+
+Concept Clarity • Practice • Exam-Oriented Preparation<br><br>
+
+YouTube — Let's QualifyNow
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   FIGURE DRAWING ENGINE
+   ========================================================= */
+
+function esc(s){
+    return s;
+}
+
+function line(x1,y1,x2,y2,w=4){
+    return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
+            stroke="#243b53" stroke-width="${w}"
+            stroke-linecap="round"/>`;
+}
+
+function circle(cx,cy,r,fill="none"){
+    return `<circle cx="${cx}" cy="${cy}" r="${r}"
+            fill="${fill}" stroke="#243b53" stroke-width="4"/>`;
+}
+
+function polygon(points,fill="none"){
+    return `<polygon points="${points}"
+            fill="${fill}" stroke="#243b53" stroke-width="4"
+            stroke-linejoin="round"/>`;
+}
+
+function rect(x,y,w,h,fill="none"){
+    return `<rect x="${x}" y="${y}" width="${w}" height="${h}"
+            fill="${fill}" stroke="#243b53" stroke-width="4"
+            rx="2"/>`;
+}
+
+function figureSVG(f){
+
+    let s = "";
+
+    /* 1. Triangle family */
+    if(f.type==="triangle"){
+        s += polygon("75,18 125,102 25,102");
+        if(f.inner==="v") s += line(75,42,75,82);
+        if(f.inner==="h") s += line(43,82,107,82);
+        if(f.inner==="cross"){
+            s += line(48,82,102,42);
+            s += line(102,82,48,42);
+        }
+        if(f.inner==="dot") s += circle(75,72,7,"#243b53");
+        if(f.inner==="double"){
+            s += line(60,48,90,48);
+            s += line(52,65,98,65);
+        }
+    }
+
+    /* 2. Square family */
+    if(f.type==="square"){
+        s += rect(28,28,94,94);
+        if(f.inner==="v") s += line(75,28,75,122);
+        if(f.inner==="h") s += line(28,75,122,75);
+        if(f.inner==="cross"){
+            s += line(28,28,122,122);
+            s += line(122,28,28,122);
+        }
+        if(f.inner==="plus"){
+            s += line(75,28,75,122);
+            s += line(28,75,122,75);
+        }
+        if(f.inner==="dot") s += circle(75,75,8,"#243b53");
+        if(f.inner==="diamond"){
+            s += polygon("75,43 107,75 75,107 43,75");
+        }
+        if(f.inner==="small"){
+            s += rect(56,56,38,38);
+        }
+    }
+
+    /* 3. Circle family */
+    if(f.type==="circle"){
+        s += circle(75,75,47);
+        if(f.inner==="v") s += line(75,28,75,122);
+        if(f.inner==="h") s += line(28,75,122,75);
+        if(f.inner==="cross"){
+            s += line(42,42,108,108);
+            s += line(108,42,42,108);
+        }
+        if(f.inner==="plus"){
+            s += line(75,28,75,122);
+            s += line(28,75,122,75);
+        }
+        if(f.inner==="dot") s += circle(75,75,8,"#243b53");
+        if(f.inner==="small") s += circle(75,75,20);
+        if(f.inner==="arc"){
+            s += `<path d="M45 100 Q75 55 105 100"
+                    fill="none" stroke="#243b53" stroke-width="4"/>`;
+        }
+    }
+
+    /* 4. Diamond family */
+    if(f.type==="diamond"){
+        s += polygon("75,18 125,75 75,132 25,75");
+        if(f.inner==="v") s += line(75,32,75,118);
+        if(f.inner==="h") s += line(37,75,113,75);
+        if(f.inner==="cross"){
+            s += line(42,42,108,108);
+            s += line(108,42,42,108);
+        }
+        if(f.inner==="dot") s += circle(75,75,7,"#243b53");
+        if(f.inner==="small"){
+            s += polygon("75,52 98,75 75,98 52,75");
+        }
+    }
+
+    /* 5. Hexagon family */
+    if(f.type==="hexagon"){
+        s += polygon("45,25 105,25 125,75 105,125 45,125 25,75");
+        if(f.inner==="v") s += line(75,27,75,123);
+        if(f.inner==="h") s += line(27,75,123,75);
+        if(f.inner==="cross"){
+            s += line(40,40,110,110);
+            s += line(110,40,40,110);
+        }
+        if(f.inner==="dot") s += circle(75,75,7,"#243b53");
+        if(f.inner==="small"){
+            s += polygon("60,50 90,50 100,75 90,100 60,100 50,75");
+        }
+    }
+
+    /* 6. Outer shape with dots */
+    if(f.type==="dots"){
+        if(f.outer==="square") s += rect(28,28,94,94);
+        if(f.outer==="circle") s += circle(75,75,47);
+        if(f.outer==="diamond") s += polygon("75,18 125,75 75,132 25,75");
+
+        let positions = {
+            top:[[75,45]],
+            bottom:[[75,105]],
+            left:[[48,75]],
+            right:[[102,75]],
+            vertical:[[75,50],[75,100]],
+            horizontal:[[50,75],[100,75]],
+            diagonal:[[52,52],[98,98]],
+            three:[[75,45],[52,95],[98,95]]
+        };
+
+        (positions[f.pos] || positions.top).forEach(p=>{
+            s += circle(p[0],p[1],6,"#243b53");
+        });
+    }
+
+    /* 7. Nested shapes */
+    if(f.type==="nested"){
+        if(f.outer==="square") s += rect(28,28,94,94);
+        if(f.outer==="circle") s += circle(75,75,48);
+        if(f.outer==="diamond") s += polygon("75,18 125,75 75,132 25,75");
+
+        if(f.inner==="circle") s += circle(75,75,25);
+        if(f.inner==="square") s += rect(50,50,50,50);
+        if(f.inner==="diamond") s += polygon("75,43 107,75 75,107 43,75");
+        if(f.inner==="triangle") s += polygon("75,47 101,95 49,95");
+    }
+
+    /* 8. Divided regions */
+    if(f.type==="divide"){
+        s += rect(28,28,94,94);
+
+        if(f.mode==="vertical"){
+            s += line(75,28,75,122);
+        }
+        if(f.mode==="horizontal"){
+            s += line(28,75,122,75);
+        }
+        if(f.mode==="diagonal"){
+            s += line(28,28,122,122);
+        }
+        if(f.mode==="both"){
+            s += line(28,28,122,122);
+            s += line(122,28,28,122);
+        }
+    }
+
+    /* 9. Open / closed paths */
+    if(f.type==="path"){
+        if(f.kind==="closed"){
+            s += `<path d="M40 100 L40 45 L110 45 L110 100 Z"
+                    fill="none" stroke="#243b53" stroke-width="4"
+                    stroke-linejoin="round"/>`;
+        }
+        if(f.kind==="open1"){
+            s += `<path d="M40 100 L40 45 L110 45"
+                    fill="none" stroke="#243b53" stroke-width="4"
+                    stroke-linecap="round"/>`;
+        }
+        if(f.kind==="open2"){
+            s += `<path d="M40 45 L110 45 L110 100"
+                    fill="none" stroke="#243b53" stroke-width="4"
+                    stroke-linecap="round"/>`;
+        }
+        if(f.kind==="zigclosed"){
+            s += `<path d="M40 95 L40 55 L60 35 L90 35 L110 55 L110 95 Z"
+                    fill="none" stroke="#243b53" stroke-width="4"/>`;
+        }
+    }
+
+    /* 10. Intersecting lines */
+    if(f.type==="intersect"){
+        if(f.mode==="cross"){
+            s += line(30,30,120,120);
+            s += line(120,30,30,120);
+        }
+        if(f.mode==="touch"){
+            s += line(30,75,75,75);
+            s += line(75,75,115,45);
+        }
+        if(f.mode==="parallel"){
+            s += line(35,50,115,50);
+            s += line(35,85,115,85);
+        }
+        if(f.mode==="three"){
+            s += line(35,105,75,35);
+            s += line(75,35,115,105);
+            s += line(45,75,105,75);
+        }
+    }
+
+    /* 11. Arrows */
+    if(f.type==="arrow"){
+        let d = {
+            up:"M75 110 L75 35 M75 35 L55 55 M75 35 L95 55",
+            down:"M75 35 L75 110 M75 110 L55 90 M75 110 L95 90",
+            left:"M110 75 L35 75 M35 75 L55 55 M35 75 L55 95",
+            right:"M35 75 L110 75 M110 75 L90 55 M110 75 L90 95"
+        };
+        s += `<path d="${d[f.dir]}" fill="none"
+                stroke="#243b53" stroke-width="5"
+                stroke-linecap="round" stroke-linejoin="round"/>`;
+    }
+
+    /* 12. Curved and straight */
+    if(f.type==="curve"){
+        s += rect(28,28,94,94);
+
+        if(f.mode==="one"){
+            s += `<path d="M42 95 Q75 35 108 95"
+                    fill="none" stroke="#243b53" stroke-width="4"/>`;
+        }
+
+        if(f.mode==="two"){
+            s += `<path d="M42 55 Q75 105 108 55"
+                    fill="none" stroke="#243b53" stroke-width="4"/>`;
+            s += line(42,95,108,95);
+        }
+
+        if(f.mode==="straight"){
+            s += line(42,45,108,105);
+            s += line(42,105,108,45);
+        }
+    }
+
+    /* 13. Symmetry figures */
+    if(f.type==="symmetry"){
+        s += rect(28,28,94,94);
+
+        if(f.axis==="vertical"){
+            s += line(75,28,75,122);
+            s += circle(55,60,7);
+            s += circle(95,60,7);
+        }
+
+        if(f.axis==="horizontal"){
+            s += line(28,75,122,75);
+            s += circle(60,55,7);
+            s += circle(60,95,7);
+        }
+
+        if(f.axis==="none"){
+            s += circle(52,55,7);
+            s += circle(98,95,7);
+        }
+    }
+
+    /* 14. Corner relation */
+    if(f.type==="corner"){
+        s += rect(28,28,94,94);
+
+        let pts={
+            tl:[45,45],
+            tr:[105,45],
+            bl:[45,105],
+            br:[105,105],
+            diag:[45,45,105,105],
+            anti:[105,45,45,105]
+        };
+
+        if(f.pos==="diag"){
+            s += circle(45,45,7,"#243b53");
+            s += circle(105,105,7,"#243b53");
+        }
+        if(f.pos==="anti"){
+            s += circle(105,45,7,"#243b53");
+            s += circle(45,105,7,"#243b53");
+        }
+        if(f.pos==="single"){
+            s += circle(45,45,7,"#243b53");
+        }
+        if(f.pos==="adjacent"){
+            s += circle(45,45,7,"#243b53");
+            s += circle(105,45,7,"#243b53");
+        }
+    }
+
+    /* 15. Circle sector */
+    if(f.type==="sector"){
+        s += circle(75,75,47);
+
+        if(f.mode==="vertical"){
+            s += line(75,28,75,122);
+        }
+        if(f.mode==="horizontal"){
+            s += line(28,75,122,75);
+        }
+        if(f.mode==="both"){
+            s += line(75,28,75,122);
+            s += line(28,75,122,75);
+        }
+        if(f.mode==="diagonal"){
+            s += line(42,42,108,108);
+        }
+    }
+
+    return `
+    <svg viewBox="0 0 150 150" aria-label="Figure">
+        ${s}
+    </svg>`;
+}
+
+
+/* =========================================================
+   50 SSC CGL FIGURE CLASSIFICATION QUESTIONS
+   ========================================================= */
+
+const questions = [
+
+/* PART 1 */
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"triangle",inner:"v"},
+{type:"triangle",inner:"v"},
+{type:"triangle",inner:"v"},
+{type:"triangle",inner:"h"}
+],
+answer:3,
+solution:"In the first three figures, the internal line runs vertically from the upper region toward the base. In the fourth figure, the internal line is horizontal. Therefore, the fourth figure is different."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"square",inner:"cross"},
+{type:"square",inner:"cross"},
+{type:"square",inner:"cross"},
+{type:"square",inner:"plus"}
+],
+answer:3,
+solution:"The first three figures contain two diagonal lines crossing each other. The fourth contains vertical and horizontal lines instead. Hence, the fourth figure is the odd one."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"circle",inner:"dot"},
+{type:"circle",inner:"dot"},
+{type:"circle",inner:"dot"},
+{type:"circle",inner:"small"}
+],
+answer:3,
+solution:"The first three figures contain a single central dot. The fourth contains a small circle instead of a dot. Thus, the fourth figure is different."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"diamond",inner:"v"},
+{type:"diamond",inner:"v"},
+{type:"diamond",inner:"v"},
+{type:"diamond",inner:"h"}
+],
+answer:3,
+solution:"The internal division in the first three diamonds is vertical. In the fourth it is horizontal. Therefore, the fourth figure is different."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"hexagon",inner:"cross"},
+{type:"hexagon",inner:"cross"},
+{type:"hexagon",inner:"cross"},
+{type:"hexagon",inner:"v"}
+],
+answer:3,
+solution:"The first three hexagons contain two diagonal lines forming a cross. The fourth contains only one vertical line. Hence, the fourth figure is different."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"nested",outer:"square",inner:"circle"},
+{type:"nested",outer:"circle",inner:"square"},
+{type:"nested",outer:"diamond",inner:"triangle"},
+{type:"nested",outer:"square",inner:"square"}
+],
+answer:3,
+solution:"In the first three figures, the inner and outer shapes are different. In the fourth figure, the inner and outer shapes are both squares. Therefore, the fourth figure is different."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"symmetry",axis:"vertical"},
+{type:"symmetry",axis:"vertical"},
+{type:"symmetry",axis:"vertical"},
+{type:"symmetry",axis:"none"}
+],
+answer:3,
+solution:"The first three figures have vertical symmetry: their internal dots are placed symmetrically about the vertical axis. The fourth figure lacks this symmetry."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"symmetry",axis:"horizontal"},
+{type:"symmetry",axis:"horizontal"},
+{type:"symmetry",axis:"horizontal"},
+{type:"symmetry",axis:"vertical"}
+],
+answer:3,
+solution:"The first three figures have horizontal symmetry. The fourth has vertical symmetry instead. Hence, the fourth figure is different."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"divide",mode:"vertical"},
+{type:"divide",mode:"vertical"},
+{type:"divide",mode:"vertical"},
+{type:"divide",mode:"horizontal"}
+],
+answer:3,
+solution:"The square is divided vertically in the first three figures, whereas the fourth is divided horizontally."
+},
+
+{
+part:"Part 1 — Shape, Structure & Symmetry",
+figs:[
+{type:"divide",mode:"diagonal"},
+{type:"divide",mode:"diagonal"},
+{type:"divide",mode:"diagonal"},
+{type:"divide",mode:"both"}
+],
+answer:3,
+solution:"The first three squares are divided by one diagonal line. The fourth has two diagonal lines crossing each other. Therefore, the fourth figure is different."
+},
+
+/* PART 2 */
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"dots",outer:"square",pos:"vertical"},
+{type:"dots",outer:"circle",pos:"vertical"},
+{type:"dots",outer:"diamond",pos:"vertical"},
+{type:"dots",outer:"square",pos:"horizontal"}
+],
+answer:3,
+solution:"In the first three figures the two dots are vertically aligned. In the fourth they are horizontally aligned."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"dots",outer:"square",pos:"horizontal"},
+{type:"dots",outer:"circle",pos:"horizontal"},
+{type:"dots",outer:"diamond",pos:"horizontal"},
+{type:"dots",outer:"square",pos:"diagonal"}
+],
+answer:3,
+solution:"The first three figures contain two horizontally aligned dots. The fourth contains diagonally placed dots."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"dots",outer:"square",pos:"diagonal"},
+{type:"dots",outer:"circle",pos:"diagonal"},
+{type:"dots",outer:"diamond",pos:"diagonal"},
+{type:"dots",outer:"square",pos:"vertical"}
+],
+answer:3,
+solution:"The first three figures have two dots lying on the same diagonal. The fourth has a vertical arrangement."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"corner",pos:"diag"},
+{type:"corner",pos:"diag"},
+{type:"corner",pos:"diag"},
+{type:"corner",pos:"anti"}
+],
+answer:3,
+solution:"The first three figures have dots at opposite corners on the same diagonal. The fourth has dots on the other diagonal."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"corner",pos:"adjacent"},
+{type:"corner",pos:"adjacent"},
+{type:"corner",pos:"adjacent"},
+{type:"corner",pos:"diag"}
+],
+answer:3,
+solution:"The first three figures have dots at adjacent corners. The fourth has dots at opposite corners."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"sector",mode:"vertical"},
+{type:"sector",mode:"vertical"},
+{type:"sector",mode:"vertical"},
+{type:"sector",mode:"horizontal"}
+],
+answer:3,
+solution:"The circle is divided vertically in the first three figures. The fourth circle is divided horizontally."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"sector",mode:"horizontal"},
+{type:"sector",mode:"horizontal"},
+{type:"sector",mode:"horizontal"},
+{type:"sector",mode:"both"}
+],
+answer:3,
+solution:"The first three circles contain one horizontal dividing line. The fourth contains both horizontal and vertical lines."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"sector",mode:"diagonal"},
+{type:"sector",mode:"diagonal"},
+{type:"sector",mode:"diagonal"},
+{type:"sector",mode:"vertical"}
+],
+answer:3,
+solution:"A diagonal line divides each of the first three circles. The fourth uses a vertical division."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"nested",outer:"circle",inner:"square"},
+{type:"nested",outer:"square",inner:"diamond"},
+{type:"nested",outer:"diamond",inner:"triangle"},
+{type:"nested",outer:"square",inner:"square"}
+],
+answer:3,
+solution:"In the first three figures, the inner shape differs from the outer shape. The fourth repeats the same shape inside and outside."
+},
+
+{
+part:"Part 2 — Internal Arrangement",
+figs:[
+{type:"nested",outer:"square",inner:"circle"},
+{type:"nested",outer:"circle",inner:"square"},
+{type:"nested",outer:"diamond",inner:"triangle"},
+{type:"nested",outer:"circle",inner:"circle"}
+],
+answer:3,
+solution:"The first three figures show two different nested shapes. The fourth contains identical outer and inner circles."
+},
+
+/* PART 3 */
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"intersect",mode:"cross"},
+{type:"intersect",mode:"cross"},
+{type:"intersect",mode:"cross"},
+{type:"intersect",mode:"parallel"}
+],
+answer:3,
+solution:"The first three figures contain two intersecting diagonal lines. The fourth contains parallel lines which do not intersect."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"intersect",mode:"parallel"},
+{type:"intersect",mode:"parallel"},
+{type:"intersect",mode:"parallel"},
+{type:"intersect",mode:"cross"}
+],
+answer:3,
+solution:"The first three figures contain two parallel lines. The fourth contains intersecting lines."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"intersect",mode:"three"},
+{type:"intersect",mode:"three"},
+{type:"intersect",mode:"three"},
+{type:"intersect",mode:"touch"}
+],
+answer:3,
+solution:"The first three figures contain three lines meeting/intersecting in a central arrangement. The fourth has only a two-line arrangement."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"path",kind:"closed"},
+{type:"path",kind:"closed"},
+{type:"path",kind:"closed"},
+{type:"path",kind:"open1"}
+],
+answer:3,
+solution:"The first three figures form closed paths. The fourth path remains open because its final side is missing."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"path",kind:"open1"},
+{type:"path",kind:"open1"},
+{type:"path",kind:"open1"},
+{type:"path",kind:"closed"}
+],
+answer:3,
+solution:"The first three figures are open paths. The fourth forms a completely closed path."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"path",kind:"zigclosed"},
+{type:"path",kind:"zigclosed"},
+{type:"path",kind:"zigclosed"},
+{type:"path",kind:"closed"}
+],
+answer:3,
+solution:"The first three figures contain a closed path with the characteristic upper zig-zag structure. The fourth is a simple closed rectangular path."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"curve",mode:"one"},
+{type:"curve",mode:"one"},
+{type:"curve",mode:"one"},
+{type:"curve",mode:"straight"}
+],
+answer:3,
+solution:"The first three figures contain a curved internal line. The fourth contains only straight diagonal lines."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"curve",mode:"two"},
+{type:"curve",mode:"two"},
+{type:"curve",mode:"two"},
+{type:"curve",mode:"one"}
+],
+answer:3,
+solution:"The first three figures contain two internal elements, including two curved/straight components. The fourth contains only one curved internal element."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"curve",mode:"straight"},
+{type:"curve",mode:"straight"},
+{type:"curve",mode:"straight"},
+{type:"curve",mode:"one"}
+],
+answer:3,
+solution:"The first three figures have only straight internal lines. The fourth contains a curved internal line."
+},
+
+{
+part:"Part 3 — Lines, Intersections & Paths",
+figs:[
+{type:"intersect",mode:"cross"},
+{type:"intersect",mode:"cross"},
+{type:"intersect",mode:"cross"},
+{type:"intersect",mode:"touch"}
+],
+answer:3,
+solution:"The two lines properly cross each other in the first three figures. In the fourth, the lines meet in a different non-crossing arrangement."
+},
+
+/* PART 4 */
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"arrow",dir:"up"},
+{type:"arrow",dir:"up"},
+{type:"arrow",dir:"up"},
+{type:"arrow",dir:"down"}
+],
+answer:3,
+solution:"The first three arrows point upward. The fourth arrow points downward."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"arrow",dir:"right"},
+{type:"arrow",dir:"right"},
+{type:"arrow",dir:"right"},
+{type:"arrow",dir:"left"}
+],
+answer:3,
+solution:"The first three figures have arrows pointing right. The fourth points left."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"arrow",dir:"down"},
+{type:"arrow",dir:"down"},
+{type:"arrow",dir:"down"},
+{type:"arrow",dir:"up"}
+],
+answer:3,
+solution:"The first three arrows point downward, while the fourth points upward."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"arrow",dir:"left"},
+{type:"arrow",dir:"left"},
+{type:"arrow",dir:"left"},
+{type:"arrow",dir:"right"}
+],
+answer:3,
+solution:"The first three arrows point left. The fourth arrow points right."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"triangle",inner:"v"},
+{type:"triangle",inner:"v"},
+{type:"triangle",inner:"v"},
+{type:"triangle",inner:"h"}
+],
+answer:3,
+solution:"The internal line orientation is identical in the first three triangles but different in the fourth."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"diamond",inner:"h"},
+{type:"diamond",inner:"h"},
+{type:"diamond",inner:"h"},
+{type:"diamond",inner:"v"}
+],
+answer:3,
+solution:"The first three diamonds contain horizontal internal division, whereas the fourth contains vertical division."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"square",inner:"v"},
+{type:"square",inner:"v"},
+{type:"square",inner:"v"},
+{type:"square",inner:"h"}
+],
+answer:3,
+solution:"The internal line is vertical in the first three squares and horizontal in the fourth."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"circle",inner:"v"},
+{type:"circle",inner:"v"},
+{type:"circle",inner:"v"},
+{type:"circle",inner:"h"}
+],
+answer:3,
+solution:"The first three circles are vertically divided. The fourth is horizontally divided."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"hexagon",inner:"v"},
+{type:"hexagon",inner:"v"},
+{type:"hexagon",inner:"v"},
+{type:"hexagon",inner:"h"}
+],
+answer:3,
+solution:"The first three hexagons have a vertical internal line. The fourth has a horizontal internal line."
+},
+
+{
+part:"Part 4 — Orientation & Direction",
+figs:[
+{type:"sector",mode:"diagonal"},
+{type:"sector",mode:"diagonal"},
+{type:"sector",mode:"diagonal"},
+{type:"sector",mode:"horizontal"}
+],
+answer:3,
+solution:"The first three circles are divided diagonally. The fourth is divided horizontally."
+},
+
+/* PART 5 */
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"square",inner:"diamond"},
+{type:"square",inner:"diamond"},
+{type:"square",inner:"diamond"},
+{type:"square",inner:"small"}
+],
+answer:3,
+solution:"The first three figures contain a diamond inside the square. The fourth contains a smaller square instead."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"circle",inner:"cross"},
+{type:"circle",inner:"cross"},
+{type:"circle",inner:"cross"},
+{type:"circle",inner:"plus"}
+],
+answer:3,
+solution:"The first three circles contain diagonal crossing lines. The fourth contains vertical and horizontal crossing lines."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"hexagon",inner:"small"},
+{type:"hexagon",inner:"small"},
+{type:"hexagon",inner:"small"},
+{type:"hexagon",inner:"dot"}
+],
+answer:3,
+solution:"The first three hexagons contain a smaller hexagonal region inside. The fourth contains only a central dot."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"square",inner:"plus"},
+{type:"circle",inner:"plus"},
+{type:"diamond",inner:"plus"},
+{type:"square",inner:"cross"}
+],
+answer:3,
+solution:"The first three figures contain vertical and horizontal crossing lines. The fourth contains diagonal crossing lines."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"dots",outer:"square",pos:"three"},
+{type:"dots",outer:"circle",pos:"three"},
+{type:"dots",outer:"diamond",pos:"three"},
+{type:"dots",outer:"square",pos:"vertical"}
+],
+answer:3,
+solution:"The first three figures contain three dots arranged in the same triangular pattern. The fourth contains only two vertically aligned dots."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"corner",pos:"anti"},
+{type:"corner",pos:"anti"},
+{type:"corner",pos:"anti"},
+{type:"corner",pos:"single"}
+],
+answer:3,
+solution:"The first three figures have two dots at opposite corners. The fourth has only one dot."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"nested",outer:"circle",inner:"triangle"},
+{type:"nested",outer:"square",inner:"circle"},
+{type:"nested",outer:"diamond",inner:"square"},
+{type:"nested",outer:"circle",inner:"circle"}
+],
+answer:3,
+solution:"In the first three figures the inner and outer shapes are different. In the fourth both shapes are circles."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"divide",mode:"both"},
+{type:"divide",mode:"both"},
+{type:"divide",mode:"both"},
+{type:"divide",mode:"vertical"}
+],
+answer:3,
+solution:"The first three squares contain two diagonal lines crossing each other. The fourth contains only one vertical dividing line."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"symmetry",axis:"vertical"},
+{type:"symmetry",axis:"vertical"},
+{type:"symmetry",axis:"vertical"},
+{type:"symmetry",axis:"horizontal"}
+],
+answer:3,
+solution:"The first three figures have vertical symmetry. The fourth has horizontal symmetry."
+},
+
+{
+part:"Part 5 — Mixed SSC CGL Level Classification",
+figs:[
+{type:"path",kind:"closed"},
+{type:"path",kind:"closed"},
+{type:"path",kind:"closed"},
+{type:"path",kind:"open2"}
+],
+answer:3,
+solution:"The first three figures form closed structures. The fourth remains open because one side is missing."
+},
+
+/* PART 6 */
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"triangle",inner:"cross"},
+{type:"square",inner:"cross"},
+{type:"diamond",inner:"cross"},
+{type:"circle",inner:"plus"}
+],
+answer:3,
+solution:"The first three figures contain diagonal crossing internal lines. The fourth contains horizontal and vertical crossing lines."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"triangle",inner:"dot"},
+{type:"square",inner:"dot"},
+{type:"diamond",inner:"dot"},
+{type:"circle",inner:"small"}
+],
+answer:3,
+solution:"The first three figures contain a single central dot. The fourth contains a small circular region."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"dots",outer:"square",pos:"vertical"},
+{type:"dots",outer:"circle",pos:"vertical"},
+{type:"dots",outer:"diamond",pos:"vertical"},
+{type:"dots",outer:"circle",pos:"horizontal"}
+],
+answer:3,
+solution:"The first three figures have two vertically aligned dots irrespective of the outer shape. The fourth has horizontally aligned dots."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"dots",outer:"square",pos:"horizontal"},
+{type:"dots",outer:"circle",pos:"horizontal"},
+{type:"dots",outer:"diamond",pos:"horizontal"},
+{type:"dots",outer:"square",pos:"three"}
+],
+answer:3,
+solution:"The first three figures contain two horizontally aligned dots. The fourth contains three dots."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"sector",mode:"both"},
+{type:"divide",mode:"both"},
+{type:"square",inner:"plus"},
+{type:"circle",inner:"cross"}
+],
+answer:3,
+solution:"The first three figures contain vertical and horizontal internal divisions. The fourth contains diagonal crossing lines instead."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"curve",mode:"straight"},
+{type:"curve",mode:"straight"},
+{type:"curve",mode:"straight"},
+{type:"curve",mode:"two"}
+],
+answer:3,
+solution:"The first three figures contain only straight internal elements. The fourth includes a curved internal element."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"intersect",mode:"parallel"},
+{type:"intersect",mode:"parallel"},
+{type:"intersect",mode:"parallel"},
+{type:"intersect",mode:"three"}
+],
+answer:3,
+solution:"The first three figures consist of two parallel lines. The fourth contains three intersecting lines."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"nested",outer:"square",inner:"circle"},
+{type:"nested",outer:"circle",inner:"triangle"},
+{type:"nested",outer:"diamond",inner:"square"},
+{type:"nested",outer:"diamond",inner:"diamond"}
+],
+answer:3,
+solution:"The first three figures contain different inner and outer shapes. The fourth contains identical inner and outer shapes."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"corner",pos:"diag"},
+{type:"corner",pos:"diag"},
+{type:"corner",pos:"diag"},
+{type:"corner",pos:"adjacent"}
+],
+answer:3,
+solution:"The first three figures have dots at diagonally opposite corners. The fourth has dots at adjacent corners."
+},
+
+{
+part:"Part 6 — Advanced Mixed Classification",
+figs:[
+{type:"arrow",dir:"up"},
+{type:"arrow",dir:"up"},
+{type:"arrow",dir:"up"},
+{type:"arrow",dir:"right"}
+],
+answer:3,
+solution:"The first three arrows point upward. The fourth points toward the right."
+}
+
+];
+
+
+/* =========================================================
+   RENDER QUESTIONS
+   ========================================================= */
+
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+function shuffle(array){
+
+    let a = [...array];
+
+    for(let i=a.length-1;i>0;i--){
+
+        const j = Math.floor(Math.random()*(i+1));
+
+        [a[i],a[j]] = [a[j],a[i]];
+    }
+
+    return a;
+}
+
+
+function renderQuiz(){
+
+    const quiz = document.getElementById("quiz");
+
+    quiz.innerHTML = "";
+
+    let currentPart = "";
+
+    questions.forEach((q,index)=>{
+
+        if(q.part !== currentPart){
+
+            currentPart = q.part;
+
+            const part = document.createElement("div");
+
+            part.className = "part";
+
+            part.innerHTML = `
+                <div class="part-title">${currentPart}</div>
+            `;
+
+            quiz.appendChild(part);
+
+            q._partElement = part;
+
+        }
+
+        const partElement = q._partElement || quiz.lastElementChild;
+
+        const card = document.createElement("div");
+
+        card.className = "question-card";
+
+        card.dataset.answer = "";
+
+        const optionLetters = ["A","B","C","D"];
+
+        let figures = q.figs.map((fig,i)=>({
+            fig:fig,
+            original:i
+        }));
+
+        /*
+           Figure order is kept fixed so that the visual
+           classification rule remains clear.
+        */
+
+        const figureHTML = figures.map((item,i)=>`
+
+            <div class="figure-box">
+
+                <div class="figure-label">
+                    ${optionLetters[i]}
+                </div>
+
+                ${figureSVG(item.fig)}
+
+            </div>
+
+        `).join("");
+
+        /*
+           Shuffle option identity while keeping the
+           correct logical figure attached to its option.
+        */
+
+        let optionData = q.figs.map((fig,i)=>({
+            original:i,
+            letter:optionLetters[i]
+        }));
+
+        optionData = shuffle(optionData);
+
+        const optionsHTML = optionData.map((item,i)=>`
+
+            <div class="option"
+                 data-original="${item.original}"
+                 onclick="checkAnswer(this,${index})">
+
+                ${optionLetters[i]}. Figure ${item.letter}
+
+            </div>
+
+        `).join("");
+
+        card.innerHTML = `
+
+            <div class="question">
+
+                Q${index+1}. Select the figure which is different from the other three.
+                <br>
+
+                हिंदी: वह आकृति चुनिए जो अन्य तीन आकृतियों से भिन्न है।
+
+            </div>
+
+            <div class="figure-row">
+
+                ${figureHTML}
+
+            </div>
+
+            <div class="options">
+
+                ${optionsHTML}
+
+            </div>
+
+            <div class="solution">
+
+                <strong>
+                    Answer / उत्तर:
+                    Figure ${optionLetters[q.answer]}
+                </strong>
+
+                <br><br>
+
+                ${q.solution}
+
+                <br><br>
+
+                <strong>हिंदी:</strong>
+                ${translateSolution(q.solution)}
+
+            </div>
+
+        `;
+
+        q._card = card;
+
+        partElement.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   SIMPLE HINDI SOLUTION SET
+   ========================================================= */
+
+function translateSolution(text){
+
+    const map = {
+
+        "In the first three figures, the internal line runs vertically from the upper region toward the base. In the fourth figure, the internal line is horizontal. Therefore, the fourth figure is different.":
+        "पहली तीन आकृतियों में आंतरिक रेखा ऊपरी भाग से नीचे की ओर लंबवत है। चौथी आकृति में यह रेखा क्षैतिज है। इसलिए चौथी आकृति भिन्न है।",
+
+        "The first three figures contain two diagonal lines crossing each other. The fourth contains vertical and horizontal lines instead. Hence, the fourth figure is the odd one.":
+        "पहली तीन आकृतियों में दो विकर्ण रेखाएँ एक-दूसरे को काटती हैं। चौथी आकृति में लंबवत और क्षैतिज रेखाएँ हैं। इसलिए चौथी आकृति भिन्न है।",
+
+        "The first three figures contain a single central dot. The fourth contains a small circle instead of a dot. Thus, the fourth figure is different.":
+        "पहली तीन आकृतियों में केंद्र में एक बिंदु है। चौथी आकृति में बिंदु के स्थान पर छोटा वृत्त है। इसलिए चौथी आकृति भिन्न है।"
+
+    };
+
+    if(map[text]) return map[text];
+
+    return "पहली तीन आकृतियों में एक समान संरचनात्मक नियम पाया जाता है, जबकि चौथी आकृति उस नियम का पालन नहीं करती। इसलिए चौथी आकृति भिन्न है।";
+
+}
+
+
+/* =========================================================
+   ANSWER CHECK
+   ========================================================= */
+
+function checkAnswer(option,index){
+
+    const q = questions[index];
+
+    const card = q._card;
+
+    if(card.classList.contains("answered")) return;
+
+    card.classList.add("answered");
+
+    const selected = Number(option.dataset.original);
+
+    const allOptions = card.querySelectorAll(".option");
+
+    allOptions.forEach(opt=>{
+
+        opt.style.cursor = "default";
+
+        opt.onclick = null;
+
+        const original = Number(opt.dataset.original);
+
+        if(original === q.answer){
+
+            opt.classList.add("correct");
+
+        }
+
+    });
+
+    if(selected === q.answer){
+
+        option.classList.add("correct");
+
+        correct++;
+
+    }else{
+
+        option.classList.add("wrong");
+
+        wrong++;
+
+    }
+
+    attempted++;
+
+    const solution = card.querySelector(".solution");
+
+    solution.style.display = "block";
+
+    updateScore();
+
+}
+
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        correct + " / 50";
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+function resetQuiz(){
+
+    attempted = 0;
+    correct = 0;
+    wrong = 0;
+
+    questions.forEach(q=>{
+        q._card = null;
+    });
+
+    updateScore();
+
+    renderQuiz();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+renderQuiz();
+
+</script>
+
+</body>
+</html>
