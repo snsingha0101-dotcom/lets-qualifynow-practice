@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Reasoning Topic-wise Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+nav{
+    background:#102a43;
+    padding:16px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.nav-links a:hover{
+    color:#d9eaf7;
+}
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:800px;
+    margin:auto;
+}
+
+.container{
+    width:86%;
+    max-width:1200px;
+    margin:50px auto;
+}
+
+.intro{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    border:1px solid #e1e8ed;
+    box-shadow:0 5px 18px rgba(16,42,67,0.06);
+    margin-bottom:45px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro p{
+    color:#52606d;
+}
+
+.level-box{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:22px;
+}
+
+.level{
+    flex:1;
+    min-width:190px;
+    padding:16px;
+    border-radius:10px;
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+}
+
+.level strong{
+    display:block;
+    margin-bottom:5px;
+    color:#102a43;
+}
+
+.section-title{
+    text-align:center;
+    color:#102a43;
+    margin:50px 0 25px;
+    font-size:28px;
+}
+
+.group-title{
+    color:#173f5f;
+    font-size:22px;
+    margin:35px 0 18px;
+    border-left:5px solid #173f5f;
+    padding-left:12px;
+}
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.topic-card{
+    height:100%;
+    background:white;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
+    padding:24px;
+    box-shadow:0 5px 18px rgba(16,42,67,0.06);
+    transition:0.25s;
+}
+
+.topic-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(16,42,67,0.12);
+}
+
+.topic-number{
+    color:#829ab1;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.topic-card h3{
+    color:#102a43;
+    font-size:19px;
+    margin-bottom:10px;
+}
+
+.topic-card p{
+    color:#627d98;
+    font-size:14px;
+    margin-bottom:16px;
+}
+
+.practice-level{
+    display:inline-block;
+    background:#eef4f8;
+    color:#173f5f;
+    border-radius:20px;
+    padding:6px 12px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.info-box{
+    margin-top:50px;
+    background:#eef4f8;
+    border-left:5px solid #173f5f;
+    padding:25px;
+    border-radius:10px;
+}
+
+.info-box h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.info-box p{
+    color:#52606d;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#173f5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    background:#102a43;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:5px 0;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .topic-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .hero h1{
+        font-size:30px;
+    }
+
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    nav{
+        justify-content:center;
+        gap:15px;
+    }
+
+    .nav-links{
+        justify-content:center;
+        gap:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html" class="logo">Let's QualifyNow</a>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="study-material.html">Study Material</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="test-series.html">Test Series</a>
+        <a href="exams.html">Exams</a>
+        <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>📝 SSC Reasoning Topic-wise Practice</h1>
+    <p>
+        Topic-wise practice designed for SSC aspirants with
+        concept-based, exam-oriented and progressively challenging questions.
+    </p>
+</section>
+
+<div class="container">
+
+    <div class="intro">
+        <h2>🎯 Practice Approach</h2>
+        <p>
+            Practice each Reasoning topic systematically with questions
+            designed around SSC exam patterns. The focus will be on
+            conceptual clarity, logical thinking, accuracy and time management.
+        </p>
+
+        <div class="level-box">
+            <div class="level">
+                <strong>🟢 Basic Level</strong>
+                Concept building and foundation practice.
+            </div>
+
+            <div class="level">
+                <strong>🟡 Moderate Level</strong>
+                SSC-level application and practice questions.
+            </div>
+
+            <div class="level">
+                <strong>🔴 Advanced Level</strong>
+                Higher-level and challenging questions.
+            </div>
+
+            <div class="level">
+                <strong>⏱️ Exam Level</strong>
+                Time-based questions following exam patterns.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">📚 Topic-wise Practice</h2>
+
+    <h3 class="group-title">General Intelligence & Reasoning</h3>
+
+    <div class="topic-grid">
+
+        <a href="ssc-analogy-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">01</div>
+                <h3>📌 Analogy</h3>
+                <p>Practice verbal and logical analogy questions with increasing difficulty.</p>
+                <span class="practice-level">Basic → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-classification-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">02</div>
+                <h3>📌 Classification</h3>
+                <p>Odd-one-out and classification questions based on SSC patterns.</p>
+                <span class="practice-level">Basic → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-series-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">03</div>
+                <h3>📌 Series</h3>
+                <p>Number, alphabet and mixed series with missing-term based practice.</p>
+                <span class="practice-level">Basic → Exam Level</span>
+            </div>
+        </a>
+
+        <a href="ssc-alphanumeric-series-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">04</div>
+                <h3>📌 Alphanumeric Series</h3>
+                <p>Mixed alphabet, number and symbol sequence-based questions.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-coding-decoding-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">05</div>
+                <h3>📌 Coding-Decoding</h3>
+                <p>Traditional, coded and pattern-based coding-decoding questions.</p>
+                <span class="practice-level">Basic → Advanced</span>
+            </div>
+        </a>
+
+    </div>
+
+    <h3 class="group-title">Logical Reasoning</h3>
+
+    <div class="topic-grid">
+
+        <a href="ssc-blood-relation-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">06</div>
+                <h3>📌 Blood Relations</h3>
+                <p>Family-tree, coded relation and multi-generation questions.</p>
+                <span class="practice-level">Basic → Exam Level</span>
+            </div>
+        </a>
+
+        <a href="ssc-direction-distance-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">07</div>
+                <h3>📌 Direction & Distance</h3>
+                <p>Direction, distance, turns and shortest-distance practice.</p>
+                <span class="practice-level">Basic → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-ranking-order-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">08</div>
+                <h3>📌 Ranking & Order</h3>
+                <p>Position, rank, total persons and ordering-based questions.</p>
+                <span class="practice-level">Basic → Exam Level</span>
+            </div>
+        </a>
+
+        <a href="ssc-syllogism-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">09</div>
+                <h3>📌 Syllogism</h3>
+                <p>Statements, conclusions and possibility-based logical questions.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+    </div>
+
+    <h3 class="group-title">Analytical Reasoning</h3>
+
+    <div class="topic-grid">
+
+        <a href="ssc-venn-diagram-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">10</div>
+                <h3>📌 Venn Diagram</h3>
+                <p>Set-based and category relationship questions.</p>
+                <span class="practice-level">Basic → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-word-formation-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">11</div>
+                <h3>📌 Word Formation</h3>
+                <p>Letter arrangement and word formation-based practice.</p>
+                <span class="practice-level">Basic → Moderate</span>
+            </div>
+        </a>
+
+        <a href="ssc-mathematical-operations-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">12</div>
+                <h3>📌 Mathematical Operations</h3>
+                <p>Symbol replacement and equation-based reasoning questions.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-statement-conclusion-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">13</div>
+                <h3>📌 Statement & Conclusion</h3>
+                <p>Logical conclusion questions based on given statements.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-statement-assumption-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">14</div>
+                <h3>📌 Statement & Assumption</h3>
+                <p>Identify valid and implicit assumptions from statements.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-statement-argument-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">15</div>
+                <h3>📌 Statement & Argument</h3>
+                <p>Strong and weak arguments with logical evaluation.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-cause-effect-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">16</div>
+                <h3>📌 Cause & Effect</h3>
+                <p>Identify logical causes, effects and relationships.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-decision-making-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">17</div>
+                <h3>📌 Decision Making</h3>
+                <p>Condition-based and logical decision-making questions.</p>
+                <span class="practice-level">Advanced → Exam Level</span>
+            </div>
+        </a>
+
+        <a href="ssc-assertion-reason-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">18</div>
+                <h3>📌 Assertion & Reason</h3>
+                <p>Evaluate assertion and reason relationships logically.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-arithmetical-reasoning-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">19</div>
+                <h3>📌 Arithmetical Reasoning</h3>
+                <p>Logical mathematical situations and arithmetic reasoning.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+    </div>
+
+    <h3 class="group-title">Advanced Practice</h3>
+
+    <div class="topic-grid">
+
+        <a href="ssc-puzzle-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">20</div>
+                <h3>📌 Puzzle</h3>
+                <p>Multi-condition puzzles requiring structured logical analysis.</p>
+                <span class="practice-level">Advanced → Exam Level</span>
+            </div>
+        </a>
+
+        <a href="ssc-seating-arrangement-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">21</div>
+                <h3>📌 Seating Arrangement</h3>
+                <p>Linear, circular and condition-based arrangement practice.</p>
+                <span class="practice-level">Advanced → Exam Level</span>
+            </div>
+        </a>
+
+    </div>
+
+    <h3 class="group-title">Non-Verbal Reasoning</h3>
+
+    <div class="topic-grid">
+
+        <a href="ssc-figure-classification-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">22</div>
+                <h3>📌 Figure Classification</h3>
+                <p>Identify the figure that does not follow the common pattern.</p>
+                <span class="practice-level">Basic → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-figure-analogy-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">23</div>
+                <h3>📌 Figure Analogy</h3>
+                <p>Visual relationship and transformation-based questions.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-figure-series-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">24</div>
+                <h3>📌 Figure Series</h3>
+                <p>Sequential figure transformation and missing-figure practice.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-mirror-image-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">25</div>
+                <h3>📌 Mirror Image</h3>
+                <p>Mirror-image based visual reasoning questions.</p>
+                <span class="practice-level">Basic → Moderate</span>
+            </div>
+        </a>
+
+        <a href="ssc-water-image-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-number">26</div>
+            <div class="topic-card">
+                <h3>📌 Water Image</h3>
+                <p>Water-image transformation and visual orientation practice.</p>
+                <span class="practice-level">Basic → Moderate</span>
+            </div>
+        </a>
+
+        <a href="ssc-paper-folding-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">27</div>
+                <h3>📌 Paper Folding</h3>
+                <p>Paper folding, punching and unfolding pattern questions.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-paper-cutting-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">28</div>
+                <h3>📌 Paper Cutting</h3>
+                <p>Folded paper cutting and final pattern identification.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-embedded-figures-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">29</div>
+                <h3>📌 Embedded Figures</h3>
+                <p>Identify hidden figures within complex diagrams.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-counting-figures-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">31</div>
+                <h3>📌 Counting Figures</h3>
+                <p>Count triangles, squares and other figures systematically.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <!-- TOPIC 32: CUBE & DICE -->
+        <a href="ssc-cube-dice-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">32</div>
+                <h3>📌 Cube & Dice</h3>
+                <p>Opposite faces, adjacent faces and dice-based reasoning.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+        <a href="ssc-pattern-completion-practice.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="topic-card">
+                <div class="topic-number">34</div>
+                <h3>📌 Pattern Completion</h3>
+                <p>Identify missing elements and complete visual patterns.</p>
+                <span class="practice-level">Moderate → Advanced</span>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="info-box">
+        <h3>🚀 Quality Practice Sets</h3>
+        <p>
+            Practice sets will be developed progressively with a strong focus
+            on SSC CGL, CHSL, CPO, MTS and GD exam patterns. Questions will
+            emphasize logical thinking, accuracy, difficulty progression and
+            time management rather than repetitive or overly simple practice.
+        </p>
+
+        <a href="ssc-study-material.html" class="back-btn">
+            ← Back to SSC Study Material
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <p><strong>Let's QualifyNow</strong></p>
+    <p>Structured Reasoning Preparation for Competitive Exams</p>
+    <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
