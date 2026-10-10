@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSC Figure Series Practice | Let's QualifyNow</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;line-height:1.6}
+header{background:#102a43;color:white;padding:15px 5%;position:sticky;top:0;z-index:10}
+.header-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{font-size:22px;font-weight:bold}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:13px}
+nav a:hover{text-decoration:underline;color:#d9eaf7}
+.hero{background:#173f5f;color:white;text-align:center;padding:30px 15px}
+.hero h1{font-size:28px;margin-bottom:8px}
+.container{max-width:1100px;margin:25px auto;padding:0 15px}
+.intro,.question-card{background:white;border:1px solid #e1e8ed;border-radius:9px;padding:22px;margin-bottom:18px}
+.intro h2{color:#102a43;margin-bottom:8px}
+.intro ul{padding-left:22px;margin-top:10px}
+.part-title{background:#d9eaf7;color:#102a43;border-left:5px solid #173f5f;padding:12px 15px;margin:24px 0 15px;font-size:19px;font-weight:bold;border-radius:4px}
+.question{font-size:17px;font-weight:bold;margin-bottom:5px}
+.hindi{font-size:15px;color:#52606d;margin-bottom:13px}
+.sequence{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:18px 0 22px}
+.fig-box{width:75px;height:75px;border:1px solid #d9e2ec;border-radius:6px;display:flex;align-items:center;justify-content:center;background:#fff;flex-shrink:0}
+.fig-box svg{width:68px;height:68px}
+.seq-arrow{font-size:21px;color:#627d98;font-weight:bold}
+.options-title{font-weight:bold;margin-bottom:10px}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.option{width:100%;border:1px solid #d9e2ec;border-radius:7px;padding:10px;display:flex;align-items:center;gap:10px;cursor:pointer;background:white;min-height:88px;text-align:left;color:#243b53;font-size:15px}
+.option:hover:not(:disabled){border-color:#627d98;background:#f7f9fc}
+.option-letter{font-weight:bold;color:#173f5f;min-width:23px}
+.option.correct{background:#e6f4ea;border-color:#238636}
+.option.wrong{background:#fdecea;border-color:#c62828}
+.option:disabled{cursor:default}
+.solution{display:none;margin-top:15px;padding:13px;background:#f7f9fc;border-left:4px solid #627d98;border-radius:4px}
+.solution.show{display:block}
+.feedback{font-weight:bold;margin-bottom:6px}
+.score-box{background:#102a43;color:white;border-radius:9px;padding:22px;margin:25px 0;text-align:center}
+.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.score-item{background:#173f5f;padding:13px;border-radius:6px}
+.score-item span{display:block;font-size:13px;color:#d9eaf7}
+.score-item strong{font-size:23px}
+.reset{background:white;color:#102a43;border:0;border-radius:5px;padding:11px 22px;font-weight:bold;cursor:pointer}
+.reset:hover{background:#d9eaf7}
+.note{background:#eef6fb;border:1px solid #d9eaf7;padding:14px;border-radius:7px;margin:18px 0}
+footer{background:#102a43;color:white;text-align:center;padding:20px;margin-top:30px;font-size:14px}
+@media(max-width:760px){
+ header{position:relative;padding:14px 12px}
+ .header-inner{justify-content:center;text-align:center}
+ .brand{width:100%;font-size:21px}
+ nav{justify-content:center;gap:10px 13px}
+ nav a{font-size:12px}
+ .hero h1{font-size:24px}
+ .options{grid-template-columns:1fr}
+ .score-grid{grid-template-columns:repeat(2,1fr)}
+ .fig-box{width:62px;height:66px}
+ .fig-box svg{width:57px;height:57px}
+ .sequence{gap:4px}
+ .seq-arrow{font-size:16px}
+ .intro,.question-card{padding:15px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="header-inner">
+  <div class="brand">LET'S QUALIFYNOW</div>
+  <nav>
+   <a href="index.html">Home</a>
+   <a href="ssc-reasoning.html">SSC Reasoning</a>
+   <a href="courses.html">Courses</a>
+   <a href="study-material.html">Study Material</a>
+   <a href="live-classes.html">Live Classes</a>
+   <a href="test-series.html">Test Series</a>
+   <a href="exams.html">Exams</a>
+   <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero">
+ <h1>🔷 SSC Figure Series Practice</h1>
+ <p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
+</section>
+
+<main class="container">
+ <section class="intro">
+  <h2>SSC Figure Series Practice Set</h2>
+  <p>Identify the changing rule in each visual series and select the next figure.</p>
+  <p class="hindi">प्रत्येक आकृति-श्रृंखला में परिवर्तन का नियम पहचानिए और अगली आकृति चुनिए।</p>
+  <ul>
+   <li>50 visual reasoning questions</li>
+   <li>English + Hindi instructions and explanations</li>
+   <li>1 mark for each correct answer; no negative marking</li>
+   <li>Feedback and solution appear after selecting an option</li>
+  </ul>
+ </section>
+
+ <div class="part-title">Figure Series | आकृति श्रृंखला</div>
+ <div id="questions"></div>
+
+ <div class="score-box">
+  <h2>📊 Test Result | परिणाम</h2>
+  <p>Attempt questions to update your score.</p>
+  <p style="color:#d9eaf7">प्रश्न हल करने पर आपका स्कोर यहाँ अपडेट होगा।</p>
+  <div class="score-grid">
+   <div class="score-item"><span>Correct | सही</span><strong id="correct">0</strong></div>
+   <div class="score-item"><span>Wrong | गलत</span><strong id="wrong">0</strong></div>
+   <div class="score-item"><span>Attempted | हल किए</span><strong id="attempted">0/50</strong></div>
+   <div class="score-item"><span>Marks | अंक</span><strong id="marks">0/50</strong></div>
+  </div>
+  <button class="reset" onclick="resetTest()">↻ Reset Test</button>
+ </div>
+
+ <div class="note">
+  <strong>Practice Tip:</strong> Check rotation, position, shape, shading and the number of elements.
+  <br><strong>अभ्यास सुझाव:</strong> घुमाव, स्थिति, आकृति, छायांकन और तत्वों की संख्या पर ध्यान दें।
+ </div>
+</main>
+
+<footer>
+ LET'S QUALIFYNOW | N Saurabh Sir — Reasoning Faculty
+ <br>SSC • Banking • Railway • Government Exams
+</footer>
+
+<script>
+/* Figure object: shape, rotation, fill, dots/bars, position, size, inner-line rotation */
+const F=(shape,r=0,fill=0,n=1,pos=0,size=25,inner=-1)=>({shape,r,fill,n,pos,size,inner});
+const clone=f=>({...f});
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+
+function nextFigure(f,changes){
+ return {...f,...changes};
+}
+function drawFigure(f){
+ const stroke="#243b53", fill=f.fill?"#243b53":"#ffffff";
+ const cx=50+([0,1,2,3].includes(f.pos)?[0,22,0,-22][f.pos]:0);
+ const cy=50+([0,1,2,3].includes(f.pos)?[-22,0,22,0][f.pos]:0);
+ const r=Math.max(8,Math.min(34,f.size));
+ let out="";
+ const common=`fill="${fill}" stroke="${stroke}" stroke-width="2.6" stroke-linejoin="round"`;
+ const polygon=(sides,rad=r)=>{
+  const pts=[];
+  for(let i=0;i<sides;i++){
+   const a=(-90+f.r+i*360/sides)*Math.PI/180;
+   pts.push(`${cx+rad*Math.cos(a)},${cy+rad*Math.sin(a)}`);
+  }
+  return `<polygon points="${pts.join(" ")}" ${common}/>`;
+ };
+ if(f.shape==="circle")out=`<circle cx="${cx}" cy="${cy}" r="${r}" ${common}/>`;
+ else if(f.shape==="square")out=`<rect x="${cx-r*.82}" y="${cy-r*.82}" width="${r*1.64}" height="${r*1.64}" ${common}/>`;
+ else if(f.shape==="triangle")out=polygon(3);
+ else if(f.shape==="diamond")out=polygon(4);
+ else if(f.shape==="pentagon")out=polygon(5);
+ else if(f.shape==="hexagon")out=polygon(6);
+ else if(f.shape==="heptagon")out=polygon(7);
+ else if(f.shape==="octagon")out=polygon(8);
+ else if(f.shape==="star"){
+  let pts=[];
+  for(let i=0;i<10;i++){
+   const a=(-90+f.r+i*36)*Math.PI/180, rr=i%2===0?r:r*.45;
+   pts.push(`${cx+rr*Math.cos(a)},${cy+rr*Math.sin(a)}`);
+  }
+  out=`<polygon points="${pts.join(" ")}" ${common}/>`;
+ }
+ else if(f.shape==="arrow"){
+  out=`<g transform="rotate(${f.r} ${cx} ${cy})"><path d="M${cx} ${cy+r} L${cx} ${cy-r} M${cx-r*.55} ${cy-r*.35} L${cx} ${cy-r} L${cx+r*.55} ${cy-r*.35}" fill="none" stroke="${stroke}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+ }
+ else if(f.shape==="line"){
+  out=`<line x1="${cx-r}" y1="${cy}" x2="${cx+r}" y2="${cy}" stroke="${stroke}" stroke-width="4" transform="rotate(${f.r} ${cx} ${cy})" stroke-linecap="round"/>`;
+ }
+ else if(f.shape==="bars"){
+  const count=Math.max(1,Math.min(6,f.n));
+  const gap=5, total=count*7+(count-1)*gap, start=cx-total/2;
+  for(let i=0;i<count;i++){
+   const bh=16+(i%3)*7;
+   out+=`<rect x="${start+i*(7+gap)}" y="${cy-bh/2}" width="7" height="${bh}" fill="${f.fill?"#243b53":"#ffffff"}" stroke="${stroke}" stroke-width="1.8"/>`;
+  }
+ }
+ else if(f.shape==="dots"){
+  const coords={
+   1:[[50,50]],
+   2:[[36,50],[64,50]],
+   3:[[50,31],[34,62],[66,62]],
+   4:[[34,34],[66,34],[34,66],[66,66]],
+   5:[[50,28],[31,43],[69,43],[38,69],[62,69]],
+   6:[[32,32],[50,32],[68,32],[32,68],[50,68],[68,68]]
+  };
+  (coords[Math.max(1,Math.min(6,f.n))]||coords[1]).forEach(p=>{
+   out+=`<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${stroke}"/>`;
+  });
+ }
+ if(f.inner>=0 && !["dots","bars","line","arrow"].includes(f.shape)){
+  const innerAngle=f.inner;
+  out+=`<line x1="${cx-r*.55}" y1="${cy}" x2="${cx+r*.55}" y2="${cy}" stroke="${f.fill?"#ffffff":"#243b53"}" stroke-width="2.8" transform="rotate(${innerAngle} ${cx} ${cy})"/>`;
+ }
+ return `<svg viewBox="0 0 100 100" role="img" aria-label="Geometric figure">${out}</svg>`;
+}
+const box=f=>`<div class="fig-box">${drawFigure(f)}</div>`;
+const Q=(seq,answer,rule,en,hi,distractors)=>({seq,answer,rule,en,hi,distractors});
+
+/* Each question has its own visual sequence and a rule-based next figure. */
+const questions=[];
+const shapes=["triangle","square","pentagon","hexagon","diamond","circle","star","octagon","heptagon"];
+
+/* 01–05: rotation series */
+for(let j=0;j<5;j++){
+ const shape=["arrow","triangle","square","star","line"][j];
+ const base=F(shape,j*17, j%2,1,0, j===0?27:25);
+ const seq=[0,45,90,135].map(r=>nextFigure(base,{r:(base.r+r)%360}));
+ const answer=nextFigure(base,{r:(base.r+180)%360});
+ questions.push(Q(seq,answer,"rotation",
+ "The figure rotates by 45° clockwise at each step. The next orientation is 180° from the starting orientation.",
+ "आकृति प्रत्येक चरण में 45° clockwise घूमती है। अगली दिशा शुरुआती दिशा से 180° होगी.",
+ [nextFigure(answer,{r:(answer.r+45)%360}),nextFigure(answer,{r:(answer.r+90)%360}),nextFigure(answer,{fill:1-answer.fill})]));
+}
+
+/* 06–10: increasing polygon sides */
+for(let j=0;j<5;j++){
+ const start=3+j;
+ const ns=[start,start+1,start+2,start+3];
+ const seq=ns.map((n,i)=>F("polygon",j*11, i%2,1,0,27,-1).shape==="polygon"?F("polygon",j*11,i%2,1,0,27,-1):F("triangle"));
+ seq.forEach((f,i)=>{f.shape="polygon";f.n=ns[i];});
+ const answer=F("polygon",j*11,0,1,0,27,-1);answer.n=start+4;
+ questions.push(Q(seq,answer,"sides",
+ `The number of sides increases by one: ${ns.join(", ")}. The next figure has ${start+4} sides.`,
+ `प्रत्येक आकृति में एक भुजा बढ़ती है। अगली आकृति में ${start+4} भुजाएँ होंगी।`,
+ [F("polygon",j*11,0,1,0,27,-1),F("polygon",j*11,1,1,0,27,-1),F("polygon",j*11,0,1,0,20,-1)].map((f,k)=>{f.n=[start+3,start+5,start+2][k];return f;})));
+}
+
+/* 11–15: alternating fill and shape */
+for(let j=0;j<5;j++){
+ const shape=["circle","triangle","diamond","pentagon","hexagon"][j];
+ const seq=[0,1,0,1].map((fill,i)=>F(shape,(j*13)%360,fill,1,0,24,-1));
+ const answer=F(shape,(j*13)%360,0,1,0,24,-1);
+ questions.push(Q(seq,answer,"fill",
+ "The same shape alternates between outline and filled versions. The next figure is the outline version.",
+ "एक ही आकृति खाली और भरी हुई अवस्था में बारी-बारी से आती है। अगली आकृति खाली होगी।",
+ [F(shape,(j*13)%360,1,1,0,24,-1),F(shape,(j*13+45)%360,0,1,0,24,-1),F(shapes[(j+2)%shapes.length],0,0,1,0,24,-1)]));
+}
+
+/* 16–20: increasing number of dots */
+for(let j=0;j<5;j++){
+ const ns=[1,2,3,4];
+ const seq=ns.map(n=>F("dots",j*9,0,n,0,24,-1));
+ const answer=F("dots",j*9,0,5,0,24,-1);
+ questions.push(Q(seq,answer,"dots",
+ "One dot is added in each successive figure: 1, 2, 3, 4, then 5.",
+ "प्रत्येक अगली आकृति में एक बिंदु बढ़ता है: 1, 2, 3, 4 के बाद 5 बिंदु होंगे।",
+ [F("dots",j*9,0,3,0,24,-1),F("dots",j*9,0,2,0,24,-1),F("dots",j*9,0,6,0,24,-1)]));
+}
+
+/* 21–25: moving figure around four positions */
+for(let j=0;j<5;j++){
+ const shape=["circle","triangle","square","star","diamond"][j];
+ const seq=[0,1,2,3].map(pos=>F(shape,j*12, j%2,1,pos,22,-1));
+ const answer=F(shape,j*12,j%2,1,0,22,-1);
+ questions.push(Q(seq,answer,"position",
+ "The figure moves through top, right, bottom and left positions, then returns to the top.",
+ "आकृति ऊपर, दाएँ, नीचे और बाएँ स्थानों पर जाती है। इसके बाद वह फिर ऊपर लौटती है।",
+ [F(shape,j*12,j%2,1,1,22,-1),F(shape,j*12,j%2,1,2,22,-1),F(shape,j*12,j%2,1,3,22,-1)]));
+}
+
+/* 26–30: inner line rotation */
+for(let j=0;j<5;j++){
+ const shape=["circle","square","triangle","pentagon","hexagon"][j];
+ const seq=[0,45,90,135].map(inner=>F(shape,j*10,0,1,0,27,inner));
+ const answer=F(shape,j*10,0,1,0,27,180);
+ questions.push(Q(seq,answer,"inner",
+ "The inner line rotates by 45° at each step. The next line orientation is 180°.",
+ "आकृति के अंदर की रेखा प्रत्येक चरण में 45° घूमती है। अगली दिशा 180° होगी।",
+ [F(shape,j*10,0,1,0,27,45),F(shape,j*10,0,1,0,27,90),F(shape,j*10,0,1,0,27,135)]));
+}
+
+/* 31–35: alternating two shapes */
+for(let j=0;j<5;j++){
+ const pair=[
+  ["circle","square"],["triangle","diamond"],["pentagon","star"],
+  ["hexagon","circle"],["square","triangle"]
+ ][j];
+ const seq=[pair[0],pair[1],pair[0],pair[1]].map((s,i)=>F(s,(j*7)%360,i%2,1,0,24,-1));
+ const answer=F(pair[0],(j*7)%360,0,1,0,24,-1);
+ questions.push(Q(seq,answer,"alternate",
+ "Two different shapes alternate in the sequence. The next figure repeats the first shape.",
+ "दो अलग-अलग आकृतियाँ बारी-बारी से आती हैं। अगली आकृति पहली आकृति जैसी होगी।",
+ [F(pair[1],(j*7)%360,0,1,0,24,-1),F(pair[0],(j*7)%360,1,1,0,24,-1),F(shapes[(j+4)%shapes.length],0,0,1,0,24,-1)]));
+}
+
+/* 36–40: increasing number of bars */
+for(let j=0;j<5;j++){
+ const seq=[1,2,3,4].map(n=>F("bars",j*13,j%2,n,0,25,-1));
+ const answer=F("bars",j*13,j%2,5,0,25,-1);
+ questions.push(Q(seq,answer,"bars",
+ "One vertical bar is added at each step. The next figure contains five bars.",
+ "हर चरण में एक खड़ी पट्टी बढ़ती है। अगली आकृति में पाँच पट्टियाँ होंगी।",
+ [F("bars",j*13,j%2,3,0,25,-1),F("bars",j*13,j%2,4,0,25,-1),F("bars",j*13,j%2,6,0,25,-1)]));
+}
+
+/* 41–45: increasing size */
+for(let j=0;j<5;j++){
+ const shape=["circle","square","triangle","diamond","pentagon"][j];
+ const sizes=[14,18,22,26];
+ const seq=sizes.map(size=>F(shape,j*9,j%2,1,0,size,-1));
+ const answer=F(shape,j*9,j%2,1,0,30,-1);
+ questions.push(Q(seq,answer,"size",
+ "The same shape increases in size at every step. The next figure is larger than the fourth figure.",
+ "एक ही आकृति हर चरण में बड़ी होती जाती है। अगली आकृति चौथी आकृति से बड़ी होगी।",
+ [F(shape,j*9,j%2,1,0,22,-1),F(shape,j*9,j%2,1,0,26,-1),F(shape,j*9,j%2,1,0,18,-1)]));
+}
+
+/* 46–50: two visual properties change together */
+for(let j=0;j<5;j++){
+ const shape=["triangle","square","pentagon","hexagon","diamond"][j];
+ const seq=[
+  F(shape,0,0,1,0,25,-1),
+  F(shape,45,1,2,0,25,-1),
+  F(shape,90,0,3,0,25,-1),
+  F(shape,135,1,4,0,25,-1)
+ ];
+ const answer=F(shape,180,0,5,0,25,-1);
+ questions.push(Q(seq,answer,"combined",
+ "Two rules operate together: the figure rotates by 45° and the number of dots increases by one. The next figure follows both rules.",
+ "दो नियम साथ चलते हैं: आकृति 45° घूमती है और बिंदुओं की संख्या एक बढ़ती है। अगली आकृति में दोनों नियम लागू होंगे।",
+ [F(shape,180,1,5,0,25,-1),F(shape,225,0,4,0,25,-1),F(shape,135,0,5,0,25,-1)]));
+}
+
+/* Remove any accidental duplicate distractors, preserving a different visual option. */
+questions.forEach((q,i)=>{
+ const candidates=q.distractors.map(clone);
+ const unique=[];
+ candidates.forEach((f,k)=>{
+  if(!same(f,q.answer)&&!unique.some(x=>same(x,f)))unique.push(f);
+ });
+ const backups=[
+  nextFigure(q.answer,{r:(q.answer.r+73)%360}),
+  nextFigure(q.answer,{fill:1-q.answer.fill}),
+  nextFigure(q.answer,{size:q.answer.size===30?17:30}),
+  nextFigure(q.answer,{pos:(q.answer.pos+1)%4}),
+  nextFigure(q.answer,{n:q.answer.n===6?2:Math.min(6,q.answer.n+1)})
+ ];
+ backups.forEach(f=>{
+  if(unique.length<3&&!same(f,q.answer)&&!unique.some(x=>same(x,f)))unique.push(f);
+ });
+ q.options=[...unique.slice(0,3),clone(q.answer)];
+ const correctPosition=(i*3+1)%4;
+ [q.options[correctPosition],q.options[3]]=[q.options[3],q.options[correctPosition]];
+ q.correct=correctPosition;
+});
+
+const host=document.getElementById("questions");
+questions.forEach((q,i)=>{
+ const seqHTML=q.seq.map((f,j)=>box(f)+(j<q.seq.length-1?'<span class="seq-arrow">→</span>':'')).join("");
+ const optionsHTML=q.options.map((f,j)=>`
+  <button type="button" class="option" id="q${i}o${j}" onclick="chooseAnswer(${i},${j})">
+   <span class="option-letter">${String.fromCharCode(65+j)}.</span>
+   ${box(f)}
+  </button>`).join("");
+ host.insertAdjacentHTML("beforeend",`
+  <section class="question-card" id="question${i}">
+   <div class="question">Q${i+1}. Select the figure that comes next in the series.</div>
+   <div class="hindi">श्रृंखला में अगली आने वाली आकृति का चयन कीजिए।</div>
+   <div class="sequence">${seqHTML}<span class="seq-arrow">→</span><strong style="font-size:28px;color:#173f5f">?</strong></div>
+   <div class="options-title">Choose the correct option | सही विकल्प चुनें:</div>
+   <div class="options">${optionsHTML}</div>
+   <div class="solution" id="sol${i}">
+    <div class="feedback" id="feed${i}"></div>
+    <strong>Solution | समाधान:</strong>
+    <p>${q.en}</p>
+    <p class="hindi" style="margin-top:7px">${q.hi}</p>
+   </div>
+  </section>`);
+});
+
+let correct=0,wrong=0,attempted=0;
+const answered=Array(questions.length).fill(false);
+function chooseAnswer(qi,oi){
+ if(answered[qi])return;
+ answered[qi]=true;
+ attempted++;
+ const q=questions[qi];
+ const selected=document.getElementById(`q${qi}o${oi}`);
+ const right=document.getElementById(`q${qi}o${q.correct}`);
+ if(oi===q.correct){
+  correct++;
+  selected.classList.add("correct");
+  document.getElementById(`feed${qi}`).textContent="✓ Correct Answer! | सही उत्तर!";
+  document.getElementById(`feed${qi}`).style.color="#217346";
+ }else{
+  wrong++;
+  selected.classList.add("wrong");
+  right.classList.add("correct");
+  document.getElementById(`feed${qi}`).textContent=`✗ Incorrect. Correct answer: ${String.fromCharCode(65+q.correct)} | गलत उत्तर। सही उत्तर: ${String.fromCharCode(65+q.correct)}`;
+  document.getElementById(`feed${qi}`).style.color="#c62828";
+ }
+ for(let j=0;j<4;j++)document.getElementById(`q${qi}o${j}`).disabled=true;
+ document.getElementById(`sol${qi}`).classList.add("show");
+ updateScore();
+}
+function updateScore(){
+ document.getElementById("correct").textContent=correct;
+ document.getElementById("wrong").textContent=wrong;
+ document.getElementById("attempted").textContent=attempted+"/50";
+ document.getElementById("marks").textContent=correct+"/50";
+}
+function resetTest(){
+ correct=0;wrong=0;attempted=0;
+ answered.fill(false);
+ questions.forEach((q,i)=>{
+  for(let j=0;j<4;j++){
+   const b=document.getElementById(`q${i}o${j}`);
+   b.disabled=false;b.classList.remove("correct","wrong");
+  }
+  document.getElementById(`sol${i}`).classList.remove("show");
+  document.getElementById(`feed${i}`).textContent="";
+ });
+ updateScore();
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
