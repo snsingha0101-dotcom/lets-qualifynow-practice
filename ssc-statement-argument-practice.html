@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Statement & Argument Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:7px 10px;
+    border-radius:5px;
+    font-size:14px;
+    transition:0.2s;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+/* HERO */
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+/* INTRO */
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #d9e2ec;
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro ul{
+    padding-left:22px;
+    margin-top:12px;
+}
+
+.intro li{
+    margin-bottom:7px;
+}
+
+/* PART TITLE */
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    border-left:5px solid #173f5f;
+    padding:14px 18px;
+    border-radius:7px;
+    font-size:21px;
+    font-weight:bold;
+    margin:30px 0 18px;
+}
+
+/* QUESTION CARD */
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(36,59,83,0.06);
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.option:hover{
+    background:#d9eaf7;
+}
+
+.option.correct{
+    background:#d4edda;
+    border-color:#28a745;
+    color:#155724;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#dc3545;
+    color:#721c24;
+}
+
+/* SOLUTION */
+.solution{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+/* SCORE */
+.score-box{
+    background:#102a43;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    margin-bottom:10px;
+}
+
+.score-number{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.stat{
+    background:#173f5f;
+    padding:8px 14px;
+    border-radius:6px;
+}
+
+/* BUTTON */
+.button-area{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#173f5f;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.btn:hover{
+    background:#102a43;
+}
+
+/* NOTE */
+.note{
+    background:white;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    color:#52606d;
+    margin-bottom:30px;
+}
+
+/* FOOTER */
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 8px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        gap:10px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+
+<div class="logo">LET'S QUALIFYNOW</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="ssc-reasoning.html">SSC Reasoning</a>
+<a href="courses.html">Courses</a>
+<a href="study-material.html">Study Material</a>
+<a href="live-classes.html">Live Classes</a>
+<a href="test-series.html">Test Series</a>
+<a href="exams.html">Exams</a>
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+</nav>
+
+</div>
+</header>
+
+
+<section class="hero">
+<h1>🗣️ SSC Statement & Argument Practice</h1>
+<p>50 Exam-Oriented Questions with Answers & Detailed Solutions</p>
+</section>
+
+
+<div class="container">
+
+<div class="intro">
+
+<h2>SSC Statement & Argument Practice Set</h2>
+
+<p>
+This practice set contains statement and argument questions designed for SSC CGL and other Government Exams. The questions test logical thinking, relevance, strength of arguments, practical judgement and the ability to distinguish strong arguments from weak arguments.
+</p>
+
+<ul>
+<li><strong>Strong & Weak Arguments</strong> — Identify logically convincing arguments</li>
+<li><strong>Relevant & Irrelevant Arguments</strong> — Judge arguments according to the statement</li>
+<li><strong>Practical & Logical Judgement</strong> — Evaluate arguments objectively</li>
+<li><strong>Public & Administrative Issues</strong> — Examine arguments on common issues</li>
+<li><strong>Education, Employment & Society</strong> — Apply reasoning to social situations</li>
+<li><strong>Mixed SSC CGL Level Arguments</strong> — Exam-oriented mixed practice</li>
+</ul>
+
+</div>
+
+
+<div class="note">
+<strong>📌 How to Attempt:</strong>
+Read the statement carefully and consider each argument independently. Select the option that correctly identifies the strong and weak arguments. The correct answer will be highlighted after you attempt the question, followed by the detailed solution.
+</div>
+
+
+<div id="questions-container"></div>
+
+
+<div class="score-box">
+
+<h2>Your Result</h2>
+
+<div class="score-number" id="score">0 / 50</div>
+
+<div class="stats">
+
+<div class="stat">Correct: <span id="correct">0</span></div>
+
+<div class="stat">Wrong: <span id="wrong">0</span></div>
+
+<div class="stat">Attempted: <span id="attempted">0</span></div>
+
+<div class="stat">Marks: <span id="marks">0</span></div>
+
+</div>
+
+</div>
+
+
+<div class="button-area">
+
+<button class="btn" onclick="resetTest()">🔄 Reset Test</button>
+
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 LET'S QUALIFYNOW | SSC • Banking • Railway • Government Exams</p>
+</footer>
+
+
+<script>
+
+const questions = [
+
+/* PART 1 */
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q1.</strong> Statement: Should the government make public transport free for all citizens in major cities?<br><br><strong>कथन:</strong> क्या सरकार को प्रमुख शहरों में सभी नागरिकों के लिए सार्वजनिक परिवहन निःशुल्क कर देना चाहिए?`,
+options:[
+`Yes, because free transport may encourage people to leave private vehicles and reduce congestion.<br>हाँ, क्योंकि निःशुल्क परिवहन लोगों को निजी वाहनों का उपयोग छोड़ने और यातायात कम करने के लिए प्रोत्साहित कर सकता है।`,
+`Yes, because every government decision should make citizens completely dependent on the government.<br>हाँ, क्योंकि सरकार के प्रत्येक निर्णय से नागरिकों को पूरी तरह सरकार पर निर्भर होना चाहिए।`,
+`No, because public transport has no role in reducing traffic congestion.<br>नहीं, क्योंकि सार्वजनिक परिवहन की यातायात कम करने में कोई भूमिका नहीं है।`,
+`No, because people should never be given any free public service.<br>नहीं, क्योंकि लोगों को कभी भी कोई निःशुल्क सार्वजनिक सेवा नहीं दी जानी चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because it gives a practical reason: affordable or free public transport can encourage people to shift from private vehicles, potentially reducing congestion. The other arguments are either extreme or logically irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि इसमें व्यावहारिक कारण दिया गया है। सस्ता या निःशुल्क सार्वजनिक परिवहन लोगों को निजी वाहनों से सार्वजनिक परिवहन की ओर जाने के लिए प्रेरित कर सकता है और यातायात कम हो सकता है। अन्य तर्क अतिवादी या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q2.</strong> Statement: Should schools introduce compulsory financial literacy classes for senior students?<br><br><strong>कथन:</strong> क्या विद्यालयों में वरिष्ठ विद्यार्थियों के लिए वित्तीय साक्षरता की कक्षाएँ अनिवार्य की जानी चाहिए?`,
+options:[
+`Yes, because students will eventually have to make financial decisions in adult life.<br>हाँ, क्योंकि विद्यार्थियों को आगे चलकर वयस्क जीवन में वित्तीय निर्णय लेने होंगे।`,
+`Yes, because every student must become a professional investor.<br>हाँ, क्योंकि प्रत्येक विद्यार्थी को पेशेवर निवेशक बनना ही चाहिए।`,
+`No, because students can never understand money-related concepts.<br>नहीं, क्योंकि विद्यार्थी धन से संबंधित अवधारणाओं को कभी नहीं समझ सकते।`,
+`No, because school education has no connection with real-life skills.<br>नहीं, क्योंकि विद्यालयी शिक्षा का वास्तविक जीवन के कौशल से कोई संबंध नहीं है।`
+],
+answer:0,
+solution:`Argument I is strong because financial decisions such as budgeting, saving and responsible borrowing are relevant to adult life. Arguments II, III and IV are exaggerated or factually unreasonable.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि बजट बनाना, बचत और जिम्मेदारी से ऋण लेना जैसे वित्तीय निर्णय वयस्क जीवन में महत्वपूर्ण हैं। II, III और IV अतिशयोक्तिपूर्ण या अनुचित हैं।`
+},
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q3.</strong> Statement: Should government offices provide all services only through online portals?<br><br><strong>कथन:</strong> क्या सरकारी कार्यालयों की सभी सेवाएँ केवल ऑनलाइन पोर्टल के माध्यम से उपलब्ध कराई जानी चाहिए?`,
+options:[
+`Yes, because online services can reduce paperwork and save time for many users.<br>हाँ, क्योंकि ऑनलाइन सेवाएँ कागजी कार्य कम कर सकती हैं और कई लोगों का समय बचा सकती हैं।`,
+`Yes, because every citizen has equal access to the internet.<br>हाँ, क्योंकि प्रत्येक नागरिक की इंटरनेट तक समान पहुँच है।`,
+`No, because technology can never improve public administration.<br>नहीं, क्योंकि तकनीक सार्वजनिक प्रशासन में कभी सुधार नहीं कर सकती।`,
+`No, because government offices should never use computers.<br>नहीं, क्योंकि सरकारी कार्यालयों को कभी कंप्यूटर का उपयोग नहीं करना चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because digitisation can reduce paperwork and improve efficiency. Arguments II, III and IV are weak because they make absolute claims or ignore the digital divide.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि डिजिटलीकरण कागजी कार्य कम करके दक्षता बढ़ा सकता है। II, III और IV कमजोर हैं क्योंकि वे पूर्णतावादी दावे करते हैं या डिजिटल असमानता जैसे वास्तविक मुद्दों की उपेक्षा करते हैं।`
+},
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q4.</strong> Statement: Should competitive examinations be conducted in multiple shifts?<br><br><strong>कथन:</strong> क्या प्रतियोगी परीक्षाएँ कई पालियों में आयोजित की जानी चाहिए?`,
+options:[
+`Yes, because multiple shifts can help accommodate a very large number of candidates.<br>हाँ, क्योंकि कई पालियों से बहुत बड़ी संख्या में अभ्यर्थियों को परीक्षा में शामिल करना संभव हो सकता है।`,
+`Yes, because candidates should be allowed to take the examination as many times as they wish on the same day.<br>हाँ, क्योंकि अभ्यर्थियों को एक ही दिन में जितनी बार चाहें परीक्षा देने की अनुमति होनी चाहिए।`,
+`No, because examinations can never be conducted in shifts.<br>नहीं, क्योंकि परीक्षाएँ कभी भी पालियों में आयोजित नहीं की जा सकतीं।`,
+`No, because candidates should not be required to answer questions.<br>नहीं, क्योंकि अभ्यर्थियों से प्रश्नों के उत्तर नहीं माँगे जाने चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because multiple shifts are a practical method for managing large candidate numbers. The remaining arguments are unreasonable or irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि बहुत बड़ी संख्या में अभ्यर्थियों को संभालने के लिए कई पालियाँ एक व्यावहारिक तरीका हैं। अन्य तर्क अनुचित या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q5.</strong> Statement: Should every college student be required to complete an internship before graduation?<br><br><strong>कथन:</strong> क्या प्रत्येक कॉलेज विद्यार्थी के लिए स्नातक होने से पहले इंटर्नशिप करना अनिवार्य होना चाहिए?`,
+options:[
+`Yes, because practical exposure can help students understand workplace requirements.<br>हाँ, क्योंकि व्यावहारिक अनुभव विद्यार्थियों को कार्यस्थल की आवश्यकताओं को समझने में सहायता कर सकता है।`,
+`Yes, because classroom education is completely useless.<br>हाँ, क्योंकि कक्षा में दी जाने वाली शिक्षा पूरी तरह बेकार है।`,
+`No, because no student can learn anything outside a classroom.<br>नहीं, क्योंकि कोई विद्यार्थी कक्षा के बाहर कुछ नहीं सीख सकता।`,
+`No, because employers do not value practical experience.<br>नहीं, क्योंकि नियोक्ता व्यावहारिक अनुभव को महत्व नहीं देते।`
+],
+answer:0,
+solution:`Argument I is strong because internships can provide practical exposure and help bridge the gap between academic knowledge and workplace expectations. The other arguments are extreme or unsupported.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि इंटर्नशिप व्यावहारिक अनुभव देती है और शैक्षणिक ज्ञान तथा कार्यस्थल की अपेक्षाओं के बीच अंतर कम कर सकती है। अन्य तर्क अतिवादी या आधारहीन हैं।`
+},
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q6.</strong> Statement: Should cities impose higher parking charges in crowded commercial areas?<br><br><strong>कथन:</strong> क्या भीड़भाड़ वाले व्यावसायिक क्षेत्रों में शहरों को अधिक पार्किंग शुल्क लगाना चाहिए?`,
+options:[
+`Yes, because higher charges may discourage unnecessary use of private vehicles in congested areas.<br>हाँ, क्योंकि अधिक शुल्क भीड़भाड़ वाले क्षेत्रों में निजी वाहनों के अनावश्यक उपयोग को हतोत्साहित कर सकता है।`,
+`Yes, because people should be punished for owning vehicles.<br>हाँ, क्योंकि वाहन रखने वाले लोगों को दंडित किया जाना चाहिए।`,
+`No, because parking has no relationship with traffic congestion.<br>नहीं, क्योंकि पार्किंग का यातायात की भीड़ से कोई संबंध नहीं है।`,
+`No, because parking should always be free irrespective of location.<br>नहीं, क्योंकि स्थान चाहे कोई भी हो पार्किंग हमेशा निःशुल्क होनी चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because parking pricing can influence travel behaviour and reduce unnecessary private vehicle use. The other arguments are either emotional, absolute or logically weak.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि पार्किंग शुल्क यात्रा के व्यवहार को प्रभावित कर सकता है और निजी वाहनों के अनावश्यक उपयोग को कम कर सकता है। अन्य तर्क भावनात्मक, पूर्णतावादी या कमजोर हैं।`
+},
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q7.</strong> Statement: Should government hospitals use an appointment system for non-emergency patients?<br><br><strong>कथन:</strong> क्या सरकारी अस्पतालों में गैर-आपातकालीन मरीजों के लिए अपॉइंटमेंट प्रणाली लागू की जानी चाहिए?`,
+options:[
+`Yes, because appointments may reduce waiting time and help hospitals manage patient flow.<br>हाँ, क्योंकि अपॉइंटमेंट प्रतीक्षा समय कम करने और अस्पतालों में मरीजों के प्रवाह को व्यवस्थित करने में मदद कर सकते हैं।`,
+`Yes, because emergency patients should also wait for their appointment.<br>हाँ, क्योंकि आपातकालीन मरीजों को भी अपने अपॉइंटमेंट का इंतजार करना चाहिए।`,
+`No, because hospitals do not need any system for managing patients.<br>नहीं, क्योंकि अस्पतालों को मरीजों के प्रबंधन के लिए किसी प्रणाली की आवश्यकता नहीं है।`,
+`No, because appointments can never reduce waiting time.<br>नहीं, क्योंकि अपॉइंटमेंट कभी प्रतीक्षा समय कम नहीं कर सकते।`
+],
+answer:0,
+solution:`Argument I is strong because an appointment system can organise non-emergency patient flow and reduce unnecessary waiting. Arguments II, III and IV are unreasonable or ignore the distinction between emergency and non-emergency cases.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि अपॉइंटमेंट प्रणाली गैर-आपातकालीन मरीजों के प्रवाह को व्यवस्थित कर सकती है और अनावश्यक प्रतीक्षा कम कर सकती है। अन्य तर्क अनुचित हैं या आपातकालीन और गैर-आपातकालीन मामलों के अंतर को नजरअंदाज करते हैं।`
+},
+
+{
+part:"Part 1: Strong & Weak Arguments",
+question:`<strong>Q8.</strong> Statement: Should public examinations be made completely open-book examinations?<br><br><strong>कथन:</strong> क्या सार्वजनिक प्रतियोगी परीक्षाओं को पूरी तरह ओपन-बुक परीक्षा बना देना चाहिए?`,
+options:[
+`Yes, because it would encourage candidates to use reference material instead of memorising facts.<br>हाँ, क्योंकि इससे अभ्यर्थियों को तथ्यों को रटने के बजाय संदर्भ सामग्री का उपयोग करने के लिए प्रोत्साहित किया जाएगा।`,
+`Yes, because no candidate needs to study before an open-book examination.<br>हाँ, क्योंकि ओपन-बुक परीक्षा से पहले किसी अभ्यर्थी को पढ़ाई करने की आवश्यकता नहीं होती।`,
+`No, because open-book examinations are impossible to conduct under any circumstances.<br>नहीं, क्योंकि ओपन-बुक परीक्षाएँ किसी भी परिस्थिति में आयोजित नहीं की जा सकतीं।`,
+`No, because candidates should not be allowed to think independently.<br>नहीं, क्योंकि अभ्यर्थियों को स्वतंत्र रूप से सोचने की अनुमति नहीं होनी चाहिए।`
+],
+answer:0,
+solution:`Argument I is logically relevant because open-book testing can emphasise application and reference skills. The remaining arguments rely on exaggerated or incorrect assumptions.<br><br><strong>समाधान:</strong> तर्क I तार्किक रूप से प्रासंगिक है क्योंकि ओपन-बुक परीक्षा अनुप्रयोग और संदर्भ सामग्री के उपयोग की क्षमता पर जोर दे सकती है। अन्य तर्क अतिशयोक्ति या गलत धारणाओं पर आधारित हैं।`
+},
+
+
+/* PART 2 */
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q9.</strong> Statement: Should a city introduce dedicated bicycle lanes on major roads?<br><br><strong>कथन:</strong> क्या किसी शहर को प्रमुख सड़कों पर अलग साइकिल लेन बनानी चाहिए?`,
+options:[
+`Yes, because dedicated lanes can improve cyclist safety and encourage cycling.<br>हाँ, क्योंकि अलग लेन साइकिल चालकों की सुरक्षा बढ़ा सकती हैं और साइकिल चलाने को प्रोत्साहित कर सकती हैं।`,
+`Yes, because bicycles are generally cheaper than luxury cars.<br>हाँ, क्योंकि साइकिलें सामान्यतः महँगी कारों से सस्ती होती हैं।`,
+`No, because bicycles are usually painted in different colours.<br>नहीं, क्योंकि साइकिलों का रंग अलग-अलग होता है।`,
+`No, because some people prefer walking to cycling.<br>नहीं, क्योंकि कुछ लोग साइकिल चलाने के बजाय पैदल चलना पसंद करते हैं।`
+],
+answer:0,
+solution:`Argument I directly addresses safety and the purpose of dedicated bicycle lanes. The other statements do not provide a strong reason for or against creating such lanes.<br><br><strong>समाधान:</strong> तर्क I सीधे सुरक्षा और अलग साइकिल लेन के उद्देश्य से संबंधित है। अन्य कथन इस व्यवस्था के पक्ष या विपक्ष में मजबूत कारण नहीं देते।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q10.</strong> Statement: Should schools start classes later in the morning?<br><br><strong>कथन:</strong> क्या विद्यालयों को सुबह की कक्षाएँ देर से शुरू करनी चाहिए?`,
+options:[
+`Yes, because a later start may help students who face difficulties with very early commuting.<br>हाँ, क्योंकि देर से शुरुआत उन विद्यार्थियों के लिए सहायक हो सकती है जिन्हें बहुत सुबह यात्रा करने में कठिनाई होती है।`,
+`Yes, because many students like sleeping on holidays.<br>हाँ, क्योंकि बहुत से विद्यार्थियों को छुट्टियों में सोना पसंद है।`,
+`No, because school buildings are usually large.<br>नहीं, क्योंकि विद्यालय की इमारतें सामान्यतः बड़ी होती हैं।`,
+`No, because students wear uniforms.<br>नहीं, क्योंकि विद्यार्थी यूनिफॉर्म पहनते हैं।`
+],
+answer:0,
+solution:`Argument I is relevant because it connects the timing of classes with students' commuting difficulties. The other arguments have no meaningful connection with the issue.<br><br><strong>समाधान:</strong> तर्क I प्रासंगिक है क्योंकि यह कक्षा के समय को विद्यार्थियों की यात्रा संबंधी कठिनाइयों से जोड़ता है। अन्य तर्क मुद्दे से सार्थक रूप से संबंधित नहीं हैं।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q11.</strong> Statement: Should government offices remain open on Saturdays?<br><br><strong>कथन:</strong> क्या सरकारी कार्यालय शनिवार को खुले रहने चाहिए?`,
+options:[
+`Yes, because an additional working day may help citizens who cannot visit offices on weekdays.<br>हाँ, क्योंकि अतिरिक्त कार्यदिवस उन नागरिकों के लिए उपयोगी हो सकता है जो सप्ताह के दिनों में कार्यालय नहीं जा सकते।`,
+`Yes, because Saturday comes after Friday.<br>हाँ, क्योंकि शनिवार शुक्रवार के बाद आता है।`,
+`No, because office furniture may become old.<br>नहीं, क्योंकि कार्यालय का फर्नीचर पुराना हो सकता है।`,
+`No, because government employees use pens.<br>नहीं, क्योंकि सरकारी कर्मचारी पेन का उपयोग करते हैं।`
+],
+answer:0,
+solution:`Argument I is directly relevant because it considers citizens' availability and access to public services. The other arguments are irrelevant to office working days.<br><br><strong>समाधान:</strong> तर्क I सीधे नागरिकों की उपलब्धता और सरकारी सेवाओं तक पहुँच से संबंधित है। अन्य तर्क कार्यालय के कार्यदिवस के मुद्दे से अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q12.</strong> Statement: Should online classes continue as an alternative mode of education?<br><br><strong>कथन:</strong> क्या ऑनलाइन कक्षाएँ शिक्षा के वैकल्पिक माध्यम के रूप में जारी रहनी चाहिए?`,
+options:[
+`Yes, because online classes can provide access to learning when physical attendance is difficult.<br>हाँ, क्योंकि जब शारीरिक रूप से उपस्थित होना कठिन हो तो ऑनलाइन कक्षाएँ शिक्षा तक पहुँच प्रदान कर सकती हैं।`,
+`Yes, because computers are available in many different colours.<br>हाँ, क्योंकि कंप्यूटर कई अलग-अलग रंगों में उपलब्ध होते हैं।`,
+`No, because students carry different types of bags.<br>नहीं, क्योंकि विद्यार्थी अलग-अलग प्रकार के बैग लेकर आते हैं।`,
+`No, because textbooks have different covers.<br>नहीं, क्योंकि पाठ्यपुस्तकों के कवर अलग-अलग होते हैं।`
+],
+answer:0,
+solution:`Argument I is relevant because accessibility during difficult circumstances is directly connected with the usefulness of online classes. The other arguments are unrelated to educational delivery.<br><br><strong>समाधान:</strong> तर्क I प्रासंगिक है क्योंकि कठिन परिस्थितियों में शिक्षा की पहुँच ऑनलाइन कक्षाओं की उपयोगिता से सीधे जुड़ी है। अन्य तर्क शिक्षा के माध्यम से संबंधित नहीं हैं।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q13.</strong> Statement: Should cities restrict heavy vehicles from entering busy markets during peak hours?<br><br><strong>कथन:</strong> क्या शहरों को व्यस्त बाजारों में पीक आवर्स के दौरान भारी वाहनों के प्रवेश पर प्रतिबंध लगाना चाहिए?`,
+options:[
+`Yes, because large vehicles can increase congestion and create safety problems in crowded areas.<br>हाँ, क्योंकि बड़े वाहन भीड़भाड़ वाले क्षेत्रों में यातायात और सुरक्षा संबंधी समस्याएँ बढ़ा सकते हैं।`,
+`Yes, because heavy vehicles generally have large tyres.<br>हाँ, क्योंकि भारी वाहनों के टायर सामान्यतः बड़े होते हैं।`,
+`No, because markets sell many different products.<br>नहीं, क्योंकि बाजारों में कई प्रकार के उत्पाद बिकते हैं।`,
+`No, because drivers may prefer certain brands of vehicles.<br>नहीं, क्योंकि चालक कुछ विशेष वाहन ब्रांड पसंद कर सकते हैं।`
+],
+answer:0,
+solution:`Argument I is relevant and practical because congestion and safety are directly related to restricting heavy vehicles in crowded markets. The other arguments do not address the policy issue meaningfully.<br><br><strong>समाधान:</strong> तर्क I प्रासंगिक और व्यावहारिक है क्योंकि भीड़भाड़ वाले बाजारों में भारी वाहनों के प्रतिबंध का संबंध सीधे यातायात और सुरक्षा से है। अन्य तर्क नीति के मुद्दे को सार्थक रूप से संबोधित नहीं करते।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q14.</strong> Statement: Should banks provide basic financial services through mobile applications?<br><br><strong>कथन:</strong> क्या बैंकों को मोबाइल एप्लिकेशन के माध्यम से बुनियादी वित्तीय सेवाएँ प्रदान करनी चाहिए?`,
+options:[
+`Yes, because mobile access can make routine banking services more convenient for customers.<br>हाँ, क्योंकि मोबाइल के माध्यम से बैंकिंग सेवाएँ ग्राहकों के लिए अधिक सुविधाजनक हो सकती हैं।`,
+`Yes, because mobile phones are sold in many sizes.<br>हाँ, क्योंकि मोबाइल फोन कई आकारों में बेचे जाते हैं।`,
+`No, because some bank buildings have multiple floors.<br>नहीं, क्योंकि कुछ बैंक भवनों में कई मंजिलें होती हैं।`,
+`No, because customers use different types of footwear.<br>नहीं, क्योंकि ग्राहक अलग-अलग प्रकार के जूते पहनते हैं।`
+],
+answer:0,
+solution:`Argument I is directly relevant because convenience and accessibility are important considerations in mobile banking. The other arguments are unrelated to banking services.<br><br><strong>समाधान:</strong> तर्क I सीधे प्रासंगिक है क्योंकि मोबाइल बैंकिंग में सुविधा और पहुँच महत्वपूर्ण विचार हैं। अन्य तर्क बैंकिंग सेवाओं से संबंधित नहीं हैं।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q15.</strong> Statement: Should a government department digitise old records?<br><br><strong>कथन:</strong> क्या किसी सरकारी विभाग को पुराने अभिलेखों का डिजिटलीकरण करना चाहिए?`,
+options:[
+`Yes, because digital records can be easier to search, preserve and retrieve.<br>हाँ, क्योंकि डिजिटल रिकॉर्ड को खोजना, सुरक्षित रखना और प्राप्त करना आसान हो सकता है।`,
+`Yes, because old files often have different paper sizes.<br>हाँ, क्योंकि पुरानी फाइलों में अक्सर अलग-अलग आकार के कागज होते हैं।`,
+`No, because government employees use desks.<br>नहीं, क्योंकि सरकारी कर्मचारी डेस्क का उपयोग करते हैं।`,
+`No, because computers have keyboards.<br>नहीं, क्योंकि कंप्यूटर में कीबोर्ड होते हैं।`
+],
+answer:0,
+solution:`Argument I directly addresses the practical benefits of digitising records. The other arguments do not provide meaningful reasons concerning record management.<br><br><strong>समाधान:</strong> तर्क I रिकॉर्ड के डिजिटलीकरण के व्यावहारिक लाभों से सीधे संबंधित है। अन्य तर्क रिकॉर्ड प्रबंधन के संदर्भ में सार्थक कारण नहीं देते।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q16.</strong> Statement: Should public libraries provide digital membership facilities?<br><br><strong>कथन:</strong> क्या सार्वजनिक पुस्तकालयों को डिजिटल सदस्यता सुविधा प्रदान करनी चाहिए?`,
+options:[
+`Yes, because digital membership can make library services accessible without requiring repeated physical visits.<br>हाँ, क्योंकि डिजिटल सदस्यता बार-बार पुस्तकालय जाने की आवश्यकता कम कर सकती है।`,
+`Yes, because books are often printed using different fonts.<br>हाँ, क्योंकि किताबें अक्सर अलग-अलग फॉन्ट में छापी जाती हैं।`,
+`No, because libraries usually have shelves.<br>नहीं, क्योंकि पुस्तकालयों में सामान्यतः अलमारियाँ होती हैं।`,
+`No, because readers may prefer different colours of bookmarks.<br>नहीं, क्योंकि पाठक अलग-अलग रंग के बुकमार्क पसंद कर सकते हैं।`
+],
+answer:0,
+solution:`Argument I is relevant because it addresses accessibility and convenience, which are directly connected with digital membership. The other arguments are irrelevant.<br><br><strong>समाधान:</strong> तर्क I प्रासंगिक है क्योंकि यह सुविधा और पहुँच से संबंधित है, जो डिजिटल सदस्यता के सीधे लाभ हैं। अन्य तर्क अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 2: Relevant & Irrelevant Arguments",
+question:`<strong>Q17.</strong> Statement: Should public parks have fixed opening and closing hours?<br><br><strong>कथन:</strong> क्या सार्वजनिक पार्कों के खुलने और बंद होने का निश्चित समय होना चाहिए?`,
+options:[
+`Yes, because fixed timings can help in maintenance, security and proper management of the park.<br>हाँ, क्योंकि निश्चित समय से पार्क के रखरखाव, सुरक्षा और उचित प्रबंधन में सहायता मिल सकती है।`,
+`Yes, because trees are generally green.<br>हाँ, क्योंकि पेड़ सामान्यतः हरे होते हैं।`,
+`No, because people wear different clothes in parks.<br>नहीं, क्योंकि लोग पार्कों में अलग-अलग कपड़े पहनते हैं।`,
+`No, because parks contain benches.<br>नहीं, क्योंकि पार्कों में बेंच होती हैं।`
+],
+answer:0,
+solution:`Argument I is relevant because maintenance and security are directly connected with operating hours. The remaining arguments are unrelated to the issue.<br><br><strong>समाधान:</strong> तर्क I प्रासंगिक है क्योंकि रखरखाव और सुरक्षा का संबंध पार्क के संचालन समय से सीधे है। अन्य तर्क अप्रासंगिक हैं।`
+},
+
+
+/* PART 3 */
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q18.</strong> Statement: Should an employer allow employees to work from home on certain days when their duties permit it?<br><br><strong>कथन:</strong> क्या नियोक्ता को उन कर्मचारियों को कुछ दिनों में घर से काम करने की अनुमति देनी चाहिए जिनकी जिम्मेदारियाँ इसकी अनुमति देती हैं?`,
+options:[
+`Yes, if productivity and service requirements can be maintained.<br>हाँ, यदि उत्पादकता और कार्य संबंधी आवश्यकताओं को बनाए रखा जा सके।`,
+`Yes, because employees should never come to the office.<br>हाँ, क्योंकि कर्मचारियों को कभी कार्यालय नहीं आना चाहिए।`,
+`No, because working from home is always less productive.<br>नहीं, क्योंकि घर से काम करना हमेशा कम उत्पादक होता है।`,
+`No, because offices have chairs and tables.<br>नहीं, क्योंकि कार्यालयों में कुर्सियाँ और मेज होती हैं।`
+],
+answer:0,
+solution:`Argument I is strong because it balances flexibility with productivity and organisational requirements. The other arguments are absolute or irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि यह लचीलेपन को उत्पादकता और संगठन की आवश्यकताओं के साथ संतुलित करता है। अन्य तर्क पूर्णतावादी या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q19.</strong> Statement: Should a city increase the number of public charging stations for electric vehicles?<br><br><strong>कथन:</strong> क्या किसी शहर को इलेक्ट्रिक वाहनों के लिए सार्वजनिक चार्जिंग स्टेशनों की संख्या बढ़ानी चाहिए?`,
+options:[
+`Yes, because inadequate charging infrastructure can discourage people from adopting electric vehicles.<br>हाँ, क्योंकि पर्याप्त चार्जिंग ढाँचे की कमी लोगों को इलेक्ट्रिक वाहन अपनाने से हतोत्साहित कर सकती है।`,
+`Yes, because every vehicle must be electric immediately.<br>हाँ, क्योंकि प्रत्येक वाहन को तुरंत इलेक्ट्रिक होना चाहिए।`,
+`No, because electric vehicles have wheels.<br>नहीं, क्योंकि इलेक्ट्रिक वाहनों में पहिए होते हैं।`,
+`No, because charging stations cannot have any effect on vehicle use.<br>नहीं, क्योंकि चार्जिंग स्टेशन वाहन उपयोग पर कोई प्रभाव नहीं डाल सकते।`
+],
+answer:0,
+solution:`Argument I is strong because availability of charging infrastructure is a practical factor affecting adoption of electric vehicles. The other arguments are extreme or irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि चार्जिंग ढाँचे की उपलब्धता इलेक्ट्रिक वाहनों को अपनाने को प्रभावित करने वाला व्यावहारिक कारक है। अन्य तर्क अतिवादी या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q20.</strong> Statement: Should an examination authority introduce a mock test before a major computer-based examination?<br><br><strong>कथन:</strong> क्या किसी परीक्षा प्राधिकरण को बड़ी कंप्यूटर आधारित परीक्षा से पहले मॉक टेस्ट आयोजित करना चाहिए?`,
+options:[
+`Yes, because candidates can become familiar with the interface and reduce avoidable technical mistakes.<br>हाँ, क्योंकि अभ्यर्थी इंटरफेस से परिचित हो सकते हैं और अनावश्यक तकनीकी गलतियाँ कम कर सकते हैं।`,
+`Yes, because mock tests guarantee that every candidate will pass the examination.<br>हाँ, क्योंकि मॉक टेस्ट यह सुनिश्चित करते हैं कि प्रत्येक अभ्यर्थी परीक्षा उत्तीर्ण करेगा।`,
+`No, because computer-based examinations do not require any practice.<br>नहीं, क्योंकि कंप्यूटर आधारित परीक्षाओं के लिए किसी अभ्यास की आवश्यकता नहीं होती।`,
+`No, because keyboards are used for typing.<br>नहीं, क्योंकि कीबोर्ड का उपयोग टाइपिंग के लिए होता है।`
+],
+answer:0,
+solution:`Argument I is strong because familiarity with the test interface can reduce avoidable technical errors. The other arguments contain an unrealistic guarantee or are irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि परीक्षा इंटरफेस से परिचित होने पर अनावश्यक तकनीकी गलतियाँ कम हो सकती हैं। अन्य तर्क अवास्तविक गारंटी या अप्रासंगिक कारण देते हैं।`
+},
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q21.</strong> Statement: Should workplaces provide regular skill-upgradation programmes for employees?<br><br><strong>कथन:</strong> क्या कार्यस्थलों को कर्मचारियों के लिए नियमित कौशल-विकास कार्यक्रम आयोजित करने चाहिए?`,
+options:[
+`Yes, because changing work requirements may require employees to update their skills.<br>हाँ, क्योंकि बदलती कार्य आवश्यकताओं के कारण कर्मचारियों को अपने कौशल को अद्यतन करना पड़ सकता है।`,
+`Yes, because every employee must learn every possible skill.<br>हाँ, क्योंकि प्रत्येक कर्मचारी को हर संभव कौशल सीखना ही चाहिए।`,
+`No, because employees can never learn after joining a job.<br>नहीं, क्योंकि नौकरी में शामिल होने के बाद कर्मचारी कभी नहीं सीख सकते।`,
+`No, because training rooms require chairs.<br>नहीं, क्योंकि प्रशिक्षण कक्षों में कुर्सियों की आवश्यकता होती है।`
+],
+answer:0,
+solution:`Argument I is strong because changing technology and work processes often require continuous skill development. The other arguments are exaggerated or irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि बदलती तकनीक और कार्य प्रक्रियाओं के कारण निरंतर कौशल विकास आवश्यक हो सकता है। अन्य तर्क अतिशयोक्तिपूर्ण या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q22.</strong> Statement: Should cities introduce more pedestrian-only zones in extremely crowded markets?<br><br><strong>कथन:</strong> क्या अत्यधिक भीड़भाड़ वाले बाजारों में शहरों को अधिक पैदल-यात्री क्षेत्र बनाने चाहिए?`,
+options:[
+`Yes, because restricting vehicles in selected crowded areas can improve pedestrian safety and movement.<br>हाँ, क्योंकि कुछ भीड़भाड़ वाले क्षेत्रों में वाहनों को सीमित करने से पैदल यात्रियों की सुरक्षा और आवागमन बेहतर हो सकता है।`,
+`Yes, because vehicles are never useful anywhere.<br>हाँ, क्योंकि वाहन कहीं भी उपयोगी नहीं होते।`,
+`No, because pedestrians should not use roads.<br>नहीं, क्योंकि पैदल यात्रियों को सड़कों का उपयोग नहीं करना चाहिए।`,
+`No, because markets always sell food items.<br>नहीं, क्योंकि बाजारों में हमेशा खाद्य वस्तुएँ बिकती हैं।`
+],
+answer:0,
+solution:`Argument I is strong because it identifies a specific safety and mobility benefit while allowing the restriction to apply to selected crowded areas. The other arguments are absolute or irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि यह चयनित भीड़भाड़ वाले क्षेत्रों में प्रतिबंध से सुरक्षा और आवागमन के व्यावहारिक लाभ को बताता है। अन्य तर्क अतिवादी या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q23.</strong> Statement: Should public offices display a clear timeline for processing common applications?<br><br><strong>कथन:</strong> क्या सरकारी कार्यालयों को सामान्य आवेदनों के निपटारे की स्पष्ट समय-सीमा प्रदर्शित करनी चाहिए?`,
+options:[
+`Yes, because applicants can know the expected processing period and hold the office accountable.<br>हाँ, क्योंकि आवेदक अपेक्षित समय जान सकते हैं और कार्यालय को जवाबदेह बना सकते हैं।`,
+`Yes, because every application must be approved irrespective of eligibility.<br>हाँ, क्योंकि पात्रता की परवाह किए बिना हर आवेदन स्वीकृत होना चाहिए।`,
+`No, because applicants should never know the status of their applications.<br>नहीं, क्योंकि आवेदकों को अपने आवेदन की स्थिति कभी नहीं जाननी चाहिए।`,
+`No, because government offices use registers.<br>नहीं, क्योंकि सरकारी कार्यालय रजिस्टर का उपयोग करते हैं।`
+],
+answer:0,
+solution:`Argument I is strong because a published timeline improves transparency and helps applicants understand expected service delivery. The other arguments are unreasonable or irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि निर्धारित समय-सीमा पारदर्शिता बढ़ाती है और आवेदकों को सेवा प्राप्ति की अपेक्षित अवधि समझने में मदद करती है। अन्य तर्क अनुचित या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q24.</strong> Statement: Should public examination centres provide clear accessibility arrangements for candidates with disabilities?<br><br><strong>कथन:</strong> क्या सार्वजनिक परीक्षा केंद्रों को दिव्यांग अभ्यर्थियों के लिए स्पष्ट सुगमता संबंधी व्यवस्थाएँ उपलब्ध करानी चाहिए?`,
+options:[
+`Yes, because appropriate arrangements can provide eligible candidates a fair opportunity to participate.<br>हाँ, क्योंकि उचित व्यवस्थाएँ पात्र अभ्यर्थियों को निष्पक्ष रूप से परीक्षा में भाग लेने का अवसर दे सकती हैं।`,
+`Yes, because every candidate should receive extra marks automatically.<br>हाँ, क्योंकि प्रत्येक अभ्यर्थी को स्वतः अतिरिक्त अंक मिलने चाहिए।`,
+`No, because accessibility arrangements have no relation to examinations.<br>नहीं, क्योंकि सुगमता संबंधी व्यवस्थाओं का परीक्षाओं से कोई संबंध नहीं है।`,
+`No, because examination centres must always have stairs.<br>नहीं, क्योंकि परीक्षा केंद्रों में हमेशा सीढ़ियाँ होनी चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because accessibility arrangements help eligible candidates participate fairly. The other arguments confuse reasonable accommodation with unfair advantage or are irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि सुगमता संबंधी व्यवस्थाएँ पात्र अभ्यर्थियों को निष्पक्ष रूप से परीक्षा में भाग लेने में सहायता करती हैं। अन्य तर्क उचित सुविधा और अनुचित लाभ को भ्रमित करते हैं या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 3: Practical & Logical Judgement",
+question:`<strong>Q25.</strong> Statement: Should government departments use a single-window system for related citizen services?<br><br><strong>कथन:</strong> क्या सरकारी विभागों को संबंधित नागरिक सेवाओं के लिए सिंगल-विंडो प्रणाली अपनानी चाहिए?`,
+options:[
+`Yes, because citizens may save time by accessing related services through one coordinated system.<br>हाँ, क्योंकि नागरिक एक समन्वित प्रणाली के माध्यम से संबंधित सेवाएँ प्राप्त करके समय बचा सकते हैं।`,
+`Yes, because every government department should be merged into one department.<br>हाँ, क्योंकि सभी सरकारी विभागों को एक ही विभाग में मिला देना चाहिए।`,
+`No, because citizens should visit every office separately for every service.<br>नहीं, क्योंकि नागरिकों को प्रत्येक सेवा के लिए अलग-अलग कार्यालय जाना चाहिए।`,
+`No, because single-window systems cannot use computers.<br>नहीं, क्योंकि सिंगल-विंडो प्रणालियाँ कंप्यूटर का उपयोग नहीं कर सकतीं।`
+],
+answer:0,
+solution:`Argument I is strong because a coordinated single-window system can reduce repeated visits and improve service convenience. The other arguments are either extreme or based on a false assumption.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि समन्वित सिंगल-विंडो प्रणाली बार-बार कार्यालय जाने की आवश्यकता कम कर सकती है और नागरिकों की सुविधा बढ़ा सकती है। अन्य तर्क अतिवादी या गलत धारणा पर आधारित हैं।`
+},
+
+
+/* PART 4 */
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q26.</strong> Statement: Should public officials be required to disclose potential conflicts of interest?<br><br><strong>कथन:</strong> क्या सरकारी अधिकारियों के लिए संभावित हितों के टकराव की जानकारी देना अनिवार्य होना चाहिए?`,
+options:[
+`Yes, because disclosure can improve transparency and help prevent biased decisions.<br>हाँ, क्योंकि जानकारी देने से पारदर्शिता बढ़ सकती है और पक्षपातपूर्ण निर्णयों को रोकने में मदद मिल सकती है।`,
+`Yes, because officials should never have any personal interests.<br>हाँ, क्योंकि अधिकारियों का कभी कोई व्यक्तिगत हित नहीं होना चाहिए।`,
+`No, because transparency is harmful to public administration.<br>नहीं, क्योंकि पारदर्शिता सार्वजनिक प्रशासन के लिए हानिकारक है।`,
+`No, because officials do not make decisions.<br>नहीं, क्योंकि अधिकारी निर्णय नहीं लेते।`
+],
+answer:0,
+solution:`Argument I is strong because disclosure of conflicts can support transparency and impartial decision-making. The other arguments are unrealistic or factually incorrect.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि हितों के टकराव की जानकारी देना पारदर्शिता और निष्पक्ष निर्णय लेने में सहायता कर सकता है। अन्य तर्क अवास्तविक या तथ्यात्मक रूप से गलत हैं।`
+},
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q27.</strong> Statement: Should recruitment examinations follow the same eligibility rules for all candidates in the same category?<br><br><strong>कथन:</strong> क्या भर्ती परीक्षाओं में समान श्रेणी के सभी अभ्यर्थियों के लिए समान पात्रता नियम होने चाहिए?`,
+options:[
+`Yes, because consistent eligibility rules promote fairness and equal treatment within the same category.<br>हाँ, क्योंकि समान पात्रता नियम एक ही श्रेणी में निष्पक्षता और समान व्यवहार को बढ़ावा देते हैं।`,
+`Yes, because eligibility rules should never be announced publicly.<br>हाँ, क्योंकि पात्रता नियम कभी सार्वजनिक नहीं किए जाने चाहिए।`,
+`No, because rules should change for every individual applicant.<br>नहीं, क्योंकि प्रत्येक आवेदक के लिए नियम बदलने चाहिए।`,
+`No, because fair recruitment is impossible.<br>नहीं, क्योंकि निष्पक्ष भर्ती असंभव है।`
+],
+answer:0,
+solution:`Argument I is strong because consistent rules are necessary for fair and transparent treatment of similarly placed candidates. The other arguments undermine fairness or transparency.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि समान स्थिति वाले अभ्यर्थियों के लिए समान नियम निष्पक्ष और पारदर्शी व्यवहार के लिए आवश्यक हैं। अन्य तर्क निष्पक्षता या पारदर्शिता को कमजोर करते हैं।`
+},
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q28.</strong> Statement: Should an employee report a serious safety violation observed at the workplace?<br><br><strong>कथन:</strong> क्या किसी कर्मचारी को कार्यस्थल पर देखे गए गंभीर सुरक्षा उल्लंघन की सूचना देनी चाहिए?`,
+options:[
+`Yes, because reporting serious safety risks can protect employees and prevent accidents.<br>हाँ, क्योंकि गंभीर सुरक्षा जोखिम की सूचना देने से कर्मचारियों की सुरक्षा और दुर्घटनाओं की रोकथाम में मदद मिल सकती है।`,
+`Yes, because employees should report every minor personal disagreement as a safety violation.<br>हाँ, क्योंकि कर्मचारियों को हर छोटे व्यक्तिगत विवाद को सुरक्षा उल्लंघन बताकर रिपोर्ट करना चाहिए।`,
+`No, because safety is never the responsibility of employees.<br>नहीं, क्योंकि सुरक्षा कभी कर्मचारियों की जिम्मेदारी नहीं होती।`,
+`No, because accidents cannot be prevented by reporting risks.<br>नहीं, क्योंकि जोखिम की सूचना देने से दुर्घटनाएँ रोकी नहीं जा सकतीं।`
+],
+answer:0,
+solution:`Argument I is strong because reporting a genuine serious safety risk is responsible behaviour and may prevent harm. The other arguments are either exaggerated or reject reasonable responsibility.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि वास्तविक गंभीर सुरक्षा जोखिम की सूचना देना जिम्मेदार व्यवहार है और नुकसान को रोकने में मदद कर सकता है। अन्य तर्क अतिशयोक्तिपूर्ण हैं या उचित जिम्मेदारी को नकारते हैं।`
+},
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q29.</strong> Statement: Should examination authorities publish clear rules about prohibited items before an examination?<br><br><strong>कथन:</strong> क्या परीक्षा प्राधिकरणों को परीक्षा से पहले प्रतिबंधित वस्तुओं के बारे में स्पष्ट नियम प्रकाशित करने चाहिए?`,
+options:[
+`Yes, because candidates can know the rules in advance and avoid accidental violations.<br>हाँ, क्योंकि अभ्यर्थी पहले से नियम जानकर अनजाने उल्लंघन से बच सकते हैं।`,
+`Yes, because candidates should be allowed to bring all prohibited items.<br>हाँ, क्योंकि अभ्यर्थियों को सभी प्रतिबंधित वस्तुएँ लाने की अनुमति होनी चाहिए।`,
+`No, because rules should be kept secret from candidates.<br>नहीं, क्योंकि नियम अभ्यर्थियों से गुप्त रखे जाने चाहिए।`,
+`No, because examination rules have no purpose.<br>नहीं, क्योंकि परीक्षा नियमों का कोई उद्देश्य नहीं होता।`
+],
+answer:0,
+solution:`Argument I is strong because advance information about rules promotes compliance and reduces avoidable mistakes. The other arguments are unreasonable.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि नियमों की पहले से जानकारी होने पर उनका पालन आसान होता है और अनावश्यक गलतियाँ कम होती हैं। अन्य तर्क अनुचित हैं।`
+},
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q30.</strong> Statement: Should public authorities take action against deliberate damage to public property?<br><br><strong>कथन:</strong> क्या सार्वजनिक प्राधिकरणों को सार्वजनिक संपत्ति को जानबूझकर नुकसान पहुँचाने के विरुद्ध कार्रवाई करनी चाहिए?`,
+options:[
+`Yes, because public property is maintained using public resources and deliberate damage can impose costs on society.<br>हाँ, क्योंकि सार्वजनिक संपत्ति का रखरखाव सार्वजनिक संसाधनों से होता है और जानबूझकर नुकसान समाज पर अतिरिक्त लागत डाल सकता है।`,
+`Yes, because all accidental damage should automatically be treated as deliberate.<br>हाँ, क्योंकि सभी आकस्मिक नुकसान को स्वतः जानबूझकर किया गया नुकसान मानना चाहिए।`,
+`No, because public property belongs to nobody.<br>नहीं, क्योंकि सार्वजनिक संपत्ति किसी की नहीं होती।`,
+`No, because repairing damaged property is impossible.<br>नहीं, क्योंकि क्षतिग्रस्त संपत्ति की मरम्मत असंभव है।`
+],
+answer:0,
+solution:`Argument I is strong because public property is created and maintained for public benefit, so deliberate damage has social and financial consequences. The other arguments are unreasonable or confuse accidental and deliberate acts.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि सार्वजनिक संपत्ति जनता के लाभ के लिए होती है और उसका जानबूझकर नुकसान सामाजिक एवं आर्थिक प्रभाव डालता है। अन्य तर्क अनुचित हैं या आकस्मिक और जानबूझकर किए गए कार्यों में अंतर नहीं करते।`
+},
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q31.</strong> Statement: Should public institutions provide a transparent procedure for lodging complaints?<br><br><strong>कथन:</strong> क्या सार्वजनिक संस्थानों को शिकायत दर्ज करने की पारदर्शी प्रक्रिया उपलब्ध करानी चाहिए?`,
+options:[
+`Yes, because citizens should have a clear channel to raise genuine grievances and seek resolution.<br>हाँ, क्योंकि नागरिकों के पास वास्तविक शिकायतें उठाने और समाधान पाने के लिए स्पष्ट माध्यम होना चाहिए।`,
+`Yes, because every complaint must automatically be accepted as true.<br>हाँ, क्योंकि हर शिकायत को स्वतः सत्य मान लेना चाहिए।`,
+`No, because citizens should never question public institutions.<br>नहीं, क्योंकि नागरिकों को सार्वजनिक संस्थानों पर कभी प्रश्न नहीं करना चाहिए।`,
+`No, because complaint systems can never improve administration.<br>नहीं, क्योंकि शिकायत प्रणाली प्रशासन में कभी सुधार नहीं कर सकती।`
+],
+answer:0,
+solution:`Argument I is strong because a transparent complaint mechanism provides accountability while allowing grievances to be examined through due process. The other arguments are unreasonable or deny accountability.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि पारदर्शी शिकायत प्रणाली जवाबदेही सुनिश्चित करते हुए शिकायतों की उचित प्रक्रिया से जाँच का अवसर देती है। अन्य तर्क अनुचित हैं या जवाबदेही को नकारते हैं।`
+},
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q32.</strong> Statement: Should government employees be evaluated partly on the quality of service delivered to citizens?<br><br><strong>कथन:</strong> क्या सरकारी कर्मचारियों का मूल्यांकन नागरिकों को दी जाने वाली सेवा की गुणवत्ता के आधार पर भी किया जाना चाहिए?`,
+options:[
+`Yes, because service quality is an important indicator of how effectively public responsibilities are being performed.<br>हाँ, क्योंकि सेवा की गुणवत्ता सार्वजनिक जिम्मेदारियों के प्रभावी निर्वहन का एक महत्वपूर्ण संकेतक है।`,
+`Yes, because every employee should be judged only by popularity.<br>हाँ, क्योंकि प्रत्येक कर्मचारी का मूल्यांकन केवल लोकप्रियता के आधार पर होना चाहिए।`,
+`No, because citizens are never affected by public services.<br>नहीं, क्योंकि सार्वजनिक सेवाओं से नागरिक कभी प्रभावित नहीं होते।`,
+`No, because performance can never be evaluated in government work.<br>नहीं, क्योंकि सरकारी कार्य में प्रदर्शन का कभी मूल्यांकन नहीं किया जा सकता।`
+],
+answer:0,
+solution:`Argument I is strong because quality of service is directly related to the effectiveness of public administration. The other arguments are either irrelevant or absolute.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि सेवा की गुणवत्ता सार्वजनिक प्रशासन की प्रभावशीलता से सीधे संबंधित है। अन्य तर्क अप्रासंगिक या पूर्णतावादी हैं।`
+},
+
+{
+part:"Part 4: Ethics, Fairness & Responsibility",
+question:`<strong>Q33.</strong> Statement: Should an organisation maintain a written policy against workplace discrimination?<br><br><strong>कथन:</strong> क्या किसी संगठन को कार्यस्थल पर भेदभाव के विरुद्ध लिखित नीति रखनी चाहिए?`,
+options:[
+`Yes, because a clear policy can establish expected standards and provide a basis for addressing violations.<br>हाँ, क्योंकि स्पष्ट नीति अपेक्षित मानकों को निर्धारित कर सकती है और उल्लंघनों से निपटने का आधार दे सकती है।`,
+`Yes, because written policies automatically eliminate every form of discrimination.<br>हाँ, क्योंकि लिखित नीति अपने आप हर प्रकार के भेदभाव को समाप्त कर देती है।`,
+`No, because discrimination is necessary for competition.<br>नहीं, क्योंकि प्रतिस्पर्धा के लिए भेदभाव आवश्यक है।`,
+`No, because organisations do not need any rules for employee conduct.<br>नहीं, क्योंकि संगठनों को कर्मचारियों के आचरण के लिए किसी नियम की आवश्यकता नहीं है।`
+],
+answer:0,
+solution:`Argument I is strong because a written policy establishes standards and procedures for addressing violations. It does not guarantee that every violation will disappear, making argument II weak. Arguments III and IV are unreasonable.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि लिखित नीति मानक और उल्लंघनों से निपटने की प्रक्रिया निर्धारित करती है। यह हर उल्लंघन को समाप्त करने की गारंटी नहीं देती, इसलिए II कमजोर है। III और IV अनुचित हैं।`
+},
+
+
+/* PART 5 */
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q34.</strong> Statement: Should cities encourage rainwater harvesting in buildings?<br><br><strong>कथन:</strong> क्या शहरों को भवनों में वर्षा जल संचयन को प्रोत्साहित करना चाहिए?`,
+options:[
+`Yes, because rainwater harvesting can help conserve water and reduce pressure on conventional water sources.<br>हाँ, क्योंकि वर्षा जल संचयन जल संरक्षण में मदद कर सकता है और पारंपरिक जल स्रोतों पर दबाव कम कर सकता है।`,
+`Yes, because rainwater can never become contaminated under any circumstances.<br>हाँ, क्योंकि वर्षा जल किसी भी परिस्थिति में दूषित नहीं हो सकता।`,
+`No, because water conservation is unrelated to cities.<br>नहीं, क्योंकि जल संरक्षण का शहरों से कोई संबंध नहीं है।`,
+`No, because buildings should never collect water.<br>नहीं, क्योंकि भवनों को कभी पानी एकत्र नहीं करना चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because rainwater harvesting can support water conservation and reduce dependence on other sources. The other arguments make absolute or irrational claims.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि वर्षा जल संचयन जल संरक्षण में सहायता कर सकता है और अन्य स्रोतों पर निर्भरता कम कर सकता है। अन्य तर्क अतिवादी या अतार्किक हैं।`
+},
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q35.</strong> Statement: Should governments invest in improving public transport before expanding roads indefinitely?<br><br><strong>कथन:</strong> क्या सरकारों को सड़कों का अनिश्चित रूप से विस्तार करने के बजाय सार्वजनिक परिवहन में सुधार पर भी निवेश करना चाहिए?`,
+options:[
+`Yes, because efficient public transport can move large numbers of people and may reduce dependence on private vehicles.<br>हाँ, क्योंकि प्रभावी सार्वजनिक परिवहन बड़ी संख्या में लोगों को ले जा सकता है और निजी वाहनों पर निर्भरता कम कर सकता है।`,
+`Yes, because roads are never required for transportation.<br>हाँ, क्योंकि परिवहन के लिए सड़कों की कभी आवश्यकता नहीं होती।`,
+`No, because public transport cannot carry any passengers.<br>नहीं, क्योंकि सार्वजनिक परिवहन किसी भी यात्री को नहीं ले जा सकता।`,
+`No, because buses and trains do not use energy.<br>नहीं, क्योंकि बसें और ट्रेनें ऊर्जा का उपयोग नहीं करतीं।`
+],
+answer:0,
+solution:`Argument I is strong because high-capacity public transport can reduce pressure on road networks and private vehicles. The other arguments contain absolute or factually incorrect claims.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि उच्च क्षमता वाला सार्वजनिक परिवहन सड़कों और निजी वाहनों पर दबाव कम कर सकता है। अन्य तर्क पूर्णतावादी या तथ्यात्मक रूप से गलत हैं।`
+},
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q36.</strong> Statement: Should government schools provide career guidance to senior students?<br><br><strong>कथन:</strong> क्या सरकारी विद्यालयों में वरिष्ठ विद्यार्थियों को करियर मार्गदर्शन दिया जाना चाहिए?`,
+options:[
+`Yes, because informed guidance can help students understand available educational and career pathways.<br>हाँ, क्योंकि उचित मार्गदर्शन विद्यार्थियों को उपलब्ध शिक्षा और करियर विकल्पों को समझने में सहायता कर सकता है।`,
+`Yes, because every student must choose exactly the same career.<br>हाँ, क्योंकि प्रत्येक विद्यार्थी को बिल्कुल एक ही करियर चुनना चाहिए।`,
+`No, because students do not need any information about careers.<br>नहीं, क्योंकि विद्यार्थियों को करियर के बारे में किसी जानकारी की आवश्यकता नहीं होती।`,
+`No, because career decisions are unrelated to education.<br>नहीं, क्योंकि करियर संबंधी निर्णयों का शिक्षा से कोई संबंध नहीं है।`
+],
+answer:0,
+solution:`Argument I is strong because career guidance can help students make informed decisions. The other arguments are unreasonable and deny the role of information in career planning.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि करियर मार्गदर्शन विद्यार्थियों को सूचित निर्णय लेने में मदद कर सकता है। अन्य तर्क अनुचित हैं और करियर योजना में जानकारी की भूमिका को नकारते हैं।`
+},
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q37.</strong> Statement: Should cities increase the frequency of buses during peak commuting hours?<br><br><strong>कथन:</strong> क्या शहरों को पीक आवर्स में बसों की संख्या/फ्रीक्वेंसी बढ़ानी चाहिए?`,
+options:[
+`Yes, because increased frequency can help accommodate more passengers during periods of high demand.<br>हाँ, क्योंकि अधिक फ्रीक्वेंसी से अधिक मांग वाले समय में ज्यादा यात्रियों को सुविधा मिल सकती है।`,
+`Yes, because buses should operate without any maintenance.<br>हाँ, क्योंकि बसों को बिना किसी रखरखाव के चलना चाहिए।`,
+`No, because passengers never travel during peak hours.<br>नहीं, क्योंकि यात्री कभी पीक आवर्स में यात्रा नहीं करते।`,
+`No, because buses are always empty in cities.<br>नहीं, क्योंकि शहरों में बसें हमेशा खाली रहती हैं।`
+],
+answer:0,
+solution:`Argument I is strong because increased service during high-demand periods is a practical response to passenger demand. The other arguments contradict common transport conditions or are irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि अधिक मांग वाले समय में सेवा बढ़ाना यात्रियों की आवश्यकता के अनुरूप व्यावहारिक कदम है। अन्य तर्क वास्तविक परिस्थितियों के विपरीत या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q38.</strong> Statement: Should local authorities provide more public drinking-water points in areas with heavy pedestrian movement?<br><br><strong>कथन:</strong> क्या स्थानीय प्रशासन को अधिक पैदल आवागमन वाले क्षेत्रों में सार्वजनिक पेयजल केंद्र बढ़ाने चाहिए?`,
+options:[
+`Yes, because easily accessible drinking water can support public health and convenience.<br>हाँ, क्योंकि आसानी से उपलब्ध पेयजल सार्वजनिक स्वास्थ्य और सुविधा के लिए उपयोगी हो सकता है।`,
+`Yes, because people should never carry their own water.<br>हाँ, क्योंकि लोगों को कभी अपना पानी साथ नहीं रखना चाहिए।`,
+`No, because drinking water has no public health relevance.<br>नहीं, क्योंकि पेयजल का सार्वजनिक स्वास्थ्य से कोई संबंध नहीं है।`,
+`No, because pedestrians do not drink water.<br>नहीं, क्योंकि पैदल यात्री पानी नहीं पीते।`
+],
+answer:0,
+solution:`Argument I is strong because accessible drinking water is relevant to health and public convenience, especially in high-footfall areas. The other arguments are extreme or false.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि अधिक आवागमन वाले क्षेत्रों में सुलभ पेयजल स्वास्थ्य और सार्वजनिक सुविधा से सीधे संबंधित है। अन्य तर्क अतिवादी या गलत हैं।`
+},
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q39.</strong> Statement: Should municipalities promote segregation of waste at source?<br><br><strong>कथन:</strong> क्या नगरपालिकाओं को स्रोत पर कचरा अलग-अलग करने को बढ़ावा देना चाहिए?`,
+options:[
+`Yes, because separating waste at source can make recycling and waste processing more effective.<br>हाँ, क्योंकि स्रोत पर कचरा अलग करने से पुनर्चक्रण और कचरा प्रसंस्करण अधिक प्रभावी हो सकता है।`,
+`Yes, because all waste becomes harmless once separated.<br>हाँ, क्योंकि अलग करते ही हर प्रकार का कचरा हानिरहित हो जाता है।`,
+`No, because waste management has no environmental impact.<br>नहीं, क्योंकि कचरा प्रबंधन का पर्यावरण पर कोई प्रभाव नहीं पड़ता।`,
+`No, because recyclable materials should always be mixed with other waste.<br>नहीं, क्योंकि पुनर्चक्रण योग्य सामग्री को हमेशा अन्य कचरे के साथ मिलाना चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because source segregation improves the efficiency of recycling and processing. The other arguments are either absolute or contrary to basic waste-management principles.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि स्रोत पर कचरा अलग करने से पुनर्चक्रण और प्रसंस्करण अधिक प्रभावी हो सकता है। अन्य तर्क अतिवादी या कचरा प्रबंधन के मूल सिद्धांतों के विपरीत हैं।`
+},
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q40.</strong> Statement: Should governments encourage citizens to use digital payment methods for routine transactions?<br><br><strong>कथन:</strong> क्या सरकारों को नागरिकों को सामान्य लेन-देन के लिए डिजिटल भुगतान के उपयोग के लिए प्रोत्साहित करना चाहिए?`,
+options:[
+`Yes, because digital payments can provide convenience and create an electronic record of transactions.<br>हाँ, क्योंकि डिजिटल भुगतान सुविधा प्रदान कर सकते हैं और लेन-देन का इलेक्ट्रॉनिक रिकॉर्ड बना सकते हैं।`,
+`Yes, because cash should immediately be declared illegal everywhere.<br>हाँ, क्योंकि नकद को तुरंत हर जगह अवैध घोषित कर देना चाहिए।`,
+`No, because digital payments can never be convenient.<br>नहीं, क्योंकि डिजिटल भुगतान कभी सुविधाजनक नहीं हो सकते।`,
+`No, because electronic records have no possible use.<br>नहीं, क्योंकि इलेक्ट्रॉनिक रिकॉर्ड का कोई उपयोग नहीं हो सकता।`
+],
+answer:0,
+solution:`Argument I is strong because convenience and transaction records are practical benefits of digital payments. The other arguments are unnecessarily extreme or incorrect.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि सुविधा और लेन-देन का रिकॉर्ड डिजिटल भुगतान के व्यावहारिक लाभ हैं। अन्य तर्क अनावश्यक रूप से अतिवादी या गलत हैं।`
+},
+
+{
+part:"Part 5: Public Policy & Social Issues",
+question:`<strong>Q41.</strong> Statement: Should public awareness campaigns be used to encourage road safety behaviour?<br><br><strong>कथन:</strong> क्या सड़क सुरक्षा संबंधी व्यवहार को प्रोत्साहित करने के लिए जन-जागरूकता अभियान चलाए जाने चाहिए?`,
+options:[
+`Yes, because repeated awareness can inform people about safe practices and the consequences of risky behaviour.<br>हाँ, क्योंकि लगातार जागरूकता लोगों को सुरक्षित व्यवहार और जोखिमपूर्ण व्यवहार के परिणामों के बारे में जानकारी दे सकती है।`,
+`Yes, because awareness campaigns can guarantee that nobody will ever violate traffic rules.<br>हाँ, क्योंकि जागरूकता अभियान यह सुनिश्चित कर सकते हैं कि कोई भी कभी यातायात नियमों का उल्लंघन नहीं करेगा।`,
+`No, because road safety is unrelated to public behaviour.<br>नहीं, क्योंकि सड़क सुरक्षा का सार्वजनिक व्यवहार से कोई संबंध नहीं है।`,
+`No, because traffic rules should never be communicated to citizens.<br>नहीं, क्योंकि यातायात नियमों की जानकारी नागरिकों को कभी नहीं दी जानी चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because awareness can improve knowledge and encourage safer behaviour, although it cannot guarantee perfect compliance. The other arguments are extreme or irrational.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि जागरूकता ज्ञान बढ़ाकर सुरक्षित व्यवहार को प्रोत्साहित कर सकती है, हालांकि यह पूर्ण अनुपालन की गारंटी नहीं देती। अन्य तर्क अतिवादी या अतार्किक हैं।`
+},
+
+
+/* PART 6 */
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q42.</strong> Statement: Should an examination authority release a provisional answer key before the final result?<br><br><strong>कथन:</strong> क्या परीक्षा प्राधिकरण को अंतिम परिणाम से पहले प्रोविजनल उत्तर कुंजी जारी करनी चाहिए?`,
+options:[
+`Yes, because candidates get an opportunity to check answers and raise genuine objections within the prescribed procedure.<br>हाँ, क्योंकि अभ्यर्थियों को उत्तर जाँचने और निर्धारित प्रक्रिया के भीतर वास्तविक आपत्तियाँ उठाने का अवसर मिलता है।`,
+`Yes, because every candidate must be allowed to change answers after the examination.<br>हाँ, क्योंकि प्रत्येक अभ्यर्थी को परीक्षा के बाद उत्तर बदलने की अनुमति होनी चाहिए।`,
+`No, because candidates should never know the correct answers.<br>नहीं, क्योंकि अभ्यर्थियों को सही उत्तर कभी नहीं पता चलने चाहिए।`,
+`No, because answer keys have no relation to examination transparency.<br>नहीं, क्योंकि उत्तर कुंजी का परीक्षा की पारदर्शिता से कोई संबंध नहीं है।`
+],
+answer:0,
+solution:`Argument I is strong because a provisional key can provide transparency and an opportunity to identify genuine errors through a defined objection process. The other arguments are unreasonable.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि प्रोविजनल उत्तर कुंजी पारदर्शिता प्रदान करती है और निर्धारित आपत्ति प्रक्रिया के माध्यम से वास्तविक त्रुटियों की पहचान का अवसर देती है। अन्य तर्क अनुचित हैं।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q43.</strong> Statement: Should a city introduce congestion charges in extremely crowded central areas?<br><br><strong>कथन:</strong> क्या किसी शहर को अत्यधिक भीड़भाड़ वाले केंद्रीय क्षेत्रों में कंजेशन चार्ज लागू करना चाहिए?`,
+options:[
+`Yes, if the policy is properly designed, because it may discourage unnecessary vehicle trips and manage congestion.<br>हाँ, यदि नीति उचित रूप से बनाई जाए, क्योंकि इससे अनावश्यक वाहन यात्राएँ कम हो सकती हैं और यातायात को नियंत्रित किया जा सकता है।`,
+`Yes, because everyone entering the city must always pay the same amount regardless of circumstances.<br>हाँ, क्योंकि शहर में प्रवेश करने वाले प्रत्येक व्यक्ति को हर परिस्थिति में समान राशि देनी चाहिए।`,
+`No, because traffic congestion can never be influenced by travel behaviour.<br>नहीं, क्योंकि यात्रा के व्यवहार से यातायात की भीड़ कभी प्रभावित नहीं हो सकती।`,
+`No, because roads are made of concrete.<br>नहीं, क्योंकि सड़कें कंक्रीट से बनी होती हैं।`
+],
+answer:0,
+solution:`Argument I is strong because it identifies a plausible mechanism by which pricing can influence unnecessary trips and congestion. The other arguments are either overly rigid or irrelevant.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि शुल्क के माध्यम से अनावश्यक यात्राओं और भीड़ को प्रभावित करने का व्यावहारिक आधार दिया गया है। अन्य तर्क अत्यधिक कठोर या अप्रासंगिक हैं।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q44.</strong> Statement: Should government recruitment agencies provide a single official portal for vacancy information?<br><br><strong>कथन:</strong> क्या सरकारी भर्ती एजेंसियों को रिक्तियों की जानकारी के लिए एक आधिकारिक पोर्टल उपलब्ध कराना चाहिए?`,
+options:[
+`Yes, because a reliable official source can reduce confusion and help candidates verify recruitment information.<br>हाँ, क्योंकि विश्वसनीय आधिकारिक स्रोत भ्रम कम कर सकता है और अभ्यर्थियों को भर्ती संबंधी जानकारी सत्यापित करने में मदद कर सकता है।`,
+`Yes, because candidates should never use any other educational resource.<br>हाँ, क्योंकि अभ्यर्थियों को कभी किसी अन्य शैक्षणिक संसाधन का उपयोग नहीं करना चाहिए।`,
+`No, because official information should remain secret until the examination day.<br>नहीं, क्योंकि आधिकारिक जानकारी परीक्षा के दिन तक गुप्त रहनी चाहिए।`,
+`No, because websites cannot display vacancy information.<br>नहीं, क्योंकि वेबसाइट रिक्तियों की जानकारी प्रदर्शित नहीं कर सकतीं।`
+],
+answer:0,
+solution:`Argument I is strong because a central official source can improve authenticity and reduce misinformation. The other arguments are unreasonable or factually incorrect.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि एक आधिकारिक केंद्रीय स्रोत जानकारी की विश्वसनीयता बढ़ा सकता है और गलत सूचना को कम कर सकता है। अन्य तर्क अनुचित या तथ्यात्मक रूप से गलत हैं।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q45.</strong> Statement: Should colleges offer some courses in a blended online-and-classroom format?<br><br><strong>कथन:</strong> क्या कॉलेजों को कुछ पाठ्यक्रम ऑनलाइन और कक्षा दोनों के मिश्रित प्रारूप में उपलब्ध कराने चाहिए?`,
+options:[
+`Yes, because a blended model can combine classroom interaction with the flexibility of online learning.<br>हाँ, क्योंकि मिश्रित मॉडल कक्षा में संवाद और ऑनलाइन शिक्षा की लचीलापन दोनों को जोड़ सकता है।`,
+`Yes, because physical classrooms should be permanently closed.<br>हाँ, क्योंकि भौतिक कक्षाओं को स्थायी रूप से बंद कर देना चाहिए।`,
+`No, because online learning and classroom learning can never complement each other.<br>नहीं, क्योंकि ऑनलाइन और कक्षा आधारित शिक्षा कभी एक-दूसरे की पूरक नहीं हो सकतीं।`,
+`No, because students can learn only from printed books.<br>नहीं, क्योंकि विद्यार्थी केवल छपी हुई किताबों से ही सीख सकते हैं।`
+],
+answer:0,
+solution:`Argument I is strong because it identifies a reasonable benefit of combining two learning modes. The other arguments are extreme or unnecessarily restrictive.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि यह दोनों शिक्षण माध्यमों को मिलाने का व्यावहारिक लाभ बताता है। अन्य तर्क अतिवादी या अनावश्यक रूप से प्रतिबंधात्मक हैं।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q46.</strong> Statement: Should public authorities use performance data to identify departments requiring improvement?<br><br><strong>कथन:</strong> क्या सार्वजनिक प्राधिकरणों को सुधार की आवश्यकता वाले विभागों की पहचान के लिए प्रदर्शन संबंधी आँकड़ों का उपयोग करना चाहिए?`,
+options:[
+`Yes, because reliable data can help identify weaknesses and guide targeted improvements.<br>हाँ, क्योंकि विश्वसनीय आँकड़े कमजोरियों की पहचान और लक्षित सुधार में सहायता कर सकते हैं।`,
+`Yes, because data can replace every form of human judgement in all situations.<br>हाँ, क्योंकि सभी परिस्थितियों में आँकड़े मानव निर्णय का स्थान ले सकते हैं।`,
+`No, because performance data can never provide useful information.<br>नहीं, क्योंकि प्रदर्शन संबंधी आँकड़े कभी उपयोगी जानकारी नहीं दे सकते।`,
+`No, because departments do not perform any work.<br>नहीं, क्योंकि विभाग कोई कार्य नहीं करते।`
+],
+answer:0,
+solution:`Argument I is strong because reliable performance data can reveal areas needing improvement. Argument II is too absolute, while III and IV are clearly unreasonable.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि विश्वसनीय प्रदर्शन आँकड़े सुधार की आवश्यकता वाले क्षेत्रों की पहचान कर सकते हैं। II अत्यधिक पूर्णतावादी है तथा III और IV स्पष्ट रूप से अनुचित हैं।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q47.</strong> Statement: Should governments conduct periodic reviews of major welfare programmes?<br><br><strong>कथन:</strong> क्या सरकारों को प्रमुख कल्याणकारी योजनाओं की समय-समय पर समीक्षा करनी चाहिए?`,
+options:[
+`Yes, because periodic review can help determine whether the programme is reaching its intended beneficiaries effectively.<br>हाँ, क्योंकि समय-समय पर समीक्षा से यह पता लगाने में मदद मिल सकती है कि योजना अपने लक्षित लाभार्थियों तक प्रभावी रूप से पहुँच रही है या नहीं।`,
+`Yes, because every welfare programme must be cancelled after one review.<br>हाँ, क्योंकि प्रत्येक कल्याणकारी योजना को एक समीक्षा के बाद रद्द कर देना चाहिए।`,
+`No, because public programmes should never be evaluated.<br>नहीं, क्योंकि सार्वजनिक योजनाओं का कभी मूल्यांकन नहीं होना चाहिए।`,
+`No, because beneficiaries have no interest in welfare programmes.<br>नहीं, क्योंकि लाभार्थियों की कल्याणकारी योजनाओं में कोई रुचि नहीं होती।`
+],
+answer:0,
+solution:`Argument I is strong because evaluation helps determine effectiveness and identify areas for improvement. The other arguments are extreme or contrary to the purpose of evaluation.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि मूल्यांकन से योजना की प्रभावशीलता का पता चलता है और सुधार के क्षेत्रों की पहचान की जा सकती है। अन्य तर्क अतिवादी या मूल्यांकन के उद्देश्य के विपरीत हैं।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q48.</strong> Statement: Should public transport authorities use real-time information systems for buses and trains?<br><br><strong>कथन:</strong> क्या सार्वजनिक परिवहन प्राधिकरणों को बसों और ट्रेनों के लिए रियल-टाइम सूचना प्रणाली का उपयोग करना चाहिए?`,
+options:[
+`Yes, because passengers can plan their journeys better when they know expected arrival or delay information.<br>हाँ, क्योंकि आगमन या देरी की जानकारी मिलने पर यात्री अपनी यात्रा की बेहतर योजना बना सकते हैं।`,
+`Yes, because every vehicle will then arrive exactly on time without exception.<br>हाँ, क्योंकि इसके बाद हर वाहन बिना किसी अपवाद के बिल्कुल समय पर पहुँचेगा।`,
+`No, because passengers never need information about transport services.<br>नहीं, क्योंकि यात्रियों को परिवहन सेवाओं के बारे में कभी जानकारी की आवश्यकता नहीं होती।`,
+`No, because real-time systems cannot display any information.<br>नहीं, क्योंकि रियल-टाइम प्रणालियाँ कोई जानकारी प्रदर्शित नहीं कर सकतीं।`
+],
+answer:0,
+solution:`Argument I is strong because real-time information can improve passenger planning and reduce uncertainty. The other arguments make impossible guarantees or are plainly incorrect.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि रियल-टाइम जानकारी यात्रियों की योजना बनाने की क्षमता बढ़ा सकती है और अनिश्चितता कम कर सकती है। अन्य तर्क असंभव गारंटी या स्पष्ट रूप से गलत दावे करते हैं।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q49.</strong> Statement: Should employers provide a formal mechanism for employees to suggest workplace improvements?<br><br><strong>कथन:</strong> क्या नियोक्ताओं को कर्मचारियों को कार्यस्थल सुधार के सुझाव देने के लिए औपचारिक व्यवस्था प्रदान करनी चाहिए?`,
+options:[
+`Yes, because employees who work closely with processes may identify practical problems and possible improvements.<br>हाँ, क्योंकि कार्य प्रक्रियाओं के निकट काम करने वाले कर्मचारी व्यावहारिक समस्याओं और संभावित सुधारों की पहचान कर सकते हैं।`,
+`Yes, because every employee suggestion must be implemented without examination.<br>हाँ, क्योंकि प्रत्येक कर्मचारी के सुझाव को बिना जाँच के लागू कर देना चाहिए।`,
+`No, because employees can never understand workplace problems.<br>नहीं, क्योंकि कर्मचारी कार्यस्थल की समस्याओं को कभी नहीं समझ सकते।`,
+`No, because suggestions should always be rejected by management.<br>नहीं, क्योंकि प्रबंधन को सुझाव हमेशा अस्वीकार कर देने चाहिए।`
+],
+answer:0,
+solution:`Argument I is strong because employees often have direct knowledge of operational processes and can identify practical improvements. A suggestion mechanism does not mean every suggestion must be accepted, making II weak.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि कर्मचारियों को कार्य प्रक्रियाओं का प्रत्यक्ष अनुभव होता है और वे व्यावहारिक सुधार सुझा सकते हैं। सुझाव लेने का अर्थ यह नहीं है कि हर सुझाव अनिवार्य रूप से स्वीकार किया जाए, इसलिए II कमजोर है।`
+},
+
+{
+part:"Part 6: Mixed SSC CGL Level Arguments",
+question:`<strong>Q50.</strong> Statement: Should government agencies publish important public notices in simple and easily understandable language?<br><br><strong>कथन:</strong> क्या सरकारी एजेंसियों को महत्वपूर्ण सार्वजनिक सूचनाएँ सरल और आसानी से समझ आने वाली भाषा में प्रकाशित करनी चाहिए?`,
+options:[
+`Yes, because citizens can understand important instructions and services more easily when information is clear.<br>हाँ, क्योंकि जानकारी स्पष्ट होने पर नागरिक महत्वपूर्ण निर्देशों और सेवाओं को आसानी से समझ सकते हैं।`,
+`Yes, because official information should contain as many difficult words as possible.<br>हाँ, क्योंकि सरकारी जानकारी में अधिक से अधिक कठिन शब्द होने चाहिए।`,
+`No, because citizens should not understand government notices.<br>नहीं, क्योंकि नागरिकों को सरकारी सूचनाएँ समझनी नहीं चाहिए।`,
+`No, because simple language can never communicate important information.<br>नहीं, क्योंकि सरल भाषा कभी महत्वपूर्ण जानकारी नहीं पहुँचा सकती।`
+],
+answer:0,
+solution:`Argument I is strong because clear language improves accessibility and helps citizens understand important public information. The other arguments are unreasonable or contradict the purpose of public communication.<br><br><strong>समाधान:</strong> तर्क I मजबूत है क्योंकि सरल और स्पष्ट भाषा सार्वजनिक जानकारी की पहुँच बढ़ाती है और नागरिकों को महत्वपूर्ण निर्देश समझने में सहायता करती है। अन्य तर्क अनुचित हैं या सार्वजनिक संचार के उद्देश्य के विपरीत हैं।`
+}
+
+];
+
+
+let correctCount = 0;
+let wrongCount = 0;
+let attemptedCount = 0;
+
+const attemptedQuestions = new Set();
+
+function shuffleOptions(question){
+
+    const optionObjects = question.options.map((text,index)=>({
+        text:text,
+        originalIndex:index
+    }));
+
+    for(let i=optionObjects.length-1;i>0;i--){
+
+        const j=Math.floor(Math.random()*(i+1));
+
+        [optionObjects[i],optionObjects[j]] =
+        [optionObjects[j],optionObjects[i]];
+
+    }
+
+    return optionObjects;
+}
+
+
+function renderQuestions(){
+
+    const container =
+    document.getElementById("questions-container");
+
+    container.innerHTML="";
+
+    let currentPart="";
+
+    questions.forEach((q,index)=>{
+
+        if(q.part !== currentPart){
+
+            currentPart=q.part;
+
+            const partTitle =
+            document.createElement("div");
+
+            partTitle.className="part-title";
+
+            partTitle.textContent=currentPart;
+
+            container.appendChild(partTitle);
+
+        }
+
+        const card =
+        document.createElement("div");
+
+        card.className="question-card";
+
+        const questionDiv =
+        document.createElement("div");
+
+        questionDiv.className="question";
+
+        questionDiv.innerHTML=q.question;
+
+        card.appendChild(questionDiv);
+
+
+        const optionsDiv =
+        document.createElement("div");
+
+        optionsDiv.className="options";
+
+
+        const shuffled =
+        shuffleOptions(q);
+
+
+        shuffled.forEach(option=>{
+
+            const optionDiv =
+            document.createElement("div");
+
+            optionDiv.className="option";
+
+            optionDiv.innerHTML=option.text;
+
+            optionDiv.dataset.answer =
+            option.originalIndex;
+
+            optionDiv.onclick=function(){
+
+                checkAnswer(
+                    index,
+                    optionDiv,
+                    q.answer,
+                    card
+                );
+
+            };
+
+            optionsDiv.appendChild(optionDiv);
+
+        });
+
+
+        card.appendChild(optionsDiv);
+
+
+        const solutionDiv =
+        document.createElement("div");
+
+        solutionDiv.className="solution";
+
+        solutionDiv.innerHTML =
+        "<strong>💡 Detailed Solution / विस्तृत समाधान:</strong><br><br>"
+        + q.solution;
+
+        card.appendChild(solutionDiv);
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+function checkAnswer(
+    questionIndex,
+    selectedOption,
+    correctAnswer,
+    card
+){
+
+    if(attemptedQuestions.has(questionIndex)){
+        return;
+    }
+
+    attemptedQuestions.add(questionIndex);
+
+    attemptedCount++;
+
+    const selectedAnswer =
+    Number(selectedOption.dataset.answer);
+
+    const allOptions =
+    card.querySelectorAll(".option");
+
+    if(selectedAnswer === correctAnswer){
+
+        selectedOption.classList.add("correct");
+
+        correctCount++;
+
+    }else{
+
+        selectedOption.classList.add("wrong");
+
+        wrongCount++;
+
+        allOptions.forEach(option=>{
+
+            if(Number(option.dataset.answer) === correctAnswer){
+
+                option.classList.add("correct");
+
+            }
+
+        });
+
+    }
+
+
+    const solution =
+    card.querySelector(".solution");
+
+    solution.style.display="block";
+
+    updateScore();
+
+}
+
+
+function updateScore(){
+
+    document.getElementById("correct").textContent =
+    correctCount;
+
+    document.getElementById("wrong").textContent =
+    wrongCount;
+
+    document.getElementById("attempted").textContent =
+    attemptedCount;
+
+    document.getElementById("marks").textContent =
+    correctCount;
+
+    document.getElementById("score").textContent =
+    correctCount + " / " + questions.length;
+
+}
+
+
+function resetTest(){
+
+    correctCount=0;
+    wrongCount=0;
+    attemptedCount=0;
+
+    attemptedQuestions.clear();
+
+    renderQuestions();
+
+    updateScore();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+renderQuestions();
+
+updateScore();
+
+</script>
+
+</body>
+</html>
