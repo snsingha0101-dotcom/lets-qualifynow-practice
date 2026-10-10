@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Assertion & Reason Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#102a43;
+    color:#fff;
+    padding:18px 20px 14px;
+    text-align:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.tagline{
+    font-size:14px;
+    margin-top:3px;
+    color:#d9eaf7;
+}
+
+.faculty{
+    font-size:14px;
+    margin-top:6px;
+    color:#fff;
+    font-weight:600;
+}
+
+nav{
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    padding:7px 11px;
+    border-radius:5px;
+    font-size:14px;
+    transition:.2s;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:#173f5f;
+    color:#fff;
+    text-align:center;
+    padding:30px 15px;
+}
+
+.hero h1{
+    font-size:28px;
+    margin-bottom:7px;
+}
+
+.hero p{
+    font-size:15px;
+    color:#d9eaf7;
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    max-width:1000px;
+    margin:0 auto;
+    padding:25px 15px 45px;
+}
+
+.intro{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:8px;
+    font-size:22px;
+}
+
+.intro p{
+    color:#52606d;
+}
+
+/* ================= INFO ================= */
+
+.info-box{
+    background:#eef6fb;
+    border-left:5px solid #173f5f;
+    padding:16px 18px;
+    margin-bottom:22px;
+    border-radius:6px;
+}
+
+.info-box h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.info-box ul{
+    padding-left:20px;
+}
+
+.info-box li{
+    margin:5px 0;
+}
+
+/* ================= QUESTION CARD ================= */
+
+.question-card{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 2px 7px rgba(16,42,67,.05);
+}
+
+.question-number{
+    display:inline-block;
+    background:#102a43;
+    color:#fff;
+    padding:5px 11px;
+    border-radius:5px;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:700;
+    color:#102a43;
+    margin-bottom:16px;
+}
+
+.assertion,
+.reason{
+    background:#f7f9fc;
+    border:1px solid #e1e8ed;
+    border-radius:7px;
+    padding:14px;
+    margin-bottom:12px;
+}
+
+.assertion strong,
+.reason strong{
+    color:#173f5f;
+}
+
+.statement-en{
+    display:block;
+    margin-bottom:5px;
+}
+
+.statement-hi{
+    display:block;
+    color:#52606d;
+}
+
+.options{
+    margin-top:16px;
+}
+
+.option{
+    width:100%;
+    text-align:left;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    color:#243b53;
+    padding:13px 14px;
+    margin-bottom:9px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:15px;
+    line-height:1.5;
+    transition:.2s;
+}
+
+.option:hover:not(:disabled){
+    background:#eef6fb;
+    border-color:#829ab1;
+}
+
+.option:disabled{
+    cursor:default;
+}
+
+.option.correct{
+    background:#e6f4ea;
+    border-color:#2e7d32;
+    color:#1b5e20;
+}
+
+.option.wrong{
+    background:#fdecea;
+    border-color:#c62828;
+    color:#b71c1c;
+}
+
+.option-letter{
+    font-weight:700;
+    margin-right:5px;
+}
+
+.solution{
+    display:none;
+    background:#eef6fb;
+    border-left:4px solid #173f5f;
+    padding:14px;
+    margin-top:14px;
+    border-radius:5px;
+}
+
+.solution.show{
+    display:block;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+.solution-hi{
+    color:#52606d;
+    margin-top:5px;
+}
+
+/* ================= RESULT ================= */
+
+.result-box{
+    background:#fff;
+    border:2px solid #173f5f;
+    border-radius:10px;
+    padding:25px 20px;
+    text-align:center;
+    margin-top:30px;
+}
+
+.result-box h2{
+    color:#102a43;
+    margin-bottom:15px;
+}
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin:20px 0;
+}
+
+.result-item{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:7px;
+    padding:12px;
+}
+
+.result-item span{
+    display:block;
+    font-size:13px;
+    color:#52606d;
+}
+
+.result-item strong{
+    display:block;
+    font-size:22px;
+    color:#102a43;
+    margin-top:3px;
+}
+
+.reset-btn{
+    border:none;
+    background:#102a43;
+    color:#fff;
+    padding:11px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+    margin-top:5px;
+}
+
+.reset-btn:hover{
+    background:#173f5f;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#102a43;
+    color:#d9eaf7;
+    text-align:center;
+    padding:20px 15px;
+    font-size:14px;
+}
+
+footer strong{
+    color:#fff;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero h1{
+        font-size:23px;
+    }
+
+    .question-card{
+        padding:16px;
+    }
+
+    .question-text{
+        font-size:16px;
+    }
+
+    .result-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    nav{
+        gap:4px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">LET'S QUALIFYNOW</div>
+
+    <div class="tagline">
+        You Are Closer To Success
+    </div>
+
+    <div class="faculty">
+        N Saurabh Sir — Reasoning Faculty | SSC • Banking • Railway • Government Exams
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ssc-reasoning.html">SSC Reasoning</a>
+        <a href="courses.html">Courses</a>
+        <a href="study-material.html">Study Material</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="test-series.html">Test Series</a>
+        <a href="exams.html">Exams</a>
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>🧠 SSC Assertion & Reason Practice</h1>
+
+    <p>
+        50 Exam-Oriented Questions with Answers & Detailed Solutions
+    </p>
+
+</section>
+
+
+<main class="container">
+
+    <div class="intro">
+
+        <h2>SSC Assertion & Reason Practice Set</h2>
+
+        <p>
+            Practice important Assertion–Reason questions designed for
+            SSC CGL, CHSL, CPO, MTS and other Government Exams.
+            Read both statements carefully and determine the correct relationship
+            between Assertion (A) and Reason (R).
+        </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <h3>Instructions / निर्देश</h3>
+
+        <ul>
+            <li>There are <strong>50 questions</strong> in this practice set.</li>
+            <li>Each question carries <strong>1 mark</strong>.</li>
+            <li>Select one option for every question.</li>
+            <li>Once an option is selected, that question will be locked.</li>
+            <li>Options are automatically shuffled for every new attempt.</li>
+            <li>Score and marks calculation are shown at the bottom.</li>
+        </ul>
+
+    </div>
+
+
+    <div id="quiz"></div>
+
+
+    <div class="result-box">
+
+        <h2>📊 Practice Result / अभ्यास परिणाम</h2>
+
+        <div class="result-grid">
+
+            <div class="result-item">
+                <span>Score / अंक</span>
+                <strong id="score">0 / 50</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Attempted / प्रयास</span>
+                <strong id="attempted">0</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Correct / सही</span>
+                <strong id="correct">0</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Wrong / गलत</span>
+                <strong id="wrong">0</strong>
+            </div>
+
+        </div>
+
+        <button class="reset-btn" onclick="resetQuiz()">
+            🔄 Reset Quiz / पुनः प्रयास करें
+        </button>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <strong>LET'S QUALIFYNOW</strong><br>
+
+    N Saurabh Sir — Reasoning Faculty<br>
+
+    SSC • Banking • Railway • Government Exams
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   ASSERTION & REASON QUESTIONS
+   ========================================================= */
+
+const questions = [
+
+{
+q:"The price of a commodity increases. The purchasing power of a fixed amount of money decreases.",
+a:"The purchasing power of money decreases when the price level increases.",
+ah:"जब मूल्य स्तर बढ़ता है, तब मुद्रा की क्रय शक्ति घट जाती है।",
+r:"The same amount of money can buy fewer units of the commodity at a higher price.",
+rh:"अधिक कीमत पर उतनी ही राशि से वस्तु की कम इकाइयाँ खरीदी जा सकती हैं।",
+answer:"A",
+solution:"Both statements are true, and the Reason directly explains the Assertion. When prices rise, the same amount of money buys less.",
+solutionHi:"दोनों कथन सत्य हैं और Reason, Assertion की सही व्याख्या करता है। कीमत बढ़ने पर समान राशि से कम वस्तुएँ खरीदी जा सकती हैं।"
+},
+
+{
+q:"A person standing on a moving train may appear to move backward when the train suddenly accelerates forward.",
+a:"The person tends to move backward relative to the accelerating train.",
+ah:"जब ट्रेन अचानक आगे की ओर त्वरित होती है, तो व्यक्ति ट्रेन के सापेक्ष पीछे की ओर जाता हुआ प्रतीत होता है।",
+r:"The lower part of the person's body is in contact with the train while the upper body tends to retain its previous state of motion.",
+rh:"व्यक्ति के शरीर का निचला भाग ट्रेन के संपर्क में होता है जबकि ऊपरी भाग अपनी पिछली गति की अवस्था बनाए रखने की प्रवृत्ति रखता है।",
+answer:"A",
+solution:"Both are true, and inertia explains why the upper body tends to retain its previous state while the train moves forward.",
+solutionHi:"दोनों सत्य हैं और जड़त्व इसकी व्याख्या करता है कि ट्रेन के आगे बढ़ने पर शरीर का ऊपरी भाग पिछली अवस्था बनाए रखने की प्रवृत्ति रखता है।"
+},
+
+{
+q:"A metal spoon kept in a cup of hot tea becomes hot after some time.",
+a:"The spoon becomes hot because heat is transferred from the tea to the spoon.",
+ah:"चम्मच गर्म हो जाता है क्योंकि ऊष्मा चाय से चम्मच में स्थानांतरित होती है।",
+r:"Heat naturally flows from a body at higher temperature to a body at lower temperature.",
+rh:"ऊष्मा स्वाभाविक रूप से अधिक तापमान वाली वस्तु से कम तापमान वाली वस्तु की ओर प्रवाहित होती है।",
+answer:"A",
+solution:"Both are true, and the Reason explains the heat transfer from hot tea to the cooler spoon.",
+solutionHi:"दोनों सत्य हैं और Reason बताता है कि गर्म चाय से ठंडे चम्मच की ओर ऊष्मा क्यों जाती है।"
+},
+
+{
+q:"A rainbow is generally seen after rain when sunlight is present.",
+a:"A rainbow is produced due to optical phenomena involving water droplets.",
+ah:"इंद्रधनुष जल की बूंदों से संबंधित प्रकाशीय घटनाओं के कारण बनता है।",
+r:"Water droplets can refract, internally reflect and disperse sunlight.",
+rh:"जल की बूंदें सूर्य के प्रकाश का अपवर्तन, आंतरिक परावर्तन और विक्षेपण कर सकती हैं।",
+answer:"A",
+solution:"Both are true, and the optical processes described in the Reason produce the rainbow.",
+solutionHi:"दोनों सत्य हैं और Reason में बताए गए प्रकाशीय प्रभाव इंद्रधनुष उत्पन्न करते हैं।"
+},
+
+{
+q:"A ship made of iron can float on water, although iron is denser than water.",
+a:"A properly designed iron ship can float on water.",
+ah:"उचित रूप से डिजाइन किया गया लोहे का जहाज पानी पर तैर सकता है।",
+r:"The hollow structure of the ship makes its average density less than that of water.",
+rh:"जहाज की खोखली संरचना उसकी औसत घनत्व को पानी से कम कर देती है।",
+answer:"A",
+solution:"Both are true, and the lower average density of the complete ship allows it to float.",
+solutionHi:"दोनों सत्य हैं और जहाज की पूरी संरचना का कम औसत घनत्व उसे पानी पर तैरने देता है।"
+},
+
+{
+q:"A person feels difficulty in seeing clearly in dim light.",
+a:"Vision becomes less clear when the available light is very low.",
+ah:"जब उपलब्ध प्रकाश बहुत कम होता है, तो दृष्टि कम स्पष्ट हो जाती है।",
+r:"The rod cells of the retina are more sensitive to low light than cone cells.",
+rh:"रेटिना की रॉड कोशिकाएँ कोन कोशिकाओं की तुलना में कम प्रकाश के प्रति अधिक संवेदनशील होती हैं।",
+answer:"B",
+solution:"Both statements are true, but the Reason describes the role of rod cells rather than being a complete direct explanation of all causes of reduced visual clarity.",
+solutionHi:"दोनों कथन सत्य हैं, लेकिन Reason रॉड कोशिकाओं की भूमिका बताता है; यह कम प्रकाश में दृष्टि की पूरी समस्या की प्रत्यक्ष व्याख्या नहीं करता।"
+},
+
+{
+q:"The sky appears blue during a clear day.",
+a:"The sky appears blue because sunlight is scattered by particles and molecules in the atmosphere.",
+ah:"स्वच्छ दिन में आकाश नीला दिखाई देता है क्योंकि वायुमंडल में कणों और अणुओं द्वारा सूर्य के प्रकाश का प्रकीर्णन होता है।",
+r:"Shorter wavelengths of visible light are scattered more strongly than longer wavelengths.",
+rh:"दृश्य प्रकाश की छोटी तरंगदैर्ध्य वाली किरणें लंबी तरंगदैर्ध्य वाली किरणों की तुलना में अधिक प्रकीर्णित होती हैं।",
+answer:"A",
+solution:"Both are true, and stronger scattering of shorter wavelengths explains why blue light is prominent in the sky.",
+solutionHi:"दोनों सत्य हैं और छोटी तरंगदैर्ध्य का अधिक प्रकीर्णन आकाश में नीले रंग की प्रधानता की व्याख्या करता है।"
+},
+
+{
+q:"A person cannot hear the sound of an explosion on the Moon as it can be heard on Earth.",
+a:"Sound cannot travel through the vacuum between the source and the listener on the Moon.",
+ah:"चंद्रमा पर स्रोत और श्रोता के बीच निर्वात में ध्वनि यात्रा नहीं कर सकती।",
+r:"Sound requires a material medium for its propagation.",
+rh:"ध्वनि के संचरण के लिए भौतिक माध्यम की आवश्यकता होती है।",
+answer:"A",
+solution:"Both are true, and the absence of a material medium explains why sound cannot travel through lunar vacuum.",
+solutionHi:"दोनों सत्य हैं और भौतिक माध्यम के अभाव के कारण चंद्रमा के निर्वात में ध्वनि नहीं पहुँच सकती।"
+},
+
+{
+q:"A person standing on a moving bus tends to fall backward when the bus suddenly starts moving.",
+a:"The person tends to fall backward when a stationary bus suddenly accelerates forward.",
+ah:"जब स्थिर बस अचानक आगे की ओर चलती है, तो व्यक्ति पीछे की ओर गिरने की प्रवृत्ति रखता है।",
+r:"The upper part of the person's body tends to remain in its original state of rest due to inertia.",
+rh:"जड़त्व के कारण व्यक्ति के शरीर का ऊपरी भाग अपनी प्रारंभिक विराम अवस्था में बने रहने की प्रवृत्ति रखता है।",
+answer:"A",
+solution:"Both are true, and inertia of rest directly explains the backward tendency.",
+solutionHi:"दोनों सत्य हैं और विराम के जड़त्व के कारण व्यक्ति के पीछे गिरने की प्रवृत्ति होती है।"
+},
+
+{
+q:"A pressure cooker cooks food faster than an open vessel.",
+a:"Food generally cooks faster in a pressure cooker.",
+ah:"प्रेशर कुकर में भोजन सामान्यतः जल्दी पकता है।",
+r:"The increased pressure raises the boiling point of water.",
+rh:"अधिक दाब पानी के क्वथनांक को बढ़ा देता है।",
+answer:"A",
+solution:"Both are true, and the higher boiling point allows cooking at a higher temperature.",
+solutionHi:"दोनों सत्य हैं और अधिक क्वथनांक के कारण भोजन अधिक तापमान पर पकता है।"
+},
+
+{
+q:"The Earth experiences day and night.",
+a:"Day and night occur because the Earth rotates about its axis.",
+ah:"दिन और रात पृथ्वी के अपनी धुरी पर घूमने के कारण होते हैं।",
+r:"Different parts of the Earth are successively brought into and taken out of sunlight due to rotation.",
+rh:"पृथ्वी के विभिन्न भाग घूर्णन के कारण क्रमशः सूर्य के प्रकाश में आते और उससे बाहर जाते हैं।",
+answer:"A",
+solution:"Both are true, and the Reason directly explains the occurrence of day and night.",
+solutionHi:"दोनों सत्य हैं और पृथ्वी का घूर्णन विभिन्न भागों को क्रमशः सूर्य के प्रकाश में लाता और उससे बाहर करता है।"
+},
+
+{
+q:"The weight of an object is slightly different at different places on Earth.",
+a:"The weight of an object can vary slightly from place to place on Earth.",
+ah:"पृथ्वी पर किसी वस्तु का भार स्थान के अनुसार थोड़ा बदल सकता है।",
+r:"The acceleration due to gravity is not exactly the same at every point on Earth.",
+rh:"पृथ्वी के प्रत्येक स्थान पर गुरुत्वीय त्वरण बिल्कुल समान नहीं होता।",
+answer:"A",
+solution:"Both are true, and weight depends on the local value of gravitational acceleration.",
+solutionHi:"दोनों सत्य हैं और भार स्थानीय गुरुत्वीय त्वरण के मान पर निर्भर करता है।"
+},
+
+{
+q:"A black surface generally absorbs more radiant heat than a white surface.",
+a:"A black surface is generally a better absorber of radiant heat than a white surface.",
+ah:"काली सतह सामान्यतः सफेद सतह की तुलना में विकिरणीय ऊष्मा की बेहतर अवशोषक होती है।",
+r:"Dark surfaces absorb a larger proportion of incident radiation.",
+rh:"गहरी सतहें आपतित विकिरण के बड़े अनुपात को अवशोषित करती हैं।",
+answer:"A",
+solution:"Both are true, and the Reason explains the greater absorption by dark surfaces.",
+solutionHi:"दोनों सत्य हैं और Reason गहरी सतहों के अधिक ऊष्मा अवशोषण की व्याख्या करता है।"
+},
+
+{
+q:"Plants are important for maintaining oxygen in the atmosphere.",
+a:"Green plants contribute to maintaining atmospheric oxygen.",
+ah:"हरे पौधे वायुमंडलीय ऑक्सीजन को बनाए रखने में योगदान देते हैं।",
+r:"During photosynthesis, green plants release oxygen as a by-product.",
+rh:"प्रकाश संश्लेषण के दौरान हरे पौधे उप-उत्पाद के रूप में ऑक्सीजन छोड़ते हैं।",
+answer:"A",
+solution:"Both are true, and oxygen release during photosynthesis explains the Assertion.",
+solutionHi:"दोनों सत्य हैं और प्रकाश संश्लेषण के दौरान ऑक्सीजन का निकलना Assertion की सही व्याख्या करता है।"
+},
+
+{
+q:"A person with a balanced diet may still become dehydrated if water intake is inadequate.",
+a:"A balanced diet alone does not guarantee adequate hydration.",
+ah:"संतुलित आहार अकेले पर्याप्त जलयोजन की गारंटी नहीं देता।",
+r:"Water is required by the body independently of the nutrients supplied by food.",
+rh:"भोजन से प्राप्त पोषक तत्वों के अलावा शरीर को स्वतंत्र रूप से पानी की आवश्यकता होती है।",
+answer:"A",
+solution:"Both are true, and the Reason explains why adequate water intake remains necessary.",
+solutionHi:"दोनों सत्य हैं और Reason बताता है कि पर्याप्त पानी पीना अलग से क्यों आवश्यक है।"
+},
+
+{
+q:"Vaccination helps protect populations against certain infectious diseases.",
+a:"Vaccination can reduce the spread of many infectious diseases.",
+ah:"टीकाकरण कई संक्रामक रोगों के प्रसार को कम कर सकता है।",
+r:"Vaccines can prepare the immune system to recognize specific pathogens.",
+rh:"टीके प्रतिरक्षा तंत्र को विशिष्ट रोगजनकों की पहचान के लिए तैयार कर सकते हैं।",
+answer:"A",
+solution:"Both are true, and immune preparation is the biological basis of protection provided by vaccines.",
+solutionHi:"दोनों सत्य हैं और प्रतिरक्षा तंत्र की तैयारी टीकों से मिलने वाली सुरक्षा का जैविक आधार है।"
+},
+
+{
+q:"A person suffering from iron deficiency may develop anaemia.",
+a:"Iron deficiency can lead to anaemia.",
+ah:"आयरन की कमी से एनीमिया हो सकता है।",
+r:"Iron is necessary for the formation of haemoglobin.",
+rh:"हीमोग्लोबिन के निर्माण के लिए आयरन आवश्यक है।",
+answer:"A",
+solution:"Both are true, and inadequate iron can impair haemoglobin formation, leading to iron-deficiency anaemia.",
+solutionHi:"दोनों सत्य हैं और आयरन की कमी हीमोग्लोबिन निर्माण को प्रभावित करके आयरन-डिफिशिएंसी एनीमिया का कारण बन सकती है।"
+},
+
+{
+q:"A person can survive longer without food than without water.",
+a:"Water is generally more immediately essential for survival than food.",
+ah:"जीवित रहने के लिए पानी सामान्यतः भोजन की तुलना में अधिक तत्काल आवश्यक है।",
+r:"Water is continuously required for vital physiological processes in the body.",
+rh:"शरीर की महत्वपूर्ण शारीरिक प्रक्रियाओं के लिए पानी लगातार आवश्यक होता है।",
+answer:"A",
+solution:"Both are true, and the continuous role of water in vital processes explains its immediate importance.",
+solutionHi:"दोनों सत्य हैं और महत्वपूर्ण शारीरिक प्रक्रियाओं में पानी की निरंतर आवश्यकता इसकी तत्काल महत्ता बताती है।"
+},
+
+{
+q:"The human heart beats continuously throughout life.",
+a:"The heart has to contract and relax rhythmically to circulate blood.",
+ah:"रक्त का संचार करने के लिए हृदय को लयबद्ध रूप से सिकुड़ना और शिथिल होना पड़ता है।",
+r:"Blood circulation requires a continuous pumping action of the heart.",
+rh:"रक्त परिसंचरण के लिए हृदय की निरंतर पंपिंग क्रिया आवश्यक है।",
+answer:"A",
+solution:"Both are true, and continuous pumping is the reason for rhythmic cardiac activity.",
+solutionHi:"दोनों सत्य हैं और निरंतर पंपिंग की आवश्यकता हृदय की लयबद्ध क्रिया का कारण है।"
+},
+
+{
+q:"A leaf kept in darkness for a sufficiently long period does not produce starch through photosynthesis during that period.",
+a:"Light is necessary for photosynthesis.",
+ah:"प्रकाश संश्लेषण के लिए प्रकाश आवश्यक है।",
+r:"Chlorophyll captures light energy required for photosynthesis.",
+rh:"क्लोरोफिल प्रकाश संश्लेषण के लिए आवश्यक प्रकाश ऊर्जा को ग्रहण करता है।",
+answer:"A",
+solution:"Both are true, and the capture of light energy by chlorophyll is essential for photosynthesis.",
+solutionHi:"दोनों सत्य हैं और क्लोरोफिल द्वारा प्रकाश ऊर्जा का ग्रहण प्रकाश संश्लेषण के लिए आवश्यक है।"
+},
+
+{
+q:"The poles of a magnet cannot be separated by simply cutting the magnet.",
+a:"Cutting a bar magnet produces smaller magnets, each having both poles.",
+ah:"छड़ चुंबक को काटने पर छोटे चुंबक बनते हैं और प्रत्येक में दोनों ध्रुव होते हैं।",
+r:"Magnetic poles always occur in pairs in an ordinary magnet.",
+rh:"सामान्य चुंबक में चुंबकीय ध्रुव सदैव जोड़े में पाए जाते हैं।",
+answer:"A",
+solution:"Both are true, and the paired nature of magnetic poles explains why each piece has both poles.",
+solutionHi:"दोनों सत्य हैं और चुंबकीय ध्रुवों के जोड़े में होने के कारण प्रत्येक टुकड़े में दोनों ध्रुव रहते हैं।"
+},
+
+{
+q:"A compass needle generally points approximately in the north-south direction.",
+a:"A freely suspended compass needle tends to align approximately north-south.",
+ah:"स्वतंत्र रूप से लटकी कंपास सुई लगभग उत्तर-दक्षिण दिशा में व्यवस्थित होती है।",
+r:"The Earth behaves approximately like a giant magnet.",
+rh:"पृथ्वी लगभग एक विशाल चुंबक की तरह व्यवहार करती है।",
+answer:"A",
+solution:"Both are true, and Earth's magnetic field causes the compass needle to align approximately north-south.",
+solutionHi:"दोनों सत्य हैं और पृथ्वी का चुंबकीय क्षेत्र कंपास सुई को लगभग उत्तर-दक्षिण दिशा में व्यवस्थित करता है।"
+},
+
+{
+q:"The pressure exerted by a liquid increases with depth.",
+a:"Liquid pressure generally increases as depth increases.",
+ah:"गहराई बढ़ने पर द्रव का दाब सामान्यतः बढ़ता है।",
+r:"A deeper point in a liquid has a greater column of liquid above it.",
+rh:"द्रव में अधिक गहराई वाले बिंदु के ऊपर द्रव का स्तंभ अधिक होता है।",
+answer:"A",
+solution:"Both are true, and the greater weight of the liquid column produces greater pressure at greater depth.",
+solutionHi:"दोनों सत्य हैं और अधिक गहराई पर ऊपर स्थित द्रव स्तंभ का अधिक भार अधिक दाब उत्पन्न करता है।"
+},
+
+{
+q:"A sharp knife cuts an object more easily than a blunt knife.",
+a:"A sharp knife can cut more easily than a blunt knife under similar conditions.",
+ah:"समान परिस्थितियों में तेज चाकू कुंद चाकू की तुलना में अधिक आसानी से काट सकता है।",
+r:"For the same applied force, a smaller contact area produces greater pressure.",
+rh:"समान लगाए गए बल के लिए कम संपर्क क्षेत्रफल अधिक दाब उत्पन्न करता है।",
+answer:"A",
+solution:"Both are true, and the smaller contact area of a sharp edge produces greater pressure.",
+solutionHi:"दोनों सत्य हैं और तेज धार का कम संपर्क क्षेत्रफल अधिक दाब उत्पन्न करता है।"
+},
+
+{
+q:"A camel can walk relatively easily on desert sand.",
+a:"A camel's broad feet help it walk on loose sand.",
+ah:"ऊँट के चौड़े पैर उसे ढीली रेत पर चलने में सहायता करते हैं।",
+r:"Broad feet increase the area over which the camel's weight acts, reducing pressure on the sand.",
+rh:"चौड़े पैर ऊँट के भार को अधिक क्षेत्रफल में फैलाते हैं, जिससे रेत पर दाब कम होता है।",
+answer:"A",
+solution:"Both are true, and reduced pressure prevents the feet from sinking deeply into loose sand.",
+solutionHi:"दोनों सत्य हैं और कम दाब के कारण पैर ढीली रेत में अधिक नहीं धँसते।"
+},
+
+{
+q:"The Tropics receive more direct sunlight than regions near the poles on average.",
+a:"The Tropics generally receive more concentrated solar energy than polar regions.",
+ah:"उष्णकटिबंधीय क्षेत्र सामान्यतः ध्रुवीय क्षेत्रों की तुलना में अधिक केंद्रित सौर ऊर्जा प्राप्त करते हैं।",
+r:"Because of Earth's curvature, sunlight strikes the Tropics more nearly vertically than the polar regions.",
+rh:"पृथ्वी की वक्रता के कारण सूर्य का प्रकाश ध्रुवीय क्षेत्रों की तुलना में उष्णकटिबंधीय क्षेत्रों पर अधिक लंबवत पड़ता है।",
+answer:"A",
+solution:"Both are true, and the more direct angle of incidence concentrates solar energy over a smaller area.",
+solutionHi:"दोनों सत्य हैं और अधिक सीधा आपतन कोण सौर ऊर्जा को छोटे क्षेत्र में अधिक केंद्रित करता है।"
+},
+
+{
+q:"Coastal areas generally experience a smaller annual range of temperature than many interior regions.",
+a:"Large water bodies moderate the temperature of nearby coastal areas.",
+ah:"बड़े जल निकाय निकटवर्ती तटीय क्षेत्रों के तापमान को संतुलित करते हैं।",
+r:"Water heats and cools more slowly than land.",
+rh:"जल स्थल की तुलना में धीरे-धीरे गर्म और ठंडा होता है।",
+answer:"A",
+solution:"Both are true, and the slower heating and cooling of water moderates nearby temperatures.",
+solutionHi:"दोनों सत्य हैं और जल के धीरे गर्म तथा ठंडा होने के कारण तटीय तापमान अधिक संतुलित रहता है।"
+},
+
+{
+q:"Deforestation can increase soil erosion.",
+a:"Removal of vegetation can increase soil erosion.",
+ah:"वनस्पति हटाने से मृदा अपरदन बढ़ सकता है।",
+r:"Plant roots help hold soil particles together and vegetation reduces the direct impact of rain.",
+rh:"पौधों की जड़ें मिट्टी के कणों को बाँधने में सहायता करती हैं और वनस्पति वर्षा के सीधे प्रभाव को कम करती है।",
+answer:"A",
+solution:"Both are true, and the loss of roots and protective vegetation increases erosion.",
+solutionHi:"दोनों सत्य हैं और जड़ों तथा सुरक्षात्मक वनस्पति के हटने से मृदा अपरदन बढ़ता है।"
+},
+
+{
+q:"Afforestation can help conserve soil.",
+a:"Planting trees can help reduce soil erosion.",
+ah:"पेड़ लगाने से मृदा अपरदन को कम करने में सहायता मिल सकती है।",
+r:"Tree roots bind soil particles and vegetation reduces the speed of surface runoff.",
+rh:"पेड़ों की जड़ें मिट्टी के कणों को बाँधती हैं और वनस्पति सतही बहाव की गति कम करती है।",
+answer:"A",
+solution:"Both are true, and these effects of vegetation directly help in reducing soil erosion.",
+solutionHi:"दोनों सत्य हैं और वनस्पति के ये प्रभाव सीधे मृदा अपरदन को कम करने में सहायता करते हैं।"
+},
+
+{
+q:"A region receiving heavy rainfall throughout the year may have dense natural vegetation if other conditions are favourable.",
+a:"High rainfall can support dense vegetation.",
+ah:"अधिक वर्षा घनी वनस्पति को सहारा दे सकती है।",
+r:"Adequate water availability supports plant growth.",
+rh:"पर्याप्त जल की उपलब्धता पौधों की वृद्धि में सहायता करती है।",
+answer:"A",
+solution:"Both are true, and adequate water is an important requirement for plant growth.",
+solutionHi:"दोनों सत्य हैं और पौधों की वृद्धि के लिए पर्याप्त जल एक महत्वपूर्ण आवश्यकता है।"
+},
+
+{
+q:"Black soil is particularly suitable for cotton cultivation in many parts of India.",
+a:"Black soil is considered suitable for cotton cultivation.",
+ah:"भारत के कई भागों में काली मिट्टी कपास की खेती के लिए उपयुक्त मानी जाती है।",
+r:"Black soil has a good capacity to retain moisture.",
+rh:"काली मिट्टी में नमी बनाए रखने की अच्छी क्षमता होती है।",
+answer:"A",
+solution:"Both are true, and moisture retention is one important characteristic supporting cotton cultivation.",
+solutionHi:"दोनों सत्य हैं और नमी बनाए रखने की क्षमता कपास की खेती के लिए उपयोगी इसकी महत्वपूर्ण विशेषता है।"
+},
+
+{
+q:"The Indian monsoon is important for agriculture.",
+a:"The timing and amount of monsoon rainfall strongly influence Indian agriculture.",
+ah:"मानसून की वर्षा का समय और मात्रा भारतीय कृषि को बहुत प्रभावित करते हैं।",
+r:"A large part of Indian agriculture depends directly or indirectly on seasonal rainfall.",
+rh:"भारतीय कृषि का एक बड़ा भाग प्रत्यक्ष या अप्रत्यक्ष रूप से मौसमी वर्षा पर निर्भर करता है।",
+answer:"A",
+solution:"Both are true, and dependence on seasonal rainfall explains the importance of the monsoon.",
+solutionHi:"दोनों सत्य हैं और मौसमी वर्षा पर निर्भरता मानसून की महत्ता को स्पष्ट करती है।"
+},
+
+{
+q:"Ashoka is remembered for promoting the policy of Dhamma after the Kalinga War.",
+a:"Ashoka promoted Dhamma after the Kalinga War.",
+ah:"कलिंग युद्ध के बाद अशोक ने धम्म की नीति को बढ़ावा दिया।",
+r:"The suffering caused by the Kalinga War influenced Ashoka's later policy and outlook.",
+rh:"कलिंग युद्ध से हुई पीड़ा ने अशोक की बाद की नीति और दृष्टिकोण को प्रभावित किया।",
+answer:"A",
+solution:"Both are true, and the transformation associated with the Kalinga War explains Ashoka's subsequent emphasis on Dhamma.",
+solutionHi:"दोनों सत्य हैं और कलिंग युद्ध से जुड़े परिवर्तन ने अशोक के बाद के धम्म-आधारित दृष्टिकोण को प्रभावित किया।"
+},
+
+{
+q:"The Permanent Settlement affected the land revenue system in Bengal.",
+a:"The Permanent Settlement created a fixed land revenue demand on zamindars.",
+ah:"स्थायी बंदोबस्त में जमींदारों से भूमि राजस्व की एक निश्चित माँग निर्धारित की गई।",
+r:"The British sought a stable and predictable land revenue arrangement through the settlement.",
+rh:"अंग्रेजों ने इस व्यवस्था के माध्यम से स्थिर और पूर्वानुमेय भूमि राजस्व व्यवस्था स्थापित करने का प्रयास किया।",
+answer:"A",
+solution:"Both are true, and the desire for predictable revenue was a major reason for fixing the revenue demand.",
+solutionHi:"दोनों सत्य हैं और पूर्वानुमेय राजस्व की आवश्यकता राजस्व माँग को स्थायी रूप से निर्धारित करने का प्रमुख कारण थी।"
+},
+
+{
+q:"The Revolt of 1857 spread to several important centres of North and Central India.",
+a:"The Revolt of 1857 was not confined to a single military station.",
+ah:"1857 का विद्रोह केवल एक सैन्य छावनी तक सीमित नहीं था।",
+r:"The revolt involved different centres and groups across parts of North and Central India.",
+rh:"विद्रोह में उत्तर और मध्य भारत के विभिन्न क्षेत्रों के अनेक केंद्रों और समूहों ने भाग लिया।",
+answer:"A",
+solution:"Both are true, and the involvement of multiple centres establishes that it was not confined to one station.",
+solutionHi:"दोनों सत्य हैं और अनेक केंद्रों की भागीदारी बताती है कि विद्रोह एक ही छावनी तक सीमित नहीं था।"
+},
+
+{
+q:"The Constitution of India provides for an independent judiciary.",
+a:"The Indian judiciary is intended to function independently of the executive and legislature.",
+ah:"भारतीय न्यायपालिका को कार्यपालिका और विधायिका से स्वतंत्र रूप से कार्य करने के लिए बनाया गया है।",
+r:"Judicial independence helps courts decide cases according to the Constitution and law.",
+rh:"न्यायिक स्वतंत्रता न्यायालयों को संविधान और कानून के अनुसार मामलों का निर्णय करने में सहायता करती है।",
+answer:"A",
+solution:"Both are true, and judicial independence is important for impartial constitutional adjudication.",
+solutionHi:"दोनों सत्य हैं और निष्पक्ष संवैधानिक न्याय-निर्णय के लिए न्यायिक स्वतंत्रता महत्वपूर्ण है।"
+},
+
+{
+q:"Fundamental Rights are important for protecting individual liberty.",
+a:"Fundamental Rights protect important freedoms of individuals.",
+ah:"मौलिक अधिकार व्यक्तियों की महत्वपूर्ण स्वतंत्रताओं की रक्षा करते हैं।",
+r:"They place constitutional limits on certain forms of state action.",
+rh:"वे राज्य की कुछ प्रकार की कार्रवाइयों पर संवैधानिक सीमाएँ लगाते हैं।",
+answer:"A",
+solution:"Both are true, and constitutional limits on state action help protect individual freedoms.",
+solutionHi:"दोनों सत्य हैं और राज्य की कार्रवाई पर संवैधानिक सीमाएँ व्यक्तिगत स्वतंत्रताओं की रक्षा में सहायता करती हैं।"
+},
+
+{
+q:"The President of India is the constitutional head of the Union executive.",
+a:"The President is the constitutional head of the Union.",
+ah:"राष्ट्रपति संघ के संवैधानिक प्रमुख हैं।",
+r:"The Constitution vests the executive power of the Union in the President, subject to constitutional provisions.",
+rh:"संविधान संघ की कार्यपालिका शक्ति राष्ट्रपति में निहित करता है, जो संवैधानिक प्रावधानों के अधीन है।",
+answer:"A",
+solution:"Both are true, and the constitutional position of executive power explains the President's status as the Union's constitutional head.",
+solutionHi:"दोनों सत्य हैं और संघ की कार्यपालिका शक्ति से संबंधित संवैधानिक व्यवस्था राष्ट्रपति की स्थिति की व्याख्या करती है।"
+},
+
+{
+q:"A Money Bill has a special procedure in Parliament.",
+a:"A Money Bill cannot be introduced in the Rajya Sabha.",
+ah:"धन विधेयक राज्यसभा में प्रस्तुत नहीं किया जा सकता।",
+r:"The Constitution gives the Lok Sabha a special position in relation to Money Bills.",
+rh:"संविधान धन विधेयकों के संबंध में लोकसभा को विशेष स्थिति प्रदान करता है।",
+answer:"A",
+solution:"Both are true, and the special constitutional position of the Lok Sabha explains why a Money Bill is introduced only in the Lok Sabha.",
+solutionHi:"दोनों सत्य हैं और धन विधेयकों के संबंध में लोकसभा की विशेष संवैधानिक स्थिति इसकी व्याख्या करती है।"
+},
+
+{
+q:"An independent Election Commission is important for conducting credible elections.",
+a:"An independent election authority is important for free and fair elections.",
+ah:"स्वतंत्र चुनाव प्राधिकरण स्वतंत्र और निष्पक्ष चुनावों के लिए महत्वपूर्ण है।",
+r:"Election management requires impartial supervision of the electoral process.",
+rh:"चुनाव संचालन के लिए चुनाव प्रक्रिया की निष्पक्ष निगरानी आवश्यक होती है।",
+answer:"A",
+solution:"Both are true, and impartial supervision is a direct reason for requiring an independent election authority.",
+solutionHi:"दोनों सत्य हैं और निष्पक्ष निगरानी स्वतंत्र चुनाव प्राधिकरण की आवश्यकता का सीधा कारण है।"
+},
+
+{
+q:"Inflation reduces the purchasing power of money when incomes do not rise proportionately.",
+a:"Inflation can reduce the purchasing power of money.",
+ah:"मुद्रास्फीति मुद्रा की क्रय शक्ति को कम कर सकती है।",
+r:"A sustained rise in the general price level means that the same amount of money buys fewer goods and services.",
+rh:"सामान्य मूल्य स्तर में लगातार वृद्धि का अर्थ है कि समान राशि से कम वस्तुएँ और सेवाएँ खरीदी जा सकती हैं।",
+answer:"A",
+solution:"Both are true, and the rise in general prices directly explains the fall in purchasing power.",
+solutionHi:"दोनों सत्य हैं और सामान्य कीमतों में वृद्धि क्रय शक्ति में कमी की प्रत्यक्ष व्याख्या करती है।"
+},
+
+{
+q:"A bank deposit is generally safer than keeping the same amount of cash unsecured at home.",
+a:"Depositing money in a regulated bank can provide greater security than keeping large amounts of cash unsecured at home.",
+ah:"नियंत्रित बैंक में पैसा जमा करना घर पर बड़ी मात्रा में असुरक्षित नकदी रखने की तुलना में अधिक सुरक्षा दे सकता है।",
+r:"Banks have institutional systems for safeguarding deposits and maintaining transaction records.",
+rh:"बैंकों में जमा राशि की सुरक्षा और लेन-देन के रिकॉर्ड के लिए संस्थागत व्यवस्थाएँ होती हैं।",
+answer:"A",
+solution:"Both are true, and institutional safeguards and records are important reasons for the greater security.",
+solutionHi:"दोनों सत्य हैं और संस्थागत सुरक्षा व्यवस्थाएँ तथा रिकॉर्ड अधिक सुरक्षा के महत्वपूर्ण कारण हैं।"
+},
+
+{
+q:"Saving a part of income can help a person meet future financial needs.",
+a:"Regular saving can improve a person's ability to meet future expenses.",
+ah:"नियमित बचत व्यक्ति की भविष्य के खर्चों को पूरा करने की क्षमता बढ़ा सकती है।",
+r:"Savings create a financial reserve that can be used when required.",
+rh:"बचत एक वित्तीय भंडार बनाती है जिसका आवश्यकता पड़ने पर उपयोग किया जा सकता है।",
+answer:"A",
+solution:"Both are true, and the creation of a financial reserve directly explains the benefit of saving.",
+solutionHi:"दोनों सत्य हैं और वित्तीय भंडार का निर्माण बचत के लाभ की प्रत्यक्ष व्याख्या करता है।"
+},
+
+{
+q:"A budget deficit does not necessarily mean that government expenditure is zero or low.",
+a:"A government can have a budget deficit even when it spends a large amount.",
+ah:"सरकार अधिक मात्रा में खर्च करने के बावजूद बजट घाटे में हो सकती है।",
+r:"A deficit occurs when expenditure exceeds the relevant government receipts.",
+rh:"घाटा तब होता है जब संबंधित सरकारी प्राप्तियों की तुलना में व्यय अधिक होता है।",
+answer:"A",
+solution:"Both are true, and a deficit depends on the relationship between expenditure and receipts, not merely on the absolute level of expenditure.",
+solutionHi:"दोनों सत्य हैं और घाटा खर्च के पूर्ण स्तर पर नहीं बल्कि खर्च और प्राप्तियों के संबंध पर निर्भर करता है।"
+},
+
+{
+q:"Diversification can reduce the risk associated with investing all money in one asset.",
+a:"Diversifying investments can reduce concentration risk.",
+ah:"निवेश में विविधीकरण से एक ही परिसंपत्ति में जोखिम की एकाग्रता कम हो सकती है।",
+r:"Loss in one investment may be partly offset by the performance of other investments.",
+rh:"एक निवेश में होने वाली हानि की भरपाई अन्य निवेशों के प्रदर्शन से आंशिक रूप से हो सकती है।",
+answer:"A",
+solution:"Both are true, and spreading investments can reduce the effect of poor performance in one asset.",
+solutionHi:"दोनों सत्य हैं और निवेश फैलाने से किसी एक परिसंपत्ति के खराब प्रदर्शन का प्रभाव कम हो सकता है।"
+},
+
+{
+q:"A person who receives a fixed amount of money may find it harder to maintain the same standard of consumption during high inflation.",
+a:"High inflation can make it difficult for a person with fixed income to maintain the same consumption level.",
+ah:"उच्च मुद्रास्फीति में निश्चित आय वाले व्यक्ति के लिए समान उपभोग स्तर बनाए रखना कठिन हो सकता है।",
+r:"Prices of goods and services may rise while the person's nominal income remains unchanged.",
+rh:"वस्तुओं और सेवाओं की कीमतें बढ़ सकती हैं जबकि व्यक्ति की नाममात्र आय अपरिवर्तित रहती है।",
+answer:"A",
+solution:"Both are true, and rising prices with unchanged nominal income reduce real purchasing capacity.",
+solutionHi:"दोनों सत्य हैं और कीमत बढ़ने के साथ आय समान रहने पर वास्तविक क्रय क्षमता कम हो जाती है।"
+},
+
+{
+q:"A password containing a mixture of different character types is generally harder to guess than a simple common word.",
+a:"A complex password is generally harder to guess than a short common word.",
+ah:"जटिल पासवर्ड सामान्यतः छोटे और सामान्य शब्द की तुलना में अनुमान लगाना कठिन होता है।",
+r:"A larger and less predictable set of possible character combinations increases the number of possible guesses.",
+rh:"अधिक बड़ा और कम पूर्वानुमेय अक्षर-संयोजन संभावित अनुमानों की संख्या बढ़ाता है।",
+answer:"A",
+solution:"Both are true, and greater unpredictability and a larger combination space make guessing harder.",
+solutionHi:"दोनों सत्य हैं और अधिक अप्रत्याशितता तथा अधिक संयोजन पासवर्ड का अनुमान लगाना कठिन बनाते हैं।"
+},
+
+{
+q:"A computer can perform repetitive calculations much faster than a human in many situations.",
+a:"Computers are highly efficient at performing repetitive numerical calculations.",
+ah:"कंप्यूटर कई परिस्थितियों में दोहराए जाने वाले संख्यात्मक गणना कार्यों को बहुत तेजी से कर सकते हैं।",
+r:"Computers can execute programmed instructions repeatedly at very high speed.",
+rh:"कंप्यूटर प्रोग्राम किए गए निर्देशों को बहुत तेज गति से बार-बार निष्पादित कर सकते हैं।",
+answer:"A",
+solution:"Both are true, and rapid repeated execution of instructions explains the efficiency.",
+solutionHi:"दोनों सत्य हैं और निर्देशों को तेज गति से बार-बार निष्पादित करना इस दक्षता की व्याख्या करता है।"
+},
+
+{
+q:"A file can become inaccessible if its storage device is physically damaged.",
+a:"Physical damage to a storage device can make stored data inaccessible.",
+ah:"स्टोरेज डिवाइस को भौतिक क्षति होने पर उसमें संग्रहीत डेटा अप्राप्य हो सकता है।",
+r:"The data can depend on the physical components required to read the storage medium.",
+rh:"डेटा को पढ़ने के लिए स्टोरेज माध्यम के भौतिक घटकों की आवश्यकता हो सकती है।",
+answer:"A",
+solution:"Both are true, and damage to essential reading components can prevent access to stored data.",
+solutionHi:"दोनों सत्य हैं और आवश्यक रीडिंग घटकों की क्षति संग्रहीत डेटा तक पहुँच रोक सकती है।"
+},
+
+{
+q:"Two people can obtain different results from the same test if they make different numbers of mistakes.",
+a:"Different numbers of errors can lead to different test scores.",
+ah:"गलतियों की अलग-अलग संख्या अलग-अलग परीक्षा अंकों का कारण बन सकती है।",
+r:"In a test where incorrect responses reduce the number of correct responses, errors affect the final score.",
+rh:"ऐसी परीक्षा में जहाँ गलत उत्तर सही उत्तरों की संख्या को प्रभावित करते हैं, गलतियाँ अंतिम अंक को प्रभावित करती हैं।",
+answer:"A",
+solution:"Both are true, and the scoring relationship explains why different errors can produce different scores.",
+solutionHi:"दोनों सत्य हैं और अंक निर्धारण की व्यवस्था बताती है कि अलग-अलग गलतियाँ अलग-अलग अंक क्यों दे सकती हैं।"
+},
+
+{
+q:"A candidate who reads a question carefully is less likely to make an error caused by misunderstanding the wording.",
+a:"Careful reading can reduce errors caused by misinterpreting a question.",
+ah:"ध्यानपूर्वक पढ़ने से प्रश्न को गलत समझने के कारण होने वाली गलतियाँ कम हो सकती हैं।",
+r:"Understanding the exact wording of a question helps identify what is actually being asked.",
+rh:"प्रश्न के सही शब्दों को समझने से यह पहचानने में सहायता मिलती है कि वास्तव में क्या पूछा गया है।",
+answer:"A",
+solution:"Both are true, and understanding the wording directly reduces errors caused by misinterpretation.",
+solutionHi:"दोनों सत्य हैं और प्रश्न की भाषा को समझना गलत अर्थ निकालने से होने वाली गलतियों को सीधे कम करता है।"
+},
+
+{
+q:"A conclusion cannot logically be considered certain merely because it is possible.",
+a:"Possibility of an event does not by itself establish certainty of that event.",
+ah:"किसी घटना की संभावना मात्र से वह घटना निश्चित सिद्ध नहीं होती।",
+r:"An event may be possible while still having a probability less than one.",
+rh:"कोई घटना संभव हो सकती है जबकि उसकी प्रायिकता एक से कम हो।",
+answer:"A",
+solution:"Both are true, and the distinction between possibility and certainty directly supports the Assertion.",
+solutionHi:"दोनों सत्य हैं और संभावना तथा निश्चितता के बीच का अंतर Assertion की सीधी व्याख्या करता है।"
+},
+
+{
+q:"If all squares are rectangles, then every square belongs to the class of rectangles.",
+a:"Every square is a rectangle.",
+ah:"प्रत्येक वर्ग एक आयत है।",
+r:"A square satisfies the defining properties of a rectangle.",
+rh:"वर्ग आयत की परिभाषात्मक विशेषताओं को पूरा करता है।",
+answer:"A",
+solution:"Both are true, and satisfying the defining properties of a rectangle explains why every square is a rectangle.",
+solutionHi:"दोनों सत्य हैं और आयत की परिभाषात्मक विशेषताओं को पूरा करना बताता है कि प्रत्येक वर्ग आयत क्यों है।"
+},
+
+{
+q:"If some students are athletes, it does not follow that all students are athletes.",
+a:"The statement 'some students are athletes' does not imply that all students are athletes.",
+ah:"'कुछ विद्यार्थी खिलाड़ी हैं' से यह निष्कर्ष नहीं निकलता कि सभी विद्यार्थी खिलाड़ी हैं।",
+r:"The word 'some' indicates at least one but does not necessarily include every member of the group.",
+rh:"'कुछ' का अर्थ कम-से-कम एक होता है, लेकिन यह समूह के प्रत्येक सदस्य को आवश्यक रूप से शामिल नहीं करता।",
+answer:"A",
+solution:"Both are true, and the meaning of 'some' directly explains why the universal conclusion is invalid.",
+solutionHi:"दोनों सत्य हैं और 'कुछ' शब्द का अर्थ बताता है कि सभी के बारे में निष्कर्ष निकालना उचित क्यों नहीं है।"
+},
+
+{
+q:"A statement may be true without being sufficient to establish a particular conclusion.",
+a:"Truth of a statement alone does not always make every related conclusion valid.",
+ah:"किसी कथन का सत्य होना अपने आप में हर संबंधित निष्कर्ष को सही नहीं बनाता।",
+r:"A valid conclusion must follow logically from the information given.",
+rh:"वैध निष्कर्ष दिए गए तथ्यों से तार्किक रूप से निकलना चाहिए।",
+answer:"A",
+solution:"Both are true, and logical connection with the given information is required for a valid conclusion.",
+solutionHi:"दोनों सत्य हैं और वैध निष्कर्ष के लिए दिए गए तथ्यों से तार्किक संबंध आवश्यक है।"
+},
+
+{
+q:"If a sequence increases by a constant amount, it forms an arithmetic progression.",
+a:"A sequence with a constant difference between consecutive terms is an arithmetic progression.",
+ah:"क्रमागत पदों के बीच समान अंतर वाली श्रेणी अंकगणितीय प्रगति होती है।",
+r:"The defining property of an arithmetic progression is a constant common difference.",
+rh:"अंकगणितीय प्रगति की परिभाषात्मक विशेषता समान सार्व अंतर है।",
+answer:"A",
+solution:"Both are true, and the Reason states the defining property of an arithmetic progression.",
+solutionHi:"दोनों सत्य हैं और Reason अंकगणितीय प्रगति की परिभाषात्मक विशेषता बताता है।"
+},
+
+{
+q:"A number divisible by both 2 and 3 is divisible by 6.",
+a:"Every integer divisible by both 2 and 3 is divisible by 6.",
+ah:"2 और 3 दोनों से विभाज्य प्रत्येक पूर्णांक 6 से विभाज्य होता है।",
+r:"2 and 3 are relatively prime, so their product 6 divides any number divisible by both.",
+rh:"2 और 3 परस्पर अभाज्य हैं, इसलिए दोनों से विभाज्य संख्या उनके गुणनफल 6 से भी विभाज्य होती है।",
+answer:"A",
+solution:"Both are true, and the relatively prime nature of 2 and 3 explains the divisibility by their product.",
+solutionHi:"दोनों सत्य हैं और 2 तथा 3 के परस्पर अभाज्य होने के कारण दोनों से विभाज्यता उनके गुणनफल 6 से विभाज्यता सुनिश्चित करती है।"
+},
+
+{
+q:"The average of a set of numbers can be affected by an extreme value.",
+a:"An unusually large or small value can change the arithmetic mean.",
+ah:"असामान्य रूप से बड़ा या छोटा मान अंकगणितीय माध्य को बदल सकता है।",
+r:"The arithmetic mean is calculated using the sum of all observations divided by their number.",
+rh:"अंकगणितीय माध्य सभी प्रेक्षणों के योग को उनकी संख्या से विभाजित करके निकाला जाता है।",
+answer:"A",
+solution:"Both are true, and because every observation contributes to the sum, an extreme value can affect the mean.",
+solutionHi:"दोनों सत्य हैं और प्रत्येक मान योग में शामिल होता है, इसलिए अत्यधिक मान माध्य को प्रभावित कर सकता है।"
+},
+
+{
+q:"The probability of an impossible event is zero.",
+a:"An impossible event has probability zero.",
+ah:"असंभव घटना की प्रायिकता शून्य होती है।",
+r:"Probability measures the likelihood of an event, and an event that cannot occur has no chance of occurring.",
+rh:"प्रायिकता घटना के घटित होने की संभावना मापती है और जो घटना घटित ही नहीं हो सकती उसकी संभावना शून्य होती है।",
+answer:"A",
+solution:"Both are true, and the definition of probability explains why an impossible event has probability zero.",
+solutionHi:"दोनों सत्य हैं और प्रायिकता की परिभाषा बताती है कि असंभव घटना की प्रायिकता शून्य क्यों होती है।"
+},
+
+{
+q:"A triangle cannot have two right angles.",
+a:"A triangle cannot contain two right angles.",
+ah:"किसी त्रिभुज में दो समकोण नहीं हो सकते।",
+r:"The sum of the interior angles of a triangle is 180°.",
+rh:"त्रिभुज के आंतरिक कोणों का योग 180° होता है।",
+answer:"A",
+solution:"Both are true, and two right angles would already total 180°, leaving no angle for the third vertex.",
+solutionHi:"दोनों सत्य हैं और दो समकोणों का योग ही 180° हो जाएगा, जिससे तीसरे कोण के लिए कोई मान नहीं बचेगा।"
+},
+
+{
+q:"A square is a special type of rectangle.",
+a:"Every square is a rectangle.",
+ah:"प्रत्येक वर्ग एक विशेष प्रकार का आयत है।",
+r:"A square has four right angles, which satisfies the angle condition of a rectangle.",
+rh:"वर्ग के चारों कोण समकोण होते हैं, जो आयत की कोण संबंधी शर्त को पूरा करते हैं।",
+answer:"A",
+solution:"Both are true, and having four right angles is a defining condition shared by rectangles.",
+solutionHi:"दोनों सत्य हैं और चार समकोण होना आयत की प्रमुख परिभाषात्मक शर्तों में से एक है।"
+},
+
+{
+q:"A statement containing 'all' is stronger than a statement containing 'some' when both refer to the same group.",
+a:"A universal statement generally makes a stronger claim than a particular statement.",
+ah:"सार्वभौमिक कथन सामान्यतः विशेष कथन की तुलना में अधिक मजबूत दावा करता है।",
+r:"A universal statement applies to every member of the specified group, whereas a particular statement may apply to only some members.",
+rh:"सार्वभौमिक कथन समूह के प्रत्येक सदस्य पर लागू होता है, जबकि विशेष कथन केवल कुछ सदस्यों पर लागू हो सकता है।",
+answer:"A",
+solution:"Both are true, and the difference in their scope explains why a universal statement is stronger.",
+solutionHi:"दोनों सत्य हैं और दोनों कथनों के दायरे का अंतर बताता है कि सार्वभौमिक कथन अधिक मजबूत क्यों है।"
+},
+
+{
+q:"If a conclusion contradicts a fact explicitly given in the statement, that conclusion cannot be valid.",
+a:"A conclusion directly contradicting a given fact cannot be logically accepted.",
+ah:"दिए गए तथ्य का सीधे विरोध करने वाले निष्कर्ष को तार्किक रूप से स्वीकार नहीं किया जा सकता।",
+r:"A valid conclusion cannot simultaneously deny an explicitly established fact without additional information resolving the contradiction.",
+rh:"अतिरिक्त जानकारी द्वारा विरोधाभास दूर किए बिना वैध निष्कर्ष स्पष्ट रूप से स्थापित तथ्य का एक साथ खंडन नहीं कर सकता।",
+answer:"A",
+solution:"Both are true, and logical consistency with the given facts is necessary for a valid conclusion.",
+solutionHi:"दोनों सत्य हैं और वैध निष्कर्ष के लिए दिए गए तथ्यों के साथ तार्किक संगति आवश्यक है।"
+},
+
+{
+q:"A clock that loses five minutes every hour will show a time increasingly behind the correct time.",
+a:"A clock losing a fixed amount of time every hour becomes progressively slower than the correct time.",
+ah:"हर घंटे निश्चित समय खोने वाली घड़ी सही समय से लगातार पीछे होती जाती है।",
+r:"The accumulated loss increases with each passing hour.",
+rh:"प्रत्येक बीतते घंटे के साथ संचित समय-हानि बढ़ती जाती है।",
+answer:"A",
+solution:"Both are true, and accumulation of the fixed loss explains why the clock falls increasingly behind.",
+solutionHi:"दोनों सत्य हैं और निश्चित समय-हानि के संचय के कारण घड़ी लगातार पीछे होती जाती है।"
+},
+
+{
+q:"A person walking at the same speed covers more distance in two hours than in one hour.",
+a:"At constant speed, distance covered increases with time.",
+ah:"स्थिर गति पर समय बढ़ने के साथ तय की गई दूरी बढ़ती है।",
+r:"Distance is equal to speed multiplied by time when speed is constant.",
+rh:"जब गति स्थिर हो, तब दूरी = गति × समय होती है।",
+answer:"A",
+solution:"Both are true, and the distance-time relationship directly explains the increase in distance.",
+solutionHi:"दोनों सत्य हैं और दूरी तथा समय के संबंध से दूरी बढ़ने की सीधी व्याख्या होती है।"
+},
+
+{
+q:"If two quantities are inversely proportional, increasing one quantity decreases the other when all relevant conditions remain constant.",
+a:"In inverse proportion, an increase in one quantity is associated with a decrease in the other.",
+ah:"व्युत्क्रमानुपात में एक राशि बढ़ने पर दूसरी राशि घटती है।",
+r:"For inversely proportional quantities, their product remains constant.",
+rh:"व्युत्क्रमानुपाती राशियों का गुणनफल स्थिर रहता है।",
+answer:"A",
+solution:"Both are true, and maintaining a constant product means that an increase in one quantity requires a decrease in the other.",
+solutionHi:"दोनों सत्य हैं और स्थिर गुणनफल के कारण एक राशि बढ़ने पर दूसरी राशि घटती है।"
+},
+
+{
+q:"A larger sample can provide more reliable information about a population than a very small sample, when sampling is properly conducted.",
+a:"A sufficiently larger and properly selected sample can improve the reliability of an estimate.",
+ah:"पर्याप्त रूप से बड़ा और उचित ढंग से चुना गया नमूना किसी अनुमान की विश्वसनीयता बढ़ा सकता है।",
+r:"A larger properly selected sample generally reduces the influence of random sampling variation.",
+rh:"उचित रूप से चुना गया बड़ा नमूना सामान्यतः यादृच्छिक नमूना-भिन्नता के प्रभाव को कम करता है।",
+answer:"A",
+solution:"Both are true, and reducing random sampling variation explains the greater reliability.",
+solutionHi:"दोनों सत्य हैं और यादृच्छिक नमूना-भिन्नता में कमी अधिक विश्वसनीयता की व्याख्या करती है।"
+},
+
+{
+q:"A person who follows a fixed study schedule may complete regular revision more consistently.",
+a:"A planned study schedule can improve consistency in revision.",
+ah:"नियोजित अध्ययन समय-सारणी पुनरावृत्ति में निरंतरता बढ़ा सकती है।",
+r:"A fixed schedule assigns specific time periods to study activities.",
+rh:"निश्चित समय-सारणी अध्ययन गतिविधियों के लिए विशिष्ट समय निर्धारित करती है।",
+answer:"A",
+solution:"Both are true, and allocating specific time makes regular revision easier to maintain.",
+solutionHi:"दोनों सत्य हैं और अध्ययन के लिए निश्चित समय निर्धारित होने से नियमित पुनरावृत्ति बनाए रखना आसान होता है।"
+},
+
+{
+q:"If a question asks for the 'odd one out', the item differing from the common property of the others is usually selected.",
+a:"In an odd-one-out question, the selected item generally differs from the common pattern of the remaining items.",
+ah:"Odd-one-out प्रश्न में सामान्यतः वह विकल्प चुना जाता है जो अन्य विकल्पों के सामान्य पैटर्न से अलग हो।",
+r:"The purpose of classification is to identify the item that does not belong to the same group under the stated criterion.",
+rh:"वर्गीकरण का उद्देश्य दिए गए मानदंड के आधार पर उस वस्तु की पहचान करना है जो समान समूह से संबंधित नहीं है।",
+answer:"A",
+solution:"Both are true, and the definition of classification explains the basis of an odd-one-out question.",
+solutionHi:"दोनों सत्य हैं और वर्गीकरण की अवधारणा Odd-one-out प्रश्न के आधार को स्पष्ट करती है।"
+},
+
+{
+q:"In a coding-decoding question, a coded word can be determined only after identifying the rule used for coding.",
+a:"The correct code cannot be reliably determined without identifying the coding pattern.",
+ah:"कोडिंग पैटर्न पहचाने बिना सही कोड विश्वसनीय रूप से निर्धारित नहीं किया जा सकता।",
+r:"The same coding rule must be applied consistently to obtain the corresponding code.",
+rh:"संबंधित कोड प्राप्त करने के लिए समान कोडिंग नियम को लगातार लागू करना आवश्यक है।",
+answer:"A",
+solution:"Both are true, and identifying the rule is necessary to apply it consistently.",
+solutionHi:"दोनों सत्य हैं और नियम की पहचान उसे सही ढंग से लागू करने के लिए आवश्यक है।"
+},
+
+{
+q:"In a direction-sense problem, the final direction depends on the net effect of all given movements.",
+a:"The final position in a direction problem depends on the combined effect of the stated movements.",
+ah:"दिशा ज्ञान प्रश्न में अंतिम स्थिति दिए गए सभी आंदोलनों के संयुक्त प्रभाव पर निर्भर करती है।",
+r:"Opposite movements can cancel each other partially or completely.",
+rh:"विपरीत दिशाओं में किए गए आंदोलन एक-दूसरे को आंशिक या पूर्ण रूप से समाप्त कर सकते हैं।",
+answer:"A",
+solution:"Both are true, and cancellation of opposite movements is one reason the net movement determines the final position.",
+solutionHi:"दोनों सत्य हैं और विपरीत दिशाओं की चालों का निरस्तीकरण बताता है कि अंतिम स्थिति नेट मूवमेंट पर निर्भर करती है।"
+},
+
+{
+q:"In a blood-relation problem, the same person may have different relationships with different family members.",
+a:"A person's relationship is determined relative to the particular family member being considered.",
+ah:"किसी व्यक्ति का संबंध उस विशेष परिवार सदस्य के संदर्भ में निर्धारित होता है जिसके बारे में पूछा जा रहा है।",
+r:"A single person can simultaneously be a son, brother, father or uncle in relation to different people.",
+rh:"एक ही व्यक्ति अलग-अलग लोगों के संबंध में एक साथ पुत्र, भाई, पिता या चाचा हो सकता है।",
+answer:"A",
+solution:"Both are true, and the relative nature of family relationships explains the Assertion.",
+solutionHi:"दोनों सत्य हैं और पारिवारिक संबंधों की सापेक्ष प्रकृति Assertion की सही व्याख्या करती है।"
+},
+
+{
+q:"In a seating arrangement, changing the reference direction can change the apparent left and right positions.",
+a:"Left and right positions in a seating arrangement depend on the reference direction.",
+ah:"बैठने की व्यवस्था में बाएँ और दाएँ स्थान संदर्भ दिशा पर निर्भर करते हैं।",
+r:"A person's left side is opposite to another person's left side when the two face each other.",
+rh:"जब दो व्यक्ति आमने-सामने होते हैं, तो एक व्यक्ति का बायाँ भाग दूसरे व्यक्ति के बाएँ भाग के विपरीत दिशा में होता है।",
+answer:"A",
+solution:"Both are true, and facing direction changes the interpretation of left and right.",
+solutionHi:"दोनों सत्य हैं और आमने-सामने होने पर दिशा बदलने से बाएँ-दाएँ की स्थिति का अर्थ बदल जाता है।"
+},
+
+{
+q:"A statement can be both factually true and irrelevant to a particular conclusion.",
+a:"A true statement is not necessarily relevant to every conclusion.",
+ah:"सत्य कथन आवश्यक रूप से प्रत्येक निष्कर्ष के लिए प्रासंगिक नहीं होता।",
+r:"Relevance depends on whether the information logically supports the conclusion under consideration.",
+rh:"प्रासंगिकता इस बात पर निर्भर करती है कि दी गई जानकारी विचाराधीन निष्कर्ष का तार्किक समर्थन करती है या नहीं।",
+answer:"A",
+solution:"Both are true, and relevance is determined by the logical connection with the conclusion.",
+solutionHi:"दोनों सत्य हैं और प्रासंगिकता निष्कर्ष के साथ तार्किक संबंध पर निर्भर करती है।"
+},
+
+{
+q:"A cause that occurs before an event is not automatically the cause of that event.",
+a:"Temporal sequence alone is insufficient to establish causation.",
+ah:"केवल समय का क्रम किसी घटना के कारण को स्थापित करने के लिए पर्याप्त नहीं है।",
+r:"An event may be followed by another event without the first event causing the second.",
+rh:"एक घटना के बाद दूसरी घटना हो सकती है, लेकिन पहली घटना दूसरी का कारण आवश्यक नहीं है।",
+answer:"A",
+solution:"Both are true, and mere sequence does not establish a causal relationship.",
+solutionHi:"दोनों सत्य हैं और केवल घटनाओं का क्रम कारण-कार्य संबंध सिद्ध नहीं करता।"
+},
+
+{
+q:"If two statements are logically contradictory, they cannot both be true under the same conditions.",
+a:"Two directly contradictory statements cannot both be true under identical conditions.",
+ah:"दो सीधे विरोधाभासी कथन समान परिस्थितियों में दोनों सत्य नहीं हो सकते।",
+r:"A contradiction requires one statement to assert what the other denies.",
+rh:"विरोधाभास में एक कथन उस बात को स्वीकार करता है जिसे दूसरा अस्वीकार करता है।",
+answer:"A",
+solution:"Both are true, and the definition of contradiction explains why both statements cannot simultaneously be true under the same conditions.",
+solutionHi:"दोनों सत्य हैं और विरोधाभास की परिभाषा बताती है कि समान परिस्थितियों में दोनों कथन एक साथ सत्य क्यों नहीं हो सकते।"
+},
+
+{
+q:"A conclusion based on insufficient information may be possible but not logically certain.",
+a:"Insufficient information may prevent a conclusion from being established with certainty.",
+ah:"अपर्याप्त जानकारी किसी निष्कर्ष को निश्चित रूप से स्थापित करने से रोक सकती है।",
+r:"More than one conclusion may remain compatible with the information given.",
+rh:"दी गई जानकारी के साथ एक से अधिक निष्कर्ष संगत रह सकते हैं।",
+answer:"A",
+solution:"Both are true, and the possibility of multiple compatible conclusions prevents certainty.",
+solutionHi:"दोनों सत्य हैं और एक से अधिक संगत निष्कर्षों की संभावना निश्चितता को रोकती है।"
+},
+
+{
+q:"If every member of group A is also a member of group B, group A is a subset of group B.",
+a:"Group A is a subset of group B when every member of A belongs to B.",
+ah:"जब A का प्रत्येक सदस्य B में शामिल हो, तब A, B का उपसमुच्चय होता है।",
+r:"The defining condition of a subset is that all elements of the smaller set belong to the larger set.",
+rh:"उपसमुच्चय की परिभाषात्मक शर्त यह है कि छोटे समुच्चय के सभी तत्व बड़े समुच्चय में हों।",
+answer:"A",
+solution:"Both are true, and the Reason states the defining condition of a subset.",
+solutionHi:"दोनों सत्य हैं और Reason उपसमुच्चय की परिभाषात्मक शर्त बताता है।"
+},
+
+{
+q:"If a person travels equal distances at different speeds, the total travel time depends on those speeds.",
+a:"For equal distances, changing speed changes the total travel time.",
+ah:"समान दूरी के लिए गति बदलने पर कुल यात्रा समय बदल जाता है।",
+r:"For a fixed distance, time is inversely related to speed.",
+rh:"निश्चित दूरी के लिए समय गति के व्युत्क्रमानुपाती होता है।",
+answer:"A",
+solution:"Both are true, and the inverse relationship between time and speed explains the change in travel time.",
+solutionHi:"दोनों सत्य हैं और समय तथा गति के व्युत्क्रमानुपाती संबंध के कारण यात्रा समय बदलता है।"
+},
+
+{
+q:"A candidate may solve a question correctly but still lose marks if the examination has negative marking and the candidate selects a wrong answer elsewhere.",
+a:"In a negatively marked examination, wrong answers can reduce the total score.",
+ah:"नकारात्मक अंकन वाली परीक्षा में गलत उत्तर कुल अंक को कम कर सकते हैं।",
+r:"Negative marking assigns a penalty for specified incorrect responses.",
+rh:"नकारात्मक अंकन में निर्धारित गलत उत्तरों के लिए अंक काटे जाते हैं।",
+answer:"A",
+solution:"Both are true, and the penalty attached to wrong answers explains the reduction in total score.",
+solutionHi:"दोनों सत्य हैं और गलत उत्तरों पर लगने वाला दंड कुल अंक कम होने की व्याख्या करता है।"
+},
+
+{
+q:"A well-constructed analogy depends on identifying the relationship between the first pair.",
+a:"In an analogy question, identifying the relationship in the first pair helps determine the corresponding relationship in the second pair.",
+ah:"सादृश्य प्रश्न में पहले युग्म का संबंध पहचानना दूसरे युग्म के संबंधित संबंध को निर्धारित करने में सहायता करता है।",
+r:"An analogy requires the same relevant relationship to be transferred from one pair to another.",
+rh:"सादृश्य में एक युग्म के प्रासंगिक संबंध को दूसरे युग्म पर समान रूप से लागू करना होता है।",
+answer:"A",
+solution:"Both are true, and transferring the same relationship is the basic principle of analogy.",
+solutionHi:"दोनों सत्य हैं और समान संबंध को दूसरे युग्म पर लागू करना सादृश्य का मूल सिद्धांत है।"
+},
+
+{
+q:"A number pattern may contain a hidden operation that is repeated from term to term.",
+a:"Identifying a repeated operation can help solve a number-series question.",
+ah:"दोहराई गई संक्रिया की पहचान संख्या श्रेणी के प्रश्न को हल करने में सहायता कर सकती है।",
+r:"Many number-series questions are constructed using a consistent rule connecting successive terms.",
+rh:"कई संख्या श्रेणी प्रश्न क्रमागत पदों को जोड़ने वाले एक सुसंगत नियम पर आधारित होते हैं।",
+answer:"A",
+solution:"Both are true, and identifying the consistent rule is central to solving such series.",
+solutionHi:"दोनों सत्य हैं और सुसंगत नियम की पहचान ऐसी श्रेणी को हल करने का मुख्य आधार है।"
+}
+
+];
+
+
+/* =========================================================
+   STANDARD OPTIONS
+   ========================================================= */
+
+const standardOptions = [
+
+{
+letter:"A",
+en:"Both A and R are true, and R is the correct explanation of A.",
+hi:"A और R दोनों सत्य हैं तथा R, A की सही व्याख्या है।"
+},
+
+{
+letter:"B",
+en:"Both A and R are true, but R is not the correct explanation of A.",
+hi:"A और R दोनों सत्य हैं, लेकिन R, A की सही व्याख्या नहीं है।"
+},
+
+{
+letter:"C",
+en:"A is true, but R is false.",
+hi:"A सत्य है, लेकिन R असत्य है।"
+},
+
+{
+letter:"D",
+en:"A is false, but R is true.",
+hi:"A असत्य है, लेकिन R सत्य है।"
+}
+
+];
+
+
+/* =========================================================
+   SHUFFLE FUNCTION
+   ========================================================= */
+
+function shuffle(array){
+
+    for(let i=array.length-1;i>0;i--){
+
+        const j=Math.floor(Math.random()*(i+1));
+
+        [array[i],array[j]]=[array[j],array[i]];
+    }
+
+    return array;
+}
+
+
+/* =========================================================
+   RENDER QUIZ
+   ========================================================= */
+
+function renderQuiz(){
+
+    const quiz=document.getElementById("quiz");
+
+    quiz.innerHTML="";
+
+    questions.forEach((item,index)=>{
+
+        const card=document.createElement("div");
+
+        card.className="question-card";
+
+        card.dataset.answer=item.answer;
+
+        const shuffledOptions=shuffle(
+            standardOptions.map(option=>({...option}))
+        );
+
+        let optionsHTML="";
+
+        shuffledOptions.forEach(option=>{
+
+            optionsHTML+=`
+
+                <button
+                    class="option"
+                    data-option="${option.letter}"
+                    onclick="checkAnswer(this)"
+                >
+
+                    <span class="option-letter">
+                        ${option.letter}.
+                    </span>
+
+                    <span>
+                        ${option.en}
+                    </span>
+
+                    <br>
+
+                    <span>
+                        ${option.hi}
+                    </span>
+
+                </button>
+
+            `;
+
+        });
+
+
+        card.innerHTML=`
+
+            <div class="question-number">
+                Question ${index+1} / प्रश्न ${index+1}
+            </div>
+
+            <div class="question-text">
+
+                <span class="statement-en">
+                    ${item.q}
+                </span>
+
+                <span class="statement-hi">
+                    ${item.q}
+                </span>
+
+            </div>
+
+
+            <div class="assertion">
+
+                <strong>Assertion (A) / कथन (A)</strong>
+
+                <span class="statement-en">
+                    ${item.a}
+                </span>
+
+                <span class="statement-hi">
+                    ${item.ah}
+                </span>
+
+            </div>
+
+
+            <div class="reason">
+
+                <strong>Reason (R) / कारण (R)</strong>
+
+                <span class="statement-en">
+                    ${item.r}
+                </span>
+
+                <span class="statement-hi">
+                    ${item.rh}
+                </span>
+
+            </div>
+
+
+            <div class="options">
+
+                ${optionsHTML}
+
+            </div>
+
+
+            <div class="solution">
+
+                <strong>
+                    Solution / समाधान:
+                </strong>
+
+                <div>
+                    ${item.solution}
+                </div>
+
+                <div class="solution-hi">
+                    ${item.solutionHi}
+                </div>
+
+            </div>
+
+        `;
+
+        quiz.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   CHECK ANSWER
+   ========================================================= */
+
+let score=0;
+let attempted=0;
+let correct=0;
+let wrong=0;
+
+
+function checkAnswer(button){
+
+    const card=button.closest(".question-card");
+
+    if(card.classList.contains("answered")){
+        return;
+    }
+
+    card.classList.add("answered");
+
+    attempted++;
+
+    const selected=button.dataset.option;
+
+    const correctAnswer=card.dataset.answer;
+
+    const allOptions=card.querySelectorAll(".option");
+
+    allOptions.forEach(option=>{
+
+        option.disabled=true;
+
+    });
+
+
+    if(selected===correctAnswer){
+
+        button.classList.add("correct");
+
+        score++;
+        correct++;
+
+    }else{
+
+        button.classList.add("wrong");
+
+        wrong++;
+
+        allOptions.forEach(option=>{
+
+            if(option.dataset.option===correctAnswer){
+
+                option.classList.add("correct");
+
+            }
+
+        });
+
+    }
+
+
+    card.querySelector(".solution").classList.add("show");
+
+    updateResult();
+
+}
+
+
+/* =========================================================
+   UPDATE RESULT
+   ========================================================= */
+
+function updateResult(){
+
+    document.getElementById("score").textContent =
+        score+" / "+questions.length;
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+}
+
+
+/* =========================================================
+   RESET QUIZ
+   ========================================================= */
+
+function resetQuiz(){
+
+    score=0;
+    attempted=0;
+    correct=0;
+    wrong=0;
+
+    updateResult();
+
+    renderQuiz();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================================
+   START QUIZ
+   ========================================================= */
+
+renderQuiz();
+
+updateResult();
+
+</script>
+
+</body>
+</html>
