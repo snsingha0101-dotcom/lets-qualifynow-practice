@@ -1,0 +1,1097 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Water Image Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:14px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#d9eaf7;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    max-width:1100px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #d9e2ec;
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+/* ================= PART TITLE ================= */
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    border-left:5px solid #173f5f;
+    padding:14px 18px;
+    border-radius:7px;
+    font-size:21px;
+    font-weight:bold;
+    margin:30px 0 18px;
+}
+
+/* ================= QUESTION ================= */
+
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 7px rgba(16,42,67,0.05);
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:6px;
+}
+
+.hindi{
+    font-size:16px;
+    color:#52606d;
+    margin-bottom:15px;
+}
+
+/* ================= DIAGRAM ================= */
+
+.diagram-box{
+    width:100%;
+    overflow:hidden;
+    margin:15px 0 20px;
+    background:#fff;
+    border-radius:8px;
+}
+
+.diagram-box svg{
+    width:100%;
+    max-width:620px;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+
+.given-figure svg{
+    max-width:180px;
+}
+
+.diagram-label{
+    fill:#102a43;
+    font-size:15px;
+    font-weight:bold;
+    text-anchor:middle;
+}
+
+/* ================= OPTIONS ================= */
+
+.options{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:15px;
+}
+
+.option{
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.2s;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-height:105px;
+}
+
+.option:hover{
+    background:#d9eaf7;
+}
+
+.option svg{
+    display:block;
+    width:100px;
+    max-width:calc(100% - 30px);
+    height:80px;
+    flex-shrink:1;
+}
+
+.option.correct{
+    background:#d4edda;
+    border-color:#28a745;
+    color:#155724;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#dc3545;
+    color:#721c24;
+}
+
+.option.disabled{
+    cursor:default;
+}
+
+/* ================= SOLUTION ================= */
+
+.solution{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+/* ================= SCORE ================= */
+
+.score-box{
+    background:#102a43;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    margin-bottom:8px;
+}
+
+.score-number{
+    font-size:32px;
+    font-weight:bold;
+    margin:8px 0 15px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:20px;
+}
+
+.stat{
+    min-width:100px;
+}
+
+.stat span{
+    display:block;
+    font-size:13px;
+    opacity:0.85;
+}
+
+.stat strong{
+    font-size:20px;
+}
+
+.reset-btn{
+    background:#173f5f;
+    color:white;
+    border:1px solid #829ab1;
+    padding:10px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.reset-btn:hover{
+    background:#243b53;
+}
+
+/* ================= NOTE ================= */
+
+.note{
+    background:white;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    color:#52606d;
+    margin-bottom:30px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+        gap:9px 12px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .hindi{
+        font-size:15px;
+    }
+
+    .diagram-box svg{
+        max-width:100%;
+    }
+
+    .given-figure svg{
+        max-width:180px;
+    }
+
+    .stats{
+        gap:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="logo">LET'S QUALIFYNOW</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="ssc-reasoning.html">SSC Reasoning</a>
+<a href="courses.html">Courses</a>
+<a href="study-material.html">Study Material</a>
+<a href="live-classes.html">Live Classes</a>
+<a href="test-series.html">Test Series</a>
+<a href="exams.html">Exams</a>
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>💧 SSC Water Image Practice</h1>
+
+<p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
+
+</section>
+
+<div class="container">
+
+<div class="intro">
+
+<h2>SSC Water Image Practice Set</h2>
+
+<p>
+This practice set covers water-image questions involving geometrical figures,
+arrows, lines, shapes and figure patterns commonly used in non-verbal reasoning.
+</p>
+
+<p style="margin-top:10px">
+इस अभ्यास सेट में ज्यामितीय आकृतियों, तीरों, रेखाओं और विभिन्न figure patterns पर आधारित जल-छवि के प्रश्न शामिल हैं।
+</p>
+
+<p style="margin-top:10px">
+<strong>Rule:</strong> A water image is formed by reflection across a horizontal line.
+Top and bottom interchange, while left and right remain unchanged.
+</p>
+
+<p style="margin-top:6px">
+<strong>नियम:</strong> जल-छवि में क्षैतिज अक्ष के सापेक्ष प्रतिबिंब बनता है।
+ऊपर और नीचे की स्थिति बदलती है, जबकि बायाँ और दायाँ भाग नहीं बदलता।
+</p>
+
+</div>
+
+<div id="questions"></div>
+
+<div class="score-box">
+
+<h2>Your Result</h2>
+
+<div class="score-number" id="score">0 / 50</div>
+
+<div class="stats">
+
+<div class="stat">
+<span>Correct</span>
+<strong id="correct">0</strong>
+</div>
+
+<div class="stat">
+<span>Wrong</span>
+<strong id="wrong">0</strong>
+</div>
+
+<div class="stat">
+<span>Attempted</span>
+<strong id="attempted">0</strong>
+</div>
+
+<div class="stat">
+<span>Marks</span>
+<strong id="marks">0</strong>
+</div>
+
+</div>
+
+<button class="reset-btn" onclick="resetTest()">Reset Test</button>
+
+</div>
+
+<div class="note">
+
+<strong>Note:</strong>
+
+Each question carries 1 mark. There is no negative marking.
+The correct answer and detailed solution are displayed after attempting a question.
+
+<br><br>
+
+<strong>नोट:</strong> प्रत्येक प्रश्न 1 अंक का है। कोई negative marking नहीं है।
+सही उत्तर और विस्तृत समाधान प्रश्न का विकल्प चुनने के बाद दिखाई देंगे।
+
+</div>
+
+</div>
+
+<footer>
+
+LET'S QUALIFYNOW — Reasoning Preparation for Competitive Exams
+
+</footer>
+
+<script>
+
+/* =========================================================
+   WATER IMAGE PRACTICE
+   50 QUESTIONS
+   Water image = reflection across horizontal axis
+   ========================================================= */
+
+const figures = [
+
+/* 1 */
+`<path d="M50 12 L79 43 H63 V82 H37 V43 H21 Z"/>
+ <circle cx="29" cy="27" r="5" fill="#173f5f"/>`,
+
+/* 2 */
+`<path d="M15 20 H58 V37 H38 V57 H82 V80 H15 Z"/>
+ <circle cx="69" cy="28" r="5" fill="#173f5f"/>`,
+
+/* 3 */
+`<path d="M18 18 H82 V35 H42 V51 H70 V68 H42 V82 H18 Z"/>
+ <circle cx="67" cy="26" r="4" fill="#173f5f"/>`,
+
+/* 4 */
+`<path d="M50 16 L83 48 L62 48 V81 H38 V48 H17 Z"/>
+ <path d="M50 16 V34" fill="none" stroke-width="4"/>`,
+
+/* 5 */
+`<path d="M20 15 H42 V59 H82 V81 H20 Z"/>
+ <circle cx="31" cy="29" r="5" fill="#173f5f"/>`,
+
+/* 6 */
+`<path d="M18 18 H82 V35 H39 V50 H72 V66 H39 V82 H18 Z"/>
+ <circle cx="68" cy="74" r="4" fill="#173f5f"/>`,
+
+/* 7 */
+`<path d="M18 78 L50 17 L82 78 Z" fill="none"/>
+ <path d="M50 17 V58" fill="none" stroke-width="4"/>
+ <circle cx="34" cy="66" r="5" fill="#173f5f"/>`,
+
+/* 8 */
+`<path d="M17 23 H83 L65 43 H56 V82 H34 V43 H26 Z"/>
+ <circle cx="70" cy="31" r="4" fill="#173f5f"/>`,
+
+/* 9 */
+`<path d="M18 18 H82 V82 H18 Z" fill="none"/>
+ <path d="M18 18 L82 82" fill="none" stroke-width="4"/>
+ <circle cx="68" cy="29" r="5" fill="#173f5f"/>`,
+
+/* 10 */
+`<path d="M18 18 H82 V82 H18 Z" fill="none"/>
+ <path d="M18 40 H60 V62 H82" fill="none" stroke-width="4"/>
+ <circle cx="31" cy="28" r="5" fill="#173f5f"/>`,
+
+/* 11 */
+`<path d="M15 43 L50 15 L85 43 V82 H15 Z"/>
+ <rect x="27" y="49" width="17" height="33" fill="#f7f9fc"/>
+ <circle cx="68" cy="54" r="5" fill="#173f5f"/>`,
+
+/* 12 */
+`<path d="M25 15 V84" fill="none" stroke-width="4"/>
+ <path d="M27 18 H78 L62 34 H27 Z"/>
+ <circle cx="25" cy="76" r="5" fill="#173f5f"/>`,
+
+/* 13 */
+`<path d="M18 80 H39 V62 H55 V44 H72 V25 H84" fill="none" stroke-width="5"/>
+ <circle cx="28" cy="68" r="5" fill="#173f5f"/>`,
+
+/* 14 */
+`<path d="M15 70 L35 50 L48 65 L67 34 L84 20" fill="none" stroke-width="5"/>
+ <circle cx="25" cy="30" r="5" fill="#173f5f"/>`,
+
+/* 15 */
+`<path d="M18 18 H82 V82 H18 Z" fill="none"/>
+ <path d="M18 18 L82 82" fill="none" stroke-width="4"/>
+ <path d="M18 82 H45" fill="none" stroke-width="5"/>
+ <circle cx="68" cy="30" r="4" fill="#173f5f"/>`,
+
+/* 16 */
+`<path d="M18 28 Q50 5 82 28 V82 H18 Z"/>
+ <path d="M18 48 H54" fill="none" stroke-width="4"/>
+ <circle cx="68" cy="62" r="5" fill="#173f5f"/>`,
+
+/* 17 */
+`<path d="M42 15 H59 V39 H82 V56 H59 V84 H42 V56 H18 V39 H42 Z"/>
+ <circle cx="72" cy="26" r="4" fill="#173f5f"/>`,
+
+/* 18 */
+`<path d="M50 13 L84 48 L50 82 L16 48 Z" fill="none"/>
+ <path d="M50 13 V48 H84" fill="none" stroke-width="4"/>
+ <circle cx="31" cy="48" r="5" fill="#173f5f"/>`,
+
+/* 19 */
+`<circle cx="48" cy="53" r="27" fill="none"/>
+ <path d="M48 26 V12 H70" fill="none" stroke-width="4"/>
+ <circle cx="37" cy="46" r="5" fill="#173f5f"/>`,
+
+/* 20 */
+`<path d="M17 45 A33 33 0 0 1 83 45 Z"/>
+ <path d="M58 45 V83 H73" fill="none" stroke-width="4"/>
+ <circle cx="30" cy="39" r="4" fill="#173f5f"/>`,
+
+/* 21 */
+`<path d="M18 24 H82 M18 43 H62 M18 62 H82 M18 81 H48"
+ fill="none" stroke-width="5"/>
+ <circle cx="70" cy="43" r="5" fill="#173f5f"/>`,
+
+/* 22 */
+`<path d="M78 18 H30 V82 H78" fill="none" stroke-width="5"/>
+ <path d="M30 43 H60" fill="none" stroke-width="5"/>
+ <circle cx="67" cy="29" r="5" fill="#173f5f"/>`,
+
+/* 23 */
+`<path d="M80 18 H36 Q18 18 18 38 V62 Q18 82 36 82 H80"
+ fill="none" stroke-width="5"/>
+ <path d="M36 50 H66" fill="none" stroke-width="5"/>
+ <circle cx="70" cy="29" r="5" fill="#173f5f"/>`,
+
+/* 24 */
+`<path d="M18 20 H82 V37 H39 V53 H70 V68 H39 V82 H18 Z"/>
+ <path d="M55 20 V37" fill="none" stroke-width="4"/>
+ <circle cx="67" cy="74" r="4" fill="#173f5f"/>`,
+
+/* 25 */
+`<path d="M31 17 H69 L84 82 H16 Z"/>
+ <path d="M31 38 H69" fill="none" stroke-width="4"/>
+ <circle cx="69" cy="57" r="5" fill="#173f5f"/>`,
+
+/* 26 */
+`<path d="M16 31 H60 V17 L84 43 L60 66 V52 H16 Z"/>
+ <circle cx="29" cy="41" r="4" fill="#173f5f"/>`,
+
+/* 27 */
+`<path d="M76 15 V84" fill="none" stroke-width="4"/>
+ <path d="M74 18 H22 L38 35 H74 Z"/>
+ <path d="M22 45 H49" fill="none" stroke-width="4"/>`,
+
+/* 28 */
+`<path d="M50 13 L60 36 L84 38 L66 55 L72 79 L50 66 L28 79 L34 55 L16 38 L40 36 Z"/>
+ <circle cx="62" cy="48" r="4" fill="#173f5f"/>`,
+
+/* 29 */
+`<path d="M50 14 L82 34 V68 L50 84 L18 68 V34 Z" fill="none"/>
+ <path d="M50 14 V50 H82" fill="none" stroke-width="4"/>
+ <circle cx="30" cy="48" r="5" fill="#173f5f"/>`,
+
+/* 30 */
+`<path d="M18 18 L18 82 H48 M18 52 H68" fill="none" stroke-width="5"/>
+ <circle cx="68" cy="30" r="5" fill="#173f5f"/>`,
+
+/* 31 */
+`<rect x="18" y="18" width="64" height="64" fill="none"/>
+ <circle cx="65" cy="65" r="12"/>
+ <path d="M18 38 H48" fill="none" stroke-width="4"/>`,
+
+/* 32 */
+`<path d="M18 82 L50 18 L82 82 Z" fill="none"/>
+ <path d="M34 51 H60" fill="none" stroke-width="4"/>
+ <circle cx="65" cy="67" r="5" fill="#173f5f"/>`,
+
+/* 33 */
+`<circle cx="50" cy="31" r="15"/>
+ <circle cx="50" cy="68" r="22"/>
+ <circle cx="69" cy="60" r="5" fill="#173f5f"/>`,
+
+/* 34 */
+`<path d="M17 48 A33 33 0 0 1 83 48" fill="none" stroke-width="5"/>
+ <path d="M50 48 V83 H72" fill="none" stroke-width="4"/>
+ <circle cx="31" cy="35" r="5" fill="#173f5f"/>`,
+
+/* 35 */
+`<path d="M18 18 H38 V38 H58 V58 H82 V82 H18 Z"/>
+ <circle cx="68" cy="28" r="5" fill="#173f5f"/>`,
+
+/* 36 */
+`<path d="M20 22 C80 12 80 44 48 45 C18 46 24 76 80 80"
+ fill="none" stroke-width="5"/>
+ <circle cx="28" cy="34" r="5" fill="#173f5f"/>`,
+
+/* 37 */
+`<path d="M28 16 V84 M72 16 V84 M28 29 H60 M28 47 H72 M40 65 H72"
+ fill="none" stroke-width="4"/>
+ <circle cx="60" cy="29" r="4" fill="#173f5f"/>`,
+
+/* 38 */
+`<path d="M17 43 L50 18 L83 43 V82 H17 Z"/>
+ <path d="M62 29 V13 H74 V36" fill="none" stroke-width="4"/>
+ <rect x="27" y="53" width="15" height="29" fill="#f7f9fc"/>`,
+
+/* 39 */
+`<circle cx="29" cy="34" r="14" fill="none"/>
+ <path d="M42 34 H82 V48 H69 V61 H57 V48 H42" fill="none" stroke-width="5"/>
+ <circle cx="29" cy="34" r="4" fill="#173f5f"/>`,
+
+/* 40 */
+`<path d="M42 14 H58 V39 H82 V55 H58 V84 H42 V55 H18 V39 H42 Z"/>
+ <path d="M58 55 H73" fill="none" stroke-width="4"/>`,
+
+/* 41 */
+`<path d="M50 82 L20 53 C-1 29 28 10 50 32 C72 10 101 29 80 53 Z"/>
+ <circle cx="66" cy="45" r="5" fill="#173f5f"/>`,
+
+/* 42 */
+`<path d="M65 15 A34 34 0 1 0 79 69 A27 27 0 0 1 65 15 Z"/>
+ <path d="M25 70 H45" fill="none" stroke-width="4"/>
+ <circle cx="39" cy="32" r="5" fill="#173f5f"/>`,
+
+/* 43 */
+`<path d="M18 18 L55 50 L18 82" fill="none" stroke-width="5"/>
+ <path d="M55 50 H82" fill="none" stroke-width="5"/>
+ <circle cx="72" cy="29" r="5" fill="#173f5f"/>`,
+
+/* 44 */
+`<path d="M28 16 H72 L84 82 H16 Z"/>
+ <path d="M22 50 H64 V68" fill="none" stroke-width="4"/>
+ <circle cx="70" cy="32" r="5" fill="#173f5f"/>`,
+
+/* 45 */
+`<path d="M35 15 H65 L84 50 L65 84 H35 L16 50 Z" fill="none"/>
+ <rect x="24" y="42" width="14" height="14"/>
+ <path d="M65 15 V38" fill="none" stroke-width="4"/>`,
+
+/* 46 */
+`<circle cx="50" cy="50" r="34" fill="none"/>
+ <path d="M35 65 L48 32 L67 65 Z"/>
+ <circle cx="66" cy="34" r="4" fill="#173f5f"/>`,
+
+/* 47 */
+`<path d="M20 36 H59 V20 L84 45 L59 68 V52 H20 Z" fill="none"/>
+ <circle cx="20" cy="36" r="8" fill="#d9eaf7"/>`,
+
+/* 48 */
+`<path d="M15 44 A35 35 0 0 1 85 44 Z"/>
+ <path d="M50 44 V74 Q50 84 64 84" fill="none" stroke-width="4"/>
+ <circle cx="29" cy="35" r="5" fill="#173f5f"/>`,
+
+/* 49 */
+`<path d="M24 15 V84" fill="none" stroke-width="4"/>
+ <path d="M26 18 H80 L63 36 H26 Z"/>
+ <path d="M26 45 H62 L48 61 H26 Z"/>`,
+
+/* 50 */
+`<path d="M18 18 H82 V82 H18 Z" fill="none"/>
+ <path d="M18 40 H62 M40 18 V82" fill="none" stroke-width="4"/>
+ <circle cx="67" cy="29" r="5" fill="#173f5f"/>
+ <circle cx="28" cy="68" r="5" fill="#173f5f"/>`
+
+];
+
+
+/* =========================================================
+   TRANSFORMATIONS
+   ========================================================= */
+
+const transformations = {
+
+    water:{
+        transform:"translate(0 100) scale(1 -1)"
+    },
+
+    original:{
+        transform:""
+    },
+
+    mirror:{
+        transform:"translate(100 0) scale(-1 1)"
+    },
+
+    rotate:{
+        transform:"rotate(180 50 50)"
+    }
+
+};
+
+
+/* Correct water-image position varies by question */
+
+const optionOrders = [
+
+    ["water","original","mirror","rotate"],
+    ["mirror","water","rotate","original"],
+    ["rotate","mirror","original","water"],
+    ["original","rotate","water","mirror"],
+    ["water","rotate","original","mirror"],
+    ["mirror","rotate","water","original"],
+    ["original","water","mirror","rotate"],
+    ["rotate","water","mirror","original"]
+
+];
+
+
+/* =========================================================
+   CREATE EXACTLY 50 QUESTIONS
+   ========================================================= */
+
+const questions = figures.map((figure,index)=>{
+
+    const order = optionOrders[index % optionOrders.length];
+
+    return {
+
+        part:Math.floor(index/10)+1,
+
+        figure:figure,
+
+        options:order,
+
+        answer:order.indexOf("water"),
+
+        solution:
+        "A water image is formed by reflecting the figure across a horizontal line. The top and bottom positions interchange, but the left and right positions remain unchanged. / जल-छवि में आकृति का क्षैतिज अक्ष पर प्रतिबिंब बनता है। ऊपर और नीचे की स्थिति बदलती है, लेकिन बायाँ और दायाँ भाग नहीं बदलता।"
+
+    };
+
+});
+
+
+/* =========================================================
+   SVG FIGURE GENERATOR
+   ========================================================= */
+
+function makeFigureSVG(figure,transform=""){
+
+    return `
+
+    <svg viewBox="0 0 100 100"
+         xmlns="http://www.w3.org/2000/svg"
+         role="img"
+         aria-label="Geometrical figure">
+
+        <g transform="${transform}"
+           fill="#d9eaf7"
+           stroke="#173f5f"
+           stroke-width="3"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+            ${figure}
+
+        </g>
+
+    </svg>
+
+    `;
+
+}
+
+
+/* =========================================================
+   RENDER QUESTIONS
+   ========================================================= */
+
+const questionContainer =
+document.getElementById("questions");
+
+questions.forEach((item,index)=>{
+
+    if(index % 10 === 0){
+
+        const partTitle =
+        document.createElement("div");
+
+        partTitle.className = "part-title";
+
+        partTitle.textContent =
+        `Water Image Practice — Part ${item.part} (Questions ${index+1}–${index+10})`;
+
+        questionContainer.appendChild(partTitle);
+
+    }
+
+
+    const card =
+    document.createElement("div");
+
+    card.className = "question-card";
+
+
+    let optionsHTML = "";
+
+
+    item.options.forEach((optionType,optIndex)=>{
+
+        const transform =
+        transformations[optionType].transform;
+
+        optionsHTML += `
+
+        <div class="option"
+             data-question="${index}"
+             data-option="${optIndex}"
+             onclick="selectAnswer(${index},${optIndex})">
+
+            <strong>${String.fromCharCode(65+optIndex)}.</strong>
+
+            ${makeFigureSVG(item.figure,transform)}
+
+        </div>
+
+        `;
+
+    });
+
+
+    card.innerHTML = `
+
+        <div class="question">
+            Q${index+1}. Choose the correct water image of the given figure.
+        </div>
+
+        <div class="hindi">
+            दी गई आकृति की सही जल-छवि चुनिए।
+        </div>
+
+        <div class="diagram-box given-figure">
+
+            ${makeFigureSVG(item.figure)}
+
+        </div>
+
+        <div class="options">
+
+            ${optionsHTML}
+
+        </div>
+
+        <div class="solution" id="solution-${index}">
+
+            <strong>Correct Answer / सही उत्तर:</strong>
+            <span id="answer-${index}"></span>
+
+            <br><br>
+
+            <strong>Solution / समाधान:</strong>
+
+            <br>
+
+            ${item.solution}
+
+        </div>
+
+    `;
+
+
+    questionContainer.appendChild(card);
+
+});
+
+
+/* =========================================================
+   TEST LOGIC
+   ========================================================= */
+
+let attemptedCount = 0;
+
+let correctCount = 0;
+
+let wrongCount = 0;
+
+const answered =
+new Array(questions.length).fill(false);
+
+
+function selectAnswer(questionIndex,selectedIndex){
+
+    if(answered[questionIndex]){
+        return;
+    }
+
+    answered[questionIndex] = true;
+
+    attemptedCount++;
+
+
+    const question =
+    questions[questionIndex];
+
+
+    const allOptions =
+    document.querySelectorAll(
+        `.option[data-question="${questionIndex}"]`
+    );
+
+
+    allOptions.forEach(option=>{
+
+        option.classList.add("disabled");
+
+    });
+
+
+    const selectedOption =
+    document.querySelector(
+        `.option[data-question="${questionIndex}"][data-option="${selectedIndex}"]`
+    );
+
+
+    const correctOption =
+    document.querySelector(
+        `.option[data-question="${questionIndex}"][data-option="${question.answer}"]`
+    );
+
+
+    if(selectedIndex === question.answer){
+
+        correctCount++;
+
+        selectedOption.classList.add("correct");
+
+    }else{
+
+        wrongCount++;
+
+        selectedOption.classList.add("wrong");
+
+        correctOption.classList.add("correct");
+
+    }
+
+
+    document.getElementById(
+        `answer-${questionIndex}`
+    ).textContent =
+    `Option ${String.fromCharCode(65+question.answer)}.`;
+
+
+    document.getElementById(
+        `solution-${questionIndex}`
+    ).style.display = "block";
+
+
+    updateScore();
+
+}
+
+
+/* =========================================================
+   SCORE CALCULATION
+   ========================================================= */
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+    `${correctCount} / ${questions.length}`;
+
+
+    document.getElementById("correct").textContent =
+    correctCount;
+
+
+    document.getElementById("wrong").textContent =
+    wrongCount;
+
+
+    document.getElementById("attempted").textContent =
+    attemptedCount;
+
+
+    document.getElementById("marks").textContent =
+    correctCount;
+
+}
+
+
+/* =========================================================
+   RESET TEST
+   ========================================================= */
+
+function resetTest(){
+
+    attemptedCount = 0;
+
+    correctCount = 0;
+
+    wrongCount = 0;
+
+
+    for(let i=0;i<answered.length;i++){
+
+        answered[i] = false;
+
+    }
+
+
+    document.querySelectorAll(".option").forEach(option=>{
+
+        option.classList.remove(
+            "correct",
+            "wrong",
+            "disabled"
+        );
+
+    });
+
+
+    document.querySelectorAll(".solution").forEach(solution=>{
+
+        solution.style.display = "none";
+
+    });
+
+
+    updateScore();
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
