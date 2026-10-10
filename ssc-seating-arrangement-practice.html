@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Seating Arrangement Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+header{
+    background:#102a43;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:18px 20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:0.5px;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    text-align:center;
+    padding:58px 20px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    max-width:1050px;
+    margin:40px auto;
+    padding:0 18px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #d9e2ec;
+    box-shadow:0 3px 12px rgba(16,42,67,0.08);
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro p{
+    margin-bottom:8px;
+}
+
+.intro ul{
+    margin:12px 0 0 22px;
+}
+
+.intro li{
+    margin-bottom:5px;
+}
+
+.rules{
+    background:#eef6fb;
+    border-left:5px solid #173f5f;
+    padding:20px;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+.rules h3{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.rules ul{
+    margin-left:20px;
+}
+
+.rules li{
+    margin-bottom:6px;
+}
+
+.section-title{
+    color:#102a43;
+    text-align:center;
+    margin:35px 0 20px;
+    font-size:28px;
+}
+
+.category-title{
+    background:#173f5f;
+    color:white;
+    padding:13px 18px;
+    border-radius:9px;
+    margin:35px 0 18px;
+    font-size:21px;
+}
+
+.question{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 3px 10px rgba(16,42,67,0.06);
+}
+
+.q-number{
+    color:#102a43;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.q-text{
+    font-size:16px;
+    font-weight:600;
+    color:#243b53;
+    margin-bottom:14px;
+    white-space:pre-line;
+}
+
+.hindi-text{
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid #d9e2ec;
+    font-size:16px;
+    font-weight:600;
+    color:#52606d;
+    white-space:pre-line;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.option{
+    border:1px solid #d9e2ec;
+    background:#f7f9fc;
+    padding:11px 13px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.2s;
+    font-size:15px;
+    user-select:none;
+}
+
+.option:hover{
+    background:#d9eaf7;
+    border-color:#829ab1;
+}
+
+.option.correct{
+    background:#d9f2df;
+    border-color:#3a7d44;
+    color:#24552d;
+    font-weight:bold;
+}
+
+.option.wrong{
+    background:#fde2e2;
+    border-color:#c94c4c;
+    color:#8a2020;
+    font-weight:bold;
+}
+
+.option-hindi{
+    display:block;
+    margin-top:4px;
+    color:#52606d;
+    font-size:14px;
+}
+
+.answer-box{
+    display:none;
+    margin-top:18px;
+    padding:16px;
+    background:#eef6fb;
+    border-left:4px solid #173f5f;
+    border-radius:7px;
+}
+
+.answer-box.show{
+    display:block;
+}
+
+.answer-title{
+    color:#102a43;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.answer-hindi{
+    color:#52606d;
+    margin-bottom:10px;
+}
+
+.solution-text{
+    margin-top:6px;
+}
+
+.solution-hindi{
+    margin-top:8px;
+    color:#52606d;
+}
+
+.result-box{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+    margin:35px 0;
+    box-shadow:0 3px 12px rgba(16,42,67,0.08);
+}
+
+.result-box h2{
+    color:#102a43;
+    margin-bottom:18px;
+}
+
+.score-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin:20px 0;
+}
+
+.score-box{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:9px;
+    padding:15px 10px;
+}
+
+.score-box strong{
+    display:block;
+    color:#102a43;
+    font-size:24px;
+    margin-bottom:4px;
+}
+
+.score-box span{
+    color:#52606d;
+    font-size:14px;
+}
+
+.result-message{
+    font-size:16px;
+    font-weight:600;
+    margin-top:15px;
+}
+
+.result-details{
+    margin-top:12px;
+    font-size:15px;
+    color:#52606d;
+}
+
+button{
+    border:none;
+    background:#102a43;
+    color:white;
+    padding:12px 22px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#173f5f;
+}
+
+.note{
+    background:white;
+    border-left:5px solid #829ab1;
+    padding:18px;
+    border-radius:8px;
+    margin:30px 0;
+}
+
+.back-button{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:7px;
+    font-weight:bold;
+    margin:10px 0 40px;
+}
+
+.back-button:hover{
+    background:#173f5f;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+    margin-top:40px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+        gap:10px 14px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    .section-title{
+        font-size:24px;
+    }
+
+    .category-title{
+        font-size:19px;
+    }
+
+    .score-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+LET'S QUALIFYNOW
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="study-material.html">Study Material</a>
+<a href="live-classes.html">Live Classes</a>
+<a href="test-series.html">Test Series</a>
+<a href="exams.html">Exams</a>
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>🪑 SSC Seating Arrangement Practice</h1>
+
+<p>
+50 Exam-Oriented Questions with Answers &amp; Detailed Solutions
+<br>
+SSC Seating Arrangement के 50 परीक्षा-उन्मुख प्रश्न, उत्तर एवं विस्तृत समाधान
+</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="intro">
+
+<h2>SSC Seating Arrangement Practice Set</h2>
+
+<p>
+This practice set covers important Seating Arrangement patterns
+asked in SSC and other Government Exams.
+</p>
+
+<p>
+<strong>यह Practice Set SSC और अन्य Government Exams में पूछे जाने वाले
+महत्वपूर्ण Seating Arrangement patterns को cover करता है।</strong>
+</p>
+
+<ul>
+
+<li>
+<strong>Linear Seating Arrangement</strong> — Single Row &amp; Position Based Questions
+<br>
+<strong>Linear Seating Arrangement</strong> — एक पंक्ति एवं Position Based Questions
+</li>
+
+<li>
+<strong>Facing Direction</strong> — North/South Facing Arrangements
+<br>
+<strong>Facing Direction</strong> — North/South की ओर मुख करके बैठने की व्यवस्था
+</li>
+
+<li>
+<strong>Circular Seating Arrangement</strong> — Clockwise &amp; Anticlockwise Positions
+<br>
+<strong>Circular Seating Arrangement</strong> — Clockwise एवं Anticlockwise Positions
+</li>
+
+<li>
+<strong>Mixed Arrangement</strong> — Multiple Conditions &amp; Position Questions
+<br>
+<strong>Mixed Arrangement</strong> — Multiple Conditions एवं Position Questions
+</li>
+
+</ul>
+
+<p style="margin-top:12px;">
+<strong>Total Questions:</strong> 46
+&nbsp; | &nbsp;
+<strong>Level:</strong> SSC Exam Standard
+<br>
+<strong>कुल प्रश्न:</strong> 46
+&nbsp; | &nbsp;
+<strong>स्तर:</strong> SSC Exam Standard
+</p>
+
+
+<div class="rules">
+
+<h3>📌 Important Seating Arrangement Rules / महत्वपूर्ण नियम</h3>
+
+<ul>
+
+<li>
+सबसे पहले सभी persons की संख्या और उनकी facing direction identify करें।
+</li>
+
+<li>
+Left और Right का अर्थ व्यक्ति के facing direction के अनुसार तय करें।
+</li>
+
+<li>
+Linear arrangement में एक निश्चित position को reference point बनाकर arrangement करें।
+</li>
+
+<li>
+North की ओर face करने वाले व्यक्ति का left पश्चिम और right पूर्व होगा।
+</li>
+
+<li>
+South की ओर face करने वाले व्यक्ति का left पूर्व और right पश्चिम होगा।
+</li>
+
+<li>
+Circular arrangement में centre की ओर face करने पर left clockwise और right anticlockwise होता है।
+</li>
+
+<li>
+सभी conditions को एक साथ verify करने के बाद answer select करें।
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<h2 class="section-title">
+Practice Questions / अभ्यास प्रश्न
+</h2>
+
+
+<div class="category-title">
+🪑 Part 1 — Linear Seating Arrangement
+<br>
+🪑 भाग 1 — Linear Seating Arrangement
+</div>
+
+<div id="linear"></div>
+
+
+<div class="category-title">
+↔️ Part 2 — Facing Direction &amp; Position
+<br>
+↔️ भाग 2 — Facing Direction एवं Position
+</div>
+
+<div id="facing"></div>
+
+
+<div class="category-title">
+🔄 Part 3 — Circular Seating Arrangement
+<br>
+🔄 भाग 3 — Circular Seating Arrangement
+</div>
+
+<div id="circular"></div>
+
+
+<div class="category-title">
+🧩 Part 4 — Mixed Seating Arrangement
+<br>
+🧩 भाग 4 — Mixed Seating Arrangement
+</div>
+
+<div id="mixed"></div>
+
+
+<!-- RESULT -->
+
+<div class="result-box">
+
+<h2>
+📊 Your Practice Result
+<br>
+आपका Practice Result
+</h2>
+
+<div class="score-grid">
+
+<div class="score-box">
+<strong id="score">0 / 46</strong>
+<span>Score / अंक</span>
+</div>
+
+<div class="score-box">
+<strong id="attempted">0</strong>
+<span>Attempted / प्रयास किए</span>
+</div>
+
+<div class="score-box">
+<strong id="correct">0</strong>
+<span>Correct / सही</span>
+</div>
+
+<div class="score-box">
+<strong id="wrong">0</strong>
+<span>Wrong / गलत</span>
+</div>
+
+</div>
+
+<div class="result-message" id="resultMessage">
+Attempt the questions to see your score.
+<br>
+अपना score देखने के लिए questions attempt करें।
+</div>
+
+<div class="result-details" id="resultDetails"></div>
+
+<button type="button" id="resetPractice">
+🔄 Reset Practice / पुनः शुरू करें
+</button>
+
+</div>
+
+
+<div class="note">
+
+<strong>💡 Note / नोट:</strong>
+
+<br><br>
+
+Seating Arrangement questions को solve करते समय पहले सभी conditions
+को carefully पढ़ें। Diagram बनाकर positions mark करें और उसके बाद
+question solve करें। केवल एक condition के आधार पर answer decide न करें।
+
+<br><br>
+
+Seating Arrangement questions को हल करते समय सभी conditions को ध्यान से
+पढ़ें। Diagram बनाकर positions mark करें और उसके बाद question solve करें।
+केवल एक condition के आधार पर answer decide न करें।
+
+</div>
+
+
+<a href="ssc-topic-wise-practice.html" class="back-button">
+← Back to SSC Topic-wise Practice
+</a>
+
+</div>
+
+
+<footer>
+
+<p><strong>LET'S QUALIFYNOW</strong></p>
+
+<p>
+N Saurabh Sir — Reasoning Faculty
+</p>
+
+<p>
+SSC • Banking • Railway • Government Exams
+</p>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   QUESTIONS
+   ENGLISH CONTENT KE SAATH HINDI ADD KI GAYI HAI
+========================================================= */
+
+const questions = [
+
+/* =========================================================
+   PART 1 — LINEAR SEATING
+========================================================= */
+
+{
+section:"linear",
+
+q:`Five persons A, B, C, D and E are sitting in a row facing North.
+A sits at the extreme left. B sits immediately to the right of A.
+C sits immediately to the right of B. D sits immediately to the right of C.
+Who sits at the extreme right?`,
+
+h:`पाँच व्यक्ति A, B, C, D और E उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+A सबसे बाईं ओर बैठा है। B, A के ठीक दाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है। D, C के ठीक दाईं ओर बैठा है।
+सबसे दाईं ओर कौन बैठा है?`,
+
+options:["A","B","D","E"],
+optionHindi:["A","B","D","E"],
+
+answer:"E",
+
+solution:"The arrangement is A – B – C – D – E. Therefore, E sits at the extreme right.",
+
+solutionHindi:"व्यवस्था A – B – C – D – E है। इसलिए E सबसे दाईं ओर बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Six persons P, Q, R, S, T and U are sitting in a row facing North.
+P sits at the extreme left and U at the extreme right.
+Q sits immediately to the right of P.
+R sits immediately to the right of Q.
+Who sits between R and U?`,
+
+h:`छह व्यक्ति P, Q, R, S, T और U उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+P सबसे बाईं ओर और U सबसे दाईं ओर बैठा है।
+Q, P के ठीक दाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+R और U के बीच कौन बैठा है?`,
+
+options:["P","S","T","Q"],
+optionHindi:["P","S","T","Q"],
+answer:"S",
+solution:"The arrangement is P – Q – R – S – T – U. Therefore, S and T are between R and U. Among the options, S is the correct answer.",
+solutionHindi:"व्यवस्था P – Q – R – S – T – U है। इसलिए R और U के बीच S और T बैठे हैं। दिए गए विकल्पों में S सही उत्तर है।"
+},
+
+{
+section:"linear",
+
+q:`Seven persons A, B, C, D, E, F and G are sitting in a row facing North.
+D sits in the middle.
+A sits immediately to the left of D.
+B sits immediately to the right of D.
+C sits at the extreme left.
+E sits at the extreme right.
+Who sits between C and A?`,
+
+h:`सात व्यक्ति A, B, C, D, E, F और G उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+D बीच में बैठा है।
+A, D के ठीक बाईं ओर बैठा है।
+B, D के ठीक दाईं ओर बैठा है।
+C सबसे बाईं ओर बैठा है।
+E सबसे दाईं ओर बैठा है।
+C और A के बीच कौन बैठा है?`,
+
+options:["B","D","F","G"],
+optionHindi:["B","D","F","G"],
+answer:"F",
+solution:"The positions are C – F – A – D – B – G – E. Therefore, F sits between C and A.",
+solutionHindi:"स्थितियाँ C – F – A – D – B – G – E हैं। इसलिए C और A के बीच F बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Six persons A, B, C, D, E and F are sitting in a row facing North.
+A sits second from the left.
+B sits immediately to the right of A.
+C sits at the extreme right.
+D sits immediately to the left of C.
+Who sits between B and D?`,
+
+h:`छह व्यक्ति A, B, C, D, E और F उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+A बाईं ओर से दूसरे स्थान पर बैठा है।
+B, A के ठीक दाईं ओर बैठा है।
+C सबसे दाईं ओर बैठा है।
+D, C के ठीक बाईं ओर बैठा है।
+B और D के बीच कौन बैठा है?`,
+
+options:["A","C","E","F"],
+optionHindi:["A","C","E","F"],
+answer:"E",
+solution:"The arrangement is F – A – B – E – D – C. Therefore, E sits between B and D.",
+solutionHindi:"व्यवस्था F – A – B – E – D – C है। इसलिए B और D के बीच E बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Eight persons P, Q, R, S, T, U, V and W are sitting in a row facing North.
+P sits at the extreme left.
+Q sits immediately to the right of P.
+W sits at the extreme right.
+V sits immediately to the left of W.
+R sits immediately to the right of Q.
+S sits immediately to the right of R.
+Who sits between S and V?`,
+
+h:`आठ व्यक्ति P, Q, R, S, T, U, V और W उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+P सबसे बाईं ओर बैठा है।
+Q, P के ठीक दाईं ओर बैठा है।
+W सबसे दाईं ओर बैठा है।
+V, W के ठीक बाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+S, R के ठीक दाईं ओर बैठा है।
+S और V के बीच कौन बैठा है?`,
+
+options:["T","U","P","Q"],
+optionHindi:["T","U","P","Q"],
+answer:"T",
+solution:"The arrangement is P – Q – R – S – T – U – V – W. Therefore, T and U lie between S and V. Among the options, T is correct.",
+solutionHindi:"व्यवस्था P – Q – R – S – T – U – V – W है। इसलिए S और V के बीच T और U हैं। दिए गए विकल्पों में T सही है।"
+},
+
+{
+section:"linear",
+
+q:`Five persons K, L, M, N and O are sitting in a row facing North.
+M sits in the middle.
+K sits immediately to the left of M.
+N sits immediately to the right of M.
+Who sits at the extreme right?`,
+
+h:`पाँच व्यक्ति K, L, M, N और O उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+M बीच में बैठा है।
+K, M के ठीक बाईं ओर बैठा है।
+N, M के ठीक दाईं ओर बैठा है।
+सबसे दाईं ओर कौन बैठा है?`,
+
+options:["K","L","N","O"],
+optionHindi:["K","L","N","O"],
+answer:"O",
+solution:"The arrangement is L – K – M – N – O. Therefore, O sits at the extreme right.",
+solutionHindi:"व्यवस्था L – K – M – N – O है। इसलिए O सबसे दाईं ओर बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Seven persons P, Q, R, S, T, U and V are sitting in a row facing North.
+S sits in the middle.
+P sits second to the left of S.
+Q sits immediately to the right of S.
+V sits at the extreme right.
+Who sits between P and S?`,
+
+h:`सात व्यक्ति P, Q, R, S, T, U और V उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+S बीच में बैठा है।
+P, S से दूसरे स्थान पर बाईं ओर बैठा है।
+Q, S के ठीक दाईं ओर बैठा है।
+V सबसे दाईं ओर बैठा है।
+P और S के बीच कौन बैठा है?`,
+
+options:["Q","R","T","U"],
+optionHindi:["Q","R","T","U"],
+answer:"R",
+solution:"The arrangement is T – P – R – S – Q – U – V. Therefore, R sits between P and S.",
+solutionHindi:"व्यवस्था T – P – R – S – Q – U – V है। इसलिए P और S के बीच R बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Six persons A, B, C, D, E and F are sitting in a row facing North.
+C sits third from the left.
+A sits immediately to the left of C.
+B sits immediately to the right of C.
+F sits at the extreme right.
+Who sits between B and F?`,
+
+h:`छह व्यक्ति A, B, C, D, E और F उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+C बाईं ओर से तीसरे स्थान पर बैठा है।
+A, C के ठीक बाईं ओर बैठा है।
+B, C के ठीक दाईं ओर बैठा है।
+F सबसे दाईं ओर बैठा है।
+B और F के बीच कौन बैठा है?`,
+
+options:["A","D","E","C"],
+optionHindi:["A","D","E","C"],
+answer:"D",
+solution:"The arrangement is E – A – C – B – D – F. Therefore, D sits between B and F.",
+solutionHindi:"व्यवस्था E – A – C – B – D – F है। इसलिए B और F के बीच D बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Eight persons A, B, C, D, E, F, G and H are sitting in a row facing North.
+A and H sit at the two extremes.
+B sits immediately to the right of A.
+C sits immediately to the right of B.
+D sits immediately to the right of C.
+E sits immediately to the right of D.
+Who sits immediately to the left of H?`,
+
+h:`आठ व्यक्ति A, B, C, D, E, F, G और H उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+A और H दोनों छोरों पर बैठे हैं।
+B, A के ठीक दाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+D, C के ठीक दाईं ओर बैठा है।
+E, D के ठीक दाईं ओर बैठा है।
+H के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["D","E","F","G"],
+optionHindi:["D","E","F","G"],
+answer:"G",
+solution:"The arrangement is A – B – C – D – E – F – G – H. Therefore, G sits immediately to the left of H.",
+solutionHindi:"व्यवस्था A – B – C – D – E – F – G – H है। इसलिए H के ठीक बाईं ओर G बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Seven persons A, B, C, D, E, F and G are sitting in a row facing North.
+A sits at the extreme left.
+G sits at the extreme right.
+B sits second from the left.
+F sits second from the right.
+C sits immediately to the right of B.
+Who sits between C and F?`,
+
+h:`सात व्यक्ति A, B, C, D, E, F और G उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+A सबसे बाईं ओर बैठा है।
+G सबसे दाईं ओर बैठा है।
+B बाईं ओर से दूसरे स्थान पर बैठा है।
+F दाईं ओर से दूसरे स्थान पर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+C और F के बीच कौन बैठा है?`,
+
+options:["D","E","A","G"],
+optionHindi:["D","E","A","G"],
+answer:"D",
+solution:"The arrangement is A – B – C – D – E – F – G. Therefore, D and E are between C and F. Among the options, D is correct.",
+solutionHindi:"व्यवस्था A – B – C – D – E – F – G है। इसलिए C और F के बीच D और E हैं। दिए गए विकल्पों में D सही है।"
+},
+
+{
+section:"linear",
+
+q:`Five persons P, Q, R, S and T are sitting in a row facing North.
+Q sits in the middle.
+P sits immediately to the left of Q.
+R sits immediately to the right of Q.
+Who sits at the extreme left?`,
+
+h:`पाँच व्यक्ति P, Q, R, S और T उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+Q बीच में बैठा है।
+P, Q के ठीक बाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+सबसे बाईं ओर कौन बैठा है?`,
+
+options:["P","Q","S","T"],
+optionHindi:["P","Q","S","T"],
+answer:"S",
+solution:"The arrangement is S – P – Q – R – T. Therefore, S sits at the extreme left.",
+solutionHindi:"व्यवस्था S – P – Q – R – T है। इसलिए S सबसे बाईं ओर बैठा है।"
+},
+
+{
+section:"linear",
+
+q:`Six persons K, L, M, N, O and P are sitting in a row facing North.
+K sits at the extreme left.
+P sits at the extreme right.
+L sits immediately to the right of K.
+M sits immediately to the right of L.
+N sits immediately to the right of M.
+Who sits between N and P?`,
+
+h:`छह व्यक्ति K, L, M, N, O और P उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+K सबसे बाईं ओर बैठा है।
+P सबसे दाईं ओर बैठा है।
+L, K के ठीक दाईं ओर बैठा है।
+M, L के ठीक दाईं ओर बैठा है।
+N, M के ठीक दाईं ओर बैठा है।
+N और P के बीच कौन बैठा है?`,
+
+options:["L","M","O","K"],
+optionHindi:["L","M","O","K"],
+answer:"O",
+solution:"The arrangement is K – L – M – N – O – P. Therefore, O sits between N and P.",
+solutionHindi:"व्यवस्था K – L – M – N – O – P है। इसलिए N और P के बीच O बैठा है।"
+},
+
+/* =========================================================
+   PART 2 — FACING DIRECTION
+========================================================= */
+
+{
+section:"facing",
+
+q:`Five persons A, B, C, D and E are sitting in a row.
+A, B and C face North, while D and E face South.
+A sits to the left of B.
+C sits to the right of B.
+D sits to the right of C.
+Who is immediately to the right of B?`,
+
+h:`पाँच व्यक्ति A, B, C, D और E एक पंक्ति में बैठे हैं।
+A, B और C उत्तर दिशा की ओर तथा D और E दक्षिण दिशा की ओर मुख किए हुए हैं।
+A, B के बाईं ओर बैठा है।
+C, B के दाईं ओर बैठा है।
+D, C के दाईं ओर बैठा है।
+B के ठीक दाईं ओर कौन है?`,
+
+options:["A","C","D","E"],
+optionHindi:["A","C","D","E"],
+answer:"C",
+solution:"The position sequence is A – B – C – D – E. Since B faces North, the person immediately to B's right is C.",
+solutionHindi:"स्थिति क्रम A – B – C – D – E है। B उत्तर दिशा की ओर मुख किए हुए है, इसलिए B के ठीक दाईं ओर C है।"
+},
+
+{
+section:"facing",
+
+q:`Six persons P, Q, R, S, T and U are sitting in a row.
+P, Q and R face North, while S, T and U face South.
+Q sits between P and R.
+S sits immediately to the right of R.
+Who sits immediately to the left of R in the row?`,
+
+h:`छह व्यक्ति P, Q, R, S, T और U एक पंक्ति में बैठे हैं।
+P, Q और R उत्तर दिशा तथा S, T और U दक्षिण दिशा की ओर मुख किए हुए हैं।
+Q, P और R के बीच बैठा है।
+S, R के ठीक दाईं ओर बैठा है।
+पंक्ति में R के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["P","Q","S","T"],
+optionHindi:["P","Q","S","T"],
+answer:"Q",
+solution:"Q is stated to be between P and R. Therefore, Q is immediately to the left of R in the row.",
+solutionHindi:"दिया गया है कि Q, P और R के बीच है। इसलिए पंक्ति में R के ठीक बाईं ओर Q बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Seven persons A, B, C, D, E, F and G are sitting in a row.
+A, B, C and D face North.
+E, F and G face South.
+A sits at the extreme left and G at the extreme right.
+B sits immediately to the right of A.
+C sits immediately to the right of B.
+Who sits immediately to the left of D?`,
+
+h:`सात व्यक्ति A, B, C, D, E, F और G एक पंक्ति में बैठे हैं।
+A, B, C और D उत्तर दिशा तथा E, F और G दक्षिण दिशा की ओर मुख किए हुए हैं।
+A सबसे बाईं ओर और G सबसे दाईं ओर बैठा है।
+B, A के ठीक दाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+D के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["B","C","E","F"],
+optionHindi:["B","C","E","F"],
+answer:"C",
+solution:"The arrangement starts A – B – C – D. Therefore, C sits immediately to the left of D.",
+solutionHindi:"व्यवस्था A – B – C – D से शुरू होती है। इसलिए D के ठीक बाईं ओर C बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Six persons A, B, C, D, E and F are sitting in a row.
+A, C and E face North.
+B, D and F face South.
+A sits at the extreme left.
+F sits at the extreme right.
+B sits immediately to the right of A.
+C sits immediately to the right of B.
+Who sits immediately to the right of C?`,
+
+h:`छह व्यक्ति A, B, C, D, E और F एक पंक्ति में बैठे हैं।
+A, C और E उत्तर दिशा तथा B, D और F दक्षिण दिशा की ओर मुख किए हुए हैं।
+A सबसे बाईं ओर बैठा है।
+F सबसे दाईं ओर बैठा है।
+B, A के ठीक दाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+C के ठीक दाईं ओर कौन बैठा है?`,
+
+options:["B","D","E","F"],
+optionHindi:["B","D","E","F"],
+answer:"D",
+solution:"The arrangement is A – B – C – D – E – F. Therefore, D sits immediately to the right of C.",
+solutionHindi:"व्यवस्था A – B – C – D – E – F है। इसलिए C के ठीक दाईं ओर D बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Five persons P, Q, R, S and T are sitting in a row.
+P and Q face North, while R, S and T face South.
+Q sits immediately to the right of P.
+R sits immediately to the right of Q.
+Who sits immediately to the left of R?`,
+
+h:`पाँच व्यक्ति P, Q, R, S और T एक पंक्ति में बैठे हैं।
+P और Q उत्तर दिशा तथा R, S और T दक्षिण दिशा की ओर मुख किए हुए हैं।
+Q, P के ठीक दाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+R के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["P","Q","S","T"],
+optionHindi:["P","Q","S","T"],
+answer:"Q",
+solution:"The row is P – Q – R – S – T. Therefore, Q is immediately to the left of R.",
+solutionHindi:"पंक्ति P – Q – R – S – T है। इसलिए R के ठीक बाईं ओर Q बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Seven persons K, L, M, N, O, P and Q are sitting in a row.
+K, L and M face North.
+N, O, P and Q face South.
+N sits immediately to the right of M.
+O sits immediately to the right of N.
+Who sits immediately to the left of O?`,
+
+h:`सात व्यक्ति K, L, M, N, O, P और Q एक पंक्ति में बैठे हैं।
+K, L और M उत्तर दिशा तथा N, O, P और Q दक्षिण दिशा की ओर मुख किए हुए हैं।
+N, M के ठीक दाईं ओर बैठा है।
+O, N के ठीक दाईं ओर बैठा है।
+O के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["M","N","P","Q"],
+optionHindi:["M","N","P","Q"],
+answer:"N",
+solution:"The sequence contains M – N – O. Therefore, N sits immediately to the left of O.",
+solutionHindi:"क्रम M – N – O है। इसलिए O के ठीक बाईं ओर N बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Six persons A, B, C, D, E and F are sitting in a row.
+A and B face North.
+C and D face South.
+E and F face North.
+A sits immediately to the left of B.
+C sits immediately to the right of B.
+D sits immediately to the right of C.
+Who sits immediately to the left of C?`,
+
+h:`छह व्यक्ति A, B, C, D, E और F एक पंक्ति में बैठे हैं।
+A और B उत्तर दिशा, C और D दक्षिण दिशा तथा E और F उत्तर दिशा की ओर मुख किए हुए हैं।
+A, B के ठीक बाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+D, C के ठीक दाईं ओर बैठा है।
+C के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["A","B","D","E"],
+optionHindi:["A","B","D","E"],
+answer:"B",
+solution:"The arrangement contains A – B – C – D. Therefore, B sits immediately to the left of C.",
+solutionHindi:"व्यवस्था A – B – C – D है। इसलिए C के ठीक बाईं ओर B बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Eight persons P, Q, R, S, T, U, V and W are sitting in a row.
+P, Q, R and S face North.
+T, U, V and W face South.
+P sits at the extreme left.
+W sits at the extreme right.
+Q sits immediately to the right of P.
+R sits immediately to the right of Q.
+Who sits immediately to the right of R?`,
+
+h:`आठ व्यक्ति P, Q, R, S, T, U, V और W एक पंक्ति में बैठे हैं।
+P, Q, R और S उत्तर दिशा तथा T, U, V और W दक्षिण दिशा की ओर मुख किए हुए हैं।
+P सबसे बाईं ओर बैठा है।
+W सबसे दाईं ओर बैठा है।
+Q, P के ठीक दाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+R के ठीक दाईं ओर कौन बैठा है?`,
+
+options:["Q","S","T","U"],
+optionHindi:["Q","S","T","U"],
+answer:"S",
+solution:"The sequence starts P – Q – R – S. Therefore, S is immediately to the right of R.",
+solutionHindi:"क्रम P – Q – R – S से शुरू होता है। इसलिए R के ठीक दाईं ओर S है।"
+},
+
+{
+section:"facing",
+
+q:`Five persons A, B, C, D and E are sitting in a row.
+A faces North, B faces South, C faces North, D faces South and E faces North.
+A sits immediately to the left of B.
+C sits immediately to the right of B.
+D sits immediately to the right of C.
+Who sits immediately to the right of C?`,
+
+h:`पाँच व्यक्ति A, B, C, D और E एक पंक्ति में बैठे हैं।
+A उत्तर, B दक्षिण, C उत्तर, D दक्षिण और E उत्तर दिशा की ओर मुख किए हुए हैं।
+A, B के ठीक बाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+D, C के ठीक दाईं ओर बैठा है।
+C के ठीक दाईं ओर कौन बैठा है?`,
+
+options:["B","D","E","A"],
+optionHindi:["B","D","E","A"],
+answer:"D",
+solution:"The row is A – B – C – D – E. Therefore, D sits immediately to the right of C.",
+solutionHindi:"पंक्ति A – B – C – D – E है। इसलिए C के ठीक दाईं ओर D बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Seven persons P, Q, R, S, T, U and V are sitting in a row.
+P and Q face North.
+R, S and T face South.
+U and V face North.
+P sits immediately to the left of Q.
+R sits immediately to the right of Q.
+S sits immediately to the right of R.
+Who sits immediately to the left of S?`,
+
+h:`सात व्यक्ति P, Q, R, S, T, U और V एक पंक्ति में बैठे हैं।
+P और Q उत्तर दिशा, R, S और T दक्षिण दिशा तथा U और V उत्तर दिशा की ओर मुख किए हुए हैं।
+P, Q के ठीक बाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+S, R के ठीक दाईं ओर बैठा है।
+S के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["Q","R","T","U"],
+optionHindi:["Q","R","T","U"],
+answer:"R",
+solution:"The arrangement contains Q – R – S. Therefore, R sits immediately to the left of S.",
+solutionHindi:"व्यवस्था Q – R – S है। इसलिए S के ठीक बाईं ओर R बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Six persons K, L, M, N, O and P are sitting in a row.
+K, L and M face North.
+N, O and P face South.
+K sits at the extreme left.
+P sits at the extreme right.
+L sits immediately to the right of K.
+M sits immediately to the right of L.
+Who sits immediately to the right of M?`,
+
+h:`छह व्यक्ति K, L, M, N, O और P एक पंक्ति में बैठे हैं।
+K, L और M उत्तर दिशा तथा N, O और P दक्षिण दिशा की ओर मुख किए हुए हैं।
+K सबसे बाईं ओर बैठा है।
+P सबसे दाईं ओर बैठा है।
+L, K के ठीक दाईं ओर बैठा है।
+M, L के ठीक दाईं ओर बैठा है।
+M के ठीक दाईं ओर कौन बैठा है?`,
+
+options:["L","N","O","P"],
+optionHindi:["L","N","O","P"],
+answer:"N",
+solution:"The arrangement is K – L – M – N – O – P. Therefore, N sits immediately to the right of M.",
+solutionHindi:"व्यवस्था K – L – M – N – O – P है। इसलिए M के ठीक दाईं ओर N बैठा है।"
+},
+
+{
+section:"facing",
+
+q:`Eight persons A, B, C, D, E, F, G and H are sitting in a row.
+A, B, C and D face North.
+E, F, G and H face South.
+A sits at the extreme left.
+H sits at the extreme right.
+B sits immediately to the right of A.
+C sits immediately to the right of B.
+D sits immediately to the right of C.
+Who sits immediately to the left of E?`,
+
+h:`आठ व्यक्ति A, B, C, D, E, F, G और H एक पंक्ति में बैठे हैं।
+A, B, C और D उत्तर दिशा तथा E, F, G और H दक्षिण दिशा की ओर मुख किए हुए हैं।
+A सबसे बाईं ओर बैठा है।
+H सबसे दाईं ओर बैठा है।
+B, A के ठीक दाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+D, C के ठीक दाईं ओर बैठा है।
+E के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["C","D","F","G"],
+optionHindi:["C","D","F","G"],
+answer:"D",
+solution:"The arrangement is A – B – C – D – E – F – G – H. Therefore, D sits immediately to the left of E.",
+solutionHindi:"व्यवस्था A – B – C – D – E – F – G – H है। इसलिए E के ठीक बाईं ओर D बैठा है।"
+},
+
+/* =========================================================
+   PART 3 — CIRCULAR
+========================================================= */
+
+{
+section:"circular",
+
+q:`Four persons A, B, C and D are sitting around a circle facing the centre.
+A sits opposite C.
+B sits opposite D.
+Who is opposite A?`,
+
+h:`चार व्यक्ति A, B, C और D केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+A, C के सामने बैठा है।
+B, D के सामने बैठा है।
+A के सामने कौन बैठा है?`,
+
+options:["B","C","D","None"],
+optionHindi:["B","C","D","कोई नहीं"],
+answer:"C",
+solution:"In a circle of four persons, opposite positions are paired. Since A is opposite C, the answer is C.",
+solutionHindi:"चार व्यक्तियों के वृत्त में opposite positions की जोड़ी बनती है। चूँकि A, C के सामने है, इसलिए उत्तर C है।"
+},
+
+{
+section:"circular",
+
+q:`Six persons A, B, C, D, E and F are sitting around a circle facing the centre.
+A sits immediately clockwise of B.
+C sits immediately clockwise of A.
+D sits immediately clockwise of C.
+Who sits immediately clockwise of C?`,
+
+h:`छह व्यक्ति A, B, C, D, E और F केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+A, B के ठीक clockwise बैठा है।
+C, A के ठीक clockwise बैठा है।
+D, C के ठीक clockwise बैठा है।
+C के ठीक clockwise कौन बैठा है?`,
+
+options:["A","B","D","E"],
+optionHindi:["A","B","D","E"],
+answer:"D",
+solution:"The clockwise sequence begins B – A – C – D. Therefore, D sits immediately clockwise of C.",
+solutionHindi:"Clockwise क्रम B – A – C – D से शुरू होता है। इसलिए C के ठीक clockwise D बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Six persons P, Q, R, S, T and U are sitting around a circle facing the centre.
+P sits immediately clockwise of Q.
+R sits immediately clockwise of P.
+S sits immediately clockwise of R.
+Who sits immediately anticlockwise of P?`,
+
+h:`छह व्यक्ति P, Q, R, S, T और U केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+P, Q के ठीक clockwise बैठा है।
+R, P के ठीक clockwise बैठा है।
+S, R के ठीक clockwise बैठा है।
+P के ठीक anticlockwise कौन बैठा है?`,
+
+options:["Q","R","S","U"],
+optionHindi:["Q","R","S","U"],
+answer:"Q",
+solution:"The clockwise sequence is Q – P – R – S – T – U. Therefore, Q is immediately anticlockwise of P.",
+solutionHindi:"Clockwise क्रम Q – P – R – S – T – U है। इसलिए P के ठीक anticlockwise Q बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Eight persons A, B, C, D, E, F, G and H are sitting around a circle facing the centre.
+A sits opposite E.
+B sits opposite F.
+C sits opposite G.
+Who is opposite D?`,
+
+h:`आठ व्यक्ति A, B, C, D, E, F, G और H केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+A, E के सामने बैठा है।
+B, F के सामने बैठा है।
+C, G के सामने बैठा है।
+D के सामने कौन बैठा है?`,
+
+options:["A","B","H","C"],
+optionHindi:["A","B","H","C"],
+answer:"H",
+solution:"With eight positions, opposite pairs are separated by four positions. If C is opposite G and B opposite F, the remaining pair D and H are opposite.",
+solutionHindi:"आठ positions में opposite positions के बीच चार स्थान का अंतर होता है। C के सामने G और B के सामने F होने पर बची हुई opposite pair D और H है।"
+},
+
+{
+section:"circular",
+
+q:`Six persons K, L, M, N, O and P are sitting around a circle facing the centre.
+K sits immediately clockwise of L.
+M sits immediately clockwise of K.
+N sits immediately clockwise of M.
+Who sits immediately anticlockwise of K?`,
+
+h:`छह व्यक्ति K, L, M, N, O और P केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+K, L के ठीक clockwise बैठा है।
+M, K के ठीक clockwise बैठा है।
+N, M के ठीक clockwise बैठा है।
+K के ठीक anticlockwise कौन बैठा है?`,
+
+options:["L","M","N","P"],
+optionHindi:["L","M","N","P"],
+answer:"L",
+solution:"The clockwise sequence is L – K – M – N – O – P. Therefore, L is immediately anticlockwise of K.",
+solutionHindi:"Clockwise क्रम L – K – M – N – O – P है। इसलिए K के ठीक anticlockwise L बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Eight persons P, Q, R, S, T, U, V and W are sitting around a circle facing the centre.
+P sits opposite T.
+Q sits opposite U.
+R sits opposite V.
+Who is opposite S?`,
+
+h:`आठ व्यक्ति P, Q, R, S, T, U, V और W केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+P, T के सामने बैठा है।
+Q, U के सामने बैठा है।
+R, V के सामने बैठा है।
+S के सामने कौन बैठा है?`,
+
+options:["P","T","W","R"],
+optionHindi:["P","T","W","R"],
+answer:"W",
+solution:"In eight positions, the remaining opposite pair after P-T, Q-U and R-V is S-W. Therefore, W is opposite S.",
+solutionHindi:"आठ positions में P-T, Q-U और R-V opposite pairs हैं। बची हुई opposite pair S-W है। इसलिए S के सामने W है।"
+},
+
+{
+section:"circular",
+
+q:`Six persons A, B, C, D, E and F are sitting around a circle facing the centre.
+A sits immediately clockwise of B.
+C sits immediately clockwise of A.
+D sits immediately clockwise of C.
+E sits immediately clockwise of D.
+Who sits immediately anticlockwise of E?`,
+
+h:`छह व्यक्ति A, B, C, D, E और F केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+A, B के ठीक clockwise बैठा है।
+C, A के ठीक clockwise बैठा है।
+D, C के ठीक clockwise बैठा है।
+E, D के ठीक clockwise बैठा है।
+E के ठीक anticlockwise कौन बैठा है?`,
+
+options:["C","D","F","A"],
+optionHindi:["C","D","F","A"],
+answer:"D",
+solution:"The clockwise sequence is B – A – C – D – E – F. Therefore, D sits immediately anticlockwise of E.",
+solutionHindi:"Clockwise क्रम B – A – C – D – E – F है। इसलिए E के ठीक anticlockwise D बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Eight persons K, L, M, N, O, P, Q and R are sitting around a circle facing the centre.
+K sits opposite O.
+L sits opposite P.
+M sits opposite Q.
+Who is opposite N?`,
+
+h:`आठ व्यक्ति K, L, M, N, O, P, Q और R केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+K, O के सामने बैठा है।
+L, P के सामने बैठा है।
+M, Q के सामने बैठा है।
+N के सामने कौन बैठा है?`,
+
+options:["K","R","P","Q"],
+optionHindi:["K","R","P","Q"],
+answer:"R",
+solution:"The opposite pairs are K-O, L-P, M-Q and N-R. Therefore, R is opposite N.",
+solutionHindi:"Opposite pairs K-O, L-P, M-Q और N-R हैं। इसलिए N के सामने R बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Six persons P, Q, R, S, T and U are sitting around a circle facing the centre.
+Q sits immediately clockwise of P.
+R sits immediately clockwise of Q.
+S sits immediately clockwise of R.
+T sits immediately clockwise of S.
+Who sits immediately clockwise of T?`,
+
+h:`छह व्यक्ति P, Q, R, S, T और U केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+Q, P के ठीक clockwise बैठा है।
+R, Q के ठीक clockwise बैठा है।
+S, R के ठीक clockwise बैठा है।
+T, S के ठीक clockwise बैठा है।
+T के ठीक clockwise कौन बैठा है?`,
+
+options:["P","Q","U","R"],
+optionHindi:["P","Q","U","R"],
+answer:"U",
+solution:"The clockwise sequence is P – Q – R – S – T – U. Therefore, U sits immediately clockwise of T.",
+solutionHindi:"Clockwise क्रम P – Q – R – S – T – U है। इसलिए T के ठीक clockwise U बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Four persons K, L, M and N are sitting around a circle facing the centre.
+K sits immediately clockwise of L.
+M sits immediately clockwise of K.
+Who sits opposite K?`,
+
+h:`चार व्यक्ति K, L, M और N केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+K, L के ठीक clockwise बैठा है।
+M, K के ठीक clockwise बैठा है।
+K के सामने कौन बैठा है?`,
+
+options:["L","M","N","None"],
+optionHindi:["L","M","N","कोई नहीं"],
+answer:"N",
+solution:"The clockwise arrangement is L – K – M – N. Therefore, N is opposite K.",
+solutionHindi:"Clockwise व्यवस्था L – K – M – N है। इसलिए K के सामने N बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Eight persons A, B, C, D, E, F, G and H are sitting around a circle facing the centre.
+A sits immediately clockwise of B.
+C sits immediately clockwise of A.
+D sits immediately clockwise of C.
+E sits immediately clockwise of D.
+Who sits immediately anticlockwise of A?`,
+
+h:`आठ व्यक्ति A, B, C, D, E, F, G और H केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+A, B के ठीक clockwise बैठा है।
+C, A के ठीक clockwise बैठा है।
+D, C के ठीक clockwise बैठा है।
+E, D के ठीक clockwise बैठा है।
+A के ठीक anticlockwise कौन बैठा है?`,
+
+options:["B","C","H","D"],
+optionHindi:["B","C","H","D"],
+answer:"B",
+solution:"Since A sits immediately clockwise of B, B sits immediately anticlockwise of A.",
+solutionHindi:"चूँकि A, B के ठीक clockwise बैठा है, इसलिए A के ठीक anticlockwise B बैठा है।"
+},
+
+{
+section:"circular",
+
+q:`Six persons P, Q, R, S, T and U are sitting around a circle facing the centre.
+P is opposite S.
+Q is opposite T.
+Who is opposite R?`,
+
+h:`छह व्यक्ति P, Q, R, S, T और U केंद्र की ओर मुख करके एक वृत्त में बैठे हैं।
+P, S के सामने है।
+Q, T के सामने है।
+R के सामने कौन है?`,
+
+options:["P","S","U","Q"],
+optionHindi:["P","S","U","Q"],
+answer:"U",
+solution:"The opposite pairs are P-S, Q-T and R-U. Therefore, U is opposite R.",
+solutionHindi:"Opposite pairs P-S, Q-T और R-U हैं। इसलिए R के सामने U बैठा है।"
+},
+
+/* =========================================================
+   PART 4 — MIXED
+========================================================= */
+
+{
+section:"mixed",
+
+q:`Seven persons A, B, C, D, E, F and G are sitting in a row facing North.
+D sits in the middle.
+A sits immediately to the left of D.
+B sits immediately to the right of D.
+C sits at the extreme left.
+G sits at the extreme right.
+Who sits between A and B?`,
+
+h:`सात व्यक्ति A, B, C, D, E, F और G उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+D बीच में बैठा है।
+A, D के ठीक बाईं ओर बैठा है।
+B, D के ठीक दाईं ओर बैठा है।
+C सबसे बाईं ओर बैठा है।
+G सबसे दाईं ओर बैठा है।
+A और B के बीच कौन बैठा है?`,
+
+options:["C","D","E","F"],
+optionHindi:["C","D","E","F"],
+answer:"D",
+solution:"The arrangement places A immediately left of D and B immediately right of D. Therefore, D sits between A and B.",
+solutionHindi:"A, D के ठीक बाईं ओर और B, D के ठीक दाईं ओर है। इसलिए A और B के बीच D बैठा है।"
+},
+
+{
+section:"mixed",
+
+q:`Six persons P, Q, R, S, T and U are sitting in a row facing North.
+P sits at the extreme left.
+U sits at the extreme right.
+Q sits immediately to the right of P.
+R sits immediately to the right of Q.
+T sits immediately to the left of U.
+Who sits between R and T?`,
+
+h:`छह व्यक्ति P, Q, R, S, T और U उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+P सबसे बाईं ओर बैठा है।
+U सबसे दाईं ओर बैठा है।
+Q, P के ठीक दाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+T, U के ठीक बाईं ओर बैठा है।
+R और T के बीच कौन बैठा है?`,
+
+options:["P","Q","S","U"],
+optionHindi:["P","Q","S","U"],
+answer:"S",
+solution:"The arrangement is P – Q – R – S – T – U. Therefore, S sits between R and T.",
+solutionHindi:"व्यवस्था P – Q – R – S – T – U है। इसलिए R और T के बीच S बैठा है।"
+},
+
+{
+section:"mixed",
+
+q:`Eight persons A, B, C, D, E, F, G and H are sitting in a row facing North.
+A and H are at the two extremes.
+B is immediately right of A.
+C is immediately right of B.
+D is immediately right of C.
+E is immediately right of D.
+Who is third from the right?`,
+
+h:`आठ व्यक्ति A, B, C, D, E, F, G और H उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+A और H दोनों छोरों पर हैं।
+B, A के ठीक दाईं ओर है।
+C, B के ठीक दाईं ओर है।
+D, C के ठीक दाईं ओर है।
+E, D के ठीक दाईं ओर है।
+दाईं ओर से तीसरे स्थान पर कौन है?`,
+
+options:["E","F","G","H"],
+optionHindi:["E","F","G","H"],
+answer:"F",
+solution:"The arrangement is A – B – C – D – E – F – G – H. Counting from the right gives H, G, F. Therefore, F is third from the right.",
+solutionHindi:"व्यवस्था A – B – C – D – E – F – G – H है। दाईं ओर से गिनने पर H, G, F आते हैं। इसलिए F दाईं ओर से तीसरे स्थान पर है।"
+},
+
+{
+section:"mixed",
+
+q:`Five persons K, L, M, N and O are sitting in a row facing North.
+M sits in the middle.
+K sits immediately to the left of M.
+N sits immediately to the right of M.
+Who is second from the left?`,
+
+h:`पाँच व्यक्ति K, L, M, N और O उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+M बीच में बैठा है।
+K, M के ठीक बाईं ओर बैठा है।
+N, M के ठीक दाईं ओर बैठा है।
+बाईं ओर से दूसरे स्थान पर कौन है?`,
+
+options:["K","L","M","N"],
+optionHindi:["K","L","M","N"],
+answer:"K",
+solution:"The arrangement is L – K – M – N – O. Therefore, K is second from the left.",
+solutionHindi:"व्यवस्था L – K – M – N – O है। इसलिए K बाईं ओर से दूसरे स्थान पर है।"
+},
+
+{
+section:"mixed",
+
+q:`Seven persons P, Q, R, S, T, U and V are sitting in a row facing North.
+S sits in the middle.
+P sits immediately to the left of S.
+Q sits immediately to the right of S.
+T sits at the extreme left.
+V sits at the extreme right.
+Who sits immediately to the left of P?`,
+
+h:`सात व्यक्ति P, Q, R, S, T, U और V उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+S बीच में बैठा है।
+P, S के ठीक बाईं ओर बैठा है।
+Q, S के ठीक दाईं ओर बैठा है।
+T सबसे बाईं ओर बैठा है।
+V सबसे दाईं ओर बैठा है।
+P के ठीक बाईं ओर कौन बैठा है?`,
+
+options:["T","U","R","Q"],
+optionHindi:["T","U","R","Q"],
+answer:"R",
+solution:"The arrangement is T – R – P – S – Q – U – V. Therefore, R sits immediately to the left of P.",
+solutionHindi:"व्यवस्था T – R – P – S – Q – U – V है। इसलिए P के ठीक बाईं ओर R बैठा है।"
+},
+
+{
+section:"mixed",
+
+q:`Six persons A, B, C, D, E and F are sitting in a row facing North.
+A sits second from the left.
+B sits immediately to the right of A.
+C sits immediately to the right of B.
+F sits at the extreme right.
+Who sits second from the right?`,
+
+h:`छह व्यक्ति A, B, C, D, E और F उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+A बाईं ओर से दूसरे स्थान पर बैठा है।
+B, A के ठीक दाईं ओर बैठा है।
+C, B के ठीक दाईं ओर बैठा है।
+F सबसे दाईं ओर बैठा है।
+दाईं ओर से दूसरे स्थान पर कौन बैठा है?`,
+
+options:["C","D","E","F"],
+optionHindi:["C","D","E","F"],
+answer:"E",
+solution:"The arrangement is D – A – B – C – E – F. Therefore, E is second from the right.",
+solutionHindi:"व्यवस्था D – A – B – C – E – F है। इसलिए E दाईं ओर से दूसरे स्थान पर है।"
+},
+
+{
+section:"mixed",
+
+q:`Eight persons P, Q, R, S, T, U, V and W are sitting in a row facing North.
+P sits at the extreme left and W at the extreme right.
+Q sits immediately to the right of P.
+R sits immediately to the right of Q.
+S sits immediately to the right of R.
+T sits immediately to the right of S.
+Who is fifth from the left?`,
+
+h:`आठ व्यक्ति P, Q, R, S, T, U, V और W उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+P सबसे बाईं ओर और W सबसे दाईं ओर बैठा है।
+Q, P के ठीक दाईं ओर बैठा है।
+R, Q के ठीक दाईं ओर बैठा है।
+S, R के ठीक दाईं ओर बैठा है।
+T, S के ठीक दाईं ओर बैठा है।
+बाईं ओर से पाँचवें स्थान पर कौन है?`,
+
+options:["S","T","U","V"],
+optionHindi:["S","T","U","V"],
+answer:"T",
+solution:"The arrangement is P – Q – R – S – T – U – V – W. Therefore, T is fifth from the left.",
+solutionHindi:"व्यवस्था P – Q – R – S – T – U – V – W है। इसलिए T बाईं ओर से पाँचवें स्थान पर है।"
+},
+
+{
+section:"mixed",
+
+q:`Six persons K, L, M, N, O and P are sitting in a row facing North.
+K sits at the extreme left.
+P sits at the extreme right.
+L sits second from the left.
+O sits second from the right.
+Who sits in the middle?`,
+
+h:`छह व्यक्ति K, L, M, N, O और P उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+K सबसे बाईं ओर बैठा है।
+P सबसे दाईं ओर बैठा है।
+L बाईं ओर से दूसरे स्थान पर बैठा है।
+O दाईं ओर से दूसरे स्थान पर बैठा है।
+बीच में कौन बैठा है?`,
+
+options:["L","M","N","O"],
+optionHindi:["L","M","N","O"],
+answer:"M",
+solution:"The arrangement is K – L – M – N – O – P. Therefore, M and N occupy the two middle positions. Among the options, M is correct.",
+solutionHindi:"व्यवस्था K – L – M – N – O – P है। इसलिए M और N दोनों middle positions पर हैं। दिए गए विकल्पों में M सही है।"
+},
+
+{
+section:"mixed",
+
+q:`Seven persons A, B, C, D, E, F and G are sitting in a row facing North.
+D sits in the middle.
+A sits immediately to the left of D.
+B sits immediately to the right of D.
+C sits immediately to the left of A.
+G sits immediately to the right of B.
+Who sits at the extreme left?`,
+
+h:`सात व्यक्ति A, B, C, D, E, F और G उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+D बीच में बैठा है।
+A, D के ठीक बाईं ओर बैठा है।
+B, D के ठीक दाईं ओर बैठा है।
+C, A के ठीक बाईं ओर बैठा है।
+G, B के ठीक दाईं ओर बैठा है।
+सबसे बाईं ओर कौन बैठा है?`,
+
+options:["A","C","E","F"],
+optionHindi:["A","C","E","F"],
+answer:"C",
+solution:"The arrangement is C – A – D – B – G with E and F occupying the remaining positions. Since C is immediately left of A and A is third, C is at the extreme left in the complete arrangement C – A – D – B – G – E – F.",
+solutionHindi:"व्यवस्था C – A – D – B – G है तथा E और F शेष positions पर हैं। चूँकि C, A के ठीक बाईं ओर है और A तीसरे स्थान पर है, इसलिए पूर्ण व्यवस्था C – A – D – B – G – E – F में C सबसे बाईं ओर है।"
+},
+
+{
+section:"mixed",
+
+q:`Five persons P, Q, R, S and T are sitting in a row facing North.
+R sits in the middle.
+P sits immediately to the left of R.
+S sits immediately to the right of R.
+Who sits at the extreme right?`,
+
+h:`पाँच व्यक्ति P, Q, R, S और T उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं।
+R बीच में बैठा है।
+P, R के ठीक बाईं ओर बैठा है।
+S, R के ठीक दाईं ओर बैठा है।
+सबसे दाईं ओर कौन बैठा है?`,
+
+options:["P","Q","S","T"],
+optionHindi:["P","Q","S","T"],
+answer:"T",
+solution:"The arrangement is Q – P – R – S – T. Therefore, T sits at the extreme right.",
+solutionHindi:"व्यवस्था Q – P – R – S – T है। इसलिए T सबसे दाईं ओर बैठा है।"
+}
+
+];
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+let score = 0;
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+const totalQuestions = questions.length;
+
+const answeredQuestions = {};
+
+
+/* =========================================================
+   RENDER QUESTIONS
+========================================================= */
+
+function renderQuestions(){
+
+    const sectionContainers = {
+
+        linear: document.getElementById("linear"),
+        facing: document.getElementById("facing"),
+        circular: document.getElementById("circular"),
+        mixed: document.getElementById("mixed")
+
+    };
+
+    questions.forEach(function(item,index){
+
+        const questionBox = document.createElement("div");
+        questionBox.className = "question";
+
+        const questionNumber = document.createElement("div");
+        questionNumber.className = "q-number";
+
+        questionNumber.textContent =
+            "Question " + (index + 1) + " / प्रश्न " + (index + 1) + ":";
+
+
+        const questionText = document.createElement("div");
+        questionText.className = "q-text";
+        questionText.textContent = item.q;
+
+
+        const hindiText = document.createElement("div");
+        hindiText.className = "hindi-text";
+        hindiText.textContent = item.h;
+
+
+        const optionsBox = document.createElement("div");
+        optionsBox.className = "options";
+
+
+        const answerBox = document.createElement("div");
+        answerBox.className = "answer-box";
+
+
+        item.options.forEach(function(option,optionIndex){
+
+            const optionBox = document.createElement("div");
+
+            optionBox.className = "option";
+
+            optionBox.setAttribute("role","button");
+            optionBox.setAttribute("tabindex","0");
+
+            optionBox.innerHTML =
+                "<strong>" +
+                option +
+                "</strong>" +
+                "<span class='option-hindi'>" +
+                item.optionHindi[optionIndex] +
+                "</span>";
+
+
+            function selectAnswer(){
+
+                if(answeredQuestions[index]){
+                    return;
+                }
+
+                answeredQuestions[index] = true;
+
+                attempted++;
+
+                const allOptions =
+                    optionsBox.querySelectorAll(".option");
+
+
+                allOptions.forEach(function(opt){
+
+                    opt.style.pointerEvents = "none";
+                    opt.style.cursor = "default";
+
+                });
+
+
+                if(option === item.answer){
+
+                    optionBox.classList.add("correct");
+
+                    score++;
+                    correct++;
+
+                }else{
+
+                    optionBox.classList.add("wrong");
+
+                    wrong++;
+
+
+                    allOptions.forEach(function(opt){
+
+                        if(
+                            opt.querySelector("strong") &&
+                            opt.querySelector("strong").textContent === item.answer
+                        ){
+
+                            opt.classList.add("correct");
+
+                        }
+
+                    });
+
+                }
+
+
+                answerBox.classList.add("show");
+
+                answerBox.innerHTML =
+
+                    "<div class='answer-title'>" +
+                    "✅ Answer: " + item.answer +
+                    "</div>" +
+
+                    "<div class='answer-hindi'>" +
+                    "✅ उत्तर: " +
+                    item.optionHindi[item.options.indexOf(item.answer)] +
+                    "</div>" +
+
+                    "<div class='solution-text'>" +
+                    "<strong>Solution:</strong> " +
+                    item.solution +
+                    "</div>" +
+
+                    "<div class='solution-hindi'>" +
+                    "<strong>समाधान:</strong> " +
+                    item.solutionHindi +
+                    "</div>";
+
+
+                updateScore();
+
+            }
+
+
+            optionBox.onclick = selectAnswer;
+
+
+            optionBox.onkeydown = function(event){
+
+                if(
+                    event.key === "Enter" ||
+                    event.key === " "
+                ){
+
+                    event.preventDefault();
+
+                    selectAnswer();
+
+                }
+
+            };
+
+
+            optionsBox.appendChild(optionBox);
+
+        });
+
+
+        questionBox.appendChild(questionNumber);
+
+        questionBox.appendChild(questionText);
+
+        questionBox.appendChild(hindiText);
+
+        questionBox.appendChild(optionsBox);
+
+        questionBox.appendChild(answerBox);
+
+
+        if(sectionContainers[item.section]){
+
+            sectionContainers[item.section]
+                .appendChild(questionBox);
+
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   UPDATE SCORE
+========================================================= */
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        score + " / " + totalQuestions;
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+}
+
+
+/* =========================================================
+   FINAL RESULT
+========================================================= */
+
+function showResult(){
+
+    const resultMessage =
+        document.getElementById("resultMessage");
+
+    const resultDetails =
+        document.getElementById("resultDetails");
+
+
+    if(attempted === 0){
+
+        resultMessage.innerHTML =
+            "Please attempt the questions first." +
+            "<br>" +
+            "कृपया पहले questions attempt करें।";
+
+        resultDetails.textContent = "";
+
+        return;
+
+    }
+
+
+    const percentage =
+        (score / totalQuestions) * 100;
+
+
+    const unattempted =
+        totalQuestions - attempted;
+
+
+    resultDetails.innerHTML =
+        "Attempted: " + attempted +
+        " | प्रयास किए: " + attempted +
+        "<br>" +
+
+        "Correct: " + correct +
+        " | सही: " + correct +
+        "<br>" +
+
+        "Wrong: " + wrong +
+        " | गलत: " + wrong +
+        "<br>" +
+
+        "Unattempted: " + unattempted +
+        " | प्रयास नहीं किए: " + unattempted +
+        "<br>" +
+
+        "Percentage: " + percentage.toFixed(1) + "%";
+
+
+    if(percentage >= 80){
+
+        resultMessage.innerHTML =
+            "Excellent! Your Seating Arrangement preparation is very strong. 🎯" +
+            "<br>" +
+            "बहुत बढ़िया! आपकी Seating Arrangement की तैयारी बहुत अच्छी है। 🎯";
+
+    }
+
+    else if(percentage >= 60){
+
+        resultMessage.innerHTML =
+            "Good performance! Keep practising Seating Arrangement questions. 👍" +
+            "<br>" +
+            "अच्छा प्रदर्शन! Seating Arrangement के questions का अभ्यास जारी रखें। 👍";
+
+    }
+
+    else if(percentage >= 40){
+
+        resultMessage.innerHTML =
+            "Keep practising. Focus on position, direction and arrangement conditions. 📚" +
+            "<br>" +
+            "अभ्यास जारी रखें। Position, Direction और Arrangement की conditions पर ध्यान दें। 📚";
+
+    }
+
+    else{
+
+        resultMessage.innerHTML =
+            "More practice is needed. Revise basic Seating Arrangement concepts and try again. 💪" +
+            "<br>" +
+            "अधिक अभ्यास की आवश्यकता है। Seating Arrangement के basic concepts revise करें और फिर प्रयास करें। 💪";
+
+    }
+
+}
+
+
+/* =========================================================
+   RESET PRACTICE
+========================================================= */
+
+document.getElementById("resetPractice").addEventListener("click",function(){
+
+    score = 0;
+
+    attempted = 0;
+
+    correct = 0;
+
+    wrong = 0;
+
+
+    Object.keys(answeredQuestions).forEach(function(key){
+
+        delete answeredQuestions[key];
+
+    });
+
+
+    document.querySelectorAll(".question").forEach(function(question){
+
+        question.querySelectorAll(".option").forEach(function(option){
+
+            option.classList.remove(
+                "correct",
+                "wrong"
+            );
+
+            option.style.pointerEvents = "auto";
+
+            option.style.cursor = "pointer";
+
+        });
+
+
+        const answerBox =
+            question.querySelector(".answer-box");
+
+        answerBox.classList.remove("show");
+
+        answerBox.innerHTML = "";
+
+    });
+
+
+    document.getElementById("resultMessage").innerHTML =
+        "Attempt the questions to see your score." +
+        "<br>" +
+        "अपना score देखने के लिए questions attempt करें।";
+
+
+    document.getElementById("resultDetails").textContent = "";
+
+
+    updateScore();
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+
+/* =========================================================
+   START
+========================================================= */
+
+renderQuestions();
+
+updateScore();
+
+</script>
+
+</body>
+</html>
