@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Word Formation Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:16px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#d9eaf7;
+}
+
+/* HERO */
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:28px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.intro p{
+    margin-bottom:8px;
+}
+
+.intro ul{
+    margin:12px 0 0 20px;
+}
+
+.intro li{
+    margin-bottom:5px;
+}
+
+/* PART TITLE */
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    border-left:5px solid #173f5f;
+    padding:14px 18px;
+    border-radius:7px;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* QUESTION CARD */
+
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+
+.question-number{
+    color:#173f5f;
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:5px;
+}
+
+.question-hindi{
+    font-size:16px;
+    font-weight:600;
+    color:#52606d;
+    margin-bottom:16px;
+}
+
+/* OPTIONS */
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.option{
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:0.2s;
+}
+
+.option:hover{
+    background:#d9eaf7;
+}
+
+.option.correct{
+    background:#d4edda;
+    border-color:#28a745;
+    color:#155724;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#dc3545;
+    color:#721c24;
+}
+
+.option:disabled{
+    cursor:not-allowed;
+}
+
+/* SOLUTION */
+
+.solution{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+    color:#243b53;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+.solution-hindi{
+    margin-top:6px;
+}
+
+/* SCORE */
+
+.score-box{
+    background:#102a43;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    margin-bottom:8px;
+}
+
+.score-number{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.stat{
+    min-width:90px;
+}
+
+.stat strong{
+    display:block;
+    font-size:22px;
+}
+
+.stat span{
+    font-size:14px;
+}
+
+.reset-btn{
+    margin-top:22px;
+    background:#173f5f;
+    color:white;
+    border:1px solid #829ab1;
+    padding:11px 24px;
+    border-radius:7px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.reset-btn:hover{
+    background:#243b53;
+}
+
+/* NOTE */
+
+.note{
+    background:white;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    color:#52606d;
+    margin-bottom:35px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+        gap:10px 14px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .question-hindi{
+        font-size:15px;
+    }
+
+    .stats{
+        gap:18px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <div class="logo">LET'S QUALIFYNOW</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <h1>🧩 SSC Word Formation Practice</h1>
+
+    <p>
+        50 Exam-Oriented Questions with Answers & Detailed Solutions
+    </p>
+
+</section>
+
+
+<div class="container">
+
+    <div class="intro">
+
+        <h2>SSC Word Formation Practice Set</h2>
+
+        <p>
+            This practice set is designed for SSC CGL and other Government Exams.
+        </p>
+
+        <p>
+            इसमें दिए गए questions में आपको दिए गए letters से सही word बनाना है।
+        </p>
+
+        <ul>
+            <li><strong>50 Questions</strong></li>
+            <li><strong>1 Mark</strong> for each correct answer</li>
+            <li><strong>No Negative Marking</strong></li>
+            <li>English + Hindi Questions</li>
+            <li>Detailed English + Hindi Solutions</li>
+        </ul>
+
+        <p style="margin-top:12px;">
+            <strong>Note:</strong>
+            Options are kept in English because Word Formation questions require
+            exact letter counting.
+        </p>
+
+    </div>
+
+
+    <div class="part-title">
+        SSC Word Formation Practice Set — 50 Questions
+    </div>
+
+
+    <div id="questions-container"></div>
+
+
+    <div class="score-box">
+
+        <h2>Your Result</h2>
+
+        <div class="score-number" id="score">
+            0 / 50
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong id="correct">0</strong>
+                <span>Correct</span>
+            </div>
+
+            <div class="stat">
+                <strong id="wrong">0</strong>
+                <span>Wrong</span>
+            </div>
+
+            <div class="stat">
+                <strong id="attempted">0</strong>
+                <span>Attempted</span>
+            </div>
+
+            <div class="stat">
+                <strong id="marks">0</strong>
+                <span>Marks</span>
+            </div>
+
+        </div>
+
+        <button class="reset-btn" id="resetBtn">
+            Reset Practice
+        </button>
+
+    </div>
+
+
+    <div class="note">
+
+        <strong>Important:</strong>
+
+        <p>
+            A question can be attempted only once. After selecting an option,
+            the correct answer and detailed solution will be displayed.
+        </p>
+
+        <p>
+            <strong>Scoring:</strong>
+            1 mark for every correct answer and no negative marking.
+        </p>
+
+    </div>
+
+</div>
+
+
+<footer>
+    © 2026 LET'S QUALIFYNOW | SSC • Banking • Railway • Government Exams
+</footer>
+
+
+<script>
+
+const questions = [
+
+/* 1 */
+{
+    word:"TRIANGLE",
+    type:"can",
+    options:["LINEAR","RETAINED","GARDEN","TRAINER"],
+    answer:0
+},
+
+/* 2 */
+{
+    word:"EDUCATION",
+    type:"cannot",
+    options:["ACTION","CAUTION","ACCOUNT","AUCTION"],
+    answer:2
+},
+
+/* 3 */
+{
+    word:"GOVERNMENT",
+    type:"can",
+    options:["MENTOR","GOVERNOR","MOVEMENT","MOMENTUM"],
+    answer:0
+},
+
+/* 4 */
+{
+    word:"COMPUTER",
+    type:"cannot",
+    options:["COURT","ROUTE","CREEP","COMET"],
+    answer:2
+},
+
+/* 5 */
+{
+    word:"IMPORTANT",
+    type:"can",
+    options:["PAINTER","PROMOTION","TERMINAL","PART"],
+    answer:3
+},
+
+/* 6 */
+{
+    word:"CHARACTER",
+    type:"cannot",
+    options:["CHARTER","HEART","TEACH","CREATURE"],
+    answer:3
+},
+
+/* 7 */
+{
+    word:"RELATION",
+    type:"can",
+    options:["NATIONAL","RETENTION","ORIENTAL","TRAINER"],
+    answer:2
+},
+
+/* 8 */
+{
+    word:"KNOWLEDGE",
+    type:"cannot",
+    options:["KNOW","NEED","LONG","WELL"],
+    answer:3
+},
+
+/* 9 */
+{
+    word:"PROBLEM",
+    type:"can",
+    options:["MOB","MELT","BROOM","PEEL"],
+    answer:0
+},
+
+/* 10 */
+{
+    word:"DEPARTMENT",
+    type:"cannot",
+    options:["PERMANENT","DEPART","TREAT","PART"],
+    answer:0
+},
+
+/* 11 */
+{
+    word:"MARKETING",
+    type:"cannot",
+    options:["MARKET","MAKING","RANK","TRAINER"],
+    answer:3
+},
+
+/* 12 */
+{
+    word:"LANGUAGE",
+    type:"cannot",
+    options:["ANGLE","LUNG","NAG","ANNUAL"],
+    answer:3
+},
+
+/* 13 */
+{
+    word:"EXAMINATION",
+    type:"cannot",
+    options:["NATION","ANIMATION","MINION","EXAMINE"],
+    answer:3
+},
+
+/* 14 */
+{
+    word:"CONDITION",
+    type:"can",
+    options:["COIN","COTTON","ACTION","CONTINUE"],
+    answer:0
+},
+
+/* 15 */
+{
+    word:"COMPETITION",
+    type:"can",
+    options:["MOTION","COMPLETE","COMPANION","TASK"],
+    answer:0
+},
+
+/* 16 */
+{
+    word:"REASONING",
+    type:"cannot",
+    options:["REASON","SING","RING","SEASON"],
+    answer:3
+},
+
+/* 17 */
+{
+    word:"ADVERTISE",
+    type:"cannot",
+    options:["ADVISE","SERVE","STREET","DRIVE"],
+    answer:2
+},
+
+/* 18 */
+{
+    word:"MASTER",
+    type:"can",
+    options:["SMART","STAMP","TREAT","PART"],
+    answer:0
+},
+
+/* 19 */
+{
+    word:"EARTH",
+    type:"cannot",
+    options:["HEART","HATER","HEAT","HEARTS"],
+    answer:3
+},
+
+/* 20 */
+{
+    word:"THING",
+    type:"can",
+    options:["NIGHT","TIGHT","NIGHTY","THINGS"],
+    answer:0
+},
+
+/* 21 */
+{
+    word:"ANGLE",
+    type:"cannot",
+    options:["GLEAN","ANGLE","ALONE","LEAN"],
+    answer:2
+},
+
+/* 22 */
+{
+    word:"LISTEN",
+    type:"cannot",
+    options:["SILENT","LISTENED","TIN","LINE"],
+    answer:1
+},
+
+/* 23 */
+{
+    word:"EARTHQUAKE",
+    type:"can",
+    options:["HEART","EARTHY","QUARTERLY","THREATEN"],
+    answer:0
+},
+
+/* 24 */
+{
+    word:"PRINCIPAL",
+    type:"cannot",
+    options:["CLIP","RAIN","PRINCIPLE","PLAN"],
+    answer:2
+},
+
+/* 25 */
+{
+    word:"HOSPITAL",
+    type:"cannot",
+    options:["POLISH","PILOT","HAIL","HOSTILE"],
+    answer:3
+},
+
+/* 26 */
+{
+    word:"TRANSPORT",
+    type:"cannot",
+    options:["SPORT","PORT","REPORT","TRAP"],
+    answer:2
+},
+
+/* 27 */
+{
+    word:"CONVERSATION",
+    type:"can",
+    options:["VERSION","VISION","VENDOR","CREATIVE"],
+    answer:0
+},
+
+/* 28 */
+{
+    word:"TRANSLATION",
+    type:"cannot",
+    options:["STATION","NATION","RELATION","RATION"],
+    answer:2
+},
+
+/* 29 */
+{
+    word:"BACKGROUND",
+    type:"cannot",
+    options:["GROUND","BOARD","ROUND","CROWN"],
+    answer:3
+},
+
+/* 30 */
+{
+    word:"DEVELOPMENT",
+    type:"cannot",
+    options:["MOVEMENT","ELEMENT","ENVELOPE","PLOT"],
+    answer:0
+},
+
+/* 31 */
+{
+    word:"STATEMENT",
+    type:"cannot",
+    options:["STATE","TASTE","MEAT","MENTAL"],
+    answer:3
+},
+
+/* 32 */
+{
+    word:"HEADMASTER",
+    type:"can",
+    options:["DREAM","GATHER","SHAPE","CREDIT"],
+    answer:0
+},
+
+/* 33 */
+{
+    word:"INFORMATION",
+    type:"cannot",
+    options:["RATION","MINT","FORM","TRAINER"],
+    answer:3
+},
+
+/* 34 */
+{
+    word:"RELATIONSHIP",
+    type:"cannot",
+    options:["RELATION","SHIP","RATION","NATION"],
+    answer:3
+},
+
+/* 35 */
+{
+    word:"SIGNIFICANT",
+    type:"cannot",
+    options:["SIGN","GIANT","TANG","NIGHT"],
+    answer:3
+},
+
+/* 36 */
+{
+    word:"RESPONSIBILITY",
+    type:"can",
+    options:["PERSON","ABILITY","RESPONSE","TABLE"],
+    answer:0
+},
+
+/* 37 */
+{
+    word:"ADMINISTRATION",
+    type:"can",
+    options:["TRAIN","GARDEN","PERSON","MATURE"],
+    answer:0
+},
+
+/* 38 */
+{
+    word:"TEACHING",
+    type:"cannot",
+    options:["TEACH","CHANGE","REACT","CHEAT"],
+    answer:2
+},
+
+/* 39 */
+{
+    word:"DISCIPLINE",
+    type:"can",
+    options:["SLICE","PLANET","MARKET","BREAD"],
+    answer:0
+},
+
+/* 40 */
+{
+    word:"RECOGNITION",
+    type:"can",
+    options:["COIN","ACTION","PERSON","GARDEN"],
+    answer:0
+},
+
+/* 41 */
+{
+    word:"TRANSPARENCY",
+    type:"can",
+    options:["ENTRY","PRINT","COURSE","MONEY"],
+    answer:0
+},
+
+/* 42 */
+{
+    word:"CELEBRATION",
+    type:"cannot",
+    options:["RELATION","CREATION","CELEBRATE","TABLE"],
+    answer:2
+},
+
+/* 43 */
+{
+    word:"UNDERSTANDING",
+    type:"can",
+    options:["DANGER","DREAM","TENDER","PLANT"],
+    answer:0
+},
+
+/* 44 */
+{
+    word:"COMMUNICATION",
+    type:"can",
+    options:["COMMON","AGENT","PERSON","BRIGHT"],
+    answer:0
+},
+
+/* 45 */
+{
+    word:"EXPERIENCE",
+    type:"cannot",
+    options:["PIECE","PRICE","EXPIRE","SCIENCE"],
+    answer:3
+},
+
+/* 46 */
+{
+    word:"MANAGEMENT",
+    type:"cannot",
+    options:["MEANT","AGENT","TEEN","TRAVEL"],
+    answer:3
+},
+
+/* 47 */
+{
+    word:"PROFESSIONAL",
+    type:"cannot",
+    options:["PERSON","SENIOR","FINAL","SESSION"],
+    answer:3
+},
+
+/* 48 */
+{
+    word:"CONSIDERATION",
+    type:"cannot",
+    options:["ACTION","REASON","SITUATION","CONTAINER"],
+    answer:2
+},
+
+/* 49 */
+{
+    word:"TRANSACTION",
+    type:"can",
+    options:["CANTON","GARDEN","REPORT","MATURE"],
+    answer:0
+},
+
+/* 50 */
+{
+    word:"REPRESENTATION",
+    type:"cannot",
+    options:["PRESENT","REASON","STATION","SEPARATE"],
+    answer:3
+}
+
+];
+
+
+let correct = 0;
+let wrong = 0;
+let attempted = 0;
+
+
+/* LETTER COUNT */
+
+function getLetterCount(word){
+
+    const count = {};
+
+    word.toUpperCase().split("").forEach(letter => {
+
+        if(/[A-Z]/.test(letter)){
+            count[letter] = (count[letter] || 0) + 1;
+        }
+
+    });
+
+    return count;
+}
+
+
+/* CHECK WORD */
+
+function canBeFormed(source, target){
+
+    const sourceCount = getLetterCount(source);
+    const targetCount = getLetterCount(target);
+
+    for(const letter in targetCount){
+
+        if(
+            !sourceCount[letter] ||
+            sourceCount[letter] < targetCount[letter]
+        ){
+            return false;
+        }
+
+    }
+
+    return true;
+}
+
+
+/* GET MISSING LETTERS */
+
+function getMissingLetters(source, target){
+
+    const sourceCount = getLetterCount(source);
+    const targetCount = getLetterCount(target);
+
+    const missing = [];
+
+    for(const letter in targetCount){
+
+        const available = sourceCount[letter] || 0;
+        const required = targetCount[letter];
+
+        if(required > available){
+
+            missing.push({
+                letter:letter,
+                count:required - available
+            });
+
+        }
+
+    }
+
+    return missing;
+}
+
+
+/* CREATE SOLUTION */
+
+function createSolution(question){
+
+    const answerWord = question.options[question.answer];
+
+    const possible = canBeFormed(question.word, answerWord);
+
+    let english = "";
+    let hindi = "";
+
+    if(possible){
+
+        english =
+            `<strong>${answerWord}</strong> can be formed from
+            <strong>${question.word}</strong> because all required
+            letters are available in the correct quantities.`;
+
+        hindi =
+            `<strong>${answerWord}</strong> को
+            <strong>${question.word}</strong> से बनाया जा सकता है
+            क्योंकि आवश्यक सभी अक्षर पर्याप्त संख्या में उपलब्ध हैं।`;
+
+    }else{
+
+        const missing = getMissingLetters(
+            question.word,
+            answerWord
+        );
+
+        const englishParts = [];
+        const hindiParts = [];
+
+        missing.forEach(item => {
+
+            englishParts.push(
+                `${item.count} extra '${item.letter}'`
+            );
+
+            hindiParts.push(
+                `'${item.letter}' अक्षर ${item.count} अतिरिक्त`
+            );
+
+        });
+
+        english =
+            `<strong>${answerWord}</strong> cannot be formed from
+            <strong>${question.word}</strong> because it needs
+            ${englishParts.join(" and ")} letter(s).`;
+
+        hindi =
+            `<strong>${answerWord}</strong> को
+            <strong>${question.word}</strong> से नहीं बनाया जा सकता
+            क्योंकि इसमें ${hindiParts.join(" और ")} चाहिए।`;
+
+    }
+
+    return `
+        <strong>Solution:</strong>
+        ${english}
+
+        <div class="solution-hindi">
+            <strong>समाधान:</strong>
+            ${hindi}
+        </div>
+    `;
+
+}
+
+
+/* RENDER QUESTIONS */
+
+function renderQuestions(){
+
+    const container =
+        document.getElementById("questions-container");
+
+    container.innerHTML = "";
+
+    questions.forEach((question, index) => {
+
+        const questionNumber = index + 1;
+
+        const questionText =
+            question.type === "can"
+            ?
+            `Which word can be formed using the letters of
+             <strong>${question.word}</strong> without using
+             any letter more times than it occurs?`
+            :
+            `Which word cannot be formed using the letters of
+             <strong>${question.word}</strong>?`;
+
+        const hindiText =
+            question.type === "can"
+            ?
+            `<strong>${question.word}</strong> के अक्षरों से,
+             किसी अक्षर को उसकी उपलब्ध संख्या से अधिक बार उपयोग किए बिना,
+             कौन-सा शब्द बनाया जा सकता है?`
+            :
+            `<strong>${question.word}</strong> के अक्षरों का उपयोग करके
+             निम्न में से कौन-सा शब्द नहीं बनाया जा सकता?`;
+
+        const card =
+            document.createElement("div");
+
+        card.className = "question-card";
+
+        card.dataset.answer = question.answer;
+
+        card.innerHTML = `
+
+            <div class="question-number">
+                Question ${questionNumber}
+            </div>
+
+            <div class="question">
+                ${questionText}
+            </div>
+
+            <div class="question-hindi">
+                ${hindiText}
+            </div>
+
+            <div class="options">
+
+                ${question.options.map((option, optionIndex) => `
+
+                    <button
+                        class="option"
+                        data-index="${optionIndex}"
+                        type="button"
+                    >
+                        ${String.fromCharCode(65 + optionIndex)}.
+                        ${option}
+                    </button>
+
+                `).join("")}
+
+            </div>
+
+            <div class="solution">
+                ${createSolution(question)}
+            </div>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+
+    attachOptionEvents();
+
+}
+
+
+/* OPTION CLICK */
+
+function attachOptionEvents(){
+
+    document
+        .querySelectorAll(".option")
+        .forEach(option => {
+
+            option.addEventListener("click", function(){
+
+                const card =
+                    this.closest(".question-card");
+
+                if(card.classList.contains("attempted")){
+                    return;
+                }
+
+                card.classList.add("attempted");
+
+                attempted++;
+
+                const selected =
+                    Number(this.dataset.index);
+
+                const answer =
+                    Number(card.dataset.answer);
+
+                const allOptions =
+                    card.querySelectorAll(".option");
+
+                if(selected === answer){
+
+                    this.classList.add("correct");
+
+                    correct++;
+
+                }else{
+
+                    this.classList.add("wrong");
+
+                    allOptions[answer]
+                        .classList.add("correct");
+
+                    wrong++;
+
+                }
+
+                card.querySelector(".solution")
+                    .style.display = "block";
+
+                allOptions.forEach(btn => {
+                    btn.disabled = true;
+                });
+
+                updateScore();
+
+            });
+
+        });
+
+}
+
+
+/* UPDATE SCORE */
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        `${correct} / 50`;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("marks").textContent =
+        correct;
+
+}
+
+
+/* RESET */
+
+document
+    .getElementById("resetBtn")
+    .addEventListener("click", function(){
+
+        correct = 0;
+        wrong = 0;
+        attempted = 0;
+
+        renderQuestions();
+
+        updateScore();
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    });
+
+
+/* INITIAL LOAD */
+
+renderQuestions();
+
+updateScore();
+
+</script>
+
+</body>
+</html>
