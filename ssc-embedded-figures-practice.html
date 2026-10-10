@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSC Embedded Figures Practice | Let's QualifyNow</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;line-height:1.6}
+header{background:#102a43;color:white;padding:14px 5%;position:sticky;top:0;z-index:100}
+.header-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:21px;font-weight:bold}
+nav{display:flex;flex-wrap:wrap;gap:15px}
+nav a{color:white;text-decoration:none;font-size:13px;font-weight:bold}
+nav a:hover{color:#d9eaf7;text-decoration:underline}
+.hero{background:#173f5f;color:white;text-align:center;padding:34px 18px}
+.hero h1{font-size:30px;margin-bottom:8px}
+.hero p{margin-top:4px}
+.container{max-width:1050px;margin:28px auto;padding:0 16px}
+.intro{background:white;border:1px solid #d9e2ec;border-radius:10px;padding:22px;margin-bottom:25px}
+.intro h2{color:#102a43;font-size:22px;margin-bottom:10px}
+.intro p{margin-bottom:8px}
+.instructions{background:#eef6fb;border-left:4px solid #173f5f;padding:12px 16px;margin-top:14px;border-radius:4px}
+.section-title{background:#102a43;color:white;padding:12px 16px;border-radius:7px;margin:25px 0 16px;font-size:19px}
+.question-card{background:white;border:1px solid #d9e2ec;border-radius:9px;padding:20px;margin-bottom:18px;box-shadow:0 2px 5px rgba(16,42,67,.04)}
+.question-heading{color:#102a43;font-weight:bold;font-size:17px;margin-bottom:7px}
+.question-hindi{color:#52606d;margin-bottom:14px}
+.figure-instruction{font-weight:bold;margin:10px 0 6px}
+.figure-panel{border:1px solid #d9e2ec;border-radius:8px;background:white;padding:12px;margin:10px 0 16px;text-align:center}
+.figure-panel strong{display:block;color:#102a43;margin-bottom:5px}
+.figure-svg{display:block;width:100%;max-width:180px;height:130px;margin:auto}
+.complex-svg{max-width:300px;height:200px}
+.options-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.option{border:1px solid #d9e2ec;background:white;border-radius:8px;padding:10px;text-align:left;cursor:pointer;color:#243b53;font-family:inherit}
+.option:hover:not(:disabled){background:#eef6fb;border-color:#829ab1}
+.option-label{display:block;font-weight:bold;margin-bottom:5px;color:#102a43}
+.option.correct{background:#d9ead3;border-color:#6aa56a}
+.option.incorrect{background:#f4cccc;border-color:#cc7777}
+.option:disabled{cursor:default;opacity:1}
+.feedback{display:none;margin-top:16px;padding:14px;border-radius:7px;background:#eef6fb;border-left:4px solid #173f5f}
+.feedback.show{display:block}
+.feedback p{margin:5px 0}
+.correct-text{color:#246b36;font-weight:bold}
+.wrong-text{color:#a12626;font-weight:bold}
+.solution-title{color:#102a43;font-weight:bold;margin-top:9px}
+.score-box{background:white;border:1px solid #d9e2ec;border-radius:10px;padding:22px;margin-top:30px;text-align:center}
+.score-box h2{color:#102a43;margin-bottom:14px}
+.score-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.score-item{background:#f7f9fc;border:1px solid #d9e2ec;border-radius:8px;padding:13px 8px}
+.score-item span{display:block;color:#52606d;font-size:13px}
+.score-item strong{display:block;color:#102a43;font-size:23px}
+#resultMessage{font-weight:bold;margin:16px 0}
+.action-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:18px}
+.action-btn{border:none;border-radius:6px;padding:11px 19px;font-size:14px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block;font-family:inherit}
+.reset-btn{background:#173f5f;color:white}
+.reset-btn:hover{background:#102a43}
+.back-btn{background:#d9eaf7;color:#102a43}
+.back-btn:hover{background:#c5dff0}
+footer{margin-top:35px;background:#102a43;color:white;text-align:center;padding:25px 15px}
+footer h3{font-size:20px;margin-bottom:5px}
+footer p{font-size:13px;margin:4px 0}
+@media(max-width:700px){
+ header{position:relative;padding:14px}
+ .header-inner{flex-direction:column;align-items:flex-start}
+ nav{gap:10px 14px}
+ nav a{font-size:12px}
+ .hero h1{font-size:24px}
+ .options-grid{grid-template-columns:1fr}
+ .score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .question-card{padding:15px}
+}
+</style>
+</head>
+
+<body>
+<header>
+ <div class="header-inner">
+  <div class="logo">LET'S QUALIFYNOW</div>
+  <nav>
+   <a href="index.html">Home</a>
+   <a href="ssc-reasoning.html">SSC Reasoning Course</a>
+   <a href="courses.html">Courses</a>
+   <a href="study-material.html">Study Material</a>
+   <a href="live-classes.html">Live Classes</a>
+   <a href="test-series.html">Test Series</a>
+   <a href="exams.html">Exams</a>
+   <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero">
+ <h1>🔎 SSC Embedded Figures Practice</h1>
+ <p>50 Exam-Oriented Questions with Answers &amp; Solutions</p>
+ <p>SSC CGL • CHSL • CPO • MTS</p>
+ <p>छिपी हुई आकृतियों पर आधारित अभ्यास प्रश्न</p>
+</section>
+
+<main class="container">
+ <section class="intro">
+  <h2>SSC Embedded Figures Practice Set</h2>
+  <p>Identify the given simple figure within the complex design. Focus on the arrangement of lines, corners and intersections.</p>
+  <p>जटिल आकृति के भीतर दी गई सरल आकृति पहचानिए। रेखाओं, कोनों और उनके प्रतिच्छेद पर ध्यान दीजिए।</p>
+  <div class="instructions">
+   <strong>Instructions / निर्देश:</strong>
+   <p>1. Observe the given figure carefully before answering.</p>
+   <p>2. प्रत्येक प्रश्न में चार विकल्पों में से सही आकृति चुनिए।</p>
+   <p>3. Correct answer: +1 mark. No negative marking.</p>
+   <p>4. उत्तर चुनने के बाद feedback और explanation दिखाई देगा।</p>
+   <p>5. Total Questions: 50 | Maximum Marks: 50</p>
+  </div>
+ </section>
+
+ <div class="section-title">Practice Questions / अभ्यास प्रश्न</div>
+ <div id="questionsContainer"></div>
+
+ <section class="score-box" id="scoreBox">
+  <h2>📊 Your Practice Result / आपका परिणाम</h2>
+  <div class="score-grid">
+   <div class="score-item"><span>Score / अंक</span><strong id="score">0 / 50</strong></div>
+   <div class="score-item"><span>Correct / सही</span><strong id="correct">0</strong></div>
+   <div class="score-item"><span>Attempted / प्रयास</span><strong id="attempted">0</strong></div>
+   <div class="score-item"><span>Wrong / गलत</span><strong id="wrong">0</strong></div>
+  </div>
+  <p id="resultMessage">Attempt the questions to see your result.</p>
+  <div class="action-buttons">
+   <button class="action-btn reset-btn" onclick="resetTest()">Reset Practice / दोबारा शुरू करें</button>
+   <a class="action-btn back-btn" href="ssc-topic-wise-practice.html">← Back to SSC Reasoning Practice</a>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <h3>LET'S QUALIFYNOW</h3>
+ <p>N Saurabh Sir | Reasoning Faculty</p>
+ <p>SSC • Banking • Railway • Government Exams</p>
+ <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
+ <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
+</footer>
+
+<script>
+/*
+Shape library: each shape is a separate SVG line drawing.
+Complex figures combine multiple geometric structures.
+The target figure is included as one component in each complex drawing.
+*/
+
+const shapes = {
+ T:`<path d="M50 12 L88 82 L12 82 Z"/>`,
+ T2:`<path d="M50 12 L88 82 L12 82 Z M30 48 L70 48"/>`,
+ S:`<path d="M20 20 H80 V80 H20 Z"/>`,
+ S2:`<path d="M20 20 H80 V80 H20 Z M20 50 H80 M50 20 V80"/>`,
+ R:`<path d="M12 30 H88 V70 H12 Z"/>`,
+ D:`<path d="M50 10 L88 50 L50 90 L12 50 Z"/>`,
+ D2:`<path d="M50 10 L88 50 L50 90 L12 50 Z M12 50 H88"/>`,
+ P:`<path d="M30 18 H70 L90 50 L70 82 H30 L10 50 Z"/>`,
+ H:`<path d="M30 12 H70 L90 50 L70 88 H30 L10 50 Z"/>`,
+ Z:`<path d="M28 20 H72 L90 80 H10 Z"/>`,
+ X:`<path d="M15 15 L85 85 M85 15 L15 85"/>`,
+ A:`<path d="M15 42 H58 V20 L88 50 L58 80 V58 H15 Z"/>`,
+ L:`<path d="M20 15 H42 V65 H82 V85 H20 Z"/>`,
+ C:`<circle cx="50" cy="50" r="36"/>`,
+ M:`<path d="M15 78 L50 15 L85 78 Z M15 25 H85 L50 85 Z"/>`,
+ K:`<path d="M15 45 L50 15 L85 45 V85 H15 Z"/>`,
+ Y:`<path d="M15 15 L50 48 L85 15 M50 48 V88"/>`,
+ W:`<path d="M12 25 L32 75 L50 35 L68 75 L88 25"/>`,
+ Q:`<path d="M20 20 H80 V80 H20 Z M20 20 L80 80 M80 20 L20 80"/>`,
+ N:`<path d="M50 12 L88 82 H12 Z M30 50 H70"/>`,
+ F:`<path d="M22 85 V15 H78 V42 H22"/>`,
+ U:`<path d="M20 15 V80 H80 V15"/>`,
+ G:`<path d="M30 12 H70 L90 50 L70 88 H30 L10 50 Z M30 12 L70 88 M70 12 L30 88"/>`,
+ I:`<path d="M20 20 H80 M50 20 V80 M20 80 H80"/>`,
+ B:`<path d="M18 18 H82 V82 H18 Z M18 18 L82 82"/>`,
+ O:`<path d="M15 15 H85 V85 H15 Z M15 15 L85 85 M85 15 L15 85"/>`,
+ E:`<path d="M18 18 H82 V82 H18 Z M18 50 H82"/>`,
+ V:`<path d="M15 18 L50 82 L85 18"/>`,
+ J:`<path d="M20 18 H80 V65 Q80 82 60 82 H40"/>`,
+ R2:`<path d="M15 20 H85 V80 H15 Z M15 20 L85 80"/>`,
+ P2:`<path d="M50 10 L88 50 L50 90 L12 50 Z M12 50 H88"/>`,
+ C2:`<circle cx="50" cy="50" r="36"/><path d="M14 50 H86"/>`,
+ A2:`<path d="M12 80 L50 15 L88 80 Z M30 55 H70"/>`,
+ H2:`<path d="M15 20 H85 V80 H15 Z M15 50 H85"/>`,
+ M2:`<path d="M12 80 L50 15 L88 80 Z M12 80 H88"/>`,
+ Y2:`<path d="M12 15 L50 50 L88 15 M50 50 L25 85 M50 50 L75 85"/>`,
+ C3:`<path d="M20 20 H80 V80 H20 Z M20 20 L80 80"/>`,
+ Z2:`<path d="M20 20 H80 L90 80 H10 Z M20 20 L90 80"/>`,
+ P3:`<path d="M25 15 H75 L90 45 L75 75 H25 L10 45 Z M10 45 H90"/>`,
+ T3:`<path d="M15 25 H85 M50 25 V85"/>`,
+ N2:`<path d="M15 80 L50 15 L85 80 Z M15 80 L85 80"/>`,
+ X2:`<path d="M15 15 L85 85 M85 15 L15 85 M50 10 V90"/>`,
+ L2:`<path d="M20 15 V80 H80"/>`,
+ U2:`<path d="M20 15 V80 H80 V15 M20 50 H80"/>`,
+ D3:`<path d="M50 10 L90 50 L50 90 L10 50 Z M50 10 V90"/>`,
+ H3:`<path d="M25 15 H75 L90 50 L75 85 H25 L10 50 Z M25 15 L75 85"/>`,
+ R3:`<path d="M15 25 H85 V75 H15 Z M15 25 L85 75 M15 75 L85 25"/>`,
+ A3:`<path d="M10 80 L50 12 L90 80 Z M10 80 H90 M50 12 V80"/>`,
+ W2:`<path d="M10 20 L30 80 L50 20 L70 80 L90 20"/>`,
+ F2:`<path d="M20 85 V15 H80 V45 H20 M20 45 H65"/>`
+};
+
+const questions = [
+ {target:"T",parts:["S","D","L"],opts:["S","T","D","R"],ans:1},
+ {target:"S",parts:["T","X","L"],opts:["R","D","S","P"],ans:2},
+ {target:"D",parts:["T","S","X"],opts:["T","D","Z","H"],ans:1},
+ {target:"R",parts:["T","D","L"],opts:["S","P","R","T"],ans:2},
+ {target:"P",parts:["T","D","S"],opts:["H","P","D","Z"],ans:1},
+ {target:"H",parts:["P","X","T"],opts:["P","S","H","R"],ans:2},
+ {target:"Z",parts:["D","T","L"],opts:["D","Z","T","P"],ans:1},
+ {target:"X",parts:["T","S","D"],opts:["Y","V","X","W"],ans:2},
+ {target:"A",parts:["T","S","X"],opts:["T","A","K","F"],ans:1},
+ {target:"L",parts:["J","S","D"],opts:["J","L","F","U"],ans:1},
+
+ {target:"C",parts:["D","S","X"],opts:["D","O","C","S"],ans:2},
+ {target:"M",parts:["T","D","X"],opts:["T","M","X","N"],ans:1},
+ {target:"K",parts:["P","T","S"],opts:["P","A","K","T"],ans:2},
+ {target:"Y",parts:["V","X","T"],opts:["V","Y","X","T"],ans:1},
+ {target:"W",parts:["Y","V","T"],opts:["M","W","Y","V"],ans:1},
+ {target:"Q",parts:["S","D","X"],opts:["S","B","Q","R"],ans:2},
+ {target:"N",parts:["T","D","L"],opts:["T","Z","N","A2"],ans:2},
+ {target:"F",parts:["L","U","T"],opts:["L","F","J","U"],ans:1},
+ {target:"U",parts:["S","L","D"],opts:["S","R","U","J"],ans:2},
+ {target:"G",parts:["H","P","X"],opts:["H","P","G","D"],ans:2},
+
+ {target:"I",parts:["T3","L","S"],opts:["T3","I","L","F"],ans:1},
+ {target:"B",parts:["S","D","T"],opts:["Q","S","B","R"],ans:2},
+ {target:"O",parts:["S","X","D"],opts:["B","O","Q","S"],ans:1},
+ {target:"E",parts:["S","T3","D"],opts:["S2","E","B","R2"],ans:1},
+ {target:"V",parts:["Y","T","W"],opts:["Y","T","V","W"],ans:2},
+ {target:"R2",parts:["S","D","T"],opts:["B","R","R2","E"],ans:2},
+ {target:"T3",parts:["S","X","L"],opts:["I","T3","Y","F"],ans:1},
+ {target:"P2",parts:["D","T","X"],opts:["D","P2","N","Z"],ans:1},
+ {target:"C2",parts:["S","D","X"],opts:["C","D","C2","O"],ans:2},
+ {target:"A2",parts:["T","D","S"],opts:["N","A2","T","Z"],ans:1},
+
+ {target:"H2",parts:["R","T","D"],opts:["R","S","H2","E"],ans:2},
+ {target:"M2",parts:["T","X","D"],opts:["T","M2","V","N"],ans:1},
+ {target:"S2",parts:["D","X","T"],opts:["Q","S","S2","B"],ans:2},
+ {target:"P3",parts:["H","D","T"],opts:["H","P3","Z","D"],ans:1},
+ {target:"H3",parts:["P","D","X"],opts:["P","H3","S","G"],ans:1},
+ {target:"Z2",parts:["T","D","L"],opts:["T","D","Z2","R"],ans:2},
+ {target:"X2",parts:["T","S","D"],opts:["V","X2","Y","W"],ans:1},
+ {target:"A3",parts:["T","S","X"],opts:["K","T","A3","F"],ans:2},
+ {target:"L2",parts:["J","S","D"],opts:["J","U","L2","F"],ans:2},
+ {target:"R3",parts:["S","D","X"],opts:["B","R","R3","E"],ans:2},
+
+ {target:"C3",parts:["T","D","L"],opts:["C3","C","P","O"],ans:0},
+ {target:"Y2",parts:["V","X","T"],opts:["X","Y2","T","W"],ans:1},
+ {target:"F2",parts:["L","U","T"],opts:["U","J","F2","L"],ans:2},
+ {target:"D3",parts:["T","S","X"],opts:["D","D3","Z","H"],ans:1},
+ {target:"P3",parts:["T","D","S"],opts:["H","P3","D","Z"],ans:1},
+ {target:"N2",parts:["T","D","L"],opts:["T","N2","Z","A2"],ans:1},
+ {target:"U2",parts:["S","L","D"],opts:["S","R","U2","J"],ans:2},
+ {target:"W2",parts:["Y","V","T"],opts:["Y","W2","M","V"],ans:1},
+ {target:"R3",parts:["S","D","T"],opts:["B","R","R3","E"],ans:2},
+ {target:"A3",parts:["T","S","X"],opts:["K","T","A3","F"],ans:2}
+];
+
+const hindiQuestions = [
+ "जटिल आकृति में दी गई आकृति पहचानिए।",
+ "निम्नलिखित में से सही आकृति चुनिए।",
+ "रेखाओं और कोनों की संरचना का मिलान कीजिए।",
+ "जटिल चित्र में छिपी हुई समान आकृति खोजिए।",
+ "दी गई आकृति से मेल खाने वाला विकल्प चुनिए।"
+];
+
+function svgShape(key,extraClass=""){
+ return `<svg class="figure-svg ${extraClass}" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Geometric figure">
+ <g fill="none" stroke="#102a43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${shapes[key] || shapes.T}</g></svg>`;
+}
+
+function complexSVG(q,index){
+ const keys=[q.target,...q.parts];
+ const placements=[
+  {x:0,y:0,s:.68,r:0},
+  {x:33,y:0,s:.68,r:0},
+  {x:0,y:33,s:.68,r:0},
+  {x:33,y:33,s:.68,r:0}
+ ];
+ const extras=[
+  `<path d="M5 50 H95 M50 5 V95"/>`,
+  `<path d="M5 15 L95 85 M5 85 L95 15"/>`,
+  `<path d="M5 30 H95 M5 70 H95"/>`,
+  `<path d="M10 10 H90 V90 H10 Z"/>`,
+  `<path d="M5 50 L50 5 L95 50 L50 95 Z"/>`,
+  `<path d="M5 10 L95 90 M5 90 L95 10 M5 50 H95"/>`,
+  `<path d="M5 25 H95 M5 75 H95 M25 5 V95 M75 5 V95"/>`,
+  `<path d="M5 15 L50 50 L95 15 M5 85 L50 50 L95 85"/>`,
+  `<path d="M15 5 V95 M85 5 V95 M5 15 H95 M5 85 H95"/>`,
+  `<path d="M5 50 H95 M50 5 L95 50 L50 95 L5 50 Z"/>`
+ ];
+ let drawing="";
+ keys.forEach((key,i)=>{
+  const p=placements[i];
+  drawing+=`<g transform="translate(${p.x} ${p.y}) scale(${p.s})">${shapes[key] || shapes.T}</g>`;
+ });
+ drawing+=extras[index%extras.length];
+ return `<svg class="figure-svg complex-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Complex geometric figure">
+ <g fill="none" stroke="#102a43" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${drawing}</g></svg>`;
+}
+
+const userAnswers=Array(questions.length).fill(null);
+const locked=Array(questions.length).fill(false);
+
+function renderQuestions(){
+ const container=document.getElementById("questionsContainer");
+ container.innerHTML="";
+ questions.forEach((q,i)=>{
+  const card=document.createElement("section");
+  card.className="question-card";
+  const opts=q.opts.map((key,j)=>`
+   <button type="button" class="option" id="opt-${i}-${j}" onclick="choose(${i},${j})">
+    <span class="option-label">Option ${String.fromCharCode(65+j)}</span>
+    ${svgShape(key)}
+   </button>`).join("");
+  card.innerHTML=`
+   <div class="question-heading">Q${i+1}. Identify the given figure in the complex design.</div>
+   <div class="question-hindi">${hindiQuestions[i%hindiQuestions.length]}</div>
+   <div class="figure-instruction">Complex Figure / जटिल आकृति</div>
+   <div class="figure-panel">${complexSVG(q,i)}</div>
+   <div class="figure-instruction">Choose the matching figure / सही आकृति चुनिए</div>
+   <div class="options-grid">${opts}</div>
+   <div class="feedback" id="feedback-${i}">
+    <p id="result-${i}"></p>
+    <p class="solution-title">Explanation / समाधान:</p>
+    <p id="solution-${i}"></p>
+    <p id="solutionhi-${i}"></p>
+   </div>`;
+  container.appendChild(card);
+ });
+}
+
+function choose(i,j){
+ if(locked[i])return;
+ locked[i]=true;
+ userAnswers[i]=j;
+ const q=questions[i];
+ const correct=j===q.ans;
+ q.opts.forEach((key,k)=>{
+  const b=document.getElementById(`opt-${i}-${k}`);
+  b.disabled=true;
+  if(k===q.ans)b.classList.add("correct");
+  else if(k===j&&!correct)b.classList.add("incorrect");
+ });
+ document.getElementById(`feedback-${i}`).classList.add("show");
+ document.getElementById(`result-${i}`).innerHTML=correct
+  ?`<span class="correct-text">Correct Answer! +1 Mark</span>`
+  :`<span class="wrong-text">Incorrect. Correct Answer: Option ${String.fromCharCode(65+q.ans)}</span>`;
+ document.getElementById(`solution-${i}`).textContent=
+  `Option ${String.fromCharCode(65+q.ans)} is the keyed answer for this item. Compare its outline and internal line arrangement with the complex design.`;
+ document.getElementById(`solutionhi-${i}`).textContent=
+  `सही उत्तर विकल्प ${String.fromCharCode(65+q.ans)} है। बाहरी रेखाओं और अंदर की रेखाओं की संरचना का मिलान कीजिए।`;
+ updateScore();
+}
+
+function updateScore(){
+ let correct=0,attempted=0;
+ userAnswers.forEach((a,i)=>{
+  if(a!==null){attempted++;if(a===questions[i].ans)correct++;}
+ });
+ const wrong=attempted-correct;
+ document.getElementById("score").textContent=`${correct} / ${questions.length}`;
+ document.getElementById("correct").textContent=correct;
+ document.getElementById("attempted").textContent=attempted;
+ document.getElementById("wrong").textContent=wrong;
+ const msg=document.getElementById("resultMessage");
+ if(!attempted){msg.textContent="Attempt the questions to see your result.";return;}
+ if(attempted<questions.length){
+  msg.textContent=`Current accuracy: ${Math.round(correct/attempted*100)}% | Questions remaining: ${questions.length-attempted}`;
+ }else{
+  const p=correct/questions.length*100;
+  msg.textContent=p>=80?"Excellent! / बहुत अच्छा!":p>=60?"Good work! / अच्छा प्रयास!":p>=40?"Keep Practising! / अभ्यास जारी रखें।":"More Practice Needed! / अधिक अभ्यास करें।";
+ }
+}
+
+function resetTest(){
+ for(let i=0;i<questions.length;i++){userAnswers[i]=null;locked[i]=false;}
+ renderQuestions();
+ updateScore();
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+
+renderQuestions();
+updateScore();
+</script>
+</body>
+</html>
