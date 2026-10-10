@@ -1,0 +1,2979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Analogy Practice | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#102a43;
+    line-height:1.6;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+    background:#102a43;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:5px 10px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#b9d7ea;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    padding:65px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:850px;
+    margin:auto;
+    opacity:.95;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    background:white;
+    padding:28px;
+    border-radius:14px;
+    border:1px solid #d9e2ec;
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
+    margin-bottom:30px;
+}
+
+.intro h2{
+    margin-bottom:12px;
+}
+
+.intro p{
+    margin-bottom:12px;
+}
+
+.how-to{
+    margin-top:22px;
+    padding:20px;
+    background:#f7f9fc;
+    border-left:5px solid #173f5f;
+    border-radius:8px;
+}
+
+.how-to h3{
+    margin-bottom:12px;
+    color:#173f5f;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title{
+    margin:45px 0 20px;
+    padding-left:14px;
+    border-left:5px solid #173f5f;
+    color:#102a43;
+}
+
+/* ================= QUESTION CARD ================= */
+
+.question{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:14px;
+    padding:25px;
+    margin:20px 0;
+    box-shadow:0 5px 18px rgba(16,42,67,.05);
+}
+
+.question h3{
+    margin-bottom:12px;
+    color:#173f5f;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.question-text span{
+    display:block;
+    margin-top:7px;
+}
+
+/* ================= OPTIONS ================= */
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:18px 0 5px;
+}
+
+.option{
+    background:#f7f9fc;
+    border:1px solid #829ab1;
+    border-radius:8px;
+    padding:12px 14px;
+    cursor:pointer;
+    transition:.2s;
+    font-size:15px;
+}
+
+.option:hover{
+    background:#d9eaf7;
+}
+
+.option.correct{
+    background:#e8f5e9;
+    border-color:#2e7d32;
+    color:#1b5e20;
+    font-weight:700;
+}
+
+.option.wrong{
+    background:#fce8e6;
+    border-color:#c0392b;
+    color:#922b21;
+    font-weight:700;
+}
+
+.option.disabled{
+    cursor:default;
+}
+
+/* ================= ANSWER ================= */
+
+.answer{
+    display:none;
+    margin-top:18px;
+    background:#eef6ff;
+    border-left:4px solid #173f5f;
+    padding:14px 16px;
+    border-radius:7px;
+}
+
+.answer strong{
+    color:#173f5f;
+}
+
+/* ================= SOLUTION ================= */
+
+.solution{
+    display:none;
+    margin-top:12px;
+    background:#f8fafc;
+    border:1px solid #e1e8ef;
+    padding:16px;
+    border-radius:8px;
+}
+
+.solution strong{
+    color:#173f5f;
+}
+
+.solution p{
+    margin-bottom:10px;
+}
+
+/* ================= BADGE ================= */
+
+.badge{
+    display:inline-block;
+    background:#173f5f;
+    color:white;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+/* ================= RESULT BOX ================= */
+
+.result-box{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:14px;
+    padding:25px;
+    margin:45px 0 30px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(16,42,67,.05);
+}
+
+.result-box h2{
+    color:#173f5f;
+    margin-bottom:20px;
+}
+
+.score-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin:20px 0;
+}
+
+.score-grid div{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:14px;
+}
+
+.score-grid strong{
+    display:block;
+    font-size:24px;
+    color:#102a43;
+}
+
+.score-grid span{
+    display:block;
+    margin-top:4px;
+    color:#52606d;
+    font-size:14px;
+}
+
+.result-box button{
+    border:none;
+    background:#102a43;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.result-box button:hover{
+    background:#173f5f;
+}
+
+/* ================= EXAM TIP ================= */
+
+.exam-tip{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:14px;
+    padding:25px;
+    margin:30px 0;
+    box-shadow:0 5px 18px rgba(16,42,67,.05);
+}
+
+.exam-tip h2{
+    color:#173f5f;
+    margin-bottom:15px;
+}
+
+.exam-tip p{
+    margin-bottom:10px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back{
+    text-align:center;
+    margin:45px 0;
+}
+
+.back a{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:8px;
+}
+
+.back a:hover{
+    background:#173f5f;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .logo{
+        width:100%;
+        margin-bottom:8px;
+    }
+
+    .score-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .question{
+        padding:20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        Let's QualifyNow
+    </div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="study-material.html">Study Material</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="test-series.html">Test Series</a>
+        <a href="exams.html">Exams</a>
+        <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb" target="_blank">YouTube</a>
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>🧠 SSC Analogy Practice</h1>
+
+    <p>
+        50 Exam-Oriented Analogy Questions with Answers &amp; Detailed Solutions
+    </p>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+
+<!-- ================= INTRO ================= -->
+
+<div class="intro">
+
+    <h2>📘 SSC Analogy Practice Set</h2>
+
+    <p>
+        This practice set contains 50 important analogy questions covering
+        Number Analogy, Number Set Analogy, Letter Analogy, Word Analogy,
+        Functional Analogy, Number-Letter Analogy and Mixed Analogy.
+    </p>
+
+    <p>
+        यह practice set Number Analogy, Number Set Analogy, Letter Analogy,
+        Word Analogy, Functional Analogy, Number-Letter Analogy और Mixed
+        Analogy के 50 महत्वपूर्ण questions को cover करता है।
+    </p>
+
+    <p>
+        Each question is designed in an SSC exam-oriented pattern and includes
+        a detailed explanation in both English and Hindi.
+    </p>
+
+    <p>
+        प्रत्येक question SSC exam-oriented pattern पर आधारित है और उसका
+        detailed solution English और Hindi दोनों में दिया गया है।
+    </p>
+
+    <div class="how-to">
+
+        <h3>📌 How to Solve Analogy Questions</h3>
+
+        <p>
+            <strong>English:</strong>
+            First identify the exact relationship between the first pair.
+            Then apply the same relationship to the second pair.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            सबसे पहले पहली pair के बीच का exact relation पहचानिए।
+            फिर उसी relation को दूसरी pair पर apply कीजिए।
+        </p>
+
+        <p>
+            <strong>Important:</strong>
+            Do not select an answer by looking at only one number or letter.
+            Check the complete relationship.
+        </p>
+
+        <p>
+            <strong>महत्वपूर्ण:</strong>
+            केवल एक number या letter देखकर answer select न करें।
+            पूरी relationship को check करें।
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- NUMBER ANALOGY -->
+<!-- ========================================================= -->
+
+<h2 class="section-title">
+    🔢 Number Analogy / Number Analogy
+</h2>
+
+
+<!-- Q1 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q1</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 12 : 144 :: 15 : ?
+        <span>हिंदी: 12 : 144 :: 15 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 200</div>
+        <div class="option" data-option="B">B) 215</div>
+        <div class="option" data-option="C">C) 225</div>
+        <div class="option" data-option="D">D) 250</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) 225
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            12² = 144. Therefore, 15² = 225.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            12² = 144 है। इसलिए 15² = 225 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q2 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q2</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 8 : 72 :: 11 : ?
+        <span>हिंदी: 8 : 72 :: 11 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 110</div>
+        <div class="option" data-option="B">B) 132</div>
+        <div class="option" data-option="C">C) 144</div>
+        <div class="option" data-option="D">D) 154</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 132
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            8 × 9 = 72. Therefore, 11 × 12 = 132.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            8 × 9 = 72 है। इसलिए 11 × 12 = 132 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q3 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q3</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 7 : 56 :: 13 : ?
+        <span>हिंदी: 7 : 56 :: 13 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 96</div>
+        <div class="option" data-option="B">B) 98</div>
+        <div class="option" data-option="C">C) 104</div>
+        <div class="option" data-option="D">D) 112</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) 104
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            7 × 8 = 56. The same multiplier 8 is used. Therefore,
+            13 × 8 = 104.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            7 × 8 = 56 है। उसी multiplier 8 से,
+            13 × 8 = 104 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q4 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q4</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 9 : 90 :: 14 : ?
+        <span>हिंदी: 9 : 90 :: 14 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 210</div>
+        <div class="option" data-option="B">B) 196</div>
+        <div class="option" data-option="C">C) 224</div>
+        <div class="option" data-option="D">D) 180</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) 210
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            9 × 10 = 90. Therefore, 14 × 15 = 210.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            9 × 10 = 90 है। इसलिए 14 × 15 = 210 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q5 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q5</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 6 : 42 :: 12 : ?
+        <span>हिंदी: 6 : 42 :: 12 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 132</div>
+        <div class="option" data-option="B">B) 144</div>
+        <div class="option" data-option="C">C) 156</div>
+        <div class="option" data-option="D">D) 168</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) 156
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            6 × 7 = 42. Therefore, 12 × 13 = 156.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            6 × 7 = 42 है। इसलिए 12 × 13 = 156 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q6 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q6</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 18 : 361 :: 24 : ?
+        <span>हिंदी: 18 : 361 :: 24 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 576</div>
+        <div class="option" data-option="B">B) 625</div>
+        <div class="option" data-option="C">C) 676</div>
+        <div class="option" data-option="D">D) 729</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 625
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            (18 + 1)² = 19² = 361. Therefore,
+            (24 + 1)² = 25² = 625.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            (18 + 1)² = 19² = 361 है। इसलिए
+            (24 + 1)² = 25² = 625 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q7 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q7</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 13 : 169 :: 17 : ?
+        <span>हिंदी: 13 : 169 :: 17 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 289</div>
+        <div class="option" data-option="B">B) 272</div>
+        <div class="option" data-option="C">C) 306</div>
+        <div class="option" data-option="D">D) 324</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) 289
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            13² = 169. Therefore, 17² = 289.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            13² = 169 है। इसलिए 17² = 289 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q8 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q8</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 5 : 30 :: 9 : ?
+        <span>हिंदी: 5 : 30 :: 9 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 72</div>
+        <div class="option" data-option="B">B) 81</div>
+        <div class="option" data-option="C">C) 99</div>
+        <div class="option" data-option="D">D) 90</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) 90
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            5 × 6 = 30. Therefore, 9 × 10 = 90.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            5 × 6 = 30 है। इसलिए 9 × 10 = 90 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q9 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q9</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 4 : 20 :: 9 : ?
+        <span>हिंदी: 4 : 20 :: 9 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 81</div>
+        <div class="option" data-option="B">B) 72</div>
+        <div class="option" data-option="C">C) 90</div>
+        <div class="option" data-option="D">D) 99</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) 90
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            4 × 5 = 20. Therefore, 9 × 10 = 90.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            4 × 5 = 20 है। इसलिए 9 × 10 = 90 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q10 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q10</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 15 : 240 :: 18 : ?
+        <span>हिंदी: 15 : 240 :: 18 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 306</div>
+        <div class="option" data-option="B">B) 342</div>
+        <div class="option" data-option="C">C) 360</div>
+        <div class="option" data-option="D">D) 324</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 342
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            15 × 16 = 240. Therefore, 18 × 19 = 342.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            15 × 16 = 240 है। इसलिए 18 × 19 = 342 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q11 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q11</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 11 : 121 :: 16 : ?
+        <span>हिंदी: 11 : 121 :: 16 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 225</div>
+        <div class="option" data-option="B">B) 240</div>
+        <div class="option" data-option="C">C) 250</div>
+        <div class="option" data-option="D">D) 256</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) 256
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            11² = 121. Therefore, 16² = 256.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            11² = 121 है। इसलिए 16² = 256 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q12 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q12</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 7 : 49 :: 12 : ?
+        <span>हिंदी: 7 : 49 :: 12 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 144</div>
+        <div class="option" data-option="B">B) 132</div>
+        <div class="option" data-option="C">C) 156</div>
+        <div class="option" data-option="D">D) 169</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) 144
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            7² = 49. Therefore, 12² = 144.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            7² = 49 है। इसलिए 12² = 144 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q13 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q13</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 14 : 210 :: 19 : ?
+        <span>हिंदी: 14 : 210 :: 19 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 361</div>
+        <div class="option" data-option="B">B) 380</div>
+        <div class="option" data-option="C">C) 399</div>
+        <div class="option" data-option="D">D) 400</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 380
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            14 × 15 = 210. Therefore, 19 × 20 = 380.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            14 × 15 = 210 है। इसलिए 19 × 20 = 380 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q14 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q14</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 21 : 441 :: 25 : ?
+        <span>हिंदी: 21 : 441 :: 25 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 525</div>
+        <div class="option" data-option="B">B) 625</div>
+        <div class="option" data-option="C">C) 650</div>
+        <div class="option" data-option="D">D) 675</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 625
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            21² = 441. Therefore, 25² = 625.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            21² = 441 है। इसलिए 25² = 625 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q15 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q15</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 10 : 110 :: 15 : ?
+        <span>हिंदी: 10 : 110 :: 15 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 225</div>
+        <div class="option" data-option="B">B) 240</div>
+        <div class="option" data-option="C">C) 250</div>
+        <div class="option" data-option="D">D) 260</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 240
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            10 × 11 = 110. Therefore, 15 × 16 = 240.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            10 × 11 = 110 है। इसलिए 15 × 16 = 240 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- NUMBER SET ANALOGY -->
+<!-- ========================================================= -->
+
+<h2 class="section-title">
+    🔢 Number Set Analogy / Number Set Analogy
+</h2>
+
+
+<!-- Q16 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q16</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (6, 8, 28) :: ?
+        <span>हिंदी: (6, 8, 28) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (7, 9, 32)</div>
+        <div class="option" data-option="B">B) (5, 7, 24)</div>
+        <div class="option" data-option="C">C) (8, 9, 30)</div>
+        <div class="option" data-option="D">D) (9, 10, 35)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) (7, 9, 32)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            (6 + 8) × 2 = 28. Similarly,
+            (7 + 9) × 2 = 32.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            (6 + 8) × 2 = 28 है। इसी प्रकार
+            (7 + 9) × 2 = 32 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q17 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q17</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (8, 6, 28) :: ?
+        <span>हिंदी: (8, 6, 28) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (9, 7, 30)</div>
+        <div class="option" data-option="B">B) (7, 5, 25)</div>
+        <div class="option" data-option="C">C) (10, 5, 25)</div>
+        <div class="option" data-option="D">D) (9, 5, 28)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) (9, 5, 28)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            (8 + 6) × 2 = 28. Similarly,
+            (9 + 5) × 2 = 28.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            (8 + 6) × 2 = 28 है। इसी प्रकार
+            (9 + 5) × 2 = 28 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q18 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q18</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (5, 7, 35) :: ?
+        <span>हिंदी: (5, 7, 35) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (6, 8, 42)</div>
+        <div class="option" data-option="B">B) (7, 9, 54)</div>
+        <div class="option" data-option="C">C) (8, 9, 72)</div>
+        <div class="option" data-option="D">D) (9, 10, 80)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) (8, 9, 72)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Third number = First × Second.
+            5 × 7 = 35 and 8 × 9 = 72.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            तीसरी संख्या = पहली संख्या × दूसरी संख्या।
+            5 × 7 = 35 और 8 × 9 = 72।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q19 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q19</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (12, 4, 8) :: ?
+        <span>हिंदी: (12, 4, 8) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (15, 5, 10)</div>
+        <div class="option" data-option="B">B) (18, 3, 9)</div>
+        <div class="option" data-option="C">C) (14, 6, 9)</div>
+        <div class="option" data-option="D">D) (16, 4, 6)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) (15, 5, 10)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            First = Second + Third.
+            12 = 4 + 8. Similarly, 15 = 5 + 10.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            पहली संख्या = दूसरी संख्या + तीसरी संख्या।
+            12 = 4 + 8। इसी प्रकार 15 = 5 + 10।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q20 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q20</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (9, 4, 5) :: ?
+        <span>हिंदी: (9, 4, 5) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (12, 5, 8)</div>
+        <div class="option" data-option="B">B) (15, 7, 6)</div>
+        <div class="option" data-option="C">C) (18, 9, 7)</div>
+        <div class="option" data-option="D">D) (14, 8, 6)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) (14, 8, 6)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            9 = 4 + 5. Similarly, 14 = 8 + 6.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            9 = 4 + 5 है। इसी प्रकार 14 = 8 + 6 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q21 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q21</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (4, 6, 20) :: ?
+        <span>हिंदी: (4, 6, 20) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (5, 7, 25)</div>
+        <div class="option" data-option="B">B) (7, 9, 32)</div>
+        <div class="option" data-option="C">C) (6, 8, 26)</div>
+        <div class="option" data-option="D">D) (8, 10, 30)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) (7, 9, 32)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            (4 + 6) × 2 = 20. Similarly,
+            (7 + 9) × 2 = 32.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            (4 + 6) × 2 = 20 है। इसी प्रकार
+            (7 + 9) × 2 = 32 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q22 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q22</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (10, 5, 50) :: ?
+        <span>हिंदी: (10, 5, 50) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (7, 6, 36)</div>
+        <div class="option" data-option="B">B) (8, 5, 35)</div>
+        <div class="option" data-option="C">C) (9, 7, 63)</div>
+        <div class="option" data-option="D">D) (12, 4, 40)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) (9, 7, 63)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            10 × 5 = 50. Similarly, 9 × 7 = 63.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            10 × 5 = 50 है। इसी प्रकार 9 × 7 = 63 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q23 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q23</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (16, 9, 7) :: ?
+        <span>हिंदी: (16, 9, 7) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (20, 12, 8)</div>
+        <div class="option" data-option="B">B) (18, 9, 8)</div>
+        <div class="option" data-option="C">C) (15, 7, 9)</div>
+        <div class="option" data-option="D">D) (21, 11, 9)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) (20, 12, 8)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            16 − 9 = 7. Similarly, 20 − 12 = 8.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            16 − 9 = 7 है। इसी प्रकार 20 − 12 = 8 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q24 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q24</span>
+
+    <h3>Find the related set / संबंधित set ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: (11, 6, 17) :: ?
+        <span>हिंदी: (11, 6, 17) :: ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) (12, 5, 16)</div>
+        <div class="option" data-option="B">B) (14, 8, 22)</div>
+        <div class="option" data-option="C">C) (15, 7, 20)</div>
+        <div class="option" data-option="D">D) (16, 9, 24)</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) (14, 8, 22)
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            11 + 6 = 17. Similarly, 14 + 8 = 22.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            11 + 6 = 17 है। इसी प्रकार 14 + 8 = 22।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- LETTER ANALOGY -->
+<!-- ========================================================= -->
+
+<h2 class="section-title">
+    🔤 Letter Analogy / Letter Analogy
+</h2>
+
+
+<!-- Q25 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q25</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: ABC : BCD :: PQR : ?
+        <span>हिंदी: ABC : BCD :: PQR : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) PQR</div>
+        <div class="option" data-option="B">B) QRS</div>
+        <div class="option" data-option="C">C) RST</div>
+        <div class="option" data-option="D">D) QRT</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) QRS
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Every letter moves one position forward:
+            A→B, B→C, C→D. Therefore P→Q, Q→R, R→S = QRS.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            प्रत्येक अक्षर एक position आगे जाता है:
+            A→B, B→C, C→D। इसलिए P→Q, Q→R, R→S = QRS।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q26 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q26</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: ACE : BDF :: MOQ : ?
+        <span>हिंदी: ACE : BDF :: MOQ : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) NOP</div>
+        <div class="option" data-option="B">B) NPS</div>
+        <div class="option" data-option="C">C) MPR</div>
+        <div class="option" data-option="D">D) NPR</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) NPR
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Every letter moves one position forward.
+            Therefore M→N, O→P, Q→R = NPR.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            प्रत्येक अक्षर एक position आगे जाता है।
+            इसलिए M→N, O→P, Q→R = NPR।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q27 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q27</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: BDGK : CEHL :: FHKN : ?
+        <span>हिंदी: BDGK : CEHL :: FHKN : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) GILO</div>
+        <div class="option" data-option="B">B) GJLO</div>
+        <div class="option" data-option="C">C) HILO</div>
+        <div class="option" data-option="D">D) GIMN</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) GILO
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Every letter moves one position forward:
+            F→G, H→I, K→L, N→O = GILO.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            प्रत्येक अक्षर एक position आगे जाता है:
+            F→G, H→I, K→L, N→O = GILO।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q28 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q28</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: DFHJ : EGIK :: NPRT : ?
+        <span>हिंदी: DFHJ : EGIK :: NPRT : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) OQRT</div>
+        <div class="option" data-option="B">B) OPST</div>
+        <div class="option" data-option="C">C) OQSU</div>
+        <div class="option" data-option="D">D) PQSU</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) OQSU
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Every letter moves one position forward.
+            Therefore N→O, P→Q, R→S, T→U = OQSU.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            प्रत्येक अक्षर एक position आगे जाता है।
+            इसलिए N→O, P→Q, R→S, T→U = OQSU।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q29 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q29</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: AZ : BY :: CX : ?
+        <span>हिंदी: AZ : BY :: CX : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) DV</div>
+        <div class="option" data-option="B">B) DW</div>
+        <div class="option" data-option="C">C) EW</div>
+        <div class="option" data-option="D">D) DX</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) DW
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            The first letter moves +1 and the second letter moves −1.
+            Therefore C→D and X→W = DW.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            पहला अक्षर +1 और दूसरा अक्षर −1 होता है।
+            इसलिए C→D और X→W = DW।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q30 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q30</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: KM : NP :: QS : ?
+        <span>हिंदी: KM : NP :: QS : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) TV</div>
+        <div class="option" data-option="B">B) UW</div>
+        <div class="option" data-option="C">C) TW</div>
+        <div class="option" data-option="D">D) SV</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) TV
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Each letter moves three positions forward:
+            K→N, M→P. Therefore Q→T, S→V = TV.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            प्रत्येक अक्षर तीन position आगे जाता है:
+            K→N, M→P। इसलिए Q→T, S→V = TV।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q31 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q31</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: CFI : DGJ :: HKN : ?
+        <span>हिंदी: CFI : DGJ :: HKN : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) ILO</div>
+        <div class="option" data-option="B">B) JMO</div>
+        <div class="option" data-option="C">C) ILP</div>
+        <div class="option" data-option="D">D) HLO</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) ILO
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Every letter moves one position forward:
+            H→I, K→L, N→O = ILO.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            प्रत्येक अक्षर एक position आगे जाता है:
+            H→I, K→L, N→O = ILO।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q32 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q32</span>
+
+    <h3>Find the related letters / संबंधित अक्षर ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: DFH : GIK :: NPR : ?
+        <span>हिंदी: DFH : GIK :: NPR : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) QTW</div>
+        <div class="option" data-option="B">B) QSU</div>
+        <div class="option" data-option="C">C) ORU</div>
+        <div class="option" data-option="D">D) PRV</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) QSU
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            D→G, F→I and H→K means +3 for every letter.
+            Therefore N→Q, P→S, R→U = QSU.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            D→G, F→I और H→K में प्रत्येक अक्षर +3 है।
+            इसलिए N→Q, P→S, R→U = QSU।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- WORD & FUNCTIONAL ANALOGY -->
+<!-- ========================================================= -->
+
+<h2 class="section-title">
+    🧠 Word &amp; Functional Analogy / Word &amp; Functional Analogy
+</h2>
+
+
+<!-- Q33 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q33</span>
+
+    <h3>Find the related word / संबंधित शब्द ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Bird : Nest :: Lion : ?
+        <span>हिंदी: Bird : Nest :: Lion : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Stable / अस्तबल</div>
+        <div class="option" data-option="B">B) Den / मांद</div>
+        <div class="option" data-option="C">C) Kennel / कुत्ताघर</div>
+        <div class="option" data-option="D">D) Burrow / बिल</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) Den / मांद
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A bird lives in a nest. Similarly, a lion lives in a den.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Bird nest में रहता है। इसी प्रकार lion den (मांद) में रहता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q34 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q34</span>
+
+    <h3>Find the related word / संबंधित शब्द ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Doctor : Hospital :: Teacher : ?
+        <span>हिंदी: Doctor : Hospital :: Teacher : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Court / न्यायालय</div>
+        <div class="option" data-option="B">B) Market / बाजार</div>
+        <div class="option" data-option="C">C) Farm / खेत</div>
+        <div class="option" data-option="D">D) School / विद्यालय</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) School / विद्यालय
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A doctor works in a hospital. Similarly, a teacher works in a school.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Doctor hospital में काम करता है। इसी प्रकार teacher school में काम करता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q35 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q35</span>
+
+    <h3>Find the related function / संबंधित कार्य ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Pen : Write :: Knife : ?
+        <span>हिंदी: Pen : Write :: Knife : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Cut / काटना</div>
+        <div class="option" data-option="B">B) Read / पढ़ना</div>
+        <div class="option" data-option="C">C) Draw / चित्र बनाना</div>
+        <div class="option" data-option="D">D) Measure / मापना</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) Cut / काटना
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A pen is used to write. Similarly, a knife is used to cut.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Pen का उपयोग write करने के लिए होता है।
+            इसी प्रकार knife का उपयोग cut करने के लिए होता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q36 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q36</span>
+
+    <h3>Find the related function / संबंधित कार्य ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Thermometer : Temperature :: Barometer : ?
+        <span>हिंदी: Thermometer : Temperature :: Barometer : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Rain / वर्षा</div>
+        <div class="option" data-option="B">B) Wind / हवा</div>
+        <div class="option" data-option="C">C) Pressure / दबाव</div>
+        <div class="option" data-option="D">D) Humidity / आर्द्रता</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) Pressure / दबाव
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A thermometer measures temperature. Similarly,
+            a barometer measures pressure.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Thermometer temperature मापता है। इसी प्रकार
+            barometer pressure मापता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q37 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q37</span>
+
+    <h3>Find the related word / संबंधित शब्द ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Fish : Water :: Bird : ?
+        <span>हिंदी: Fish : Water :: Bird : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Tree / पेड़</div>
+        <div class="option" data-option="B">B) Air / वायु</div>
+        <div class="option" data-option="C">C) Soil / मिट्टी</div>
+        <div class="option" data-option="D">D) Cave / गुफा</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) Air / वायु
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            Fish lives in water. Similarly, a bird lives and moves in air.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Fish पानी में रहती है। इसी प्रकार bird हवा में रहती और उड़ती है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q38 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q38</span>
+
+    <h3>Find the related function / संबंधित कार्य ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Book : Read :: Food : ?
+        <span>हिंदी: Book : Read :: Food : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Cook / पकाना</div>
+        <div class="option" data-option="B">B) Buy / खरीदना</div>
+        <div class="option" data-option="C">C) Smell / सूंघना</div>
+        <div class="option" data-option="D">D) Eat / खाना</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) Eat / खाना
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A book is read. Similarly, food is eaten.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Book को read किया जाता है। इसी प्रकार food को eat किया जाता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q39 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q39</span>
+
+    <h3>Find the related function / संबंधित कार्य ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Eye : See :: Ear : ?
+        <span>हिंदी: Eye : See :: Ear : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Hear / सुनना</div>
+        <div class="option" data-option="B">B) Speak / बोलना</div>
+        <div class="option" data-option="C">C) Walk / चलना</div>
+        <div class="option" data-option="D">D) Touch / छूना</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) Hear / सुनना
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            The eye is used to see. Similarly, the ear is used to hear.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Eye का उपयोग देखने के लिए होता है। इसी प्रकार ear का उपयोग सुनने के लिए होता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q40 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q40</span>
+
+    <h3>Find the related word / संबंधित शब्द ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Seed : Plant :: Egg : ?
+        <span>हिंदी: Seed : Plant :: Egg : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Nest / घोंसला</div>
+        <div class="option" data-option="B">B) Feather / पंख</div>
+        <div class="option" data-option="C">C) Bird / पक्षी</div>
+        <div class="option" data-option="D">D) Wing / पंख</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) Bird / पक्षी
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A seed develops into a plant. Similarly,
+            an egg can develop into a bird.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Seed से plant विकसित होता है। इसी प्रकार egg से bird विकसित हो सकता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- NUMBER LETTER ANALOGY -->
+<!-- ========================================================= -->
+
+<h2 class="section-title">
+    🔢🔤 Number-Letter Analogy / Number-Letter Analogy
+</h2>
+
+
+<!-- Q41 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q41</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: A : 1 :: F : ?
+        <span>हिंदी: A : 1 :: F : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 4</div>
+        <div class="option" data-option="B">B) 5</div>
+        <div class="option" data-option="C">C) 6</div>
+        <div class="option" data-option="D">D) 7</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) 6
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A is the 1st letter of the alphabet and F is the 6th letter.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            A alphabet का 1st letter है और F 6th letter है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q42 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q42</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: D : 16 :: H : ?
+        <span>हिंदी: D : 16 :: H : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 32</div>
+        <div class="option" data-option="B">B) 64</div>
+        <div class="option" data-option="C">C) 72</div>
+        <div class="option" data-option="D">D) 81</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 64
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            D = 4th letter and 4² = 16.
+            H = 8th letter and 8² = 64.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            D = 4वाँ letter और 4² = 16।
+            H = 8वाँ letter और 8² = 64।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q43 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q43</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: C : 9 :: G : ?
+        <span>हिंदी: C : 9 :: G : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 49</div>
+        <div class="option" data-option="B">B) 42</div>
+        <div class="option" data-option="C">C) 36</div>
+        <div class="option" data-option="D">D) 56</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) 49
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            C = 3rd letter and 3² = 9.
+            G = 7th letter and 7² = 49.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            C = 3वाँ letter और 3² = 9।
+            G = 7वाँ letter और 7² = 49।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q44 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q44</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: E : 10 :: J : ?
+        <span>हिंदी: E : 10 :: J : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 15</div>
+        <div class="option" data-option="B">B) 18</div>
+        <div class="option" data-option="C">C) 25</div>
+        <div class="option" data-option="D">D) 20</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) 20
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            E = 5th letter and 5 × 2 = 10.
+            J = 10th letter and 10 × 2 = 20.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            E = 5वाँ letter और 5 × 2 = 10।
+            J = 10वाँ letter और 10 × 2 = 20।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q45 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q45</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: K : 22 :: P : ?
+        <span>हिंदी: K : 22 :: P : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 28</div>
+        <div class="option" data-option="B">B) 30</div>
+        <div class="option" data-option="C">C) 32</div>
+        <div class="option" data-option="D">D) 34</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) 32
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            K = 11th letter and 11 × 2 = 22.
+            P = 16th letter and 16 × 2 = 32.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            K = 11वाँ letter और 11 × 2 = 22।
+            P = 16वाँ letter और 16 × 2 = 32।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- MIXED ANALOGY -->
+<!-- ========================================================= -->
+
+<h2 class="section-title">
+    🔥 Mixed Analogy / Mixed Analogy
+</h2>
+
+
+<!-- Q46 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q46</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 19 : 400 :: 24 : ?
+        <span>हिंदी: 19 : 400 :: 24 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 576</div>
+        <div class="option" data-option="B">B) 625</div>
+        <div class="option" data-option="C">C) 676</div>
+        <div class="option" data-option="D">D) 729</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 625
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            (19 + 1)² = 20² = 400.
+            Therefore, (24 + 1)² = 25² = 625.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            (19 + 1)² = 20² = 400 है। इसलिए
+            (24 + 1)² = 25² = 625 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q47 -->
+
+<div class="question" data-answer="D">
+
+    <span class="badge">Q47</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 17 : 324 :: 23 : ?
+        <span>हिंदी: 17 : 324 :: 23 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 529</div>
+        <div class="option" data-option="B">B) 600</div>
+        <div class="option" data-option="C">C) 625</div>
+        <div class="option" data-option="D">D) 576</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (D) 576
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            (17 + 1)² = 18² = 324.
+            Therefore, (23 + 1)² = 24² = 576.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            (17 + 1)² = 18² = 324 है। इसलिए
+            (23 + 1)² = 24² = 576 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q48 -->
+
+<div class="question" data-answer="A">
+
+    <span class="badge">Q48</span>
+
+    <h3>Find the related word / संबंधित शब्द ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Hand : Glove :: Foot : ?
+        <span>हिंदी: Hand : Glove :: Foot : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) Shoe / जूता</div>
+        <div class="option" data-option="B">B) Shirt / कमीज</div>
+        <div class="option" data-option="C">C) Cap / टोपी</div>
+        <div class="option" data-option="D">D) Belt / बेल्ट</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (A) Shoe / जूता
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A glove is worn on the hand. Similarly,
+            a shoe is worn on the foot.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Glove हाथ में पहना जाता है। इसी प्रकार
+            shoe पैर में पहना जाता है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q49 -->
+
+<div class="question" data-answer="C">
+
+    <span class="badge">Q49</span>
+
+    <h3>Find the related word / संबंधित शब्द ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: Car : Road :: Train : ?
+        <span>हिंदी: Car : Road :: Train : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) River / नदी</div>
+        <div class="option" data-option="B">B) Sky / आकाश</div>
+        <div class="option" data-option="C">C) Track / पटरी</div>
+        <div class="option" data-option="D">D) Garage / गैरेज</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (C) Track / पटरी
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            A car runs on a road. Similarly,
+            a train runs on a track.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            Car road पर चलती है। इसी प्रकार
+            train track पर चलती है।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Q50 -->
+
+<div class="question" data-answer="B">
+
+    <span class="badge">Q50</span>
+
+    <h3>Find the missing number / लुप्त संख्या ज्ञात कीजिए</h3>
+
+    <div class="question-text">
+        English: 24 : 625 :: 29 : ?
+        <span>हिंदी: 24 : 625 :: 29 : ?</span>
+    </div>
+
+    <div class="options">
+
+        <div class="option" data-option="A">A) 810</div>
+        <div class="option" data-option="B">B) 900</div>
+        <div class="option" data-option="C">C) 961</div>
+        <div class="option" data-option="D">D) 1000</div>
+
+    </div>
+
+    <div class="answer">
+        <strong>Answer / उत्तर:</strong> (B) 900
+    </div>
+
+    <div class="solution">
+        <p>
+            <strong>English:</strong>
+            (24 + 1)² = 25² = 625.
+            Therefore, (29 + 1)² = 30² = 900.
+        </p>
+
+        <p>
+            <strong>हिंदी:</strong>
+            (24 + 1)² = 25² = 625 है। इसलिए
+            (29 + 1)² = 30² = 900 होगा।
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- RESULT BOX - ONLY ONE -->
+<!-- ========================================================= -->
+
+<div class="result-box">
+
+    <h2>📊 Your Practice Result / आपका Practice Result</h2>
+
+    <div class="score-grid">
+
+        <div>
+            <strong id="score">0 / 50</strong>
+            <span>Score / स्कोर</span>
+        </div>
+
+        <div>
+            <strong id="attempted">0</strong>
+            <span>Attempted / प्रयास</span>
+        </div>
+
+        <div>
+            <strong id="correct">0</strong>
+            <span>Correct / सही</span>
+        </div>
+
+        <div>
+            <strong id="wrong">0</strong>
+            <span>Wrong / गलत</span>
+        </div>
+
+    </div>
+
+    <button type="button" onclick="resetQuiz()">
+        Reset Practice / दोबारा शुरू करें
+    </button>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- EXAM TIP -->
+<!-- ========================================================= -->
+
+<div class="exam-tip">
+
+    <h2>🎯 Exam Tip</h2>
+
+    <p>
+        <strong>English:</strong>
+        In analogy questions, first identify the exact mathematical,
+        alphabetical or functional relationship. Never assume a relation
+        from only one part of the question.
+    </p>
+
+    <p>
+        <strong>हिंदी:</strong>
+        Analogy questions में सबसे पहले exact mathematical, alphabetical
+        या functional relation पहचानें। Question के केवल एक part को
+        देखकर relation assume न करें।
+    </p>
+
+    <p>
+        <strong>SSC Focus:</strong>
+        Number Analogy + Letter Analogy + Word Analogy + Mixed Analogy
+        को नियमित रूप से practice करें।
+    </p>
+
+</div>
+
+
+<!-- ================= BACK ================= -->
+
+<div class="back">
+
+    <a href="study-material.html">
+        ← Back to Study Material
+    </a>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p><strong>LET'S QUALIFYNOW</strong></p>
+
+    <p>N Saurabh Sir — Reasoning Faculty</p>
+
+    <p>SSC • Banking • Railway • Government Exams</p>
+
+    <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
+
+</footer>
+
+
+<!-- ========================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================================= -->
+
+<script>
+
+let score = 0;
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+
+/* ================= UPDATE RESULT ================= */
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        score + " / 50";
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+}
+
+
+/* ================= SHUFFLE OPTIONS ================= */
+
+function shuffleOptions(){
+
+    document.querySelectorAll(".question").forEach(function(card){
+
+        const container = card.querySelector(".options");
+
+        const options =
+            Array.from(container.querySelectorAll(".option"));
+
+        for(let i = options.length - 1; i > 0; i--){
+
+            const j =
+                Math.floor(Math.random() * (i + 1));
+
+            [options[i], options[j]] =
+                [options[j], options[i]];
+        }
+
+        options.forEach(function(option){
+
+            container.appendChild(option);
+
+        });
+
+    });
+
+}
+
+
+/* ================= QUESTION EVENTS ================= */
+
+function attachQuestionEvents(){
+
+    document.querySelectorAll(".question").forEach(function(card){
+
+        const options =
+            card.querySelectorAll(".option");
+
+        const answer =
+            card.dataset.answer;
+
+        card.dataset.attempted = "false";
+
+
+        options.forEach(function(option){
+
+            option.addEventListener("click", function(){
+
+                /* Question already attempted */
+                if(card.dataset.attempted === "true"){
+                    return;
+                }
+
+
+                /* Lock this question */
+                card.dataset.attempted = "true";
+
+                attempted++;
+
+
+                const selected =
+                    option.dataset.option;
+
+
+                const answerBox =
+                    card.querySelector(".answer");
+
+                const solutionBox =
+                    card.querySelector(".solution");
+
+
+                /* ================= CORRECT ================= */
+
+                if(selected === answer){
+
+                    option.classList.add("correct");
+
+                    correct++;
+                    score++;
+
+                }
+
+
+                /* ================= WRONG ================= */
+
+                else{
+
+                    option.classList.add("wrong");
+
+                    const correctOption =
+                        card.querySelector(
+                            '[data-option="' + answer + '"]'
+                        );
+
+                    if(correctOption){
+
+                        correctOption.classList.add("correct");
+
+                    }
+
+                    wrong++;
+
+                }
+
+
+                /* Disable all options */
+
+                options.forEach(function(item){
+
+                    item.classList.add("disabled");
+
+                });
+
+
+                /* Show answer and solution only after click */
+
+                answerBox.style.display = "block";
+
+                solutionBox.style.display = "block";
+
+
+                /* Update score */
+
+                updateScore();
+
+            });
+
+        });
+
+    });
+
+}
+
+
+/* ================= RESET QUIZ ================= */
+
+function resetQuiz(){
+
+    score = 0;
+    attempted = 0;
+    correct = 0;
+    wrong = 0;
+
+
+    document.querySelectorAll(".question").forEach(function(card){
+
+        card.dataset.attempted = "false";
+
+
+        card.querySelectorAll(".option").forEach(function(option){
+
+            option.classList.remove("correct");
+            option.classList.remove("wrong");
+            option.classList.remove("disabled");
+
+        });
+
+
+        const answerBox =
+            card.querySelector(".answer");
+
+        const solutionBox =
+            card.querySelector(".solution");
+
+
+        answerBox.style.display = "none";
+
+        solutionBox.style.display = "none";
+
+    });
+
+
+    /* Shuffle options again */
+
+    shuffleOptions();
+
+
+    /* Reset result */
+
+    updateScore();
+
+
+    /* Go to top */
+
+    window.scrollTo({
+
+        top:0,
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* ================= START ================= */
+
+shuffleOptions();
+
+attachQuestionEvents();
+
+updateScore();
+
+</script>
+
+</body>
+</html>
