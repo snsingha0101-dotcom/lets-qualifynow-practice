@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Statement & Conclusion Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:7px 10px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:850px;
+    margin:auto;
+}
+
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #d9e2ec;
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.intro p{
+    color:#52606d;
+    margin-bottom:12px;
+}
+
+.intro ul{
+    margin-left:20px;
+    color:#52606d;
+}
+
+.intro li{
+    margin-bottom:6px;
+}
+
+.part{
+    margin-bottom:35px;
+}
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    padding:14px 18px;
+    border-left:5px solid #173f5f;
+    border-radius:7px;
+    margin-bottom:18px;
+    font-size:21px;
+}
+
+.question-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(36,59,83,0.05);
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    color:#243b53;
+    margin-bottom:15px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #829ab1;
+    background:#f7f9fc;
+    color:#243b53;
+    padding:12px 14px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.2s;
+    font-size:15px;
+}
+
+.option:hover{
+    background:#d9eaf7;
+}
+
+.option.correct{
+    background:#d4edda;
+    border-color:#28a745;
+    color:#155724;
+}
+
+.option.wrong{
+    background:#f8d7da;
+    border-color:#dc3545;
+    color:#721c24;
+}
+
+.solution{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+    color:#243b53;
+}
+
+.solution strong{
+    color:#102a43;
+}
+
+.score-box{
+    background:#102a43;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    margin-bottom:15px;
+}
+
+.score-number{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    font-size:16px;
+}
+
+.stats span{
+    background:#173f5f;
+    padding:8px 14px;
+    border-radius:5px;
+}
+
+.button-area{
+    text-align:center;
+    margin:25px 0 40px;
+}
+
+.btn{
+    display:inline-block;
+    border:none;
+    background:#173f5f;
+    color:white;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:15px;
+    margin:5px;
+}
+
+.btn:hover{
+    background:#102a43;
+}
+
+.note{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:30px;
+    color:#52606d;
+}
+
+.note strong{
+    color:#102a43;
+}
+
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 8px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+    .stats{
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+
+<div class="logo">LET'S QUALIFYNOW</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="ssc-reasoning.html">SSC Reasoning</a>
+<a href="courses.html">Courses</a>
+<a href="study-material.html">Study Material</a>
+<a href="live-classes.html">Live Classes</a>
+<a href="test-series.html">Test Series</a>
+<a href="exams.html">Exams</a>
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+</nav>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1>📝 SSC Statement &amp; Conclusion Practice</h1>
+
+<p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="intro">
+
+<h2>SSC Statement &amp; Conclusion Practice Set</h2>
+
+<p>
+This practice set covers important Statement &amp; Conclusion patterns commonly asked in SSC and other Government Exams.
+</p>
+
+<ul>
+<li>Identify the conclusion that logically follows from a statement.</li>
+<li>Distinguish between a valid and invalid conclusion.</li>
+<li>Understand what can be inferred from the given information.</li>
+<li>Avoid assumptions based on outside knowledge.</li>
+<li>Apply logical reasoning to exam-oriented statements.</li>
+</ul>
+
+</div>
+
+
+<div class="note">
+
+<strong>📌 How to Attempt</strong>
+
+<ul style="margin:10px 0 0 20px;">
+
+<li>Read the statement carefully.</li>
+<li>Do not add information that is not given in the statement.</li>
+<li>Check whether the conclusion necessarily or logically follows.</li>
+<li>Choose the option that is best supported by the statement.</li>
+<li>After selecting an option, the correct answer and solution will appear.</li>
+<li>Try all 50 questions and check your final score.</li>
+
+</ul>
+
+</div>
+
+
+<!-- PART 1 -->
+
+<div class="part">
+
+<div class="part-title">
+Part 1 — Basic Statement &amp; Conclusion
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q1. Statement: Regular practice improves performance in competitive examinations. Which conclusion follows?<br>
+हिंदी: कथन: नियमित अभ्यास प्रतियोगी परीक्षाओं में प्रदर्शन को बेहतर बनाता है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Practice is unnecessary for examinations.<br>परीक्षाओं के लिए अभ्यास आवश्यक नहीं है।</div>
+<div class="option" data-option="B">B. Regular practice can help improve examination performance.<br>नियमित अभ्यास परीक्षा के प्रदर्शन को बेहतर बनाने में मदद कर सकता है।</div>
+<div class="option" data-option="C">C. Every student will score full marks.<br>प्रत्येक विद्यार्थी पूर्ण अंक प्राप्त करेगा।</div>
+<div class="option" data-option="D">D. Examinations should be cancelled.<br>परीक्षाएँ रद्द कर देनी चाहिए।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement directly indicates that regular practice improves performance.<br>
+हिंदी: कथन सीधे बताता है कि नियमित अभ्यास प्रदर्शन को बेहतर बनाता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q2. Statement: Heavy rainfall can cause waterlogging in low-lying areas. Which conclusion follows?<br>
+हिंदी: कथन: भारी वर्षा से निचले क्षेत्रों में जलभराव हो सकता है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Rainfall always causes drought.<br>वर्षा हमेशा सूखा पैदा करती है।</div>
+<div class="option" data-option="B">B. Low-lying areas never face water problems.<br>निचले क्षेत्रों में कभी भी पानी की समस्या नहीं होती।</div>
+<div class="option" data-option="C">C. Heavy rainfall may result in waterlogging.<br>भारी वर्षा के कारण जलभराव हो सकता है।</div>
+<div class="option" data-option="D">D. Waterlogging occurs only during winter.<br>जलभराव केवल सर्दियों में होता है।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The statement establishes a direct possibility that heavy rainfall can cause waterlogging.<br>
+हिंदी: कथन सीधे यह संभावना बताता है कि भारी वर्षा जलभराव का कारण बन सकती है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q3. Statement: Reading newspapers regularly improves awareness of current events. Which conclusion follows?<br>
+हिंदी: कथन: नियमित रूप से समाचार-पत्र पढ़ने से समसामयिक घटनाओं के प्रति जागरूकता बढ़ती है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Regular newspaper reading can improve awareness.<br>नियमित समाचार-पत्र पढ़ना जागरूकता बढ़ा सकता है।</div>
+<div class="option" data-option="B">B. Newspapers contain no useful information.<br>समाचार-पत्रों में कोई उपयोगी जानकारी नहीं होती।</div>
+<div class="option" data-option="C">C. Only newspapers can provide current affairs knowledge.<br>केवल समाचार-पत्र ही समसामयिक घटनाओं का ज्ञान दे सकते हैं।</div>
+<div class="option" data-option="D">D. Current events are unimportant.<br>समसामयिक घटनाएँ महत्वपूर्ण नहीं हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The conclusion directly reflects the information given in the statement.<br>
+हिंदी: यह निष्कर्ष कथन में दी गई जानकारी को सीधे दर्शाता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q4. Statement: A balanced diet provides essential nutrients to the body. Which conclusion follows?<br>
+हिंदी: कथन: संतुलित आहार शरीर को आवश्यक पोषक तत्व प्रदान करता है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. A balanced diet contains no nutrients.<br>संतुलित आहार में कोई पोषक तत्व नहीं होते।</div>
+<div class="option" data-option="B">B. Food is unnecessary for the body.<br>शरीर के लिए भोजन आवश्यक नहीं है।</div>
+<div class="option" data-option="C">C. Everyone must eat the same food.<br>सभी को एक ही भोजन खाना चाहिए।</div>
+<div class="option" data-option="D">D. A balanced diet can help meet nutritional needs.<br>संतुलित आहार पोषण संबंधी आवश्यकताओं को पूरा करने में मदद कर सकता है।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+A diet that provides essential nutrients can help meet the body's nutritional requirements.<br>
+हिंदी: जो आहार आवश्यक पोषक तत्व प्रदान करता है, वह शरीर की पोषण संबंधी आवश्यकताओं को पूरा करने में मदद कर सकता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q5. Statement: The company reduced prices to attract more customers. Which conclusion follows?<br>
+हिंदी: कथन: कंपनी ने अधिक ग्राहकों को आकर्षित करने के लिए कीमतें कम कर दीं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The company wanted to stop selling products.<br>कंपनी उत्पादों की बिक्री बंद करना चाहती थी।</div>
+<div class="option" data-option="B">B. Lower prices were intended to attract customers.<br>कम कीमतों का उद्देश्य ग्राहकों को आकर्षित करना था।</div>
+<div class="option" data-option="C">C. Customers were prohibited from buying products.<br>ग्राहकों को उत्पाद खरीदने से रोक दिया गया था।</div>
+<div class="option" data-option="D">D. Product prices increased.<br>उत्पादों की कीमतें बढ़ गईं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement explicitly connects lower prices with the objective of attracting customers.<br>
+हिंदी: कथन स्पष्ट रूप से कम कीमतों को ग्राहकों को आकर्षित करने के उद्देश्य से जोड़ता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q6. Statement: The school introduced weekly tests to monitor students' preparation. Which conclusion follows?<br>
+हिंदी: कथन: स्कूल ने विद्यार्थियों की तैयारी की निगरानी के लिए साप्ताहिक परीक्षाएँ शुरू कीं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Tests have no connection with preparation.<br>परीक्षाओं का तैयारी से कोई संबंध नहीं है।</div>
+<div class="option" data-option="B">B. Students should stop studying.<br>विद्यार्थियों को पढ़ाई बंद कर देनी चाहिए।</div>
+<div class="option" data-option="C">C. Weekly tests can help monitor preparation.<br>साप्ताहिक परीक्षाएँ तैयारी की निगरानी में मदद कर सकती हैं।</div>
+<div class="option" data-option="D">D. The school has cancelled all examinations.<br>स्कूल ने सभी परीक्षाएँ रद्द कर दी हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The weekly tests were introduced specifically to monitor students' preparation.<br>
+हिंदी: साप्ताहिक परीक्षाएँ विशेष रूप से विद्यार्थियों की तैयारी की निगरानी के लिए शुरू की गई थीं।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q7. Statement: The road was repaired after several complaints from residents. Which conclusion follows?<br>
+हिंदी: कथन: निवासियों की कई शिकायतों के बाद सड़क की मरम्मत की गई। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Residents' complaints were followed by road repair.<br>निवासियों की शिकायतों के बाद सड़क की मरम्मत की गई।</div>
+<div class="option" data-option="B">B. The road was never damaged.<br>सड़क कभी क्षतिग्रस्त नहीं हुई थी।</div>
+<div class="option" data-option="C">C. Residents opposed road repair.<br>निवासियों ने सड़क की मरम्मत का विरोध किया।</div>
+<div class="option" data-option="D">D. The road was permanently closed.<br>सड़क को स्थायी रूप से बंद कर दिया गया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The statement indicates that the road was repaired after residents made several complaints.<br>
+हिंदी: कथन बताता है कि निवासियों द्वारा कई शिकायतें किए जाने के बाद सड़क की मरम्मत की गई।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q8. Statement: Online classes allow students to attend lessons from home. Which conclusion follows?<br>
+हिंदी: कथन: ऑनलाइन कक्षाएँ विद्यार्थियों को घर से पाठ में शामिल होने की सुविधा देती हैं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Online classes require students to travel daily.<br>ऑनलाइन कक्षाओं के लिए विद्यार्थियों को प्रतिदिन यात्रा करनी पड़ती है।</div>
+<div class="option" data-option="B">B. Online classes are impossible from home.<br>ऑनलाइन कक्षाएँ घर से संभव नहीं हैं।</div>
+<div class="option" data-option="C">C. Students cannot attend lessons online.<br>विद्यार्थी ऑनलाइन पाठ में शामिल नहीं हो सकते।</div>
+<div class="option" data-option="D">D. Online classes can provide learning access from home.<br>ऑनलाइन कक्षाएँ घर से शिक्षा प्राप्त करने की सुविधा दे सकती हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The statement clearly says that online classes allow students to attend lessons from home.<br>
+हिंदी: कथन स्पष्ट रूप से कहता है कि ऑनलाइन कक्षाएँ विद्यार्थियों को घर से पाठ में शामिल होने की सुविधा देती हैं।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q9. Statement: Regular exercise helps maintain physical fitness. Which conclusion follows?<br>
+हिंदी: कथन: नियमित व्यायाम शारीरिक फिटनेस बनाए रखने में मदद करता है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Exercise always causes illness.<br>व्यायाम हमेशा बीमारी का कारण बनता है।</div>
+<div class="option" data-option="B">B. Regular exercise can support physical fitness.<br>नियमित व्यायाम शारीरिक फिटनेस बनाए रखने में सहायक हो सकता है।</div>
+<div class="option" data-option="C">C. Physical fitness does not depend on activity.<br>शारीरिक फिटनेस गतिविधि पर निर्भर नहीं करती।</div>
+<div class="option" data-option="D">D. Exercise should never be performed.<br>व्यायाम कभी नहीं करना चाहिए।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement directly supports the conclusion that regular exercise can help maintain fitness.<br>
+हिंदी: कथन सीधे इस निष्कर्ष का समर्थन करता है कि नियमित व्यायाम फिटनेस बनाए रखने में मदद कर सकता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q10. Statement: The library extended its opening hours to help students study for examinations. Which conclusion follows?<br>
+हिंदी: कथन: पुस्तकालय ने विद्यार्थियों को परीक्षा की तैयारी में मदद करने के लिए अपने खुलने के समय को बढ़ा दिया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The library stopped providing study facilities.<br>पुस्तकालय ने अध्ययन की सुविधाएँ देना बंद कर दिया।</div>
+<div class="option" data-option="B">B. Students were prohibited from studying.<br>विद्यार्थियों को पढ़ाई करने से रोक दिया गया।</div>
+<div class="option" data-option="C">C. Extended library hours were intended to support students' study.<br>पुस्तकालय के बढ़ाए गए समय का उद्देश्य विद्यार्थियों की पढ़ाई में सहायता करना था।</div>
+<div class="option" data-option="D">D. Examinations were cancelled.<br>परीक्षाएँ रद्द कर दी गईं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The statement clearly states that the opening hours were extended to help students study.<br>
+हिंदी: कथन स्पष्ट रूप से बताता है कि विद्यार्थियों की पढ़ाई में मदद करने के लिए खुलने का समय बढ़ाया गया था।
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PART 2 -->
+
+<div class="part">
+
+<div class="part-title">
+Part 2 — Identify the Valid Conclusion
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q11. Statement: Many employees attended the training programme organized by the company. Which conclusion follows?<br>
+हिंदी: कथन: कंपनी द्वारा आयोजित प्रशिक्षण कार्यक्रम में कई कर्मचारियों ने भाग लिया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The training programme was attended by many employees.<br>प्रशिक्षण कार्यक्रम में कई कर्मचारियों ने भाग लिया।</div>
+<div class="option" data-option="B">B. No employee attended the programme.<br>किसी भी कर्मचारी ने कार्यक्रम में भाग नहीं लिया।</div>
+<div class="option" data-option="C">C. The company cancelled the training.<br>कंपनी ने प्रशिक्षण रद्द कर दिया।</div>
+<div class="option" data-option="D">D. Employees were forced to leave the company.<br>कर्मचारियों को कंपनी छोड़ने के लिए मजबूर किया गया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+This conclusion directly restates the information given in the statement.<br>
+हिंदी: यह निष्कर्ष कथन में दी गई जानकारी को सीधे दोहराता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q12. Statement: The government planted trees along the highway to increase green cover. Which conclusion follows?<br>
+हिंदी: कथन: सरकार ने हरित क्षेत्र बढ़ाने के लिए राजमार्ग के किनारे पेड़ लगाए। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The government wanted to reduce vegetation.<br>सरकार वनस्पति को कम करना चाहती थी।</div>
+<div class="option" data-option="B">B. Trees were removed from the highway.<br>राजमार्ग से पेड़ हटा दिए गए।</div>
+<div class="option" data-option="C">C. Tree plantation was intended to increase green cover.<br>वृक्षारोपण का उद्देश्य हरित क्षेत्र बढ़ाना था।</div>
+<div class="option" data-option="D">D. The highway was permanently closed.<br>राजमार्ग को स्थायी रूप से बंद कर दिया गया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The stated objective of planting trees was to increase green cover.<br>
+हिंदी: पेड़ लगाने का स्पष्ट उद्देश्य हरित क्षेत्र को बढ़ाना था।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q13. Statement: The school provided extra classes for students who needed additional academic support. Which conclusion follows?<br>
+हिंदी: कथन: स्कूल ने उन विद्यार्थियों के लिए अतिरिक्त कक्षाएँ प्रदान कीं जिन्हें अतिरिक्त शैक्षणिक सहायता की आवश्यकता थी। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Extra classes were meant to reduce academic support.<br>अतिरिक्त कक्षाओं का उद्देश्य शैक्षणिक सहायता को कम करना था।</div>
+<div class="option" data-option="B">B. Extra classes were intended to provide additional academic support.<br>अतिरिक्त कक्षाओं का उद्देश्य अतिरिक्त शैक्षणिक सहायता प्रदान करना था।</div>
+<div class="option" data-option="C">C. All regular classes were cancelled.<br>सभी नियमित कक्षाएँ रद्द कर दी गईं।</div>
+<div class="option" data-option="D">D. Students were prohibited from attending classes.<br>विद्यार्थियों को कक्षाओं में भाग लेने से रोक दिया गया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement explicitly explains the purpose of the extra classes.<br>
+हिंदी: कथन अतिरिक्त कक्षाओं के उद्देश्य को स्पष्ट रूप से बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q14. Statement: The shop introduced home delivery services for customers. Which conclusion follows?<br>
+हिंदी: कथन: दुकान ने ग्राहकों के लिए होम डिलीवरी सेवा शुरू की। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Customers must visit the shop personally.<br>ग्राहकों को व्यक्तिगत रूप से दुकान पर जाना आवश्यक है।</div>
+<div class="option" data-option="B">B. The shop stopped selling products.<br>दुकान ने उत्पाद बेचना बंद कर दिया।</div>
+<div class="option" data-option="C">C. Home delivery became impossible.<br>होम डिलीवरी असंभव हो गई।</div>
+<div class="option" data-option="D">D. Customers may receive products at home.<br>ग्राहकों को घर पर उत्पाद प्राप्त हो सकते हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+Home delivery services allow customers to receive purchased products at home.<br>
+हिंदी: होम डिलीवरी सेवा ग्राहकों को खरीदे गए उत्पाद घर पर प्राप्त करने की सुविधा देती है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q15. Statement: The city introduced a new bus service connecting several residential areas. Which conclusion follows?<br>
+हिंदी: कथन: शहर ने कई आवासीय क्षेत्रों को जोड़ने वाली नई बस सेवा शुरू की। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Public transport connectivity between those areas may improve.<br>उन क्षेत्रों के बीच सार्वजनिक परिवहन की कनेक्टिविटी बेहतर हो सकती है।</div>
+<div class="option" data-option="B">B. All buses were removed.<br>सभी बसें हटा दी गईं।</div>
+<div class="option" data-option="C">C. Residential areas became inaccessible.<br>आवासीय क्षेत्र पहुँच से बाहर हो गए।</div>
+<div class="option" data-option="D">D. Public transportation stopped completely.<br>सार्वजनिक परिवहन पूरी तरह बंद हो गया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+A new bus service connecting residential areas may improve public transport connectivity.<br>
+हिंदी: आवासीय क्षेत्रों को जोड़ने वाली नई बस सेवा सार्वजनिक परिवहन की कनेक्टिविटी को बेहतर कर सकती है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q16. Statement: The company offered discounts during the festival season to increase sales. Which conclusion follows?<br>
+हिंदी: कथन: कंपनी ने बिक्री बढ़ाने के लिए त्योहार के मौसम में छूट दी। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The company wanted sales to decrease.<br>कंपनी बिक्री कम करना चाहती थी।</div>
+<div class="option" data-option="B">B. Discounts were prohibited.<br>छूट देना प्रतिबंधित था।</div>
+<div class="option" data-option="C">C. Discounts were offered with the aim of increasing sales.<br>बिक्री बढ़ाने के उद्देश्य से छूट दी गई थी।</div>
+<div class="option" data-option="D">D. The company stopped selling products.<br>कंपनी ने उत्पाद बेचना बंद कर दिया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The statement directly gives increasing sales as the purpose of the discounts.<br>
+हिंदी: कथन सीधे बताता है कि छूट देने का उद्देश्य बिक्री बढ़ाना था।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q17. Statement: Several roads were closed because of flooding. Which conclusion follows?<br>
+हिंदी: कथन: बाढ़ के कारण कई सड़कें बंद कर दी गईं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Flooding improved road connectivity.<br>बाढ़ ने सड़क कनेक्टिविटी में सुधार किया।</div>
+<div class="option" data-option="B">B. Flooding caused some roads to be closed.<br>बाढ़ के कारण कुछ सड़कें बंद करनी पड़ीं।</div>
+<div class="option" data-option="C">C. All roads remained open.<br>सभी सड़कें खुली रहीं।</div>
+<div class="option" data-option="D">D. There was no flooding.<br>कोई बाढ़ नहीं आई।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement clearly establishes flooding as the reason for the road closures.<br>
+हिंदी: कथन स्पष्ट रूप से बाढ़ को सड़कों के बंद होने का कारण बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q18. Statement: The student revised the syllabus several times before the examination. Which conclusion follows?<br>
+हिंदी: कथन: विद्यार्थी ने परीक्षा से पहले पाठ्यक्रम को कई बार दोहराया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The student completely avoided studying.<br>विद्यार्थी ने पढ़ाई से पूरी तरह परहेज किया।</div>
+<div class="option" data-option="B">B. The student did not know the syllabus existed.<br>विद्यार्थी को पता ही नहीं था कि पाठ्यक्रम मौजूद है।</div>
+<div class="option" data-option="C">C. The examination was cancelled.<br>परीक्षा रद्द कर दी गई।</div>
+<div class="option" data-option="D">D. The student made repeated efforts to prepare.<br>विद्यार्थी ने तैयारी के लिए बार-बार प्रयास किए।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+Repeated revision indicates that the student made continued efforts toward preparation.<br>
+हिंदी: बार-बार दोहराने से पता चलता है कि विद्यार्थी ने तैयारी के लिए लगातार प्रयास किए।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q19. Statement: The factory installed energy-efficient machines to reduce electricity consumption. Which conclusion follows?<br>
+हिंदी: कथन: कारखाने ने बिजली की खपत कम करने के लिए ऊर्जा-कुशल मशीनें लगाईं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The machines were installed with the aim of reducing electricity consumption.<br>मशीनें बिजली की खपत कम करने के उद्देश्य से लगाई गई थीं।</div>
+<div class="option" data-option="B">B. The factory wanted to increase electricity wastage.<br>कारखाना बिजली की बर्बादी बढ़ाना चाहता था।</div>
+<div class="option" data-option="C">C. Electricity became unnecessary.<br>बिजली अनावश्यक हो गई।</div>
+<div class="option" data-option="D">D. The factory stopped using machines.<br>कारखाने ने मशीनों का उपयोग बंद कर दिया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The purpose of installing the machines was to reduce electricity consumption.<br>
+हिंदी: मशीनें लगाने का उद्देश्य बिजली की खपत को कम करना था।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q20. Statement: The school started a cleanliness campaign among students. Which conclusion follows?<br>
+हिंदी: कथन: स्कूल ने विद्यार्थियों के बीच स्वच्छता अभियान शुरू किया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The school discouraged cleanliness.<br>स्कूल ने स्वच्छता को हतोत्साहित किया।</div>
+<div class="option" data-option="B">B. Students were prohibited from participating.<br>विद्यार्थियों को भाग लेने से रोक दिया गया।</div>
+<div class="option" data-option="C">C. The campaign was intended to promote cleanliness awareness.<br>अभियान का उद्देश्य स्वच्छता के प्रति जागरूकता बढ़ाना था।</div>
+<div class="option" data-option="D">D. The school stopped all activities.<br>स्कूल ने सभी गतिविधियाँ बंद कर दीं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+A cleanliness campaign among students is intended to promote awareness and cleanliness.<br>
+हिंदी: विद्यार्थियों के बीच स्वच्छता अभियान का उद्देश्य स्वच्छता और उसके प्रति जागरूकता को बढ़ावा देना है।
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PART 3 -->
+
+<div class="part">
+
+<div class="part-title">
+Part 3 — Statement-Based Conclusions
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q21. Statement: Only trained employees are allowed to operate the specialized machine. Which conclusion follows?<br>
+हिंदी: कथन: केवल प्रशिक्षित कर्मचारियों को विशेष मशीन चलाने की अनुमति है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Anyone can operate the machine.<br>कोई भी व्यक्ति मशीन चला सकता है।</div>
+<div class="option" data-option="B">B. Employees must be trained to operate the machine.<br>मशीन चलाने के लिए कर्मचारियों का प्रशिक्षित होना आवश्यक है।</div>
+<div class="option" data-option="C">C. Training is unnecessary.<br>प्रशिक्षण आवश्यक नहीं है।</div>
+<div class="option" data-option="D">D. The machine cannot be operated by anyone.<br>मशीन कोई भी नहीं चला सकता।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The word "only" means that being trained is necessary for operating the specialized machine.<br>
+हिंदी: "केवल" शब्द का अर्थ है कि विशेष मशीन चलाने के लिए प्रशिक्षित होना आवश्यक है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q22. Statement: All successful candidates worked hard for the examination. Which conclusion is valid?<br>
+हिंदी: कथन: सभी सफल उम्मीदवारों ने परीक्षा के लिए कड़ी मेहनत की। कौन-सा निष्कर्ष सही है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Every hardworking person must become successful.<br>हर मेहनती व्यक्ति अवश्य सफल होगा।</div>
+<div class="option" data-option="B">B. Hard work is unnecessary.<br>कड़ी मेहनत आवश्यक नहीं है।</div>
+<div class="option" data-option="C">C. No successful candidate worked hard.<br>किसी भी सफल उम्मीदवार ने मेहनत नहीं की।</div>
+<div class="option" data-option="D">D. Successful candidates in the statement worked hard.<br>कथन में दिए गए सफल उम्मीदवारों ने कड़ी मेहनत की।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The statement says that all successful candidates worked hard. It does not say that every hardworking person must succeed.<br>
+हिंदी: कथन कहता है कि सभी सफल उम्मीदवारों ने मेहनत की। यह नहीं कहता कि हर मेहनती व्यक्ति अवश्य सफल होगा।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q23. Statement: Some students prefer studying early in the morning. Which conclusion follows?<br>
+हिंदी: कथन: कुछ विद्यार्थी सुबह जल्दी पढ़ना पसंद करते हैं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. At least some students prefer morning study.<br>कम-से-कम कुछ विद्यार्थी सुबह पढ़ना पसंद करते हैं।</div>
+<div class="option" data-option="B">B. All students prefer morning study.<br>सभी विद्यार्थी सुबह पढ़ना पसंद करते हैं।</div>
+<div class="option" data-option="C">C. No student studies in the morning.<br>कोई भी विद्यार्थी सुबह पढ़ाई नहीं करता।</div>
+<div class="option" data-option="D">D. Morning study is compulsory.<br>सुबह पढ़ना अनिवार्य है।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+"Some students" means that at least a part of the student group prefers studying in the morning.<br>
+हिंदी: "कुछ विद्यार्थी" का अर्थ है कि विद्यार्थियों के समूह का कम-से-कम एक भाग सुबह पढ़ना पसंद करता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q24. Statement: No vehicles are allowed inside the pedestrian zone. Which conclusion follows?<br>
+हिंदी: कथन: पैदल यात्री क्षेत्र के अंदर किसी भी वाहन को अनुमति नहीं है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. All vehicles must enter the pedestrian zone.<br>सभी वाहनों को पैदल यात्री क्षेत्र में प्रवेश करना चाहिए।</div>
+<div class="option" data-option="B">B. Vehicles are compulsory in the zone.<br>उस क्षेत्र में वाहनों का होना अनिवार्य है।</div>
+<div class="option" data-option="C">C. Vehicles are not permitted inside the pedestrian zone.<br>पैदल यात्री क्षेत्र के अंदर वाहनों की अनुमति नहीं है।</div>
+<div class="option" data-option="D">D. Pedestrians are not allowed in the zone.<br>उस क्षेत्र में पैदल यात्रियों को अनुमति नहीं है।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The statement explicitly prohibits vehicles from entering the pedestrian zone.<br>
+हिंदी: कथन स्पष्ट रूप से वाहनों को पैदल यात्री क्षेत्र में प्रवेश करने से रोकता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q25. Statement: Every applicant must submit the required documents before the deadline. Which conclusion follows?<br>
+हिंदी: कथन: प्रत्येक आवेदक को अंतिम तिथि से पहले आवश्यक दस्तावेज जमा करने होंगे। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Documents can be submitted after any deadline.<br>दस्तावेज किसी भी अंतिम तिथि के बाद जमा किए जा सकते हैं।</div>
+<div class="option" data-option="B">B. Applicants are required to submit documents before the deadline.<br>आवेदकों को अंतिम तिथि से पहले दस्तावेज जमा करना आवश्यक है।</div>
+<div class="option" data-option="C">C. Documents are unnecessary.<br>दस्तावेज आवश्यक नहीं हैं।</div>
+<div class="option" data-option="D">D. Only successful applicants submit documents.<br>केवल सफल आवेदक ही दस्तावेज जमा करते हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement clearly makes timely document submission a requirement for every applicant.<br>
+हिंदी: कथन स्पष्ट रूप से प्रत्येक आवेदक के लिए समय पर दस्तावेज जमा करना आवश्यक बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q26. Statement: Some employees work from home on certain days. Which conclusion follows?<br>
+हिंदी: कथन: कुछ कर्मचारी कुछ दिनों में घर से काम करते हैं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Every employee works from home every day.<br>हर कर्मचारी हर दिन घर से काम करता है।</div>
+<div class="option" data-option="B">B. No employee works from home.<br>कोई भी कर्मचारी घर से काम नहीं करता।</div>
+<div class="option" data-option="C">C. Working from home is impossible.<br>घर से काम करना असंभव है।</div>
+<div class="option" data-option="D">D. At least some employees work from home on certain days.<br>कम-से-कम कुछ कर्मचारी कुछ दिनों में घर से काम करते हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The statement directly says that some employees work from home on certain days.<br>
+हिंदी: कथन सीधे कहता है कि कुछ कर्मचारी कुछ दिनों में घर से काम करते हैं।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q27. Statement: Only candidates who qualify the preliminary test can appear in the next stage. Which conclusion follows?<br>
+हिंदी: कथन: केवल वे उम्मीदवार जो प्रारंभिक परीक्षा उत्तीर्ण करते हैं, अगले चरण में शामिल हो सकते हैं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Qualifying the preliminary test is necessary for appearing in the next stage.<br>अगले चरण में शामिल होने के लिए प्रारंभिक परीक्षा उत्तीर्ण करना आवश्यक है।</div>
+<div class="option" data-option="B">B. Everyone can appear in the next stage without qualifying.<br>हर कोई बिना उत्तीर्ण हुए अगले चरण में शामिल हो सकता है।</div>
+<div class="option" data-option="C">C. The preliminary test is unnecessary.<br>प्रारंभिक परीक्षा आवश्यक नहीं है।</div>
+<div class="option" data-option="D">D. No candidate can appear in the next stage.<br>कोई भी उम्मीदवार अगले चरण में शामिल नहीं हो सकता।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The word "only" establishes that qualifying the preliminary test is necessary for the next stage.<br>
+हिंदी: "केवल" शब्द यह स्पष्ट करता है कि अगले चरण में जाने के लिए प्रारंभिक परीक्षा उत्तीर्ण करना आवश्यक है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q28. Statement: All registered members receive an identification card. Which conclusion follows?<br>
+हिंदी: कथन: सभी पंजीकृत सदस्यों को पहचान-पत्र मिलता है। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. No registered member receives a card.<br>किसी भी पंजीकृत सदस्य को कार्ड नहीं मिलता।</div>
+<div class="option" data-option="B">B. Identification cards are prohibited.<br>पहचान-पत्र प्रतिबंधित हैं।</div>
+<div class="option" data-option="C">C. Every registered member receives an identification card.<br>प्रत्येक पंजीकृत सदस्य को पहचान-पत्र मिलता है।</div>
+<div class="option" data-option="D">D. Only unregistered people receive cards.<br>केवल अपंजीकृत लोगों को कार्ड मिलते हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+"All registered members" means every member in that group receives an identification card.<br>
+हिंदी: "सभी पंजीकृत सदस्य" का अर्थ है कि उस समूह के प्रत्येक सदस्य को पहचान-पत्र मिलता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q29. Statement: Some roads in the city are under repair. Which conclusion follows?<br>
+हिंदी: कथन: शहर की कुछ सड़कें मरम्मत के अधीन हैं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Every road in the city is under repair.<br>शहर की हर सड़क मरम्मत के अधीन है।</div>
+<div class="option" data-option="B">B. At least some roads in the city are under repair.<br>शहर की कम-से-कम कुछ सड़कें मरम्मत के अधीन हैं।</div>
+<div class="option" data-option="C">C. No road is under repair.<br>कोई भी सड़क मरम्मत के अधीन नहीं है।</div>
+<div class="option" data-option="D">D. All roads have been permanently closed.<br>सभी सड़कें स्थायी रूप से बंद कर दी गई हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+"Some roads" means that at least a part of the city's roads are under repair.<br>
+हिंदी: "कुछ सड़कें" का अर्थ है कि शहर की कम-से-कम कुछ सड़कें मरम्मत के अधीन हैं।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q30. Statement: No student can enter the examination hall without an admit card. Which conclusion follows?<br>
+हिंदी: कथन: बिना प्रवेश-पत्र के कोई विद्यार्थी परीक्षा हॉल में प्रवेश नहीं कर सकता। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Admit cards are unnecessary.<br>प्रवेश-पत्र आवश्यक नहीं हैं।</div>
+<div class="option" data-option="B">B. Students can enter without documents.<br>विद्यार्थी बिना दस्तावेज के प्रवेश कर सकते हैं।</div>
+<div class="option" data-option="C">C. Every student automatically enters the hall.<br>प्रत्येक विद्यार्थी स्वतः हॉल में प्रवेश कर सकता है।</div>
+<div class="option" data-option="D">D. An admit card is required for entering the examination hall.<br>परीक्षा हॉल में प्रवेश करने के लिए प्रवेश-पत्र आवश्यक है।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The statement establishes that an admit card is necessary for entry into the examination hall.<br>
+हिंदी: कथन स्पष्ट करता है कि परीक्षा हॉल में प्रवेश के लिए प्रवेश-पत्र आवश्यक है।
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PART 4 -->
+
+<div class="part">
+
+<div class="part-title">
+Part 4 — Logical Conclusions
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q31. Statement: The company introduced flexible working hours to improve employee satisfaction. Which conclusion follows?<br>
+हिंदी: कथन: कंपनी ने कर्मचारियों की संतुष्टि बढ़ाने के लिए लचीले कार्य-समय की शुरुआत की। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Flexible working hours were introduced with the aim of improving employee satisfaction.<br>लचीले कार्य-समय की शुरुआत कर्मचारियों की संतुष्टि बढ़ाने के उद्देश्य से की गई थी।</div>
+<div class="option" data-option="B">B. Employee satisfaction was considered irrelevant.<br>कर्मचारियों की संतुष्टि को महत्वहीन माना गया।</div>
+<div class="option" data-option="C">C. Working hours were completely abolished.<br>कार्य-समय पूरी तरह समाप्त कर दिया गया।</div>
+<div class="option" data-option="D">D. Employees were not allowed to work.<br>कर्मचारियों को काम करने की अनुमति नहीं थी।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The statement explicitly gives improving employee satisfaction as the purpose.<br>
+हिंदी: कथन स्पष्ट रूप से कर्मचारियों की संतुष्टि बढ़ाने को उद्देश्य बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q32. Statement: The government increased the number of public buses in crowded areas. Which conclusion follows?<br>
+हिंदी: कथन: सरकार ने भीड़भाड़ वाले क्षेत्रों में सार्वजनिक बसों की संख्या बढ़ा दी। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Public transport was completely stopped.<br>सार्वजनिक परिवहन पूरी तरह बंद कर दिया गया।</div>
+<div class="option" data-option="B">B. The number of buses was reduced.<br>बसों की संख्या कम कर दी गई।</div>
+<div class="option" data-option="C">C. The increase in buses may help meet transport demand.<br>बसों की संख्या में वृद्धि परिवहन की मांग को पूरा करने में मदद कर सकती है।</div>
+<div class="option" data-option="D">D. Crowded areas no longer have passengers.<br>भीड़भाड़ वाले क्षेत्रों में अब यात्री नहीं हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+Increasing the number of buses in crowded areas may help meet the transport demand in those areas.<br>
+हिंदी: भीड़भाड़ वाले क्षेत्रों में बसों की संख्या बढ़ाने से उन क्षेत्रों की परिवहन संबंधी मांग को पूरा करने में मदद मिल सकती है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q33. Statement: The school installed additional lights in classrooms because students found them too dark. Which conclusion follows?<br>
+हिंदी: कथन: स्कूल ने कक्षाओं में अतिरिक्त लाइटें लगाईं क्योंकि विद्यार्थियों को कक्षाएँ बहुत अंधेरी लगती थीं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Classrooms became darker after installing lights.<br>लाइट लगाने के बाद कक्षाएँ और अधिक अंधेरी हो गईं।</div>
+<div class="option" data-option="B">B. Additional lights were installed to improve classroom lighting.<br>कक्षा में प्रकाश व्यवस्था बेहतर करने के लिए अतिरिक्त लाइटें लगाई गईं।</div>
+<div class="option" data-option="C">C. Students wanted classrooms without lights.<br>विद्यार्थी बिना लाइट वाली कक्षाएँ चाहते थे।</div>
+<div class="option" data-option="D">D. The school removed all lights.<br>स्कूल ने सभी लाइटें हटा दीं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The additional lights were installed because the classrooms were considered too dark.<br>
+हिंदी: अतिरिक्त लाइटें इसलिए लगाई गईं क्योंकि कक्षाएँ बहुत अंधेरी मानी जाती थीं।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q34. Statement: The farmer used modern irrigation techniques and obtained a better crop yield. Which conclusion follows?<br>
+हिंदी: कथन: किसान ने आधुनिक सिंचाई तकनीकों का उपयोग किया और उसे बेहतर फसल उत्पादन प्राप्त हुआ। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Irrigation reduced crop production.<br>सिंचाई से फसल उत्पादन कम हुआ।</div>
+<div class="option" data-option="B">B. The farmer stopped farming.<br>किसान ने खेती करना बंद कर दिया।</div>
+<div class="option" data-option="C">C. Modern techniques are always unnecessary.<br>आधुनिक तकनीकें हमेशा अनावश्यक होती हैं।</div>
+<div class="option" data-option="D">D. Modern irrigation techniques may have contributed to better crop yield.<br>आधुनिक सिंचाई तकनीकों ने बेहतर फसल उत्पादन में योगदान दिया हो सकता है।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The sequence in the statement supports the possibility that modern irrigation contributed to the better crop yield.<br>
+हिंदी: कथन का क्रम इस संभावना का समर्थन करता है कि आधुनिक सिंचाई ने बेहतर फसल उत्पादन में योगदान दिया।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q35. Statement: The library purchased more books because the number of readers increased. Which conclusion follows?<br>
+हिंदी: कथन: पाठकों की संख्या बढ़ने के कारण पुस्तकालय ने अधिक पुस्तकें खरीदीं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Increased readership led the library to purchase more books.<br>पाठकों की बढ़ी हुई संख्या के कारण पुस्तकालय ने अधिक पुस्तकें खरीदीं।</div>
+<div class="option" data-option="B">B. The number of readers decreased.<br>पाठकों की संख्या कम हो गई।</div>
+<div class="option" data-option="C">C. The library stopped purchasing books.<br>पुस्तकालय ने पुस्तकें खरीदना बंद कर दिया।</div>
+<div class="option" data-option="D">D. Readers were not using the library.<br>पाठक पुस्तकालय का उपयोग नहीं कर रहे थे।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The statement directly connects the increase in readers with the purchase of more books.<br>
+हिंदी: कथन सीधे पाठकों की संख्या में वृद्धि को अधिक पुस्तकें खरीदने से जोड़ता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q36. Statement: The company launched an online support system to help customers resolve complaints quickly. Which conclusion follows?<br>
+हिंदी: कथन: कंपनी ने ग्राहकों की शिकायतों का शीघ्र समाधान करने में मदद के लिए ऑनलाइन सहायता प्रणाली शुरू की। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The company wanted to delay complaint resolution.<br>कंपनी शिकायतों के समाधान में देरी करना चाहती थी।</div>
+<div class="option" data-option="B">B. Customer complaints became irrelevant.<br>ग्राहकों की शिकायतें महत्वहीन हो गईं।</div>
+<div class="option" data-option="C">C. The online system was intended to make complaint resolution quicker.<br>ऑनलाइन प्रणाली का उद्देश्य शिकायतों का समाधान अधिक शीघ्र करना था।</div>
+<div class="option" data-option="D">D. Customer support was completely removed.<br>ग्राहक सहायता पूरी तरह समाप्त कर दी गई।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The purpose of the online support system was to help resolve complaints quickly.<br>
+हिंदी: ऑनलाइन सहायता प्रणाली का उद्देश्य शिकायतों का शीघ्र समाधान करने में मदद करना था।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q37. Statement: The city restricted heavy vehicles during peak hours to reduce traffic congestion. Which conclusion follows?<br>
+हिंदी: कथन: शहर ने यातायात की भीड़ कम करने के लिए व्यस्त समय में भारी वाहनों पर प्रतिबंध लगाया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The city wanted to increase congestion.<br>शहर यातायात की भीड़ बढ़ाना चाहता था।</div>
+<div class="option" data-option="B">B. Restricting heavy vehicles was intended to reduce congestion.<br>भारी वाहनों पर प्रतिबंध का उद्देश्य यातायात की भीड़ कम करना था।</div>
+<div class="option" data-option="C">C. Heavy vehicles were encouraged during peak hours.<br>व्यस्त समय में भारी वाहनों को प्रोत्साहित किया गया।</div>
+<div class="option" data-option="D">D. Traffic restrictions were removed.<br>यातायात प्रतिबंध हटा दिए गए।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement clearly identifies reducing congestion as the purpose of the restriction.<br>
+हिंदी: कथन स्पष्ट रूप से यातायात की भीड़ कम करने को प्रतिबंध का उद्देश्य बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q38. Statement: The student made a study timetable and followed it regularly. Which conclusion follows?<br>
+हिंदी: कथन: विद्यार्थी ने पढ़ाई की समय-सारणी बनाई और उसका नियमित रूप से पालन किया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The student completely avoided studying.<br>विद्यार्थी ने पढ़ाई से पूरी तरह परहेज किया।</div>
+<div class="option" data-option="B">B. The student had no study plan.<br>विद्यार्थी के पास पढ़ाई की कोई योजना नहीं थी।</div>
+<div class="option" data-option="C">C. The student stopped preparing.<br>विद्यार्थी ने तैयारी बंद कर दी।</div>
+<div class="option" data-option="D">D. The student followed a planned study routine.<br>विद्यार्थी ने योजनाबद्ध अध्ययन दिनचर्या का पालन किया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+Creating and regularly following a timetable indicates a planned study routine.<br>
+हिंदी: समय-सारणी बनाना और उसका नियमित रूप से पालन करना योजनाबद्ध अध्ययन दिनचर्या को दर्शाता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q39. Statement: The shop placed essential products near the entrance for customers' convenience. Which conclusion follows?<br>
+हिंदी: कथन: दुकान ने ग्राहकों की सुविधा के लिए आवश्यक उत्पादों को प्रवेश द्वार के पास रखा। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The arrangement was intended to make essential products more convenient to access.<br>इस व्यवस्था का उद्देश्य आवश्यक उत्पादों तक पहुँच को अधिक सुविधाजनक बनाना था।</div>
+<div class="option" data-option="B">B. Customers were prevented from entering the shop.<br>ग्राहकों को दुकान में प्रवेश करने से रोक दिया गया।</div>
+<div class="option" data-option="C">C. Essential products were removed.<br>आवश्यक उत्पाद हटा दिए गए।</div>
+<div class="option" data-option="D">D. The shop stopped selling essential products.<br>दुकान ने आवश्यक उत्पाद बेचना बंद कर दिया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The statement says that the arrangement was made for customers' convenience.<br>
+हिंदी: कथन कहता है कि यह व्यवस्था ग्राहकों की सुविधा के लिए की गई थी।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q40. Statement: The school organized a career guidance session for senior students. Which conclusion follows?<br>
+हिंदी: कथन: स्कूल ने वरिष्ठ विद्यार्थियों के लिए करियर मार्गदर्शन सत्र आयोजित किया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The school wanted students to avoid careers.<br>स्कूल चाहता था कि विद्यार्थी करियर से बचें।</div>
+<div class="option" data-option="B">B. Career guidance was prohibited.<br>करियर मार्गदर्शन प्रतिबंधित था।</div>
+<div class="option" data-option="C">C. The session was intended to provide career-related guidance to students.<br>सत्र का उद्देश्य विद्यार्थियों को करियर से संबंधित मार्गदर्शन प्रदान करना था।</div>
+<div class="option" data-option="D">D. Senior students were removed from the school.<br>वरिष्ठ विद्यार्थियों को स्कूल से निकाल दिया गया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+A career guidance session is organized to provide students with career-related guidance.<br>
+हिंदी: करियर मार्गदर्शन सत्र विद्यार्थियों को करियर से संबंधित मार्गदर्शन देने के लिए आयोजित किया जाता है।
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PART 5 -->
+
+<div class="part">
+
+<div class="part-title">
+Part 5 — Mixed Statement &amp; Conclusion
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q41. Statement: The company increased salaries after achieving strong financial results. Which conclusion follows?<br>
+हिंदी: कथन: कंपनी ने मजबूत वित्तीय परिणाम प्राप्त करने के बाद वेतन बढ़ा दिया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The company suffered financial losses.<br>कंपनी को वित्तीय नुकसान हुआ।</div>
+<div class="option" data-option="B">B. Strong financial results were followed by an increase in salaries.<br>मजबूत वित्तीय परिणामों के बाद वेतन में वृद्धि हुई।</div>
+<div class="option" data-option="C">C. Salaries were reduced because of profits.<br>लाभ के कारण वेतन कम कर दिया गया।</div>
+<div class="option" data-option="D">D. The company stopped paying employees.<br>कंपनी ने कर्मचारियों को वेतन देना बंद कर दिया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement establishes that the salary increase occurred after strong financial results.<br>
+हिंदी: कथन स्पष्ट करता है कि मजबूत वित्तीय परिणामों के बाद वेतन में वृद्धि हुई।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q42. Statement: Many students joined the library during the examination period. Which conclusion follows?<br>
+हिंदी: कथन: परीक्षा अवधि के दौरान कई विद्यार्थी पुस्तकालय से जुड़े। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Students stopped studying.<br>विद्यार्थियों ने पढ़ाई बंद कर दी।</div>
+<div class="option" data-option="B">B. The library was completely empty.<br>पुस्तकालय पूरी तरह खाली था।</div>
+<div class="option" data-option="C">C. Students were prohibited from using the library.<br>विद्यार्थियों को पुस्तकालय का उपयोग करने से रोक दिया गया।</div>
+<div class="option" data-option="D">D. The library attracted many students during the examination period.<br>परीक्षा अवधि के दौरान पुस्तकालय ने कई विद्यार्थियों को आकर्षित किया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The statement indicates that many students joined the library during that period.<br>
+हिंदी: कथन बताता है कि उस अवधि के दौरान कई विद्यार्थी पुस्तकालय से जुड़े।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q43. Statement: The railway introduced additional trains during the festival season to handle increased passenger demand. Which conclusion follows?<br>
+हिंदी: कथन: रेलवे ने यात्रियों की बढ़ी हुई मांग को पूरा करने के लिए त्योहार के मौसम में अतिरिक्त ट्रेनें शुरू कीं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Additional trains were introduced to meet increased passenger demand.<br>यात्रियों की बढ़ी हुई मांग को पूरा करने के लिए अतिरिक्त ट्रेनें शुरू की गईं।</div>
+<div class="option" data-option="B">B. Passenger demand became zero.<br>यात्रियों की मांग शून्य हो गई।</div>
+<div class="option" data-option="C">C. All trains were cancelled.<br>सभी ट्रेनें रद्द कर दी गईं।</div>
+<div class="option" data-option="D">D. Festival travel was prohibited.<br>त्योहार के दौरान यात्रा प्रतिबंधित कर दी गई।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The statement explicitly gives increased passenger demand as the reason for additional trains.<br>
+हिंदी: कथन स्पष्ट रूप से यात्रियों की बढ़ी हुई मांग को अतिरिक्त ट्रेनें शुरू करने का कारण बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q44. Statement: The school banned mobile phone use during examinations to prevent unfair practices. Which conclusion follows?<br>
+हिंदी: कथन: स्कूल ने अनुचित साधनों को रोकने के लिए परीक्षाओं के दौरान मोबाइल फोन के उपयोग पर प्रतिबंध लगा दिया। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. Mobile phones became compulsory during examinations.<br>परीक्षाओं के दौरान मोबाइल फोन अनिवार्य हो गए।</div>
+<div class="option" data-option="B">B. The school encouraged unfair practices.<br>स्कूल ने अनुचित साधनों को प्रोत्साहित किया।</div>
+<div class="option" data-option="C">C. The ban was intended to prevent unfair practices during examinations.<br>प्रतिबंध का उद्देश्य परीक्षाओं के दौरान अनुचित साधनों को रोकना था।</div>
+<div class="option" data-option="D">D. Examinations were cancelled.<br>परीक्षाएँ रद्द कर दी गईं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The stated purpose of the mobile phone ban was to prevent unfair practices.<br>
+हिंदी: मोबाइल फोन पर प्रतिबंध का स्पष्ट उद्देश्य अनुचित साधनों को रोकना था।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q45. Statement: The farmer stored harvested grain in a dry place to protect it from moisture. Which conclusion follows?<br>
+हिंदी: कथन: किसान ने कटे हुए अनाज को नमी से बचाने के लिए सूखी जगह पर रखा। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The farmer wanted the grain to absorb moisture.<br>किसान चाहता था कि अनाज नमी सोख ले।</div>
+<div class="option" data-option="B">B. Dry storage was intended to protect the grain from moisture.<br>सूखी जगह पर भंडारण का उद्देश्य अनाज को नमी से बचाना था।</div>
+<div class="option" data-option="C">C. The grain was deliberately exposed to rain.<br>अनाज को जानबूझकर बारिश के संपर्क में रखा गया।</div>
+<div class="option" data-option="D">D. Grain storage was unnecessary.<br>अनाज का भंडारण आवश्यक नहीं था।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement directly explains that dry storage was used to protect the grain from moisture.<br>
+हिंदी: कथन सीधे बताता है कि सूखी जगह पर भंडारण अनाज को नमी से बचाने के लिए किया गया था।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q46. Statement: The company conducted regular safety inspections to reduce workplace accidents. Which conclusion follows?<br>
+हिंदी: कथन: कंपनी ने कार्यस्थल पर दुर्घटनाएँ कम करने के लिए नियमित सुरक्षा निरीक्षण किए। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The company wanted to increase workplace accidents.<br>कंपनी कार्यस्थल की दुर्घटनाएँ बढ़ाना चाहती थी।</div>
+<div class="option" data-option="B">B. Safety inspections were unnecessary.<br>सुरक्षा निरीक्षण आवश्यक नहीं थे।</div>
+<div class="option" data-option="C">C. Workplace safety was ignored.<br>कार्यस्थल की सुरक्षा की अनदेखी की गई।</div>
+<div class="option" data-option="D">D. Safety inspections were intended to help reduce workplace accidents.<br>सुरक्षा निरीक्षणों का उद्देश्य कार्यस्थल की दुर्घटनाओं को कम करने में मदद करना था।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The statement explicitly gives reducing workplace accidents as the purpose of safety inspections.<br>
+हिंदी: कथन स्पष्ट रूप से कार्यस्थल की दुर्घटनाओं को कम करना सुरक्षा निरीक्षणों का उद्देश्य बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="A">
+
+<div class="question">
+Q47. Statement: The city opened a new public park to provide residents with recreational space. Which conclusion follows?<br>
+हिंदी: कथन: शहर ने निवासियों को मनोरंजन के लिए स्थान उपलब्ध कराने हेतु एक नया सार्वजनिक पार्क खोला। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The park was opened to provide recreational space for residents.<br>पार्क निवासियों को मनोरंजन के लिए स्थान उपलब्ध कराने हेतु खोला गया था।</div>
+<div class="option" data-option="B">B. The city wanted to eliminate recreational activities.<br>शहर मनोरंजन की गतिविधियों को समाप्त करना चाहता था।</div>
+<div class="option" data-option="C">C. Residents were prohibited from using the park.<br>निवासियों को पार्क का उपयोग करने से रोक दिया गया।</div>
+<div class="option" data-option="D">D. The park was built without any purpose.<br>पार्क बिना किसी उद्देश्य के बनाया गया था।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: A | उत्तर: A</strong><br>
+The statement directly states the purpose of opening the public park.<br>
+हिंदी: कथन सीधे सार्वजनिक पार्क खोलने का उद्देश्य बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="C">
+
+<div class="question">
+Q48. Statement: The student solved previous-year questions regularly to understand the examination pattern. Which conclusion follows?<br>
+हिंदी: कथन: विद्यार्थी ने परीक्षा के पैटर्न को समझने के लिए नियमित रूप से पिछले वर्षों के प्रश्न हल किए। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The student avoided previous-year questions.<br>विद्यार्थी ने पिछले वर्षों के प्रश्नों से परहेज किया।</div>
+<div class="option" data-option="B">B. Previous-year questions were considered useless.<br>पिछले वर्षों के प्रश्नों को बेकार माना गया।</div>
+<div class="option" data-option="C">C. The student used previous-year questions to understand the examination pattern.<br>विद्यार्थी ने परीक्षा के पैटर्न को समझने के लिए पिछले वर्षों के प्रश्नों का उपयोग किया।</div>
+<div class="option" data-option="D">D. The student stopped preparing for the examination.<br>विद्यार्थी ने परीक्षा की तैयारी बंद कर दी।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: C | उत्तर: C</strong><br>
+The statement clearly identifies understanding the examination pattern as the purpose of solving previous-year questions.<br>
+हिंदी: कथन स्पष्ट रूप से बताता है कि पिछले वर्षों के प्रश्न हल करने का उद्देश्य परीक्षा के पैटर्न को समझना था।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="B">
+
+<div class="question">
+Q49. Statement: The bank introduced digital services to make banking more convenient for customers. Which conclusion follows?<br>
+हिंदी: कथन: बैंक ने ग्राहकों के लिए बैंकिंग को अधिक सुविधाजनक बनाने हेतु डिजिटल सेवाएँ शुरू कीं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The bank wanted to make banking more difficult.<br>बैंक बैंकिंग को और कठिन बनाना चाहता था।</div>
+<div class="option" data-option="B">B. Digital services were introduced to improve customer convenience.<br>ग्राहकों की सुविधा बढ़ाने के लिए डिजिटल सेवाएँ शुरू की गईं।</div>
+<div class="option" data-option="C">C. Customers were prohibited from using banking services.<br>ग्राहकों को बैंकिंग सेवाओं का उपयोग करने से रोक दिया गया।</div>
+<div class="option" data-option="D">D. The bank stopped providing services.<br>बैंक ने सेवाएँ देना बंद कर दिया।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: B | उत्तर: B</strong><br>
+The statement explicitly gives customer convenience as the purpose of introducing digital services.<br>
+हिंदी: कथन स्पष्ट रूप से ग्राहकों की सुविधा को डिजिटल सेवाएँ शुरू करने का उद्देश्य बताता है।
+</div>
+
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+<div class="question">
+Q50. Statement: A coaching institute introduced topic-wise tests to help students identify their weak areas. Which conclusion follows?<br>
+हिंदी: कथन: एक कोचिंग संस्थान ने विद्यार्थियों को अपनी कमजोरियों वाले क्षेत्रों की पहचान करने में मदद के लिए विषयवार परीक्षाएँ शुरू कीं। कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<div class="option" data-option="A">A. The institute wanted students to ignore their weaknesses.<br>संस्थान चाहता था कि विद्यार्थी अपनी कमजोरियों को नजरअंदाज करें।</div>
+<div class="option" data-option="B">B. Topic-wise tests have no relation to preparation.<br>विषयवार परीक्षाओं का तैयारी से कोई संबंध नहीं है।</div>
+<div class="option" data-option="C">C. Students were prohibited from taking tests.<br>विद्यार्थियों को परीक्षाएँ देने से रोक दिया गया।</div>
+<div class="option" data-option="D">D. Topic-wise tests can help students identify areas needing improvement.<br>विषयवार परीक्षाएँ विद्यार्थियों को सुधार की आवश्यकता वाले क्षेत्रों की पहचान करने में मदद कर सकती हैं।</div>
+</div>
+
+<div class="solution">
+<strong>Answer: D | उत्तर: D</strong><br>
+The statement directly says that the tests were introduced to help students identify their weak areas.<br>
+हिंदी: कथन सीधे कहता है कि परीक्षाएँ विद्यार्थियों को अपनी कमजोरियों वाले क्षेत्रों की पहचान करने में मदद के लिए शुरू की गई थीं।
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SCORE -->
+
+<div class="score-box">
+
+<h2>📊 Your Result</h2>
+
+<div class="score-number" id="score">0 / 50</div>
+
+<div class="stats">
+
+<span>Attempted: <strong id="attempted">0</strong></span>
+<span>Correct: <strong id="correct">0</strong></span>
+<span>Wrong: <strong id="wrong">0</strong></span>
+
+</div>
+
+<p id="resultMessage" style="margin-top:18px;">
+Keep attempting the questions and check your final score.
+</p>
+
+</div>
+
+
+<div class="button-area">
+
+<button class="btn" onclick="resetQuiz()">
+🔄 Reset Practice
+</button>
+
+<a class="btn" href="ssc-topic-wise-practice.html">
+← Back to SSC Topic-wise Practice
+</a>
+
+</div>
+
+
+<div class="note">
+
+<strong>📌 Note:</strong>
+Statement &amp; Conclusion questions test your ability to determine whether a conclusion logically follows from the given statement. Do not use outside assumptions. Always choose the conclusion that is directly supported by the information provided.
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p><strong>LET'S QUALIFYNOW</strong></p>
+
+<p>N Saurabh Sir — Reasoning Faculty</p>
+
+<p>SSC • Banking • Railway • Government Exams</p>
+
+<p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
+
+<p>
+▶ YouTube:
+<a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">
+Let's QualifyNow
+</a>
+</p>
+
+</footer>
+
+
+<script>
+
+let attempted = 0;
+let correct = 0;
+let wrong = 0;
+
+const totalQuestions = 50;
+
+
+/* QUESTION CLICK LOGIC */
+
+document.querySelectorAll(".question-card").forEach(card => {
+
+    const options = card.querySelectorAll(".option");
+    const correctAnswer = card.dataset.answer;
+    const solution = card.querySelector(".solution");
+
+    options.forEach(option => {
+
+        option.addEventListener("click", function(){
+
+            /* Prevent multiple attempts on same question */
+
+            if(card.dataset.attempted === "true"){
+                return;
+            }
+
+            card.dataset.attempted = "true";
+
+            attempted++;
+
+            const selected = this.dataset.option;
+
+
+            /* Show correct answer */
+
+            options.forEach(opt => {
+
+                if(opt.dataset.option === correctAnswer){
+                    opt.classList.add("correct");
+                }
+
+            });
+
+
+            /* Check selected answer */
+
+            if(selected === correctAnswer){
+
+                correct++;
+
+            }else{
+
+                wrong++;
+
+                this.classList.add("wrong");
+
+            }
+
+
+            /* Show solution */
+
+            solution.style.display = "block";
+
+            updateScore();
+
+        });
+
+    });
+
+});
+
+
+/* UPDATE SCORE */
+
+function updateScore(){
+
+    document.getElementById("score").textContent =
+        correct + " / " + totalQuestions;
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("wrong").textContent =
+        wrong;
+
+
+    const message =
+        document.getElementById("resultMessage");
+
+
+    if(attempted === totalQuestions){
+
+        const percentage =
+            (correct / totalQuestions) * 100;
+
+
+        if(percentage >= 80){
+
+            message.textContent =
+                "🎉 Excellent performance! Your Statement & Conclusion concepts are strong.";
+
+        }else if(percentage >= 60){
+
+            message.textContent =
+                "👏 Good performance! Keep practising to improve accuracy.";
+
+        }else if(percentage >= 40){
+
+            message.textContent =
+                "👍 Fair attempt. Revise the concepts and practise more questions.";
+
+        }else{
+
+            message.textContent =
+                "💪 More practice is needed. Revise the concepts and try again.";
+
+        }
+
+    }else{
+
+        message.textContent =
+            "Keep attempting the questions and check your final score.";
+
+    }
+
+}
+
+
+/* RESET PRACTICE */
+
+function resetQuiz(){
+
+    attempted = 0;
+    correct = 0;
+    wrong = 0;
+
+
+    document.querySelectorAll(".question-card").forEach(card => {
+
+        card.dataset.attempted = "false";
+
+
+        card.querySelectorAll(".option").forEach(option => {
+
+            option.classList.remove("correct");
+            option.classList.remove("wrong");
+
+        });
+
+
+        card.querySelector(".solution").style.display =
+            "none";
+
+    });
+
+
+    updateScore();
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
