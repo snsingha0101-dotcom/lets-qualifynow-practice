@@ -1,0 +1,952 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Calendar Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#102a43;
+    color:#ffffff;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:0.5px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+nav a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d9eaf7;
+    text-decoration:underline;
+}
+
+/* HERO */
+.hero{
+    background:#173f5f;
+    color:#ffffff;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* MAIN */
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+.intro-card{
+    background:#ffffff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:28px;
+    box-shadow:0 3px 10px rgba(16,42,67,0.06);
+}
+
+.intro-card h2{
+    color:#102a43;
+    margin-bottom:12px;
+    font-size:23px;
+}
+
+.intro-card p{
+    margin-bottom:10px;
+}
+
+.intro-card ul{
+    padding-left:22px;
+    margin-top:10px;
+}
+
+.intro-card li{
+    margin-bottom:5px;
+}
+
+.part-title{
+    background:#d9eaf7;
+    color:#102a43;
+    border-left:5px solid #173f5f;
+    padding:14px 18px;
+    border-radius:7px;
+    font-size:21px;
+    margin:30px 0 20px;
+}
+
+/* QUESTION CARDS */
+.question-card{
+    background:#ffffff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 3px 9px rgba(16,42,67,0.05);
+}
+
+.question-number{
+    color:#173f5f;
+    font-size:17px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.question-en{
+    color:#102a43;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.question-hi{
+    color:#52606d;
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+}
+
+.option-btn{
+    width:100%;
+    text-align:left;
+    padding:12px 14px;
+    border:1px solid #829ab1;
+    border-radius:7px;
+    background:#f7f9fc;
+    color:#243b53;
+    font-size:15px;
+    cursor:pointer;
+    transition:background 0.2s,border 0.2s;
+}
+
+.option-btn:hover:not(:disabled){
+    background:#d9eaf7;
+    border-color:#173f5f;
+}
+
+.option-btn:disabled{
+    cursor:default;
+    opacity:1;
+}
+
+.option-btn.correct{
+    background:#d4edda;
+    border:2px solid #28a745;
+    color:#155724;
+    font-weight:bold;
+}
+
+.option-btn.wrong{
+    background:#f8d7da;
+    border:2px solid #dc3545;
+    color:#721c24;
+    font-weight:bold;
+}
+
+.solution{
+    display:none;
+    margin-top:16px;
+    padding:15px;
+    background:#f7f9fc;
+    border-left:4px solid #173f5f;
+    border-radius:5px;
+}
+
+.solution.show{
+    display:block;
+}
+
+.solution h4{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.solution p{
+    margin-bottom:7px;
+}
+
+.answer-line{
+    color:#155724;
+    font-weight:bold;
+}
+
+/* RESULT BOX - BOTTOM */
+.score-box{
+    background:#102a43;
+    color:#ffffff;
+    text-align:center;
+    padding:28px 20px;
+    border-radius:10px;
+    margin:40px 0 25px;
+}
+
+.score-box h2{
+    font-size:27px;
+    margin-bottom:8px;
+}
+
+.score-main{
+    font-size:30px;
+    font-weight:bold;
+    margin:12px 0 20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:12px;
+    margin:20px 0;
+}
+
+.stat{
+    background:#173f5f;
+    padding:13px 8px;
+    border-radius:7px;
+}
+
+.stat-label{
+    font-size:13px;
+    color:#d9eaf7;
+    margin-bottom:5px;
+}
+
+.stat-value{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.reset-btn{
+    background:#ffffff;
+    color:#102a43;
+    border:none;
+    border-radius:7px;
+    padding:12px 24px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.reset-btn:hover{
+    background:#d9eaf7;
+}
+
+/* NOTE */
+.note-card{
+    background:#ffffff;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:30px;
+    color:#52606d;
+}
+
+.note-card p{
+    margin-bottom:7px;
+}
+
+footer{
+    background:#102a43;
+    color:#ffffff;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+    .header-inner{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav{
+        justify-content:center;
+        gap:10px 14px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .score-main{
+        font-size:26px;
+    }
+
+    .question-card{
+        padding:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">LET'S QUALIFYNOW</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636"
+               target="_blank" rel="noopener">YouTube</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>📅 SSC Calendar Practice</h1>
+    <p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
+    <p>कैलेंडर के 50 महत्वपूर्ण प्रश्न, उत्तर एवं विस्तृत समाधान</p>
+</section>
+
+<main class="container">
+
+    <section class="intro-card">
+        <h2>SSC Calendar Practice Set | कैलेंडर अभ्यास सेट</h2>
+
+        <p>
+            This practice set covers important Calendar concepts for
+            SSC CGL, CHSL, CPO, MTS and other Government Exams.
+        </p>
+
+        <p>
+            यह अभ्यास सेट SSC CGL, CHSL, CPO, MTS तथा अन्य सरकारी
+            परीक्षाओं के लिए कैलेंडर के महत्वपूर्ण प्रश्नों पर आधारित है।
+        </p>
+
+        <ul>
+            <li>Finding the Day on a Given Date | किसी तारीख का दिन ज्ञात करना</li>
+            <li>Leap Years and Ordinary Years | लीप वर्ष एवं सामान्य वर्ष</li>
+            <li>Odd Days | विषम दिन</li>
+            <li>Days Between Dates | दो तारीखों के बीच दिनों की गणना</li>
+            <li>Calendar Concepts and Applications | कैलेंडर के नियम एवं अनुप्रयोग</li>
+        </ul>
+
+        <p style="margin-top:15px;">
+            <strong>Instructions:</strong> Select one option for each
+            question. The answer and solution will appear after your attempt.
+        </p>
+
+        <p>
+            <strong>निर्देश:</strong> प्रत्येक प्रश्न के लिए एक विकल्प चुनें।
+            उत्तर देने के बाद सही उत्तर और समाधान दिखाई देगा।
+        </p>
+
+        <p><strong>Total Questions:</strong> 50 | <strong>Maximum Marks:</strong> 50</p>
+        <p><strong>Marking:</strong> +1 for each correct answer; no negative marking.</p>
+        <p><strong>अंक:</strong> प्रत्येक सही उत्तर के लिए 1 अंक; गलत उत्तर पर कोई नकारात्मक अंक नहीं।</p>
+    </section>
+
+    <h2 class="part-title">Part 1: Calendar Questions | भाग 1: कैलेंडर प्रश्न</h2>
+
+    <div id="questions-container"></div>
+
+    <!-- SCORE BOX MUST REMAIN AT THE BOTTOM -->
+    <section class="score-box" id="score-box">
+        <h2>Your Result | आपका परिणाम</h2>
+        <p>Complete the practice set to review your performance.</p>
+        <p>अपना प्रदर्शन देखने के लिए अभ्यास सेट पूरा करें।</p>
+
+        <div class="score-main">
+            <span id="score">0</span> / 50
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-label">Correct | सही</div>
+                <div class="stat-value" id="correct">0</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Wrong | गलत</div>
+                <div class="stat-value" id="wrong">0</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Attempted | प्रयास</div>
+                <div class="stat-value" id="attempted">0</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Unattempted | शेष</div>
+                <div class="stat-value" id="unattempted">50</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Marks | अंक</div>
+                <div class="stat-value" id="marks">0</div>
+            </div>
+        </div>
+
+        <p id="result-message">
+            You have attempted 0 of 50 questions.
+            | आपने 50 में से 0 प्रश्न हल किए हैं।
+        </p>
+
+        <button class="reset-btn" onclick="resetPractice()">
+            Reset Practice | दोबारा अभ्यास करें
+        </button>
+    </section>
+
+    <section class="note-card">
+        <p><strong>Important Note:</strong> This set uses the Gregorian calendar.</p>
+        <p><strong>महत्वपूर्ण:</strong> इस अभ्यास सेट में Gregorian Calendar के नियम लागू हैं।</p>
+        <p>
+            Leap year rule: A year divisible by 400 is a leap year.
+            A year divisible by 100 but not 400 is not a leap year.
+            Other years divisible by 4 are leap years.
+        </p>
+        <p>
+            लीप वर्ष का नियम: 400 से विभाजित होने वाला वर्ष लीप वर्ष होता है।
+            100 से विभाजित लेकिन 400 से विभाजित न होने वाला वर्ष लीप वर्ष नहीं होता।
+            अन्य वर्षों में 4 से विभाजित होने वाला वर्ष लीप वर्ष होता है।
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 LET'S QUALIFYNOW | SSC • Banking • Railway • Government Exams
+</footer>
+
+<script>
+"use strict";
+
+const DAY_NAMES = [
+    "Sunday", "Monday", "Tuesday", "Wednesday",
+    "Thursday", "Friday", "Saturday"
+];
+
+const DAY_NAMES_HI = [
+    "रविवार", "सोमवार", "मंगलवार", "बुधवार",
+    "गुरुवार", "शुक्रवार", "शनिवार"
+];
+
+const MONTHS = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+
+const MONTHS_HI = [
+    "जनवरी", "फरवरी", "मार्च", "अप्रैल", "मई", "जून",
+    "जुलाई", "अगस्त", "सितंबर", "अक्टूबर", "नवंबर", "दिसंबर"
+];
+
+function weekday(year, month, day){
+    return new Date(Date.UTC(year, month - 1, day)).getUTCDay();
+}
+
+function isLeapYear(year){
+    return year % 400 === 0 ||
+        (year % 4 === 0 && year % 100 !== 0);
+}
+
+function dateText(year, month, day){
+    return `${day} ${MONTHS[month - 1]} ${year}`;
+}
+
+function dateTextHi(year, month, day){
+    return `${day} ${MONTHS_HI[month - 1]} ${year}`;
+}
+
+function dateUTC(year, month, day){
+    return Date.UTC(year, month - 1, day);
+}
+
+function daysBetween(start, end){
+    return Math.round((end - start) / 86400000);
+}
+
+/* Creates four choices and varies the correct answer's position. */
+function arrangeOptions(options, seed){
+    const shift = ((seed * 3) + 1) % options.length;
+    return options.slice(shift).concat(options.slice(0, shift));
+}
+
+function weekdayOptions(answer, seed){
+    const values = [
+        answer,
+        (answer + 1) % 7,
+        (answer + 2) % 7,
+        (answer + 6) % 7
+    ];
+
+    const options = values.map(value => ({
+        value,
+        en: DAY_NAMES[value],
+        hi: DAY_NAMES_HI[value]
+    }));
+
+    return arrangeOptions(options, seed);
+}
+
+function numberOptions(answer, seed, unitEn, unitHi){
+    const candidates = [
+        answer,
+        answer + 1,
+        Math.max(0, answer - 1),
+        answer + 7
+    ];
+
+    const unique = [...new Set(candidates)];
+
+    for(let n = 0; unique.length < 4; n++){
+        const candidate = answer + 2 + n;
+
+        if(!unique.includes(candidate)){
+            unique.push(candidate);
+        }
+    }
+
+    const options = unique.map(value => ({
+        value,
+        en: `${value} ${unitEn}`,
+        hi: `${value} ${unitHi}`
+    }));
+
+    return arrangeOptions(options, seed);
+}
+
+function makeDayQuestion(year, month, day, tense){
+    const correctDay = weekday(year, month, day);
+    const janFirst = weekday(year, 1, 1);
+
+    const dateOffset = Math.round(
+        (dateUTC(year, month, day) - dateUTC(year, 1, 1)) / 86400000
+    );
+
+    const shift = dateOffset % 7;
+
+    let en;
+
+    if(tense === "past"){
+        en = `Which day was ${dateText(year, month, day)}?`;
+    }else if(tense === "present"){
+        en = `Which day is ${dateText(year, month, day)}?`;
+    }else{
+        en = `Which day will it be on ${dateText(year, month, day)}?`;
+    }
+
+    let hiTense;
+
+    if(tense === "past"){
+        hiTense = "था";
+    }else if(tense === "present"){
+        hiTense = "है";
+    }else{
+        hiTense = "होगा";
+    }
+
+    return {
+        type:"weekday",
+        en,
+        hi:`${dateTextHi(year, month, day)} को कौन-सा दिन ${hiTense}?`,
+        answer:correctDay,
+        getOptions(seed){
+            return weekdayOptions(correctDay, seed);
+        },
+        explanationEn:
+            `1 January ${year} was ${DAY_NAMES[janFirst]}. ` +
+            `There are ${dateOffset} days between 1 January and this date. ` +
+            `${dateOffset} divided by 7 leaves a remainder of ${shift}. ` +
+            `Moving ${shift} day(s) forward from ${DAY_NAMES[janFirst]} gives ${DAY_NAMES[correctDay]}.`,
+        explanationHi:
+            `${year} की 1 जनवरी को ${DAY_NAMES_HI[janFirst]} था। ` +
+            `1 जनवरी से इस तारीख तक ${dateOffset} दिन का अंतर है। ` +
+            `${dateOffset} को 7 से भाग देने पर शेष ${shift} बचता है। ` +
+            `${DAY_NAMES_HI[janFirst]} से ${shift} दिन आगे गिनने पर ${DAY_NAMES_HI[correctDay]} आता है।`
+    };
+}
+
+function makeLeapQuestion(year){
+    const leap = isLeapYear(year);
+
+    return {
+        type:"fixed",
+        en:`Is ${year} a leap year?`,
+        hi:`क्या ${year} एक लीप वर्ष है?`,
+        answer:leap ? 0 : 1,
+        options:[
+            {
+                value:0,
+                en:"Yes, it is a leap year",
+                hi:"हाँ, यह लीप वर्ष है"
+            },
+            {
+                value:1,
+                en:"No, it is an ordinary year",
+                hi:"नहीं, यह सामान्य वर्ष है"
+            },
+            {
+                value:2,
+                en:"It has 365 days",
+                hi:"इसमें 365 दिन होते हैं"
+            },
+            {
+                value:3,
+                en:"Every century year is a leap year",
+                hi:"प्रत्येक शताब्दी वर्ष लीप वर्ष होता है"
+            }
+        ],
+        explanationEn:leap
+            ? `${year} is a leap year. It is divisible by 400, or it is divisible by 4 but not by 100. February has 29 days.`
+            : (year % 100 === 0
+                ? `${year} is divisible by 100 but not by 400, so it is not a leap year. February has 28 days.`
+                : `${year} is not divisible by 4, so it is an ordinary year with 365 days.`),
+        explanationHi:leap
+            ? `${year} लीप वर्ष है। यह 400 से विभाजित होता है, अथवा 4 से विभाजित होता है लेकिन 100 से नहीं। इसमें फरवरी के 29 दिन होते हैं।`
+            : (year % 100 === 0
+                ? `${year} 100 से विभाजित होता है लेकिन 400 से नहीं, इसलिए यह लीप वर्ष नहीं है। फरवरी में 28 दिन होते हैं।`
+                : `${year} 4 से विभाजित नहीं होता, इसलिए यह 365 दिनों वाला सामान्य वर्ष है।`)
+    };
+}
+
+function makeOddDaysQuestion(yearCount, labelEn, labelHi){
+    let totalDays = 0;
+
+    for(let year = 1; year <= yearCount; year++){
+        totalDays += isLeapYear(year) ? 366 : 365;
+    }
+
+    const answer = totalDays % 7;
+
+    return {
+        type:"number",
+        en:`How many odd days are there in ${labelEn}?`,
+        hi:`${labelHi} में कितने विषम दिन होते हैं?`,
+        answer,
+        getOptions(seed){
+            return numberOptions(answer, seed, "odd day(s)", "विषम दिन");
+        },
+        explanationEn:
+            `Total days = ${totalDays}. Divide ${totalDays} by 7: ` +
+            `${totalDays} = ${Math.floor(totalDays / 7)} × 7 + ${answer}. ` +
+            `Therefore, the remainder is ${answer}, so there are ${answer} odd day(s).`,
+        explanationHi:
+            `कुल दिन = ${totalDays}। ${totalDays} को 7 से भाग देने पर ` +
+            `${Math.floor(totalDays / 7)} पूरा भागफल और ${answer} शेष मिलता है। ` +
+            `इसलिए विषम दिनों की संख्या ${answer} है।`
+    };
+}
+
+function makeDaysBetweenQuestion(y1, m1, d1, y2, m2, d2){
+    const start = dateUTC(y1, m1, d1);
+    const end = dateUTC(y2, m2, d2);
+    const answer = daysBetween(start, end);
+
+    return {
+        type:"number",
+        en:`How many days are there between ${dateText(y1,m1,d1)} and ${dateText(y2,m2,d2)}?`,
+        hi:`${dateTextHi(y1,m1,d1)} और ${dateTextHi(y2,m2,d2)} के बीच कितने दिन हैं?`,
+        answer,
+        getOptions(seed){
+            return numberOptions(answer, seed, "days", "दिन");
+        },
+        explanationEn:
+            `The number of days between the two dates is the difference between their calendar dates. ` +
+            `${dateText(y1,m1,d1)} to ${dateText(y2,m2,d2)} = ${answer} days.`,
+        explanationHi:
+            `दो तारीखों के बीच दिनों की संख्या निकालने के लिए उनकी तारीखों का अंतर लेते हैं। ` +
+            `${dateTextHi(y1,m1,d1)} से ${dateTextHi(y2,m2,d2)} तक का अंतर ${answer} दिन है।`
+    };
+}
+
+const questions = [
+    /* Questions 1–10: Calendar dates */
+    makeDayQuestion(2024,1,1,"past"),
+    makeDayQuestion(2024,2,29,"past"),
+    makeDayQuestion(2025,1,1,"past"),
+    makeDayQuestion(2025,8,15,"past"),
+    makeDayQuestion(2026,1,26,"present"),
+    makeDayQuestion(2026,8,15,"present"),
+    makeDayQuestion(2027,1,1,"future"),
+    makeDayQuestion(2028,2,29,"future"),
+    makeDayQuestion(2030,1,26,"future"),
+    makeDayQuestion(2030,12,25,"future"),
+
+    /* Questions 11–16: Leap years */
+    makeLeapQuestion(1900),
+    makeLeapQuestion(2000),
+    makeLeapQuestion(2024),
+    makeLeapQuestion(2025),
+    makeLeapQuestion(2100),
+    makeLeapQuestion(2400),
+
+    /* Questions 17–22: Odd days */
+    makeOddDaysQuestion(1,"one ordinary year","एक सामान्य वर्ष"),
+    makeOddDaysQuestion(2,"two consecutive ordinary years","लगातार दो सामान्य वर्ष"),
+    makeOddDaysQuestion(3,"three consecutive ordinary years","लगातार तीन सामान्य वर्ष"),
+    makeOddDaysQuestion(4,"years 1 to 4","वर्ष 1 से 4"),
+    makeOddDaysQuestion(100,"the first 100 years (years 1–100)","पहले 100 वर्ष (वर्ष 1–100)"),
+    makeOddDaysQuestion(400,"the first 400 years (years 1–400)","पहले 400 वर्ष (वर्ष 1–400)"),
+
+    /* Questions 23–27: Days between dates */
+    makeDaysBetweenQuestion(2024,1,1,2024,3,1),
+    makeDaysBetweenQuestion(2025,1,1,2025,3,1),
+    makeDaysBetweenQuestion(2025,8,15,2025,10,2),
+    makeDaysBetweenQuestion(2021,1,26,2021,8,15),
+    makeDaysBetweenQuestion(2020,1,1,2021,1,1),
+
+    /* Questions 28–50: More calendar date questions */
+    makeDayQuestion(2023,3,8,"past"),
+    makeDayQuestion(2022,10,2,"past"),
+    makeDayQuestion(2021,1,26,"past"),
+    makeDayQuestion(2020,8,15,"past"),
+    makeDayQuestion(2019,11,14,"past"),
+    makeDayQuestion(2018,5,1,"past"),
+    makeDayQuestion(2017,1,1,"past"),
+    makeDayQuestion(2016,2,29,"past"),
+    makeDayQuestion(2015,10,2,"past"),
+    makeDayQuestion(2012,8,15,"past"),
+    makeDayQuestion(2031,1,1,"future"),
+    makeDayQuestion(2032,1,1,"future"),
+    makeDayQuestion(2033,1,1,"future"),
+    makeDayQuestion(2035,1,1,"future"),
+    makeDayQuestion(2040,1,1,"future"),
+    makeDayQuestion(2047,8,15,"future"),
+    makeDayQuestion(2050,1,26,"future"),
+    makeDayQuestion(1991,8,14,"past"),
+    makeDayQuestion(2001,1,1,"past"),
+    makeDayQuestion(2004,2,29,"past"),
+    makeDayQuestion(2008,8,15,"past"),
+    makeDayQuestion(2010,1,26,"past"),
+    makeDayQuestion(2011,12,25,"past")
+];
+
+if(questions.length !== 50){
+    throw new Error(`Question count error: expected 50, found ${questions.length}.`);
+}
+
+let correctCount = 0;
+let wrongCount = 0;
+let attemptedCount = 0;
+
+function getOptions(q, questionIndex){
+    if(typeof q.getOptions === "function"){
+        return q.getOptions(questionIndex + 1);
+    }
+
+    return arrangeOptions(
+        q.options.map(option => ({
+            value:option.value,
+            en:option.en,
+            hi:option.hi
+        })),
+        questionIndex + 1
+    );
+}
+
+function renderQuestions(){
+    const container = document.getElementById("questions-container");
+    container.innerHTML = "";
+
+    questions.forEach((q, index) => {
+        const card = document.createElement("section");
+        card.className = "question-card";
+        card.id = `question-${index}`;
+
+        const options = getOptions(q, index);
+
+        card.innerHTML = `
+            <div class="question-number">Question ${index + 1} / ${questions.length}</div>
+            <div class="question-en"></div>
+            <div class="question-hi"></div>
+
+            <div class="options"></div>
+
+            <div class="solution" id="solution-${index}">
+                <h4>Solution | समाधान</h4>
+                <p class="answer-line" id="answer-${index}"></p>
+                <p class="explanation-en"></p>
+                <p class="explanation-hi"></p>
+            </div>
+        `;
+
+        card.querySelector(".question-en").textContent = q.en;
+        card.querySelector(".question-hi").textContent = q.hi;
+
+        const optionsContainer = card.querySelector(".options");
+
+        options.forEach((option, optionIndex) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "option-btn";
+            button.textContent =
+                `(${String.fromCharCode(65 + optionIndex)}) ${option.en} / ${option.hi}`;
+
+            button.addEventListener("click", () => {
+                if(button.disabled) return;
+
+                attemptedCount++;
+
+                const selectedValue = option.value;
+                const isCorrect = selectedValue === q.answer;
+
+                if(isCorrect){
+                    correctCount++;
+                }else{
+                    wrongCount++;
+                }
+
+                const buttons = optionsContainer.querySelectorAll(".option-btn");
+
+                buttons.forEach((btn, i) => {
+                    btn.disabled = true;
+
+                    if(options[i].value === q.answer){
+                        btn.classList.add("correct");
+                    }
+
+                    if(i === optionIndex && !isCorrect){
+                        btn.classList.add("wrong");
+                    }
+                });
+
+                const correctOptionIndex = options.findIndex(
+                    item => item.value === q.answer
+                );
+
+                const correctOption = options[correctOptionIndex];
+
+                document.getElementById(`answer-${index}`).textContent =
+                    `Correct Answer / सही उत्तर: (${String.fromCharCode(65 + correctOptionIndex)}) ${correctOption.en} / ${correctOption.hi}`;
+
+                const solution = document.getElementById(`solution-${index}`);
+                solution.querySelector(".explanation-en").textContent =
+                    `Explanation: ${q.explanationEn}`;
+                solution.querySelector(".explanation-hi").textContent =
+                    `व्याख्या: ${q.explanationHi}`;
+
+                solution.classList.add("show");
+
+                updateScore();
+            });
+
+            optionsContainer.appendChild(button);
+        });
+
+        container.appendChild(card);
+    });
+
+    updateScore();
+}
+
+function updateScore(){
+    const unattempted = questions.length - attemptedCount;
+
+    document.getElementById("score").textContent = correctCount;
+    document.getElementById("correct").textContent = correctCount;
+    document.getElementById("wrong").textContent = wrongCount;
+    document.getElementById("attempted").textContent = attemptedCount;
+    document.getElementById("unattempted").textContent = unattempted;
+    document.getElementById("marks").textContent = correctCount;
+
+    document.getElementById("result-message").textContent =
+        `You have attempted ${attemptedCount} of ${questions.length} questions. | ` +
+        `आपने ${questions.length} में से ${attemptedCount} प्रश्न हल किए हैं।`;
+}
+
+function resetPractice(){
+    correctCount = 0;
+    wrongCount = 0;
+    attemptedCount = 0;
+
+    renderQuestions();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+renderQuestions();
+</script>
+
+</body>
+</html>
+```
