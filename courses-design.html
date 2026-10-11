@@ -90,7 +90,7 @@
 
         .lqn-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 22px;
         }
 
@@ -167,37 +167,6 @@
             font-size: 14px;
         }
 
-        /* FOOTER */
-
-        .lqn-footer {
-            background: #0b1f33;
-            color: #cbd5e1;
-            padding: 35px 20px;
-            text-align: center;
-        }
-
-        .lqn-footer h3 {
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .lqn-footer p {
-            font-size: 13px;
-        }
-
-        .lqn-footer-links {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .lqn-footer-links a {
-            color: #d7e0ea;
-            font-size: 13px;
-        }
-
         /* RESPONSIVE */
 
         @media (max-width: 600px) {
@@ -219,6 +188,11 @@
 
             .lqn-heading h2 {
                 font-size: 25px;
+            }
+
+            .lqn-card,
+            .lqn-approach-card {
+                padding: 24px;
             }
         }
     </style>
@@ -409,56 +383,6 @@
             </div>
         </div>
     </section>
-
-    <!-- FOOTER -->
-
-    <footer class="lqn-footer">
-
-        <h3>LET'S QUALIFYNOW</h3>
-
-        <p>
-            Reasoning Preparation for Competitive Exams
-        </p>
-
-        <div class="lqn-footer-links">
-
-            <a href="https://sites.google.com/view/lets-qualify-now/home"
-               target="_blank" rel="noopener noreferrer">
-                Home
-            </a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/courses"
-               target="_blank" rel="noopener noreferrer">
-                Courses
-            </a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/study-material"
-               target="_blank" rel="noopener noreferrer">
-                Study Material
-            </a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/live-classes"
-               target="_blank" rel="noopener noreferrer">
-                Live Classes
-            </a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/test-series"
-               target="_blank" rel="noopener noreferrer">
-                Test Series
-            </a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/exams"
-               target="_blank" rel="noopener noreferrer">
-                Exams
-            </a>
-
-            <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
-               target="_blank" rel="noopener noreferrer">
-                YouTube
-            </a>
-
-        </div>
-    </footer>
 
 </body>
 </html>
