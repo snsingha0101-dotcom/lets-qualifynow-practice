@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,6 @@
 
     <title>Courses | Let's QualifyNow</title>
 
-
     <style>
 
         * {
@@ -18,7 +18,6 @@
             box-sizing: border-box;
         }
 
-
         body {
             font-family: Arial, sans-serif;
             background: #ffffff;
@@ -26,11 +25,9 @@
             line-height: 1.6;
         }
 
-
         a {
             text-decoration: none;
         }
-
 
         /* NAVBAR */
 
@@ -38,63 +35,45 @@
             width: 100%;
             background: #ffffff;
             border-bottom: 1px solid #e8edf3;
-
             position: sticky;
             top: 0;
-
             z-index: 1000;
         }
-
 
         .lqn-nav-container {
             max-width: 1150px;
             margin: auto;
-
             padding: 16px 20px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             gap: 25px;
         }
-
 
         .lqn-logo {
             font-size: 23px;
             font-weight: 800;
-
             color: #102a43;
-
             white-space: nowrap;
         }
-
 
         .lqn-nav-links {
             display: flex;
             align-items: center;
-
             gap: 22px;
-
             flex-wrap: wrap;
-
             justify-content: flex-end;
         }
 
-
         .lqn-nav-links a {
             color: #344054;
-
             font-size: 14px;
-
             font-weight: 600;
         }
-
 
         .lqn-nav-links a:hover {
             color: #102a43;
         }
-
 
         /* HERO */
 
@@ -105,258 +84,173 @@
                     #f7f9fc 0%,
                     #eef3f8 100%
                 );
-
             padding: 75px 20px;
         }
 
-
         .lqn-hero-container {
             max-width: 950px;
-
             margin: auto;
-
             text-align: center;
         }
 
-
         .lqn-hero h1 {
             font-size: 43px;
-
             color: #102a43;
-
             margin-bottom: 15px;
-
             font-weight: 800;
         }
 
-
         .lqn-hero p {
             max-width: 720px;
-
             margin: auto;
-
             color: #667085;
-
             font-size: 17px;
         }
-
 
         /* SECTION */
 
         .lqn-section {
             width: 100%;
-
             padding: 60px 20px;
         }
-
 
         .lqn-section-light {
             background: #f7f9fc;
         }
 
-
         .lqn-container {
             max-width: 1100px;
-
             margin: auto;
         }
 
-
         .lqn-heading {
             text-align: center;
-
             margin-bottom: 35px;
         }
 
-
         .lqn-heading h2 {
             font-size: 30px;
-
             color: #102a43;
-
             font-weight: 800;
         }
 
-
         .lqn-heading p {
             margin-top: 8px;
-
             color: #667085;
-
             font-size: 15px;
         }
-
 
         /* COURSE GRID */
 
         .lqn-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 22px;
         }
-
 
         /* COURSE CARD */
 
         .lqn-card {
             background: #ffffff;
-
             border: 1px solid #e8edf3;
-
             border-radius: 16px;
-
             padding: 30px;
-
-            box-shadow:
-                0 5px 18px rgba(0, 0, 0, .06);
-
+            box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
             transition: .25s;
         }
 
-
         .lqn-card:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 12px 28px rgba(0, 0, 0, .11);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .11);
         }
-
 
         .lqn-card h3 {
             color: #102a43;
-
             font-size: 21px;
-
             margin-bottom: 12px;
         }
 
-
         .lqn-card p {
             color: #667085;
-
             font-size: 14px;
-
             margin-bottom: 22px;
         }
-
 
         /* BUTTON */
 
         .lqn-button {
             display: inline-block;
-
             background: #102a43;
-
             color: #ffffff;
-
             padding: 11px 20px;
-
             border-radius: 8px;
-
             font-size: 14px;
-
             font-weight: 700;
-
             transition: .25s;
         }
 
-
         .lqn-button:hover {
             background: #173f5f;
-
             transform: translateY(-2px);
         }
-
 
         /* LEARNING APPROACH */
 
         .lqn-approach-card {
             background: #ffffff;
-
             border: 1px solid #e8edf3;
-
             border-radius: 16px;
-
             padding: 30px;
-
-            box-shadow:
-                0 5px 18px rgba(0, 0, 0, .06);
-
+            box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
             transition: .25s;
         }
 
-
         .lqn-approach-card:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 12px 28px rgba(0, 0, 0, .11);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .11);
         }
-
 
         .lqn-approach-card h3 {
             color: #102a43;
-
             font-size: 21px;
-
             margin-bottom: 12px;
         }
 
-
         .lqn-approach-card p {
             color: #667085;
-
             font-size: 14px;
         }
-
 
         /* FOOTER */
 
         .lqn-footer {
             background: #0b1f33;
-
             color: #cbd5e1;
-
             padding: 35px 20px;
-
             text-align: center;
         }
 
-
         .lqn-footer h3 {
             color: #ffffff;
-
             margin-bottom: 8px;
         }
-
 
         .lqn-footer p {
             font-size: 13px;
         }
 
-
         .lqn-footer-links {
             margin-top: 15px;
-
             display: flex;
-
             justify-content: center;
-
             gap: 20px;
-
             flex-wrap: wrap;
         }
 
-
         .lqn-footer-links a {
             color: #d7e0ea;
-
             font-size: 13px;
         }
-
 
         /* RESPONSIVE */
 
@@ -366,13 +260,11 @@
                 flex-direction: column;
             }
 
-
             .lqn-nav-links {
                 justify-content: center;
             }
 
         }
-
 
         @media (max-width: 600px) {
 
@@ -380,21 +272,17 @@
                 padding: 55px 18px;
             }
 
-
             .lqn-hero h1 {
                 font-size: 33px;
             }
-
 
             .lqn-hero p {
                 font-size: 15px;
             }
 
-
             .lqn-grid {
                 grid-template-columns: 1fr;
             }
-
 
             .lqn-heading h2 {
                 font-size: 25px;
@@ -406,9 +294,7 @@
 
 </head>
 
-
 <body>
-
 
     <!-- NAVBAR -->
 
@@ -416,55 +302,42 @@
 
         <div class="lqn-nav-container">
 
-
             <div class="lqn-logo">
-
                 LET'S QUALIFYNOW
-
             </div>
-
 
             <div class="lqn-nav-links">
 
-
-                <a href="index.html">
+                <a href="https://sites.google.com/view/lets-qualify-now/home">
                     Home
                 </a>
 
-
-                <a href="courses.html">
+                <a href="https://sites.google.com/view/lets-qualify-now/courses">
                     Courses
                 </a>
 
-
-                <a href="study-material.html">
+                <a href="https://sites.google.com/view/lets-qualify-now/study-material">
                     Study Material
                 </a>
 
-
-                <a href="live-classes.html">
+                <a href="https://sites.google.com/view/lets-qualify-now/live-classes">
                     Live Classes
                 </a>
 
-
-                <a href="test-series.html">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series">
                     Test Series
                 </a>
 
-
-                <a href="exams.html">
+                <a href="https://sites.google.com/view/lets-qualify-now/exams">
                     Exams
                 </a>
 
-
                 <a
                     href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
-                    target="_blank">
-
+                    target="_blank"
+                    rel="noopener noreferrer">
                     YouTube
-
                 </a>
-
 
             </div>
 
@@ -472,432 +345,292 @@
 
     </nav>
 
-
     <!-- HERO -->
 
     <section class="lqn-hero">
 
-
         <div class="lqn-hero-container">
 
-
             <h1>
-
                 📚 Our Courses
-
             </h1>
 
-
             <p>
-
                 Structured Reasoning preparation for
                 SSC, Banking, Railway, State-level and
                 Defence examinations.
-
             </p>
-
 
         </div>
 
     </section>
-
 
     <!-- COURSES -->
 
     <section class="lqn-section">
 
-
         <div class="lqn-container">
-
 
             <div class="lqn-heading">
 
-
                 <h2>
-
                     Explore Our Courses
-
                 </h2>
 
-
                 <p>
-
                     Choose your examination category
                     and start your preparation.
-
                 </p>
-
 
             </div>
 
-
             <div class="lqn-grid">
-
 
                 <!-- SSC -->
 
                 <div class="lqn-card">
 
-
                     <h3>
-
                         📘 SSC Reasoning Course
-
                     </h3>
 
-
                     <p>
-
                         Complete Reasoning preparation for
                         SSC CGL, CHSL, CPO, MTS, GD and
                         other SSC examinations.
-
                     </p>
 
-
                     <a
-                        href="ssc-reasoning.html"
+                        href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course"
                         class="lqn-button">
-
                         View Course
-
                     </a>
 
-
                 </div>
-
 
                 <!-- BANKING -->
 
                 <div class="lqn-card">
 
-
                     <h3>
-
                         🏦 Banking Reasoning Course
-
                     </h3>
 
-
                     <p>
-
                         Reasoning preparation for
                         SBI, IBPS, RRB and other
                         banking examinations.
-
                     </p>
 
-
                     <a
-                        href="banking-reasoning.html"
+                        href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course"
                         class="lqn-button">
-
                         View Course
-
                     </a>
 
-
                 </div>
-
 
                 <!-- RAILWAY -->
 
                 <div class="lqn-card">
 
-
                     <h3>
-
                         🚆 Railway Reasoning Course
-
                     </h3>
 
-
                     <p>
-
                         Exam-oriented Reasoning preparation
                         for RRB NTPC, Group D, ALP,
                         Technician and other Railway examinations.
-
                     </p>
 
-
                     <a
-                        href="railway-reasoning.html"
+                        href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course"
                         class="lqn-button">
-
                         View Course
-
                     </a>
 
-
                 </div>
-
 
                 <!-- STATE EXAMS -->
 
                 <div class="lqn-card">
 
-
                     <h3>
-
                         🏛️ State Exams Reasoning Course
-
                     </h3>
 
-
                     <p>
-
                         Structured Reasoning preparation
                         for State-level competitive
                         examinations.
-
                     </p>
 
-
                     <a
-                        href="state-exams-reasoning.html"
+                        href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course"
                         class="lqn-button">
-
                         View Course
-
                     </a>
 
-
                 </div>
-
 
                 <!-- DEFENCE -->
 
                 <div class="lqn-card">
 
-
                     <h3>
-
                         🪖 Defence Reasoning Course
-
                     </h3>
 
-
                     <p>
-
                         Structured Reasoning preparation
                         for Defence and related competitive
                         examinations.
-
                     </p>
 
-
                     <a
-                        href="defence-reasoning.html"
+                        href="https://sites.google.com/view/lets-qualify-now/exams"
                         class="lqn-button">
-
                         View Course
-
                     </a>
 
-
                 </div>
-
 
             </div>
 
         </div>
 
     </section>
-
 
     <!-- LEARNING APPROACH -->
 
-    <section
-        class="lqn-section lqn-section-light">
-
+    <section class="lqn-section lqn-section-light">
 
         <div class="lqn-container">
 
-
             <div class="lqn-heading">
 
-
                 <h2>
-
                     📖 Our Learning Approach
-
                 </h2>
 
-
                 <p>
-
                     A structured approach to effective
                     Reasoning preparation
-
                 </p>
-
 
             </div>
 
-
             <div class="lqn-grid">
-
 
                 <div class="lqn-approach-card">
 
-
                     <h3>
-
                         Concept Building
-
                     </h3>
 
-
                     <p>
-
                         Build a clear understanding of
                         important Reasoning concepts
                         before moving to advanced practice.
-
                     </p>
-
 
                 </div>
 
-
                 <div class="lqn-approach-card">
 
-
                     <h3>
-
                         Topic-wise Practice
-
                     </h3>
 
-
                     <p>
-
                         Practice questions systematically
                         according to the requirements
                         of your examination.
-
                     </p>
-
 
                 </div>
 
-
                 <div class="lqn-approach-card">
 
-
                     <h3>
-
                         Previous Year Questions
-
                     </h3>
 
-
                     <p>
-
                         Understand examination patterns
                         through relevant previous year questions.
-
                     </p>
 
-
                 </div>
-
 
                 <div class="lqn-approach-card">
 
-
                     <h3>
-
                         Practice & Revision
-
                     </h3>
 
-
                     <p>
-
                         Regular practice and revision
                         to support consistent preparation.
-
                     </p>
 
-
                 </div>
-
 
             </div>
 
         </div>
 
     </section>
-
 
     <!-- FOOTER -->
 
     <footer class="lqn-footer">
 
-
         <h3>
-
             LET'S QUALIFYNOW
-
         </h3>
 
-
         <p>
-
             Reasoning Preparation for Competitive Exams
-
         </p>
-
 
         <div class="lqn-footer-links">
 
-
-            <a href="index.html">
+            <a href="https://sites.google.com/view/lets-qualify-now/home">
                 Home
             </a>
 
-
-            <a href="courses.html">
+            <a href="https://sites.google.com/view/lets-qualify-now/courses">
                 Courses
             </a>
 
-
-            <a href="study-material.html">
+            <a href="https://sites.google.com/view/lets-qualify-now/study-material">
                 Study Material
             </a>
 
-
-            <a href="live-classes.html">
+            <a href="https://sites.google.com/view/lets-qualify-now/live-classes">
                 Live Classes
             </a>
 
-
-            <a href="test-series.html">
+            <a href="https://sites.google.com/view/lets-qualify-now/test-series">
                 Test Series
             </a>
 
-
-            <a href="exams.html">
+            <a href="https://sites.google.com/view/lets-qualify-now/exams">
                 Exams
             </a>
 
-
             <a
                 href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
-                target="_blank">
-
+                target="_blank"
+                rel="noopener noreferrer">
                 YouTube
-
             </a>
-
 
         </div>
 
-
     </footer>
-
 
 </body>
 
