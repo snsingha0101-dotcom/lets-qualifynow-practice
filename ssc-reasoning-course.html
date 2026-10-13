@@ -1,711 +1,585 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SSC Reasoning Course | Let's QualifyNow</title>
-    <meta name="description" content="Prepare for SSC CGL, CHSL, CPO, MTS and GD Reasoning with concept building, previous year questions, topic-wise practice and exam-oriented preparation by N Saurabh Sir.">
+<title>SSC Reasoning Course | Let's QualifyNow</title>
+<meta name="description" content="Prepare for SSC CGL, CHSL, CPO, MTS and GD Reasoning with concepts, PYQs, topic-wise practice, revision and exam-oriented preparation by N Saurabh Sir.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
-            color: #243b53;
-            line-height: 1.7;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #243b53;
+    line-height: 1.7;
+}
 
-        .lqn-hero {
-            background: linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
-            padding: 65px 20px;
-        }
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
 
-        .lqn-hero-container {
-            max-width: 950px;
-            margin: auto;
-            text-align: center;
-        }
+.hero {
+    background: linear-gradient(135deg, #102a43, #173f5f);
+    color: #ffffff;
+    text-align: center;
+    padding: 42px 25px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+}
 
-        .lqn-badge {
-            display: inline-block;
-            background: #e6edf5;
-            color: #102a43;
-            padding: 7px 15px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 18px;
-        }
+.hero-label {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #d9eaf7;
+    margin-bottom: 12px;
+}
 
-        .lqn-hero h1 {
-            font-size: 40px;
-            line-height: 1.3;
-            color: #102a43;
-            margin-bottom: 16px;
-            font-weight: 800;
-        }
+.hero h1 {
+    font-size: 32px;
+    line-height: 1.35;
+    margin-bottom: 18px;
+}
 
-        .lqn-hero p {
-            max-width: 750px;
-            margin: auto;
-            color: #52606d;
-            font-size: 17px;
-        }
+.hero p {
+    font-size: 17px;
+    max-width: 850px;
+    margin: 0 auto 16px;
+    color: #f0f6fb;
+}
 
-        .lqn-section {
-            width: 100%;
-            padding: 55px 20px;
-        }
+.hero .overview {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 18px;
+    border: 1px solid #829ab1;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
 
-        .lqn-section-light {
-            background: #f7f9fc;
-        }
+.section {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
 
-        .lqn-container {
-            max-width: 1100px;
-            margin: auto;
-        }
+.section h2 {
+    color: #102a43;
+    font-size: 25px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
 
-        .lqn-heading {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.section-intro {
+    color: #52606d;
+    margin-bottom: 22px;
+}
 
-        .lqn-heading h2 {
-            font-size: 29px;
-            line-height: 1.4;
-            color: #102a43;
-            font-weight: 800;
-        }
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
 
-        .lqn-heading p {
-            margin-top: 8px;
-            color: #52606d;
-            font-size: 15px;
-        }
+.card {
+    background: #f7f9fc;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 22px;
+}
 
-        .lqn-highlight {
-            background: #102a43;
-            color: #ffffff;
-            border-radius: 16px;
-            padding: 32px;
-            text-align: center;
-        }
+.card h3 {
+    color: #173f5f;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 9px;
+}
 
-        .lqn-highlight h2 {
-            color: #ffffff;
-            font-size: 25px;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
+.card p {
+    color: #52606d;
+}
 
-        .lqn-highlight p {
-            color: #d9e2ec;
-            max-width: 800px;
-            margin: auto;
-        }
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
 
-        .lqn-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
-        }
+.topic-box {
+    background: #f7f9fc;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 22px;
+}
 
-        .lqn-card {
-            min-width: 0;
-            background: #ffffff;
-            border: 1px solid #d9e2ec;
-            border-radius: 14px;
-            padding: 24px;
-            box-shadow: 0 4px 14px rgba(16, 42, 67, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+.topic-box h3 {
+    color: #173f5f;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
 
-        .lqn-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(16, 42, 67, 0.09);
-        }
+.topic-box ul {
+    padding-left: 22px;
+}
 
-        .lqn-card h3 {
-            color: #102a43;
-            font-size: 18px;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
+.topic-box li {
+    margin-bottom: 7px;
+    color: #52606d;
+}
 
-        .lqn-card p {
-            color: #52606d;
-            font-size: 14px;
-        }
+.structure-list {
+    display: grid;
+    gap: 16px;
+    margin-top: 22px;
+}
 
-        .lqn-list {
-            list-style: none;
-            margin-top: 10px;
-        }
+.structure-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+    background: #f7f9fc;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+}
 
-        .lqn-list li {
-            color: #52606d;
-            font-size: 14px;
-            padding: 7px 0;
-            border-bottom: 1px solid #e1e8ed;
-        }
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    background: #173f5f;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-        .lqn-list li:last-child {
-            border-bottom: none;
-        }
+.structure-item h3 {
+    color: #173f5f;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
 
-        .lqn-structure-box {
-            max-width: 900px;
-            margin: auto;
-            display: grid;
-            gap: 16px;
-        }
+.structure-item p {
+    color: #52606d;
+}
 
-        .lqn-structure-item {
-            background: #ffffff;
-            border: 1px solid #d9e2ec;
-            border-radius: 14px;
-            padding: 20px 22px;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            box-shadow: 0 4px 14px rgba(16, 42, 67, 0.05);
-        }
+.access-card {
+    background: #eef6fb;
+    border: 1px solid #d9eaf7;
+}
 
-        .lqn-structure-number {
-            width: 42px;
-            height: 42px;
-            min-width: 42px;
-            border-radius: 50%;
-            background: #102a43;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            font-weight: 700;
-        }
+.closing-note {
+    text-align: center;
+    padding: 25px;
+    color: #52606d;
+    font-size: 15px;
+}
 
-        .lqn-structure-content h3 {
-            color: #102a43;
-            font-size: 17px;
-            line-height: 1.5;
-            margin-bottom: 4px;
-        }
+@media (max-width: 650px) {
+    .container {
+        padding: 14px;
+    }
 
-        .lqn-structure-content p {
-            color: #52606d;
-            font-size: 14px;
-        }
+    .hero {
+        padding: 30px 18px;
+    }
 
-        .lqn-two-column {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-        }
+    .hero h1 {
+        font-size: 26px;
+    }
 
-        .lqn-card-icon {
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
+    .hero p {
+        font-size: 15px;
+    }
 
-        @media (max-width: 850px) {
-            .lqn-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
+    .section {
+        padding: 22px 18px;
+    }
 
-            .lqn-hero h1 {
-                font-size: 35px;
-            }
-        }
+    .section h2 {
+        font-size: 22px;
+    }
 
-        @media (max-width: 600px) {
-            .lqn-hero {
-                padding: 45px 18px;
-            }
+    .card-grid,
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
 
-            .lqn-hero h1 {
-                font-size: 29px;
-            }
+    .structure-item {
+        gap: 12px;
+        padding: 16px;
+    }
 
-            .lqn-hero p {
-                font-size: 15px;
-            }
-
-            .lqn-section {
-                padding: 40px 16px;
-            }
-
-            .lqn-heading h2 {
-                font-size: 24px;
-            }
-
-            .lqn-grid,
-            .lqn-two-column {
-                grid-template-columns: 1fr;
-            }
-
-            .lqn-card {
-                padding: 21px;
-            }
-
-            .lqn-highlight {
-                padding: 25px 20px;
-            }
-
-            .lqn-highlight h2 {
-                font-size: 22px;
-            }
-
-            .lqn-structure-item {
-                padding: 17px;
-                gap: 13px;
-            }
-
-            .lqn-structure-content h3 {
-                font-size: 16px;
-            }
-        }
-    </style>
+    .step-number {
+        min-width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="lqn-hero">
-        <div class="lqn-hero-container">
+<main class="container">
 
-            <div class="lqn-badge">
-                SSC Reasoning Preparation
+    <section class="hero">
+        <div class="hero-label">SSC REASONING PREPARATION</div>
+
+        <h1>📘 SSC Reasoning Course</h1>
+
+        <p>
+            Exam-oriented Reasoning preparation for SSC CGL, CHSL, CPO,
+            MTS, GD and other SSC examinations.
+        </p>
+
+        <div class="overview">
+            Concepts • PYQs • Practice • Revision
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Build Strong Concepts. Practice Better.</h2>
+
+        <p class="section-intro">
+            A structured approach to Reasoning preparation with concept
+            building, topic-wise practice, previous year questions and
+            exam-oriented practice.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>📚 What You Will Learn</h2>
+
+        <p class="section-intro">
+            Key components of SSC Reasoning preparation.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>✓ Concept Building</h3>
+                <p>Clear understanding of important Reasoning concepts.</p>
             </div>
 
-            <h1>📘 SSC Reasoning Course</h1>
+            <div class="card">
+                <h3>✓ Previous Year Questions</h3>
+                <p>Practice with relevant PYQs to understand examination patterns.</p>
+            </div>
 
-            <p>
-                Exam-oriented Reasoning preparation for SSC CGL,
-                CHSL, CPO, MTS, GD and other SSC examinations.
-            </p>
+            <div class="card">
+                <h3>✓ Topic-wise Practice</h3>
+                <p>Systematic practice of important Reasoning topics.</p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Practice Sets</h3>
+                <p>Exam-oriented questions for regular practice.</p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Short Tricks</h3>
+                <p>Useful methods for solving suitable questions efficiently.</p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Revision</h3>
+                <p>Regular revision for better retention and continued improvement.</p>
+            </div>
 
         </div>
     </section>
 
+    <section class="section">
+        <h2>🎯 Course Coverage</h2>
 
-    <!-- COURSE OVERVIEW -->
-    <section class="lqn-section">
-        <div class="lqn-container">
+        <p class="section-intro">
+            Important areas of SSC Reasoning.
+        </p>
 
-            <div class="lqn-heading">
-                <h2>Course Overview</h2>
-                <p>Concepts • PYQs • Practice • Revision</p>
+        <div class="topic-grid">
+
+            <div class="topic-box">
+                <h3>General Intelligence &amp; Reasoning</h3>
+                <ul>
+                    <li>Analogy</li>
+                    <li>Classification</li>
+                    <li>Series</li>
+                    <li>Coding-Decoding</li>
+                </ul>
             </div>
 
-            <div class="lqn-highlight">
-                <h2>Build Strong Concepts. Practice Better.</h2>
+            <div class="topic-box">
+                <h3>Logical Reasoning</h3>
+                <ul>
+                    <li>Blood Relation</li>
+                    <li>Direction</li>
+                    <li>Ranking &amp; Order</li>
+                    <li>Syllogism</li>
+                </ul>
+            </div>
 
+            <div class="topic-box">
+                <h3>Analytical Reasoning</h3>
+                <ul>
+                    <li>Venn Diagram</li>
+                    <li>Statement &amp; Conclusion</li>
+                    <li>Logical Questions</li>
+                    <li>Miscellaneous Topics</li>
+                </ul>
+            </div>
+
+            <div class="topic-box">
+                <h3>Advanced Practice</h3>
+                <ul>
+                    <li>Puzzle</li>
+                    <li>Seating Arrangement</li>
+                    <li>Non-Verbal Reasoning</li>
+                    <li>Mixed Practice</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>📖 Course Structure</h2>
+
+        <p class="section-intro">
+            A systematic learning and practice process.
+        </p>
+
+        <div class="structure-list">
+
+            <div class="structure-item">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Concept Building</h3>
+                    <p>Clear understanding of important Reasoning concepts.</p>
+                </div>
+            </div>
+
+            <div class="structure-item">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Topic-wise Practice</h3>
+                    <p>Systematic practice of important Reasoning topics.</p>
+                </div>
+            </div>
+
+            <div class="structure-item">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>Previous Year Questions (PYQs)</h3>
+                    <p>Practice relevant previous year questions for examination understanding.</p>
+                </div>
+            </div>
+
+            <div class="structure-item">
+                <div class="step-number">4</div>
+                <div>
+                    <h3>Exam-Oriented Practice Sets</h3>
+                    <p>Practice sets designed around competitive examination requirements.</p>
+                </div>
+            </div>
+
+            <div class="structure-item">
+                <div class="step-number">5</div>
+                <div>
+                    <h3>Revision &amp; Performance Improvement</h3>
+                    <p>Regular revision and practice for better accuracy and performance.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🎥 Class Format</h2>
+
+        <p class="section-intro">
+            Focused learning and question practice.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>Concept Explanation</h3>
+                <p>Concepts are explained before moving to question practice.</p>
+            </div>
+
+            <div class="card">
+                <h3>Topic-wise Questions</h3>
+                <p>Practice questions are arranged topic-wise.</p>
+            </div>
+
+            <div class="card">
+                <h3>PYQ Discussion</h3>
+                <p>Previous year questions are discussed for examination understanding.</p>
+            </div>
+
+            <div class="card">
+                <h3>Practice &amp; Revision</h3>
+                <p>Regular practice and revision support continuous preparation.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>👨‍🎓 Who Is This Course For?</h2>
+
+        <p class="section-intro">
+            Suitable for students preparing for SSC examinations.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>SSC CGL Aspirants</h3>
+                <p>Students preparing for the SSC CGL examination.</p>
+            </div>
+
+            <div class="card">
+                <h3>SSC CHSL Aspirants</h3>
+                <p>Students preparing for the SSC CHSL examination.</p>
+            </div>
+
+            <div class="card">
+                <h3>SSC CPO Aspirants</h3>
+                <p>Students preparing for the SSC CPO examination.</p>
+            </div>
+
+            <div class="card">
+                <h3>SSC MTS &amp; GD Aspirants</h3>
+                <p>Students preparing for SSC MTS, GD and related examinations.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Added Section 1: Why Learn with N Saurabh Sir -->
+
+    <section class="section">
+        <h2>🌟 Why Learn with N Saurabh Sir?</h2>
+
+        <p class="section-intro">
+            Focused Reasoning preparation through concepts, practice
+            and exam-oriented learning.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>Concept-Focused Teaching</h3>
                 <p>
-                    A structured approach to Reasoning preparation
-                    with concept building, topic-wise practice,
-                    previous year questions and exam-oriented practice.
+                    Build a clear understanding of Reasoning concepts
+                    before moving to advanced questions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Exam-Oriented Approach</h3>
+                <p>
+                    Prepare with practice relevant to SSC examination
+                    patterns and question requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>PYQs &amp; Quality Questions</h3>
+                <p>
+                    Strengthen preparation through previous year questions
+                    and topic-wise practice.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Accuracy, Speed &amp; Problem-Solving</h3>
+                <p>
+                    Develop a systematic approach to solving questions
+                    accurately and efficiently through regular practice.
                 </p>
             </div>
 
         </div>
     </section>
 
+    <!-- Added Section 2: Course Access -->
 
-    <!-- WHAT YOU WILL LEARN -->
-    <section class="lqn-section lqn-section-light">
-        <div class="lqn-container">
+    <section class="section">
+        <h2>💻 Course Access</h2>
 
-            <div class="lqn-heading">
-                <h2>📚 What You Will Learn</h2>
-                <p>Key components of SSC Reasoning preparation</p>
-            </div>
+        <p class="section-intro">
+            Learning and practice support for your Reasoning preparation.
+        </p>
 
-            <div class="lqn-grid">
+        <div class="card-grid">
 
-                <div class="lqn-card">
-                    <h3>✓ Concept Building</h3>
-                    <p>
-                        Clear understanding of important Reasoning concepts.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>✓ Previous Year Questions</h3>
-                    <p>
-                        Practice with relevant PYQs to understand
-                        examination patterns.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>✓ Topic-wise Practice</h3>
-                    <p>
-                        Systematic practice of important Reasoning topics.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>✓ Practice Sets</h3>
-                    <p>
-                        Exam-oriented questions for regular practice.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>✓ Short Tricks</h3>
-                    <p>
-                        Useful methods for solving suitable questions efficiently.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>✓ Revision</h3>
-                    <p>
-                        Regular revision for better retention and
-                        continued improvement.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- COURSE COVERAGE -->
-    <section class="lqn-section">
-        <div class="lqn-container">
-
-            <div class="lqn-heading">
-                <h2>🎯 Course Coverage</h2>
-                <p>Important areas of SSC Reasoning</p>
-            </div>
-
-            <div class="lqn-grid">
-
-                <div class="lqn-card">
-                    <h3>General Intelligence &amp; Reasoning</h3>
-                    <ul class="lqn-list">
-                        <li>Analogy</li>
-                        <li>Classification</li>
-                        <li>Series</li>
-                        <li>Coding-Decoding</li>
-                    </ul>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>Logical Reasoning</h3>
-                    <ul class="lqn-list">
-                        <li>Blood Relation</li>
-                        <li>Direction</li>
-                        <li>Ranking &amp; Order</li>
-                        <li>Syllogism</li>
-                    </ul>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>Analytical Reasoning</h3>
-                    <ul class="lqn-list">
-                        <li>Venn Diagram</li>
-                        <li>Statement &amp; Conclusion</li>
-                        <li>Logical Questions</li>
-                        <li>Miscellaneous Topics</li>
-                    </ul>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>Advanced Practice</h3>
-                    <ul class="lqn-list">
-                        <li>Puzzle</li>
-                        <li>Seating Arrangement</li>
-                        <li>Non-Verbal Reasoning</li>
-                        <li>Mixed Practice</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- COURSE STRUCTURE -->
-    <section class="lqn-section lqn-section-light">
-        <div class="lqn-container">
-
-            <div class="lqn-heading">
-                <h2>📖 Course Structure</h2>
-                <p>A systematic learning and practice process</p>
-            </div>
-
-            <div class="lqn-structure-box">
-
-                <div class="lqn-structure-item">
-                    <div class="lqn-structure-number">1</div>
-                    <div class="lqn-structure-content">
-                        <h3>Concept Building</h3>
-                        <p>
-                            Clear understanding of important Reasoning concepts.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lqn-structure-item">
-                    <div class="lqn-structure-number">2</div>
-                    <div class="lqn-structure-content">
-                        <h3>Topic-wise Practice</h3>
-                        <p>
-                            Systematic practice of important Reasoning topics.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lqn-structure-item">
-                    <div class="lqn-structure-number">3</div>
-                    <div class="lqn-structure-content">
-                        <h3>Previous Year Questions (PYQs)</h3>
-                        <p>
-                            Practice relevant previous year questions
-                            for examination understanding.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lqn-structure-item">
-                    <div class="lqn-structure-number">4</div>
-                    <div class="lqn-structure-content">
-                        <h3>Exam-Oriented Practice Sets</h3>
-                        <p>
-                            Practice sets designed around competitive
-                            examination requirements.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lqn-structure-item">
-                    <div class="lqn-structure-number">5</div>
-                    <div class="lqn-structure-content">
-                        <h3>Revision &amp; Performance Improvement</h3>
-                        <p>
-                            Regular revision and practice for better
-                            accuracy and performance.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CLASS FORMAT -->
-    <section class="lqn-section">
-        <div class="lqn-container">
-
-            <div class="lqn-heading">
-                <h2>🎥 Class Format</h2>
-                <p>Focused learning and question practice</p>
-            </div>
-
-            <div class="lqn-grid">
-
-                <div class="lqn-card">
-                    <h3>Concept Explanation</h3>
-                    <p>
-                        Concepts are explained before moving
-                        to question practice.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>Topic-wise Questions</h3>
-                    <p>
-                        Practice questions are arranged topic-wise.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>PYQ Discussion</h3>
-                    <p>
-                        Previous year questions are discussed
-                        for examination understanding.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>Practice &amp; Revision</h3>
-                    <p>
-                        Regular practice and revision support
-                        continuous preparation.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- WHO IS THIS COURSE FOR -->
-    <section class="lqn-section lqn-section-light">
-        <div class="lqn-container">
-
-            <div class="lqn-heading">
-                <h2>👨‍🎓 Who Is This Course For?</h2>
+            <div class="card access-card">
+                <h3>Online Classes</h3>
                 <p>
-                    Suitable for students preparing for SSC examinations
+                    Access course learning through online classes,
+                    according to the applicable course schedule.
                 </p>
             </div>
 
-            <div class="lqn-two-column">
-
-                <div class="lqn-card">
-                    <h3>SSC CGL Aspirants</h3>
-                    <p>
-                        Students preparing for the SSC CGL examination.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>SSC CHSL Aspirants</h3>
-                    <p>
-                        Students preparing for the SSC CHSL examination.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>SSC CPO Aspirants</h3>
-                    <p>
-                        Students preparing for the SSC CPO examination.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <h3>SSC MTS &amp; GD Aspirants</h3>
-                    <p>
-                        Students preparing for SSC MTS, GD and
-                        related examinations.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- WHY LEARN WITH N SAURABH SIR -->
-    <section class="lqn-section">
-        <div class="lqn-container">
-
-            <div class="lqn-heading">
-                <h2>🌟 Why Learn with N Saurabh Sir?</h2>
+            <div class="card access-card">
+                <h3>Live Classes &amp; Practice Sessions</h3>
                 <p>
-                    A concept-focused approach to competitive exam preparation
+                    Strengthen concepts through live teaching and
+                    question-solving practice sessions where available.
                 </p>
             </div>
 
-            <div class="lqn-grid">
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">📘</div>
-                    <h3>Concept-Focused Teaching</h3>
-                    <p>
-                        Focus on understanding the logic behind
-                        Reasoning questions and their solutions.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">🎯</div>
-                    <h3>Exam-Oriented Approach</h3>
-                    <p>
-                        Preparation focused on relevant topics and
-                        the requirements of competitive examinations.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">📝</div>
-                    <h3>PYQs &amp; Quality Questions</h3>
-                    <p>
-                        Practice with previous year questions and
-                        topic-wise questions for structured preparation.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">⚡</div>
-                    <h3>Accuracy &amp; Speed</h3>
-                    <p>
-                        Develop problem-solving skills through
-                        regular practice, review and revision.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- COURSE ACCESS -->
-    <section class="lqn-section lqn-section-light">
-        <div class="lqn-container">
-
-            <div class="lqn-heading">
-                <h2>💻 Course Access</h2>
+            <div class="card access-card">
+                <h3>Course Updates</h3>
                 <p>
-                    Learning and practice resources for your preparation
+                    Follow the available course updates and learning
+                    information to stay informed about preparation.
                 </p>
             </div>
 
-            <div class="lqn-two-column">
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">💻</div>
-                    <h3>Online Classes</h3>
-                    <p>
-                        Learn Reasoning concepts through online
-                        classes and structured topic coverage.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">🎥</div>
-                    <h3>Live Classes &amp; Practice Sessions</h3>
-                    <p>
-                        Follow available live classes and practice
-                        sessions for concept reinforcement.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">📚</div>
-                    <h3>Course Updates</h3>
-                    <p>
-                        Check the website for available course
-                        information and study material updates.
-                    </p>
-                </div>
-
-                <div class="lqn-card">
-                    <div class="lqn-card-icon">📖</div>
-                    <h3>Study Support</h3>
-                    <p>
-                        Use available practice resources and
-                        revision material to support your preparation.
-                    </p>
-                </div>
-
+            <div class="card access-card">
+                <h3>Study Support</h3>
+                <p>
+                    Use available study material and practice resources
+                    to support your Reasoning preparation.
+                </p>
             </div>
+
         </div>
     </section>
+
+    <div class="closing-note">
+        <p>
+            <strong>LET'S QUALIFYNOW</strong>
+        </p>
+        <p>You Are Closer To Success</p>
+        <p>N Saurabh Sir | Reasoning Faculty</p>
+        <p>SSC • Banking • Railway • Government Exams</p>
+    </div>
+
+</main>
 
 </body>
 </html>
