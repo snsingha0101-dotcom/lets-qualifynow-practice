@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,22 +14,26 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
-            color: #172033;
-            line-height: 1.6;
+            color: #243b53;
+            line-height: 1.7;
         }
 
         a {
             text-decoration: none;
         }
 
-        /* HERO */
+        /* HERO - NO DUPLICATE HEADER */
 
         .lqn-hero {
-            background: linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
-            padding: 75px 20px;
+            background: #ffffff;
+            padding: 35px 20px 30px;
         }
 
         .lqn-hero-container {
@@ -39,24 +43,25 @@
         }
 
         .lqn-hero h1 {
-            font-size: 43px;
+            font-size: 38px;
+            line-height: 1.3;
             color: #102a43;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             font-weight: 800;
         }
 
         .lqn-hero p {
             max-width: 720px;
             margin: auto;
-            color: #667085;
-            font-size: 17px;
+            color: #52606d;
+            font-size: 16px;
         }
 
         /* SECTION */
 
         .lqn-section {
             width: 100%;
-            padding: 60px 20px;
+            padding: 40px 20px 55px;
         }
 
         .lqn-section-light {
@@ -70,18 +75,19 @@
 
         .lqn-heading {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 32px;
         }
 
         .lqn-heading h2 {
-            font-size: 30px;
+            font-size: 29px;
+            line-height: 1.4;
             color: #102a43;
             font-weight: 800;
         }
 
         .lqn-heading p {
             margin-top: 8px;
-            color: #667085;
+            color: #52606d;
             font-size: 15px;
         }
 
@@ -97,28 +103,33 @@
 
         .lqn-card {
             background: #ffffff;
-            border: 1px solid #e8edf3;
+            border: 1px solid #d9e2ec;
             border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
-            transition: .25s;
+            padding: 28px;
+            box-shadow: 0 5px 18px rgba(16, 42, 67, 0.06);
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .lqn-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, .11);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(16, 42, 67, 0.11);
         }
 
         .lqn-card h3 {
             color: #102a43;
             font-size: 21px;
+            line-height: 1.5;
             margin-bottom: 12px;
         }
 
         .lqn-card p {
-            color: #667085;
+            color: #52606d;
             font-size: 14px;
             margin-bottom: 22px;
+            flex-grow: 1;
         }
 
         /* BUTTON */
@@ -131,38 +142,45 @@
             border-radius: 8px;
             font-size: 14px;
             font-weight: 700;
-            transition: .25s;
+            transition: background 0.25s, transform 0.25s;
         }
 
         .lqn-button:hover {
             background: #173f5f;
             transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .lqn-button:focus-visible {
+            outline: 3px solid #829ab1;
+            outline-offset: 3px;
         }
 
         /* LEARNING APPROACH */
 
         .lqn-approach-card {
             background: #ffffff;
-            border: 1px solid #e8edf3;
+            border: 1px solid #d9e2ec;
             border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
-            transition: .25s;
+            padding: 28px;
+            box-shadow: 0 5px 18px rgba(16, 42, 67, 0.05);
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
         .lqn-approach-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, .11);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(16, 42, 67, 0.10);
         }
 
         .lqn-approach-card h3 {
             color: #102a43;
-            font-size: 21px;
+            font-size: 20px;
+            line-height: 1.5;
             margin-bottom: 12px;
         }
 
         .lqn-approach-card p {
-            color: #667085;
+            color: #52606d;
             font-size: 14px;
         }
 
@@ -170,19 +188,28 @@
 
         @media (max-width: 600px) {
             .lqn-hero {
-                padding: 55px 18px;
+                padding: 28px 18px 24px;
             }
 
             .lqn-hero h1 {
-                font-size: 33px;
+                font-size: 30px;
             }
 
             .lqn-hero p {
                 font-size: 15px;
             }
 
+            .lqn-section {
+                padding: 32px 16px 42px;
+            }
+
             .lqn-grid {
                 grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .lqn-heading {
+                margin-bottom: 25px;
             }
 
             .lqn-heading h2 {
@@ -191,7 +218,30 @@
 
             .lqn-card,
             .lqn-approach-card {
-                padding: 24px;
+                padding: 23px;
+            }
+
+            .lqn-card h3,
+            .lqn-approach-card h3 {
+                font-size: 19px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .lqn-card,
+            .lqn-button,
+            .lqn-approach-card {
+                transition: none;
+            }
+
+            .lqn-card:hover,
+            .lqn-button:hover,
+            .lqn-approach-card:hover {
+                transform: none;
             }
         }
     </style>
@@ -199,7 +249,7 @@
 
 <body>
 
-    <!-- HERO -->
+    <!-- COURSES INTRODUCTION: GOOGLE SITES HEADER IS NOT INCLUDED -->
 
     <section class="lqn-hero">
         <div class="lqn-hero-container">
@@ -237,9 +287,11 @@
                         SSC CGL, CHSL, CPO, MTS, GD and
                         other SSC examinations.
                     </p>
-                    <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course"
-                       class="lqn-button"
-                       target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course"
+                        class="lqn-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         View Course
                     </a>
                 </div>
@@ -253,9 +305,11 @@
                         SBI, IBPS, RRB and other
                         banking examinations.
                     </p>
-                    <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course"
-                       class="lqn-button"
-                       target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course"
+                        class="lqn-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         View Course
                     </a>
                 </div>
@@ -269,9 +323,11 @@
                         for RRB NTPC, Group D, ALP,
                         Technician and other Railway examinations.
                     </p>
-                    <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course"
-                       class="lqn-button"
-                       target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course"
+                        class="lqn-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         View Course
                     </a>
                 </div>
@@ -285,9 +341,11 @@
                         for State-level competitive
                         examinations.
                     </p>
-                    <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course"
-                       class="lqn-button"
-                       target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course"
+                        class="lqn-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         View Course
                     </a>
                 </div>
@@ -301,9 +359,11 @@
                         for Defence and related competitive
                         examinations.
                     </p>
-                    <a href="https://sites.google.com/view/lets-qualify-now/exams"
-                       class="lqn-button"
-                       target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://sites.google.com/view/lets-qualify-now/exams"
+                        class="lqn-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         View Course
                     </a>
                 </div>
@@ -321,7 +381,7 @@
                 <h2>📖 Our Learning Approach</h2>
                 <p>
                     A structured approach to effective
-                    Reasoning preparation
+                    Reasoning preparation.
                 </p>
             </div>
 
@@ -365,5 +425,8 @@
         </div>
     </section>
 
+    <!-- NO DUPLICATE FOOTER: GOOGLE SITES FOOTER IS RETAINED -->
+
 </body>
 </html>
+```
