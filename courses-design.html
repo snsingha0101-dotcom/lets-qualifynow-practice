@@ -1,7 +1,5 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +12,10 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         body {
@@ -28,8 +28,6 @@
         a {
             text-decoration: none;
         }
-
-        /* HERO - NO DUPLICATE HEADER */
 
         .lqn-hero {
             background: #ffffff;
@@ -57,8 +55,6 @@
             font-size: 16px;
         }
 
-        /* SECTION */
-
         .lqn-section {
             width: 100%;
             padding: 40px 20px 55px;
@@ -69,6 +65,7 @@
         }
 
         .lqn-container {
+            width: 100%;
             max-width: 1100px;
             margin: auto;
         }
@@ -91,17 +88,15 @@
             font-size: 15px;
         }
 
-        /* COURSE GRID */
-
         .lqn-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 22px;
+            width: 100%;
         }
 
-        /* COURSE CARD */
-
         .lqn-card {
+            min-width: 0;
             background: #ffffff;
             border: 1px solid #d9e2ec;
             border-radius: 16px;
@@ -132,8 +127,6 @@
             flex-grow: 1;
         }
 
-        /* BUTTON */
-
         .lqn-button {
             display: inline-block;
             background: #102a43;
@@ -156,9 +149,8 @@
             outline-offset: 3px;
         }
 
-        /* LEARNING APPROACH */
-
         .lqn-approach-card {
+            min-width: 0;
             background: #ffffff;
             border: 1px solid #d9e2ec;
             border-radius: 16px;
@@ -183,8 +175,6 @@
             color: #52606d;
             font-size: 14px;
         }
-
-        /* RESPONSIVE */
 
         @media (max-width: 600px) {
             .lqn-hero {
@@ -228,10 +218,6 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
             .lqn-card,
             .lqn-button,
             .lqn-approach-card {
@@ -249,12 +235,9 @@
 
 <body>
 
-    <!-- COURSES INTRODUCTION: GOOGLE SITES HEADER IS NOT INCLUDED -->
-
     <section class="lqn-hero">
         <div class="lqn-hero-container">
             <h1>📚 Our Courses</h1>
-
             <p>
                 Structured Reasoning preparation for
                 SSC, Banking, Railway, State-level and
@@ -262,8 +245,6 @@
             </p>
         </div>
     </section>
-
-    <!-- COURSES -->
 
     <section class="lqn-section">
         <div class="lqn-container">
@@ -278,8 +259,6 @@
 
             <div class="lqn-grid">
 
-                <!-- SSC -->
-
                 <div class="lqn-card">
                     <h3>📘 SSC Reasoning Course</h3>
                     <p>
@@ -287,34 +266,21 @@
                         SSC CGL, CHSL, CPO, MTS, GD and
                         other SSC examinations.
                     </p>
-                    <a
-                        href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course"
-                        class="lqn-button"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        View Course
-                    </a>
+                    <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course"
+                       class="lqn-button" target="_blank"
+                       rel="noopener noreferrer">View Course</a>
                 </div>
-
-                <!-- BANKING -->
 
                 <div class="lqn-card">
                     <h3>🏦 Banking Reasoning Course</h3>
                     <p>
-                        Reasoning preparation for
-                        SBI, IBPS, RRB and other
-                        banking examinations.
+                        Reasoning preparation for SBI, IBPS,
+                        RRB and other banking examinations.
                     </p>
-                    <a
-                        href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course"
-                        class="lqn-button"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        View Course
-                    </a>
+                    <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course"
+                       class="lqn-button" target="_blank"
+                       rel="noopener noreferrer">View Course</a>
                 </div>
-
-                <!-- RAILWAY -->
 
                 <div class="lqn-card">
                     <h3>🚆 Railway Reasoning Course</h3>
@@ -323,56 +289,36 @@
                         for RRB NTPC, Group D, ALP,
                         Technician and other Railway examinations.
                     </p>
-                    <a
-                        href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course"
-                        class="lqn-button"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        View Course
-                    </a>
+                    <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course"
+                       class="lqn-button" target="_blank"
+                       rel="noopener noreferrer">View Course</a>
                 </div>
-
-                <!-- STATE EXAMS -->
 
                 <div class="lqn-card">
                     <h3>🏛️ State Exams Reasoning Course</h3>
                     <p>
                         Structured Reasoning preparation
-                        for State-level competitive
-                        examinations.
+                        for State-level competitive examinations.
                     </p>
-                    <a
-                        href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course"
-                        class="lqn-button"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        View Course
-                    </a>
+                    <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course"
+                       class="lqn-button" target="_blank"
+                       rel="noopener noreferrer">View Course</a>
                 </div>
-
-                <!-- DEFENCE -->
 
                 <div class="lqn-card">
                     <h3>🪖 Defence Reasoning Course</h3>
                     <p>
                         Structured Reasoning preparation
-                        for Defence and related competitive
-                        examinations.
+                        for Defence and related competitive examinations.
                     </p>
-                    <a
-                        href="https://sites.google.com/view/lets-qualify-now/exams"
-                        class="lqn-button"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        View Course
-                    </a>
+                    <a href="https://sites.google.com/view/lets-qualify-now/exams"
+                       class="lqn-button" target="_blank"
+                       rel="noopener noreferrer">View Course</a>
                 </div>
 
             </div>
         </div>
     </section>
-
-    <!-- LEARNING APPROACH -->
 
     <section class="lqn-section lqn-section-light">
         <div class="lqn-container">
@@ -390,34 +336,32 @@
                 <div class="lqn-approach-card">
                     <h3>Concept Building</h3>
                     <p>
-                        Build a clear understanding of
-                        important Reasoning concepts
-                        before moving to advanced practice.
+                        Build a clear understanding of important
+                        Reasoning concepts before advanced practice.
                     </p>
                 </div>
 
                 <div class="lqn-approach-card">
                     <h3>Topic-wise Practice</h3>
                     <p>
-                        Practice questions systematically
-                        according to the requirements
-                        of your examination.
+                        Practice questions systematically according
+                        to the requirements of your examination.
                     </p>
                 </div>
 
                 <div class="lqn-approach-card">
                     <h3>Previous Year Questions</h3>
                     <p>
-                        Understand examination patterns
-                        through relevant previous year questions.
+                        Understand examination patterns through
+                        relevant previous year questions.
                     </p>
                 </div>
 
                 <div class="lqn-approach-card">
                     <h3>Practice &amp; Revision</h3>
                     <p>
-                        Regular practice and revision
-                        to support consistent preparation.
+                        Regular practice and revision to support
+                        consistent preparation.
                     </p>
                 </div>
 
@@ -425,8 +369,5 @@
         </div>
     </section>
 
-    <!-- NO DUPLICATE FOOTER: GOOGLE SITES FOOTER IS RETAINED -->
-
 </body>
 </html>
-```
