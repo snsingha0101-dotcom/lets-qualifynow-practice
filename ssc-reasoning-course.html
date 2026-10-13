@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Pattern Completion Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* HEADER — MATCHING REFERENCE FORMAT */
+header{
+    background:#102a43;
+    color:white;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:7px 10px;
+    border-radius:5px;
+    font-size:14px;
+    transition:0.2s;
+}
+
+nav a:hover{
+    background:#173f5f;
+}
+
+/* HERO — MATCHING REFERENCE FORMAT */
+.hero{
+    background:#173f5f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-top:4px;
+}
+
+/* MAIN CONTAINER */
+.container{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
+
+/* INTRODUCTION CARD */
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    border:1px solid #d9e2ec;
+    margin-bottom:30px;
+}
+
+.section-heading{
+    color:#102a43;
+    margin-bottom:12px;
+    font-size:24px;
+}
+
+.intro p{
+    margin-bottom:10px;
+}
+
+.instructions{
+    padding-left:22px;
+    margin-top:12px;
+}
+
+.instructions li{
+    margin-bottom:7px;
+}
+
+/* INSTRUCTIONS NOTE */
+.note{
+    background:white;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    color:#243b53;
+    margin-top:20px;
+}
+
+.note strong{
+    color:#102a43;
+}
+
+/* SCOREBOARD */
+.scoreboard{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:10px;
+    margin-top:20px;
+}
+
+.score-box{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:7px;
+    padding:12px 8px;
+    text-align:center;
+}
+
+.score-box span{
+    display:block;
+    color:#52606d;
+    font-size:13px;
+}
+
+.score-box strong{
+    display:block;
+    font-size:22px;
+    color:#102a43;
+    margin-top:3px;
+}
+
+/* QUESTION CARD */
+.question{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(36,59,83,0.06);
+}
+
+.question h3{
+    font-size:18px;
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.question-instruction{
+    color:#52606d;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.figure-wrap{
+    display:flex;
+    justify-content:center;
+    margin:15px 0 18px;
+}
+
+.main-figure{
+    display:block;
+    width:min(100%,330px);
+    height:auto;
+    border:1px solid #d9e2ec;
+    border-radius:6px;
+    background:white;
+}
+
+.options-title{
+    font-weight:bold;
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+}
+
+.option{
+    display:block;
+    width:100%;
+    border:2px solid #d9e2ec;
+    background:white;
+    border-radius:8px;
+    padding:10px 6px;
+    color:#243b53;
+    cursor:pointer;
+    min-width:0;
+    font-family:inherit;
+    text-align:center;
+    transition:0.2s;
+}
+
+.option:hover:not(:disabled){
+    border-color:#627d98;
+    background:#f7f9fc;
+}
+
+.option:focus-visible,
+.btn:focus-visible{
+    outline:3px solid #829ab1;
+    outline-offset:2px;
+}
+
+.option:disabled{
+    cursor:default;
+    opacity:1;
+}
+
+.option-label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+    font-size:15px;
+}
+
+.option svg{
+    display:block;
+    width:100%;
+    max-width:110px;
+    height:auto;
+    margin:auto;
+}
+
+.option.correct{
+    border-color:#548235;
+    background:#e6f4ea;
+}
+
+.option.wrong{
+    border-color:#c0504d;
+    background:#fdecea;
+}
+
+/* ANSWER FEEDBACK */
+.feedback{
+    display:none;
+    margin-top:14px;
+    padding:14px;
+    border-radius:6px;
+    line-height:1.7;
+}
+
+.feedback.show{
+    display:block;
+}
+
+.feedback.correct-feedback{
+    background:#e6f4ea;
+    border-left:4px solid #548235;
+}
+
+.feedback.wrong-feedback{
+    background:#fdecea;
+    border-left:4px solid #c0504d;
+}
+
+.feedback strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+/* FINAL RESULT */
+.result-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:25px;
+    margin:35px 0 25px;
+}
+
+.result-message{
+    margin-top:18px;
+    margin-bottom:18px;
+    font-weight:bold;
+    color:#173f5f;
+}
+
+/* BUTTON */
+.button-area{
+    text-align:center;
+    margin:20px 0 30px;
+}
+
+.btn{
+    background:#173f5f;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+    font-family:inherit;
+}
+
+.btn:hover{
+    background:#102a43;
+}
+
+/* BACK LINK */
+.back-link{
+    display:inline-block;
+    color:#173f5f;
+    font-weight:bold;
+    text-decoration:none;
+    margin:5px 0 30px;
+}
+
+.back-link:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER — MATCHING REFERENCE FORMAT */
+footer{
+    background:#102a43;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+footer p{
+    font-size:13px;
+    margin:4px 0;
+    color:#d9eaf7;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-inner{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 8px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .intro{
+        padding:20px;
+    }
+
+    .scoreboard{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .options{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+    }
+
+    .question{
+        padding:15px;
+    }
+
+    .result-card{
+        padding:20px;
+    }
+}
+
+@media(max-width:380px){
+    .options{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .option{
+        padding:8px 4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">LET'S QUALIFYNOW</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
+            <a href="courses.html">Courses</a>
+            <a href="study-material.html">Study Material</a>
+            <a href="live-classes.html">Live Classes</a>
+            <a href="test-series.html">Test Series</a>
+            <a href="exams.html">Exams</a>
+            <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>🧩 SSC Pattern Completion Practice</h1>
+    <p>50 Exam-Oriented Questions with Answers &amp; Detailed Explanations</p>
+    <p>SSC Reasoning | English + Hindi</p>
+</section>
+
+<div class="container">
+
+    <section class="intro">
+        <h2 class="section-heading">SSC Pattern Completion Practice Set</h2>
+
+        <p>
+            Each question contains an incomplete geometrical figure.
+            Choose the option that correctly completes the missing part
+            according to the pattern in the given figure.
+        </p>
+
+        <p lang="hi">
+            प्रत्येक प्रश्न में एक अधूरी ज्यामितीय आकृति दी गई है।
+            दी गई आकृति के पैटर्न के अनुसार अधूरे भाग को सही ढंग से
+            पूरा करने वाले विकल्प का चयन कीजिए।
+        </p>
+
+        <div class="note">
+            <strong>📌 Instructions / निर्देश</strong>
+            <ul class="instructions">
+                <li>Total 50 questions. / कुल 50 प्रश्न हैं।</li>
+                <li>Each correct answer carries 1 mark. / प्रत्येक सही उत्तर के लिए 1 अंक है।</li>
+                <li>No negative marking. / गलत उत्तर के लिए कोई अंक नहीं कटेगा।</li>
+                <li>Select one of the four diagram options. / चार आकृति विकल्पों में से एक चुनें।</li>
+                <li>After answering, the correct option and feedback will appear. / उत्तर देने के बाद सही विकल्प और feedback दिखाई देगा।</li>
+            </ul>
+        </div>
+
+        <div class="scoreboard">
+            <div class="score-box">
+                <span>Total Questions / कुल प्रश्न</span>
+                <strong>50</strong>
+            </div>
+
+            <div class="score-box">
+                <span>Attempted / हल किए</span>
+                <strong id="attemptedCount">0</strong>
+            </div>
+
+            <div class="score-box">
+                <span>Correct / सही</span>
+                <strong id="correctCount">0</strong>
+            </div>
+
+            <div class="score-box">
+                <span>Score / अंक</span>
+                <strong id="currentScore">0/50</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="questionsContainer" aria-label="Pattern Completion Questions"></section>
+
+    <section class="result-card" id="practiceResult">
+        <h2 class="section-heading">Practice Result / अभ्यास परिणाम</h2>
+
+        <p>Complete the questions to check your performance.</p>
+        <p lang="hi">अपना परिणाम देखने के लिए प्रश्न हल करें।</p>
+
+        <div class="scoreboard">
+            <div class="score-box">
+                <span>Attempted / हल किए</span>
+                <strong id="resultAttempted">0/50</strong>
+            </div>
+
+            <div class="score-box">
+                <span>Correct / सही</span>
+                <strong id="resultCorrect">0</strong>
+            </div>
+
+            <div class="score-box">
+                <span>Incorrect / गलत</span>
+                <strong id="resultWrong">0</strong>
+            </div>
+
+            <div class="score-box">
+                <span>Final Score / अंतिम अंक</span>
+                <strong id="finalScore">0/50</strong>
+            </div>
+        </div>
+
+        <p class="result-message" id="resultMessage" aria-live="polite">
+            Start attempting the questions. / प्रश्न हल करना शुरू करें।
+        </p>
+
+        <div class="button-area">
+            <button class="btn" type="button" onclick="resetPractice()">
+                🔄 Reset Test / दोबारा शुरू करें
+            </button>
+        </div>
+    </section>
+
+    <a class="back-link" href="ssc-topic-wise-practice.html">
+        ← Back to SSC Topic-wise Practice
+    </a>
+
+</div>
+
+<footer>
+    <p>© 2026 LET'S QUALIFYNOW | SSC • Banking • Railway • Government Exams</p>
+</footer>
+
+<script>
+"use strict";
+
+const TOTAL_QUESTIONS = 50;
+const answers = Object.create(null);
+
+/*
+  Pattern Completion practice template.
+
+  Each question contains a 2x2 figure. The missing quadrant must
+  continue the reflection pattern used by the three visible quadrants.
+
+  This is a generated practice template, not a verified official SSC
+  question bank. Review the figure patterns before publishing as
+  exam-standard material.
+*/
+
+const motifTemplates = [
+    `<path d="M10 10 L54 54"/>
+     <circle cx="17" cy="48" r="6"/>
+     <path d="M39 10 H58 V29"/>`,
+
+    `<path d="M10 18 H55 V55"/>
+     <circle cx="18" cy="49" r="6"/>
+     <path d="M25 10 V31"/>`,
+
+    `<path d="M12 12 V55 H55"/>
+     <path d="M24 12 L55 43"/>
+     <circle cx="44" cy="20" r="6"/>`,
+
+    `<path d="M12 54 L34 12 L57 54 Z"/>
+     <circle cx="48" cy="17" r="5"/>`,
+
+    `<rect x="12" y="12" width="42" height="42"/>
+     <path d="M12 12 L54 54"/>
+     <circle cx="22" cy="43" r="5"/>`,
+
+    `<circle cx="32" cy="32" r="21"/>
+     <path d="M32 11 V53 M32 32 L53 18"/>`,
+
+    `<path d="M12 12 H54 V32 H32 V54"/>
+     <circle cx="17" cy="45" r="6"/>`,
+
+    `<path d="M12 12 L32 32 L12 52 M32 32 L55 12"/>
+     <circle cx="51" cy="50" r="6"/>`,
+
+    `<path d="M12 18 H32 V38 H55 M12 52 L32 38"/>
+     <circle cx="48" cy="15" r="5"/>`,
+
+    `<rect x="12" y="12" width="42" height="42"/>
+     <path d="M12 32 L32 12 M32 54 L54 32"/>
+     <circle cx="32" cy="32" r="5"/>`
+];
+
+function motif(seed){
+    const motifIndex = (seed - 1) % motifTemplates.length;
+
+    const markerX = 13 + (seed * 7) % 43;
+    const markerY = 13 + (seed * 11) % 43;
+
+    return `
+        <g fill="none"
+           stroke="#173f5f"
+           stroke-width="2.2"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+            ${motifTemplates[motifIndex]}
+        </g>
+        <path
+            d="M${markerX} ${markerY}
+               l4 -3 l3 4 l-4 3 Z"
+            fill="#173f5f"/>
+    `;
+}
+
+/*
+  All transformations are defined around a 70 x 70 tile.
+  Orientation 0 = original
+  Orientation 1 = horizontal reflection
+  Orientation 2 = vertical reflection
+  Orientation 3 = horizontal + vertical reflection
+*/
+const transforms = [
+    "translate(0 0)",
+    "translate(70 0) scale(-1 1)",
+    "translate(0 70) scale(1 -1)",
+    "translate(70 70) scale(-1 -1)"
+];
+
+function fullFigureSVG(seed, missing){
+    const cells = [
+        {x:10, y:10, orientation:0},
+        {x:90, y:10, orientation:1},
+        {x:10, y:90, orientation:2},
+        {x:90, y:90, orientation:3}
+    ];
+
+    let content = `
+        <rect x="10" y="10" width="160" height="160"
+              fill="#fff" stroke="#243b53" stroke-width="2"/>
+
+        <path d="M90 10 V170 M10 90 H170"
+              fill="none" stroke="#243b53" stroke-width="2"/>
+    `;
+
+    cells.forEach((cell, index) => {
+        if(index === missing){
+            content += `
+                <rect
+                    x="${cell.x}"
+                    y="${cell.y}"
+                    width="80"
+                    height="80"
+                    fill="#eef6fb"
+                    stroke="#829ab1"
+                    stroke-width="1.5"
+                    stroke-dasharray="5 4"/>
+
+                <text
+                    x="${cell.x + 40}"
+                    y="${cell.y + 48}"
+                    text-anchor="middle"
+                    font-size="28"
+                    font-family="Arial"
+                    font-weight="bold"
+                    fill="#52606d">?</text>
+            `;
+        }else{
+            content += `
+                <g transform="translate(${cell.x + 5} ${cell.y + 5})">
+                    <g transform="${transforms[cell.orientation]}">
+                        ${motif(seed)}
+                    </g>
+                </g>
+            `;
+        }
+    });
+
+    return `
+        <svg
+            class="main-figure"
+            viewBox="0 0 180 180"
+            role="img"
+            aria-label="Incomplete geometrical figure">
+            ${content}
+        </svg>
+    `;
+}
+
+function tileSVG(seed, orientation){
+    return `
+        <svg viewBox="0 0 70 70"
+             role="img"
+             aria-label="Diagram option">
+            <rect
+                x=".5"
+                y=".5"
+                width="69"
+                height="69"
+                fill="#fff"
+                stroke="#829ab1"/>
+
+            <g transform="${transforms[orientation]}">
+                ${motif(seed)}
+            </g>
+        </svg>
+    `;
+}
+
+/*
+  Every question uses the four orientations as answer options.
+  The correct orientation equals the missing quadrant's position.
+  Options are arranged in a deterministic order for reproducibility.
+*/
+function makeOptions(questionIndex){
+    const start = questionIndex % 4;
+    let options = [0, 1, 2, 3].map(
+        (_, i) => (i + start) % 4
+    );
+
+    if(questionIndex % 2 === 1){
+        options.reverse();
+    }
+
+    return options;
+}
+
+function createQuestion(questionIndex){
+    const id = questionIndex + 1;
+    const seed = id;
+    const missing = questionIndex % 4;
+    const options = makeOptions(questionIndex);
+    const labels = ["A", "B", "C", "D"];
+
+    return `
+        <article class="question" id="question-${id}">
+            <h3>Question ${id} / प्रश्न ${id}</h3>
+
+            <p class="question-instruction">
+                Choose the diagram that completes the missing part.
+                <br>
+                अधूरे भाग को पूरा करने वाली आकृति चुनिए।
+            </p>
+
+            <div class="figure-wrap">
+                ${fullFigureSVG(seed, missing)}
+            </div>
+
+            <p class="options-title">
+                Choose the correct option / सही विकल्प चुनें:
+            </p>
+
+            <div class="options">
+                ${options.map((orientation, optionIndex) => `
+                    <button
+                        type="button"
+                        class="option"
+                        data-orientation="${orientation}"
+                        aria-label="Option ${labels[optionIndex]}"
+                        onclick="checkAnswer(${id}, ${orientation}, this)">
+
+                        <span class="option-label">${labels[optionIndex]}</span>
+                        ${tileSVG(seed, orientation)}
+                    </button>
+                `).join("")}
+            </div>
+
+            <div
+                class="feedback"
+                id="feedback-${id}"
+                aria-live="polite">
+            </div>
+        </article>
+    `;
+}
+
+function renderQuestions(){
+    const container = document.getElementById("questionsContainer");
+
+    container.innerHTML = Array.from(
+        {length:TOTAL_QUESTIONS},
+        (_, index) => createQuestion(index)
+    ).join("");
+}
+
+function correctOptionLetter(questionId){
+    const questionIndex = questionId - 1;
+    const correctOrientation = questionIndex % 4;
+
+    const buttons = Array.from(
+        document.querySelectorAll(
+            `#question-${questionId} .option`
+        )
+    );
+
+    const correctButton = buttons.find(button =>
+        Number(button.dataset.orientation) === correctOrientation
+    );
+
+    return correctButton
+        ? correctButton.querySelector(".option-label").textContent
+        : "-";
+}
+
+function checkAnswer(questionId, selectedOrientation, button){
+    if(answers[questionId] !== undefined){
+        return;
+    }
+
+    const correctOrientation = (questionId - 1) % 4;
+    const isCorrect = selectedOrientation === correctOrientation;
+
+    answers[questionId] = {
+        selected:selectedOrientation,
+        correct:isCorrect
+    };
+
+    const card = document.getElementById(`question-${questionId}`);
+
+    card.querySelectorAll(".option").forEach(option => {
+        option.disabled = true;
+
+        const orientation = Number(option.dataset.orientation);
+
+        if(orientation === correctOrientation){
+            option.classList.add("correct");
+        }
+
+        if(orientation === selectedOrientation && !isCorrect){
+            option.classList.add("wrong");
+        }
+    });
+
+    const feedback = document.getElementById(`feedback-${questionId}`);
+    const correctLetter = correctOptionLetter(questionId);
+
+    feedback.className = "feedback show";
+
+    if(isCorrect){
+        feedback.classList.add("correct-feedback");
+
+        feedback.innerHTML = `
+            <strong>✓ Correct Answer! / सही उत्तर!</strong>
+            <p>
+                You have earned 1 mark. The selected option matches
+                the reflection orientation of the missing quadrant.
+            </p>
+            <p lang="hi">
+                आपको 1 अंक मिला। चुना गया विकल्प अधूरे भाग की
+                निर्धारित प्रतिबिंब दिशा से मेल खाता है।
+            </p>
+        `;
+    }else{
+        feedback.classList.add("wrong-feedback");
+
+        feedback.innerHTML = `
+            <strong>✗ Incorrect Answer / गलत उत्तर</strong>
+            <p>
+                Correct answer: Option ${correctLetter}.
+                The missing quadrant follows the reflection orientation
+                assigned to its position in the 2 × 2 figure.
+            </p>
+            <p lang="hi">
+                सही उत्तर: विकल्प ${correctLetter}।
+                अधूरा भाग 2 × 2 आकृति में अपनी स्थिति के अनुसार
+                निर्धारित प्रतिबिंब दिशा का अनुसरण करता है।
+            </p>
+        `;
+    }
+
+    updateScore();
+}
+
+function updateScore(){
+    const attempted = Object.keys(answers).length;
+
+    const correct = Object.values(answers).filter(
+        answer => answer.correct
+    ).length;
+
+    const wrong = attempted - correct;
+
+    document.getElementById("attemptedCount").textContent = attempted;
+    document.getElementById("correctCount").textContent = correct;
+    document.getElementById("currentScore").textContent =
+        `${correct}/${TOTAL_QUESTIONS}`;
+
+    document.getElementById("resultAttempted").textContent =
+        `${attempted}/${TOTAL_QUESTIONS}`;
+
+    document.getElementById("resultCorrect").textContent = correct;
+    document.getElementById("resultWrong").textContent = wrong;
+
+    document.getElementById("finalScore").textContent =
+        `${correct}/${TOTAL_QUESTIONS}`;
+
+    const message = document.getElementById("resultMessage");
+
+    if(attempted === 0){
+        message.textContent =
+            "Start attempting the questions. / प्रश्न हल करना शुरू करें।";
+    }else if(attempted < TOTAL_QUESTIONS){
+        message.textContent =
+            `You have attempted ${attempted} of ${TOTAL_QUESTIONS} questions. / आपने ${TOTAL_QUESTIONS} में से ${attempted} प्रश्न हल किए हैं।`;
+    }else{
+        const percentage = Math.round(
+            correct / TOTAL_QUESTIONS * 100
+        );
+
+        if(percentage >= 80){
+            message.textContent =
+                `Excellent performance! Score: ${correct}/${TOTAL_QUESTIONS} (${percentage}%). / बहुत अच्छा प्रदर्शन!`;
+        }else if(percentage >= 60){
+            message.textContent =
+                `Good effort! Score: ${correct}/${TOTAL_QUESTIONS} (${percentage}%). Practise more. / अच्छा प्रयास!`;
+        }else{
+            message.textContent =
+                `Score: ${correct}/${TOTAL_QUESTIONS} (${percentage}%). Review and practise again. / अपनी गलतियों की समीक्षा करें और दोबारा अभ्यास करें।`;
+        }
+    }
+}
+
+function resetPractice(){
+    Object.keys(answers).forEach(key => {
+        delete answers[key];
+    });
+
+    renderQuestions();
+    updateScore();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+renderQuestions();
+updateScore();
+</script>
+
+</body>
+</html>
