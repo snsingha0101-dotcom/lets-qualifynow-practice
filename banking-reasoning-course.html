@@ -1,0 +1,815 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Banking Reasoning Course | Let's QualifyNow</title>
+<meta name="description" content="Banking Reasoning preparation for SBI, IBPS, RRB, RBI and other banking examinations. Learn concepts, practise PYQs, puzzles, seating arrangement, shortcuts and exam-oriented questions with N Saurabh Sir.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.7;
+}
+
+.hero{
+    background:white;
+    padding:75px 7%;
+    text-align:center;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.hero .tag{
+    color:#486581;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:44px;
+    line-height:1.3;
+    color:#102a43;
+    margin-bottom:18px;
+}
+
+.hero p{
+    max-width:760px;
+    margin:auto;
+    color:#627d98;
+    font-size:18px;
+}
+
+.container{
+    width:86%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:65px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:32px;
+    line-height:1.35;
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#627d98;
+}
+
+.overview{
+    background:white;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(16,42,67,.05);
+}
+
+.overview h3{
+    color:#173f5f;
+    margin-bottom:15px;
+    font-size:23px;
+}
+
+.overview p{
+    color:#627d98;
+    font-size:17px;
+}
+
+.highlight{
+    margin-top:30px;
+    background:#eef4f8;
+    border-left:5px solid #173f5f;
+    padding:25px;
+    border-radius:10px;
+    text-align:left;
+}
+
+.highlight h2{
+    color:#102a43;
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.highlight p{
+    color:#486581;
+    font-size:16px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:24px;
+}
+
+.card{
+    background:white;
+    border:1px solid #e1e8ed;
+    border-radius:16px;
+    padding:28px;
+    box-shadow:0 8px 25px rgba(16,42,67,.05);
+    transition:transform .25s, box-shadow .25s;
+    overflow-wrap:anywhere;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 32px rgba(16,42,67,.10);
+}
+
+.card h3{
+    color:#173f5f;
+    margin-bottom:12px;
+    font-size:20px;
+    line-height:1.4;
+}
+
+.card p{
+    color:#627d98;
+}
+
+.card ul{
+    padding-left:20px;
+    color:#627d98;
+}
+
+.card li{
+    margin-bottom:5px;
+}
+
+.coverage-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:24px;
+}
+
+.structure{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:18px;
+}
+
+.structure-card{
+    background:white;
+    border:1px solid #e1e8ed;
+    border-radius:16px;
+    padding:25px 20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(16,42,67,.05);
+}
+
+.number{
+    width:42px;
+    height:42px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#173f5f;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+.structure-card h3{
+    color:#173f5f;
+    font-size:18px;
+    line-height:1.4;
+    margin-bottom:10px;
+}
+
+.structure-card p{
+    color:#627d98;
+    font-size:14px;
+}
+
+.instructor-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:16px;
+    padding:32px;
+    box-shadow:0 8px 25px rgba(16,42,67,.05);
+}
+
+.instructor-card h3{
+    color:#173f5f;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.instructor-card p{
+    color:#627d98;
+    margin-bottom:14px;
+}
+
+.instructor-points{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px 24px;
+    margin-top:20px;
+}
+
+.instructor-points li{
+    background:#eef4f8;
+    border-radius:10px;
+    padding:14px 16px;
+    color:#334e68;
+}
+
+.access-panel{
+    background:#102a43;
+    color:white;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(16,42,67,.08);
+}
+
+.access-panel h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.access-panel > p{
+    color:#d9e2ec;
+    margin-bottom:24px;
+}
+
+.access-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+}
+
+.access-item{
+    padding:18px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:12px;
+}
+
+.access-item h4{
+    font-size:17px;
+    margin-bottom:5px;
+    color:white;
+}
+
+.access-item p{
+    font-size:15px;
+    color:#d9e2ec;
+}
+
+@media(max-width:1000px){
+    .grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .structure{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+}
+
+@media(max-width:700px){
+    .hero{
+        padding:50px 5%;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    section{
+        padding:45px 0;
+    }
+
+    .section-title{
+        margin-bottom:28px;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+
+    .grid,
+    .coverage-grid,
+    .structure,
+    .access-grid,
+    .instructor-points{
+        grid-template-columns:1fr;
+    }
+
+    .overview,
+    .card,
+    .structure-card,
+    .instructor-card,
+    .access-panel{
+        padding:23px;
+    }
+
+    .highlight{
+        padding:20px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    html{
+        scroll-behavior:auto;
+    }
+
+    .card{
+        transition:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO: No duplicate site header or navigation -->
+
+<header class="hero">
+    <div class="tag">Banking Reasoning Preparation</div>
+
+    <h1>🏦 Banking Reasoning Course</h1>
+
+    <p>
+        Exam-oriented Reasoning preparation for SBI, IBPS, RRB, RBI
+        and other banking examinations.
+    </p>
+</header>
+
+
+<!-- COURSE OVERVIEW -->
+
+<section id="course-overview">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Course Overview</h2>
+            <p>Concepts • PYQs • Practice • Short Tricks • Speed • Revision</p>
+        </div>
+
+        <div class="overview">
+            <h3>Build Concepts. Improve Accuracy &amp; Speed.</h3>
+
+            <p>
+                A structured Reasoning preparation approach covering concepts,
+                topic-wise practice, previous year questions, short tricks and
+                exam-oriented practice sets for banking examinations.
+            </p>
+
+            <div class="highlight">
+                <h2>📌 Structured Banking Reasoning Preparation</h2>
+
+                <p>
+                    Learn concepts clearly, practise systematically and improve
+                    speed and accuracy through regular question practice,
+                    time-saving methods and revision.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- WHAT YOU WILL LEARN -->
+
+<section id="what-you-will-learn">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>📚 What You Will Learn</h2>
+            <p>Key components of Banking Reasoning preparation</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>✓ Concept Building</h3>
+                <p>
+                    Clear understanding of important Reasoning concepts
+                    required for banking examinations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Topic-wise Practice</h3>
+                <p>
+                    Systematic practice of important Reasoning topics,
+                    progressing from foundational concepts to advanced questions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Previous Year Questions</h3>
+                <p>
+                    Practise relevant banking examination PYQs to understand
+                    question patterns and the level of questions asked.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Puzzle &amp; Seating Practice</h3>
+                <p>
+                    Focused practice of puzzles and seating arrangement
+                    questions commonly included in banking examinations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Short Tricks &amp; Time-Saving Methods</h3>
+                <p>
+                    Learn useful solving approaches and shortcuts where
+                    appropriate to manage time efficiently without overlooking
+                    accuracy or logical steps.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Speed &amp; Accuracy</h3>
+                <p>
+                    Develop a more efficient solving approach through
+                    question practice, time management and error analysis.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>✓ Revision &amp; Practice Sets</h3>
+                <p>
+                    Reinforce concepts through regular revision and
+                    exam-oriented practice sets.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- COURSE COVERAGE -->
+
+<section id="course-coverage">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>🎯 Course Coverage</h2>
+            <p>Important areas of Banking Reasoning</p>
+        </div>
+
+        <div class="coverage-grid">
+
+            <div class="card">
+                <h3>Puzzles &amp; Seating Arrangement</h3>
+                <ul>
+                    <li>Linear Seating Arrangement</li>
+                    <li>Circular Seating Arrangement</li>
+                    <li>Floor-Based Puzzles</li>
+                    <li>Box-Based Puzzles</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Logical Reasoning</h3>
+                <ul>
+                    <li>Syllogism</li>
+                    <li>Coded Inequality</li>
+                    <li>Statement &amp; Conclusion</li>
+                    <li>Critical Reasoning</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Basic Reasoning</h3>
+                <ul>
+                    <li>Direction</li>
+                    <li>Blood Relation</li>
+                    <li>Ranking &amp; Order</li>
+                    <li>Coding-Decoding</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Advanced Practice</h3>
+                <ul>
+                    <li>Data Sufficiency</li>
+                    <li>Input-Output</li>
+                    <li>Logical Questions</li>
+                    <li>Mixed Practice</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- COURSE STRUCTURE -->
+
+<section id="course-structure">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>📖 Course Structure</h2>
+            <p>A systematic learning and practice process</p>
+        </div>
+
+        <div class="structure">
+
+            <div class="structure-card">
+                <div class="number">1</div>
+                <h3>Concept Building</h3>
+                <p>
+                    Build a clear foundation of important Reasoning concepts.
+                </p>
+            </div>
+
+            <div class="structure-card">
+                <div class="number">2</div>
+                <h3>Topic-wise Practice</h3>
+                <p>
+                    Practise important topics systematically from basic
+                    to advanced levels.
+                </p>
+            </div>
+
+            <div class="structure-card">
+                <div class="number">3</div>
+                <h3>Previous Year Questions (PYQs)</h3>
+                <p>
+                    Analyse and practise relevant banking examination questions.
+                </p>
+            </div>
+
+            <div class="structure-card">
+                <div class="number">4</div>
+                <h3>Exam-Oriented Practice Sets</h3>
+                <p>
+                    Practise questions aligned with banking examination
+                    requirements.
+                </p>
+            </div>
+
+            <div class="structure-card">
+                <div class="number">5</div>
+                <h3>Speed, Accuracy &amp; Revision</h3>
+                <p>
+                    Regular practice and revision to improve solving approach
+                    and performance.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CLASS FORMAT -->
+
+<section id="class-format">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>🎥 Class Format</h2>
+            <p>Focused learning and question practice</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Concept Explanation</h3>
+                <p>
+                    Important concepts are explained with suitable examples
+                    before question practice.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Topic-wise Questions</h3>
+                <p>
+                    Questions are arranged topic-wise for systematic preparation
+                    and progressive practice.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>PYQ Discussion</h3>
+                <p>
+                    Previous year questions are discussed to understand
+                    examination patterns and question approaches.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Practice &amp; Revision</h3>
+                <p>
+                    Regular practice and revision support preparation
+                    for competitive examinations.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- WHO IS THIS COURSE FOR -->
+
+<section id="course-audience">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>👨‍🎓 Who Is This Course For?</h2>
+            <p>For students preparing for banking and related examinations</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>SBI PO &amp; Clerk Aspirants</h3>
+                <p>
+                    Students preparing for SBI Probationary Officer (PO)
+                    and SBI Clerk examinations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>IBPS PO &amp; Clerk Aspirants</h3>
+                <p>
+                    Students preparing for IBPS PO and IBPS Clerk examinations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>IBPS RRB Aspirants</h3>
+                <p>
+                    Students preparing for RRB Officer Scale and
+                    Office Assistant examinations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>RBI Exam Aspirants</h3>
+                <p>
+                    Students preparing for relevant RBI examinations
+                    that include a Reasoning component.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Other Banking Aspirants</h3>
+                <p>
+                    Students preparing for other banking and financial
+                    sector examinations that include Reasoning.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- WHY LEARN WITH N SAURABH SIR -->
+
+<section id="why-learn">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>⭐ Why Learn with N Saurabh Sir?</h2>
+            <p>A concept-focused and exam-oriented approach to Reasoning</p>
+        </div>
+
+        <div class="instructor-card">
+
+            <h3>N Saurabh Sir — Reasoning Faculty</h3>
+
+            <p>
+                The preparation approach focuses on understanding concepts,
+                practising relevant questions and developing a systematic
+                method for solving Reasoning problems.
+            </p>
+
+            <ul class="instructor-points">
+                <li>
+                    <strong>Concept-Focused Teaching</strong><br>
+                    Understand the logic behind questions.
+                </li>
+
+                <li>
+                    <strong>Exam-Oriented Approach</strong><br>
+                    Focus on topics relevant to competitive examinations.
+                </li>
+
+                <li>
+                    <strong>PYQs &amp; Quality Questions</strong><br>
+                    Practise previous year questions and topic-wise exercises.
+                </li>
+
+                <li>
+                    <strong>Accuracy &amp; Speed</strong><br>
+                    Work on efficient solving methods and careful analysis.
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- COURSE ACCESS -->
+
+<section id="course-access">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>📌 Course Access &amp; Study Support</h2>
+            <p>Learning and practice resources for your preparation</p>
+        </div>
+
+        <div class="access-panel">
+
+            <h3>Continue Your Banking Reasoning Preparation</h3>
+
+            <p>
+                Explore available learning resources and practice opportunities
+                through Let's QualifyNow. Availability of classes and support
+                may depend on the current schedule and resources.
+            </p>
+
+            <div class="access-grid">
+
+                <div class="access-item">
+                    <h4>Online Classes</h4>
+                    <p>
+                        Access online learning resources where available.
+                    </p>
+                </div>
+
+                <div class="access-item">
+                    <h4>Live Classes &amp; Practice Sessions</h4>
+                    <p>
+                        Check the available schedule for live classes
+                        and question practice sessions.
+                    </p>
+                </div>
+
+                <div class="access-item">
+                    <h4>Course Updates</h4>
+                    <p>
+                        Follow available updates about study material
+                        and Reasoning preparation.
+                    </p>
+                </div>
+
+                <div class="access-item">
+                    <h4>Study Support</h4>
+                    <p>
+                        Use available practice resources to reinforce
+                        concepts and revise important topics.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- No duplicate site navigation or footer.
+     Google Sites supplies its own header, navigation and footer. -->
+
+</body>
+</html>
+```
