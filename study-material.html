@@ -1,0 +1,367 @@
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.lqn-study-material {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #172033;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.lqn-study-material a {
+    text-decoration: none;
+}
+
+/* HERO */
+.lqn-hero {
+    background: linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+    padding: 75px 20px;
+}
+
+.lqn-hero-container {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+
+.lqn-hero h1 {
+    font-size: 43px;
+    color: #102a43;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.lqn-hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #667085;
+    font-size: 17px;
+}
+
+/* SECTIONS */
+.lqn-section {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.lqn-section-light {
+    background: #f7f9fc;
+}
+
+.lqn-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.lqn-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.lqn-heading h2 {
+    font-size: 30px;
+    color: #102a43;
+    font-weight: 800;
+}
+
+.lqn-heading p {
+    margin-top: 8px;
+    color: #667085;
+    font-size: 15px;
+}
+
+/* MATERIAL GRID */
+.lqn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* MATERIAL CARD */
+.lqn-card {
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
+    transition: .25s;
+}
+
+.lqn-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .11);
+}
+
+.lqn-card h3 {
+    color: #102a43;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.lqn-card p {
+    color: #667085;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.lqn-card ul {
+    padding-left: 20px;
+    margin-bottom: 22px;
+}
+
+.lqn-card li {
+    color: #475467;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+/* BUTTON */
+.lqn-button {
+    display: inline-block;
+    background: #102a43;
+    color: #ffffff !important;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.lqn-button:hover {
+    background: #173f5f;
+    transform: translateY(-2px);
+}
+
+/* MATERIAL TYPES */
+.lqn-material-box {
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
+}
+
+.lqn-material-box h3 {
+    color: #102a43;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.lqn-material-box p {
+    color: #667085;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .lqn-hero {
+        padding: 55px 18px;
+    }
+
+    .lqn-hero h1 {
+        font-size: 33px;
+    }
+
+    .lqn-hero p {
+        font-size: 15px;
+    }
+
+    .lqn-section {
+        padding: 42px 16px;
+    }
+
+    .lqn-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lqn-heading h2 {
+        font-size: 25px;
+    }
+
+    .lqn-card {
+        padding: 24px;
+    }
+}
+</style>
+
+<div class="lqn-study-material">
+
+    <!-- HERO -->
+    <section class="lqn-hero">
+        <div class="lqn-hero-container">
+            <h1>📚 Study Material</h1>
+            <p>
+                Exam-oriented Reasoning study material
+                for SSC, Banking, Railway, Defence and
+                State-level competitive examinations.
+            </p>
+        </div>
+    </section>
+
+    <!-- EXAM MATERIAL -->
+    <section class="lqn-section">
+        <div class="lqn-container">
+
+            <div class="lqn-heading">
+                <h2>Choose Your Exam Category</h2>
+                <p>
+                    Access structured study resources
+                    according to your examination.
+                </p>
+            </div>
+
+            <div class="lqn-grid">
+
+                <!-- SSC -->
+                <div class="lqn-card">
+                    <h3>📘 SSC Reasoning</h3>
+                    <p>
+                        Study resources designed for
+                        SSC competitive examinations.
+                    </p>
+                    <ul>
+                        <li>Topic-wise Reasoning Notes</li>
+                        <li>Important Concepts</li>
+                        <li>Previous Year Questions</li>
+                        <li>Practice Questions</li>
+                    </ul>
+                    <a href="ssc-study-material.html" class="lqn-button">
+                        View Material
+                    </a>
+                </div>
+
+                <!-- BANKING -->
+                <div class="lqn-card">
+                    <h3>🏦 Banking Reasoning</h3>
+                    <p>
+                        Structured resources for
+                        SBI, IBPS, RRB and other
+                        banking examinations.
+                    </p>
+                    <ul>
+                        <li>Concept Notes</li>
+                        <li>Puzzles &amp; Seating Arrangement</li>
+                        <li>Previous Year Questions</li>
+                        <li>Practice Sets</li>
+                    </ul>
+                    <a href="banking-study-material.html" class="lqn-button">
+                        View Material
+                    </a>
+                </div>
+
+                <!-- RAILWAY -->
+                <div class="lqn-card">
+                    <h3>🚆 Railway Reasoning</h3>
+                    <p>
+                        Exam-focused Reasoning resources
+                        for Railway examinations.
+                    </p>
+                    <ul>
+                        <li>Topic-wise Notes</li>
+                        <li>Important Questions</li>
+                        <li>Previous Year Questions</li>
+                        <li>Practice Sets</li>
+                    </ul>
+                    <a href="railway-study-material.html" class="lqn-button">
+                        View Material
+                    </a>
+                </div>
+
+                <!-- DEFENCE -->
+                <div class="lqn-card">
+                    <h3>🪖 Defence Reasoning</h3>
+                    <p>
+                        Structured Reasoning resources
+                        for Defence and other competitive
+                        examinations.
+                    </p>
+                    <ul>
+                        <li>Concept Building Notes</li>
+                        <li>Topic-wise Practice</li>
+                        <li>Previous Year Questions</li>
+                        <li>Revision Material</li>
+                    </ul>
+                    <a href="defence-study-material.html" class="lqn-button">
+                        View Material
+                    </a>
+                </div>
+
+                <!-- STATE -->
+                <div class="lqn-card">
+                    <h3>🏛️ State Exams Reasoning</h3>
+                    <p>
+                        Reasoning resources for
+                        State-level competitive examinations.
+                    </p>
+                    <ul>
+                        <li>Concept Building Notes</li>
+                        <li>Topic-wise Questions</li>
+                        <li>Previous Year Questions</li>
+                        <li>Revision Material</li>
+                    </ul>
+                    <a href="state-study-material.html" class="lqn-button">
+                        View Material
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPES OF MATERIAL -->
+    <section class="lqn-section lqn-section-light">
+        <div class="lqn-container">
+
+            <div class="lqn-heading">
+                <h2>📖 What You Will Find</h2>
+                <p>
+                    Structured resources to support
+                    your Reasoning preparation.
+                </p>
+            </div>
+
+            <div class="lqn-grid">
+
+                <div class="lqn-material-box">
+                    <h3>📝 Concept Notes</h3>
+                    <p>
+                        Clear and structured notes covering
+                        important Reasoning concepts and methods.
+                    </p>
+                </div>
+
+                <div class="lqn-material-box">
+                    <h3>❓ Practice Questions</h3>
+                    <p>
+                        Topic-wise questions for regular
+                        practice and concept reinforcement.
+                    </p>
+                </div>
+
+                <div class="lqn-material-box">
+                    <h3>📄 Previous Year Questions</h3>
+                    <p>
+                        Relevant PYQs to understand
+                        examination patterns and question types.
+                    </p>
+                </div>
+
+                <div class="lqn-material-box">
+                    <h3>🔄 Revision Material</h3>
+                    <p>
+                        Quick revision resources to help
+                        review important concepts and questions.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
