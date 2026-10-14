@@ -19,25 +19,25 @@
 }
 
 /* HERO */
-.lqn-hero {
+.lqn-study-material .lqn-hero {
     background: linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
     padding: 75px 20px;
 }
 
-.lqn-hero-container {
+.lqn-study-material .lqn-hero-container {
     max-width: 950px;
     margin: auto;
     text-align: center;
 }
 
-.lqn-hero h1 {
+.lqn-study-material .lqn-hero h1 {
     font-size: 43px;
     color: #102a43;
     margin-bottom: 15px;
     font-weight: 800;
 }
 
-.lqn-hero p {
+.lqn-study-material .lqn-hero p {
     max-width: 720px;
     margin: auto;
     color: #667085;
@@ -45,46 +45,46 @@
 }
 
 /* SECTIONS */
-.lqn-section {
+.lqn-study-material .lqn-section {
     width: 100%;
     padding: 60px 20px;
 }
 
-.lqn-section-light {
+.lqn-study-material .lqn-section-light {
     background: #f7f9fc;
 }
 
-.lqn-container {
+.lqn-study-material .lqn-container {
     max-width: 1100px;
     margin: auto;
 }
 
-.lqn-heading {
+.lqn-study-material .lqn-heading {
     text-align: center;
     margin-bottom: 35px;
 }
 
-.lqn-heading h2 {
+.lqn-study-material .lqn-heading h2 {
     font-size: 30px;
     color: #102a43;
     font-weight: 800;
 }
 
-.lqn-heading p {
+.lqn-study-material .lqn-heading p {
     margin-top: 8px;
     color: #667085;
     font-size: 15px;
 }
 
 /* MATERIAL GRID */
-.lqn-grid {
+.lqn-study-material .lqn-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
 }
 
 /* MATERIAL CARD */
-.lqn-card {
+.lqn-study-material .lqn-card {
     background: #ffffff;
     border: 1px solid #e8edf3;
     border-radius: 16px;
@@ -93,36 +93,36 @@
     transition: .25s;
 }
 
-.lqn-card:hover {
+.lqn-study-material .lqn-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, .11);
 }
 
-.lqn-card h3 {
+.lqn-study-material .lqn-card h3 {
     color: #102a43;
     font-size: 21px;
     margin-bottom: 12px;
 }
 
-.lqn-card p {
+.lqn-study-material .lqn-card p {
     color: #667085;
     font-size: 14px;
     margin-bottom: 20px;
 }
 
-.lqn-card ul {
+.lqn-study-material .lqn-card ul {
     padding-left: 20px;
     margin-bottom: 22px;
 }
 
-.lqn-card li {
+.lqn-study-material .lqn-card li {
     color: #475467;
     font-size: 14px;
     margin-bottom: 7px;
 }
 
-/* BUTTON */
-.lqn-button {
+/* BUTTONS */
+.lqn-study-material .lqn-button {
     display: inline-block;
     background: #102a43;
     color: #ffffff !important;
@@ -131,15 +131,26 @@
     font-size: 14px;
     font-weight: 700;
     transition: .25s;
+    margin: 0 7px 8px 0;
 }
 
-.lqn-button:hover {
+.lqn-study-material .lqn-button:hover {
     background: #173f5f;
     transform: translateY(-2px);
 }
 
+.lqn-study-material .lqn-button-secondary {
+    background: #e8f1f8;
+    color: #102a43 !important;
+    border: 1px solid #d9e2ec;
+}
+
+.lqn-study-material .lqn-button-secondary:hover {
+    background: #d9eaf7;
+}
+
 /* MATERIAL TYPES */
-.lqn-material-box {
+.lqn-study-material .lqn-material-box {
     background: #ffffff;
     border: 1px solid #e8edf3;
     border-radius: 16px;
@@ -147,44 +158,44 @@
     box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
 }
 
-.lqn-material-box h3 {
+.lqn-study-material .lqn-material-box h3 {
     color: #102a43;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.lqn-material-box p {
+.lqn-study-material .lqn-material-box p {
     color: #667085;
     font-size: 14px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-    .lqn-hero {
+    .lqn-study-material .lqn-hero {
         padding: 55px 18px;
     }
 
-    .lqn-hero h1 {
+    .lqn-study-material .lqn-hero h1 {
         font-size: 33px;
     }
 
-    .lqn-hero p {
+    .lqn-study-material .lqn-hero p {
         font-size: 15px;
     }
 
-    .lqn-section {
+    .lqn-study-material .lqn-section {
         padding: 42px 16px;
     }
 
-    .lqn-grid {
+    .lqn-study-material .lqn-grid {
         grid-template-columns: 1fr;
     }
 
-    .lqn-heading h2 {
+    .lqn-study-material .lqn-heading h2 {
         font-size: 25px;
     }
 
-    .lqn-card {
+    .lqn-study-material .lqn-card {
         padding: 24px;
     }
 }
@@ -225,13 +236,27 @@
                         Study resources designed for
                         SSC competitive examinations.
                     </p>
+
                     <ul>
                         <li>Topic-wise Reasoning Notes</li>
                         <li>Important Concepts</li>
                         <li>Previous Year Questions</li>
                         <li>Practice Questions</li>
                     </ul>
-                    <a href="ssc-study-material.html" class="lqn-button">
+
+                    <a
+                        href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html"
+                        class="lqn-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Topic-wise Practice
+                    </a>
+
+                    <a
+                        href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html"
+                        class="lqn-button lqn-button-secondary"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         View Material
                     </a>
                 </div>
@@ -244,13 +269,17 @@
                         SBI, IBPS, RRB and other
                         banking examinations.
                     </p>
+
                     <ul>
                         <li>Concept Notes</li>
                         <li>Puzzles &amp; Seating Arrangement</li>
                         <li>Previous Year Questions</li>
                         <li>Practice Sets</li>
                     </ul>
-                    <a href="banking-study-material.html" class="lqn-button">
+
+                    <a
+                        href="banking-study-material.html"
+                        class="lqn-button">
                         View Material
                     </a>
                 </div>
@@ -262,13 +291,17 @@
                         Exam-focused Reasoning resources
                         for Railway examinations.
                     </p>
+
                     <ul>
                         <li>Topic-wise Notes</li>
                         <li>Important Questions</li>
                         <li>Previous Year Questions</li>
                         <li>Practice Sets</li>
                     </ul>
-                    <a href="railway-study-material.html" class="lqn-button">
+
+                    <a
+                        href="railway-study-material.html"
+                        class="lqn-button">
                         View Material
                     </a>
                 </div>
@@ -281,13 +314,17 @@
                         for Defence and other competitive
                         examinations.
                     </p>
+
                     <ul>
                         <li>Concept Building Notes</li>
                         <li>Topic-wise Practice</li>
                         <li>Previous Year Questions</li>
                         <li>Revision Material</li>
                     </ul>
-                    <a href="defence-study-material.html" class="lqn-button">
+
+                    <a
+                        href="defence-study-material.html"
+                        class="lqn-button">
                         View Material
                     </a>
                 </div>
@@ -299,13 +336,17 @@
                         Reasoning resources for
                         State-level competitive examinations.
                     </p>
+
                     <ul>
                         <li>Concept Building Notes</li>
                         <li>Topic-wise Questions</li>
                         <li>Previous Year Questions</li>
                         <li>Revision Material</li>
                     </ul>
-                    <a href="state-study-material.html" class="lqn-button">
+
+                    <a
+                        href="state-study-material.html"
+                        class="lqn-button">
                         View Material
                     </a>
                 </div>
