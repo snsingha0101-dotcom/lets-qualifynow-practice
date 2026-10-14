@@ -1,0 +1,436 @@
+```html
+<style>
+.lqn-live-classes,
+.lqn-live-classes * {
+    box-sizing: border-box;
+}
+
+.lqn-live-classes {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #243b53;
+    line-height: 1.7;
+}
+
+.lqn-live-classes a {
+    text-decoration: none;
+}
+
+.lqn-live-classes .lqn-hero {
+    background: linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+    padding: 65px 20px;
+    border-radius: 14px;
+}
+
+.lqn-live-classes .lqn-hero-container {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lqn-live-classes .lqn-hero h1 {
+    margin: 0 0 15px;
+    color: #102a43;
+    font-size: 40px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.lqn-live-classes .lqn-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #52606d;
+    font-size: 17px;
+}
+
+.lqn-live-classes .lqn-section {
+    width: 100%;
+    padding: 55px 20px;
+}
+
+.lqn-live-classes .lqn-section-light {
+    background: #f7f9fc;
+    border-radius: 14px;
+}
+
+.lqn-live-classes .lqn-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.lqn-live-classes .lqn-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.lqn-live-classes .lqn-heading h2 {
+    margin: 0;
+    color: #102a43;
+    font-size: 29px;
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+.lqn-live-classes .lqn-heading p {
+    margin: 10px auto 0;
+    color: #52606d;
+    font-size: 15px;
+}
+
+.lqn-live-classes .lqn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.lqn-live-classes .lqn-card {
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 15px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(16, 42, 67, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lqn-live-classes .lqn-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(16, 42, 67, 0.10);
+}
+
+.lqn-live-classes .lqn-badge {
+    display: inline-block;
+    background: #eef3f8;
+    color: #102a43;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.lqn-live-classes .lqn-card h3 {
+    margin: 0 0 12px;
+    color: #102a43;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.lqn-live-classes .lqn-card p {
+    margin: 0 0 18px;
+    color: #52606d;
+    font-size: 14px;
+}
+
+.lqn-live-classes .lqn-card ul {
+    padding-left: 21px;
+    margin: 0 0 23px;
+}
+
+.lqn-live-classes .lqn-card li {
+    color: #475467;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.lqn-live-classes .lqn-button {
+    display: inline-block;
+    max-width: 100%;
+    background: #102a43;
+    color: #ffffff;
+    padding: 11px 19px;
+    border: 1px solid #102a43;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: anywhere;
+    transition: background 0.2s ease;
+}
+
+.lqn-live-classes .lqn-button:hover {
+    background: #173f5f;
+    color: #ffffff;
+}
+
+.lqn-live-classes .lqn-info {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 15px;
+    padding: 32px 24px;
+    box-shadow: 0 5px 18px rgba(16, 42, 67, 0.06);
+    text-align: center;
+}
+
+.lqn-live-classes .lqn-info h3 {
+    margin: 0 0 12px;
+    color: #102a43;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.lqn-live-classes .lqn-info p {
+    max-width: 750px;
+    margin: 0 auto 22px;
+    color: #52606d;
+    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+    .lqn-live-classes .lqn-hero {
+        padding: 45px 18px;
+    }
+
+    .lqn-live-classes .lqn-hero h1 {
+        font-size: 32px;
+    }
+
+    .lqn-live-classes .lqn-hero p {
+        font-size: 15px;
+    }
+
+    .lqn-live-classes .lqn-section {
+        padding: 38px 14px;
+    }
+
+    .lqn-live-classes .lqn-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .lqn-live-classes .lqn-card {
+        padding: 23px;
+    }
+
+    .lqn-live-classes .lqn-heading h2 {
+        font-size: 25px;
+    }
+
+    .lqn-live-classes .lqn-info {
+        padding: 26px 18px;
+    }
+}
+</style>
+
+<div class="lqn-live-classes">
+
+    <!-- HERO -->
+    <section class="lqn-hero">
+        <div class="lqn-hero-container">
+            <h1>🔴 Live Classes</h1>
+            <p>
+                Join structured live Reasoning classes for SSC, Banking,
+                Railway, Defence and State-level competitive examinations.
+            </p>
+        </div>
+    </section>
+
+    <!-- UPCOMING CLASSES -->
+    <section class="lqn-section">
+        <div class="lqn-container">
+
+            <div class="lqn-heading">
+                <h2>📅 Upcoming Live Classes</h2>
+                <p>
+                    Stay updated with upcoming Reasoning sessions
+                    and practice classes.
+                </p>
+            </div>
+
+            <div class="lqn-grid">
+
+                <!-- SSC -->
+                <div class="lqn-card">
+                    <span class="lqn-badge">SSC Reasoning</span>
+                    <h3>SSC Reasoning Live Class</h3>
+                    <p>
+                        Topic-wise Reasoning practice with concepts,
+                        PYQs and exam-oriented questions.
+                    </p>
+                    <ul>
+                        <li>Concept Explanation</li>
+                        <li>Previous Year Questions</li>
+                        <li>Practice Questions</li>
+                        <li>Revision</li>
+                    </ul>
+                    <a
+                        href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="lqn-button">
+                        Watch on YouTube
+                    </a>
+                </div>
+
+                <!-- BANKING -->
+                <div class="lqn-card">
+                    <span class="lqn-badge">Banking Reasoning</span>
+                    <h3>Banking Reasoning Live Class</h3>
+                    <p>
+                        Exam-oriented sessions for SBI, IBPS, RRB
+                        and other banking examinations.
+                    </p>
+                    <ul>
+                        <li>Puzzles &amp; Seating Arrangement</li>
+                        <li>Previous Year Questions</li>
+                        <li>Practice Sets</li>
+                        <li>Speed &amp; Accuracy</li>
+                    </ul>
+                    <a
+                        href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="lqn-button">
+                        Watch on YouTube
+                    </a>
+                </div>
+
+                <!-- RAILWAY -->
+                <div class="lqn-card">
+                    <span class="lqn-badge">Railway Reasoning</span>
+                    <h3>Railway Reasoning Live Class</h3>
+                    <p>
+                        Focused Reasoning practice for Railway
+                        competitive examinations.
+                    </p>
+                    <ul>
+                        <li>Important Concepts</li>
+                        <li>Topic-wise Questions</li>
+                        <li>Previous Year Questions</li>
+                        <li>Practice Sets</li>
+                    </ul>
+                    <a
+                        href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="lqn-button">
+                        Watch on YouTube
+                    </a>
+                </div>
+
+                <!-- DEFENCE -->
+                <div class="lqn-card">
+                    <span class="lqn-badge">Defence Reasoning</span>
+                    <h3>Defence Reasoning Live Class</h3>
+                    <p>
+                        Structured Reasoning practice for Defence
+                        and other competitive examinations.
+                    </p>
+                    <ul>
+                        <li>Concept Building</li>
+                        <li>Topic-wise Practice</li>
+                        <li>Previous Year Questions</li>
+                        <li>Speed &amp; Accuracy</li>
+                    </ul>
+                    <a
+                        href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="lqn-button">
+                        Watch on YouTube
+                    </a>
+                </div>
+
+                <!-- STATE EXAMS -->
+                <div class="lqn-card">
+                    <span class="lqn-badge">State Exams</span>
+                    <h3>State Exams Reasoning Live Class</h3>
+                    <p>
+                        Structured Reasoning sessions for State-level
+                        competitive examinations.
+                    </p>
+                    <ul>
+                        <li>Concept Building</li>
+                        <li>Topic-wise Practice</li>
+                        <li>Previous Year Questions (PYQs)</li>
+                        <li>Revision</li>
+                    </ul>
+                    <a
+                        href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="lqn-button">
+                        Watch on YouTube
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE CLASS APPROACH -->
+    <section class="lqn-section lqn-section-light">
+        <div class="lqn-container">
+
+            <div class="lqn-heading">
+                <h2>📚 What You Can Expect</h2>
+                <p>
+                    A structured approach for effective live
+                    Reasoning preparation.
+                </p>
+            </div>
+
+            <div class="lqn-grid">
+
+                <div class="lqn-card">
+                    <h3>🎯 Concept-Based Learning</h3>
+                    <p>
+                        Understand the concept first, followed by relevant
+                        questions and examination-oriented practice.
+                    </p>
+                </div>
+
+                <div class="lqn-card">
+                    <h3>📝 PYQ Practice</h3>
+                    <p>
+                        Practice relevant previous year questions
+                        to understand the examination pattern.
+                    </p>
+                </div>
+
+                <div class="lqn-card">
+                    <h3>⚡ Speed &amp; Accuracy</h3>
+                    <p>
+                        Regular question practice focused on improving
+                        solving speed and accuracy.
+                    </p>
+                </div>
+
+                <div class="lqn-card">
+                    <h3>🔄 Revision</h3>
+                    <p>
+                        Regular revision sessions to strengthen concepts
+                        and retain important question types.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- YOUTUBE -->
+    <section class="lqn-section">
+        <div class="lqn-container">
+            <div class="lqn-info">
+                <h3>▶️ Watch Reasoning Classes on YouTube</h3>
+                <p>
+                    Access live and recorded Reasoning classes through
+                    the Let's QualifyNow YouTube channel.
+                </p>
+                <a
+                    href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="lqn-button">
+                    Visit YouTube Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+```
