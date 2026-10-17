@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Reasoning Analogy | Let's QualifyNow</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    font-size:18px;
+    color:#e6f1f8;
+}
+
+/* MAIN */
+
+.container{
+    width:86%;
+    max-width:1150px;
+    margin:55px auto;
+}
+
+.section{
+    margin-bottom:45px;
+}
+
+.section-title{
+    font-size:28px;
+    color:#102a43;
+    margin-bottom:16px;
+}
+
+.section p{
+    color:#486581;
+    margin-bottom:14px;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+    background:white;
+    border-left:5px solid #173f5f;
+    border-radius:10px;
+    padding:25px;
+    margin-bottom:40px;
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
+}
+
+.highlight h2{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+/* CARDS */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-top:22px;
+}
+
+.card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:14px;
+    padding:25px;
+    box-shadow:0 5px 18px rgba(16,42,67,.05);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(16,42,67,.11);
+}
+
+.card h3{
+    color:#102a43;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#627d98;
+}
+
+.card ul{
+    padding-left:20px;
+    color:#486581;
+}
+
+.card li{
+    margin-bottom:5px;
+}
+
+/* EXAMPLE */
+
+.example{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:14px;
+    padding:25px;
+    margin:20px 0;
+    box-shadow:0 5px 18px rgba(16,42,67,.05);
+}
+
+.example h3{
+    color:#102a43;
+    margin-bottom:10px;
+}
+
+.question{
+    background:#f7f9fc;
+    border-radius:9px;
+    padding:16px;
+    margin:12px 0;
+    color:#243b53;
+}
+
+.answer{
+    color:#173f5f;
+    font-weight:bold;
+}
+
+/* FORMULA */
+
+.formula{
+    background:#eef5fa;
+    border:1px solid #c9d8e6;
+    border-radius:10px;
+    padding:18px;
+    margin:15px 0;
+    color:#102a43;
+    font-weight:600;
+}
+
+/* PRACTICE */
+
+.practice-card{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:14px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 5px 18px rgba(16,42,67,.05);
+}
+
+.practice-card h3{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.options{
+    margin:10px 0 0 20px;
+    color:#486581;
+}
+
+.options li{
+    margin-bottom:5px;
+}
+
+/* STUDY APPROACH */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:25px;
+}
+
+.step{
+    background:white;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+}
+
+.step-number{
+    width:38px;
+    height:38px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    background:#102a43;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.step h3{
+    color:#102a43;
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.step p{
+    color:#627d98;
+    font-size:14px;
+}
+
+/* BACK BUTTON */
+
+.back-section{
+    text-align:center;
+    margin:50px 0 20px;
+}
+
+.back-btn{
+    display:inline-block;
+    background:#173f5f;
+    color:white;
+    padding:12px 24px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#102a43;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+    .card-grid{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px){
+    .hero h1{
+        font-size:31px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+    <h1>📘 SSC Reasoning – Analogy</h1>
+    <p>
+        Complete concept-based preparation for Analogy questions
+        with types, methods, examples and SSC-level practice.
+    </p>
+</section>
+
+<!-- MAIN -->
+
+<main class="container">
+
+    <!-- INTRO -->
+
+    <section class="section">
+        <div class="highlight">
+            <h2>🎯 What is Analogy?</h2>
+            <p>
+                Analogy is a type of reasoning question in which
+                a relationship between two elements is given and
+                the same relationship has to be identified in
+                another pair.
+            </p>
+            <p>
+                In simple words, Analogy means finding
+                <strong>a similar relationship</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- BASIC CONCEPT -->
+
+    <section class="section">
+        <h2 class="section-title">📚 Basic Concept</h2>
+        <p>An analogy question generally follows the pattern:</p>
+
+        <div class="formula">A : B :: C : ?</div>
+
+        <p>
+            Here, the relationship between <strong>A and B</strong>
+            has to be applied to <strong>C</strong> to find the
+            missing element.
+        </p>
+
+        <div class="example">
+            <h3>Example</h3>
+            <div class="question">Book : Read :: Food : ?</div>
+            <p>
+                A book is something we <strong>read</strong>.
+                Similarly, food is something we <strong>eat</strong>.
+            </p>
+            <p class="answer">Answer: Eat</p>
+        </div>
+    </section>
+
+    <!-- TYPES -->
+
+    <section class="section">
+        <h2 class="section-title">🔹 Types of Analogy</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>1. Word Analogy</h3>
+                <p>
+                    Relationship between two words is identified
+                    and applied to another word.
+                </p>
+                <ul>
+                    <li>Object – Function</li>
+                    <li>Person – Place</li>
+                    <li>Worker – Workplace</li>
+                    <li>Animal – Young One</li>
+                    <li>Country – Capital</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>2. Number Analogy</h3>
+                <p>
+                    A numerical relationship is identified and
+                    applied to another number.
+                </p>
+                <ul>
+                    <li>Addition / Subtraction</li>
+                    <li>Multiplication / Division</li>
+                    <li>Square / Cube</li>
+                    <li>Difference-based relation</li>
+                    <li>Mixed operations</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>3. Alphabet Analogy</h3>
+                <p>
+                    Relationships are established using
+                    alphabet positions.
+                </p>
+                <ul>
+                    <li>Forward Position</li>
+                    <li>Backward Position</li>
+                    <li>Letter Gap</li>
+                    <li>Position Difference</li>
+                    <li>Letter Transformation</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>4. Figure Analogy</h3>
+                <p>
+                    A relationship between figures is identified
+                    through transformation or movement.
+                </p>
+                <ul>
+                    <li>Rotation</li>
+                    <li>Reflection</li>
+                    <li>Position Change</li>
+                    <li>Shape Change</li>
+                    <li>Pattern Transformation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORD ANALOGY -->
+
+    <section class="section">
+        <h2 class="section-title">🔤 Word Analogy</h2>
+        <p>
+            In Word Analogy, the relationship between two words
+            may be based on their function, place, category,
+            profession, object, person or another logical connection.
+        </p>
+
+        <div class="example">
+            <h3>Example 1 – Object &amp; Function</h3>
+            <div class="question">Pen : Write :: Knife : ?</div>
+            <p>
+                A pen is used to <strong>write</strong>.
+                A knife is used to <strong>cut</strong>.
+            </p>
+            <p class="answer">Answer: Cut</p>
+        </div>
+
+        <div class="example">
+            <h3>Example 2 – Person &amp; Workplace</h3>
+            <div class="question">Teacher : School :: Doctor : ?</div>
+            <p>
+                A teacher works in a school.
+                A doctor works in a hospital.
+            </p>
+            <p class="answer">Answer: Hospital</p>
+        </div>
+
+        <div class="example">
+            <h3>Example 3 – Animal &amp; Young One</h3>
+            <div class="question">Cow : Calf :: Horse : ?</div>
+            <p>
+                The young one of a cow is called a calf.
+                The young one of a horse is called a foal.
+            </p>
+            <p class="answer">Answer: Foal</p>
+        </div>
+    </section>
+
+    <!-- NUMBER ANALOGY -->
+
+    <section class="section">
+        <h2 class="section-title">🔢 Number Analogy</h2>
+        <p>
+            Number Analogy questions are based on a mathematical
+            relationship between two numbers.
+        </p>
+
+        <div class="example">
+            <h3>Example 1</h3>
+            <div class="question">4 : 16 :: 7 : ?</div>
+            <p>Relationship: <strong>4 × 4 = 16</strong></p>
+            <p>Therefore: <strong>7 × 7 = 49</strong></p>
+            <p class="answer">Answer: 49</p>
+        </div>
+
+        <div class="example">
+            <h3>Example 2</h3>
+            <div class="question">5 : 15 :: 8 : ?</div>
+            <p>Relationship: <strong>5 × 3 = 15</strong></p>
+            <p>Therefore: <strong>8 × 3 = 24</strong></p>
+            <p class="answer">Answer: 24</p>
+        </div>
+
+        <div class="example">
+            <h3>Example 3</h3>
+            <div class="question">9 : 81 :: 6 : ?</div>
+            <p>Relationship: <strong>Number × Number</strong></p>
+            <p>6 × 6 = 36</p>
+            <p class="answer">Answer: 36</p>
+        </div>
+    </section>
+
+    <!-- ALPHABET ANALOGY -->
+
+    <section class="section">
+        <h2 class="section-title">🔠 Alphabet Analogy</h2>
+        <p>
+            Alphabet Analogy questions use the positions of
+            letters in the English alphabet.
+        </p>
+
+        <div class="formula">
+            A = 1, B = 2, C = 3, ... Z = 26
+        </div>
+
+        <div class="example">
+            <h3>Example 1</h3>
+            <div class="question">A : C :: D : ?</div>
+            <p>
+                A से C तक +2 positions हैं।
+                इसलिए D से +2 positions:
+            </p>
+            <p>D → E → F</p>
+            <p class="answer">Answer: F</p>
+        </div>
+
+        <div class="example">
+            <h3>Example 2</h3>
+            <div class="question">B : E :: F : ?</div>
+            <p>B → E = +3</p>
+            <p>F → I = +3</p>
+            <p class="answer">Answer: I</p>
+        </div>
+    </section>
+
+    <!-- FIGURE ANALOGY -->
+
+    <section class="section">
+        <h2 class="section-title">🔷 Figure Analogy</h2>
+        <p>
+            Figure Analogy में दो figures के बीच transformation
+            को पहचानकर उसी transformation को दूसरी figure पर
+            लागू किया जाता है।
+        </p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Rotation</h3>
+                <p>
+                    Figure को clockwise या anticlockwise direction
+                    में rotate किया जा सकता है।
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Reflection</h3>
+                <p>
+                    Figure का mirror या reflection transformation
+                    दिया जा सकता है।
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Position Change</h3>
+                <p>
+                    Figure के अंदर मौजूद elements की position
+                    बदल सकती है।
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Shape Transformation</h3>
+                <p>
+                    Figure के आकार या pattern में logical परिवर्तन
+                    किया जा सकता है।
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLVING APPROACH -->
+
+    <section class="section">
+        <h2 class="section-title">🧠 How to Solve Analogy Questions</h2>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Observe</h3>
+                <p>पहले दिए गए pair को ध्यान से देखें।</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Find Relation</h3>
+                <p>दोनों elements के बीच exact relationship खोजें।</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Apply</h3>
+                <p>वही relationship दूसरे element पर लागू करें।</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Verify</h3>
+                <p>Options में relationship को दोबारा verify करें।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPORTANT POINTS -->
+
+    <section class="section">
+        <h2 class="section-title">⭐ Important Points for SSC</h2>
+
+        <div class="card">
+            <ul>
+                <li>सबसे पहले relationship identify करें।</li>
+                <li>केवल surface similarity देखकर answer select न करें।</li>
+                <li>
+                    Number Analogy में square, cube, multiplication,
+                    division, addition और subtraction जैसे patterns check करें।
+                </li>
+                <li>Alphabet Analogy में letter positions का उपयोग करें।</li>
+                <li>
+                    Figure Analogy में rotation, reflection और position
+                    change को ध्यान से देखें।
+                </li>
+                <li>
+                    अगर एक relationship से answer नहीं मिल रहा है,
+                    तो alternative logical relationship check करें।
+                </li>
+                <li>
+                    SSC level पर speed के लिए common relationships
+                    की नियमित practice करें।
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PRACTICE -->
+
+    <section class="section">
+        <h2 class="section-title">📝 Practice Questions</h2>
+
+        <div class="practice-card">
+            <h3>Question 1</h3>
+            <p>Book : Read :: Food : ?</p>
+            <ol class="options" type="A">
+                <li>Cook</li>
+                <li>Eat</li>
+                <li>Buy</li>
+                <li>Sell</li>
+            </ol>
+        </div>
+
+        <div class="practice-card">
+            <h3>Question 2</h3>
+            <p>6 : 36 :: 8 : ?</p>
+            <ol class="options" type="A">
+                <li>48</li>
+                <li>56</li>
+                <li>64</li>
+                <li>72</li>
+            </ol>
+        </div>
+
+        <div class="practice-card">
+            <h3>Question 3</h3>
+            <p>A : D :: F : ?</p>
+            <ol class="options" type="A">
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+                <li>K</li>
+            </ol>
+        </div>
+
+        <div class="practice-card">
+            <h3>Question 4</h3>
+            <p>Doctor : Hospital :: Teacher : ?</p>
+            <ol class="options" type="A">
+                <li>Office</li>
+                <li>School</li>
+                <li>Market</li>
+                <li>Library</li>
+            </ol>
+        </div>
+
+        <div class="practice-card">
+            <h3>Question 5</h3>
+            <p>7 : 49 :: 9 : ?</p>
+            <ol class="options" type="A">
+                <li>63</li>
+                <li>72</li>
+                <li>81</li>
+                <li>90</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ANSWERS -->
+
+    <section class="section">
+        <h2 class="section-title">✅ Practice Answers</h2>
+
+        <div class="highlight">
+            <p><strong>Q1 → B. Eat</strong></p>
+            <p><strong>Q2 → C. 64</strong></p>
+            <p><strong>Q3 → B. I</strong></p>
+            <p><strong>Q4 → B. School</strong></p>
+            <p><strong>Q5 → C. 81</strong></p>
+        </div>
+    </section>
+
+    <!-- QUICK REVISION -->
+
+    <section class="section">
+        <h2 class="section-title">⚡ Quick Revision</h2>
+
+        <div class="card">
+            <ul>
+                <li>Analogy = Similar Relationship</li>
+                <li>Word Analogy = Meaning / Function / Relationship</li>
+                <li>Number Analogy = Numerical Relationship</li>
+                <li>Alphabet Analogy = Letter Position Relationship</li>
+                <li>Figure Analogy = Visual Transformation</li>
+                <li>
+                    Main Rule = First Pair का exact relationship
+                    दूसरे pair पर apply करें।
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BACK -->
+
+    <div class="back-section">
+        <a href="ssc-concept-notes.html" class="back-btn">
+            ← Back to SSC Reasoning Topics
+        </a>
+    </div>
+
+</main>
+
+</body>
+</html>
