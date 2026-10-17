@@ -1,0 +1,1061 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Reasoning – Coding-Decoding | Let's QualifyNow</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+}
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    padding:70px 7%;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    font-size:18px;
+    color:#e6eef5;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:50px auto;
+}
+
+.section{
+    background:white;
+    padding:32px;
+    margin-bottom:28px;
+    border-radius:16px;
+    border:1px solid #e3eaf1;
+    box-shadow:0 6px 20px rgba(16,42,67,.06);
+}
+
+.section h2{
+    color:#102a43;
+    font-size:27px;
+    margin-bottom:18px;
+}
+
+.section h3{
+    color:#173f5f;
+    font-size:21px;
+    margin:22px 0 10px;
+}
+
+.section p{
+    margin-bottom:14px;
+}
+
+.section ul{
+    padding-left:22px;
+    margin-bottom:15px;
+}
+
+.section li{
+    margin-bottom:8px;
+}
+
+.highlight{
+    background:#eef5fb;
+    border-left:5px solid #173f5f;
+    padding:20px;
+    border-radius:10px;
+    margin:20px 0;
+    font-size:18px;
+    font-weight:600;
+}
+
+.code-box{
+    background:#f8fafc;
+    border:1px solid #dbe5ee;
+    border-radius:12px;
+    padding:18px;
+    margin:15px 0;
+    overflow-x:auto;
+    font-size:18px;
+}
+
+.example{
+    background:#f7f9fc;
+    border:1px solid #e1e8ef;
+    border-radius:12px;
+    padding:20px;
+    margin:15px 0;
+}
+
+.example strong{
+    color:#102a43;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
+
+.card{
+    background:#f8fafc;
+    border:1px solid #dfe7ef;
+    border-radius:14px;
+    padding:22px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 22px rgba(16,42,67,.10);
+}
+
+.card h3{
+    margin-top:0;
+    font-size:19px;
+}
+
+.practice{
+    background:white;
+    border:1px solid #dfe7ef;
+    border-radius:14px;
+    padding:22px;
+    margin:18px 0;
+}
+
+.answer{
+    margin-top:12px;
+    padding:12px 15px;
+    background:#eef5fb;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.back-btn{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    padding:13px 22px;
+    border-radius:8px;
+    margin-top:10px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#173f5f;
+}
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:22px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>📘 SSC Reasoning – Coding-Decoding</h1>
+
+    <p>
+        Complete concept-based preparation for Coding-Decoding
+        questions with important types, methods, examples,
+        shortcuts and SSC-level practice.
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- WHAT IS CODING DECODING -->
+
+<section class="section">
+
+    <h2>📚 What is Coding-Decoding?</h2>
+
+    <p>
+        Coding-Decoding is a Reasoning topic in which a word,
+        number or group of letters is represented using a
+        particular code or pattern.
+    </p>
+
+    <p>
+        In SSC examinations, you are usually given one or more
+        examples of coded information. You have to identify the
+        underlying rule and apply the same rule to another word,
+        letter or number.
+    </p>
+
+    <div class="highlight">
+        Coding-Decoding = Identify the Code Rule → Apply the Rule → Find the Answer
+    </div>
+
+</section>
+
+
+<!-- BASIC CONCEPT -->
+
+<section class="section">
+
+    <h2>🎯 Basic Concept</h2>
+
+    <p>
+        Consider the following example:
+    </p>
+
+    <div class="code-box">
+        <strong>CAT → DBU</strong>
+    </div>
+
+    <p>
+        Compare each letter:
+    </p>
+
+    <div class="code-box">
+        C → D &nbsp;&nbsp; A → B &nbsp;&nbsp; T → U
+    </div>
+
+    <p>
+        Every letter is moved one position forward in the
+        English alphabet.
+    </p>
+
+    <div class="highlight">
+        C + 1 = D &nbsp;&nbsp; A + 1 = B &nbsp;&nbsp; T + 1 = U
+    </div>
+
+    <p>
+        Therefore, if the same rule is applied to another word,
+        its code can be determined.
+    </p>
+
+</section>
+
+
+<!-- ALPHABET POSITION -->
+
+<section class="section">
+
+    <h2>🔤 Alphabet Position</h2>
+
+    <p>
+        Alphabet positions are extremely important in
+        Coding-Decoding questions.
+    </p>
+
+    <div class="highlight">
+        A = 1, B = 2, C = 3, ... Z = 26
+    </div>
+
+    <h3>Example</h3>
+
+    <div class="code-box">
+        A = 1 &nbsp;&nbsp;
+        B = 2 &nbsp;&nbsp;
+        C = 3 &nbsp;&nbsp;
+        D = 4
+    </div>
+
+    <p>
+        If a coding rule is based on alphabet positions,
+        convert the letters into their numerical positions
+        before solving.
+    </p>
+
+</section>
+
+
+<!-- TYPES -->
+
+<section class="section">
+
+    <h2>📖 Types of Coding-Decoding Questions</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>1. Letter Coding</h3>
+            <p>
+                Letters are replaced or shifted according to
+                a particular rule.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>2. Number Coding</h3>
+            <p>
+                Words or letters are represented using numbers
+                or numerical relationships.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3. Mixed Coding</h3>
+            <p>
+                Letters, numbers and symbols may be combined
+                in the coding pattern.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>4. Substitution Coding</h3>
+            <p>
+                One word or object is represented by another
+                word according to the given information.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>5. Conditional Coding</h3>
+            <p>
+                Different conditions determine how particular
+                letters or numbers are coded.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>6. Chinese Coding</h3>
+            <p>
+                Words are represented using coded words and
+                the common code is identified through comparison.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LETTER CODING -->
+
+<section class="section">
+
+    <h2>🔠 Letter Coding</h2>
+
+    <p>
+        In letter coding, each letter is changed according to
+        a specific alphabetic relationship.
+    </p>
+
+    <h3>Example 1 – Forward Shift</h3>
+
+    <div class="code-box">
+        CAT → DBU
+    </div>
+
+    <p>
+        Each letter moves one position forward.
+    </p>
+
+    <p>
+        Therefore:
+    </p>
+
+    <div class="code-box">
+        DOG → EPH
+    </div>
+
+    <p>
+        D → E, O → P, G → H
+    </p>
+
+
+    <h3>Example 2 – Backward Shift</h3>
+
+    <div class="code-box">
+        DOG → CNF
+    </div>
+
+    <p>
+        Each letter moves one position backward.
+    </p>
+
+    <p>
+        D → C, O → N, G → F
+    </p>
+
+</section>
+
+
+<!-- POSITION BASED -->
+
+<section class="section">
+
+    <h2>🔢 Position-Based Coding</h2>
+
+    <p>
+        Sometimes letters are converted into their numerical
+        positions.
+    </p>
+
+    <div class="example">
+
+        <strong>Example:</strong>
+
+        <p>
+            CAT
+        </p>
+
+        <p>
+            C = 3, A = 1, T = 20
+        </p>
+
+        <p>
+            Therefore:
+            <strong>CAT = 3, 1, 20</strong>
+        </p>
+
+    </div>
+
+    <p>
+        In some questions, these positions may then be added,
+        subtracted, multiplied or transformed according to
+        the given rule.
+    </p>
+
+</section>
+
+
+<!-- REVERSE ALPHABET -->
+
+<section class="section">
+
+    <h2>🔄 Reverse Alphabet Coding</h2>
+
+    <p>
+        Some Coding-Decoding questions use reverse alphabet
+        positions.
+    </p>
+
+    <div class="highlight">
+        A ↔ Z &nbsp;&nbsp;
+        B ↔ Y &nbsp;&nbsp;
+        C ↔ X &nbsp;&nbsp;
+        D ↔ W
+    </div>
+
+    <p>
+        The reverse position can be calculated using:
+    </p>
+
+    <div class="code-box">
+        Reverse Position = 27 − Forward Position
+    </div>
+
+    <h3>Example</h3>
+
+    <p>
+        C = 3
+    </p>
+
+    <p>
+        Reverse position = 27 − 3 = 24
+    </p>
+
+    <p>
+        Therefore C corresponds to X.
+    </p>
+
+</section>
+
+
+<!-- NUMBER CODING -->
+
+<section class="section">
+
+    <h2>🔢 Number Coding</h2>
+
+    <p>
+        In Number Coding, words or letters may be represented
+        through numbers.
+    </p>
+
+    <div class="example">
+
+        <strong>Example:</strong>
+
+        <p>
+            If CAT is coded as 24:
+        </p>
+
+        <p>
+            C = 3, A = 1, T = 20
+        </p>
+
+        <p>
+            3 + 1 + 20 = 24
+        </p>
+
+        <div class="highlight">
+            CAT → 24
+        </div>
+
+    </div>
+
+    <p>
+        Always check whether the numbers are related to
+        alphabet positions or another mathematical operation.
+    </p>
+
+</section>
+
+
+<!-- MIXED CODING -->
+
+<section class="section">
+
+    <h2>🔢🔤 Mixed Coding</h2>
+
+    <p>
+        Mixed Coding may involve alphabets, numbers and symbols
+        together.
+    </p>
+
+    <div class="code-box">
+        A1, B2, C3, D4
+    </div>
+
+    <p>
+        Here each letter corresponds to its alphabet position.
+    </p>
+
+    <p>
+        Therefore:
+    </p>
+
+    <div class="code-box">
+        E5, F6, G7, H8
+    </div>
+
+</section>
+
+
+<!-- SUBSTITUTION -->
+
+<section class="section">
+
+    <h2>🔁 Substitution Coding</h2>
+
+    <p>
+        In substitution coding, one object, word or person
+        is represented by another word.
+    </p>
+
+    <div class="example">
+
+        <p>
+            If:
+        </p>
+
+        <div class="code-box">
+            Pen is called Book
+            <br>
+            Book is called Table
+            <br>
+            Table is called Chair
+        </div>
+
+        <p>
+            Then the question may ask:
+        </p>
+
+        <p>
+            What is used for writing?
+        </p>
+
+        <p>
+            Normally we use a Pen, but according to the code,
+            Pen is called <strong>Book</strong>.
+        </p>
+
+        <div class="highlight">
+            Answer = Book
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONDITIONAL CODING -->
+
+<section class="section">
+
+    <h2>⚙️ Conditional Coding</h2>
+
+    <p>
+        In conditional coding, different rules are applied
+        depending on the given conditions.
+    </p>
+
+    <h3>Example Conditions</h3>
+
+    <ul>
+
+        <li>
+            If the letter is a vowel, move it one position forward.
+        </li>
+
+        <li>
+            If the letter is a consonant, move it one position backward.
+        </li>
+
+        <li>
+            If the number is even, add 2.
+        </li>
+
+        <li>
+            If the number is odd, subtract 1.
+        </li>
+
+    </ul>
+
+    <p>
+        Always read every condition carefully before solving
+        the question.
+    </p>
+
+</section>
+
+
+<!-- CHINESE CODING -->
+
+<section class="section">
+
+    <h2>🧩 Chinese Coding</h2>
+
+    <p>
+        Chinese Coding questions provide several statements
+        in which words are represented by coded words.
+    </p>
+
+    <p>
+        The common code is identified by comparing the statements.
+    </p>
+
+    <div class="example">
+
+        <p>
+            Suppose:
+        </p>
+
+        <div class="code-box">
+            red apple = ka la
+            <br>
+            red ball = ka ma
+        </div>
+
+        <p>
+            The common word is <strong>red</strong>.
+        </p>
+
+        <p>
+            The common code is <strong>ka</strong>.
+        </p>
+
+        <div class="highlight">
+            red → ka
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW TO SOLVE -->
+
+<section class="section">
+
+    <h2>🧠 How to Solve Coding-Decoding Questions</h2>
+
+    <h3>Step 1 – Read the Given Information</h3>
+
+    <p>
+        Carefully read all coded examples before attempting
+        the question.
+    </p>
+
+    <h3>Step 2 – Compare the Elements</h3>
+
+    <p>
+        Compare letters, numbers or words to identify what
+        changes and what remains constant.
+    </p>
+
+    <h3>Step 3 – Check Alphabet Positions</h3>
+
+    <p>
+        Convert letters into positions whenever required.
+    </p>
+
+    <h3>Step 4 – Identify the Rule</h3>
+
+    <p>
+        Look for forward shift, backward shift, reverse
+        alphabet, addition, subtraction or substitution.
+    </p>
+
+    <h3>Step 5 – Apply the Rule</h3>
+
+    <p>
+        Apply the identified rule to the word or element asked
+        in the question.
+    </p>
+
+    <h3>Step 6 – Verify</h3>
+
+    <p>
+        Check the rule against the original examples before
+        selecting the final answer.
+    </p>
+
+    <div class="highlight">
+        Read → Compare → Find Rule → Apply → Verify → Answer
+    </div>
+
+</section>
+
+
+<!-- IMPORTANT POINTS -->
+
+<section class="section">
+
+    <h2>⭐ Important Points for SSC</h2>
+
+    <ul>
+
+        <li>
+            Remember alphabet positions from A = 1 to Z = 26.
+        </li>
+
+        <li>
+            Check both forward and backward alphabet movement.
+        </li>
+
+        <li>
+            Look for reverse alphabet relationships when required.
+        </li>
+
+        <li>
+            Compare each letter separately before assuming
+            the complete rule.
+        </li>
+
+        <li>
+            In number coding, check whether numbers represent
+            alphabet positions.
+        </li>
+
+        <li>
+            In substitution questions, follow the given names
+            exactly instead of using their normal meanings.
+        </li>
+
+        <li>
+            In conditional coding, apply every condition in
+            the correct order.
+        </li>
+
+        <li>
+            In Chinese Coding, compare common words and common
+            codes across statements.
+        </li>
+
+        <li>
+            Do not assume a coding rule without verifying it
+            against all given information.
+        </li>
+
+        <li>
+            Regular practice improves speed and accuracy.
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- PRACTICE QUESTIONS -->
+
+<section class="section">
+
+    <h2>📝 SSC-Level Practice Questions</h2>
+
+
+    <div class="practice">
+
+        <strong>Q1. If CAT is coded as DBU, how is DOG coded?</strong>
+
+        <p>
+            A) EPH &nbsp;&nbsp;
+            B) EOG &nbsp;&nbsp;
+            C) FPH &nbsp;&nbsp;
+            D) DPH
+        </p>
+
+        <div class="answer">
+            Answer: A) EPH
+        </div>
+
+    </div>
+
+
+    <div class="practice">
+
+        <strong>
+            Q2. If each letter is moved one position backward,
+            how is DOG coded?
+        </strong>
+
+        <p>
+            A) CNF &nbsp;&nbsp;
+            B) EPH &nbsp;&nbsp;
+            C) COG &nbsp;&nbsp;
+            D) BME
+        </p>
+
+        <div class="answer">
+            Answer: A) CNF
+        </div>
+
+    </div>
+
+
+    <div class="practice">
+
+        <strong>
+            Q3. If A = 1, B = 2, ... Z = 26,
+            what is the value of CAT?
+        </strong>
+
+        <p>
+            A) 22 &nbsp;&nbsp;
+            B) 24 &nbsp;&nbsp;
+            C) 26 &nbsp;&nbsp;
+            D) 28
+        </p>
+
+        <div class="answer">
+            Answer: B) 24
+        </div>
+
+    </div>
+
+
+    <div class="practice">
+
+        <strong>
+            Q4. If A is coded as Z, B as Y and C as X,
+            how is D coded?
+        </strong>
+
+        <p>
+            A) V &nbsp;&nbsp;
+            B) W &nbsp;&nbsp;
+            C) X &nbsp;&nbsp;
+            D) Y
+        </p>
+
+        <div class="answer">
+            Answer: B) W
+        </div>
+
+    </div>
+
+
+    <div class="practice">
+
+        <strong>
+            Q5. If PEN is coded as QFO by moving every letter
+            one position forward, how is BOOK coded?
+        </strong>
+
+        <p>
+            A) CPPL &nbsp;&nbsp;
+            B) CPPK &nbsp;&nbsp;
+            C) APPL &nbsp;&nbsp;
+            D) CQPL
+        </p>
+
+        <div class="answer">
+            Answer: A) CPPL
+        </div>
+
+    </div>
+
+
+    <div class="practice">
+
+        <strong>
+            Q6. If RED APPLE is coded as KA LA and
+            RED BALL is coded as KA MA, what is the code for RED?
+        </strong>
+
+        <p>
+            A) LA &nbsp;&nbsp;
+            B) KA &nbsp;&nbsp;
+            C) MA &nbsp;&nbsp;
+            D) RA
+        </p>
+
+        <div class="answer">
+            Answer: B) KA
+        </div>
+
+    </div>
+
+
+    <div class="practice">
+
+        <strong>
+            Q7. If A = 1, B = 2, C = 3, what is the code for D?
+        </strong>
+
+        <p>
+            A) 2 &nbsp;&nbsp;
+            B) 3 &nbsp;&nbsp;
+            C) 4 &nbsp;&nbsp;
+            D) 5
+        </p>
+
+        <div class="answer">
+            Answer: C) 4
+        </div>
+
+    </div>
+
+
+    <div class="practice">
+
+        <strong>
+            Q8. If SUN is coded as TVO by moving every letter
+            one position forward, how is MOON coded?
+        </strong>
+
+        <p>
+            A) NPPO &nbsp;&nbsp;
+            B) NPPM &nbsp;&nbsp;
+            C) LNNM &nbsp;&nbsp;
+            D) NQPO
+        </p>
+
+        <div class="answer">
+            Answer: A) NPPO
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="section">
+
+    <h2>⚡ Quick Revision</h2>
+
+    <ul>
+
+        <li>
+            Coding-Decoding = finding a hidden rule used to
+            represent letters, numbers or words.
+        </li>
+
+        <li>
+            Alphabet positions: A = 1 to Z = 26.
+        </li>
+
+        <li>
+            Check forward and backward letter shifts.
+        </li>
+
+        <li>
+            Reverse alphabet: A ↔ Z, B ↔ Y, C ↔ X.
+        </li>
+
+        <li>
+            Number Coding may use alphabet positions or
+            mathematical operations.
+        </li>
+
+        <li>
+            Substitution Coding requires following the given
+            replacement names.
+        </li>
+
+        <li>
+            Conditional Coding requires careful application
+            of every condition.
+        </li>
+
+        <li>
+            Chinese Coding is solved by comparing common words
+            and common codes.
+        </li>
+
+        <li>
+            Always verify the identified rule before answering.
+        </li>
+
+    </ul>
+
+</section>
+
+
+<!-- BACK BUTTON -->
+
+<a href="ssc-concept-notes.html" class="back-btn">
+    ← Back to SSC Reasoning Topics
+</a>
+
+
+</div>
+
+</body>
+</html>
+```
