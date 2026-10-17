@@ -201,18 +201,39 @@
         border-radius:10px;
     }
 
-    .back-button{
-        display:inline-block;
+    /* FINAL BACK SECTION: CENTER ALIGNMENT */
+    .back-section{
+        text-align:center !important;
+    }
+
+    .back-section h2{
+        color:#102a43;
+        text-align:center !important;
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .back-section p{
+        text-align:center !important;
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .back-section .back-button{
+        display:table;
         background:#173f5f;
         color:white;
         text-decoration:none;
         padding:12px 22px;
         border-radius:8px;
         font-weight:600;
-        margin-top:8px;
+        margin:8px auto 0;
+        text-align:center;
     }
 
-    .back-button:hover{
+    .back-section .back-button:hover{
         background:#102a43;
     }
 
@@ -236,6 +257,10 @@
         .steps,
         .revision{
             grid-template-columns:1fr;
+        }
+
+        .back-section h2{
+            font-size:24px;
         }
     }
 </style>
@@ -818,8 +843,8 @@
         </div>
     </section>
 
-    <!-- BACK -->
-    <section class="section">
+    <!-- BACK: ALL CONTENT CENTERED -->
+    <section class="section back-section">
         <h2>📚 Continue Your SSC Reasoning Preparation</h2>
 
         <p>
@@ -827,7 +852,8 @@
             systematically.
         </p>
 
-        <a href="ssc-concept-notes.html" class="back-button">
+        <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-concept-notes.html"
+           class="back-button">
             ← Back to SSC Concept Notes
         </a>
     </section>
