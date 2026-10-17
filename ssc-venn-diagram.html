@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Venn Diagram | Let's QualifyNow</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.7;
+}
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    padding:70px 7%;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:800px;
+    margin:0 auto;
+    color:#e6edf3;
+}
+
+.container{
+    width:86%;
+    max-width:1100px;
+    margin:45px auto;
+}
+
+.section{
+    background:white;
+    padding:30px;
+    margin-bottom:28px;
+    border-radius:14px;
+    border:1px solid #e1e8ed;
+    box-shadow:0 5px 18px rgba(16,42,67,0.06);
+}
+
+.section h2{
+    color:#102a43;
+    margin-bottom:18px;
+    font-size:26px;
+}
+
+.section h3{
+    color:#173f5f;
+    margin:20px 0 10px;
+}
+
+.section p{
+    margin-bottom:12px;
+}
+
+.highlight{
+    background:#eef5fa;
+    border-left:5px solid #173f5f;
+    padding:16px 18px;
+    margin:18px 0;
+    border-radius:8px;
+}
+
+.example{
+    background:#f8fafc;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:18px;
+    margin:16px 0;
+}
+
+.example strong{
+    color:#102a43;
+}
+
+.answer{
+    background:#edf7ed;
+    border-left:5px solid #2f855a;
+    padding:14px 18px;
+    margin-top:12px;
+    border-radius:7px;
+}
+
+.warning{
+    background:#fff8e6;
+    border-left:5px solid #d69e2e;
+    padding:15px 18px;
+    border-radius:8px;
+    margin:18px 0;
+}
+
+ul{
+    padding-left:25px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #d9e2ec;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#102a43;
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f7f9fc;
+}
+
+.diagram{
+    text-align:center;
+    margin:25px 0;
+}
+
+.circle{
+    display:inline-flex;
+    width:180px;
+    height:120px;
+    border:3px solid #173f5f;
+    border-radius:50%;
+    align-items:center;
+    justify-content:center;
+    margin:-5px;
+    background:rgba(230,240,248,0.55);
+    font-weight:bold;
+}
+
+.circle.three{
+    width:150px;
+    height:105px;
+}
+
+.code-box{
+    background:#102a43;
+    color:white;
+    padding:18px;
+    border-radius:10px;
+    margin:18px 0;
+    font-family:Consolas, monospace;
+}
+
+.back{
+    display:inline-block;
+    background:#102a43;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:10px;
+}
+
+.back:hover{
+    background:#173f5f;
+}
+
+@media(max-width:700px){
+    .hero{
+        padding:45px 5%;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .container{
+        width:92%;
+        margin:30px auto;
+    }
+
+    .section{
+        padding:22px;
+    }
+
+    .section h2{
+        font-size:23px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,td{
+        padding:9px;
+    }
+
+    .circle{
+        width:135px;
+        height:95px;
+        font-size:13px;
+    }
+
+    .circle.three{
+        width:115px;
+        height:85px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+    <h1>⭕ Venn Diagram</h1>
+    <p>
+        SSC Reasoning Concept Notes | Basic Concepts • Sets • Overlapping Groups •
+        Inclusion & Exclusion • Exam-Oriented Practice
+    </p>
+</section>
+
+<div class="container">
+
+<!-- INTRO -->
+
+<section class="section">
+    <h2>📘 What is a Venn Diagram?</h2>
+
+    <p>
+        A <strong>Venn Diagram</strong> is a visual representation used to show the
+        relationship between different groups, categories or sets.
+    </p>
+
+    <p>
+        In SSC Reasoning, Venn Diagram questions generally test your ability to
+        understand the relationship between different categories.
+    </p>
+
+    <div class="highlight">
+        <strong>🎯 SSC Focus:</strong>
+        Identify whether groups are completely different, partially overlapping,
+        completely included or related through common elements.
+    </div>
+</section>
+
+<!-- BASIC -->
+
+<section class="section">
+    <h2>🔹 Basic Concept of Sets</h2>
+
+    <p>
+        A <strong>Set</strong> is a collection of similar or related objects.
+    </p>
+
+    <h3>Example</h3>
+
+    <div class="example">
+        <strong>Set A:</strong> Students who study Mathematics<br>
+        <strong>Set B:</strong> Students who study Reasoning
+    </div>
+
+    <p>
+        Some students may study both Mathematics and Reasoning.
+        Therefore, the two sets may overlap.
+    </p>
+
+    <div class="diagram">
+        <div class="circle">Mathematics</div>
+        <div class="circle">Reasoning</div>
+    </div>
+</section>
+
+<!-- TYPES -->
+
+<section class="section">
+    <h2>📊 Important Types of Venn Diagrams</h2>
+
+    <h3>1️⃣ Completely Separate Sets</h3>
+
+    <p>
+        When two groups have no common element, they are represented separately.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong> Dogs and Cars
+    </div>
+
+    <div class="diagram">
+        <div class="circle">Dogs</div>
+        <div class="circle">Cars</div>
+    </div>
+
+    <h3>2️⃣ Overlapping Sets</h3>
+
+    <p>
+        When some elements are common to both groups, the circles overlap.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong> Students who like Cricket and Football.
+    </div>
+
+    <div class="diagram">
+        <div class="circle">Cricket</div>
+        <div class="circle">Football</div>
+    </div>
+
+    <h3>3️⃣ Completely Included Set</h3>
+
+    <p>
+        When one group is completely contained within another group,
+        one circle is placed inside another.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong> Men and Fathers
+    </div>
+
+    <div class="diagram">
+        <div class="circle" style="width:220px;height:150px;">
+            Men
+            <span style="position:absolute;"></span>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <strong>Important:</strong>
+        Every Father is a Man, but every Man is not necessarily a Father.
+    </div>
+</section>
+
+<!-- TWO SET -->
+
+<section class="section">
+    <h2>⭕ Two-Set Venn Diagram</h2>
+
+    <p>
+        In two-set questions, we generally have two categories and their common
+        portion.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br><br>
+        In a class, 30 students like Cricket, 20 like Football and 10 like both.
+    </div>
+
+    <h3>Formula</h3>
+
+    <div class="code-box">
+        A ∪ B = A + B − (A ∩ B)
+    </div>
+
+    <p>Here:</p>
+
+    <ul>
+        <li><strong>A</strong> = Number of elements in Set A</li>
+        <li><strong>B</strong> = Number of elements in Set B</li>
+        <li><strong>A ∩ B</strong> = Common elements</li>
+        <li><strong>A ∪ B</strong> = Total elements in either A or B</li>
+    </ul>
+
+    <div class="example">
+        Total = 30 + 20 − 10
+    </div>
+
+    <div class="answer">
+        <strong>Answer = 40 students</strong>
+    </div>
+</section>
+
+<!-- THREE SET -->
+
+<section class="section">
+    <h2>⭕ Three-Set Venn Diagram</h2>
+
+    <p>
+        Three-set questions involve three different categories and their common
+        regions.
+    </p>
+
+    <div class="diagram">
+        <div class="circle three">A</div>
+        <div class="circle three">B</div>
+        <div class="circle three">C</div>
+    </div>
+
+    <div class="highlight">
+        The central region represents elements common to all three sets.
+    </div>
+
+    <h3>Inclusion–Exclusion Formula</h3>
+
+    <div class="code-box">
+        A ∪ B ∪ C
+        =
+        A + B + C
+        − AB − BC − CA
+        + ABC
+    </div>
+
+    <p>
+        This formula is especially useful in questions involving three overlapping
+        groups.
+    </p>
+</section>
+
+<!-- COMMON AREA -->
+
+<section class="section">
+    <h2>🔵 Common / Overlapping Region</h2>
+
+    <p>
+        The overlapping portion of two or more circles represents the elements
+        common to those groups.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        Students who study both English and Reasoning belong to the common region
+        of the two sets.
+    </div>
+
+    <div class="highlight">
+        <strong>Remember:</strong>
+        "Both A and B" means the intersection/common region.
+    </div>
+</section>
+
+<!-- UNION INTERSECTION -->
+
+<section class="section">
+    <h2>🔑 Union and Intersection</h2>
+
+    <table>
+        <tr>
+            <th>Term</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr>
+            <td>A ∪ B</td>
+            <td>Elements belonging to A or B or both</td>
+        </tr>
+
+        <tr>
+            <td>A ∩ B</td>
+            <td>Elements common to A and B</td>
+        </tr>
+
+        <tr>
+            <td>A − B</td>
+            <td>Elements belonging to A but not B</td>
+        </tr>
+
+        <tr>
+            <td>B − A</td>
+            <td>Elements belonging to B but not A</td>
+        </tr>
+    </table>
+</section>
+
+<!-- INCLUSION EXCLUSION -->
+
+<section class="section">
+    <h2>➕ Inclusion–Exclusion Principle</h2>
+
+    <p>
+        Inclusion–Exclusion is used when categories overlap and we need to find
+        the total number of unique elements.
+    </p>
+
+    <h3>Two Sets</h3>
+
+    <div class="code-box">
+        Total = A + B − Common
+    </div>
+
+    <h3>Three Sets</h3>
+
+    <div class="code-box">
+        Total = A + B + C − AB − BC − CA + ABC
+    </div>
+
+    <div class="warning">
+        ⚠️ Common elements are counted more than once during addition.
+        Therefore, overlapping regions must be adjusted.
+    </div>
+</section>
+
+<!-- NESTED -->
+
+<section class="section">
+    <h2>🟢 Nested Venn Diagram</h2>
+
+    <p>
+        A nested Venn Diagram represents a hierarchy where one category is
+        completely contained inside another.
+    </p>
+
+    <div class="example">
+        <strong>Example:</strong><br>
+        Animals → Mammals → Dogs
+    </div>
+
+    <div class="highlight">
+        Every Dog is a Mammal and every Mammal is an Animal.
+        Therefore, Dogs ⊂ Mammals ⊂ Animals.
+    </div>
+</section>
+
+<!-- SSC EXAMPLES -->
+
+<section class="section">
+    <h2>📝 SSC-Level Solved Examples</h2>
+
+    <div class="example">
+        <strong>Question 1:</strong><br>
+        Which diagram best represents the relationship between
+        <strong>Doctors, Women and Humans?</strong>
+
+        <div class="answer">
+            <strong>Answer:</strong>
+            Doctors and Women are two groups that can overlap, while both belong
+            to the larger group of Humans.
+        </div>
+    </div>
+
+    <div class="example">
+        <strong>Question 2:</strong><br>
+        Which diagram represents the relationship between
+        <strong>Teachers, Men and Women?</strong>
+
+        <div class="answer">
+            <strong>Answer:</strong>
+            Teachers can be both Men and Women, so the Teacher group can overlap
+            with both categories.
+        </div>
+    </div>
+
+    <div class="example">
+        <strong>Question 3:</strong><br>
+        Which diagram represents the relationship between
+        <strong>Fruits, Apples and Mangoes?</strong>
+
+        <div class="answer">
+            <strong>Answer:</strong>
+            Apples and Mangoes are types of Fruits. Both belong inside the larger
+            Fruits category.
+        </div>
+    </div>
+
+    <div class="example">
+        <strong>Question 4:</strong><br>
+        Which diagram represents the relationship between
+        <strong>Animals, Dogs and Cats?</strong>
+
+        <div class="answer">
+            <strong>Answer:</strong>
+            Dogs and Cats are both Animals, but they are separate categories.
+        </div>
+    </div>
+
+    <div class="example">
+        <strong>Question 5:</strong><br>
+        In a group, 40 students like Tea, 30 like Coffee and 15 like both.
+        How many students like at least one of the two?
+
+        <div class="answer">
+            <strong>Solution:</strong><br>
+            40 + 30 − 15 = <strong>55</strong><br><br>
+            <strong>Answer: 55 students</strong>
+        </div>
+    </div>
+</section>
+
+<!-- SOLVING METHOD -->
+
+<section class="section">
+    <h2>🧠 How to Solve Venn Diagram Questions</h2>
+
+    <ol style="padding-left:25px;">
+        <li>Read all the categories carefully.</li>
+        <li>Identify whether the groups are separate or overlapping.</li>
+        <li>Check whether one group is completely inside another.</li>
+        <li>Identify common elements.</li>
+        <li>For numerical questions, write the given values clearly.</li>
+        <li>Use the appropriate formula.</li>
+        <li>Do not count the common region twice.</li>
+        <li>Check whether the question asks for total, common or separate elements.</li>
+    </ol>
+
+    <div class="highlight">
+        <strong>⚡ Exam Tip:</strong>
+        First understand the relationship between categories. Do not immediately
+        start calculating.
+    </div>
+</section>
+
+<!-- PRACTICE -->
+
+<section class="section">
+    <h2>📝 Practice Questions</h2>
+
+    <div class="example">
+        <strong>Q1.</strong>
+        In a class, 35 students like Mathematics, 25 like Reasoning and 10 like
+        both. How many like at least one?
+    </div>
+
+    <div class="example">
+        <strong>Q2.</strong>
+        Which Venn Diagram represents the relationship between
+        <strong>Birds, Parrots and Crows?</strong>
+    </div>
+
+    <div class="example">
+        <strong>Q3.</strong>
+        Which Venn Diagram represents the relationship between
+        <strong>Vehicles, Cars and Buses?</strong>
+    </div>
+
+    <div class="example">
+        <strong>Q4.</strong>
+        In a group, 50 students like Cricket, 40 like Football and 20 like both.
+        Find the number of students who like at least one.
+    </div>
+
+    <div class="example">
+        <strong>Q5.</strong>
+        Which Venn Diagram represents:
+        <strong>Animals, Dogs and Cats?</strong>
+    </div>
+
+    <div class="example">
+        <strong>Q6.</strong>
+        60 students study English, 45 study Hindi and 25 study both.
+        Find the number of students studying at least one of the two subjects.
+    </div>
+
+    <div class="example">
+        <strong>Q7.</strong>
+        Which Venn Diagram represents:
+        <strong>Fruits, Apples and Mangoes?</strong>
+    </div>
+
+    <div class="example">
+        <strong>Q8.</strong>
+        70 students like Tea, 50 like Coffee and 30 like both.
+        Find the number of students who like only Tea.
+    </div>
+</section>
+
+<!-- ANSWERS -->
+
+<section class="section">
+    <h2>✅ Practice Answers</h2>
+
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+
+        <tr>
+            <td>Q1</td>
+            <td>50</td>
+        </tr>
+
+        <tr>
+            <td>Q2</td>
+            <td>Parrots and Crows are separate groups inside Birds</td>
+        </tr>
+
+        <tr>
+            <td>Q3</td>
+            <td>Cars and Buses are separate groups inside Vehicles</td>
+        </tr>
+
+        <tr>
+            <td>Q4</td>
+            <td>70</td>
+        </tr>
+
+        <tr>
+            <td>Q5</td>
+            <td>Dogs and Cats are separate groups inside Animals</td>
+        </tr>
+
+        <tr>
+            <td>Q6</td>
+            <td>80</td>
+        </tr>
+
+        <tr>
+            <td>Q7</td>
+            <td>Apples and Mangoes are separate groups inside Fruits</td>
+        </tr>
+
+        <tr>
+            <td>Q8</td>
+            <td>40</td>
+        </tr>
+    </table>
+</section>
+
+<!-- COMMON MISTAKES -->
+
+<section class="section">
+    <h2>⚠️ Common Mistakes</h2>
+
+    <ul>
+        <li>Counting the common region twice.</li>
+        <li>Confusing Union with Intersection.</li>
+        <li>Ignoring the words "only", "both", "at least" and "neither".</li>
+        <li>Putting a category outside its parent category.</li>
+        <li>Assuming two categories are separate without checking the statement.</li>
+        <li>Using the two-set formula directly in every three-set question.</li>
+    </ul>
+</section>
+
+<!-- QUICK REVISION -->
+
+<section class="section">
+    <h2>⚡ Quick Revision</h2>
+
+    <table>
+        <tr>
+            <th>Concept</th>
+            <th>Remember</th>
+        </tr>
+
+        <tr>
+            <td>Union</td>
+            <td>A or B or both</td>
+        </tr>
+
+        <tr>
+            <td>Intersection</td>
+            <td>Common elements</td>
+        </tr>
+
+        <tr>
+            <td>Two Sets</td>
+            <td>A + B − Common</td>
+        </tr>
+
+        <tr>
+            <td>Three Sets</td>
+            <td>A + B + C − AB − BC − CA + ABC</td>
+        </tr>
+
+        <tr>
+            <td>Nested Sets</td>
+            <td>Smaller category inside larger category</td>
+        </tr>
+
+        <tr>
+            <td>Only A</td>
+            <td>A − Common</td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        <strong>🎯 SSC Strategy:</strong>
+        Understand the relationship first, draw the diagram mentally or on paper,
+        and then solve the numerical part.
+    </div>
+</section>
+
+<!-- BACK BUTTON -->
+
+<section class="section" style="text-align:center;">
+    <h2>📚 Continue SSC Reasoning Preparation</h2>
+
+    <p>
+        Explore more SSC Reasoning Concept Notes and topic-wise preparation.
+    </p>
+
+    <a href="ssc-concept-notes.html" class="back">
+        ← Back to SSC Concept Notes
+    </a>
+</section>
+
+</div>
+
+</body>
+</html>
