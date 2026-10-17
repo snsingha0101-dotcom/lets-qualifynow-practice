@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +25,7 @@ body{
     background:linear-gradient(135deg,#102a43,#173f5f);
     color:white;
     padding:65px 7%;
+    text-align:center;
 }
 
 .hero h1{
@@ -34,6 +36,7 @@ body{
 .hero p{
     font-size:18px;
     max-width:850px;
+    margin:0 auto;
     color:#e6eef5;
 }
 
@@ -200,6 +203,10 @@ tr:nth-child(even){
         font-size:30px;
     }
 
+    .hero p{
+        font-size:16px;
+    }
+
     .container{
         width:90%;
     }
@@ -208,12 +215,25 @@ tr:nth-child(even){
         padding:35px 0;
     }
 
+    .card{
+        padding:18px;
+    }
+
+    .section-title{
+        font-size:24px;
+    }
+
     table{
         font-size:14px;
     }
 
     th,td{
         padding:9px;
+    }
+
+    .code-line{
+        font-size:15px;
+        overflow-wrap:anywhere;
     }
 }
 </style>
@@ -234,6 +254,7 @@ exam-oriented practice.
 
 </div>
 </section>
+
 
 <!-- INTRODUCTION -->
 
@@ -274,6 +295,7 @@ B is the sister of C.
 </div>
 </section>
 
+
 <!-- BASIC RELATIONS -->
 
 <section>
@@ -305,6 +327,7 @@ B is the sister of C.
 
 </div>
 </section>
+
 
 <!-- GENERATION -->
 
@@ -341,6 +364,7 @@ If the gender of a person is not given, do not assume it.
 </div>
 </section>
 
+
 <!-- MATERNAL PATERNAL -->
 
 <section>
@@ -371,6 +395,7 @@ Father's sister → Paternal Aunt
 </div>
 </div>
 </section>
+
 
 <!-- DIRECT INDIRECT -->
 
@@ -412,6 +437,7 @@ A is the Maternal Uncle of C.
 </div>
 </section>
 
+
 <!-- FAMILY TREE -->
 
 <section>
@@ -441,6 +467,7 @@ Therefore Ravi is the grandfather of Karan.
 </div>
 </div>
 </section>
+
 
 <!-- POINTING -->
 
@@ -478,6 +505,7 @@ Pointing to a boy, Amit says:
 </div>
 </section>
 
+
 <!-- CODED BLOOD RELATION -->
 
 <section>
@@ -512,6 +540,7 @@ different relationships.
 
 </div>
 
+
 <!-- DIRECTION -->
 
 <div class="card">
@@ -522,15 +551,11 @@ different relationships.
 <strong>A + B = A is Brother of B</strong>
 
 <br><br>
-
 Here:
-
 <br>
-
 A → Brother → B
 
 <br><br>
-
 Therefore the relation is from <strong>A toward B</strong>.
 </div>
 
@@ -538,11 +563,8 @@ Therefore the relation is from <strong>A toward B</strong>.
 <strong>B + A = B is Brother of A</strong>
 
 <br><br>
-
 This is different from:
-
 <br>
-
 <strong>A + B = A is Brother of B</strong>
 </div>
 
@@ -551,6 +573,7 @@ This is different from:
 </div>
 
 </div>
+
 
 <!-- CODED CHAIN 1 -->
 
@@ -567,33 +590,23 @@ This is different from:
 
 <div class="example">
 Step 1:
-
 <br>
-
 A + B
-
 <br>
-
 = A is Brother of B.
 
 <br><br>
 
 Step 2:
-
 <br>
-
 B × C
-
 <br>
-
 = B is Father of C.
 
 <br><br>
 
 Therefore:
-
 <br>
-
 A is Brother of C's Father.
 
 <br><br>
@@ -602,6 +615,7 @@ A is Brother of C's Father.
 </div>
 
 </div>
+
 
 <!-- CODED CHAIN 2 -->
 
@@ -618,33 +632,23 @@ A is Brother of C's Father.
 
 <div class="example">
 Step 1:
-
 <br>
-
 M - N
-
 <br>
-
 = M is Sister of N.
 
 <br><br>
 
 Step 2:
-
 <br>
-
 N × O
-
 <br>
-
 = N is Father of O.
 
 <br><br>
 
 Therefore:
-
 <br>
-
 M is Sister of O's Father.
 
 <br><br>
@@ -653,6 +657,7 @@ M is Sister of O's Father.
 </div>
 
 </div>
+
 
 <!-- CODED CHAIN 3 -->
 
@@ -669,17 +674,13 @@ M is Sister of O's Father.
 
 <div class="example">
 P ÷ Q
-
 <br>
-
 = P is Mother of Q.
 
 <br><br>
 
 Q + R
-
 <br>
-
 = Q is Brother of R.
 
 <br><br>
@@ -692,6 +693,7 @@ Therefore P is Mother of R.
 </div>
 
 </div>
+
 
 <!-- CODED CHAIN 4 -->
 
@@ -708,17 +710,13 @@ Therefore P is Mother of R.
 
 <div class="example">
 X × Y
-
 <br>
-
 = X is Father of Y.
 
 <br><br>
 
 Y - Z
-
 <br>
-
 = Y is Sister of Z.
 
 <br><br>
@@ -731,6 +729,7 @@ Therefore X is Father of Z.
 </div>
 
 </div>
+
 
 <!-- CODED CHAIN 5 -->
 
@@ -747,17 +746,13 @@ Therefore X is Father of Z.
 
 <div class="example">
 R + S
-
 <br>
-
 = R is Brother of S.
 
 <br><br>
 
 S ÷ T
-
 <br>
-
 = S is Mother of T.
 
 <br><br>
@@ -770,6 +765,7 @@ Therefore R is Brother of T's Mother.
 </div>
 
 </div>
+
 
 <!-- CODED CHAIN 6 -->
 
@@ -786,17 +782,13 @@ Therefore R is Brother of T's Mother.
 
 <div class="example">
 K - L
-
 <br>
-
 = K is Sister of L.
 
 <br><br>
 
 L ÷ M
-
 <br>
-
 = L is Mother of M.
 
 <br><br>
@@ -809,6 +801,7 @@ Therefore K is Sister of M's Mother.
 </div>
 
 </div>
+
 
 <!-- LONG CHAIN -->
 
@@ -826,31 +819,24 @@ Therefore K is Sister of M's Mother.
 
 <div class="example">
 A + B
-
 <br>
-
 = A is Brother of B.
 
 <br><br>
 
 B × C
-
 <br>
-
 = B is Father of C.
 
 <br><br>
 
 C ÷ D
-
 <br>
-
 = C is Mother of D.
 
 <br><br>
 
 Therefore:
-
 <br><br>
 
 A is brother of D's maternal grandfather.
@@ -864,6 +850,7 @@ A is brother of D's maternal grandfather.
 
 </div>
 </section>
+
 
 <!-- SOLVING METHOD -->
 
@@ -904,6 +891,7 @@ This means the relation is always read as:
 </div>
 </section>
 
+
 <!-- PRACTICE -->
 
 <section>
@@ -916,11 +904,15 @@ Practice each question by first converting the coded expressions into
 complete sentences.
 </p>
 
+
 <div class="question">
 <h3>Question 1</h3>
+
 <div class="code-line"><strong>A + B = A is Brother of B</strong></div>
 <div class="code-line"><strong>B × C = B is Father of C</strong></div>
+
 <p><br>How is A related to C?</p>
+
 <div class="answer">
 <strong>Answer: Paternal Uncle</strong>
 <br><br>
@@ -928,11 +920,15 @@ A is Brother of B and B is Father of C.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 2</h3>
+
 <div class="code-line"><strong>M - N = M is Sister of N</strong></div>
 <div class="code-line"><strong>N × O = N is Father of O</strong></div>
+
 <p><br>How is M related to O?</p>
+
 <div class="answer">
 <strong>Answer: Paternal Aunt</strong>
 <br><br>
@@ -940,11 +936,15 @@ M is Sister of N and N is Father of O.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 3</h3>
+
 <div class="code-line"><strong>P ÷ Q = P is Mother of Q</strong></div>
 <div class="code-line"><strong>Q + R = Q is Brother of R</strong></div>
+
 <p><br>How is P related to R?</p>
+
 <div class="answer">
 <strong>Answer: Mother</strong>
 <br><br>
@@ -952,11 +952,15 @@ P is Mother of Q and Q is Brother of R.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 4</h3>
+
 <div class="code-line"><strong>X × Y = X is Father of Y</strong></div>
 <div class="code-line"><strong>Y - Z = Y is Sister of Z</strong></div>
+
 <p><br>How is X related to Z?</p>
+
 <div class="answer">
 <strong>Answer: Father</strong>
 <br><br>
@@ -964,11 +968,15 @@ X is Father of Y and Y is Sister of Z.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 5</h3>
+
 <div class="code-line"><strong>R + S = R is Brother of S</strong></div>
 <div class="code-line"><strong>S ÷ T = S is Mother of T</strong></div>
+
 <p><br>How is R related to T?</p>
+
 <div class="answer">
 <strong>Answer: Maternal Uncle</strong>
 <br><br>
@@ -976,11 +984,15 @@ R is Brother of S and S is Mother of T.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 6</h3>
+
 <div class="code-line"><strong>K - L = K is Sister of L</strong></div>
 <div class="code-line"><strong>L ÷ M = L is Mother of M</strong></div>
+
 <p><br>How is K related to M?</p>
+
 <div class="answer">
 <strong>Answer: Maternal Aunt</strong>
 <br><br>
@@ -988,11 +1000,15 @@ K is Sister of L and L is Mother of M.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 7</h3>
+
 <div class="code-line"><strong>A × B = A is Father of B</strong></div>
 <div class="code-line"><strong>B ÷ C = B is Mother of C</strong></div>
+
 <p><br>How is A related to C?</p>
+
 <div class="answer">
 <strong>Answer: Grandfather</strong>
 <br><br>
@@ -1000,58 +1016,75 @@ A is Father of B and B is Mother of C.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 8</h3>
+
 <div class="code-line"><strong>D + E = D is Brother of E</strong></div>
 <div class="code-line"><strong>E × F = E is Father of F</strong></div>
 <div class="code-line"><strong>F - G = F is Sister of G</strong></div>
+
 <p><br>How is D related to G?</p>
+
 <div class="answer">
 <strong>Answer: Paternal Uncle</strong>
 <br><br>
 D is Brother of E.<br>
 E is Father of F.<br>
 F is Sister of G.<br><br>
+
 Therefore E is also Father of G.<br>
 D is Brother of G's Father.<br><br>
+
 <strong>Therefore D is G's Paternal Uncle.</strong>
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 9</h3>
+
 <div class="code-line"><strong>H + I = H is Brother of I</strong></div>
 <div class="code-line"><strong>I ÷ J = I is Mother of J</strong></div>
 <div class="code-line"><strong>J - K = J is Sister of K</strong></div>
+
 <p><br>How is H related to K?</p>
+
 <div class="answer">
 <strong>Answer: Maternal Uncle</strong>
 <br><br>
 H is Brother of I.<br>
 I is Mother of J.<br>
 J is Sister of K.<br><br>
+
 Therefore H is Brother of K's Mother.
 </div>
 </div>
 
+
 <div class="question">
 <h3>Question 10</h3>
+
 <div class="code-line"><strong>L - M = L is Sister of M</strong></div>
 <div class="code-line"><strong>M × N = M is Father of N</strong></div>
 <div class="code-line"><strong>N + O = N is Brother of O</strong></div>
+
 <p><br>How is L related to O?</p>
+
 <div class="answer">
 <strong>Answer: Paternal Aunt</strong>
 <br><br>
 L is Sister of M.<br>
 M is Father of N.<br>
 N is Brother of O.<br><br>
+
 Therefore L is Sister of O's Father.
 </div>
 </div>
 
 </div>
 </section>
+
 
 <!-- COMMON MISTAKES -->
 
@@ -1073,6 +1106,7 @@ Therefore L is Sister of O's Father.
 
 </div>
 </section>
+
 
 <!-- QUICK REVISION -->
 
@@ -1100,23 +1134,19 @@ First Person → Relationship → Second Person
 <br><br>
 
 Example:
-
 <br>
-
 <strong>A + B</strong>
 
 <br>
-
 means
-
 <br>
-
 <strong>A is Brother of B.</strong>
 </div>
 
 </div>
 </div>
 </section>
+
 
 <!-- BACK -->
 
@@ -1142,3 +1172,4 @@ Explore more topic-wise concept notes for SSC Reasoning.
 
 </body>
 </html>
+```
