@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,28 +26,64 @@ body{
 
 nav{
     background:#102a43;
-    padding:15px 6%;
+    padding:15px 2%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    flex-wrap:wrap;
+    gap:18px;
+    width:100%;
 }
 
 .logo{
     color:white;
     font-size:22px;
     font-weight:700;
+    text-decoration:none;
+    white-space:nowrap;
+    flex-shrink:0;
 }
 
-nav a{
+.nav-links{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+    flex-wrap:nowrap;
+    min-width:0;
+    overflow-x:auto;
+    scrollbar-width:thin;
+}
+
+.nav-links a{
     color:white;
     text-decoration:none;
-    margin:5px 10px;
-    font-size:14px;
+    margin:0;
+    font-size:12px;
+    white-space:nowrap;
+    flex-shrink:0;
 }
 
-nav a:hover{
+.nav-links a:hover{
     color:#b9d7ea;
+}
+
+@media(max-width:1100px){
+    nav{
+        padding:14px 2%;
+        gap:12px;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .nav-links{
+        gap:8px;
+    }
+
+    .nav-links a{
+        font-size:11px;
+    }
 }
 
 /* ================= HERO ================= */
@@ -349,6 +386,31 @@ footer p{
 
 @media(max-width:700px){
 
+    nav{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+        padding:14px 4%;
+    }
+
+    .logo{
+        font-size:22px;
+        margin-bottom:0;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:flex-start;
+        gap:12px;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        padding-bottom:5px;
+    }
+
+    .nav-links a{
+        font-size:13px;
+    }
+
     .hero h1{
         font-size:28px;
     }
@@ -359,16 +421,6 @@ footer p{
 
     .options{
         grid-template-columns:1fr;
-    }
-
-    nav{
-        justify-content:center;
-        text-align:center;
-    }
-
-    .logo{
-        width:100%;
-        margin-bottom:8px;
     }
 
     .score-grid{
@@ -389,18 +441,34 @@ footer p{
 
 <nav>
 
-    <div class="logo">
-        Let's QualifyNow
-    </div>
+    <a href="index.html" class="logo">Let's QualifyNow</a>
 
-    <div>
+    <div class="nav-links">
+
         <a href="index.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="study-material.html">Study Material</a>
-        <a href="live-classes.html">Live Classes</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/16pANNysNqnH9hjlAlGzFVINGrCUpDwIo/preview?authuser=1">Government Exam Preparation</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1ruud8EAufHVPXfmCr5pNOam6kMwVbOfQ/preview?authuser=1">Courses</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/134PnVTi6Ci68kilDeGriquI77ve05H2l/preview?authuser=1">SSC Reasoning Course</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1dGw-BoRDDaAAxwiwAADEKkvb4wO13CNe/preview?authuser=1">State Exams Reasoning Course</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1_GYiKya22kMyK_28xglo8ePLC5mE0-87/preview?authuser=1">Railway Reasoning Course</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1bCqqbAIeRM42BbrMiJ_e52uDtphmN1pd/preview?authuser=1">Banking Reasoning Course</a>
+
+        <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb" target="_blank" rel="noopener noreferrer">YouTube</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1pTDIZlM8wfXG1Ye5DFBzYx3ATQxwvunI/preview?authuser=1">Study Material</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1wN2NIfQgkkmESJBVkhRnoiyqrfAzzwnt/preview?authuser=1">Live Classes</a>
+
         <a href="test-series.html">Test Series</a>
+
         <a href="exams.html">Exams</a>
-        <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb" target="_blank">YouTube</a>
+
     </div>
 
 </nav>
