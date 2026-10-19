@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +27,7 @@ nav{
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
+    gap:15px;
 }
 
 .logo{
@@ -35,18 +35,21 @@ nav{
     font-size:22px;
     font-weight:bold;
     text-decoration:none;
+    white-space:nowrap;
 }
 
 .nav-links{
     display:flex;
-    gap:22px;
+    gap:18px;
     flex-wrap:wrap;
+    align-items:center;
 }
 
 .nav-links a{
     color:white;
     text-decoration:none;
-    font-size:15px;
+    font-size:14px;
+    transition:color 0.2s ease;
 }
 
 .nav-links a:hover{
@@ -134,8 +137,15 @@ nav{
 
 .topic-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:20px;
+}
+
+.topic-link{
+    display:block;
+    height:100%;
+    color:inherit;
+    text-decoration:none;
 }
 
 .topic-card{
@@ -214,28 +224,31 @@ nav{
     background:#102a43;
 }
 
-footer{
-    background:#102a43;
-    color:white;
-    text-align:center;
-    padding:28px 20px;
-    margin-top:60px;
-}
+@media(max-width:1100px){
+    nav{
+        justify-content:center;
+    }
 
-footer p{
-    margin:5px 0;
-    font-size:14px;
-}
+    .nav-links{
+        justify-content:center;
+    }
 
-@media(max-width:900px){
     .topic-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,minmax(0,1fr));
     }
 }
 
 @media(max-width:600px){
+    .hero{
+        padding:45px 18px;
+    }
+
     .hero h1{
         font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
     }
 
     .topic-grid{
@@ -244,16 +257,23 @@ footer p{
 
     .container{
         width:92%;
+        margin:30px auto;
     }
 
-    nav{
-        justify-content:center;
-        gap:15px;
+    .intro{
+        padding:22px;
     }
 
     .nav-links{
-        justify-content:center;
         gap:12px;
+    }
+
+    .nav-links a{
+        font-size:13px;
+    }
+
+    .group-title{
+        font-size:20px;
     }
 }
 </style>
@@ -262,16 +282,34 @@ footer p{
 <body>
 
 <nav>
-    <a href="index.html" class="logo">Let's QualifyNow</a>
+    <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1YAAn487QNCJ2ZZqRLSUA5E_PW1ySGkTV/preview?authuser=1" class="logo">Let's QualifyNow</a>
 
     <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="study-material.html">Study Material</a>
-        <a href="live-classes.html">Live Classes</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1YAAn487QNCJ2ZZqRLSUA5E_PW1ySGkTV/preview?authuser=1">Home</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/16pANNysNqnH9hjlAlGzFVINGrCUpDwIo/preview?authuser=1">Government Exam Preparation</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1ruud8EAufHVPXfmCr5pNOam6kMwVbOfQ/preview?authuser=1">Courses</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/134PnVTi6Ci68kilDeGriquI77ve05H2l/preview?authuser=1">SSC Reasoning Course</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1dGw-BoRDDaAAxwiwAADEKkvb4wO13CNe/preview?authuser=1">State Exams Reasoning Course</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1_GYiKya22kMyK_28xglo8ePLC5mE0-87/preview?authuser=1">Railway Reasoning Course</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1bCqqbAIeRM42BbrMiJ_e52uDtphmN1pd/preview?authuser=1">Banking Reasoning Course</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1pTDIZlM8wfXG1Ye5DFBzYx3ATQxwvunI/preview?authuser=1">Study Material</a>
+
+        <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1wN2NIfQgkkmESJBVkhRnoiyqrfAzzwnt/preview?authuser=1">Live Classes</a>
+
         <a href="test-series.html">Test Series</a>
+
         <a href="exams.html">Exams</a>
+
         <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb" target="_blank" rel="noopener noreferrer">YouTube</a>
+
     </div>
 </nav>
 
@@ -287,6 +325,7 @@ footer p{
 
     <div class="intro">
         <h2>🎯 Practice Approach</h2>
+
         <p>
             Practice each Reasoning topic systematically with questions
             designed around SSC exam patterns. The focus will be on
@@ -294,6 +333,7 @@ footer p{
         </p>
 
         <div class="level-box">
+
             <div class="level">
                 <strong>🟢 Basic Level</strong>
                 Concept building and foundation practice.
@@ -313,6 +353,7 @@ footer p{
                 <strong>⏱️ Exam Level</strong>
                 Time-based questions following exam patterns.
             </div>
+
         </div>
     </div>
 
@@ -322,7 +363,7 @@ footer p{
 
     <div class="topic-grid">
 
-        <a href="ssc-analogy-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-analogy-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">01</div>
                 <h3>📌 Analogy</h3>
@@ -331,7 +372,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-classification-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-classification-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">02</div>
                 <h3>📌 Classification</h3>
@@ -340,7 +381,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-series-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-series-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">03</div>
                 <h3>📌 Series</h3>
@@ -349,7 +390,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-alphanumeric-series-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-alphanumeric-series-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">04</div>
                 <h3>📌 Alphanumeric Series</h3>
@@ -358,7 +399,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-coding-decoding-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-coding-decoding-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">05</div>
                 <h3>📌 Coding-Decoding</h3>
@@ -373,7 +414,7 @@ footer p{
 
     <div class="topic-grid">
 
-        <a href="ssc-blood-relation-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-blood-relation-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">06</div>
                 <h3>📌 Blood Relations</h3>
@@ -382,7 +423,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-direction-distance-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-direction-distance-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">07</div>
                 <h3>📌 Direction & Distance</h3>
@@ -391,7 +432,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-ranking-order-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-ranking-order-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">08</div>
                 <h3>📌 Ranking & Order</h3>
@@ -400,7 +441,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-syllogism-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-syllogism-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">09</div>
                 <h3>📌 Syllogism</h3>
@@ -415,7 +456,7 @@ footer p{
 
     <div class="topic-grid">
 
-        <a href="ssc-venn-diagram-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-venn-diagram-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">10</div>
                 <h3>📌 Venn Diagram</h3>
@@ -424,7 +465,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-word-formation-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-word-formation-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">11</div>
                 <h3>📌 Word Formation</h3>
@@ -433,7 +474,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-mathematical-operations-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-mathematical-operations-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">12</div>
                 <h3>📌 Mathematical Operations</h3>
@@ -442,7 +483,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-statement-conclusion-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-statement-conclusion-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">13</div>
                 <h3>📌 Statement & Conclusion</h3>
@@ -451,7 +492,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-statement-assumption-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-statement-assumption-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">14</div>
                 <h3>📌 Statement & Assumption</h3>
@@ -460,7 +501,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-statement-argument-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-statement-argument-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">15</div>
                 <h3>📌 Statement & Argument</h3>
@@ -469,7 +510,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-cause-effect-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-cause-effect-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">16</div>
                 <h3>📌 Cause & Effect</h3>
@@ -478,7 +519,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-decision-making-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-decision-making-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">17</div>
                 <h3>📌 Decision Making</h3>
@@ -487,7 +528,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-assertion-reason-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-assertion-reason-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">18</div>
                 <h3>📌 Assertion & Reason</h3>
@@ -496,7 +537,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-arithmetical-reasoning-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-arithmetical-reasoning-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">19</div>
                 <h3>📌 Arithmetical Reasoning</h3>
@@ -511,7 +552,7 @@ footer p{
 
     <div class="topic-grid">
 
-        <a href="ssc-puzzle-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-puzzle-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">20</div>
                 <h3>📌 Puzzle</h3>
@@ -520,7 +561,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-seating-arrangement-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-seating-arrangement-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">21</div>
                 <h3>📌 Seating Arrangement</h3>
@@ -535,7 +576,7 @@ footer p{
 
     <div class="topic-grid">
 
-        <a href="ssc-figure-classification-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-figure-classification-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">22</div>
                 <h3>📌 Figure Classification</h3>
@@ -544,7 +585,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-figure-analogy-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-figure-analogy-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">23</div>
                 <h3>📌 Figure Analogy</h3>
@@ -553,7 +594,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-figure-series-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-figure-series-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">24</div>
                 <h3>📌 Figure Series</h3>
@@ -562,7 +603,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-mirror-image-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-mirror-image-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">25</div>
                 <h3>📌 Mirror Image</h3>
@@ -571,16 +612,16 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-water-image-practice.html" style="text-decoration:none;color:inherit;display:block;">
-            <div class="topic-number">26</div>
+        <a href="ssc-water-image-practice.html" class="topic-link">
             <div class="topic-card">
+                <div class="topic-number">26</div>
                 <h3>📌 Water Image</h3>
                 <p>Water-image transformation and visual orientation practice.</p>
                 <span class="practice-level">Basic → Moderate</span>
             </div>
         </a>
 
-        <a href="ssc-paper-folding-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-paper-folding-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">27</div>
                 <h3>📌 Paper Folding</h3>
@@ -589,7 +630,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-paper-cutting-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-paper-cutting-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">28</div>
                 <h3>📌 Paper Cutting</h3>
@@ -598,7 +639,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-embedded-figures-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-embedded-figures-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">29</div>
                 <h3>📌 Embedded Figures</h3>
@@ -607,7 +648,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-counting-figures-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-counting-figures-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">31</div>
                 <h3>📌 Counting Figures</h3>
@@ -616,8 +657,7 @@ footer p{
             </div>
         </a>
 
-        <!-- TOPIC 32: CUBE & DICE -->
-        <a href="ssc-cube-dice-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-cube-dice-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">32</div>
                 <h3>📌 Cube & Dice</h3>
@@ -626,7 +666,7 @@ footer p{
             </div>
         </a>
 
-        <a href="ssc-pattern-completion-practice.html" style="text-decoration:none;color:inherit;display:block;">
+        <a href="ssc-pattern-completion-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">34</div>
                 <h3>📌 Pattern Completion</h3>
@@ -652,12 +692,6 @@ footer p{
     </div>
 
 </div>
-
-<footer>
-    <p><strong>Let's QualifyNow</strong></p>
-    <p>Structured Reasoning Preparation for Competitive Exams</p>
-    <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
