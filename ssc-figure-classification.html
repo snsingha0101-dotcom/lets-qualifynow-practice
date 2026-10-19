@@ -1,0 +1,916 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figure Classification | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.7;
+}
+
+.hero{
+    background:linear-gradient(135deg,#102a43,#173f5f);
+    color:white;
+    padding:65px 7%;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:800px;
+    color:#d9e2ec;
+}
+
+.container{
+    width:86%;
+    max-width:1150px;
+    margin:45px auto;
+}
+
+.section{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    margin-bottom:28px;
+    border:1px solid #d9e2ec;
+    box-shadow:0 8px 25px rgba(16,42,67,.06);
+}
+
+.section h2{
+    color:#102a43;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.section h3{
+    color:#173f5f;
+    margin:22px 0 10px;
+}
+
+ul{
+    padding-left:22px;
+}
+
+.highlight{
+    background:#eef5fb;
+    border-left:5px solid #173f5f;
+    padding:18px 20px;
+    border-radius:10px;
+    margin-top:18px;
+}
+
+.rule-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
+
+.rule{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:20px;
+}
+
+.rule strong{
+    color:#102a43;
+    display:block;
+    margin-bottom:6px;
+}
+
+/* FIGURE QUESTION */
+
+.question{
+    margin-top:30px;
+    padding:25px;
+    background:#fbfcfe;
+    border:1px solid #d9e2ec;
+    border-radius:14px;
+}
+
+.question-title{
+    font-size:20px;
+    font-weight:700;
+    color:#102a43;
+    margin-bottom:20px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.option{
+    background:white;
+    border:1px solid #bcccdc;
+    border-radius:12px;
+    padding:16px;
+    text-align:center;
+    transition:.25s;
+}
+
+.option:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 18px rgba(16,42,67,.10);
+}
+
+.option-label{
+    font-weight:700;
+    color:#173f5f;
+    margin-bottom:10px;
+}
+
+svg{
+    width:100%;
+    max-width:180px;
+    height:150px;
+}
+
+.answer{
+    margin-top:22px;
+    background:#edf7ed;
+    border-left:5px solid #2f855a;
+    padding:18px;
+    border-radius:10px;
+}
+
+.answer strong{
+    color:#276749;
+}
+
+.practice-answer{
+    margin-top:18px;
+    padding:15px 18px;
+    background:#fff8e8;
+    border-left:5px solid #d69e2e;
+    border-radius:9px;
+}
+
+.method{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
+
+.step{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    padding:20px;
+    border-radius:12px;
+}
+
+.step span{
+    display:inline-flex;
+    width:32px;
+    height:32px;
+    align-items:center;
+    justify-content:center;
+    background:#173f5f;
+    color:white;
+    border-radius:50%;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.back{
+    display:inline-block;
+    margin-top:8px;
+    background:#173f5f;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+@media(max-width:850px){
+    .options{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+}
+
+@media(max-width:520px){
+    .options{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .section{
+        padding:20px;
+    }
+
+    .container{
+        width:92%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>🔷 Figure Classification</h1>
+    <p>
+        Identify the figure that does not follow the common relationship
+        among the given figures using shape, position, symmetry, direction
+        and internal arrangement.
+    </p>
+</section>
+
+<div class="container">
+
+<section class="section">
+
+<h2>📘 What is Figure Classification?</h2>
+
+<p>
+Figure Classification is a non-verbal reasoning topic in which a group of
+figures is given and the student has to identify the figure that is
+different from the others according to a particular visual rule.
+</p>
+
+<div class="highlight">
+<strong>Important:</strong>
+The figures may look completely different. The classification is usually
+based on a hidden relationship such as rotation, symmetry, direction,
+number of elements, relative position or arrangement.
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🎯 Important Features to Check</h2>
+
+<div class="rule-box">
+
+<div class="rule">
+<strong>1. Shape</strong>
+Check the number and type of sides, curves and geometric elements.
+</div>
+
+<div class="rule">
+<strong>2. Position</strong>
+Observe the position of dots, arrows, lines and inner shapes.
+</div>
+
+<div class="rule">
+<strong>3. Direction</strong>
+Check whether arrows or triangular elements point in a particular direction.
+</div>
+
+<div class="rule">
+<strong>4. Rotation</strong>
+Three figures may represent the same arrangement after rotation.
+</div>
+
+<div class="rule">
+<strong>5. Symmetry</strong>
+Check vertical, horizontal or rotational symmetry.
+</div>
+
+<div class="rule">
+<strong>6. Internal Relationship</strong>
+Compare the relationship between the outer and inner elements.
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🧠 How to Solve Figure Classification</h2>
+
+<div class="method">
+
+<div class="step">
+<span>1</span>
+<strong>Observe all figures</strong>
+<p>Do not decide the answer after looking at only one option.</p>
+</div>
+
+<div class="step">
+<span>2</span>
+<strong>Compare structure</strong>
+<p>Check shape, direction and internal arrangement.</p>
+</div>
+
+<div class="step">
+<span>3</span>
+<strong>Check rotation</strong>
+<p>Ask whether the figures can become identical after rotation.</p>
+</div>
+
+<div class="step">
+<span>4</span>
+<strong>Find the common rule</strong>
+<p>Identify the relationship followed by three figures.</p>
+</div>
+
+<div class="step">
+<span>5</span>
+<strong>Find the exception</strong>
+<p>The figure that breaks the same rule is the answer.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXAMPLE 1 -->
+
+<section class="section">
+
+<h2>📝 SSC-Level Solved Example 1</h2>
+
+<div class="question">
+
+<div class="question-title">
+Four figures are given below. Three figures follow the same rotational relationship. Find the odd figure.
+</div>
+
+<div class="options">
+
+<div class="option">
+<div class="option-label">A</div>
+
+<svg viewBox="0 0 180 150">
+<rect x="35" y="25" width="110" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="45" r="8" fill="#173f5f"/>
+<line x1="90" y1="105" x2="90" y2="65"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,60 82,75 98,75" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">B</div>
+
+<svg viewBox="0 0 180 150">
+<rect x="35" y="25" width="110" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="130" cy="75" r="8" fill="#173f5f"/>
+<line x1="50" y1="75" x2="90" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="95,75 80,67 80,83" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">C</div>
+
+<svg viewBox="0 0 180 150">
+<rect x="35" y="25" width="110" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="105" r="8" fill="#173f5f"/>
+<line x1="90" y1="45" x2="90" y2="85"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,90 82,75 98,75" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">D</div>
+
+<svg viewBox="0 0 180 150">
+<rect x="35" y="25" width="110" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="50" cy="75" r="8" fill="#173f5f"/>
+<line x1="130" y1="75" x2="90" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="85,75 100,67 100,83" fill="#173f5f"/>
+</svg>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answer: D</strong><br>
+In A, B and C, the arrow direction and dot position maintain the same
+clockwise relationship after rotation. In D, the internal arrow relationship
+is reversed. Therefore, D is the odd figure.
+</div>
+
+</div>
+
+</section>
+
+<!-- EXAMPLE 2 -->
+
+<section class="section">
+
+<h2>📝 SSC-Level Solved Example 2</h2>
+
+<div class="question">
+
+<div class="question-title">
+Find the figure that does not follow the same inner-outer relationship.
+</div>
+
+<div class="options">
+
+<div class="option">
+<div class="option-label">A</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,15 145,55 125,120 55,120 35,55"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,45 110,60 102,85 78,85 70,60"
+         fill="none" stroke="#173f5f" stroke-width="4"/>
+<circle cx="90" cy="68" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">B</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,15 145,75 90,135 35,75"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,45 115,75 90,105 65,75"
+         fill="none" stroke="#173f5f" stroke-width="4"/>
+<circle cx="90" cy="75" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">C</div>
+<svg viewBox="0 0 180 150">
+<polygon points="45,35 135,35 155,75 135,115 45,115 25,75"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<polygon points="60,55 120,55 132,75 120,95 60,95 48,75"
+         fill="none" stroke="#173f5f" stroke-width="4"/>
+<circle cx="90" cy="75" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">D</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,15 150,50 150,100 90,135 30,100 30,50"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,45 120,62 120,88 90,105 60,88 60,62"
+         fill="none" stroke="#173f5f" stroke-width="4"/>
+<circle cx="90" cy="75" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answer: C</strong><br>
+A, B and D contain a centrally placed inner figure whose structure maintains
+a balanced relationship with the outer figure. In C, the inner and outer
+figures have a different side relationship and the internal structure does
+not maintain the same proportional pattern.
+</div>
+
+</div>
+
+</section>
+
+<!-- EXAMPLE 3 -->
+
+<section class="section">
+
+<h2>📝 SSC-Level Solved Example 3</h2>
+
+<div class="question">
+
+<div class="question-title">
+Three figures follow the same directional relationship between the arrow and dot. Identify the odd figure.
+</div>
+
+<div class="options">
+
+<div class="option">
+<div class="option-label">A</div>
+<svg viewBox="0 0 180 150">
+<circle cx="90" cy="75" r="48"
+        fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="75" x2="90" y2="35"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,28 82,43 98,43" fill="#173f5f"/>
+<circle cx="125" cy="105" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">B</div>
+<svg viewBox="0 0 180 150">
+<circle cx="90" cy="75" r="48"
+        fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="75" x2="130" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="137,75 122,67 122,83" fill="#173f5f"/>
+<circle cx="60" cy="110" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">C</div>
+<svg viewBox="0 0 180 150">
+<circle cx="90" cy="75" r="48"
+        fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="75" x2="90" y2="115"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,122 82,107 98,107" fill="#173f5f"/>
+<circle cx="55" cy="45" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">D</div>
+<svg viewBox="0 0 180 150">
+<circle cx="90" cy="75" r="48"
+        fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="75" x2="50" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="43,75 58,67 58,83" fill="#173f5f"/>
+<circle cx="125" cy="45" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answer: D</strong><br>
+In A, B and C, the dot lies in the quadrant obtained by moving
+approximately 90° clockwise from the arrow direction. In D, the dot is
+positioned in the opposite rotational relationship. Hence D is different.
+</div>
+
+</div>
+
+</section>
+
+<!-- EXAMPLE 4 -->
+
+<section class="section">
+
+<h2>📝 SSC-Level Solved Example 4</h2>
+
+<div class="question">
+
+<div class="question-title">
+Three figures have the same symmetry relationship between the outer figure and the internal line. Find the odd figure.
+</div>
+
+<div class="options">
+
+<div class="option">
+<div class="option-label">A</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,18 140,48 140,102 90,132 40,102 40,48"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="55" y1="75" x2="125" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="75" r="6" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">B</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,18 140,48 140,102 90,132 40,102 40,48"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="55" y1="75" x2="125" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="75" r="6" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">C</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,18 140,48 140,102 90,132 40,102 40,48"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="35" x2="90" y2="115"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="75" r="6" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">D</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,18 140,48 140,102 90,132 40,102 40,48"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="55" y1="75" x2="125" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="75" r="6" fill="#173f5f"/>
+</svg>
+</div>
+
+</div>
+
+<div class="answer">
+<strong>Answer: C</strong><br>
+A, B and D have a horizontal internal axis matching the horizontal symmetry
+of the outer figure. C changes the internal axis to vertical. Therefore C
+breaks the common relationship.
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🔄 Rotation vs Reflection</h2>
+
+<p>
+This is one of the most important ideas in Figure Classification.
+A figure may look different simply because it has been rotated. Rotation
+does not change the relative order of its elements.
+</p>
+
+<div class="highlight">
+<strong>Rotation:</strong> The complete figure turns around a point while
+the relationship between its parts remains unchanged.
+<br><br>
+<strong>Reflection:</strong> The figure is flipped like a mirror. The
+left-right relationship changes.
+</div>
+
+</section>
+
+<!-- PRACTICE -->
+
+<section class="section">
+
+<h2>✏️ SSC-Level Practice Questions</h2>
+
+<div class="question">
+
+<div class="question-title">
+Q1. Three figures follow the same arrow-dot relationship. Find the odd figure.
+</div>
+
+<div class="options">
+
+<div class="option">
+<div class="option-label">A</div>
+<svg viewBox="0 0 180 150">
+<rect x="40" y="25" width="100" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="100" x2="90" y2="55"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,48 82,63 98,63" fill="#173f5f"/>
+<circle cx="120" cy="55" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">B</div>
+<svg viewBox="0 0 180 150">
+<rect x="40" y="25" width="100" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="55" y1="75" x2="100" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="107,75 92,67 92,83" fill="#173f5f"/>
+<circle cx="105" cy="110" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">C</div>
+<svg viewBox="0 0 180 150">
+<rect x="40" y="25" width="100" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="50" x2="90" y2="95"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="90,102 82,87 98,87" fill="#173f5f"/>
+<circle cx="60" cy="105" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">D</div>
+<svg viewBox="0 0 180 150">
+<rect x="40" y="25" width="100" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="125" y1="75" x2="80" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<polygon points="73,75 88,67 88,83" fill="#173f5f"/>
+<circle cx="75" cy="45" r="8" fill="#173f5f"/>
+</svg>
+</div>
+
+</div>
+
+<div class="practice-answer">
+<strong>Answer: D</strong> — D reverses the relative arrow-dot arrangement.
+</div>
+
+</div>
+
+<div class="question">
+
+<div class="question-title">
+Q2. Three figures are rotations of the same basic arrangement. Find the odd figure.
+</div>
+
+<div class="options">
+
+<div class="option">
+<div class="option-label">A</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,20 135,95 45,95"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="48" r="7" fill="#173f5f"/>
+<line x1="65" y1="82" x2="115" y2="82"
+      stroke="#173f5f" stroke-width="5"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">B</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,130 45,55 135,55"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="102" r="7" fill="#173f5f"/>
+<line x1="65" y1="68" x2="115" y2="68"
+      stroke="#173f5f" stroke-width="5"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">C</div>
+<svg viewBox="0 0 180 150">
+<polygon points="20,75 125,25 125,125"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="50" cy="75" r="7" fill="#173f5f"/>
+<line x1="90" y1="50" x2="90" y2="100"
+      stroke="#173f5f" stroke-width="5"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">D</div>
+<svg viewBox="0 0 180 150">
+<polygon points="160,75 55,25 55,125"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<circle cx="130" cy="75" r="7" fill="#173f5f"/>
+<line x1="90" y1="50" x2="90" y2="100"
+      stroke="#173f5f" stroke-width="5"/>
+</svg>
+</div>
+
+</div>
+
+<div class="practice-answer">
+<strong>Answer: D</strong> — A, B and C preserve the same relative position
+of the dot and internal line after rotation. D changes that relationship.
+</div>
+
+</div>
+
+<div class="question">
+
+<div class="question-title">
+Q3. Identify the figure that does not maintain the same symmetry relationship.
+</div>
+
+<div class="options">
+
+<div class="option">
+<div class="option-label">A</div>
+<svg viewBox="0 0 180 150">
+<circle cx="90" cy="75" r="50"
+        fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="55" y1="75" x2="125" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="75" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">B</div>
+<svg viewBox="0 0 180 150">
+<rect x="40" y="25" width="100" height="100"
+      fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="50" y1="75" x2="130" y2="75"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="75" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">C</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,20 140,110 40,110"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="60" y1="80" x2="120" y2="80"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="90" cy="80" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+<div class="option">
+<div class="option-label">D</div>
+<svg viewBox="0 0 180 150">
+<polygon points="90,20 145,75 90,130 35,75"
+         fill="none" stroke="#173f5f" stroke-width="5"/>
+<line x1="90" y1="45" x2="90" y2="105"
+      stroke="#173f5f" stroke-width="5"/>
+<circle cx="115" cy="75" r="5" fill="#173f5f"/>
+</svg>
+</div>
+
+</div>
+
+<div class="practice-answer">
+<strong>Answer: D</strong> — In A, B and C the internal element follows
+the horizontal symmetry axis. D uses a vertical internal arrangement with
+the dot displaced from the central axis.
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>⚠️ Common Mistakes</h2>
+
+<ul>
+<li>Only comparing the outer shape.</li>
+<li>Ignoring the position of the internal dot or line.</li>
+<li>Considering a rotated figure as completely different.</li>
+<li>Confusing rotation with mirror reflection.</li>
+<li>Choosing an option before finding the common rule.</li>
+<li>Checking only one feature instead of the complete relationship.</li>
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>⚡ Quick Solving Method</h2>
+
+<div class="highlight">
+
+<strong>Step 1:</strong> Look at the outer shape.<br>
+<strong>Step 2:</strong> Check internal lines and symbols.<br>
+<strong>Step 3:</strong> Check direction of arrows or pointed elements.<br>
+<strong>Step 4:</strong> Test rotation.<br>
+<strong>Step 5:</strong> Check symmetry and mirror relationship.<br>
+<strong>Step 6:</strong> Find the common relationship among three figures.<br>
+<strong>Step 7:</strong> Select the figure that violates that relationship.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>📌 Quick Revision</h2>
+
+<ul>
+<li>Figure Classification is based on visual relationships.</li>
+<li>Always compare all four figures.</li>
+<li>Rotation does not necessarily make a figure different.</li>
+<li>Mirror image changes left-right relationship.</li>
+<li>Check both outer and inner elements.</li>
+<li>Look for symmetry, direction and relative position.</li>
+<li>The correct answer is the figure that breaks the established rule.</li>
+</ul>
+
+</section>
+
+<section class="section">
+
+<a href="ssc-concept-notes.html" class="back">
+← Back to SSC Concept Notes
+</a>
+
+</section>
+
+</div>
+
+</body>
+</html>
