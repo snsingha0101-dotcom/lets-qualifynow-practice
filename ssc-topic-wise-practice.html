@@ -24,9 +24,9 @@ nav{
     background:#102a43;
     padding:16px 7%;
     display:flex;
-    justify-content:space-between;
+    flex-direction:column;
+    justify-content:center;
     align-items:center;
-    flex-wrap:wrap;
     gap:15px;
 }
 
@@ -36,13 +36,16 @@ nav{
     font-weight:bold;
     text-decoration:none;
     white-space:nowrap;
+    text-align:center;
 }
 
 .nav-links{
     display:flex;
+    justify-content:center;
     gap:18px;
     flex-wrap:wrap;
     align-items:center;
+    width:100%;
 }
 
 .nav-links a{
@@ -210,14 +213,16 @@ nav{
 }
 
 .back-btn{
-    display:inline-block;
-    margin-top:25px;
+    display:block;
+    width:fit-content;
+    margin:25px auto 0;
     background:#173f5f;
     color:white;
     text-decoration:none;
     padding:12px 22px;
     border-radius:8px;
     font-weight:bold;
+    text-align:center;
 }
 
 .back-btn:hover{
@@ -225,14 +230,6 @@ nav{
 }
 
 @media(max-width:1100px){
-    nav{
-        justify-content:center;
-    }
-
-    .nav-links{
-        justify-content:center;
-    }
-
     .topic-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
     }
@@ -281,11 +278,11 @@ nav{
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1YAAn487QNCJ2ZZqRLSUA5E_PW1ySGkTV/preview?authuser=1" class="logo">Let's QualifyNow</a>
 
     <div class="nav-links">
-
         <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/1YAAn487QNCJ2ZZqRLSUA5E_PW1ySGkTV/preview?authuser=1">Home</a>
 
         <a href="https://sites.google.com/u/1/d/1vc_HIUmaIWTLzdhA4-6u-ldAOMiGpYm4/p/16pANNysNqnH9hjlAlGzFVINGrCUpDwIo/preview?authuser=1">Government Exam Preparation</a>
@@ -309,10 +306,10 @@ nav{
         <a href="exams.html">Exams</a>
 
         <a href="https://youtube.com/@letsqualifynow7636?si=-Mz2gn90UhH5ozAb" target="_blank" rel="noopener noreferrer">YouTube</a>
-
     </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
     <h1>📝 SSC Reasoning Topic-wise Practice</h1>
     <p>
@@ -359,7 +356,7 @@ nav{
 
     <h2 class="section-title">📚 Topic-wise Practice</h2>
 
-    <h3 class="group-title">General Intelligence & Reasoning</h3>
+    <h3 class="group-title">General Intelligence &amp; Reasoning</h3>
 
     <div class="topic-grid">
 
@@ -426,7 +423,7 @@ nav{
         <a href="ssc-direction-distance-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">07</div>
-                <h3>📌 Direction & Distance</h3>
+                <h3>📌 Direction &amp; Distance</h3>
                 <p>Direction, distance, turns and shortest-distance practice.</p>
                 <span class="practice-level">Basic → Advanced</span>
             </div>
@@ -435,7 +432,7 @@ nav{
         <a href="ssc-ranking-order-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">08</div>
-                <h3>📌 Ranking & Order</h3>
+                <h3>📌 Ranking &amp; Order</h3>
                 <p>Position, rank, total persons and ordering-based questions.</p>
                 <span class="practice-level">Basic → Exam Level</span>
             </div>
@@ -486,7 +483,7 @@ nav{
         <a href="ssc-statement-conclusion-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">13</div>
-                <h3>📌 Statement & Conclusion</h3>
+                <h3>📌 Statement &amp; Conclusion</h3>
                 <p>Logical conclusion questions based on given statements.</p>
                 <span class="practice-level">Moderate → Advanced</span>
             </div>
@@ -495,7 +492,7 @@ nav{
         <a href="ssc-statement-assumption-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">14</div>
-                <h3>📌 Statement & Assumption</h3>
+                <h3>📌 Statement &amp; Assumption</h3>
                 <p>Identify valid and implicit assumptions from statements.</p>
                 <span class="practice-level">Moderate → Advanced</span>
             </div>
@@ -504,7 +501,7 @@ nav{
         <a href="ssc-statement-argument-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">15</div>
-                <h3>📌 Statement & Argument</h3>
+                <h3>📌 Statement &amp; Argument</h3>
                 <p>Strong and weak arguments with logical evaluation.</p>
                 <span class="practice-level">Moderate → Advanced</span>
             </div>
@@ -513,15 +510,15 @@ nav{
         <a href="ssc-cause-effect-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">16</div>
-                <h3>📌 Cause & Effect</h3>
+                <h3>📌 Cause &amp; Effect</h3>
                 <p>Identify logical causes, effects and relationships.</p>
                 <span class="practice-level">Moderate → Advanced</span>
             </div>
         </a>
 
         <a href="ssc-decision-making-practice.html" class="topic-link">
+            <div class="topic-number">17</div>
             <div class="topic-card">
-                <div class="topic-number">17</div>
                 <h3>📌 Decision Making</h3>
                 <p>Condition-based and logical decision-making questions.</p>
                 <span class="practice-level">Advanced → Exam Level</span>
@@ -531,7 +528,7 @@ nav{
         <a href="ssc-assertion-reason-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">18</div>
-                <h3>📌 Assertion & Reason</h3>
+                <h3>📌 Assertion &amp; Reason</h3>
                 <p>Evaluate assertion and reason relationships logically.</p>
                 <span class="practice-level">Moderate → Advanced</span>
             </div>
@@ -660,7 +657,7 @@ nav{
         <a href="ssc-cube-dice-practice.html" class="topic-link">
             <div class="topic-card">
                 <div class="topic-number">32</div>
-                <h3>📌 Cube & Dice</h3>
+                <h3>📌 Cube &amp; Dice</h3>
                 <p>Opposite faces, adjacent faces and dice-based reasoning.</p>
                 <span class="practice-level">Moderate → Advanced</span>
             </div>
