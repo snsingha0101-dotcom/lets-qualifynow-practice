@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -203,7 +204,6 @@ body{
     </p>
 </section>
 
-
 <div class="container">
 
     <section class="section">
@@ -226,7 +226,6 @@ body{
             the arrangement step by step.
         </div>
     </section>
-
 
     <section class="section">
         <h2>🔹 Important Types of Seating Arrangement</h2>
@@ -284,7 +283,6 @@ body{
         </div>
     </section>
 
-
     <section class="section">
         <h2>📝 Important Seating Terms</h2>
 
@@ -300,7 +298,6 @@ body{
             <li><strong>Extreme End:</strong> The first or last position in a linear arrangement.</li>
         </ul>
     </section>
-
 
     <section class="section">
         <h2>🧭 Direction Rules in Linear Arrangement</h2>
@@ -335,7 +332,6 @@ body{
         </div>
     </section>
 
-
     <section class="section">
         <h2>🔄 Circular Arrangement Rules</h2>
 
@@ -368,7 +364,6 @@ body{
         </div>
     </section>
 
-
     <section class="section">
         <h2>🧠 Basic Approach to Seating Arrangement</h2>
 
@@ -389,7 +384,6 @@ body{
             Draw the positions clearly and fill them step by step.
         </div>
     </section>
-
 
     <section class="section">
         <h2>📊 Solving a Linear Arrangement</h2>
@@ -426,6 +420,361 @@ body{
         </div>
     </section>
 
+    <section class="section">
+        <h2>🔵 Solved Example 1 — Linear Seating</h2>
+
+        <div class="example">
+            <p>
+                Five persons A, B, C, D and E sit in a row facing North.
+            </p>
+
+            <p>
+                A sits at the extreme left.<br>
+                B sits immediately to the right of A.<br>
+                C sits immediately to the right of B.<br>
+                D sits at the extreme right.
+            </p>
+
+            <p>
+                Therefore:
+            </p>
+
+            <div class="arrangement">
+                A → B → C → E → D
+            </div>
+
+            <p>
+                <strong>Question:</strong> Who sits between C and D?
+            </p>
+        </div>
+
+        <div class="answer">
+            <strong>Answer: E</strong><br>
+            E sits between C and D.
+        </div>
+    </section>
 
     <section class="section">
-        <h2>🔵 Solved Example 1 — Linear Seating</h
+        <h2>🔵 Solved Example 2 — Facing South</h2>
+
+        <div class="example">
+            <p>
+                Four persons P, Q, R and S sit in a row facing South.
+            </p>
+
+            <p>
+                Q sits immediately to the left of R.<br>
+                P sits immediately to the left of Q.<br>
+                S sits at the remaining position.
+            </p>
+
+            <p>
+                Since everyone is facing South, their left is our right.
+            </p>
+
+            <div class="arrangement">
+                S → R → Q → P
+            </div>
+        </div>
+
+        <div class="answer">
+            <strong>Learning Point:</strong>
+            When people face South, their left and right directions are
+            opposite to our visual left and right.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🔵 Solved Example 3 — Circular Arrangement</h2>
+
+        <div class="example">
+            <p>
+                Four persons A, B, C and D sit around a circle facing the centre.
+            </p>
+
+            <p>
+                A sits opposite C.<br>
+                B sits opposite D.
+            </p>
+
+            <p>
+                One possible representation is:
+            </p>
+
+            <div class="arrangement">
+                A ↔ C &nbsp;&nbsp;&nbsp; B ↔ D
+            </div>
+
+            <p>
+                The exact starting position in a circular arrangement is
+                generally not important; relative positions are important.
+            </p>
+        </div>
+
+        <div class="answer">
+            <strong>Learning Point:</strong>
+            In circular arrangements, focus on relative positions such as
+            opposite, immediate neighbour and left/right.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🔵 Solved Example 4 — Immediate Neighbours</h2>
+
+        <div class="example">
+            <p>
+                Six persons P, Q, R, S, T and U sit in a row.
+            </p>
+
+            <p>
+                P sits immediately before Q.<br>
+                R sits immediately after Q.
+            </p>
+
+            <p>
+                Therefore, the three-person block is:
+            </p>
+
+            <div class="arrangement">
+                P → Q → R
+            </div>
+
+            <p>
+                This block should be treated as a single unit while
+                solving the remaining conditions.
+            </p>
+        </div>
+
+        <div class="answer">
+            <strong>Learning Point:</strong>
+            Whenever two or more people have immediate-position relations,
+            create a block first.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🔍 Immediate Neighbour & Second Position</h2>
+
+        <h3>Immediate Neighbour</h3>
+
+        <p>
+            If A sits immediately to the right of B, there is no person
+            between A and B.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong>
+            B → A
+        </div>
+
+        <h3>Second Position</h3>
+
+        <p>
+            If A sits second to the right of B, exactly one position
+            lies between them.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong>
+            B → X → A
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>⚠️ Common Direction Mistakes</h2>
+
+        <ul>
+            <li>Forgetting whether the person is facing North or South.</li>
+            <li>Applying the same left/right rule to every person.</li>
+            <li>Confusing our left with the person's left.</li>
+            <li>Ignoring centre/outside direction in circular arrangements.</li>
+            <li>Assuming an arrangement without checking all clues.</li>
+        </ul>
+
+        <div class="warning">
+            <strong>Exam Tip:</strong>
+            Always write the facing direction before starting a
+            direction-based seating question.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🎯 How to Solve Seating Arrangement Questions</h2>
+
+        <ol>
+            <li>Identify whether the arrangement is linear or circular.</li>
+            <li>Check the facing direction.</li>
+            <li>Draw the required number of positions.</li>
+            <li>Place fixed positions first.</li>
+            <li>Make immediate-neighbour blocks.</li>
+            <li>Apply left/right conditions carefully.</li>
+            <li>Use opposite and second-position clues.</li>
+            <li>Eliminate impossible arrangements.</li>
+            <li>Verify every clue.</li>
+            <li>Answer only after the complete arrangement is confirmed.</li>
+        </ol>
+    </section>
+
+    <section class="section">
+        <h2>📝 SSC-Level Practice Questions</h2>
+
+        <div class="practice">
+            <h3>Q1.</h3>
+            <p>
+                Five persons A, B, C, D and E sit in a row facing North.
+                A sits at the extreme left. B sits immediately to the right
+                of A. C sits immediately to the right of B. D sits at the
+                extreme right. Who sits between C and D?
+            </p>
+            <p><strong>Answer:</strong> E</p>
+        </div>
+
+        <div class="practice">
+            <h3>Q2.</h3>
+            <p>
+                Six persons P, Q, R, S, T and U sit in a row facing North.
+                P sits at the extreme left. Q sits immediately to the right
+                of P. R sits immediately to the right of Q. U sits at the
+                extreme right. Who sits between R and U?
+            </p>
+            <p><strong>Answer:</strong> S and T
+            </p>
+        </div>
+
+        <div class="practice">
+            <h3>Q3.</h3>
+            <p>
+                Four persons A, B, C and D sit in a row facing South.
+                B sits immediately to the left of C. A sits immediately to
+                the left of B. Who sits immediately to the right of C
+                from the person's perspective?
+            </p>
+            <p><strong>Answer:</strong> D</p>
+        </div>
+
+        <div class="practice">
+            <h3>Q4.</h3>
+            <p>
+                Five persons P, Q, R, S and T sit in a row facing North.
+                Q sits immediately between P and R. S sits at the extreme
+                right. If P is at the second position, who sits at the
+                fourth position?
+            </p>
+            <p><strong>Answer:</strong> R</p>
+        </div>
+
+        <div class="practice">
+            <h3>Q5.</h3>
+            <p>
+                Seven persons A, B, C, D, E, F and G sit in a row facing North.
+                D sits at the centre. B sits immediately to the left of D.
+                F sits immediately to the right of D. A sits at the extreme
+                left and G at the extreme right. Who sits immediately to
+                the left of F?
+            </p>
+            <p><strong>Answer:</strong> D</p>
+        </div>
+
+        <div class="practice">
+            <h3>Q6.</h3>
+            <p>
+                Six persons A, B, C, D, E and F sit around a circle facing
+                the centre. A sits opposite D. B sits opposite E.
+                Who sits opposite C?
+            </p>
+            <p><strong>Answer:</strong> F</p>
+        </div>
+
+        <div class="practice">
+            <h3>Q7.</h3>
+            <p>
+                Five persons P, Q, R, S and T sit in a row facing North.
+                P sits immediately before Q. R sits immediately after Q.
+                S sits at the extreme left. Who sits immediately before R?
+            </p>
+            <p><strong>Answer:</strong> Q</p>
+        </div>
+
+        <div class="practice">
+            <h3>Q8.</h3>
+            <p>
+                Eight persons A, B, C, D, E, F, G and H sit in a row facing
+                North. A sits at the extreme left and H at the extreme right.
+                B sits immediately to the right of A. G sits immediately
+                to the left of H. C sits immediately to the right of B.
+                Who sits between C and G?
+            </p>
+            <p><strong>Answer:</strong> D, E and F</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>❌ Common Mistakes</h2>
+
+        <ul>
+            <li>Not checking the facing direction.</li>
+            <li>Confusing immediate neighbour with second position.</li>
+            <li>Using left/right rules incorrectly.</li>
+            <li>Forgetting whether people face the centre or outside.</li>
+            <li>Starting from a weak clue instead of a fixed clue.</li>
+            <li>Not creating blocks for immediate relations.</li>
+            <li>Ignoring one of the given conditions.</li>
+            <li>Not verifying the final arrangement.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>⚡ Quick Solving Method</h2>
+
+        <ol>
+            <li><strong>Identify</strong> the arrangement type.</li>
+            <li><strong>Check</strong> the facing direction.</li>
+            <li><strong>Draw</strong> the positions.</li>
+            <li><strong>Place</strong> fixed clues.</li>
+            <li><strong>Create</strong> immediate-neighbour blocks.</li>
+            <li><strong>Connect</strong> the remaining clues.</li>
+            <li><strong>Eliminate</strong> impossible cases.</li>
+            <li><strong>Verify</strong> the complete arrangement.</li>
+            <li><strong>Answer</strong> the question.</li>
+        </ol>
+
+        <div class="highlight">
+            <strong>Exam Tip:</strong>
+            Seating Arrangement becomes much easier when the positions
+            are drawn clearly instead of being solved mentally.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>📌 Quick Revision</h2>
+
+        <ul>
+            <li>Identify the arrangement type first.</li>
+            <li>Check whether people face North, South, centre or outside.</li>
+            <li>Use fixed positions first.</li>
+            <li>Make blocks for immediate-neighbour conditions.</li>
+            <li>Remember that left/right depends on facing direction.</li>
+            <li>In circular arrangements, relative position is important.</li>
+            <li>Use opposite-position clues carefully.</li>
+            <li>Verify every condition before answering.</li>
+            <li>Practice improves speed and accuracy.</li>
+        </ul>
+    </section>
+
+    <section class="section" style="text-align:center;">
+        <h2>📚 Continue Your SSC Reasoning Preparation</h2>
+
+        <p>
+            Explore other SSC Reasoning concept topics and build
+            your preparation step by step.
+        </p>
+
+        <a href="ssc-concept-notes.html" class="btn">
+            ← Back to SSC Concept Notes
+        </a>
+    </section>
+
+</div>
+
+</body>
+</html>
