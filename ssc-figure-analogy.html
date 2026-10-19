@@ -22,19 +22,23 @@ body{
 
 .hero{
     background:linear-gradient(135deg,#102a43,#173f5f);
-    color:white;
+    color:#ffffff;
     padding:65px 7%;
+    text-align:center;
 }
 
 .hero h1{
     font-size:42px;
     margin-bottom:12px;
+    text-align:center;
 }
 
 .hero p{
     font-size:18px;
     max-width:850px;
+    margin:0 auto;
     color:#d9e2ec;
+    text-align:center;
 }
 
 .container{
@@ -44,36 +48,37 @@ body{
 }
 
 .section{
-    background:white;
+    background:#ffffff;
     padding:30px;
     border-radius:16px;
     margin-bottom:28px;
     border:1px solid #d9e2ec;
-    box-shadow:0 8px 25px rgba(16,42,67,.06);
+    box-shadow:0 4px 14px rgba(16,42,67,0.06);
 }
 
 .section h2{
     color:#102a43;
-    font-size:28px;
+    font-size:27px;
     margin-bottom:18px;
 }
 
 .section h3{
     color:#173f5f;
-    margin:22px 0 10px;
+    font-size:21px;
+    margin-bottom:12px;
 }
 
 .highlight{
-    background:#eef5fb;
+    background:#eef6fb;
     border-left:5px solid #173f5f;
-    padding:18px 20px;
-    border-radius:10px;
-    margin-top:18px;
+    padding:18px;
+    border-radius:8px;
+    margin:18px 0;
 }
 
 .rule-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:18px;
     margin-top:20px;
 }
@@ -81,185 +86,197 @@ body{
 .rule-card{
     background:#f7f9fc;
     border:1px solid #d9e2ec;
-    border-radius:12px;
     padding:20px;
+    border-radius:12px;
 }
 
-.rule-card strong{
-    display:block;
-    color:#102a43;
-    margin-bottom:7px;
+.rule-card h3{
+    font-size:18px;
+    margin-bottom:8px;
 }
 
 .method{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:18px;
     margin-top:20px;
 }
 
 .step{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    padding:18px;
     background:#f7f9fc;
     border:1px solid #d9e2ec;
-    padding:20px;
     border-radius:12px;
 }
 
 .step-number{
-    width:32px;
-    height:32px;
     background:#173f5f;
-    color:white;
+    color:#ffffff;
+    min-width:34px;
+    height:34px;
     display:flex;
     align-items:center;
     justify-content:center;
     border-radius:50%;
     font-weight:bold;
-    margin-bottom:10px;
 }
 
 .question{
-    margin-top:30px;
-    padding:25px;
-    background:#fbfcfe;
+    background:#ffffff;
     border:1px solid #d9e2ec;
-    border-radius:14px;
+    border-radius:12px;
+    padding:22px;
+    margin:22px 0;
 }
 
 .question-title{
-    font-size:20px;
-    font-weight:700;
+    font-size:18px;
+    font-weight:bold;
     color:#102a43;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .analogy-row{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:18px;
+    gap:15px;
     flex-wrap:wrap;
-    margin:20px 0 25px;
+    margin:20px 0;
 }
 
 .figure-box{
-    width:190px;
-    min-height:180px;
-    background:white;
-    border:1px solid #bcccdc;
-    border-radius:12px;
-    padding:12px;
-    text-align:center;
+    width:130px;
+    min-height:125px;
+    border:2px solid #829ab1;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ffffff;
+    padding:10px;
 }
 
 .figure-label{
-    font-weight:700;
+    font-weight:bold;
     color:#173f5f;
-    margin-bottom:5px;
+    text-align:center;
+    margin-bottom:8px;
 }
 
 .relation{
-    font-size:28px;
+    font-size:25px;
     font-weight:bold;
-    color:#102a43;
+    color:#173f5f;
+    text-align:center;
 }
 
 .options{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-top:18px;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+    margin-top:20px;
 }
 
 .option{
-    background:white;
-    border:1px solid #bcccdc;
-    border-radius:12px;
-    padding:14px;
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:15px;
     text-align:center;
-    transition:.25s;
-}
-
-.option:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 18px rgba(16,42,67,.10);
 }
 
 .option-label{
-    font-weight:700;
+    font-weight:bold;
     color:#173f5f;
     margin-bottom:8px;
 }
 
 svg{
-    width:100%;
-    max-width:170px;
-    height:145px;
+    max-width:100%;
+    height:auto;
 }
 
 .answer{
-    margin-top:22px;
-    background:#edf7ed;
-    border-left:5px solid #2f855a;
-    padding:18px;
-    border-radius:10px;
-}
-
-.answer strong{
-    color:#276749;
+    background:#e6f4ea;
+    border-left:5px solid #2e7d32;
+    padding:15px;
+    border-radius:8px;
+    margin-top:18px;
 }
 
 .practice-answer{
+    background:#eef6fb;
+    border-left:5px solid #173f5f;
+    padding:15px;
+    border-radius:8px;
     margin-top:18px;
-    padding:15px 18px;
-    background:#fff8e8;
-    border-left:5px solid #d69e2e;
-    border-radius:9px;
 }
 
 ul{
-    padding-left:22px;
+    padding-left:24px;
+    margin-top:10px;
+}
+
+li{
+    margin-bottom:8px;
 }
 
 .back{
     display:inline-block;
-    margin-top:8px;
     background:#173f5f;
-    color:white;
-    padding:12px 22px;
-    border-radius:8px;
+    color:#ffffff;
     text-decoration:none;
-    font-weight:600;
+    padding:12px 24px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:background 0.2s ease;
 }
 
-@media(max-width:850px){
+.back:hover{
+    background:#102a43;
+}
 
-    .options{
-        grid-template-columns:repeat(2,1fr);
+.back-container{
+    text-align:center;
+}
+
+@media(max-width:768px){
+    .hero{
+        padding:45px 6%;
     }
 
     .hero h1{
-        font-size:34px;
-    }
-}
-
-@media(max-width:520px){
-
-    .options{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
+        font-size:32px;
     }
 
-    .figure-box{
-        width:150px;
+    .hero p{
+        font-size:16px;
+    }
+
+    .container{
+        width:92%;
+        margin:28px auto;
     }
 
     .section{
         padding:20px;
     }
 
-    .container{
-        width:92%;
+    .section h2{
+        font-size:23px;
+    }
+
+    .figure-box{
+        width:105px;
+        min-height:105px;
+    }
+
+    .analogy-row{
+        gap:10px;
     }
 }
 </style>
@@ -268,1228 +285,714 @@ ul{
 <body>
 
 <section class="hero">
-
-<h1>🔷 Figure Analogy</h1>
-
-<p>
-Understand the relationship between two figures and apply the same
-relationship to identify the correct corresponding figure.
-</p>
-
+    <h1>🔷 Figure Analogy</h1>
+    <p>Understand the relationship between two figures and apply the same relationship to identify the correct corresponding figure.</p>
 </section>
 
-
-<div class="container">
-
-
-<section class="section">
-
-<h2>📘 What is Figure Analogy?</h2>
-
-<p>
-Figure Analogy is a non-verbal reasoning topic in which two figures are
-related in a particular way. A third figure is then given and the student
-has to identify the figure that will have the same relationship with it.
-</p>
-
-<div class="highlight">
-
-<strong>Basic Pattern:</strong>
-
-Figure A : Figure B :: Figure C : ?
-
-<br><br>
-
-The relationship between A and B must be applied to C to find the correct
-answer.
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>🎯 Important Types of Figure Analogy</h2>
-
-<div class="rule-grid">
-
-<div class="rule-card">
-<strong>1. Shape Transformation</strong>
-A shape changes into another shape according to a fixed rule.
-</div>
-
-<div class="rule-card">
-<strong>2. Rotation</strong>
-The complete figure may rotate by a fixed angle.
-</div>
-
-<div class="rule-card">
-<strong>3. Addition of Element</strong>
-A line, dot, arrow or another element may be added.
-</div>
-
-<div class="rule-card">
-<strong>4. Removal of Element</strong>
-One element may disappear according to the rule.
-</div>
-
-<div class="rule-card">
-<strong>5. Position Change</strong>
-The internal element may move from one position to another.
-</div>
-
-<div class="rule-card">
-<strong>6. Direction Change</strong>
-An arrow or pointed element may change its direction.
-</div>
-
-<div class="rule-card">
-<strong>7. Size Transformation</strong>
-An inner or outer figure may become larger or smaller.
-</div>
-
-<div class="rule-card">
-<strong>8. Combination Rule</strong>
-More than one visual transformation may occur together.
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>🧠 How to Solve Figure Analogy</h2>
-
-<div class="method">
-
-<div class="step">
-<div class="step-number">1</div>
-<strong>Compare A and B</strong>
-<p>Find exactly what has changed from the first figure to the second.</p>
-</div>
-
-<div class="step">
-<div class="step-number">2</div>
-<strong>Ignore Appearance</strong>
-<p>Focus on the relationship rather than the overall look of the figure.</p>
-</div>
-
-<div class="step">
-<div class="step-number">3</div>
-<strong>Check Direction</strong>
-<p>Observe arrows, lines, triangles and pointed elements.</p>
-</div>
-
-<div class="step">
-<div class="step-number">4</div>
-<strong>Check Position</strong>
-<p>Compare the relative positions of internal elements.</p>
-</div>
-
-<div class="step">
-<div class="step-number">5</div>
-<strong>Apply the Rule</strong>
-<p>Use exactly the same transformation on Figure C.</p>
-</div>
-
-<div class="step">
-<div class="step-number">6</div>
-<strong>Match the Option</strong>
-<p>Select the option that follows the same transformation.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SOLVED EXAMPLE 1 -->
-
-<section class="section">
-
-<h2>📝 SSC-Level Solved Example 1 — Rotation</h2>
-
-<div class="question">
-
-<div class="question-title">
-Study the relationship between Figure A and Figure B. Apply the same
-relationship to Figure C.
-</div>
-
-<div class="analogy-row">
-
-<div class="figure-box">
-
-<div class="figure-label">Figure A</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="25" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,38 78,60 102,60"
-fill="#173f5f"/>
-
-<circle cx="90" cy="92" r="7"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure B</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="25" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="128,70 106,58 106,82"
-fill="#173f5f"/>
-
-<circle cx="68" cy="70" r="7"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">::</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure C</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="48"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,42 78,64 102,64"
-fill="#173f5f"/>
-
-<circle cx="90" cy="103" r="7"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→ ?</div>
-
-</div>
-
-
-<p>
-Figure A changes to Figure B by a <strong>90° clockwise rotation</strong>.
-The same transformation must be applied to Figure C.
-</p>
-
-
-<div class="options">
-
-<div class="option">
-<div class="option-label">A</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="48"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="120,72 98,60 98,84"
-fill="#173f5f"/>
-
-<circle cx="60" cy="72" r="7"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">B</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="48"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,102 78,80 102,80"
-fill="#173f5f"/>
-
-<circle cx="90" cy="42" r="7"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">C</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="48"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="60,72 82,60 82,84"
-fill="#173f5f"/>
-
-<circle cx="120" cy="72" r="7"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">D</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="48"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,42 78,64 102,64"
-fill="#173f5f"/>
-
-<circle cx="90" cy="103" r="7"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-</div>
-
-
-<div class="answer">
-
-<strong>Answer: A</strong><br>
-
-The triangle and dot in Figure C rotate 90° clockwise together.
-Therefore the triangle points right and the dot moves to the left side.
-Hence option A is correct.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SOLVED EXAMPLE 2 -->
-
-<section class="section">
-
-<h2>📝 SSC-Level Solved Example 2 — Position Change</h2>
-
-<div class="question">
-
-<div class="question-title">
-Identify the figure which follows the same transformation from Figure A
-to Figure B.
-</div>
-
-<div class="analogy-row">
-
-<div class="figure-box">
-
-<div class="figure-label">Figure A</div>
-
-<svg viewBox="0 0 180 145">
-
-<polygon points="90,20 135,105 45,105"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="90" cy="48" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure B</div>
-
-<svg viewBox="0 0 180 145">
-
-<polygon points="90,20 135,105 45,105"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="90" cy="86" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">::</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure C</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="25" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="68" cy="48" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→ ?</div>
-
-</div>
-
-<p>
-In Figure A → Figure B, the internal dot moves from the upper position to
-the lower central position while the outer figure remains unchanged.
-Apply the same positional transformation to Figure C.
-</p>
-
-
-<div class="options">
-
-<div class="option">
-<div class="option-label">A</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="25" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="68" cy="92" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">B</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="25" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="112" cy="92" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">C</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="25" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="90" cy="92" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">D</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="25" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="112" cy="48" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-</div>
-
-
-<div class="answer">
-
-<strong>Answer: C</strong><br>
-
-The dot moves to the lower central position relative to the outer figure.
-Therefore option C follows the same transformation.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SOLVED EXAMPLE 3 -->
-
-<section class="section">
-
-<h2>📝 SSC-Level Solved Example 3 — Addition of Element</h2>
-
-<div class="question">
-
-<div class="question-title">
-Figure B is obtained from Figure A by adding one specific element.
-Apply the same rule to Figure C.
-</div>
-
-<div class="analogy-row">
-
-<div class="figure-box">
-
-<div class="figure-label">Figure A</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure B</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<line x1="90" y1="28" x2="90" y2="116"
-stroke="#173f5f" stroke-width="5"/>
-
-</svg>
-
-</div>
-
-<div class="relation">::</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure C</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→ ?</div>
-
-</div>
-
-
-<p>
-The transformation adds a straight line passing through the centre of the
-outer figure.
-</p>
-
-
-<div class="options">
-
-<div class="option">
-<div class="option-label">A</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<line x1="45" y1="72" x2="135" y2="72"
-stroke="#173f5f" stroke-width="5"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">B</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<line x1="45" y1="27" x2="135" y2="117"
-stroke="#173f5f" stroke-width="5"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">C</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<line x1="90" y1="27" x2="90" y2="117"
-stroke="#173f5f" stroke-width="5"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">D</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<line x1="45" y1="117" x2="135" y2="27"
-stroke="#173f5f" stroke-width="5"/>
-
-</svg>
-
-</div>
-
-</div>
-
-
-<div class="answer">
-
-<strong>Answer: C</strong><br>
-
-Figure A changes to B by adding a vertical line through the centre.
-Applying the same transformation to the square gives option C.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SOLVED EXAMPLE 4 -->
-
-<section class="section">
-
-<h2>📝 SSC-Level Solved Example 4 — Direction Change</h2>
-
-<div class="question">
-
-<div class="question-title">
-The arrow changes direction according to a fixed rule. Find the correct
-corresponding figure.
-</div>
-
-<div class="analogy-row">
-
-<div class="figure-box">
-
-<div class="figure-label">Figure A</div>
-
-<svg viewBox="0 0 180 145">
-
-<polygon points="90,25 130,105 50,105"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,45 78,65 102,65"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure B</div>
-
-<svg viewBox="0 0 180 145">
-
-<polygon points="90,25 130,105 50,105"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,92 78,72 102,72"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">::</div>
-
-<div class="figure-box">
-
-<div class="figure-label">Figure C</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="47"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,42 78,62 102,62"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→ ?</div>
-
-</div>
-
-
-<p>
-The internal arrow changes from upward to downward while the outer figure
-remains unchanged.
-</p>
-
-
-<div class="options">
-
-<div class="option">
-<div class="option-label">A</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="47"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,102 78,82 102,82"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">B</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="47"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="120,72 100,60 100,84"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">C</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="47"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="60,72 80,60 80,84"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-
-<div class="option">
-<div class="option-label">D</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="47"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,42 78,62 102,62"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-</div>
-
-
-<div class="answer">
-
-<strong>Answer: A</strong><br>
-
-The arrow changes from upward to downward. Therefore the corresponding
-figure is option A.
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>✏️ SSC-Level Practice</h2>
-
-
-<div class="question">
-
-<div class="question-title">
-Q1. Figure A changes to Figure B by rotating the internal arrow 90° clockwise.
-Apply the same transformation to Figure C.
-</div>
-
-<div class="analogy-row">
-
-<div class="figure-box">
-
-<div class="figure-label">A</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,42 78,62 102,62"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→</div>
-
-<div class="figure-box">
-
-<div class="figure-label">B</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="120,72 100,60 100,84"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">::</div>
-
-<div class="figure-box">
-
-<div class="figure-label">C</div>
-
-<svg viewBox="0 0 180 145">
-
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<polygon points="90,42 78,62 102,62"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→ ?</div>
-
-</div>
-
-
-<div class="options">
-
-<div class="option">
-<div class="option-label">A</div>
-
-<svg viewBox="0 0 180 145">
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<polygon points="120,72 100,60 100,84"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">B</div>
-
-<svg viewBox="0 0 180 145">
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<polygon points="90,102 78,82 102,82"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">C</div>
-
-<svg viewBox="0 0 180 145">
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<polygon points="60,72 80,60 80,84"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">D</div>
-
-<svg viewBox="0 0 180 145">
-<rect x="45" y="27" width="90" height="90"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<polygon points="90,42 78,62 102,62"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-</div>
-
-<div class="practice-answer">
-<strong>Answer: A</strong>
-</div>
-
-</div>
-
-
-<div class="question">
-
-<div class="question-title">
-Q2. Figure A changes to Figure B by moving the dot from the top position
-to the bottom position. Apply the same rule to Figure C.
-</div>
-
-<div class="analogy-row">
-
-<div class="figure-box">
-
-<div class="figure-label">A</div>
-
-<svg viewBox="0 0 180 145">
-
-<polygon points="90,20 140,110 40,110"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="90" cy="48" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→</div>
-
-<div class="figure-box">
-
-<div class="figure-label">B</div>
-
-<svg viewBox="0 0 180 145">
-
-<polygon points="90,20 140,110 40,110"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="90" cy="92" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">::</div>
-
-<div class="figure-box">
-
-<div class="figure-label">C</div>
-
-<svg viewBox="0 0 180 145">
-
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-
-<circle cx="90" cy="42" r="8"
-fill="#173f5f"/>
-
-</svg>
-
-</div>
-
-<div class="relation">→ ?</div>
-
-</div>
-
-
-<div class="options">
-
-<div class="option">
-<div class="option-label">A</div>
-
-<svg viewBox="0 0 180 145">
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<circle cx="90" cy="102" r="8"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">B</div>
-
-<svg viewBox="0 0 180 145">
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<circle cx="60" cy="72" r="8"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">C</div>
-
-<svg viewBox="0 0 180 145">
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<circle cx="120" cy="72" r="8"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">D</div>
-
-<svg viewBox="0 0 180 145">
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<circle cx="90" cy="42" r="8"
-fill="#173f5f"/>
-</svg>
-
-</div>
-
-</div>
-
-<div class="practice-answer">
-<strong>Answer: A</strong>
-</div>
-
-</div>
-
-
-<div class="question">
-
-<div class="question-title">
-Q3. Figure A changes to Figure B by adding a vertical line through the
-centre. Apply the same rule to Figure C.
-</div>
-
-<div class="analogy-row">
-
-<div class="figure-box">
-
-<div class="figure-label">A</div>
-
-<svg viewBox="0 0 180 145">
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-</svg>
-
-</div>
-
-<div class="relation">→</div>
-
-<div class="figure-box">
-
-<div class="figure-label">B</div>
-
-<svg viewBox="0 0 180 145">
-<circle cx="90" cy="72" r="45"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<line x1="90" y1="27" x2="90" y2="117"
-stroke="#173f5f" stroke-width="5"/>
-</svg>
-
-</div>
-
-<div class="relation">::</div>
-
-<div class="figure-box">
-
-<div class="figure-label">C</div>
-
-<svg viewBox="0 0 180 145">
-<polygon points="90,20 140,72 90,124 40,72"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-</svg>
-
-</div>
-
-<div class="relation">→ ?</div>
-
-</div>
-
-
-<div class="options">
-
-<div class="option">
-<div class="option-label">A</div>
-
-<svg viewBox="0 0 180 145">
-<polygon points="90,20 140,72 90,124 40,72"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<line x1="40" y1="72" x2="140" y2="72"
-stroke="#173f5f" stroke-width="5"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">B</div>
-
-<svg viewBox="0 0 180 145">
-<polygon points="90,20 140,72 90,124 40,72"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<line x1="90" y1="20" x2="90" y2="124"
-stroke="#173f5f" stroke-width="5"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">C</div>
-
-<svg viewBox="0 0 180 145">
-<polygon points="90,20 140,72 90,124 40,72"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<line x1="40" y1="72" x2="90" y2="20"
-stroke="#173f5f" stroke-width="5"/>
-</svg>
-
-</div>
-
-<div class="option">
-<div class="option-label">D</div>
-
-<svg viewBox="0 0 180 145">
-<polygon points="90,20 140,72 90,124 40,72"
-fill="none" stroke="#173f5f" stroke-width="5"/>
-<line x1="40" y1="72" x2="90" y2="124"
-stroke="#173f5f" stroke-width="5"/>
-</svg>
-
-</div>
-
-</div>
-
-<div class="practice-answer">
-<strong>Answer: B</strong>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>⚠️ Common Mistakes</h2>
-
-<ul>
-<li>Looking only at the outer shape.</li>
-<li>Ignoring the internal element.</li>
-<li>Applying a different transformation to Figure C.</li>
-<li>Confusing rotation with reflection.</li>
-<li>Choosing an option because it looks similar instead of checking the rule.</li>
-<li>Missing small changes in direction or position.</li>
-</ul>
-
-</section>
-
-
-<section class="section">
-
-<h2>⚡ Quick Solving Method</h2>
-
-<div class="highlight">
-
-<strong>1.</strong> Compare A → B carefully.<br>
-<strong>2.</strong> Identify exactly what changed.<br>
-<strong>3.</strong> Check shape, direction, position and number of elements.<br>
-<strong>4.</strong> Apply the same change to C.<br>
-<strong>5.</strong> Compare the result with all four options.<br>
-<strong>6.</strong> Select the option with the exact same relationship.
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>📌 Quick Revision</h2>
-
-<ul>
-<li>Figure Analogy follows the pattern A : B :: C : ?</li>
-<li>First identify the relationship between A and B.</li>
-<li>Apply exactly the same relationship to C.</li>
-<li>Check rotation, direction and position.</li>
-<li>Check addition or removal of elements.</li>
-<li>Do not choose an option merely because it looks similar.</li>
-</ul>
-
-</section>
-
-
-<section class="section">
-
-<a href="ssc-concept-notes.html" class="back">
-← Back to SSC Concept Notes
-</a>
-
-</section>
-
-</div>
+<main class="container">
+
+    <section class="section">
+        <h2>What is Figure Analogy?</h2>
+
+        <p>
+            Figure Analogy is a non-verbal reasoning topic in which a relationship
+            between two figures is given. You have to identify the relationship
+            and apply the same rule to another figure to select the correct answer.
+        </p>
+
+        <p>
+            आकृति सादृश्य में दो आकृतियों के बीच एक संबंध दिया जाता है।
+            उसी संबंध को समझकर दूसरी आकृति के लिए सही विकल्प चुनना होता है।
+        </p>
+
+        <div class="highlight">
+            <strong>Basic Rule:</strong>
+            A : B :: C : ?
+            <br>
+            The relationship between A and B must be the same as the relationship
+            between C and the correct answer.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Important Types of Figure Analogy</h2>
+
+        <div class="rule-grid">
+
+            <div class="rule-card">
+                <h3>1. Rotation</h3>
+                <p>A figure rotates through a particular angle, such as 90°, 180° or 270°.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>2. Reflection</h3>
+                <p>A figure changes through a mirror image or reflection.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>3. Position Change</h3>
+                <p>The position of a dot, line or other element changes within a figure.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>4. Addition of Elements</h3>
+                <p>A new line, dot, shape or other element is added to the figure.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>5. Removal of Elements</h3>
+                <p>An element is removed while the remaining figure follows a rule.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>6. Shape Transformation</h3>
+                <p>A shape changes according to a specific and consistent pattern.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>7. Direction Change</h3>
+                <p>An arrow or another directional element changes its direction.</p>
+            </div>
+
+            <div class="rule-card">
+                <h3>8. Combination of Rules</h3>
+                <p>Two or more changes may occur together in the same analogy.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>How to Solve Figure Analogy</h2>
+
+        <div class="method">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Observe Figure A</h3>
+                    <p>Identify the important shapes, lines, dots and directions.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Compare A and B</h3>
+                    <p>Find the exact change between the two given figures.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>Identify the Rule</h3>
+                    <p>Check rotation, reflection, movement, addition or removal.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                    <h3>Apply the Rule to C</h3>
+                    <p>Make the same change to the third figure.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div>
+                    <h3>Check the Options</h3>
+                    <p>Compare the resulting figure with all the answer choices.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <div>
+                    <h3>Eliminate Incorrect Answers</h3>
+                    <p>Reject options that do not follow the identified relationship.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Solved Examples</h2>
+
+        <div class="question">
+            <div class="question-title">
+                Example 1: Rotation of a Figure
+            </div>
+
+            <p>Figure A changes into Figure B. Apply the same relationship to Figure C.</p>
+
+            <div class="analogy-row">
+
+                <div>
+                    <div class="figure-label">Figure A</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Triangle pointing upward">
+                            <polygon points="50,15 18,78 82,78" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Figure B</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Triangle rotated clockwise">
+                            <polygon points="85,50 22,18 22,82" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">::</div>
+
+                <div>
+                    <div class="figure-label">Figure C</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Circle with triangle and dot">
+                            <circle cx="50" cy="50" r="37" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <polygon points="50,25 30,62 70,62" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="75" r="4" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">?</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Result figure">
+                            <circle cx="50" cy="50" r="37" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <polygon points="75,50 38,30 38,70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="25" cy="50" r="4" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="options">
+                <div class="option">
+                    <div class="option-label">Option A</div>
+                    Triangle points right; dot on the left.
+                </div>
+                <div class="option">
+                    <div class="option-label">Option B</div>
+                    Triangle points down; dot at the top.
+                </div>
+                <div class="option">
+                    <div class="option-label">Option C</div>
+                    Triangle points left; dot on the right.
+                </div>
+                <div class="option">
+                    <div class="option-label">Option D</div>
+                    Same as Figure C.
+                </div>
+            </div>
+
+            <div class="answer">
+                <strong>Answer: Option A</strong>
+                <p>Explanation: Figure A rotates 90° clockwise to become Figure B. Apply the same 90° clockwise rotation to Figure C.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">
+                Example 2: Position Change
+            </div>
+
+            <p>Observe the position of the dot in the figures.</p>
+
+            <div class="analogy-row">
+
+                <div>
+                    <div class="figure-label">Figure A</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Dot at the top">
+                            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="28" r="5" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Figure B</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Dot at the bottom">
+                            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="72" r="5" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">::</div>
+
+                <div>
+                    <div class="figure-label">Figure C</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Dot at the top of a circle">
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="22" r="5" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Answer Figure</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Dot at the bottom of a circle">
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="78" r="5" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="answer">
+                <strong>Answer: Option C</strong>
+                <p>Explanation: The dot moves from the top to the bottom. Apply the same positional change to Figure C.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">
+                Example 3: Addition of an Element
+            </div>
+
+            <p>Identify the change from Figure A to Figure B and apply it to Figure C.</p>
+
+            <div class="analogy-row">
+
+                <div>
+                    <div class="figure-label">Figure A</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Square without a line">
+                            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Figure B</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Square with a vertical line">
+                            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <line x1="50" y1="15" x2="50" y2="85" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">::</div>
+
+                <div>
+                    <div class="figure-label">Figure C</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Circle without a line">
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Answer Figure</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Circle with a vertical line">
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <line x1="50" y1="15" x2="50" y2="85" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="answer">
+                <strong>Answer: Option C</strong>
+                <p>Explanation: A vertical line is added through the centre of Figure A. The same line must be added to Figure C.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">
+                Example 4: Direction Change
+            </div>
+
+            <p>Observe the direction of the arrow.</p>
+
+            <div class="analogy-row">
+
+                <div>
+                    <div class="figure-label">Figure A</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Arrow pointing upward">
+                            <line x1="50" y1="80" x2="50" y2="25" stroke="#173f5f" stroke-width="4"/>
+                            <polygon points="50,12 38,32 62,32" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Figure B</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Arrow pointing downward">
+                            <line x1="50" y1="20" x2="50" y2="75" stroke="#173f5f" stroke-width="4"/>
+                            <polygon points="50,88 38,68 62,68" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">::</div>
+
+                <div>
+                    <div class="figure-label">Figure C</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Arrow pointing right">
+                            <line x1="20" y1="50" x2="75" y2="50" stroke="#173f5f" stroke-width="4"/>
+                            <polygon points="88,50 68,38 68,62" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Answer Figure</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Arrow pointing left">
+                            <line x1="80" y1="50" x2="25" y2="50" stroke="#173f5f" stroke-width="4"/>
+                            <polygon points="12,50 32,38 32,62" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="answer">
+                <strong>Answer: Option A</strong>
+                <p>Explanation: The arrow changes to the opposite direction. Therefore, the right-pointing arrow becomes a left-pointing arrow.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>SSC-Level Practice</h2>
+
+        <div class="question">
+            <div class="question-title">
+                Question 1: Rotation
+            </div>
+
+            <p>If Figure A changes into Figure B by a 90° clockwise rotation, which option shows the same change to Figure C?</p>
+
+            <div class="analogy-row">
+
+                <div>
+                    <div class="figure-label">Figure A</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Arrow pointing upward">
+                            <line x1="50" y1="80" x2="50" y2="25" stroke="#173f5f" stroke-width="4"/>
+                            <polygon points="50,12 38,32 62,32" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Figure B</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Arrow pointing right">
+                            <line x1="20" y1="50" x2="75" y2="50" stroke="#173f5f" stroke-width="4"/>
+                            <polygon points="88,50 68,38 68,62" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">::</div>
+
+                <div>
+                    <div class="figure-label">Figure C</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Arrow pointing left">
+                            <line x1="80" y1="50" x2="25" y2="50" stroke="#173f5f" stroke-width="4"/>
+                            <polygon points="12,50 32,38 32,62" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="options">
+                <div class="option">
+                    <div class="option-label">Option A</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Arrow pointing upward">
+                        <line x1="50" y1="80" x2="50" y2="25" stroke="#173f5f" stroke-width="4"/>
+                        <polygon points="50,12 38,32 62,32" fill="#173f5f"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option B</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Arrow pointing downward">
+                        <line x1="50" y1="20" x2="50" y2="75" stroke="#173f5f" stroke-width="4"/>
+                        <polygon points="50,88 38,68 62,68" fill="#173f5f"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option C</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Arrow pointing right">
+                        <line x1="20" y1="50" x2="75" y2="50" stroke="#173f5f" stroke-width="4"/>
+                        <polygon points="88,50 68,38 68,62" fill="#173f5f"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option D</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Arrow pointing left">
+                        <line x1="80" y1="50" x2="25" y2="50" stroke="#173f5f" stroke-width="4"/>
+                        <polygon points="12,50 32,38 32,62" fill="#173f5f"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="practice-answer">
+                <strong>Answer: Option A</strong>
+                <p>Explanation: The arrow rotates 90° clockwise. The left-pointing arrow therefore becomes an upward-pointing arrow.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">
+                Question 2: Position of a Dot
+            </div>
+
+            <p>Figure A changes into Figure B. Apply the same rule to Figure C.</p>
+
+            <div class="analogy-row">
+
+                <div>
+                    <div class="figure-label">Figure A</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Dot at the top of a square">
+                            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="28" r="5" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Figure B</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Dot at the bottom of a square">
+                            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="72" r="5" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">::</div>
+
+                <div>
+                    <div class="figure-label">Figure C</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Dot at the top of a triangle">
+                            <polygon points="50,15 15,82 85,82" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <circle cx="50" cy="28" r="5" fill="#173f5f"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="options">
+                <div class="option">
+                    <div class="option-label">Option A</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Dot at the bottom of a triangle">
+                        <polygon points="50,15 15,82 85,82" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        <circle cx="50" cy="72" r="5" fill="#173f5f"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option B</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Dot at the left of a triangle">
+                        <polygon points="50,15 15,82 85,82" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        <circle cx="25" cy="65" r="5" fill="#173f5f"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option C</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Dot at the top of a triangle">
+                        <polygon points="50,15 15,82 85,82" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        <circle cx="50" cy="28" r="5" fill="#173f5f"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option D</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Dot at the right of a triangle">
+                        <polygon points="50,15 15,82 85,82" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        <circle cx="75" cy="65" r="5" fill="#173f5f"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="practice-answer">
+                <strong>Answer: Option A</strong>
+                <p>Explanation: The dot moves from the top to the bottom. The same change is applied to Figure C.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-title">
+                Question 3: Addition of a Line
+            </div>
+
+            <p>Figure A changes into Figure B. Which option follows the same relationship for Figure C?</p>
+
+            <div class="analogy-row">
+
+                <div>
+                    <div class="figure-label">Figure A</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Circle without a line">
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">→</div>
+
+                <div>
+                    <div class="figure-label">Figure B</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Circle with a vertical line">
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="#173f5f" stroke-width="3"/>
+                            <line x1="50" y1="15" x2="50" y2="85" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="relation">::</div>
+
+                <div>
+                    <div class="figure-label">Figure C</div>
+                    <div class="figure-box">
+                        <svg viewBox="0 0 100 100" width="100" height="100" aria-label="Square without a line">
+                            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="options">
+                <div class="option">
+                    <div class="option-label">Option A</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Square with a horizontal line">
+                        <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        <line x1="15" y1="50" x2="85" y2="50" stroke="#173f5f" stroke-width="3"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option B</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Square with a vertical line">
+                        <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        <line x1="50" y1="15" x2="50" y2="85" stroke="#173f5f" stroke-width="3"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option C</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Square with a diagonal line">
+                        <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                        <line x1="15" y1="15" x2="85" y2="85" stroke="#173f5f" stroke-width="3"/>
+                    </svg>
+                </div>
+
+                <div class="option">
+                    <div class="option-label">Option D</div>
+                    <svg viewBox="0 0 100 100" width="80" height="80" aria-label="Square without a line">
+                        <rect x="15" y="15" width="70" height="70" fill="none" stroke="#173f5f" stroke-width="3"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="practice-answer">
+                <strong>Answer: Option B</strong>
+                <p>Explanation: A vertical line through the centre is added to the original figure. The same vertical line must be added to the square.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Common Mistakes</h2>
+
+        <ul>
+            <li>Checking only the outer shape and ignoring the smaller elements.</li>
+            <li>Confusing rotation with mirror reflection.</li>
+            <li>Ignoring the exact direction or angle of rotation.</li>
+            <li>Applying a different rule to the third figure instead of the original relationship.</li>
+            <li>Selecting an answer before comparing all the options.</li>
+            <li>Overlooking the movement or addition of a dot, line or other element.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Quick Solving Method</h2>
+
+        <div class="highlight">
+            <strong>Remember this sequence:</strong>
+            <p>Observe → Compare → Identify the Rule → Apply the Rule → Check the Options</p>
+        </div>
+
+        <p>
+            In SSC exams, first check rotation, reflection, position change and
+            addition or removal of elements. If no single rule fits, check whether
+            the figure follows a combination of changes.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Quick Revision</h2>
+
+        <ul>
+            <li><strong>Rotation:</strong> Check the angle and direction.</li>
+            <li><strong>Reflection:</strong> Check whether the figure is reversed.</li>
+            <li><strong>Position change:</strong> Track dots and other elements.</li>
+            <li><strong>Addition or removal:</strong> Compare the number of lines and shapes.</li>
+            <li><strong>Direction change:</strong> Observe the direction of arrows and symbols.</li>
+            <li><strong>Final check:</strong> The same relationship must hold in both pairs.</li>
+        </ul>
+    </section>
+
+    <section class="section back-container">
+        <a class="back" href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-concept-notes.html">← Back to SSC Concept Notes</a>
+    </section>
+
+</main>
 
 </body>
 </html>
