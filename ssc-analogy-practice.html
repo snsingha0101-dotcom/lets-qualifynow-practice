@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,84 +22,80 @@ body{
     line-height:1.6;
 }
 
-header{
-    background:#102a43;
-    color:#ffffff;
-    padding:22px 15px;
-    text-align:center;
-}
-
-header h1{
-    font-size:28px;
-    letter-spacing:.5px;
-}
-
-header p{
-    color:#d9eaf7;
-    margin-top:5px;
-    font-size:14px;
-}
-
 nav{
-    background:#173f5f;
+    background:#102a43;
+    padding:16px 7%;
     display:flex;
+    justify-content:space-between;
+    align-items:center;
     flex-wrap:wrap;
-    justify-content:center;
-    gap:6px;
-    padding:12px 10px;
+    gap:15px;
 }
 
-nav a{
-    color:#ffffff;
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
     text-decoration:none;
-    padding:8px 12px;
-    border-radius:5px;
-    font-size:14px;
 }
 
-nav a:hover{
-    background:#52606d;
+.nav-links{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.nav-links a:hover{
+    color:#d9eaf7;
 }
 
 .hero{
-    background:#eaf3f9;
+    background:#173f5f;
+    color:white;
     text-align:center;
-    padding:25px 15px;
-    border-bottom:1px solid #d9e2ec;
+    padding:55px 20px;
 }
 
-.hero h2{
-    color:#102a43;
-    font-size:25px;
-    margin-bottom:8px;
+.hero h1{
+    color:white;
+    font-size:36px;
+    margin-bottom:12px;
 }
 
 .hero p{
+    color:white;
+    font-size:18px;
     max-width:850px;
-    margin:0 auto;
-    color:#52606d;
+    margin:6px auto;
 }
 
 .container{
-    width:94%;
+    width:86%;
     max-width:1000px;
-    margin:22px auto;
+    margin:40px auto;
 }
 
 .instructions,
 .question-card,
 .result-card{
-    background:#ffffff;
-    border:1px solid #d9e2ec;
-    border-radius:9px;
-    padding:20px;
-    margin-bottom:18px;
+    background:white;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 5px 18px rgba(16,42,67,0.06);
 }
 
-.instructions h3,
-.result-card h3{
+.instructions h2,
+.result-card h2{
     color:#102a43;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .instructions ul{
@@ -106,22 +103,22 @@ nav a:hover{
 }
 
 .instructions li{
-    margin:5px 0;
+    margin:6px 0;
 }
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin-bottom:18px;
+    gap:12px;
+    margin-bottom:22px;
 }
 
 .stat{
-    background:#ffffff;
+    background:white;
     border:1px solid #d9e2ec;
-    border-radius:8px;
+    border-radius:10px;
     text-align:center;
-    padding:12px 5px;
+    padding:14px 5px;
 }
 
 .stat span{
@@ -133,8 +130,8 @@ nav a:hover{
 .stat strong{
     display:block;
     color:#102a43;
-    font-size:22px;
-    margin-top:3px;
+    font-size:24px;
+    margin-top:4px;
 }
 
 .toolbar{
@@ -148,19 +145,36 @@ nav a:hover{
 
 .toolbar label{
     font-weight:bold;
+    color:#102a43;
 }
 
 select{
-    padding:9px 12px;
+    padding:10px 12px;
     border:1px solid #829ab1;
-    border-radius:5px;
-    background:#ffffff;
+    border-radius:7px;
+    background:white;
     color:#243b53;
     font-size:14px;
+    max-width:100%;
+}
+
+.progress-track{
+    height:10px;
+    background:#d9e2ec;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:22px;
+}
+
+.progress-fill{
+    height:100%;
+    width:0;
+    background:#173f5f;
+    transition:width .2s;
 }
 
 .question-card{
-    scroll-margin-top:12px;
+    scroll-margin-top:15px;
 }
 
 .question-top{
@@ -169,7 +183,7 @@ select{
     align-items:center;
     gap:10px;
     flex-wrap:wrap;
-    margin-bottom:12px;
+    margin-bottom:14px;
 }
 
 .question-number{
@@ -180,17 +194,17 @@ select{
 
 .question-type{
     font-size:12px;
-    background:#eaf3f9;
+    background:#eef4f8;
     color:#173f5f;
-    padding:4px 9px;
-    border-radius:12px;
+    padding:5px 11px;
+    border-radius:20px;
 }
 
 .question-text{
     font-size:17px;
     font-weight:bold;
     color:#102a43;
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
 
 .hindi-question{
@@ -201,19 +215,20 @@ select{
 .options{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:10px;
+    gap:12px;
 }
 
 .option{
     display:flex;
     align-items:flex-start;
     gap:9px;
-    padding:11px 12px;
+    padding:12px;
     border:1px solid #d9e2ec;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
-    background:#ffffff;
+    background:white;
     transition:background .15s;
+    overflow-wrap:anywhere;
 }
 
 .option:hover{
@@ -221,7 +236,7 @@ select{
 }
 
 .option input{
-    margin-top:5px;
+    margin-top:6px;
     accent-color:#173f5f;
     flex-shrink:0;
 }
@@ -247,11 +262,12 @@ select{
 
 .explanation{
     display:none;
-    margin-top:15px;
-    padding:13px;
+    margin-top:16px;
+    padding:15px;
     border-left:4px solid #627d98;
     background:#f7f9fc;
-    border-radius:4px;
+    border-radius:6px;
+    overflow-wrap:anywhere;
 }
 
 .explanation.show{
@@ -262,27 +278,31 @@ select{
     color:#102a43;
 }
 
-.explanation .answer-status{
-    margin-bottom:5px;
+.answer-status{
+    margin-bottom:7px;
     font-weight:bold;
+}
+
+.explanation p + p{
+    margin-top:7px;
 }
 
 .actions{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
     justify-content:center;
-    margin:20px 0;
+    margin:25px 0;
 }
 
 button{
     border:none;
-    border-radius:6px;
-    padding:11px 18px;
+    border-radius:8px;
+    padding:12px 20px;
     cursor:pointer;
     font-size:14px;
     font-weight:bold;
-    transition:opacity .15s;
+    transition:background .15s, opacity .15s;
 }
 
 button:hover{
@@ -296,7 +316,7 @@ button:disabled{
 
 .primary-btn{
     background:#173f5f;
-    color:#ffffff;
+    color:white;
 }
 
 .secondary-btn{
@@ -311,7 +331,8 @@ button:disabled{
 
 .result-card{
     display:none;
-    border-top:4px solid #173f5f;
+    border-top:5px solid #173f5f;
+    scroll-margin-top:15px;
 }
 
 .result-card.show{
@@ -321,16 +342,16 @@ button:disabled{
 .result-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin:15px 0;
+    gap:12px;
+    margin:18px 0;
 }
 
 .result-item{
     background:#f7f9fc;
-    padding:12px 6px;
+    padding:14px 6px;
     text-align:center;
     border:1px solid #d9e2ec;
-    border-radius:6px;
+    border-radius:9px;
 }
 
 .result-item span{
@@ -343,47 +364,84 @@ button:disabled{
     display:block;
     color:#102a43;
     font-size:21px;
+    overflow-wrap:anywhere;
 }
 
-.progress-track{
-    height:9px;
-    background:#e1e8ed;
-    border-radius:8px;
-    overflow:hidden;
-    margin:12px 0;
+.info-box{
+    margin-top:30px;
+    background:#eef4f8;
+    border-left:5px solid #173f5f;
+    padding:22px;
+    border-radius:10px;
 }
 
-.progress-fill{
-    height:100%;
-    width:0;
+.info-box h3{
+    color:#102a43;
+    margin-bottom:8px;
+}
+
+.info-box p{
+    color:#52606d;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:16px;
     background:#173f5f;
-    transition:width .2s;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    background:#102a43;
 }
 
 footer{
     background:#102a43;
-    color:#ffffff;
+    color:white;
     text-align:center;
-    padding:20px 12px;
-    margin-top:35px;
+    padding:28px 20px;
+    margin-top:60px;
 }
 
 footer p{
-    margin:4px 0;
+    margin:5px 0;
+    font-size:14px;
 }
 
 footer .tagline{
     color:#d9eaf7;
-    font-size:14px;
 }
 
-@media(max-width:650px){
-    header h1{
-        font-size:23px;
+@media(max-width:900px){
+    .container{
+        width:92%;
     }
 
-    .hero h2{
-        font-size:21px;
+    nav{
+        justify-content:center;
+    }
+
+    .nav-links{
+        justify-content:center;
+        gap:15px;
+    }
+}
+
+@media(max-width:600px){
+    .hero{
+        padding:40px 16px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
     }
 
     .stats,
@@ -396,18 +454,31 @@ footer .tagline{
     }
 
     .container{
-        width:95%;
+        width:92%;
+        margin:28px auto;
     }
 
     .instructions,
     .question-card,
     .result-card{
-        padding:15px;
+        padding:16px;
     }
 
-    nav a{
-        padding:7px 9px;
-        font-size:13px;
+    .nav-links{
+        gap:12px;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+
+    .toolbar{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    select{
+        width:100%;
     }
 }
 </style>
@@ -415,19 +486,24 @@ footer .tagline{
 
 <body>
 
-<header>
-    <h1>LET'S QUALIFYNOW</h1>
-    <p>You Are Closer To Success</p>
-</header>
+<nav>
+    <a href="index.html" class="logo">Let's QualifyNow</a>
 
-<nav aria-label="Main navigation">
-    <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/home-design.html">Home</a>
-    <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/">Practice</a>
-    <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="study-material.html">Study Material</a>
+        <a href="live-classes.html">Live Classes</a>
+        <a href="test-series.html">Test Series</a>
+        <a href="exams.html">Exams</a>
+        <a href="https://youtube.com/@letsqualifynow7636"
+           target="_blank"
+           rel="noopener noreferrer">YouTube</a>
+    </div>
 </nav>
 
 <section class="hero">
-    <h2>SSC Analogy Practice</h2>
+    <h1>📝 SSC Analogy Practice</h1>
     <p>50 Exam-Oriented Questions with Answers and Explanations</p>
     <p>सादृश्यता के 50 अभ्यास प्रश्न — उत्तर और व्याख्या सहित</p>
 </section>
@@ -435,32 +511,33 @@ footer .tagline{
 <main class="container">
 
     <section class="instructions">
-        <h3>Instructions / निर्देश</h3>
+        <h2>🎯 Instructions / निर्देश</h2>
         <ul>
-            <li>कुल प्रश्न / Total Questions: <strong>50</strong></li>
-            <li>सही उत्तर / Correct Answer: <strong>+2 marks</strong></li>
-            <li>गलत उत्तर / Wrong Answer: <strong>−0.5 marks</strong></li>
-            <li>बिना उत्तर / Unattempted: <strong>0 marks</strong></li>
+            <li>Total Questions / कुल प्रश्न: <strong>50</strong></li>
+            <li>Correct Answer / सही उत्तर: <strong>+2 marks</strong></li>
+            <li>Wrong Answer / गलत उत्तर: <strong>−0.5 marks</strong></li>
+            <li>Unattempted / बिना उत्तर: <strong>0 marks</strong></li>
             <li>Choose one option for each question. Click Submit Test to calculate your score.</li>
             <li>प्रत्येक प्रश्न में एक विकल्प चुनें। अंक देखने के लिए Submit Test पर क्लिक करें।</li>
+            <li>Click Check Answers to move to unanswered questions before submitting.</li>
         </ul>
     </section>
 
     <section class="stats" aria-label="Live test statistics">
         <div class="stat">
-            <span>Total Questions</span>
+            <span>Total Questions / कुल प्रश्न</span>
             <strong id="totalCount">50</strong>
         </div>
         <div class="stat">
-            <span>Attempted</span>
+            <span>Attempted / प्रयास</span>
             <strong id="attemptedCount">0</strong>
         </div>
         <div class="stat">
-            <span>Correct</span>
+            <span>Correct / सही</span>
             <strong id="correctCount">0</strong>
         </div>
         <div class="stat">
-            <span>Wrong</span>
+            <span>Wrong / गलत</span>
             <strong id="wrongCount">0</strong>
         </div>
     </section>
@@ -487,7 +564,7 @@ footer .tagline{
     </div>
 
     <section class="result-card" id="resultCard" aria-live="polite">
-        <h3>Test Result / परीक्षा परिणाम</h3>
+        <h2>📊 Test Result / परीक्षा परिणाम</h2>
         <p id="resultMessage"></p>
 
         <div class="result-grid">
@@ -514,13 +591,27 @@ footer .tagline{
         <p>सही उत्तर और व्याख्या समझने के लिए प्रश्नों को देखें।</p>
     </section>
 
+    <section class="info-box">
+        <h3>🚀 Improve Your Reasoning Skills</h3>
+        <p>
+            Practise analogy questions regularly to improve conceptual clarity,
+            logical thinking, accuracy and speed for SSC CGL, CHSL, CPO, MTS
+            and other government examinations.
+        </p>
+        <a href="ssc-topic-wise-practice.html" class="back-btn">
+            ← Back to SSC Topic-wise Practice
+        </a>
+    </section>
+
 </main>
 
 <footer>
-    <p><strong>LET'S QUALIFYNOW</strong></p>
+    <p><strong>Let's QualifyNow</strong></p>
     <p class="tagline">You Are Closer To Success</p>
     <p>N Saurabh Sir | Reasoning Faculty</p>
     <p>SSC • Banking • Railway • Government Exams</p>
+    <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
+    <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
 </footer>
 
 <script>
@@ -774,7 +865,7 @@ hi:"CFI : DHL :: JMN : ?",
 options:["KNO","KOP","LNO","KNP"],
 hoptions:["KNO","KOP","LNO","KNP"],
 answer:1,
-exp:"The letters advance by +1, +2 and +3 positions respectively: C→D, F→H, I→L. Therefore, JMN becomes KOP.",
+exp:"The letters advance by +1, +2 and +3 positions respectively. JMN becomes KOP.",
 hexp:"अक्षर क्रमशः 1, 2 और 3 स्थान आगे बढ़ते हैं। इसलिए JMN से KOP बनेगा।"
 },
 {
@@ -1003,8 +1094,8 @@ en:"ACE : ZXV :: BDF : ?",
 hi:"ACE : ZXV :: BDF : ?",
 options:["YXU","YXV","ZXU","YWU"],
 hoptions:["YXU","YXV","ZXU","YWU"],
-answer:0,
-exp:"A→Z, C→X and E→V are reverse-alphabet mappings. Therefore B→Y, D→W and F→U, giving YWU. The correct answer is option D.",
+answer:3,
+exp:"Using reverse-alphabet mappings, A→Z, C→X and E→V. Therefore, B→Y, D→W and F→U, giving YWU.",
 hexp:"विपरीत वर्णमाला से B→Y, D→W और F→U मिलता है। इसलिए उत्तर YWU है।"
 },
 {
@@ -1087,11 +1178,10 @@ function languageMode(){
 
 function renderQuestions(){
     const lang = languageMode();
+    const showEn = lang !== "hi";
+    const showHi = lang !== "en";
 
     container.innerHTML = questions.map((q, index) => {
-        const showEn = lang !== "hi";
-        const showHi = lang !== "en";
-
         const options = q.options.map((option, optionIndex) => {
             const optionText = showEn && showHi
                 ? escapeHTML(option) + " / " + escapeHTML(q.hoptions[optionIndex])
@@ -1102,7 +1192,7 @@ function renderQuestions(){
             const isSelected = selectedAnswers[index] === optionIndex;
 
             return `
-                <label class="option ${isSelected ? "selected" : ""}" data-option="${optionIndex}">
+                <label class="option ${isSelected ? "selected" : ""}">
                     <input type="radio"
                            name="question${index}"
                            value="${optionIndex}"
@@ -1127,9 +1217,10 @@ function renderQuestions(){
 
                 <div class="explanation" id="explanation-${index}">
                     <p class="answer-status" id="status-${index}"></p>
-                    <p><strong>Correct Answer:</strong> <span id="correct-answer-${index}"></span></p>
-                    ${showEn ? `<p style="margin-top:6px;"><strong>Explanation:</strong> ${escapeHTML(q.exp)}</p>` : ""}
-                    ${showHi ? `<p style="margin-top:6px;"><strong>व्याख्या:</strong> ${escapeHTML(q.hexp)}</p>` : ""}
+                    <p><strong>Correct Answer / सही उत्तर:</strong>
+                    <span id="correct-answer-${index}"></span></p>
+                    ${showEn ? `<p><strong>Explanation:</strong> ${escapeHTML(q.exp)}</p>` : ""}
+                    ${showHi ? `<p><strong>व्याख्या:</strong> ${escapeHTML(q.hexp)}</p>` : ""}
                 </div>
             </section>`;
     }).join("");
@@ -1141,21 +1232,16 @@ function renderQuestions(){
     updateStats();
 }
 
-function getSelected(index){
-    return selectedAnswers[index];
-}
-
 function updateStats(){
     let attempted = 0;
     let correct = 0;
     let wrong = 0;
 
     questions.forEach((q, index) => {
-        const selected = getSelected(index);
+        const selected = selectedAnswers[index];
 
         if(selected !== null){
             attempted++;
-
             if(selected === q.answer){
                 correct++;
             }else{
@@ -1174,16 +1260,22 @@ function updateStats(){
 }
 
 function showReview(){
+    const lang = languageMode();
+
     questions.forEach((q, index) => {
-        const selected = getSelected(index);
+        const selected = selectedAnswers[index];
         const card = document.getElementById(`question-${index}`);
         const explanation = document.getElementById(`explanation-${index}`);
         const status = document.getElementById(`status-${index}`);
         const answer = document.getElementById(`correct-answer-${index}`);
 
+        if(!card || !explanation || !status || !answer) return;
+
         card.querySelectorAll(".option").forEach((label, optionIndex) => {
             const input = label.querySelector("input");
             input.disabled = true;
+
+            label.classList.remove("correct", "incorrect");
 
             if(optionIndex === q.answer){
                 label.classList.add("correct");
@@ -1194,7 +1286,6 @@ function showReview(){
             }
         });
 
-        const lang = languageMode();
         const correctOption = lang === "hi"
             ? q.hoptions[q.answer]
             : lang === "en"
@@ -1229,11 +1320,10 @@ function submitTest(){
     let wrong = 0;
 
     questions.forEach((q, index) => {
-        const selected = getSelected(index);
+        const selected = selectedAnswers[index];
 
         if(selected !== null){
             attempted++;
-
             if(selected === q.answer){
                 correct++;
             }else{
@@ -1244,7 +1334,7 @@ function submitTest(){
 
     const unattempted = questions.length - attempted;
     const score = correct * 2 - wrong * 0.5;
-    const accuracy = attempted ? (correct / attempted * 100) : 0;
+    const accuracy = attempted ? correct / attempted * 100 : 0;
     const maxScore = questions.length * 2;
 
     document.getElementById("scoreValue").textContent =
@@ -1252,7 +1342,6 @@ function submitTest(){
 
     document.getElementById("resultCorrect").textContent = correct;
     document.getElementById("resultWrong").textContent = wrong;
-
     document.getElementById("accuracyValue").textContent =
         accuracy.toFixed(2) + "%";
 
@@ -1323,7 +1412,7 @@ submitBtn.addEventListener("click", submitTest);
 
 reviewBtn.addEventListener("click", function(){
     const firstUnanswered = questions.findIndex(
-        (q, index) => getSelected(index) === null
+        (q, index) => selectedAnswers[index] === null
     );
 
     if(firstUnanswered !== -1){
