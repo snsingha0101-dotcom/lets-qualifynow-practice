@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,49 +9,52 @@
 <meta name="description" content="Practice 50 bilingual SSC Analogy questions with answers, explanations and score calculation for SSC CGL, CHSL, CPO and MTS exams.">
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f7f9fc;
     color:#243b53;
     line-height:1.6;
 }
 
-/* HEADER */
+/* HEADER: BRAND AND NAVIGATION ON THE SAME LINE */
 .site-header{
+    display:flex;
+    align-items:stretch;
     background:#102a43;
-    color:#ffffff;
+    color:#fff;
     width:100%;
     position:relative;
     z-index:100;
 }
 
 .site-brand{
-    display:block;
-    padding:17px 5%;
-    color:#ffffff;
-    font-size:24px;
+    display:flex;
+    align-items:center;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
     font-weight:800;
     text-decoration:none;
-    letter-spacing:.4px;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
 }
 
-/* SINGLE-LINE NAVIGATION */
+/* SINGLE-LINE, SMALLER NAVIGATION */
 .site-navigation{
     display:flex;
     align-items:center;
+    flex:1 1 auto;
+    min-width:0;
     flex-wrap:nowrap;
     gap:0;
-    width:100%;
-    padding:0 10px;
-    border-top:1px solid rgba(255,255,255,.12);
+    padding:0 4px;
     overflow-x:auto;
     overflow-y:hidden;
+    white-space:nowrap;
     scrollbar-width:thin;
     scrollbar-color:#627d98 #102a43;
     -webkit-overflow-scrolling:touch;
@@ -60,13 +64,14 @@ body{
 .more-button{
     display:block;
     flex:0 0 auto;
-    color:#ffffff;
+    color:#fff;
     text-decoration:none;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
     font-weight:600;
-    padding:13px 10px;
-    border:none;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
     background:transparent;
     cursor:pointer;
     white-space:nowrap;
@@ -78,56 +83,45 @@ body{
     color:#d9eaf7;
 }
 
-.more-menu{
-    position:relative;
-    flex:0 0 auto;
-}
+.more-menu{position:relative;flex:0 0 auto}
 
 .more-button{
     display:flex;
     align-items:center;
-    gap:6px;
+    gap:4px;
 }
 
-.more-arrow{
-    font-size:11px;
-}
+.more-arrow{font-size:9px}
 
-/*
-   DROPDOWN FIX:
-   The dropdown is positioned relative to the viewport by JavaScript
-   so the navigation's horizontal scrolling cannot clip it.
-*/
+/* DROPDOWN IS MOVED TO BODY TO PREVENT NAVIGATION CLIPPING */
 .more-dropdown{
     display:none;
     position:fixed;
     top:0;
     left:0;
     right:auto;
+    width:170px;
     min-width:170px;
-    background:#ffffff;
+    background:#fff;
     border:1px solid #d9e2ec;
     border-radius:0 0 8px 8px;
     box-shadow:0 8px 20px rgba(16,42,67,.16);
     z-index:99999;
 }
 
-.more-dropdown.show{
-    display:block;
-}
+.more-dropdown.show{display:block}
 
 .more-dropdown a{
     display:block;
     color:#102a43;
-    padding:12px 16px;
+    padding:11px 14px;
     border-bottom:1px solid #edf1f5;
     white-space:nowrap;
     text-decoration:none;
+    font-size:13px;
 }
 
-.more-dropdown a:last-child{
-    border-bottom:none;
-}
+.more-dropdown a:last-child{border-bottom:none}
 
 .more-dropdown a:hover{
     background:#eef6fb;
@@ -137,19 +131,19 @@ body{
 /* HERO */
 .hero{
     background:#173f5f;
-    color:#ffffff;
+    color:#fff;
     text-align:center;
     padding:55px 20px;
 }
 
 .hero h1{
-    color:#ffffff;
+    color:#fff;
     font-size:36px;
     margin-bottom:12px;
 }
 
 .hero p{
-    color:#ffffff;
+    color:#fff;
     font-size:18px;
     max-width:850px;
     margin:6px auto;
@@ -161,10 +155,8 @@ body{
     margin:40px auto;
 }
 
-.instructions,
-.question-card,
-.result-card{
-    background:#ffffff;
+.instructions,.question-card,.result-card{
+    background:#fff;
     border:1px solid #e1e8ed;
     border-radius:14px;
     padding:22px;
@@ -172,19 +164,13 @@ body{
     box-shadow:0 5px 18px rgba(16,42,67,.06);
 }
 
-.instructions h2,
-.result-card h2{
+.instructions h2,.result-card h2{
     color:#102a43;
     margin-bottom:12px;
 }
 
-.instructions ul{
-    padding-left:22px;
-}
-
-.instructions li{
-    margin:6px 0;
-}
+.instructions ul{padding-left:22px}
+.instructions li{margin:6px 0}
 
 .stats{
     display:grid;
@@ -194,7 +180,7 @@ body{
 }
 
 .stat{
-    background:#ffffff;
+    background:#fff;
     border:1px solid #d9e2ec;
     border-radius:10px;
     text-align:center;
@@ -223,16 +209,13 @@ body{
     margin-bottom:16px;
 }
 
-.toolbar label{
-    font-weight:bold;
-    color:#102a43;
-}
+.toolbar label{font-weight:bold;color:#102a43}
 
 select{
     padding:10px 12px;
     border:1px solid #829ab1;
     border-radius:7px;
-    background:#ffffff;
+    background:#fff;
     color:#243b53;
     font-size:14px;
     max-width:100%;
@@ -253,9 +236,7 @@ select{
     transition:width .2s;
 }
 
-.question-card{
-    scroll-margin-top:15px;
-}
+.question-card{scroll-margin-top:15px}
 
 .question-top{
     display:flex;
@@ -287,10 +268,7 @@ select{
     margin-bottom:6px;
 }
 
-.hindi-question{
-    color:#52606d;
-    margin-bottom:15px;
-}
+.hindi-question{color:#52606d;margin-bottom:15px}
 
 .options{
     display:grid;
@@ -306,14 +284,12 @@ select{
     border:1px solid #d9e2ec;
     border-radius:8px;
     cursor:pointer;
-    background:#ffffff;
+    background:#fff;
     transition:background .15s;
     overflow-wrap:anywhere;
 }
 
-.option:hover{
-    background:#f0f6fa;
-}
+.option:hover{background:#f0f6fa}
 
 .option input{
     margin-top:6px;
@@ -321,24 +297,10 @@ select{
     flex-shrink:0;
 }
 
-.option.selected{
-    border-color:#173f5f;
-    background:#eaf3f9;
-}
-
-.option.correct{
-    border-color:#2e7d32;
-    background:#e6f4ea;
-}
-
-.option.incorrect{
-    border-color:#c62828;
-    background:#fdecea;
-}
-
-.option:has(input:disabled){
-    cursor:default;
-}
+.option.selected{border-color:#173f5f;background:#eaf3f9}
+.option.correct{border-color:#2e7d32;background:#e6f4ea}
+.option.incorrect{border-color:#c62828;background:#fdecea}
+.option:has(input:disabled){cursor:default}
 
 .explanation{
     display:none;
@@ -350,22 +312,10 @@ select{
     overflow-wrap:anywhere;
 }
 
-.explanation.show{
-    display:block;
-}
-
-.explanation strong{
-    color:#102a43;
-}
-
-.answer-status{
-    margin-bottom:7px;
-    font-weight:bold;
-}
-
-.explanation p + p{
-    margin-top:7px;
-}
+.explanation.show{display:block}
+.explanation strong{color:#102a43}
+.answer-status{margin-bottom:7px;font-weight:bold}
+.explanation p+p{margin-top:7px}
 
 .actions{
     display:flex;
@@ -382,32 +332,14 @@ button{
     cursor:pointer;
     font-size:14px;
     font-weight:bold;
-    transition:background .15s, opacity .15s;
+    transition:background .15s,opacity .15s;
 }
 
-button:hover{
-    opacity:.88;
-}
-
-button:disabled{
-    opacity:.55;
-    cursor:not-allowed;
-}
-
-.primary-btn{
-    background:#173f5f;
-    color:#ffffff;
-}
-
-.secondary-btn{
-    background:#d9eaf7;
-    color:#102a43;
-}
-
-.reset-btn{
-    background:#e1e8ed;
-    color:#243b53;
-}
+button:hover{opacity:.88}
+button:disabled{opacity:.55;cursor:not-allowed}
+.primary-btn{background:#173f5f;color:#fff}
+.secondary-btn{background:#d9eaf7;color:#102a43}
+.reset-btn{background:#e1e8ed;color:#243b53}
 
 .result-card{
     display:none;
@@ -415,9 +347,7 @@ button:disabled{
     scroll-margin-top:15px;
 }
 
-.result-card.show{
-    display:block;
-}
+.result-card.show{display:block}
 
 .result-grid{
     display:grid;
@@ -455,16 +385,10 @@ button:disabled{
     border-radius:10px;
 }
 
-.info-box h3{
-    color:#102a43;
-    margin-bottom:8px;
-}
+.info-box h3{color:#102a43;margin-bottom:8px}
+.info-box p{color:#52606d}
 
-.info-box p{
-    color:#52606d;
-}
-
-/* BACK LINK: BOTTOM, CENTERED */
+/* BACK LINK */
 .back-navigation{
     width:100%;
     text-align:center;
@@ -486,127 +410,79 @@ button:disabled{
     transition:background .2s;
 }
 
-.back-navigation a:hover{
-    background:#d9eaf7;
-}
+.back-navigation a:hover{background:#d9eaf7}
 
 /* FOOTER */
 footer{
     background:#102a43;
-    color:#ffffff;
+    color:#fff;
     text-align:center;
     padding:28px 20px;
     margin-top:0;
 }
 
-footer p{
-    margin:5px 0;
-    font-size:14px;
-}
-
-footer .tagline{
-    color:#d9eaf7;
-}
+footer p{margin:5px 0;font-size:14px}
+footer .tagline{color:#d9eaf7}
 
 /* TABLET */
 @media(max-width:900px){
-    .container{
-        width:92%;
-    }
-
-    .site-brand{
-        text-align:center;
-    }
-
-    .site-navigation{
-        padding:0 8px;
-    }
-
-    .site-navigation a,
-    .more-button{
-        padding:12px 9px;
-    }
+    .container{width:92%}
+    .site-brand{font-size:14px;padding:10px 9px}
+    .site-navigation{padding:0 2px}
+    .site-navigation a,.more-button{font-size:10.5px;padding:11px 6px}
 }
 
-/* MOBILE */
+/* MOBILE: BRAND AND NAVIGATION STILL SHARE ONE LINE */
 @media(max-width:600px){
+    .site-header{width:100%;align-items:stretch}
     .site-brand{
-        font-size:22px;
-        padding:16px 10px;
-        text-align:center;
+        font-size:12px;
+        padding:9px 7px;
+        letter-spacing:0;
     }
 
     .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
         flex-wrap:nowrap;
         justify-content:flex-start;
-        padding:0 6px;
+        padding:0 2px;
         overflow-x:auto;
         overflow-y:hidden;
         -webkit-overflow-scrolling:touch;
     }
 
-    .site-navigation a,
-    .more-button{
+    .site-navigation a,.more-button{
         flex:0 0 auto;
-        font-size:13px;
-        padding:11px 9px;
+        font-size:10px;
+        padding:10px 6px;
         white-space:nowrap;
     }
 
     .more-dropdown{
-        min-width:150px;
+        width:155px;
+        min-width:155px;
         max-width:calc(100vw - 16px);
     }
 
-    .hero{
-        padding:40px 16px;
-    }
+    .hero{padding:40px 16px}
+    .hero h1{font-size:28px}
+    .hero p{font-size:16px}
 
-    .hero h1{
-        font-size:28px;
-    }
+    .stats,.result-grid{grid-template-columns:repeat(2,1fr)}
+    .options{grid-template-columns:1fr}
+    .container{width:92%;margin:28px auto}
 
-    .hero p{
-        font-size:16px;
-    }
-
-    .stats,
-    .result-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .options{
-        grid-template-columns:1fr;
-    }
-
-    .container{
-        width:92%;
-        margin:28px auto;
-    }
-
-    .instructions,
-    .question-card,
-    .result-card{
-        padding:16px;
-    }
+    .instructions,.question-card,.result-card{padding:16px}
 
     .toolbar{
         align-items:flex-start;
         flex-direction:column;
     }
 
-    select{
-        width:100%;
-    }
-
-    .back-navigation{
-        padding:22px 10px;
-    }
-
-    .back-navigation a{
-        padding:10px 15px;
-        font-size:13px;
-    }
+    select{width:100%}
+    .back-navigation{padding:22px 10px}
+    .back-navigation a{padding:10px 15px;font-size:13px}
 }
 </style>
 </head>
@@ -614,54 +490,32 @@ footer .tagline{
 <body>
 
 <header class="site-header">
-
-    <a
-        href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
-        class="site-brand">
-        LET'S QUALIFYNOW
-    </a>
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="site-brand">LET'S QUALIFYNOW</a>
 
     <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
-
         <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
-
         <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
         <div class="more-menu" id="moreMenu">
-
-            <button
-                type="button"
-                class="more-button"
-                id="moreButton"
-                aria-expanded="false"
-                aria-haspopup="true"
-                aria-controls="moreDropdown">
+            <button type="button" class="more-button" id="moreButton"
+                    aria-expanded="false" aria-haspopup="true"
+                    aria-controls="moreDropdown">
                 More <span class="more-arrow">▼</span>
             </button>
-
             <div class="more-dropdown" id="moreDropdown">
                 <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
                 <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
             </div>
-
         </div>
-
     </nav>
 </header>
 
@@ -687,22 +541,10 @@ footer .tagline{
     </section>
 
     <section class="stats" aria-label="Live test statistics">
-        <div class="stat">
-            <span>Total Questions / कुल प्रश्न</span>
-            <strong id="totalCount">50</strong>
-        </div>
-        <div class="stat">
-            <span>Attempted / प्रयास</span>
-            <strong id="attemptedCount">0</strong>
-        </div>
-        <div class="stat">
-            <span>Correct / सही</span>
-            <strong id="correctCount">0</strong>
-        </div>
-        <div class="stat">
-            <span>Wrong / गलत</span>
-            <strong id="wrongCount">0</strong>
-        </div>
+        <div class="stat"><span>Total Questions / कुल प्रश्न</span><strong id="totalCount">50</strong></div>
+        <div class="stat"><span>Attempted / प्रयास</span><strong id="attemptedCount">0</strong></div>
+        <div class="stat"><span>Correct / सही</span><strong id="correctCount">0</strong></div>
+        <div class="stat"><span>Wrong / गलत</span><strong id="wrongCount">0</strong></div>
     </section>
 
     <div class="toolbar">
@@ -729,26 +571,12 @@ footer .tagline{
     <section class="result-card" id="resultCard" aria-live="polite">
         <h2>📊 Test Result / परीक्षा परिणाम</h2>
         <p id="resultMessage"></p>
-
         <div class="result-grid">
-            <div class="result-item">
-                <span>Score / अंक</span>
-                <strong id="scoreValue">0</strong>
-            </div>
-            <div class="result-item">
-                <span>Correct / सही</span>
-                <strong id="resultCorrect">0</strong>
-            </div>
-            <div class="result-item">
-                <span>Wrong / गलत</span>
-                <strong id="resultWrong">0</strong>
-            </div>
-            <div class="result-item">
-                <span>Accuracy / सटीकता</span>
-                <strong id="accuracyValue">0%</strong>
-            </div>
+            <div class="result-item"><span>Score / अंक</span><strong id="scoreValue">0</strong></div>
+            <div class="result-item"><span>Correct / सही</span><strong id="resultCorrect">0</strong></div>
+            <div class="result-item"><span>Wrong / गलत</span><strong id="resultWrong">0</strong></div>
+            <div class="result-item"><span>Accuracy / सटीकता</span><strong id="accuracyValue">0%</strong></div>
         </div>
-
         <p id="resultDetails"></p>
         <p style="margin-top:12px;">Review the explanations above to understand the correct answers.</p>
         <p>सही उत्तर और व्याख्या समझने के लिए प्रश्नों को देखें।</p>
@@ -756,16 +584,13 @@ footer .tagline{
 
     <section class="info-box">
         <h3>🚀 Improve Your Reasoning Skills</h3>
-        <p>
-            Practise analogy questions regularly to improve conceptual clarity,
-            logical thinking, accuracy and speed for SSC CGL, CHSL, CPO, MTS
-            and other government examinations.
-        </p>
+        <p>Practise analogy questions regularly to improve conceptual clarity,
+        logical thinking, accuracy and speed for SSC CGL, CHSL, CPO, MTS
+        and other government examinations.</p>
     </section>
 
 </main>
 
-<!-- BACK LINK AT THE BOTTOM, CENTERED, JUST ABOVE FOOTER -->
 <div class="back-navigation">
     <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html">
         ← Back to SSC Topic-wise Practice
@@ -784,16 +609,12 @@ footer .tagline{
 <script>
 "use strict";
 
-/* MORE MENU: DROPDOWN OUTSIDE THE SCROLLABLE NAVIGATION */
+/* MORE MENU: MOVE DROPDOWN OUTSIDE THE SCROLLABLE NAV */
 const moreMenu = document.getElementById("moreMenu");
 const moreButton = document.getElementById("moreButton");
 const moreDropdown = document.getElementById("moreDropdown");
 const siteNavigation = document.getElementById("siteNavigation");
 
-/*
-   Move the dropdown to the body so that the horizontal navigation
-   cannot crop it on desktop or mobile.
-*/
 document.body.appendChild(moreDropdown);
 
 function positionMoreDropdown(){
@@ -814,19 +635,12 @@ function positionMoreDropdown(){
     if(left + dropdownWidth > window.innerWidth - 8){
         left = window.innerWidth - dropdownWidth - 8;
     }
+    if(left < 8) left = 8;
 
-    if(left < 8){
-        left = 8;
-    }
-
-    /* If there is not enough space below, show the menu above. */
     if(top + dropdownHeight > window.innerHeight - 8){
         top = buttonRect.top - dropdownHeight;
     }
-
-    if(top < 8){
-        top = 8;
-    }
+    if(top < 8) top = 8;
 
     moreDropdown.style.left = left + "px";
     moreDropdown.style.top = top + "px";
@@ -835,18 +649,17 @@ function positionMoreDropdown(){
 
 function openMoreMenu(){
     positionMoreDropdown();
-    moreButton.setAttribute("aria-expanded", "true");
+    moreButton.setAttribute("aria-expanded","true");
 }
 
 function closeMoreMenu(){
     moreDropdown.classList.remove("show");
     moreDropdown.style.visibility = "";
-    moreButton.setAttribute("aria-expanded", "false");
+    moreButton.setAttribute("aria-expanded","false");
 }
 
-moreButton.addEventListener("click", function(event){
+moreButton.addEventListener("click",function(event){
     event.stopPropagation();
-
     if(moreDropdown.classList.contains("show")){
         closeMoreMenu();
     }else{
@@ -854,32 +667,28 @@ moreButton.addEventListener("click", function(event){
     }
 });
 
-document.addEventListener("click", function(event){
-    if(
-        !moreMenu.contains(event.target) &&
-        !moreDropdown.contains(event.target)
-    ){
+document.addEventListener("click",function(event){
+    if(!moreMenu.contains(event.target) && !moreDropdown.contains(event.target)){
         closeMoreMenu();
     }
 });
 
-moreDropdown.addEventListener("click", function(event){
+moreDropdown.addEventListener("click",function(event){
     event.stopPropagation();
 });
 
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown",function(event){
     if(event.key === "Escape"){
         closeMoreMenu();
         moreButton.focus();
     }
 });
 
-/* Close the menu when the navigation scrolls or the viewport changes. */
-siteNavigation.addEventListener("scroll", closeMoreMenu, {passive:true});
-window.addEventListener("scroll", closeMoreMenu, {passive:true});
-window.addEventListener("resize", closeMoreMenu);
+siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("resize",closeMoreMenu);
 
-/* QUESTIONS */
+/* QUESTIONS: ORIGINAL 50 QUESTIONS AND ANSWER KEYS */
 const questions = [
 {type:"Word Analogy",en:"Book : Author :: Painting : ?",hi:"पुस्तक : लेखक :: चित्रकला : ?",options:["Painter","Singer","Dancer","Sculptor"],hoptions:["चित्रकार","गायक","नर्तक","मूर्तिकार"],answer:0,exp:"An author writes a book; a painter creates a painting.",hexp:"लेखक पुस्तक लिखता है और चित्रकार चित्र बनाता है।"},
 {type:"Word Analogy",en:"Doctor : Hospital :: Teacher : ?",hi:"डॉक्टर : अस्पताल :: शिक्षक : ?",options:["Court","School","Bank","Factory"],hoptions:["न्यायालय","विद्यालय","बैंक","कारखाना"],answer:1,exp:"A doctor commonly works in a hospital; a teacher commonly works in a school.",hexp:"डॉक्टर सामान्यतः अस्पताल में और शिक्षक विद्यालय में कार्य करता है।"},
@@ -947,7 +756,7 @@ let submitted = false;
 let selectedAnswers = Array(questions.length).fill(null);
 
 function escapeHTML(value){
-    return String(value).replace(/[&<>"']/g, function(ch){
+    return String(value).replace(/[&<>"']/g,function(ch){
         return {
             "&":"&amp;",
             "<":"&lt;",
@@ -967,10 +776,10 @@ function renderQuestions(){
     const showEn = lang !== "hi";
     const showHi = lang !== "en";
 
-    container.innerHTML = questions.map((q, index) => {
-        const options = q.options.map((option, optionIndex) => {
+    container.innerHTML = questions.map((q,index)=>{
+        const options = q.options.map((option,optionIndex)=>{
             const optionText = showEn && showHi
-                ? escapeHTML(option) + " / " + escapeHTML(q.hoptions[optionIndex])
+                ? escapeHTML(option)+" / "+escapeHTML(q.hoptions[optionIndex])
                 : showHi
                     ? escapeHTML(q.hoptions[optionIndex])
                     : escapeHTML(option);
@@ -978,118 +787,100 @@ function renderQuestions(){
             const isSelected = selectedAnswers[index] === optionIndex;
 
             return `
-                <label class="option ${isSelected ? "selected" : ""}">
+                <label class="option ${isSelected?"selected":""}">
                     <input type="radio"
                            name="question${index}"
                            value="${optionIndex}"
-                           aria-label="Question ${index + 1}, option ${optionIndex + 1}"
-                           ${isSelected ? "checked" : ""}
-                           ${submitted ? "disabled" : ""}>
-                    <span><strong>${String.fromCharCode(65 + optionIndex)}.</strong> ${optionText}</span>
+                           aria-label="Question ${index+1}, option ${optionIndex+1}"
+                           ${isSelected?"checked":""}
+                           ${submitted?"disabled":""}>
+                    <span><strong>${String.fromCharCode(65+optionIndex)}.</strong> ${optionText}</span>
                 </label>`;
         }).join("");
 
         return `
             <section class="question-card" id="question-${index}">
                 <div class="question-top">
-                    <span class="question-number">Question ${index + 1} / ${questions.length}</span>
+                    <span class="question-number">Question ${index+1} / ${questions.length}</span>
                     <span class="question-type">${escapeHTML(q.type)}</span>
                 </div>
-
-                ${showEn ? `<p class="question-text">${escapeHTML(q.en)}</p>` : ""}
-                ${showHi ? `<p class="hindi-question">${escapeHTML(q.hi)}</p>` : ""}
-
+                ${showEn?`<p class="question-text">${escapeHTML(q.en)}</p>`:""}
+                ${showHi?`<p class="hindi-question">${escapeHTML(q.hi)}</p>`:""}
                 <div class="options">${options}</div>
-
                 <div class="explanation" id="explanation-${index}">
                     <p class="answer-status" id="status-${index}"></p>
                     <p><strong>Correct Answer / सही उत्तर:</strong>
                     <span id="correct-answer-${index}"></span></p>
-                    ${showEn ? `<p><strong>Explanation:</strong> ${escapeHTML(q.exp)}</p>` : ""}
-                    ${showHi ? `<p><strong>व्याख्या:</strong> ${escapeHTML(q.hexp)}</p>` : ""}
+                    ${showEn?`<p><strong>Explanation:</strong> ${escapeHTML(q.exp)}</p>`:""}
+                    ${showHi?`<p><strong>व्याख्या:</strong> ${escapeHTML(q.hexp)}</p>`:""}
                 </div>
             </section>`;
     }).join("");
 
-    if(submitted){
-        showReview();
-    }
-
+    if(submitted) showReview();
     updateStats();
 }
 
 function updateStats(){
-    let attempted = 0;
-    let correct = 0;
-    let wrong = 0;
+    let attempted=0,correct=0,wrong=0;
 
-    questions.forEach((q, index) => {
-        const selected = selectedAnswers[index];
-
-        if(selected !== null){
+    questions.forEach((q,index)=>{
+        const selected=selectedAnswers[index];
+        if(selected!==null){
             attempted++;
-
-            if(selected === q.answer){
-                correct++;
-            }else{
-                wrong++;
-            }
+            if(selected===q.answer) correct++;
+            else wrong++;
         }
     });
 
-    document.getElementById("totalCount").textContent = questions.length;
-    document.getElementById("attemptedCount").textContent = attempted;
-    document.getElementById("correctCount").textContent = correct;
-    document.getElementById("wrongCount").textContent = wrong;
-
-    document.getElementById("progressFill").style.width =
-        (attempted / questions.length * 100) + "%";
+    document.getElementById("totalCount").textContent=questions.length;
+    document.getElementById("attemptedCount").textContent=attempted;
+    document.getElementById("correctCount").textContent=correct;
+    document.getElementById("wrongCount").textContent=wrong;
+    document.getElementById("progressFill").style.width=
+        (attempted/questions.length*100)+"%";
 }
 
 function showReview(){
-    const lang = languageMode();
+    const lang=languageMode();
 
-    questions.forEach((q, index) => {
-        const selected = selectedAnswers[index];
-        const card = document.getElementById(`question-${index}`);
-        const explanation = document.getElementById(`explanation-${index}`);
-        const status = document.getElementById(`status-${index}`);
-        const answer = document.getElementById(`correct-answer-${index}`);
+    questions.forEach((q,index)=>{
+        const selected=selectedAnswers[index];
+        const card=document.getElementById(`question-${index}`);
+        const explanation=document.getElementById(`explanation-${index}`);
+        const status=document.getElementById(`status-${index}`);
+        const answer=document.getElementById(`correct-answer-${index}`);
 
-        if(!card || !explanation || !status || !answer) return;
+        if(!card||!explanation||!status||!answer) return;
 
-        card.querySelectorAll(".option").forEach((label, optionIndex) => {
-            const input = label.querySelector("input");
-            input.disabled = true;
-            label.classList.remove("correct", "incorrect");
+        card.querySelectorAll(".option").forEach((label,optionIndex)=>{
+            const input=label.querySelector("input");
+            input.disabled=true;
+            label.classList.remove("correct","incorrect");
 
-            if(optionIndex === q.answer){
-                label.classList.add("correct");
-            }
-
-            if(selected === optionIndex && selected !== q.answer){
+            if(optionIndex===q.answer) label.classList.add("correct");
+            if(selected===optionIndex&&selected!==q.answer){
                 label.classList.add("incorrect");
             }
         });
 
-        const correctOption = lang === "hi"
-            ? q.hoptions[q.answer]
-            : lang === "en"
-                ? q.options[q.answer]
-                : q.options[q.answer] + " / " + q.hoptions[q.answer];
+        const correctOption=lang==="hi"
+            ?q.hoptions[q.answer]
+            :lang==="en"
+                ?q.options[q.answer]
+                :q.options[q.answer]+" / "+q.hoptions[q.answer];
 
-        answer.textContent =
-            String.fromCharCode(65 + q.answer) + ". " + correctOption;
+        answer.textContent=String.fromCharCode(65+q.answer)+". "+correctOption;
 
-        if(selected === null){
-            status.textContent = "Not Attempted / उत्तर नहीं दिया";
-            status.style.color = "#52606d";
-        }else if(selected === q.answer){
-            status.textContent = "Correct Answer / सही उत्तर";
-            status.style.color = "#2e7d32";
+        if(selected===null){
+            status.textContent="Not Attempted / उत्तर नहीं दिया";
+            status.style.color="#52606d";
+        }else if(selected===q.answer){
+            status.textContent="Correct Answer / सही उत्तर";
+            status.style.color="#2e7d32";
         }else{
-            status.textContent = "Incorrect Answer / गलत उत्तर";
-            status.style.color = "#c62828";
+            status.textContent="Incorrect Answer / गलत उत्तर";
+            status.style.color="#c62828";
         }
 
         explanation.classList.add("show");
@@ -1099,92 +890,75 @@ function showReview(){
 function submitTest(){
     if(submitted) return;
 
-    submitted = true;
+    submitted=true;
 
-    let attempted = 0;
-    let correct = 0;
-    let wrong = 0;
+    let attempted=0,correct=0,wrong=0;
 
-    questions.forEach((q, index) => {
-        const selected = selectedAnswers[index];
-
-        if(selected !== null){
+    questions.forEach((q,index)=>{
+        const selected=selectedAnswers[index];
+        if(selected!==null){
             attempted++;
-
-            if(selected === q.answer){
-                correct++;
-            }else{
-                wrong++;
-            }
+            if(selected===q.answer) correct++;
+            else wrong++;
         }
     });
 
-    const unattempted = questions.length - attempted;
-    const score = correct * 2 - wrong * 0.5;
-    const accuracy = attempted ? correct / attempted * 100 : 0;
-    const maxScore = questions.length * 2;
+    const unattempted=questions.length-attempted;
+    const score=correct*2-wrong*0.5;
+    const accuracy=attempted?correct/attempted*100:0;
+    const maxScore=questions.length*2;
 
-    document.getElementById("scoreValue").textContent =
-        Number(score.toFixed(2)) + " / " + maxScore;
+    document.getElementById("scoreValue").textContent=
+        Number(score.toFixed(2))+" / "+maxScore;
+    document.getElementById("resultCorrect").textContent=correct;
+    document.getElementById("resultWrong").textContent=wrong;
+    document.getElementById("accuracyValue").textContent=accuracy.toFixed(2)+"%";
 
-    document.getElementById("resultCorrect").textContent = correct;
-    document.getElementById("resultWrong").textContent = wrong;
-    document.getElementById("accuracyValue").textContent =
-        accuracy.toFixed(2) + "%";
+    document.getElementById("resultMessage").textContent=
+        score>=maxScore*0.8
+            ?"Excellent effort! Keep practising."
+            :score>=maxScore*0.5
+                ?"Good attempt. Review the explanations and improve further."
+                :"Keep practising. Focus on identifying the relationship in each pair.";
 
-    document.getElementById("resultMessage").textContent =
-        score >= maxScore * 0.8
-            ? "Excellent effort! Keep practising."
-            : score >= maxScore * 0.5
-                ? "Good attempt. Review the explanations and improve further."
-                : "Keep practising. Focus on identifying the relationship in each pair.";
-
-    document.getElementById("resultDetails").textContent =
-        "Attempted: " + attempted +
-        " | Unattempted: " + unattempted +
-        " | Correct: " + correct +
-        " | Wrong: " + wrong +
-        " | Negative marks: " + (wrong * 0.5).toFixed(2);
+    document.getElementById("resultDetails").textContent=
+        "Attempted: "+attempted+
+        " | Unattempted: "+unattempted+
+        " | Correct: "+correct+
+        " | Wrong: "+wrong+
+        " | Negative marks: "+(wrong*0.5).toFixed(2);
 
     renderQuestions();
-
     resultCard.classList.add("show");
-    submitBtn.disabled = true;
-    reviewBtn.disabled = true;
-
-    resultCard.scrollIntoView({behavior:"smooth", block:"start"});
+    submitBtn.disabled=true;
+    reviewBtn.disabled=true;
+    resultCard.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 function resetTest(){
-    if(!confirm("Reset the test? All selected answers will be cleared.")){
-        return;
-    }
+    if(!confirm("Reset the test? All selected answers will be cleared.")) return;
 
-    submitted = false;
-    selectedAnswers = Array(questions.length).fill(null);
-
+    submitted=false;
+    selectedAnswers=Array(questions.length).fill(null);
     resultCard.classList.remove("show");
-    submitBtn.disabled = false;
-    reviewBtn.disabled = false;
+    submitBtn.disabled=false;
+    reviewBtn.disabled=false;
 
     renderQuestions();
     updateStats();
-
-    window.scrollTo({top:0, behavior:"smooth"});
+    window.scrollTo({top:0,behavior:"smooth"});
 }
 
-container.addEventListener("change", function(event){
-    if(submitted || !event.target.matches('input[type="radio"]')){
-        return;
-    }
+container.addEventListener("change",function(event){
+    if(submitted||!event.target.matches('input[type="radio"]')) return;
 
-    const card = event.target.closest(".question-card");
+    const card=event.target.closest(".question-card");
     if(!card) return;
 
-    const questionIndex = Number(card.id.replace("question-", ""));
-    selectedAnswers[questionIndex] = Number(event.target.value);
+    const questionIndex=Number(card.id.replace("question-",""));
+    selectedAnswers[questionIndex]=Number(event.target.value);
 
-    card.querySelectorAll(".option").forEach(option => {
+    card.querySelectorAll(".option").forEach(option=>{
         option.classList.remove("selected");
     });
 
@@ -1192,14 +966,14 @@ container.addEventListener("change", function(event){
     updateStats();
 });
 
-submitBtn.addEventListener("click", submitTest);
+submitBtn.addEventListener("click",submitTest);
 
-reviewBtn.addEventListener("click", function(){
-    const firstUnanswered = questions.findIndex(
-        (q, index) => selectedAnswers[index] === null
+reviewBtn.addEventListener("click",function(){
+    const firstUnanswered=questions.findIndex(
+        (q,index)=>selectedAnswers[index]===null
     );
 
-    if(firstUnanswered !== -1){
+    if(firstUnanswered!==-1){
         document.getElementById(`question-${firstUnanswered}`).scrollIntoView({
             behavior:"smooth",
             block:"center"
@@ -1212,14 +986,14 @@ reviewBtn.addEventListener("click", function(){
     }
 });
 
-resetBtn.addEventListener("click", resetTest);
+resetBtn.addEventListener("click",resetTest);
 
-languageSelect.addEventListener("change", function(){
+languageSelect.addEventListener("change",function(){
     renderQuestions();
 });
 
-if(questions.length !== 50){
-    console.error("Question count error: expected 50, found " + questions.length);
+if(questions.length!==50){
+    console.error("Question count error: expected 50, found "+questions.length);
 }
 
 renderQuestions();
