@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +26,8 @@ body{
     background:#102a43;
     color:#ffffff;
     width:100%;
+    position:relative;
+    z-index:100;
 }
 
 .site-brand{
@@ -49,9 +50,10 @@ body{
     padding:0 10px;
     border-top:1px solid rgba(255,255,255,.12);
     overflow-x:auto;
-    overflow-y:visible;
+    overflow-y:hidden;
     scrollbar-width:thin;
     scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
 }
 
 .site-navigation a,
@@ -91,17 +93,27 @@ body{
     font-size:11px;
 }
 
+/*
+   DROPDOWN FIX:
+   The dropdown is positioned relative to the viewport by JavaScript
+   so the navigation's horizontal scrolling cannot clip it.
+*/
 .more-dropdown{
     display:none;
-    position:absolute;
-    top:100%;
-    right:0;
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
     min-width:170px;
     background:#ffffff;
     border:1px solid #d9e2ec;
     border-radius:0 0 8px 8px;
     box-shadow:0 8px 20px rgba(16,42,67,.16);
-    z-index:1000;
+    z-index:99999;
+}
+
+.more-dropdown.show{
+    display:block;
 }
 
 .more-dropdown a{
@@ -110,6 +122,7 @@ body{
     padding:12px 16px;
     border-bottom:1px solid #edf1f5;
     white-space:nowrap;
+    text-decoration:none;
 }
 
 .more-dropdown a:last-child{
@@ -119,12 +132,6 @@ body{
 .more-dropdown a:hover{
     background:#eef6fb;
     color:#102a43;
-}
-
-.more-menu:hover .more-dropdown,
-.more-menu:focus-within .more-dropdown,
-.more-menu.open .more-dropdown{
-    display:block;
 }
 
 /* HERO */
@@ -529,7 +536,6 @@ footer .tagline{
         text-align:center;
     }
 
-    /* Keep navigation in one horizontally scrollable row */
     .site-navigation{
         flex-wrap:nowrap;
         justify-content:flex-start;
@@ -548,8 +554,8 @@ footer .tagline{
     }
 
     .more-dropdown{
-        right:0;
         min-width:150px;
+        max-width:calc(100vw - 16px);
     }
 
     .hero{
@@ -608,39 +614,54 @@ footer .tagline{
 <body>
 
 <header class="site-header">
+
     <a
         href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
         class="site-brand">
         LET'S QUALIFYNOW
     </a>
 
-    <nav class="site-navigation" aria-label="Main navigation">
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+
         <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+
         <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
         <div class="more-menu" id="moreMenu">
+
             <button
                 type="button"
                 class="more-button"
                 id="moreButton"
                 aria-expanded="false"
-                aria-haspopup="true">
+                aria-haspopup="true"
+                aria-controls="moreDropdown">
                 More <span class="more-arrow">▼</span>
             </button>
 
-            <div class="more-dropdown">
+            <div class="more-dropdown" id="moreDropdown">
                 <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
                 <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
             </div>
+
         </div>
+
     </nav>
 </header>
 
@@ -763,31 +784,102 @@ footer .tagline{
 <script>
 "use strict";
 
-/* MORE MENU */
+/* MORE MENU: DROPDOWN OUTSIDE THE SCROLLABLE NAVIGATION */
 const moreMenu = document.getElementById("moreMenu");
 const moreButton = document.getElementById("moreButton");
+const moreDropdown = document.getElementById("moreDropdown");
+const siteNavigation = document.getElementById("siteNavigation");
+
+/*
+   Move the dropdown to the body so that the horizontal navigation
+   cannot crop it on desktop or mobile.
+*/
+document.body.appendChild(moreDropdown);
+
+function positionMoreDropdown(){
+    const buttonRect = moreButton.getBoundingClientRect();
+
+    moreDropdown.style.left = "8px";
+    moreDropdown.style.top = "0px";
+    moreDropdown.style.visibility = "hidden";
+    moreDropdown.classList.add("show");
+
+    const dropdownRect = moreDropdown.getBoundingClientRect();
+    const dropdownWidth = dropdownRect.width;
+    const dropdownHeight = dropdownRect.height;
+
+    let left = buttonRect.left;
+    let top = buttonRect.bottom;
+
+    if(left + dropdownWidth > window.innerWidth - 8){
+        left = window.innerWidth - dropdownWidth - 8;
+    }
+
+    if(left < 8){
+        left = 8;
+    }
+
+    /* If there is not enough space below, show the menu above. */
+    if(top + dropdownHeight > window.innerHeight - 8){
+        top = buttonRect.top - dropdownHeight;
+    }
+
+    if(top < 8){
+        top = 8;
+    }
+
+    moreDropdown.style.left = left + "px";
+    moreDropdown.style.top = top + "px";
+    moreDropdown.style.visibility = "visible";
+}
+
+function openMoreMenu(){
+    positionMoreDropdown();
+    moreButton.setAttribute("aria-expanded", "true");
+}
+
+function closeMoreMenu(){
+    moreDropdown.classList.remove("show");
+    moreDropdown.style.visibility = "";
+    moreButton.setAttribute("aria-expanded", "false");
+}
 
 moreButton.addEventListener("click", function(event){
     event.stopPropagation();
-    const isOpen = moreMenu.classList.toggle("open");
-    moreButton.setAttribute("aria-expanded", String(isOpen));
+
+    if(moreDropdown.classList.contains("show")){
+        closeMoreMenu();
+    }else{
+        openMoreMenu();
+    }
 });
 
 document.addEventListener("click", function(event){
-    if(!moreMenu.contains(event.target)){
-        moreMenu.classList.remove("open");
-        moreButton.setAttribute("aria-expanded", "false");
+    if(
+        !moreMenu.contains(event.target) &&
+        !moreDropdown.contains(event.target)
+    ){
+        closeMoreMenu();
     }
+});
+
+moreDropdown.addEventListener("click", function(event){
+    event.stopPropagation();
 });
 
 document.addEventListener("keydown", function(event){
     if(event.key === "Escape"){
-        moreMenu.classList.remove("open");
-        moreButton.setAttribute("aria-expanded", "false");
+        closeMoreMenu();
         moreButton.focus();
     }
 });
 
+/* Close the menu when the navigation scrolls or the viewport changes. */
+siteNavigation.addEventListener("scroll", closeMoreMenu, {passive:true});
+window.addEventListener("scroll", closeMoreMenu, {passive:true});
+window.addEventListener("resize", closeMoreMenu);
+
+/* QUESTIONS */
 const questions = [
 {type:"Word Analogy",en:"Book : Author :: Painting : ?",hi:"पुस्तक : लेखक :: चित्रकला : ?",options:["Painter","Singer","Dancer","Sculptor"],hoptions:["चित्रकार","गायक","नर्तक","मूर्तिकार"],answer:0,exp:"An author writes a book; a painter creates a painting.",hexp:"लेखक पुस्तक लिखता है और चित्रकार चित्र बनाता है।"},
 {type:"Word Analogy",en:"Doctor : Hospital :: Teacher : ?",hi:"डॉक्टर : अस्पताल :: शिक्षक : ?",options:["Court","School","Bank","Factory"],hoptions:["न्यायालय","विद्यालय","बैंक","कारखाना"],answer:1,exp:"A doctor commonly works in a hospital; a teacher commonly works in a school.",hexp:"डॉक्टर सामान्यतः अस्पताल में और शिक्षक विद्यालय में कार्य करता है।"},
@@ -936,6 +1028,7 @@ function updateStats(){
 
         if(selected !== null){
             attempted++;
+
             if(selected === q.answer){
                 correct++;
             }else{
@@ -1017,6 +1110,7 @@ function submitTest(){
 
         if(selected !== null){
             attempted++;
+
             if(selected === q.answer){
                 correct++;
             }else{
