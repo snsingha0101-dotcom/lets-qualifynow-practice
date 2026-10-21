@@ -7,7 +7,6 @@
 <title>SSC Classification Practice | Let's QualifyNow</title>
 
 <style>
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -25,34 +24,49 @@ body{
 
 .navbar{
     background:#102a43;
-    padding:15px 5%;
+    width:100%;
+    padding:8px 12px;
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-start;
     align-items:center;
-    flex-wrap:wrap;
-    gap:15px;
+    flex-wrap:nowrap;
+    gap:10px;
 }
 
 .logo{
     color:white;
-    font-size:22px;
+    font-size:18px;
     font-weight:bold;
     text-decoration:none;
+    white-space:nowrap;
+    flex:0 0 auto;
+    line-height:1.2;
 }
 
 .nav-links{
     display:flex;
-    flex-wrap:wrap;
-    gap:8px;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:2px;
+    flex:1 1 auto;
+    min-width:0;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
 }
 
 .nav-links a{
     color:white;
     text-decoration:none;
-    padding:8px 12px;
+    padding:10px 8px;
     border-radius:6px;
-    font-size:14px;
-    transition:0.3s;
+    font-size:12px;
+    font-weight:600;
+    white-space:nowrap;
+    flex:0 0 auto;
+    transition:background 0.3s;
 }
 
 .nav-links a:hover{
@@ -256,16 +270,33 @@ footer p{
 @media(max-width:700px){
 
     .navbar{
-        justify-content:center;
+        justify-content:flex-start;
+        align-items:center;
+        flex-wrap:nowrap;
+        gap:7px;
+        padding:8px;
     }
 
     .logo{
-        width:100%;
-        text-align:center;
+        width:auto;
+        flex:0 0 auto;
+        text-align:left;
+        font-size:14px;
     }
 
     .nav-links{
-        justify-content:center;
+        justify-content:flex-start;
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        gap:2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+    }
+
+    .nav-links a{
+        font-size:11px;
+        padding:9px 7px;
     }
 
     .hero h1{
@@ -283,9 +314,7 @@ footer p{
     .question{
         font-size:16px;
     }
-
 }
-
 </style>
 </head>
 
@@ -304,11 +333,10 @@ footer p{
         <a href="live-classes.html">Live Classes</a>
         <a href="test-series.html">Test Series</a>
         <a href="exams.html">Exams</a>
-        <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
     </div>
 
 </nav>
-
 
 <!-- HERO -->
 
@@ -322,7 +350,6 @@ footer p{
     </p>
 
 </section>
-
 
 <div class="container">
 
@@ -345,10 +372,7 @@ footer p{
 
     </div>
 
-
-    <!-- ========================================================= -->
     <!-- CATEGORY 1 -->
-    <!-- ========================================================= -->
 
     <section class="category">
 
@@ -356,17 +380,11 @@ footer p{
             1. Word Classification – 8 Questions
         </h2>
 
-
-        <!-- Q1 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 1</span>
             <span class="level">Basic</span>
 
-            <div class="question">
-                Select the odd word out.
-            </div>
+            <div class="question">Select the odd word out.</div>
 
             <div class="options">
                 <div class="option">(A) Mango</div>
@@ -383,20 +401,13 @@ footer p{
                 <strong>Solution:</strong>
                 Mango, Apple and Banana are fruits, whereas Carrot is a vegetable.
             </div>
-
         </div>
 
-
-        <!-- Q2 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 2</span>
             <span class="level">Basic</span>
 
-            <div class="question">
-                Select the odd one out.
-            </div>
+            <div class="question">Select the odd one out.</div>
 
             <div class="options">
                 <div class="option">(A) Mercury</div>
@@ -413,20 +424,13 @@ footer p{
                 <strong>Solution:</strong>
                 Mercury, Venus and Earth are planets. Moon is a natural satellite.
             </div>
-
         </div>
 
-
-        <!-- Q3 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 3</span>
             <span class="level">Basic</span>
 
-            <div class="question">
-                Select the odd word out.
-            </div>
+            <div class="question">Select the odd word out.</div>
 
             <div class="options">
                 <div class="option">(A) Triangle</div>
@@ -443,20 +447,13 @@ footer p{
                 <strong>Solution:</strong>
                 Triangle, Square and Circle are plane figures (2-D), whereas Cube is a solid figure (3-D).
             </div>
-
         </div>
 
-
-        <!-- Q4 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 4</span>
             <span class="level">Basic</span>
 
-            <div class="question">
-                Select the word that is different from the other three.
-            </div>
+            <div class="question">Select the word that is different from the other three.</div>
 
             <div class="options">
                 <div class="option">(A) January</div>
@@ -473,20 +470,13 @@ footer p{
                 <strong>Solution:</strong>
                 January, March and July are months. Monday is a day of the week.
             </div>
-
         </div>
 
-
-        <!-- Q5 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 5</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd one out.
-            </div>
+            <div class="question">Find the odd one out.</div>
 
             <div class="options">
                 <div class="option">(A) Iron</div>
@@ -503,20 +493,13 @@ footer p{
                 <strong>Solution:</strong>
                 Iron, Copper and Silver are metals. Glass is not a metal.
             </div>
-
         </div>
 
-
-        <!-- Q6 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 6</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd one out.
-            </div>
+            <div class="question">Select the odd one out.</div>
 
             <div class="options">
                 <div class="option">(A) Kidney</div>
@@ -534,20 +517,13 @@ footer p{
                 Kidney, Liver and Lung are associated with major excretory/metabolic
                 functions, while Heart is primarily a circulatory organ.
             </div>
-
         </div>
 
-
-        <!-- Q7 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 7</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Which word does not belong to the group?
-            </div>
+            <div class="question">Which word does not belong to the group?</div>
 
             <div class="options">
                 <div class="option">(A) Teacher</div>
@@ -564,20 +540,13 @@ footer p{
                 <strong>Solution:</strong>
                 Teacher, Doctor and Engineer are professions/persons. Hospital is an institution/place.
             </div>
-
         </div>
 
-
-        <!-- Q8 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 8</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd one out.
-            </div>
+            <div class="question">Find the odd one out.</div>
 
             <div class="options">
                 <div class="option">(A) Sparrow</div>
@@ -594,15 +563,11 @@ footer p{
                 <strong>Solution:</strong>
                 Sparrow, Pigeon and Eagle are birds. Bat is a mammal.
             </div>
-
         </div>
 
     </section>
 
-
-    <!-- ========================================================= -->
     <!-- CATEGORY 2 -->
-    <!-- ========================================================= -->
 
     <section class="category">
 
@@ -610,17 +575,11 @@ footer p{
             2. Number Classification – 15 Questions
         </h2>
 
-
-        <!-- Q9 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 9</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 27</div>
@@ -637,20 +596,13 @@ footer p{
                 <strong>Solution:</strong>
                 27, 36 and 45 are divisible by 9. 52 is not divisible by 9.
             </div>
-
         </div>
 
-
-        <!-- Q10 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 10</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 16</div>
@@ -667,20 +619,13 @@ footer p{
                 <strong>Solution:</strong>
                 16 = 4², 25 = 5² and 36 = 6². 48 is not a perfect square.
             </div>
-
         </div>
 
-
-        <!-- Q11 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 11</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 18</div>
@@ -697,20 +642,13 @@ footer p{
                 <strong>Solution:</strong>
                 18, 27 and 45 are divisible by 9. 56 is not divisible by 9.
             </div>
-
         </div>
 
-
-        <!-- Q12 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 12</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 14</div>
@@ -728,20 +666,13 @@ footer p{
                 14, 22 and 30 form an arithmetic progression with common difference 8.
                 The next number should be 38, not 47.
             </div>
-
         </div>
 
-
-        <!-- Q13 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 13</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 121</div>
@@ -758,20 +689,13 @@ footer p{
                 <strong>Solution:</strong>
                 121 = 11², 144 = 12² and 169 = 13². 210 is not a perfect square.
             </div>
-
         </div>
 
-
-        <!-- Q14 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 14</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 8</div>
@@ -788,20 +712,13 @@ footer p{
                 <strong>Solution:</strong>
                 8 = 2³, 27 = 3³ and 64 = 4³. 225 is not a perfect cube.
             </div>
-
         </div>
 
-
-        <!-- Q15 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 15</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 13</div>
@@ -818,20 +735,13 @@ footer p{
                 <strong>Solution:</strong>
                 13, 26 and 39 are multiples of 13. 70 is not a multiple of 13.
             </div>
-
         </div>
 
-
-        <!-- Q16 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 16</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 17</div>
@@ -848,20 +758,13 @@ footer p{
                 <strong>Solution:</strong>
                 17, 34 and 51 are multiples of 17. 75 is not a multiple of 17.
             </div>
-
         </div>
 
-
-        <!-- Q17 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 17</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 12</div>
@@ -878,20 +781,13 @@ footer p{
                 <strong>Solution:</strong>
                 12, 24 and 36 are multiples of 12. 55 is not a multiple of 12.
             </div>
-
         </div>
 
-
-        <!-- Q18 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 18</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 19</div>
@@ -909,20 +805,13 @@ footer p{
                 19, 28 and 37 increase by 9 each time. The next number should be 46,
                 not 56.
             </div>
-
         </div>
 
-
-        <!-- Q19 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 19</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 15</div>
@@ -939,20 +828,13 @@ footer p{
                 <strong>Solution:</strong>
                 15, 30 and 45 are multiples of 15. 74 is not a multiple of 15.
             </div>
-
         </div>
 
-
-        <!-- Q20 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 20</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 21</div>
@@ -970,20 +852,13 @@ footer p{
                 21, 34 and 47 form an arithmetic progression with common difference 13.
                 The next number should be 60.
             </div>
-
         </div>
 
-
-        <!-- Q21 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 21</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 32</div>
@@ -1000,20 +875,13 @@ footer p{
                 <strong>Solution:</strong>
                 32, 48 and 64 increase by 16. The next number should be 80, not 95.
             </div>
-
         </div>
 
-
-        <!-- Q22 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 22</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 11</div>
@@ -1031,20 +899,13 @@ footer p{
                 11 → 22 → 44 follows multiplication by 2. The next number should be
                 88, not 90.
             </div>
-
         </div>
 
-
-        <!-- Q23 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 23</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Find the odd number out.
-            </div>
+            <div class="question">Find the odd number out.</div>
 
             <div class="options">
                 <div class="option">(A) 49</div>
@@ -1061,16 +922,11 @@ footer p{
                 <strong>Solution:</strong>
                 49 = 7², 64 = 8² and 81 = 9². 125 is not a square.
             </div>
-
         </div>
-
 
     </section>
 
-
-    <!-- ========================================================= -->
     <!-- CATEGORY 3 -->
-    <!-- ========================================================= -->
 
     <section class="category">
 
@@ -1078,17 +934,11 @@ footer p{
             3. Alphabet / Letter Classification – 8 Questions
         </h2>
 
-
-        <!-- Q24 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 24</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd letter group.
-            </div>
+            <div class="question">Find the odd letter group.</div>
 
             <div class="options">
                 <div class="option">(A) BDF</div>
@@ -1106,20 +956,13 @@ footer p{
                 BDF, HJL and NPR have a gap of 2 letters between consecutive letters.
                 TVY has positions 20, 22, 25, so the last gap is different.
             </div>
-
         </div>
 
-
-        <!-- Q25 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 25</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd letter group.
-            </div>
+            <div class="question">Select the odd letter group.</div>
 
             <div class="options">
                 <div class="option">(A) CFI</div>
@@ -1137,20 +980,13 @@ footer p{
                 CFI, LOR and UXA move by +3 letters cyclically.
                 GJN has G → J = +3, J → N = +4, so it is different.
             </div>
-
         </div>
 
-
-        <!-- Q26 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 26</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Which pair is different from the other three?
-            </div>
+            <div class="question">Which pair is different from the other three?</div>
 
             <div class="options">
                 <div class="option">(A) AZ</div>
@@ -1168,20 +1004,13 @@ footer p{
                 In AZ, BY and CX, the alphabet positions add to 27:
                 1+26, 2+25 and 3+24. E+X = 5+24 = 29.
             </div>
-
         </div>
 
-
-        <!-- Q27 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 27</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd letter group.
-            </div>
+            <div class="question">Find the odd letter group.</div>
 
             <div class="options">
                 <div class="option">(A) ADG</div>
@@ -1199,20 +1028,13 @@ footer p{
                 ADG, HKN and PSV have a constant gap of +3 between letters.
                 TVX has T → V = +2 and V → X = +2.
             </div>
-
         </div>
 
-
-        <!-- Q28 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 28</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Select the odd group.
-            </div>
+            <div class="question">Select the odd group.</div>
 
             <div class="options">
                 <div class="option">(A) ACEG</div>
@@ -1230,20 +1052,13 @@ footer p{
                 ACEG, IKMO and QSUV move by +2 at every step.
                 TWYZ has gaps +3, +2 and +1.
             </div>
-
         </div>
 
-
-        <!-- Q29 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 29</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Find the odd group.
-            </div>
+            <div class="question">Find the odd group.</div>
 
             <div class="options">
                 <div class="option">(A) BGLQ</div>
@@ -1261,20 +1076,13 @@ footer p{
                 BGLQ, CHMR and DINS each move by +5 positions:
                 B→G→L→Q etc. In EJOX, E→J→O is +5 but O→X is +9.
             </div>
-
         </div>
 
-
-        <!-- Q30 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 30</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Which pair is different?
-            </div>
+            <div class="question">Which pair is different?</div>
 
             <div class="options">
                 <div class="option">(A) AB</div>
@@ -1284,33 +1092,23 @@ footer p{
             </div>
 
             <div class="answer-box">
-                <strong>Answer: (D) MN</strong>
+                <strong>Answer: No unique odd pair</strong>
             </div>
 
             <div class="solution">
                 <strong>Solution:</strong>
-                AB, EF and IJ start at positions 1, 5 and 9 respectively, increasing
-                by 4. MN starts at 13, which would actually continue the same pattern.
-                Therefore this option is not odd.
-                <br><br>
-                <strong>Correction:</strong> The intended odd pair is not MN. To maintain
-                a unique answer, consider the actual set below:
-                AB, EF, IJ and OP. The first three start at 1, 5 and 9; OP starts at 15.
+                All four options are consecutive-letter pairs. Their starting letters
+                A, E, I and M are separated by four alphabet positions, so MN continues
+                the same pattern. The question needs a revised option to have one
+                uniquely correct answer.
             </div>
-
         </div>
 
-
-        <!-- Q31 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 31</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Find the odd letter group.
-            </div>
+            <div class="question">Find the odd letter group.</div>
 
             <div class="options">
                 <div class="option">(A) ZXV</div>
@@ -1328,15 +1126,11 @@ footer p{
                 ZXV, RPN and JHF decrease by 2 positions at each step.
                 DCB has D→C = -1 and C→B = -1.
             </div>
-
         </div>
 
     </section>
 
-
-    <!-- ========================================================= -->
     <!-- CATEGORY 4 -->
-    <!-- ========================================================= -->
 
     <section class="category">
 
@@ -1344,11 +1138,7 @@ footer p{
             4. Number-Set Classification – 8 Questions
         </h2>
 
-
-        <!-- Q32 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 32</span>
             <span class="level">Advanced</span>
 
@@ -1371,29 +1161,19 @@ footer p{
             <div class="solution">
                 <strong>Solution:</strong>
                 In A, B and C:
-                <br>
-                Second number = 4 × First + 1
-                <br>
-                Third number = 2 × First + 1
+                <br>Second number = 4 × First + 1
+                <br>Third number = 2 × First + 1
                 <br><br>
-                For D:
-                4 × 13 + 1 = 53, not 52.
+                For D: 4 × 13 + 1 = 53, not 52.
                 Therefore D is the odd set.
             </div>
-
         </div>
 
-
-        <!-- Q33 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 33</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Find the odd number set.
-            </div>
+            <div class="question">Find the odd number set.</div>
 
             <div class="options">
                 <div class="option">(A) (12, 38, 13)</div>
@@ -1408,28 +1188,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C:
-                <br>
-                Second = 3 × First + 2
-                <br>
-                Third = First + 1
-                <br><br>
-                For D, Third should be 18, not 19.
+                In A, B and C, Second = 3 × First + 2 and Third = First + 1.
+                For D, the third number should be 18, not 19.
             </div>
-
         </div>
 
-
-        <!-- Q34 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 34</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Select the set which is different from the other three.
-            </div>
+            <div class="question">Select the set which is different from the other three.</div>
 
             <div class="options">
                 <div class="option">(A) (9, 28, 7)</div>
@@ -1444,29 +1212,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and D:
-                <br>
-                Second = 3 × First + 1
-                <br>
-                Third = First − 2
-                <br><br>
-                For C:
-                3 × 18 + 1 = 55, but 18 − 2 = 16, not 17.
+                In A, B and D, Second = 3 × First + 1 and Third = First − 2.
+                For C, 18 − 2 = 16, not 17.
             </div>
-
         </div>
 
-
-        <!-- Q35 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 35</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Find the odd number set.
-            </div>
+            <div class="question">Find the odd number set.</div>
 
             <div class="options">
                 <div class="option">(A) (5, 26, 10)</div>
@@ -1481,29 +1236,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C:
-                <br>
-                Second = First² + 1
-                <br>
-                Third = 2 × First
-                <br><br>
-                For D:
-                8² + 1 = 65, not 66.
+                In A, B and C, Second = First² + 1 and Third = 2 × First.
+                For D, 8² + 1 = 65, not 66.
             </div>
-
         </div>
 
-
-        <!-- Q36 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 36</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Three sets follow the same rule. Find the odd set.
-            </div>
+            <div class="question">Three sets follow the same rule. Find the odd set.</div>
 
             <div class="options">
                 <div class="option">(A) (6, 17, 9)</div>
@@ -1518,29 +1260,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C:
-                <br>
-                Second = 2 × First + 5
-                <br>
-                Third = First + 3
-                <br><br>
-                For D:
-                2 × 15 + 5 = 35, not 34.
+                In A, B and C, Second = 2 × First + 5 and Third = First + 3.
+                For D, 2 × 15 + 5 = 35, not 34.
             </div>
-
         </div>
 
-
-        <!-- Q37 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 37</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Select the odd set.
-            </div>
+            <div class="question">Select the odd set.</div>
 
             <div class="options">
                 <div class="option">(A) (6, 21, 13)</div>
@@ -1555,29 +1284,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C:
-                <br>
-                Second = 4 × First − 3
-                <br>
-                Third = 2 × First + 1
-                <br><br>
-                For D:
-                4 × 13 − 3 = 49, not 50.
+                In A, B and C, Second = 4 × First − 3 and Third = 2 × First + 1.
+                For D, 4 × 13 − 3 = 49, not 50.
             </div>
-
         </div>
 
-
-        <!-- Q38 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 38</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Find the odd set.
-            </div>
+            <div class="question">Find the odd set.</div>
 
             <div class="options">
                 <div class="option">(A) (15, 26, 11)</div>
@@ -1592,28 +1308,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, C and D:
-                <br>
-                Second = First + 11
-                <br>
-                Third = First − 4
-                <br><br>
+                In A, C and D, Second = First + 11 and Third = First − 4.
                 For B, 19 + 11 = 30, not 31.
             </div>
-
         </div>
 
-
-        <!-- Q39 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 39</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Select the odd set.
-            </div>
+            <div class="question">Select the odd set.</div>
 
             <div class="options">
                 <div class="option">(A) (7, 19, 18)</div>
@@ -1628,24 +1332,14 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and D:
-                <br>
-                Second = 3 × First − 2
-                <br>
-                Third = 2 × First + 4
-                <br><br>
-                For C:
-                3 × 14 − 2 = 40, not 41.
+                In A, B and D, Second = 3 × First − 2 and Third = 2 × First + 4.
+                For C, 3 × 14 − 2 = 40, not 41.
             </div>
-
         </div>
 
     </section>
 
-
-    <!-- ========================================================= -->
     <!-- CATEGORY 5 -->
-    <!-- ========================================================= -->
 
     <section class="category">
 
@@ -1653,17 +1347,11 @@ footer p{
             5. Mixed & Logical Classification – 6 Questions
         </h2>
 
-
-        <!-- Q40 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 40</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd figure type.
-            </div>
+            <div class="question">Find the odd figure type.</div>
 
             <div class="options">
                 <div class="option">(A) Triangle</div>
@@ -1681,20 +1369,13 @@ footer p{
                 Triangle, Pentagon and Hexagon are polygons with straight sides.
                 Circle has no straight side.
             </div>
-
         </div>
 
-
-        <!-- Q41 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 41</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Select the odd number.
-            </div>
+            <div class="question">Select the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 2</div>
@@ -1711,20 +1392,13 @@ footer p{
                 <strong>Solution:</strong>
                 2, 3 and 5 are prime numbers. 9 is composite.
             </div>
-
         </div>
 
-
-        <!-- Q42 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 42</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Find the odd number.
-            </div>
+            <div class="question">Find the odd number.</div>
 
             <div class="options">
                 <div class="option">(A) 1</div>
@@ -1741,20 +1415,13 @@ footer p{
                 <strong>Solution:</strong>
                 1 = 1², 4 = 2² and 9 = 3². 15 is not a perfect square.
             </div>
-
         </div>
 
-
-        <!-- Q43 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 43</span>
             <span class="level">Moderate</span>
 
-            <div class="question">
-                Which one is different from the other three?
-            </div>
+            <div class="question">Which one is different from the other three?</div>
 
             <div class="options">
                 <div class="option">(A) Keyboard</div>
@@ -1772,20 +1439,13 @@ footer p{
                 Keyboard, Mouse and Monitor are computer hardware devices.
                 Notebook is a stationery item.
             </div>
-
         </div>
 
-
-        <!-- Q44 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 44</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Find the odd pair.
-            </div>
+            <div class="question">Find the odd pair.</div>
 
             <div class="options">
                 <div class="option">(A) 3 : 9</div>
@@ -1804,20 +1464,13 @@ footer p{
                 3² = 9, 4² = 16 and 5² = 25.
                 6² = 36, not 30.
             </div>
-
         </div>
 
-
-        <!-- Q45 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 45</span>
             <span class="level">Advanced</span>
 
-            <div class="question">
-                Select the odd pair.
-            </div>
+            <div class="question">Select the odd pair.</div>
 
             <div class="options">
                 <div class="option">(A) 7 : 16</div>
@@ -1832,29 +1485,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C:
-                <br>
-                Second = 2 × First + 2
-                <br>
-                7×2+2=16, 10×2+2=22 — wait, this does not match 23.
-                Therefore the relation is not valid.
-                <br><br>
-                <strong>Verified correction:</strong>
-                The intended valid set is:
-                <br>
-                (7,16), (10,22), (13,28), (16,36)
-                <br>
-                Here the odd pair is (16,36), because the expected value is 34.
+                The original options do not follow a consistent rule for A, B and C.
+                For a consistent pattern, the intended options would be
+                (7,16), (10,22), (13,28) and (16,34). The original question needs
+                correction before being used as a verified exam question.
             </div>
-
         </div>
 
     </section>
 
-
-    <!-- ========================================================= -->
     <!-- CATEGORY 6 -->
-    <!-- ========================================================= -->
 
     <section class="category">
 
@@ -1862,11 +1502,7 @@ footer p{
             6. SSC Exam-Level Higher Classification – 5 Questions
         </h2>
 
-
-        <!-- Q46 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 46</span>
             <span class="level">Exam Level</span>
 
@@ -1887,24 +1523,17 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C, second number = cube of first:
+                In A, B and C, the second number is the cube of the first:
                 2³ = 8, 3³ = 27 and 4³ = 64.
                 5³ = 125, not 100.
             </div>
-
         </div>
 
-
-        <!-- Q47 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 47</span>
             <span class="level">Exam Level</span>
 
-            <div class="question">
-                Find the odd number set.
-            </div>
+            <div class="question">Find the odd number set.</div>
 
             <div class="options">
                 <div class="option">(A) (17, 12, 7)</div>
@@ -1919,9 +1548,7 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C:
-                <br>
-                First + Third = 2 × Second
+                In A, B and C, First + Third = 2 × Second.
                 <br>
                 A: 17+7 = 24 = 2×12
                 <br>
@@ -1931,20 +1558,13 @@ footer p{
                 <br>
                 D: 14+20 = 34, whereas 2×18 = 36.
             </div>
-
         </div>
 
-
-        <!-- Q48 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 48</span>
             <span class="level">Exam Level</span>
 
-            <div class="question">
-                Which sequence is different from the other three?
-            </div>
+            <div class="question">Which sequence is different from the other three?</div>
 
             <div class="options">
                 <div class="option">(A) 3, 6, 12, 24</div>
@@ -1959,30 +1579,16 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C, every term is multiplied by 2:
-                <br>
-                3→6→12→24
-                <br>
-                5→10→20→40
-                <br>
-                7→14→28→56
-                <br>
+                In A, B and C, every term is multiplied by 2.
                 In D, 18×2 = 36, not 35.
             </div>
-
         </div>
 
-
-        <!-- Q49 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 49</span>
             <span class="level">Exam Level</span>
 
-            <div class="question">
-                Select the odd pair.
-            </div>
+            <div class="question">Select the odd pair.</div>
 
             <div class="options">
                 <div class="option">(A) 3 : 12</div>
@@ -1997,26 +1603,15 @@ footer p{
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and C:
+                In A, B and C, Second = First × (First + 1).
                 <br>
-                Second = First × (First + 1)
+                3×4=12, 5×6=30, 7×8=56.
                 <br>
-                3×4=12
-                <br>
-                5×6=30
-                <br>
-                7×8=56
-                <br>
-                For 9, expected value = 9×10 = 90, not 81.
+                For 9, the expected value is 9×10 = 90, not 81.
             </div>
-
         </div>
 
-
-        <!-- Q50 -->
-
         <div class="question-card">
-
             <span class="question-number">Question 50</span>
             <span class="level">Exam Level</span>
 
@@ -2032,30 +1627,27 @@ footer p{
             </div>
 
             <div class="answer-box">
-                <strong>Answer: (C) (7, 16, 9)</strong>
+                <strong>Answer: The question needs correction</strong>
             </div>
 
             <div class="solution">
                 <strong>Solution:</strong>
-                In A, B and D, the sum of the three numbers is 32:
+                The stated rule does not produce a unique answer:
                 <br>
                 A: 8+15+9 = 32
                 <br>
                 B: 5+14+13 = 32
                 <br>
+                C: 7+16+9 = 32
+                <br>
                 D: 6+14+11 = 31
                 <br><br>
-                Therefore this set does not follow the same relation.
-                <br>
-                <strong>Note:</strong> To keep the question mathematically unique,
-                the intended D should be (6,15,11), giving 32. Hence the odd set
-                is C only if C is changed to a set whose total is not 32.
+                According to the sum rule, D is the odd set because its total is 31,
+                while the other three totals are 32.
             </div>
-
         </div>
 
     </section>
-
 
     <!-- INFO -->
 
@@ -2076,24 +1668,18 @@ footer p{
 
     </div>
 
-
     <a href="ssc-topic-wise-practice.html" class="back-btn">
         ← Back to Topic-wise Practice
     </a>
 
 </div>
 
-
 <!-- FOOTER -->
 
 <footer>
-
     <p><strong>LET'S QUALIFYNOW</strong></p>
-
     <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
-
     <p>SSC • Banking • Railway • Defence • State Government Exams</p>
-
 </footer>
 
 </body>
