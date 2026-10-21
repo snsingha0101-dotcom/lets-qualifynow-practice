@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@ body{
     line-height:1.6;
 }
 
-/* GOOGLE SITES STYLE NAVIGATION */
+/* HEADER */
 .site-header{
     background:#102a43;
     color:#ffffff;
@@ -38,24 +39,31 @@ body{
     letter-spacing:.4px;
 }
 
+/* SINGLE-LINE NAVIGATION */
 .site-navigation{
     display:flex;
     align-items:center;
+    flex-wrap:nowrap;
     gap:0;
-    padding:0 4%;
-    flex-wrap:wrap;
+    width:100%;
+    padding:0 10px;
     border-top:1px solid rgba(255,255,255,.12);
+    overflow-x:auto;
+    overflow-y:visible;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
 }
 
 .site-navigation a,
 .more-button{
     display:block;
+    flex:0 0 auto;
     color:#ffffff;
     text-decoration:none;
     font-family:Arial, Helvetica, sans-serif;
-    font-size:14px;
+    font-size:13px;
     font-weight:600;
-    padding:14px 12px;
+    padding:13px 10px;
     border:none;
     background:transparent;
     cursor:pointer;
@@ -68,15 +76,15 @@ body{
     color:#d9eaf7;
 }
 
-/* MORE DROPDOWN */
 .more-menu{
     position:relative;
+    flex:0 0 auto;
 }
 
 .more-button{
     display:flex;
     align-items:center;
-    gap:7px;
+    gap:6px;
 }
 
 .more-arrow{
@@ -97,9 +105,11 @@ body{
 }
 
 .more-dropdown a{
+    display:block;
     color:#102a43;
     padding:12px 16px;
     border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
 }
 
 .more-dropdown a:last-child{
@@ -115,32 +125,6 @@ body{
 .more-menu:focus-within .more-dropdown,
 .more-menu.open .more-dropdown{
     display:block;
-}
-
-/* CENTERED BACK LINK */
-.back-navigation{
-    width:100%;
-    text-align:center;
-    padding:20px 15px;
-    background:#ffffff;
-    border-bottom:1px solid #e1e8ed;
-}
-
-.back-navigation a{
-    display:inline-block;
-    color:#173f5f;
-    background:#e8f1f8;
-    border:1px solid #d9e2ec;
-    border-radius:8px;
-    padding:10px 20px;
-    font-size:14px;
-    font-weight:700;
-    text-decoration:none;
-    transition:background .2s;
-}
-
-.back-navigation a:hover{
-    background:#d9eaf7;
 }
 
 /* HERO */
@@ -473,13 +457,39 @@ button:disabled{
     color:#52606d;
 }
 
+/* BACK LINK: BOTTOM, CENTERED */
+.back-navigation{
+    width:100%;
+    text-align:center;
+    padding:25px 15px;
+    background:#f7f9fc;
+    margin-top:10px;
+}
+
+.back-navigation a{
+    display:inline-block;
+    color:#173f5f;
+    background:#e8f1f8;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:11px 22px;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    transition:background .2s;
+}
+
+.back-navigation a:hover{
+    background:#d9eaf7;
+}
+
 /* FOOTER */
 footer{
     background:#102a43;
     color:#ffffff;
     text-align:center;
     padding:28px 20px;
-    margin-top:60px;
+    margin-top:0;
 }
 
 footer p{
@@ -502,8 +512,7 @@ footer .tagline{
     }
 
     .site-navigation{
-        justify-content:center;
-        padding:0 10px;
+        padding:0 8px;
     }
 
     .site-navigation a,
@@ -517,32 +526,30 @@ footer .tagline{
     .site-brand{
         font-size:22px;
         padding:16px 10px;
+        text-align:center;
     }
 
+    /* Keep navigation in one horizontally scrollable row */
     .site-navigation{
-        gap:0;
-        padding:5px 8px;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 6px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
     }
 
     .site-navigation a,
     .more-button{
+        flex:0 0 auto;
         font-size:13px;
-        padding:10px 8px;
-        white-space:normal;
+        padding:11px 9px;
+        white-space:nowrap;
     }
 
     .more-dropdown{
         right:0;
         min-width:150px;
-    }
-
-    .back-navigation{
-        padding:16px 10px;
-    }
-
-    .back-navigation a{
-        padding:10px 15px;
-        font-size:13px;
     }
 
     .hero{
@@ -585,15 +592,22 @@ footer .tagline{
     select{
         width:100%;
     }
+
+    .back-navigation{
+        padding:22px 10px;
+    }
+
+    .back-navigation a{
+        padding:10px 15px;
+        font-size:13px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- GOOGLE SITES STYLE HEADER AND NAVIGATION -->
 <header class="site-header">
-
     <a
         href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
         class="site-brand">
@@ -601,49 +615,18 @@ footer .tagline{
     </a>
 
     <nav class="site-navigation" aria-label="Main navigation">
-
-        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">
-            Home
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">
-            Government Exam Preparation
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">
-            Courses
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">
-            SSC Reasoning Course
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">
-            State Exams Reasoning Course
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">
-            Railway Reasoning Course
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">
-            Banking Reasoning Course
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">
-            YouTube
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">
-            Study Material
-        </a>
-
-        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">
-            Live Classes
-        </a>
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
         <div class="more-menu" id="moreMenu">
-
             <button
                 type="button"
                 class="more-button"
@@ -654,29 +637,13 @@ footer .tagline{
             </button>
 
             <div class="more-dropdown">
-
-                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">
-                    Test Series
-                </a>
-
-                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">
-                    Exams
-                </a>
-
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
             </div>
         </div>
-
     </nav>
 </header>
 
-<!-- CENTERED BACK LINK UNDER NAVIGATION -->
-<div class="back-navigation">
-    <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html">
-        ← Back to SSC Topic-wise Practice
-    </a>
-</div>
-
-<!-- HERO -->
 <section class="hero">
     <h1>📝 SSC Analogy Practice</h1>
     <p>50 Exam-Oriented Questions with Answers and Explanations</p>
@@ -777,6 +744,13 @@ footer .tagline{
 
 </main>
 
+<!-- BACK LINK AT THE BOTTOM, CENTERED, JUST ABOVE FOOTER -->
+<div class="back-navigation">
+    <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html">
+        ← Back to SSC Topic-wise Practice
+    </a>
+</div>
+
 <footer>
     <p><strong>LET'S QUALIFYNOW</strong></p>
     <p class="tagline">You Are Closer To Success</p>
@@ -789,13 +763,12 @@ footer .tagline{
 <script>
 "use strict";
 
-/* MORE MENU: CLICK TO OPEN/CLOSE */
+/* MORE MENU */
 const moreMenu = document.getElementById("moreMenu");
 const moreButton = document.getElementById("moreButton");
 
 moreButton.addEventListener("click", function(event){
     event.stopPropagation();
-
     const isOpen = moreMenu.classList.toggle("open");
     moreButton.setAttribute("aria-expanded", String(isOpen));
 });
@@ -816,536 +789,59 @@ document.addEventListener("keydown", function(event){
 });
 
 const questions = [
-{
-type:"Word Analogy",
-en:"Book : Author :: Painting : ?",
-hi:"पुस्तक : लेखक :: चित्रकला : ?",
-options:["Painter","Singer","Dancer","Sculptor"],
-hoptions:["चित्रकार","गायक","नर्तक","मूर्तिकार"],
-answer:0,
-exp:"An author writes a book; a painter creates a painting.",
-hexp:"लेखक पुस्तक लिखता है और चित्रकार चित्र बनाता है।"
-},
-{
-type:"Word Analogy",
-en:"Doctor : Hospital :: Teacher : ?",
-hi:"डॉक्टर : अस्पताल :: शिक्षक : ?",
-options:["Court","School","Bank","Factory"],
-hoptions:["न्यायालय","विद्यालय","बैंक","कारखाना"],
-answer:1,
-exp:"A doctor commonly works in a hospital; a teacher commonly works in a school.",
-hexp:"डॉक्टर सामान्यतः अस्पताल में और शिक्षक विद्यालय में कार्य करता है।"
-},
-{
-type:"Word Analogy",
-en:"Bird : Nest :: Lion : ?",
-hi:"पक्षी : घोंसला :: शेर : ?",
-options:["Stable","Den","Kennel","Burrow"],
-hoptions:["अस्तबल","मांद","कुत्ताघर","बिल"],
-answer:1,
-exp:"A nest is a bird's dwelling; a den is a lion's dwelling.",
-hexp:"घोंसला पक्षी का निवास है और मांद शेर का निवास है।"
-},
-{
-type:"Word Analogy",
-en:"Fish : Gills :: Human : ?",
-hi:"मछली : गलफड़े :: मनुष्य : ?",
-options:["Scales","Fins","Lungs","Claws"],
-hoptions:["शल्क","पंख","फेफड़े","पंजे"],
-answer:2,
-exp:"Fish generally breathe through gills; humans breathe through lungs.",
-hexp:"मछली सामान्यतः गलफड़ों से और मनुष्य फेफड़ों से साँस लेता है।"
-},
-{
-type:"Word Analogy",
-en:"Puppy : Dog :: Kitten : ?",
-hi:"पिल्ला : कुत्ता :: बिल्ली का बच्चा : ?",
-options:["Horse","Cat","Goat","Deer"],
-hoptions:["घोड़ा","बिल्ली","बकरी","हिरण"],
-answer:1,
-exp:"A puppy is a young dog; a kitten is a young cat.",
-hexp:"पिल्ला कुत्ते का बच्चा और बिल्ली का बच्चा बिल्ली का शिशु है।"
-},
-{
-type:"Word Analogy",
-en:"Carpenter : Wood :: Tailor : ?",
-hi:"बढ़ई : लकड़ी :: दर्जी : ?",
-options:["Leather","Cloth","Brick","Glass"],
-hoptions:["चमड़ा","कपड़ा","ईंट","काँच"],
-answer:1,
-exp:"A carpenter works with wood; a tailor works with cloth.",
-hexp:"बढ़ई लकड़ी से और दर्जी कपड़े से काम करता है।"
-},
-{
-type:"Word Analogy",
-en:"Thermometer : Temperature :: Barometer : ?",
-hi:"थर्मामीटर : तापमान :: बैरोमीटर : ?",
-options:["Speed","Pressure","Humidity","Distance"],
-hoptions:["गति","दाब","आर्द्रता","दूरी"],
-answer:1,
-exp:"A thermometer measures temperature; a barometer measures atmospheric pressure.",
-hexp:"थर्मामीटर तापमान और बैरोमीटर वायुमंडलीय दाब मापता है।"
-},
-{
-type:"Word Analogy",
-en:"Odometer : Distance :: Speedometer : ?",
-hi:"ओडोमीटर : दूरी :: स्पीडोमीटर : ?",
-options:["Fuel","Speed","Weight","Temperature"],
-hoptions:["ईंधन","गति","वजन","तापमान"],
-answer:1,
-exp:"An odometer measures distance travelled; a speedometer measures speed.",
-hexp:"ओडोमीटर तय की गई दूरी और स्पीडोमीटर गति मापता है।"
-},
-{
-type:"Word Analogy",
-en:"India : Rupee :: Japan : ?",
-hi:"भारत : रुपया :: जापान : ?",
-options:["Won","Yen","Yuan","Ringgit"],
-hoptions:["वॉन","येन","युआन","रिंगिट"],
-answer:1,
-exp:"The rupee is India's currency; the yen is Japan's currency.",
-hexp:"रुपया भारत की और येन जापान की मुद्रा है।"
-},
-{
-type:"Word Analogy",
-en:"Eye : See :: Ear : ?",
-hi:"आँख : देखना :: कान : ?",
-options:["Speak","Hear","Smell","Touch"],
-hoptions:["बोलना","सुनना","सूँघना","छूना"],
-answer:1,
-exp:"The eye is used for seeing; the ear is used for hearing.",
-hexp:"आँख देखने और कान सुनने के लिए उपयोग होते हैं।"
-},
-{
-type:"Number Analogy",
-en:"8 : 64 :: 12 : ?",
-hi:"8 : 64 :: 12 : ?",
-options:["124","132","144","156"],
-hoptions:["124","132","144","156"],
-answer:2,
-exp:"64 = 8². Therefore, 12² = 144.",
-hexp:"64 = 8²। इसी प्रकार 12² = 144।"
-},
-{
-type:"Number Analogy",
-en:"7 : 56 :: 9 : ?",
-hi:"7 : 56 :: 9 : ?",
-options:["72","81","90","99"],
-hoptions:["72","81","90","99"],
-answer:2,
-exp:"7 × 8 = 56. The same rule gives 9 × 10 = 90.",
-hexp:"7 × 8 = 56। इसी नियम से 9 × 10 = 90।"
-},
-{
-type:"Number Analogy",
-en:"5 : 30 :: 8 : ?",
-hi:"5 : 30 :: 8 : ?",
-options:["56","64","72","80"],
-hoptions:["56","64","72","80"],
-answer:2,
-exp:"5 × 6 = 30. Therefore, 8 × 9 = 72.",
-hexp:"5 × 6 = 30। इसी प्रकार 8 × 9 = 72।"
-},
-{
-type:"Number Analogy",
-en:"4 : 20 :: 7 : ?",
-hi:"4 : 20 :: 7 : ?",
-options:["42","49","56","63"],
-hoptions:["42","49","56","63"],
-answer:2,
-exp:"4 × 5 = 20. Therefore, 7 × 8 = 56.",
-hexp:"4 × 5 = 20। इसी प्रकार 7 × 8 = 56।"
-},
-{
-type:"Number Analogy",
-en:"6 : 216 :: 4 : ?",
-hi:"6 : 216 :: 4 : ?",
-options:["16","32","64","128"],
-hoptions:["16","32","64","128"],
-answer:2,
-exp:"216 = 6³. Therefore, 4³ = 64.",
-hexp:"216 = 6³। इसी प्रकार 4³ = 64।"
-},
-{
-type:"Number Analogy",
-en:"3 : 12 :: 5 : ?",
-hi:"3 : 12 :: 5 : ?",
-options:["20","25","30","35"],
-hoptions:["20","25","30","35"],
-answer:2,
-exp:"3 × 4 = 12. Therefore, 5 × 6 = 30.",
-hexp:"3 × 4 = 12। इसी प्रकार 5 × 6 = 30।"
-},
-{
-type:"Number Analogy",
-en:"11 : 121 :: 13 : ?",
-hi:"11 : 121 :: 13 : ?",
-options:["156","159","169","179"],
-hoptions:["156","159","169","179"],
-answer:2,
-exp:"121 = 11². Therefore, 13² = 169.",
-hexp:"121 = 11²। इसी प्रकार 13² = 169।"
-},
-{
-type:"Number Analogy",
-en:"15 : 225 :: 18 : ?",
-hi:"15 : 225 :: 18 : ?",
-options:["306","324","342","360"],
-hoptions:["306","324","342","360"],
-answer:1,
-exp:"225 = 15². Therefore, 18² = 324.",
-hexp:"225 = 15²। इसी प्रकार 18² = 324।"
-},
-{
-type:"Number Analogy",
-en:"9 : 28 :: 12 : ?",
-hi:"9 : 28 :: 12 : ?",
-options:["36","37","39","40"],
-hoptions:["36","37","39","40"],
-answer:1,
-exp:"9 × 3 + 1 = 28. Applying the same rule: 12 × 3 + 1 = 37.",
-hexp:"9 × 3 + 1 = 28। इसी नियम से 12 × 3 + 1 = 37।"
-},
-{
-type:"Number Analogy",
-en:"2 : 10 :: 4 : ?",
-hi:"2 : 10 :: 4 : ?",
-options:["20","24","28","32"],
-hoptions:["20","24","28","32"],
-answer:0,
-exp:"2 × 5 = 10. Applying the same multiplier: 4 × 5 = 20.",
-hexp:"2 × 5 = 10। इसी प्रकार 4 × 5 = 20।"
-},
-{
-type:"Letter Analogy",
-en:"ACE : BDF :: MOQ : ?",
-hi:"ACE : BDF :: MOQ : ?",
-options:["NPR","NPS","OPR","NQR"],
-hoptions:["NPR","NPS","OPR","NQR"],
-answer:0,
-exp:"Each letter moves one position forward: M→N, O→P, Q→R.",
-hexp:"प्रत्येक अक्षर एक स्थान आगे बढ़ता है: M→N, O→P, Q→R।"
-},
-{
-type:"Letter Analogy",
-en:"BDF : CEG :: HJL : ?",
-hi:"BDF : CEG :: HJL : ?",
-options:["IKM","ILM","IKN","JLN"],
-hoptions:["IKM","ILM","IKN","JLN"],
-answer:0,
-exp:"Each letter advances by one position. HJL becomes IKM.",
-hexp:"प्रत्येक अक्षर एक स्थान आगे बढ़ता है। HJL से IKM बनता है।"
-},
-{
-type:"Letter Analogy",
-en:"AZ : BY :: CX : ?",
-hi:"AZ : BY :: CX : ?",
-options:["DW","DV","EW","DX"],
-hoptions:["DW","DV","EW","DX"],
-answer:0,
-exp:"The first letter moves forward while the second moves backward: CX becomes DW.",
-hexp:"पहला अक्षर आगे और दूसरा पीछे जाता है। इसलिए CX से DW बनेगा।"
-},
-{
-type:"Letter Analogy",
-en:"ACE : GIK :: BDF : ?",
-hi:"ACE : GIK :: BDF : ?",
-options:["HJL","GIK","HIK","GJL"],
-hoptions:["HJL","GIK","HIK","GJL"],
-answer:0,
-exp:"Each corresponding letter advances six places. BDF becomes HJL.",
-hexp:"हर अक्षर छह स्थान आगे बढ़ता है। BDF से HJL बनेगा।"
-},
-{
-type:"Letter Analogy",
-en:"CFI : DHL :: JMN : ?",
-hi:"CFI : DHL :: JMN : ?",
-options:["KNO","KOP","LNO","KNP"],
-hoptions:["KNO","KOP","LNO","KNP"],
-answer:1,
-exp:"The letters advance by +1, +2 and +3 positions respectively. JMN becomes KOP.",
-hexp:"अक्षर क्रमशः 1, 2 और 3 स्थान आगे बढ़ते हैं। इसलिए JMN से KOP बनेगा।"
-},
-{
-type:"Letter Analogy",
-en:"D : G :: K : ?",
-hi:"D : G :: K : ?",
-options:["M","N","O","P"],
-hoptions:["M","N","O","P"],
-answer:1,
-exp:"D moves three letters forward to G. K moves three letters forward to N.",
-hexp:"D से तीन स्थान आगे G आता है। K से तीन स्थान आगे N आएगा।"
-},
-{
-type:"Letter-Number Analogy",
-en:"F : 36 :: H : ?",
-hi:"F : 36 :: H : ?",
-options:["49","56","64","72"],
-hoptions:["49","56","64","72"],
-answer:2,
-exp:"F is the 6th letter and 6² = 36. H is the 8th letter and 8² = 64.",
-hexp:"F वर्णमाला का छठा अक्षर है और 6² = 36। H आठवाँ अक्षर है और 8² = 64।"
-},
-{
-type:"Letter-Number Analogy",
-en:"D : 16 :: G : ?",
-hi:"D : 16 :: G : ?",
-options:["36","42","49","56"],
-hoptions:["36","42","49","56"],
-answer:2,
-exp:"D is the 4th letter and 4² = 16. G is the 7th letter and 7² = 49.",
-hexp:"D वर्णमाला का चौथा अक्षर है और 4² = 16। G सातवाँ अक्षर है और 7² = 49।"
-},
-{
-type:"Number Analogy",
-en:"16 : 4 :: 81 : ?",
-hi:"16 : 4 :: 81 : ?",
-options:["7","8","9","10"],
-hoptions:["7","8","9","10"],
-answer:2,
-exp:"√16 = 4. Therefore, √81 = 9.",
-hexp:"√16 = 4। इसी प्रकार √81 = 9।"
-},
-{
-type:"Number Analogy",
-en:"27 : 3 :: 125 : ?",
-hi:"27 : 3 :: 125 : ?",
-options:["4","5","6","7"],
-hoptions:["4","5","6","7"],
-answer:1,
-exp:"The cube root of 27 is 3. The cube root of 125 is 5.",
-hexp:"27 का घनमूल 3 और 125 का घनमूल 5 है।"
-},
-{
-type:"Number Analogy",
-en:"14 : 196 :: 17 : ?",
-hi:"14 : 196 :: 17 : ?",
-options:["279","289","299","309"],
-hoptions:["279","289","299","309"],
-answer:1,
-exp:"196 = 14². Therefore, 17² = 289.",
-hexp:"196 = 14²। इसी प्रकार 17² = 289।"
-},
-{
-type:"Number Analogy",
-en:"4 : 64 :: 5 : ?",
-hi:"4 : 64 :: 5 : ?",
-options:["100","115","125","150"],
-hoptions:["100","115","125","150"],
-answer:2,
-exp:"64 = 4³. Therefore, 5³ = 125.",
-hexp:"64 = 4³। इसी प्रकार 5³ = 125।"
-},
-{
-type:"Number Analogy",
-en:"13 : 169 :: 19 : ?",
-hi:"13 : 169 :: 19 : ?",
-options:["341","351","361","371"],
-hoptions:["341","351","361","371"],
-answer:2,
-exp:"169 = 13². Therefore, 19² = 361.",
-hexp:"169 = 13²। इसी प्रकार 19² = 361।"
-},
-{
-type:"Word Analogy",
-en:"Author : Novel :: Composer : ?",
-hi:"लेखक : उपन्यास :: संगीतकार : ?",
-options:["Painting","Symphony","Sculpture","Building"],
-hoptions:["चित्रकला","सिम्फनी / संगीत रचना","मूर्तिकला","इमारत"],
-answer:1,
-exp:"An author creates a novel; a composer creates a musical composition.",
-hexp:"लेखक उपन्यास और संगीतकार संगीत रचना तैयार करता है।"
-},
-{
-type:"Word Analogy",
-en:"Constitution : Country :: Rules : ?",
-hi:"संविधान : देश :: नियम : ?",
-options:["Game","Player","Ball","Stadium"],
-hoptions:["खेल","खिलाड़ी","गेंद","स्टेडियम"],
-answer:0,
-exp:"A constitution provides the framework for a country; rules govern a game.",
-hexp:"संविधान देश की व्यवस्था तय करता है और नियम खेल को नियंत्रित करते हैं।"
-},
-{
-type:"Word Analogy",
-en:"Calf : Cow :: Foal : ?",
-hi:"बछड़ा : गाय :: घोड़े का बच्चा : ?",
-options:["Sheep","Horse","Deer","Camel"],
-hoptions:["भेड़","घोड़ा","हिरण","ऊँट"],
-answer:1,
-exp:"A calf is a young bovine; a foal is a young horse.",
-hexp:"बछड़ा गायवंश का बच्चा और foal घोड़े का बच्चा होता है।"
-},
-{
-type:"Word Analogy",
-en:"Scissors : Cut :: Needle : ?",
-hi:"कैंची : काटना :: सुई : ?",
-options:["Stitch","Paint","Measure","Erase"],
-hoptions:["सिलना","रंगना","मापना","मिटाना"],
-answer:0,
-exp:"Scissors are used to cut; a needle is used to stitch.",
-hexp:"कैंची काटने और सुई सिलने के काम आती है।"
-},
-{
-type:"Word Analogy",
-en:"Architect : Building :: Sculptor : ?",
-hi:"वास्तुकार : इमारत :: मूर्तिकार : ?",
-options:["Poem","Statue","Song","Map"],
-hoptions:["कविता","मूर्ति","गीत","मानचित्र"],
-answer:1,
-exp:"An architect designs a building; a sculptor creates a statue.",
-hexp:"वास्तुकार इमारत का डिजाइन बनाता है और मूर्तिकार मूर्ति बनाता है।"
-},
-{
-type:"Word Analogy",
-en:"Parliament : Laws :: Court : ?",
-hi:"संसद : कानून :: न्यायालय : ?",
-options:["Judgments","Elections","Taxes","Budgets"],
-hoptions:["निर्णय","चुनाव","कर","बजट"],
-answer:0,
-exp:"A parliament makes laws; a court delivers judgments.",
-hexp:"संसद कानून बनाती है और न्यायालय निर्णय देता है।"
-},
-{
-type:"Word Analogy",
-en:"Seed : Plant :: Egg : ?",
-hi:"बीज : पौधा :: अंडा : ?",
-options:["Nest","Bird","Feather","Shell"],
-hoptions:["घोंसला","पक्षी","पंख","खोल"],
-answer:1,
-exp:"A seed can develop into a plant; an egg can develop into a bird.",
-hexp:"बीज से पौधा और अंडे से पक्षी विकसित हो सकता है।"
-},
-{
-type:"Word Analogy",
-en:"Leather : Shoe :: Clay : ?",
-hi:"चमड़ा : जूता :: मिट्टी : ?",
-options:["Pot","Paper","Thread","Glass"],
-hoptions:["बर्तन","कागज","धागा","काँच"],
-answer:0,
-exp:"Leather is used to make shoes; clay is used to make pots.",
-hexp:"चमड़े से जूता और मिट्टी से बर्तन बनाया जा सकता है।"
-},
-{
-type:"Number Analogy",
-en:"10 : 110 :: 12 : ?",
-hi:"10 : 110 :: 12 : ?",
-options:["132","144","156","168"],
-hoptions:["132","144","156","168"],
-answer:2,
-exp:"10 × 11 = 110. Therefore, 12 × 13 = 156.",
-hexp:"10 × 11 = 110। इसी प्रकार 12 × 13 = 156।"
-},
-{
-type:"Number Analogy",
-en:"6 : 42 :: 8 : ?",
-hi:"6 : 42 :: 8 : ?",
-options:["56","64","72","80"],
-hoptions:["56","64","72","80"],
-answer:2,
-exp:"6 × 7 = 42. Therefore, 8 × 9 = 72.",
-hexp:"6 × 7 = 42। इसी प्रकार 8 × 9 = 72।"
-},
-{
-type:"Number Analogy",
-en:"2 : 8 :: 5 : ?",
-hi:"2 : 8 :: 5 : ?",
-options:["25","75","100","125"],
-hoptions:["25","75","100","125"],
-answer:3,
-exp:"2³ = 8. Therefore, 5³ = 125.",
-hexp:"2³ = 8। इसी प्रकार 5³ = 125।"
-},
-{
-type:"Number Analogy",
-en:"21 : 7 :: 36 : ?",
-hi:"21 : 7 :: 36 : ?",
-options:["6","9","12","18"],
-hoptions:["6","9","12","18"],
-answer:2,
-exp:"21 ÷ 3 = 7. Applying the same division: 36 ÷ 3 = 12.",
-hexp:"21 ÷ 3 = 7। इसी प्रकार 36 ÷ 3 = 12।"
-},
-{
-type:"Number Analogy",
-en:"3 : 18 :: 7 : ?",
-hi:"3 : 18 :: 7 : ?",
-options:["42","70","56","63"],
-hoptions:["42","70","56","63"],
-answer:1,
-exp:"3 × (3 + 3) = 18. Applying the same rule: 7 × (7 + 3) = 70.",
-hexp:"3 × (3 + 3) = 18। इसी नियम से 7 × (7 + 3) = 70।"
-},
-{
-type:"Letter Analogy",
-en:"BD : FH :: JL : ?",
-hi:"BD : FH :: JL : ?",
-options:["NP","OQ","PR","NQ"],
-hoptions:["NP","OQ","PR","NQ"],
-answer:0,
-exp:"B→F and D→H are each +4. Thus J→N and L→P.",
-hexp:"प्रत्येक अक्षर चार स्थान आगे बढ़ता है। JL से NP बनेगा।"
-},
-{
-type:"Letter Analogy",
-en:"ACE : ZXV :: BDF : ?",
-hi:"ACE : ZXV :: BDF : ?",
-options:["YXU","YXV","ZXU","YWU"],
-hoptions:["YXU","YXV","ZXU","YWU"],
-answer:3,
-exp:"Using reverse-alphabet mappings, A→Z, C→X and E→V. Therefore, B→Y, D→W and F→U, giving YWU.",
-hexp:"विपरीत वर्णमाला से B→Y, D→W और F→U मिलता है। इसलिए उत्तर YWU है।"
-},
-{
-type:"Word Analogy",
-en:"Minute : Hour :: Month : ?",
-hi:"मिनट : घंटा :: महीना : ?",
-options:["Week","Year","Day","Decade"],
-hoptions:["सप्ताह","वर्ष","दिन","दशक"],
-answer:1,
-exp:"Minutes make up an hour; months make up a year.",
-hexp:"मिनट मिलकर घंटा और महीने मिलकर वर्ष बनाते हैं।"
-},
-{
-type:"Word Analogy",
-en:"Island : Water :: Oasis : ?",
-hi:"द्वीप : पानी :: मरुद्यान : ?",
-options:["Desert","Mountain","Forest","River"],
-hoptions:["रेगिस्तान","पहाड़","जंगल","नदी"],
-answer:0,
-exp:"An island is land surrounded by water; an oasis is a fertile spot in a desert.",
-hexp:"द्वीप पानी से घिरा भूभाग है और मरुद्यान रेगिस्तान में उपजाऊ स्थान है।"
-},
-{
-type:"Word Analogy",
-en:"Democracy : People :: Monarchy : ?",
-hi:"लोकतंत्र : जनता :: राजतंत्र : ?",
-options:["Army","King","Court","Minister"],
-hoptions:["सेना","राजा","न्यायालय","मंत्री"],
-answer:1,
-exp:"In a democracy, power rests with the people; in a monarchy, a monarch is the ruler.",
-hexp:"लोकतंत्र में सत्ता जनता में निहित होती है, जबकि राजतंत्र में राजा या सम्राट शासन करता है।"
-},
-{
-type:"Word Analogy",
-en:"Astronomer : Stars :: Botanist : ?",
-hi:"खगोलशास्त्री : तारे :: वनस्पतिशास्त्री : ?",
-options:["Animals","Plants","Rocks","Weather"],
-hoptions:["जानवर","पौधे","चट्टानें","मौसम"],
-answer:1,
-exp:"An astronomer studies celestial objects; a botanist studies plants.",
-hexp:"खगोलशास्त्री खगोलीय पिंडों और वनस्पतिशास्त्री पौधों का अध्ययन करता है।"
-},
-{
-type:"Word Analogy",
-en:"Whisper : Speak :: Stroll : ?",
-hi:"फुसफुसाना : बोलना :: टहलना : ?",
-options:["Run","Walk","Sleep","Jump"],
-hoptions:["दौड़ना","चलना","सोना","कूदना"],
-answer:1,
-exp:"Whispering is a manner of speaking; strolling is a manner of walking.",
-hexp:"फुसफुसाना बोलने का एक तरीका है और टहलना चलने का एक तरीका है।"
-}
+{type:"Word Analogy",en:"Book : Author :: Painting : ?",hi:"पुस्तक : लेखक :: चित्रकला : ?",options:["Painter","Singer","Dancer","Sculptor"],hoptions:["चित्रकार","गायक","नर्तक","मूर्तिकार"],answer:0,exp:"An author writes a book; a painter creates a painting.",hexp:"लेखक पुस्तक लिखता है और चित्रकार चित्र बनाता है।"},
+{type:"Word Analogy",en:"Doctor : Hospital :: Teacher : ?",hi:"डॉक्टर : अस्पताल :: शिक्षक : ?",options:["Court","School","Bank","Factory"],hoptions:["न्यायालय","विद्यालय","बैंक","कारखाना"],answer:1,exp:"A doctor commonly works in a hospital; a teacher commonly works in a school.",hexp:"डॉक्टर सामान्यतः अस्पताल में और शिक्षक विद्यालय में कार्य करता है।"},
+{type:"Word Analogy",en:"Bird : Nest :: Lion : ?",hi:"पक्षी : घोंसला :: शेर : ?",options:["Stable","Den","Kennel","Burrow"],hoptions:["अस्तबल","मांद","कुत्ताघर","बिल"],answer:1,exp:"A nest is a bird's dwelling; a den is a lion's dwelling.",hexp:"घोंसला पक्षी का निवास है और मांद शेर का निवास है।"},
+{type:"Word Analogy",en:"Fish : Gills :: Human : ?",hi:"मछली : गलफड़े :: मनुष्य : ?",options:["Scales","Fins","Lungs","Claws"],hoptions:["शल्क","पंख","फेफड़े","पंजे"],answer:2,exp:"Fish generally breathe through gills; humans breathe through lungs.",hexp:"मछली सामान्यतः गलफड़ों से और मनुष्य फेफड़ों से साँस लेता है।"},
+{type:"Word Analogy",en:"Puppy : Dog :: Kitten : ?",hi:"पिल्ला : कुत्ता :: बिल्ली का बच्चा : ?",options:["Horse","Cat","Goat","Deer"],hoptions:["घोड़ा","बिल्ली","बकरी","हिरण"],answer:1,exp:"A puppy is a young dog; a kitten is a young cat.",hexp:"पिल्ला कुत्ते का बच्चा और बिल्ली का बच्चा बिल्ली का शिशु है।"},
+{type:"Word Analogy",en:"Carpenter : Wood :: Tailor : ?",hi:"बढ़ई : लकड़ी :: दर्जी : ?",options:["Leather","Cloth","Brick","Glass"],hoptions:["चमड़ा","कपड़ा","ईंट","काँच"],answer:1,exp:"A carpenter works with wood; a tailor works with cloth.",hexp:"बढ़ई लकड़ी से और दर्जी कपड़े से काम करता है।"},
+{type:"Word Analogy",en:"Thermometer : Temperature :: Barometer : ?",hi:"थर्मामीटर : तापमान :: बैरोमीटर : ?",options:["Speed","Pressure","Humidity","Distance"],hoptions:["गति","दाब","आर्द्रता","दूरी"],answer:1,exp:"A thermometer measures temperature; a barometer measures atmospheric pressure.",hexp:"थर्मामीटर तापमान और बैरोमीटर वायुमंडलीय दाब मापता है।"},
+{type:"Word Analogy",en:"Odometer : Distance :: Speedometer : ?",hi:"ओडोमीटर : दूरी :: स्पीडोमीटर : ?",options:["Fuel","Speed","Weight","Temperature"],hoptions:["ईंधन","गति","वजन","तापमान"],answer:1,exp:"An odometer measures distance travelled; a speedometer measures speed.",hexp:"ओडोमीटर तय की गई दूरी और स्पीडोमीटर गति मापता है।"},
+{type:"Word Analogy",en:"India : Rupee :: Japan : ?",hi:"भारत : रुपया :: जापान : ?",options:["Won","Yen","Yuan","Ringgit"],hoptions:["वॉन","येन","युआन","रिंगिट"],answer:1,exp:"The rupee is India's currency; the yen is Japan's currency.",hexp:"रुपया भारत की और येन जापान की मुद्रा है।"},
+{type:"Word Analogy",en:"Eye : See :: Ear : ?",hi:"आँख : देखना :: कान : ?",options:["Speak","Hear","Smell","Touch"],hoptions:["बोलना","सुनना","सूँघना","छूना"],answer:1,exp:"The eye is used for seeing; the ear is used for hearing.",hexp:"आँख देखने और कान सुनने के लिए उपयोग होते हैं।"},
+{type:"Number Analogy",en:"8 : 64 :: 12 : ?",hi:"8 : 64 :: 12 : ?",options:["124","132","144","156"],hoptions:["124","132","144","156"],answer:2,exp:"64 = 8². Therefore, 12² = 144.",hexp:"64 = 8²। इसी प्रकार 12² = 144।"},
+{type:"Number Analogy",en:"7 : 56 :: 9 : ?",hi:"7 : 56 :: 9 : ?",options:["72","81","90","99"],hoptions:["72","81","90","99"],answer:2,exp:"7 × 8 = 56. The same rule gives 9 × 10 = 90.",hexp:"7 × 8 = 56। इसी नियम से 9 × 10 = 90।"},
+{type:"Number Analogy",en:"5 : 30 :: 8 : ?",hi:"5 : 30 :: 8 : ?",options:["56","64","72","80"],hoptions:["56","64","72","80"],answer:2,exp:"5 × 6 = 30. Therefore, 8 × 9 = 72.",hexp:"5 × 6 = 30। इसी प्रकार 8 × 9 = 72।"},
+{type:"Number Analogy",en:"4 : 20 :: 7 : ?",hi:"4 : 20 :: 7 : ?",options:["42","49","56","63"],hoptions:["42","49","56","63"],answer:2,exp:"4 × 5 = 20. Therefore, 7 × 8 = 56.",hexp:"4 × 5 = 20। इसी प्रकार 7 × 8 = 56।"},
+{type:"Number Analogy",en:"6 : 216 :: 4 : ?",hi:"6 : 216 :: 4 : ?",options:["16","32","64","128"],hoptions:["16","32","64","128"],answer:2,exp:"216 = 6³. Therefore, 4³ = 64.",hexp:"216 = 6³। इसी प्रकार 4³ = 64।"},
+{type:"Number Analogy",en:"3 : 12 :: 5 : ?",hi:"3 : 12 :: 5 : ?",options:["20","25","30","35"],hoptions:["20","25","30","35"],answer:2,exp:"3 × 4 = 12. Therefore, 5 × 6 = 30.",hexp:"3 × 4 = 12। इसी प्रकार 5 × 6 = 30।"},
+{type:"Number Analogy",en:"11 : 121 :: 13 : ?",hi:"11 : 121 :: 13 : ?",options:["156","159","169","179"],hoptions:["156","159","169","179"],answer:2,exp:"121 = 11². Therefore, 13² = 169.",hexp:"121 = 11²। इसी प्रकार 13² = 169।"},
+{type:"Number Analogy",en:"15 : 225 :: 18 : ?",hi:"15 : 225 :: 18 : ?",options:["306","324","342","360"],hoptions:["306","324","342","360"],answer:1,exp:"225 = 15². Therefore, 18² = 324.",hexp:"225 = 15²। इसी प्रकार 18² = 324।"},
+{type:"Number Analogy",en:"9 : 28 :: 12 : ?",hi:"9 : 28 :: 12 : ?",options:["36","37","39","40"],hoptions:["36","37","39","40"],answer:1,exp:"9 × 3 + 1 = 28. Applying the same rule: 12 × 3 + 1 = 37.",hexp:"9 × 3 + 1 = 28। इसी नियम से 12 × 3 + 1 = 37।"},
+{type:"Number Analogy",en:"2 : 10 :: 4 : ?",hi:"2 : 10 :: 4 : ?",options:["20","24","28","32"],hoptions:["20","24","28","32"],answer:0,exp:"2 × 5 = 10. Applying the same multiplier: 4 × 5 = 20.",hexp:"2 × 5 = 10। इसी प्रकार 4 × 5 = 20।"},
+{type:"Letter Analogy",en:"ACE : BDF :: MOQ : ?",hi:"ACE : BDF :: MOQ : ?",options:["NPR","NPS","OPR","NQR"],hoptions:["NPR","NPS","OPR","NQR"],answer:0,exp:"Each letter moves one position forward: M→N, O→P, Q→R.",hexp:"प्रत्येक अक्षर एक स्थान आगे बढ़ता है: M→N, O→P, Q→R।"},
+{type:"Letter Analogy",en:"BDF : CEG :: HJL : ?",hi:"BDF : CEG :: HJL : ?",options:["IKM","ILM","IKN","JLN"],hoptions:["IKM","ILM","IKN","JLN"],answer:0,exp:"Each letter advances by one position. HJL becomes IKM.",hexp:"प्रत्येक अक्षर एक स्थान आगे बढ़ता है। HJL से IKM बनता है।"},
+{type:"Letter Analogy",en:"AZ : BY :: CX : ?",hi:"AZ : BY :: CX : ?",options:["DW","DV","EW","DX"],hoptions:["DW","DV","EW","DX"],answer:0,exp:"The first letter moves forward while the second moves backward: CX becomes DW.",hexp:"पहला अक्षर आगे और दूसरा पीछे जाता है। इसलिए CX से DW बनेगा।"},
+{type:"Letter Analogy",en:"ACE : GIK :: BDF : ?",hi:"ACE : GIK :: BDF : ?",options:["HJL","GIK","HIK","GJL"],hoptions:["HJL","GIK","HIK","GJL"],answer:0,exp:"Each corresponding letter advances six places. BDF becomes HJL.",hexp:"हर अक्षर छह स्थान आगे बढ़ता है। BDF से HJL बनेगा।"},
+{type:"Letter Analogy",en:"CFI : DHL :: JMN : ?",hi:"CFI : DHL :: JMN : ?",options:["KNO","KOP","LNO","KNP"],hoptions:["KNO","KOP","LNO","KNP"],answer:1,exp:"The letters advance by +1, +2 and +3 positions respectively. JMN becomes KOP.",hexp:"अक्षर क्रमशः 1, 2 और 3 स्थान आगे बढ़ते हैं। इसलिए JMN से KOP बनेगा।"},
+{type:"Letter Analogy",en:"D : G :: K : ?",hi:"D : G :: K : ?",options:["M","N","O","P"],hoptions:["M","N","O","P"],answer:1,exp:"D moves three letters forward to G. K moves three letters forward to N.",hexp:"D से तीन स्थान आगे G आता है। K से तीन स्थान आगे N आएगा।"},
+{type:"Letter-Number Analogy",en:"F : 36 :: H : ?",hi:"F : 36 :: H : ?",options:["49","56","64","72"],hoptions:["49","56","64","72"],answer:2,exp:"F is the 6th letter and 6² = 36. H is the 8th letter and 8² = 64.",hexp:"F वर्णमाला का छठा अक्षर है और 6² = 36। H आठवाँ अक्षर है और 8² = 64।"},
+{type:"Letter-Number Analogy",en:"D : 16 :: G : ?",hi:"D : 16 :: G : ?",options:["36","42","49","56"],hoptions:["36","42","49","56"],answer:2,exp:"D is the 4th letter and 4² = 16. G is the 7th letter and 7² = 49.",hexp:"D वर्णमाला का चौथा अक्षर है और 4² = 16। G सातवाँ अक्षर है और 7² = 49।"},
+{type:"Number Analogy",en:"16 : 4 :: 81 : ?",hi:"16 : 4 :: 81 : ?",options:["7","8","9","10"],hoptions:["7","8","9","10"],answer:2,exp:"√16 = 4. Therefore, √81 = 9.",hexp:"√16 = 4। इसी प्रकार √81 = 9।"},
+{type:"Number Analogy",en:"27 : 3 :: 125 : ?",hi:"27 : 3 :: 125 : ?",options:["4","5","6","7"],hoptions:["4","5","6","7"],answer:1,exp:"The cube root of 27 is 3. The cube root of 125 is 5.",hexp:"27 का घनमूल 3 और 125 का घनमूल 5 है।"},
+{type:"Number Analogy",en:"14 : 196 :: 17 : ?",hi:"14 : 196 :: 17 : ?",options:["279","289","299","309"],hoptions:["279","289","299","309"],answer:1,exp:"196 = 14². Therefore, 17² = 289.",hexp:"196 = 14²। इसी प्रकार 17² = 289।"},
+{type:"Number Analogy",en:"4 : 64 :: 5 : ?",hi:"4 : 64 :: 5 : ?",options:["100","115","125","150"],hoptions:["100","115","125","150"],answer:2,exp:"64 = 4³. Therefore, 5³ = 125.",hexp:"64 = 4³। इसी प्रकार 5³ = 125।"},
+{type:"Number Analogy",en:"13 : 169 :: 19 : ?",hi:"13 : 169 :: 19 : ?",options:["341","351","361","371"],hoptions:["341","351","361","371"],answer:2,exp:"169 = 13². Therefore, 19² = 361.",hexp:"169 = 13²। इसी प्रकार 19² = 361।"},
+{type:"Word Analogy",en:"Author : Novel :: Composer : ?",hi:"लेखक : उपन्यास :: संगीतकार : ?",options:["Painting","Symphony","Sculpture","Building"],hoptions:["चित्रकला","सिम्फनी / संगीत रचना","मूर्तिकला","इमारत"],answer:1,exp:"An author creates a novel; a composer creates a musical composition.",hexp:"लेखक उपन्यास और संगीतकार संगीत रचना तैयार करता है।"},
+{type:"Word Analogy",en:"Constitution : Country :: Rules : ?",hi:"संविधान : देश :: नियम : ?",options:["Game","Player","Ball","Stadium"],hoptions:["खेल","खिलाड़ी","गेंद","स्टेडियम"],answer:0,exp:"A constitution provides the framework for a country; rules govern a game.",hexp:"संविधान देश की व्यवस्था तय करता है और नियम खेल को नियंत्रित करते हैं।"},
+{type:"Word Analogy",en:"Calf : Cow :: Foal : ?",hi:"बछड़ा : गाय :: घोड़े का बच्चा : ?",options:["Sheep","Horse","Deer","Camel"],hoptions:["भेड़","घोड़ा","हिरण","ऊँट"],answer:1,exp:"A calf is a young bovine; a foal is a young horse.",hexp:"बछड़ा गायवंश का बच्चा और foal घोड़े का बच्चा होता है।"},
+{type:"Word Analogy",en:"Scissors : Cut :: Needle : ?",hi:"कैंची : काटना :: सुई : ?",options:["Stitch","Paint","Measure","Erase"],hoptions:["सिलना","रंगना","मापना","मिटाना"],answer:0,exp:"Scissors are used to cut; a needle is used to stitch.",hexp:"कैंची काटने और सुई सिलने के काम आती है।"},
+{type:"Word Analogy",en:"Architect : Building :: Sculptor : ?",hi:"वास्तुकार : इमारत :: मूर्तिकार : ?",options:["Poem","Statue","Song","Map"],hoptions:["कविता","मूर्ति","गीत","मानचित्र"],answer:1,exp:"An architect designs a building; a sculptor creates a statue.",hexp:"वास्तुकार इमारत का डिजाइन बनाता है और मूर्तिकार मूर्ति बनाता है।"},
+{type:"Word Analogy",en:"Parliament : Laws :: Court : ?",hi:"संसद : कानून :: न्यायालय : ?",options:["Judgments","Elections","Taxes","Budgets"],hoptions:["निर्णय","चुनाव","कर","बजट"],answer:0,exp:"A parliament makes laws; a court delivers judgments.",hexp:"संसद कानून बनाती है और न्यायालय निर्णय देता है।"},
+{type:"Word Analogy",en:"Seed : Plant :: Egg : ?",hi:"बीज : पौधा :: अंडा : ?",options:["Nest","Bird","Feather","Shell"],hoptions:["घोंसला","पक्षी","पंख","खोल"],answer:1,exp:"A seed can develop into a plant; an egg can develop into a bird.",hexp:"बीज से पौधा और अंडे से पक्षी विकसित हो सकता है।"},
+{type:"Word Analogy",en:"Leather : Shoe :: Clay : ?",hi:"चमड़ा : जूता :: मिट्टी : ?",options:["Pot","Paper","Thread","Glass"],hoptions:["बर्तन","कागज","धागा","काँच"],answer:0,exp:"Leather is used to make shoes; clay is used to make pots.",hexp:"चमड़े से जूता और मिट्टी से बर्तन बनाया जा सकता है।"},
+{type:"Number Analogy",en:"10 : 110 :: 12 : ?",hi:"10 : 110 :: 12 : ?",options:["132","144","156","168"],hoptions:["132","144","156","168"],answer:2,exp:"10 × 11 = 110. Therefore, 12 × 13 = 156.",hexp:"10 × 11 = 110। इसी प्रकार 12 × 13 = 156।"},
+{type:"Number Analogy",en:"6 : 42 :: 8 : ?",hi:"6 : 42 :: 8 : ?",options:["56","64","72","80"],hoptions:["56","64","72","80"],answer:2,exp:"6 × 7 = 42. Therefore, 8 × 9 = 72.",hexp:"6 × 7 = 42। इसी प्रकार 8 × 9 = 72।"},
+{type:"Number Analogy",en:"2 : 8 :: 5 : ?",hi:"2 : 8 :: 5 : ?",options:["25","75","100","125"],hoptions:["25","75","100","125"],answer:3,exp:"2³ = 8. Therefore, 5³ = 125.",hexp:"2³ = 8। इसी प्रकार 5³ = 125।"},
+{type:"Number Analogy",en:"21 : 7 :: 36 : ?",hi:"21 : 7 :: 36 : ?",options:["6","9","12","18"],hoptions:["6","9","12","18"],answer:2,exp:"21 ÷ 3 = 7. Applying the same division: 36 ÷ 3 = 12.",hexp:"21 ÷ 3 = 7। इसी प्रकार 36 ÷ 3 = 12।"},
+{type:"Number Analogy",en:"3 : 18 :: 7 : ?",hi:"3 : 18 :: 7 : ?",options:["42","70","56","63"],hoptions:["42","70","56","63"],answer:1,exp:"3 × (3 + 3) = 18. Applying the same rule: 7 × (7 + 3) = 70.",hexp:"3 × (3 + 3) = 18। इसी नियम से 7 × (7 + 3) = 70।"},
+{type:"Letter Analogy",en:"BD : FH :: JL : ?",hi:"BD : FH :: JL : ?",options:["NP","OQ","PR","NQ"],hoptions:["NP","OQ","PR","NQ"],answer:0,exp:"B→F and D→H are each +4. Thus J→N and L→P.",hexp:"प्रत्येक अक्षर चार स्थान आगे बढ़ता है। JL से NP बनेगा।"},
+{type:"Letter Analogy",en:"ACE : ZXV :: BDF : ?",hi:"ACE : ZXV :: BDF : ?",options:["YXU","YXV","ZXU","YWU"],hoptions:["YXU","YXV","ZXU","YWU"],answer:3,exp:"Using reverse-alphabet mappings, A→Z, C→X and E→V. Therefore, B→Y, D→W and F→U, giving YWU.",hexp:"विपरीत वर्णमाला से B→Y, D→W और F→U मिलता है। इसलिए उत्तर YWU है।"},
+{type:"Word Analogy",en:"Minute : Hour :: Month : ?",hi:"मिनट : घंटा :: महीना : ?",options:["Week","Year","Day","Decade"],hoptions:["सप्ताह","वर्ष","दिन","दशक"],answer:1,exp:"Minutes make up an hour; months make up a year.",hexp:"मिनट मिलकर घंटा और महीने मिलकर वर्ष बनाते हैं।"},
+{type:"Word Analogy",en:"Island : Water :: Oasis : ?",hi:"द्वीप : पानी :: मरुद्यान : ?",options:["Desert","Mountain","Forest","River"],hoptions:["रेगिस्तान","पहाड़","जंगल","नदी"],answer:0,exp:"An island is land surrounded by water; an oasis is a fertile spot in a desert.",hexp:"द्वीप पानी से घिरा भूभाग है और मरुद्यान रेगिस्तान में उपजाऊ स्थान है।"},
+{type:"Word Analogy",en:"Democracy : People :: Monarchy : ?",hi:"लोकतंत्र : जनता :: राजतंत्र : ?",options:["Army","King","Court","Minister"],hoptions:["सेना","राजा","न्यायालय","मंत्री"],answer:1,exp:"In a democracy, power rests with the people; in a monarchy, a monarch is the ruler.",hexp:"लोकतंत्र में सत्ता जनता में निहित होती है, जबकि राजतंत्र में राजा या सम्राट शासन करता है।"},
+{type:"Word Analogy",en:"Astronomer : Stars :: Botanist : ?",hi:"खगोलशास्त्री : तारे :: वनस्पतिशास्त्री : ?",options:["Animals","Plants","Rocks","Weather"],hoptions:["जानवर","पौधे","चट्टानें","मौसम"],answer:1,exp:"An astronomer studies celestial objects; a botanist studies plants.",hexp:"खगोलशास्त्री खगोलीय पिंडों और वनस्पतिशास्त्री पौधों का अध्ययन करता है।"},
+{type:"Word Analogy",en:"Whisper : Speak :: Stroll : ?",hi:"फुसफुसाना : बोलना :: टहलना : ?",options:["Run","Walk","Sleep","Jump"],hoptions:["दौड़ना","चलना","सोना","कूदना"],answer:1,exp:"Whispering is a manner of speaking; strolling is a manner of walking.",hexp:"फुसफुसाना बोलने का एक तरीका है और टहलना चलने का एक तरीका है।"}
 ];
 
 const container = document.getElementById("questionContainer");
@@ -1472,7 +968,6 @@ function showReview(){
         card.querySelectorAll(".option").forEach((label, optionIndex) => {
             const input = label.querySelector("input");
             input.disabled = true;
-
             label.classList.remove("correct", "incorrect");
 
             if(optionIndex === q.answer){
@@ -1600,7 +1095,6 @@ container.addEventListener("change", function(event){
     });
 
     event.target.closest(".option").classList.add("selected");
-
     updateStats();
 });
 
