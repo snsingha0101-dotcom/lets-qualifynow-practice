@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSC Classification Practice | Let's QualifyNow</title>
+<meta name="description" content="Practice SSC Classification questions with answers and explanations for SSC CGL, CHSL, CPO, MTS and other government exams.">
 
 <style>
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -31,6 +37,7 @@ body{
     align-items:center;
     flex-wrap:nowrap;
     gap:10px;
+    overflow:hidden;
 }
 
 .logo{
@@ -84,6 +91,7 @@ body{
 
 .hero h1{
     font-size:34px;
+    line-height:1.3;
     margin-bottom:10px;
 }
 
@@ -116,12 +124,14 @@ body{
 .intro-box h2{
     color:#102a43;
     margin-bottom:10px;
+    line-height:1.4;
 }
 
 /* CATEGORY */
 
 .category{
     margin-top:35px;
+    scroll-margin-top:20px;
 }
 
 .category-title{
@@ -131,6 +141,7 @@ body{
     border-radius:9px;
     margin-bottom:18px;
     font-size:21px;
+    line-height:1.4;
 }
 
 /* QUESTION CARD */
@@ -142,7 +153,8 @@ body{
     padding:22px;
     margin-bottom:18px;
     box-shadow:0 3px 12px rgba(16,42,67,0.05);
-    transition:0.25s;
+    transition:box-shadow 0.25s, transform 0.25s;
+    overflow-wrap:break-word;
 }
 
 .question-card:hover{
@@ -166,11 +178,12 @@ body{
     font-weight:bold;
     color:#102a43;
     margin-bottom:15px;
+    line-height:1.5;
 }
 
 .options{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:10px;
     margin-bottom:16px;
 }
@@ -181,6 +194,8 @@ body{
     border-radius:8px;
     padding:10px 13px;
     color:#243b53;
+    min-width:0;
+    overflow-wrap:break-word;
 }
 
 .answer-box{
@@ -189,6 +204,7 @@ body{
     padding:12px 15px;
     border-radius:6px;
     margin-top:10px;
+    overflow-wrap:break-word;
 }
 
 .answer-box strong{
@@ -201,6 +217,7 @@ body{
     padding:13px 15px;
     border-radius:6px;
     margin-top:10px;
+    overflow-wrap:break-word;
 }
 
 .solution strong{
@@ -217,6 +234,7 @@ body{
     margin-left:7px;
     background:#e1e8ed;
     color:#52606d;
+    vertical-align:middle;
 }
 
 /* INFO */
@@ -244,7 +262,7 @@ body{
     padding:12px 22px;
     border-radius:7px;
     margin:10px 0 40px;
-    transition:0.3s;
+    transition:background 0.3s;
 }
 
 .back-btn:hover{
@@ -270,33 +288,26 @@ footer p{
 @media(max-width:700px){
 
     .navbar{
-        justify-content:flex-start;
-        align-items:center;
-        flex-wrap:nowrap;
-        gap:7px;
         padding:8px;
+        gap:7px;
     }
 
     .logo{
-        width:auto;
-        flex:0 0 auto;
-        text-align:left;
         font-size:14px;
     }
 
     .nav-links{
         justify-content:flex-start;
-        flex:1 1 auto;
-        min-width:0;
-        flex-wrap:nowrap;
         gap:2px;
-        overflow-x:auto;
-        overflow-y:hidden;
     }
 
     .nav-links a{
         font-size:11px;
         padding:9px 7px;
+    }
+
+    .hero{
+        padding:38px 16px;
     }
 
     .hero h1{
@@ -307,12 +318,56 @@ footer p{
         font-size:15px;
     }
 
+    .container{
+        width:94%;
+        margin:24px auto;
+    }
+
+    .intro-box{
+        padding:18px;
+    }
+
+    .intro-box h2{
+        font-size:21px;
+    }
+
+    .category{
+        margin-top:28px;
+    }
+
+    .category-title{
+        font-size:18px;
+        padding:12px 14px;
+    }
+
+    .question-card{
+        padding:17px;
+    }
+
     .options{
         grid-template-columns:1fr;
+        gap:8px;
     }
 
     .question{
         font-size:16px;
+    }
+
+    .info-box{
+        padding:18px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition:none !important;
+        animation:none !important;
     }
 }
 </style>
@@ -323,7 +378,6 @@ footer p{
 <!-- NAVBAR -->
 
 <nav class="navbar">
-
     <a href="index.html" class="logo">LET'S QUALIFYNOW</a>
 
     <div class="nav-links">
@@ -335,20 +389,17 @@ footer p{
         <a href="exams.html">Exams</a>
         <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
     </div>
-
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-
     <h1>📝 SSC Classification Practice</h1>
 
     <p>
         High-quality Classification questions for SSC CGL, CHSL, CPO, MTS and other
         competitive examinations.
     </p>
-
 </section>
 
 <div class="container">
@@ -356,7 +407,6 @@ footer p{
     <!-- INTRO -->
 
     <div class="intro-box">
-
         <h2>🎯 SSC Classification – 50 Practice Questions</h2>
 
         <p>
@@ -367,1292 +417,750 @@ footer p{
 
         <p style="margin-top:10px;">
             Each question contains four options with one uniquely correct answer
-            followed by a concise explanation.
+            followed by a concise explanation. If a question is marked as needing
+            correction, review it before using it as a verified exam question.
         </p>
-
     </div>
 
     <!-- CATEGORY 1 -->
 
     <section class="category">
-
-        <h2 class="category-title">
-            1. Word Classification – 8 Questions
-        </h2>
+        <h2 class="category-title">1. Word Classification – 8 Questions</h2>
 
         <div class="question-card">
             <span class="question-number">Question 1</span>
             <span class="level">Basic</span>
-
             <div class="question">Select the odd word out.</div>
-
             <div class="options">
                 <div class="option">(A) Mango</div>
                 <div class="option">(B) Apple</div>
                 <div class="option">(C) Banana</div>
                 <div class="option">(D) Carrot</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Carrot</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Mango, Apple and Banana are fruits, whereas Carrot is a vegetable.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Carrot</strong></div>
+            <div class="solution"><strong>Solution:</strong> Mango, Apple and Banana are fruits, whereas Carrot is a vegetable.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 2</span>
             <span class="level">Basic</span>
-
             <div class="question">Select the odd one out.</div>
-
             <div class="options">
                 <div class="option">(A) Mercury</div>
                 <div class="option">(B) Venus</div>
                 <div class="option">(C) Earth</div>
                 <div class="option">(D) Moon</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Moon</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Mercury, Venus and Earth are planets. Moon is a natural satellite.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Moon</strong></div>
+            <div class="solution"><strong>Solution:</strong> Mercury, Venus and Earth are planets. Moon is a natural satellite.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 3</span>
             <span class="level">Basic</span>
-
             <div class="question">Select the odd word out.</div>
-
             <div class="options">
                 <div class="option">(A) Triangle</div>
                 <div class="option">(B) Square</div>
                 <div class="option">(C) Circle</div>
                 <div class="option">(D) Cube</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Cube</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Triangle, Square and Circle are plane figures (2-D), whereas Cube is a solid figure (3-D).
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Cube</strong></div>
+            <div class="solution"><strong>Solution:</strong> Triangle, Square and Circle are plane figures (2-D), whereas Cube is a solid figure (3-D).</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 4</span>
             <span class="level">Basic</span>
-
             <div class="question">Select the word that is different from the other three.</div>
-
             <div class="options">
                 <div class="option">(A) January</div>
                 <div class="option">(B) March</div>
                 <div class="option">(C) July</div>
                 <div class="option">(D) Monday</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Monday</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                January, March and July are months. Monday is a day of the week.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Monday</strong></div>
+            <div class="solution"><strong>Solution:</strong> January, March and July are months. Monday is a day of the week.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 5</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd one out.</div>
-
             <div class="options">
                 <div class="option">(A) Iron</div>
                 <div class="option">(B) Copper</div>
                 <div class="option">(C) Silver</div>
                 <div class="option">(D) Glass</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Glass</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Iron, Copper and Silver are metals. Glass is not a metal.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Glass</strong></div>
+            <div class="solution"><strong>Solution:</strong> Iron, Copper and Silver are metals. Glass is not a metal.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 6</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd one out.</div>
-
             <div class="options">
                 <div class="option">(A) Kidney</div>
                 <div class="option">(B) Liver</div>
                 <div class="option">(C) Heart</div>
                 <div class="option">(D) Lung</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (C) Heart</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Kidney, Liver and Lung are associated with major excretory/metabolic
-                functions, while Heart is primarily a circulatory organ.
-            </div>
+            <div class="answer-box"><strong>Answer: (C) Heart</strong></div>
+            <div class="solution"><strong>Solution:</strong> Kidney, Liver and Lung are associated with major excretory/metabolic functions, while Heart is primarily a circulatory organ.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 7</span>
             <span class="level">Moderate</span>
-
             <div class="question">Which word does not belong to the group?</div>
-
             <div class="options">
                 <div class="option">(A) Teacher</div>
                 <div class="option">(B) Doctor</div>
                 <div class="option">(C) Engineer</div>
                 <div class="option">(D) Hospital</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Hospital</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Teacher, Doctor and Engineer are professions/persons. Hospital is an institution/place.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Hospital</strong></div>
+            <div class="solution"><strong>Solution:</strong> Teacher, Doctor and Engineer are professions/persons. Hospital is an institution/place.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 8</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd one out.</div>
-
             <div class="options">
                 <div class="option">(A) Sparrow</div>
                 <div class="option">(B) Pigeon</div>
                 <div class="option">(C) Eagle</div>
                 <div class="option">(D) Bat</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Bat</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Sparrow, Pigeon and Eagle are birds. Bat is a mammal.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Bat</strong></div>
+            <div class="solution"><strong>Solution:</strong> Sparrow, Pigeon and Eagle are birds. Bat is a mammal.</div>
         </div>
-
     </section>
 
     <!-- CATEGORY 2 -->
 
     <section class="category">
-
-        <h2 class="category-title">
-            2. Number Classification – 15 Questions
-        </h2>
+        <h2 class="category-title">2. Number Classification – 15 Questions</h2>
 
         <div class="question-card">
             <span class="question-number">Question 9</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 27</div>
                 <div class="option">(B) 36</div>
                 <div class="option">(C) 45</div>
                 <div class="option">(D) 52</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 52</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                27, 36 and 45 are divisible by 9. 52 is not divisible by 9.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 52</strong></div>
+            <div class="solution"><strong>Solution:</strong> 27, 36 and 45 are divisible by 9. 52 is not divisible by 9.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 10</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 16</div>
                 <div class="option">(B) 25</div>
                 <div class="option">(C) 36</div>
                 <div class="option">(D) 48</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 48</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                16 = 4², 25 = 5² and 36 = 6². 48 is not a perfect square.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 48</strong></div>
+            <div class="solution"><strong>Solution:</strong> 16 = 4², 25 = 5² and 36 = 6². 48 is not a perfect square.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 11</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 18</div>
                 <div class="option">(B) 27</div>
                 <div class="option">(C) 45</div>
                 <div class="option">(D) 56</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 56</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                18, 27 and 45 are divisible by 9. 56 is not divisible by 9.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 56</strong></div>
+            <div class="solution"><strong>Solution:</strong> 18, 27 and 45 are divisible by 9. 56 is not divisible by 9.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 12</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 14</div>
                 <div class="option">(B) 22</div>
                 <div class="option">(C) 30</div>
                 <div class="option">(D) 47</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 47</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                14, 22 and 30 form an arithmetic progression with common difference 8.
-                The next number should be 38, not 47.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 47</strong></div>
+            <div class="solution"><strong>Solution:</strong> 14, 22 and 30 form an arithmetic progression with common difference 8. The next number should be 38, not 47.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 13</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 121</div>
                 <div class="option">(B) 144</div>
                 <div class="option">(C) 169</div>
                 <div class="option">(D) 210</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 210</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                121 = 11², 144 = 12² and 169 = 13². 210 is not a perfect square.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 210</strong></div>
+            <div class="solution"><strong>Solution:</strong> 121 = 11², 144 = 12² and 169 = 13². 210 is not a perfect square.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 14</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 8</div>
                 <div class="option">(B) 27</div>
                 <div class="option">(C) 64</div>
                 <div class="option">(D) 225</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 225</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                8 = 2³, 27 = 3³ and 64 = 4³. 225 is not a perfect cube.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 225</strong></div>
+            <div class="solution"><strong>Solution:</strong> 8 = 2³, 27 = 3³ and 64 = 4³. 225 is not a perfect cube.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 15</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 13</div>
                 <div class="option">(B) 26</div>
                 <div class="option">(C) 39</div>
                 <div class="option">(D) 70</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 70</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                13, 26 and 39 are multiples of 13. 70 is not a multiple of 13.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 70</strong></div>
+            <div class="solution"><strong>Solution:</strong> 13, 26 and 39 are multiples of 13. 70 is not a multiple of 13.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 16</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 17</div>
                 <div class="option">(B) 34</div>
                 <div class="option">(C) 51</div>
                 <div class="option">(D) 75</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 75</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                17, 34 and 51 are multiples of 17. 75 is not a multiple of 17.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 75</strong></div>
+            <div class="solution"><strong>Solution:</strong> 17, 34 and 51 are multiples of 17. 75 is not a multiple of 17.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 17</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 12</div>
                 <div class="option">(B) 24</div>
                 <div class="option">(C) 36</div>
                 <div class="option">(D) 55</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 55</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                12, 24 and 36 are multiples of 12. 55 is not a multiple of 12.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 55</strong></div>
+            <div class="solution"><strong>Solution:</strong> 12, 24 and 36 are multiples of 12. 55 is not a multiple of 12.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 18</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 19</div>
                 <div class="option">(B) 28</div>
                 <div class="option">(C) 37</div>
                 <div class="option">(D) 56</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 56</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                19, 28 and 37 increase by 9 each time. The next number should be 46,
-                not 56.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 56</strong></div>
+            <div class="solution"><strong>Solution:</strong> 19, 28 and 37 increase by 9 each time. The next number should be 46, not 56.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 19</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 15</div>
                 <div class="option">(B) 30</div>
                 <div class="option">(C) 45</div>
                 <div class="option">(D) 74</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 74</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                15, 30 and 45 are multiples of 15. 74 is not a multiple of 15.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 74</strong></div>
+            <div class="solution"><strong>Solution:</strong> 15, 30 and 45 are multiples of 15. 74 is not a multiple of 15.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 20</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 21</div>
                 <div class="option">(B) 34</div>
                 <div class="option">(C) 47</div>
                 <div class="option">(D) 72</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 72</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                21, 34 and 47 form an arithmetic progression with common difference 13.
-                The next number should be 60.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 72</strong></div>
+            <div class="solution"><strong>Solution:</strong> 21, 34 and 47 form an arithmetic progression with common difference 13. The next number should be 60.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 21</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 32</div>
                 <div class="option">(B) 48</div>
                 <div class="option">(C) 64</div>
                 <div class="option">(D) 95</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 95</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                32, 48 and 64 increase by 16. The next number should be 80, not 95.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 95</strong></div>
+            <div class="solution"><strong>Solution:</strong> 32, 48 and 64 increase by 16. The next number should be 80, not 95.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 22</span>
             <span class="level">Advanced</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 11</div>
                 <div class="option">(B) 22</div>
                 <div class="option">(C) 44</div>
                 <div class="option">(D) 90</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 90</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                11 → 22 → 44 follows multiplication by 2. The next number should be
-                88, not 90.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 90</strong></div>
+            <div class="solution"><strong>Solution:</strong> 11 → 22 → 44 follows multiplication by 2. The next number should be 88, not 90.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 23</span>
             <span class="level">Advanced</span>
-
             <div class="question">Find the odd number out.</div>
-
             <div class="options">
                 <div class="option">(A) 49</div>
                 <div class="option">(B) 64</div>
                 <div class="option">(C) 81</div>
                 <div class="option">(D) 125</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 125</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                49 = 7², 64 = 8² and 81 = 9². 125 is not a square.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 125</strong></div>
+            <div class="solution"><strong>Solution:</strong> 49 = 7², 64 = 8² and 81 = 9². 125 is not a square.</div>
         </div>
-
     </section>
 
     <!-- CATEGORY 3 -->
 
     <section class="category">
-
-        <h2 class="category-title">
-            3. Alphabet / Letter Classification – 8 Questions
-        </h2>
+        <h2 class="category-title">3. Alphabet / Letter Classification – 8 Questions</h2>
 
         <div class="question-card">
             <span class="question-number">Question 24</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd letter group.</div>
-
             <div class="options">
                 <div class="option">(A) BDF</div>
                 <div class="option">(B) HJL</div>
                 <div class="option">(C) NPR</div>
                 <div class="option">(D) TVY</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) TVY</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                BDF, HJL and NPR have a gap of 2 letters between consecutive letters.
-                TVY has positions 20, 22, 25, so the last gap is different.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) TVY</strong></div>
+            <div class="solution"><strong>Solution:</strong> BDF and HJL have gaps of +2, +2. NPR has N→P = +2 and P→R = +2. TVY has positions 20, 22, 25, so the last gap is different.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 25</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd letter group.</div>
-
             <div class="options">
                 <div class="option">(A) CFI</div>
                 <div class="option">(B) LOR</div>
                 <div class="option">(C) UXA</div>
                 <div class="option">(D) GJN</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) GJN</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                CFI, LOR and UXA move by +3 letters cyclically.
-                GJN has G → J = +3, J → N = +4, so it is different.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) GJN</strong></div>
+            <div class="solution"><strong>Solution:</strong> CFI, LOR and UXA move by +3 letters cyclically. GJN has G → J = +3, J → N = +4, so it is different.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 26</span>
             <span class="level">Moderate</span>
-
             <div class="question">Which pair is different from the other three?</div>
-
             <div class="options">
                 <div class="option">(A) AZ</div>
                 <div class="option">(B) BY</div>
                 <div class="option">(C) CX</div>
                 <div class="option">(D) EX</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) EX</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In AZ, BY and CX, the alphabet positions add to 27:
-                1+26, 2+25 and 3+24. E+X = 5+24 = 29.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) EX</strong></div>
+            <div class="solution"><strong>Solution:</strong> In AZ, BY and CX, the alphabet positions add to 27: 1+26, 2+25 and 3+24. E+X = 5+24 = 29.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 27</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd letter group.</div>
-
             <div class="options">
                 <div class="option">(A) ADG</div>
                 <div class="option">(B) HKN</div>
                 <div class="option">(C) PSV</div>
                 <div class="option">(D) TVX</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) TVX</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                ADG, HKN and PSV have a constant gap of +3 between letters.
-                TVX has T → V = +2 and V → X = +2.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) TVX</strong></div>
+            <div class="solution"><strong>Solution:</strong> ADG and HKN have a constant gap of +3 between letters. PSV has P→S = +3 and S→V = +3. TVX has T→V = +2 and V→X = +2. Therefore, the original answer is not unique under the stated rule. Review this item before using it as a verified question.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 28</span>
             <span class="level">Advanced</span>
-
             <div class="question">Select the odd group.</div>
-
             <div class="options">
                 <div class="option">(A) ACEG</div>
                 <div class="option">(B) IKMO</div>
                 <div class="option">(C) QSUV</div>
                 <div class="option">(D) TWYZ</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) TWYZ</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                ACEG, IKMO and QSUV move by +2 at every step.
-                TWYZ has gaps +3, +2 and +1.
-            </div>
+            <div class="answer-box"><strong>Answer: Question needs review</strong></div>
+            <div class="solution"><strong>Solution:</strong> ACEG and IKMO move by +2 at every step. QSUV has gaps +2, +2, +1, while TWYZ has gaps +3, +2, +1. Both C and D differ from the +2 pattern, so the question does not have a unique answer as written.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 29</span>
             <span class="level">Advanced</span>
-
             <div class="question">Find the odd group.</div>
-
             <div class="options">
                 <div class="option">(A) BGLQ</div>
                 <div class="option">(B) CHMR</div>
                 <div class="option">(C) DINS</div>
                 <div class="option">(D) EJOX</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) EJOX</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                BGLQ, CHMR and DINS each move by +5 positions:
-                B→G→L→Q etc. In EJOX, E→J→O is +5 but O→X is +9.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) EJOX</strong></div>
+            <div class="solution"><strong>Solution:</strong> BGLQ, CHMR and DINS each move by +5 positions. In EJOX, E→J→O is +5 but O→X is +9.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 30</span>
             <span class="level">Advanced</span>
-
             <div class="question">Which pair is different?</div>
-
             <div class="options">
                 <div class="option">(A) AB</div>
                 <div class="option">(B) EF</div>
                 <div class="option">(C) IJ</div>
                 <div class="option">(D) MN</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: No unique odd pair</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                All four options are consecutive-letter pairs. Their starting letters
-                A, E, I and M are separated by four alphabet positions, so MN continues
-                the same pattern. The question needs a revised option to have one
-                uniquely correct answer.
-            </div>
+            <div class="answer-box"><strong>Answer: No unique odd pair</strong></div>
+            <div class="solution"><strong>Solution:</strong> All four options are consecutive-letter pairs. Their starting letters A, E, I and M are separated by four alphabet positions, so MN continues the same pattern. The question needs a revised option to have one uniquely correct answer.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 31</span>
             <span class="level">Advanced</span>
-
             <div class="question">Find the odd letter group.</div>
-
             <div class="options">
                 <div class="option">(A) ZXV</div>
                 <div class="option">(B) RPN</div>
                 <div class="option">(C) JHF</div>
                 <div class="option">(D) DCB</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) DCB</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                ZXV, RPN and JHF decrease by 2 positions at each step.
-                DCB has D→C = -1 and C→B = -1.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) DCB</strong></div>
+            <div class="solution"><strong>Solution:</strong> ZXV, RPN and JHF decrease by 2 positions at each step. DCB has D→C = -1 and C→B = -1.</div>
         </div>
-
     </section>
 
     <!-- CATEGORY 4 -->
 
     <section class="category">
-
-        <h2 class="category-title">
-            4. Number-Set Classification – 8 Questions
-        </h2>
+        <h2 class="category-title">4. Number-Set Classification – 8 Questions</h2>
 
         <div class="question-card">
             <span class="question-number">Question 32</span>
             <span class="level">Advanced</span>
-
-            <div class="question">
-                Three of the following number sets follow the same relation.
-                Find the odd set.
-            </div>
-
+            <div class="question">Three of the following number sets follow the same relation. Find the odd set.</div>
             <div class="options">
                 <div class="option">(A) (14, 57, 29)</div>
                 <div class="option">(B) (18, 73, 37)</div>
                 <div class="option">(C) (25, 101, 51)</div>
                 <div class="option">(D) (13, 52, 27)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) (13, 52, 27)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C:
-                <br>Second number = 4 × First + 1
-                <br>Third number = 2 × First + 1
-                <br><br>
-                For D: 4 × 13 + 1 = 53, not 52.
-                Therefore D is the odd set.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) (13, 52, 27)</strong></div>
+            <div class="solution"><strong>Solution:</strong><br>In A, B and C:<br>Second number = 4 × First + 1<br>Third number = 2 × First + 1<br><br>For D: 4 × 13 + 1 = 53, not 52. Therefore D is the odd set.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 33</span>
             <span class="level">Advanced</span>
-
             <div class="question">Find the odd number set.</div>
-
             <div class="options">
                 <div class="option">(A) (12, 38, 13)</div>
                 <div class="option">(B) (15, 47, 16)</div>
                 <div class="option">(C) (21, 65, 22)</div>
                 <div class="option">(D) (17, 53, 19)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) (17, 53, 19)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, Second = 3 × First + 2 and Third = First + 1.
-                For D, the third number should be 18, not 19.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) (17, 53, 19)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, Second = 3 × First + 2 and Third = First + 1. For D, the third number should be 18, not 19.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 34</span>
             <span class="level">Advanced</span>
-
             <div class="question">Select the set which is different from the other three.</div>
-
             <div class="options">
                 <div class="option">(A) (9, 28, 7)</div>
                 <div class="option">(B) (13, 40, 11)</div>
                 <div class="option">(C) (18, 55, 17)</div>
                 <div class="option">(D) (16, 49, 14)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (C) (18, 55, 17)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and D, Second = 3 × First + 1 and Third = First − 2.
-                For C, 18 − 2 = 16, not 17.
-            </div>
+            <div class="answer-box"><strong>Answer: (C) (18, 55, 17)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and D, Second = 3 × First + 1 and Third = First − 2. For C, 18 − 2 = 16, not 17.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 35</span>
             <span class="level">Advanced</span>
-
             <div class="question">Find the odd number set.</div>
-
             <div class="options">
                 <div class="option">(A) (5, 26, 10)</div>
                 <div class="option">(B) (7, 50, 14)</div>
                 <div class="option">(C) (9, 82, 18)</div>
                 <div class="option">(D) (8, 66, 16)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) (8, 66, 16)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, Second = First² + 1 and Third = 2 × First.
-                For D, 8² + 1 = 65, not 66.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) (8, 66, 16)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, Second = First² + 1 and Third = 2 × First. For D, 8² + 1 = 65, not 66.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 36</span>
             <span class="level">Advanced</span>
-
             <div class="question">Three sets follow the same rule. Find the odd set.</div>
-
             <div class="options">
                 <div class="option">(A) (6, 17, 9)</div>
                 <div class="option">(B) (9, 23, 12)</div>
                 <div class="option">(C) (12, 29, 15)</div>
                 <div class="option">(D) (15, 34, 18)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) (15, 34, 18)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, Second = 2 × First + 5 and Third = First + 3.
-                For D, 2 × 15 + 5 = 35, not 34.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) (15, 34, 18)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, Second = 2 × First + 5 and Third = First + 3. For D, 2 × 15 + 5 = 35, not 34.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 37</span>
             <span class="level">Advanced</span>
-
             <div class="question">Select the odd set.</div>
-
             <div class="options">
                 <div class="option">(A) (6, 21, 13)</div>
                 <div class="option">(B) (8, 29, 17)</div>
                 <div class="option">(C) (11, 41, 23)</div>
                 <div class="option">(D) (13, 50, 27)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) (13, 50, 27)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, Second = 4 × First − 3 and Third = 2 × First + 1.
-                For D, 4 × 13 − 3 = 49, not 50.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) (13, 50, 27)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, Second = 4 × First − 3 and Third = 2 × First + 1. For D, 4 × 13 − 3 = 49, not 50.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 38</span>
             <span class="level">Advanced</span>
-
             <div class="question">Find the odd set.</div>
-
             <div class="options">
                 <div class="option">(A) (15, 26, 11)</div>
                 <div class="option">(B) (19, 31, 15)</div>
                 <div class="option">(C) (22, 33, 18)</div>
                 <div class="option">(D) (27, 38, 23)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (B) (19, 31, 15)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, C and D, Second = First + 11 and Third = First − 4.
-                For B, 19 + 11 = 30, not 31.
-            </div>
+            <div class="answer-box"><strong>Answer: (B) (19, 31, 15)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, C and D, Second = First + 11 and Third = First − 4. For B, 19 + 11 = 30, not 31.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 39</span>
             <span class="level">Advanced</span>
-
             <div class="question">Select the odd set.</div>
-
             <div class="options">
                 <div class="option">(A) (7, 19, 18)</div>
                 <div class="option">(B) (10, 28, 24)</div>
                 <div class="option">(C) (14, 41, 32)</div>
                 <div class="option">(D) (17, 49, 38)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (C) (14, 41, 32)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and D, Second = 3 × First − 2 and Third = 2 × First + 4.
-                For C, 3 × 14 − 2 = 40, not 41.
-            </div>
+            <div class="answer-box"><strong>Answer: (C) (14, 41, 32)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and D, Second = 3 × First − 2 and Third = 2 × First + 4. For C, 3 × 14 − 2 = 40, not 41.</div>
         </div>
-
     </section>
 
     <!-- CATEGORY 5 -->
 
     <section class="category">
-
-        <h2 class="category-title">
-            5. Mixed & Logical Classification – 6 Questions
-        </h2>
+        <h2 class="category-title">5. Mixed &amp; Logical Classification – 6 Questions</h2>
 
         <div class="question-card">
             <span class="question-number">Question 40</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd figure type.</div>
-
             <div class="options">
                 <div class="option">(A) Triangle</div>
                 <div class="option">(B) Pentagon</div>
                 <div class="option">(C) Hexagon</div>
                 <div class="option">(D) Circle</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Circle</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Triangle, Pentagon and Hexagon are polygons with straight sides.
-                Circle has no straight side.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Circle</strong></div>
+            <div class="solution"><strong>Solution:</strong> Triangle, Pentagon and Hexagon are polygons with straight sides. Circle has no straight side.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 41</span>
             <span class="level">Moderate</span>
-
             <div class="question">Select the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 2</div>
                 <div class="option">(B) 3</div>
                 <div class="option">(C) 5</div>
                 <div class="option">(D) 9</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 9</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                2, 3 and 5 are prime numbers. 9 is composite.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 9</strong></div>
+            <div class="solution"><strong>Solution:</strong> 2, 3 and 5 are prime numbers. 9 is composite.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 42</span>
             <span class="level">Moderate</span>
-
             <div class="question">Find the odd number.</div>
-
             <div class="options">
                 <div class="option">(A) 1</div>
                 <div class="option">(B) 4</div>
                 <div class="option">(C) 9</div>
                 <div class="option">(D) 15</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 15</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                1 = 1², 4 = 2² and 9 = 3². 15 is not a perfect square.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 15</strong></div>
+            <div class="solution"><strong>Solution:</strong> 1 = 1², 4 = 2² and 9 = 3². 15 is not a perfect square.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 43</span>
             <span class="level">Moderate</span>
-
             <div class="question">Which one is different from the other three?</div>
-
             <div class="options">
                 <div class="option">(A) Keyboard</div>
                 <div class="option">(B) Mouse</div>
                 <div class="option">(C) Monitor</div>
                 <div class="option">(D) Notebook</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) Notebook</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                Keyboard, Mouse and Monitor are computer hardware devices.
-                Notebook is a stationery item.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) Notebook</strong></div>
+            <div class="solution"><strong>Solution:</strong> Keyboard, Mouse and Monitor are computer hardware devices. Notebook is a stationery item.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 44</span>
             <span class="level">Advanced</span>
-
             <div class="question">Find the odd pair.</div>
-
             <div class="options">
                 <div class="option">(A) 3 : 9</div>
                 <div class="option">(B) 4 : 16</div>
                 <div class="option">(C) 5 : 25</div>
                 <div class="option">(D) 6 : 30</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 6 : 30</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, the second number is the square of the first:
-                3² = 9, 4² = 16 and 5² = 25.
-                6² = 36, not 30.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 6 : 30</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, the second number is the square of the first: 3² = 9, 4² = 16 and 5² = 25. 6² = 36, not 30.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 45</span>
             <span class="level">Advanced</span>
-
             <div class="question">Select the odd pair.</div>
-
             <div class="options">
                 <div class="option">(A) 7 : 16</div>
                 <div class="option">(B) 10 : 23</div>
                 <div class="option">(C) 13 : 30</div>
                 <div class="option">(D) 16 : 36</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 16 : 36</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                The original options do not follow a consistent rule for A, B and C.
-                For a consistent pattern, the intended options would be
-                (7,16), (10,22), (13,28) and (16,34). The original question needs
-                correction before being used as a verified exam question.
-            </div>
+            <div class="answer-box"><strong>Answer: Question needs correction</strong></div>
+            <div class="solution"><strong>Solution:</strong> The original options do not follow a consistent rule for A, B and C. A corrected pattern could use (7,16), (10,22), (13,28) and (16,34), where the second number is 2 × the first + 2. The original question needs correction before being used as a verified exam question.</div>
         </div>
-
     </section>
 
     <!-- CATEGORY 6 -->
 
     <section class="category">
-
-        <h2 class="category-title">
-            6. SSC Exam-Level Higher Classification – 5 Questions
-        </h2>
+        <h2 class="category-title">6. SSC Exam-Level Higher Classification – 5 Questions</h2>
 
         <div class="question-card">
             <span class="question-number">Question 46</span>
             <span class="level">Exam Level</span>
-
-            <div class="question">
-                Three pairs follow the same relation. Find the odd pair.
-            </div>
-
+            <div class="question">Three pairs follow the same relation. Find the odd pair.</div>
             <div class="options">
                 <div class="option">(A) 2 : 8</div>
                 <div class="option">(B) 3 : 27</div>
                 <div class="option">(C) 4 : 64</div>
                 <div class="option">(D) 5 : 100</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 5 : 100</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, the second number is the cube of the first:
-                2³ = 8, 3³ = 27 and 4³ = 64.
-                5³ = 125, not 100.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 5 : 100</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, the second number is the cube of the first: 2³ = 8, 3³ = 27 and 4³ = 64. 5³ = 125, not 100.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 47</span>
             <span class="level">Exam Level</span>
-
             <div class="question">Find the odd number set.</div>
-
             <div class="options">
                 <div class="option">(A) (17, 12, 7)</div>
                 <div class="option">(B) (15, 19, 23)</div>
                 <div class="option">(C) (21, 18, 15)</div>
                 <div class="option">(D) (14, 18, 20)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) (14, 18, 20)</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, First + Third = 2 × Second.
-                <br>
-                A: 17+7 = 24 = 2×12
-                <br>
-                B: 15+23 = 38 = 2×19
-                <br>
-                C: 21+15 = 36 = 2×18
-                <br>
-                D: 14+20 = 34, whereas 2×18 = 36.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) (14, 18, 20)</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, First + Third = 2 × Second.<br>A: 17+7 = 24 = 2×12<br>B: 15+23 = 38 = 2×19<br>C: 21+15 = 36 = 2×18<br>D: 14+20 = 34, whereas 2×18 = 36.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 48</span>
             <span class="level">Exam Level</span>
-
             <div class="question">Which sequence is different from the other three?</div>
-
             <div class="options">
                 <div class="option">(A) 3, 6, 12, 24</div>
                 <div class="option">(B) 5, 10, 20, 40</div>
                 <div class="option">(C) 7, 14, 28, 56</div>
                 <div class="option">(D) 9, 18, 35, 72</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 9, 18, 35, 72</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, every term is multiplied by 2.
-                In D, 18×2 = 36, not 35.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 9, 18, 35, 72</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, every term is multiplied by 2. In D, 18×2 = 36, not 35.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 49</span>
             <span class="level">Exam Level</span>
-
             <div class="question">Select the odd pair.</div>
-
             <div class="options">
                 <div class="option">(A) 3 : 12</div>
                 <div class="option">(B) 5 : 30</div>
                 <div class="option">(C) 7 : 56</div>
                 <div class="option">(D) 9 : 81</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: (D) 9 : 81</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                In A, B and C, Second = First × (First + 1).
-                <br>
-                3×4=12, 5×6=30, 7×8=56.
-                <br>
-                For 9, the expected value is 9×10 = 90, not 81.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) 9 : 81</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, Second = First × (First + 1). 3×4=12, 5×6=30, 7×8=56. For 9, the expected value is 9×10 = 90, not 81.</div>
         </div>
 
         <div class="question-card">
             <span class="question-number">Question 50</span>
             <span class="level">Exam Level</span>
-
-            <div class="question">
-                Three number sets follow the same rule. Find the odd set.
-            </div>
-
+            <div class="question">Three number sets follow the same rule. Find the odd set.</div>
             <div class="options">
                 <div class="option">(A) (8, 15, 9)</div>
                 <div class="option">(B) (5, 14, 13)</div>
                 <div class="option">(C) (7, 16, 9)</div>
                 <div class="option">(D) (6, 14, 11)</div>
             </div>
-
-            <div class="answer-box">
-                <strong>Answer: The question needs correction</strong>
-            </div>
-
-            <div class="solution">
-                <strong>Solution:</strong>
-                The stated rule does not produce a unique answer:
-                <br>
-                A: 8+15+9 = 32
-                <br>
-                B: 5+14+13 = 32
-                <br>
-                C: 7+16+9 = 32
-                <br>
-                D: 6+14+11 = 31
-                <br><br>
-                According to the sum rule, D is the odd set because its total is 31,
-                while the other three totals are 32.
-            </div>
+            <div class="answer-box"><strong>Answer: (D) (6, 14, 11)</strong></div>
+            <div class="solution"><strong>Solution:</strong> Compare the sum of each set.<br>A: 8+15+9 = 32<br>B: 5+14+13 = 32<br>C: 7+16+9 = 32<br>D: 6+14+11 = 31<br>Therefore, D is the odd set because its total is 31, while the other three totals are 32.</div>
         </div>
-
     </section>
 
     <!-- INFO -->
 
     <div class="info-box">
-
         <h2>📌 Practice Strategy</h2>
 
         <p>
@@ -1665,7 +1173,6 @@ footer p{
             For SSC-level preparation, pay special attention to number relations,
             alphabet positions, mathematical patterns and three-number set relations.
         </p>
-
     </div>
 
     <a href="ssc-topic-wise-practice.html" class="back-btn">
