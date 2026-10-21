@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,54 +21,144 @@ body{
     line-height:1.6;
 }
 
-nav{
+/* GOOGLE SITES STYLE NAVIGATION */
+.site-header{
     background:#102a43;
-    padding:16px 7%;
+    color:#ffffff;
+    width:100%;
+}
+
+.site-brand{
+    display:block;
+    padding:17px 5%;
+    color:#ffffff;
+    font-size:24px;
+    font-weight:800;
+    text-decoration:none;
+    letter-spacing:.4px;
+}
+
+.site-navigation{
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    gap:0;
+    padding:0 4%;
     flex-wrap:wrap;
-    gap:15px;
+    border-top:1px solid rgba(255,255,255,.12);
 }
 
-.logo{
-    color:white;
-    font-size:22px;
-    font-weight:bold;
+.site-navigation a,
+.more-button{
+    display:block;
+    color:#ffffff;
     text-decoration:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:600;
+    padding:14px 12px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    white-space:nowrap;
 }
 
-.nav-links{
-    display:flex;
-    gap:22px;
-    flex-wrap:wrap;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-}
-
-.nav-links a:hover{
+.site-navigation a:hover,
+.more-button:hover{
+    background:#173f5f;
     color:#d9eaf7;
 }
 
+/* MORE DROPDOWN */
+.more-menu{
+    position:relative;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.more-arrow{
+    font-size:11px;
+}
+
+.more-dropdown{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    min-width:170px;
+    background:#ffffff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:1000;
+}
+
+.more-dropdown a{
+    color:#102a43;
+    padding:12px 16px;
+    border-bottom:1px solid #edf1f5;
+}
+
+.more-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
+}
+
+.more-menu:hover .more-dropdown,
+.more-menu:focus-within .more-dropdown,
+.more-menu.open .more-dropdown{
+    display:block;
+}
+
+/* CENTERED BACK LINK */
+.back-navigation{
+    width:100%;
+    text-align:center;
+    padding:20px 15px;
+    background:#ffffff;
+    border-bottom:1px solid #e1e8ed;
+}
+
+.back-navigation a{
+    display:inline-block;
+    color:#173f5f;
+    background:#e8f1f8;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:10px 20px;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    transition:background .2s;
+}
+
+.back-navigation a:hover{
+    background:#d9eaf7;
+}
+
+/* HERO */
 .hero{
     background:#173f5f;
-    color:white;
+    color:#ffffff;
     text-align:center;
     padding:55px 20px;
 }
 
 .hero h1{
-    color:white;
+    color:#ffffff;
     font-size:36px;
     margin-bottom:12px;
 }
 
 .hero p{
-    color:white;
+    color:#ffffff;
     font-size:18px;
     max-width:850px;
     margin:6px auto;
@@ -84,12 +173,12 @@ nav{
 .instructions,
 .question-card,
 .result-card{
-    background:white;
+    background:#ffffff;
     border:1px solid #e1e8ed;
     border-radius:14px;
     padding:22px;
     margin-bottom:20px;
-    box-shadow:0 5px 18px rgba(16,42,67,0.06);
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
 }
 
 .instructions h2,
@@ -114,7 +203,7 @@ nav{
 }
 
 .stat{
-    background:white;
+    background:#ffffff;
     border:1px solid #d9e2ec;
     border-radius:10px;
     text-align:center;
@@ -152,7 +241,7 @@ select{
     padding:10px 12px;
     border:1px solid #829ab1;
     border-radius:7px;
-    background:white;
+    background:#ffffff;
     color:#243b53;
     font-size:14px;
     max-width:100%;
@@ -226,7 +315,7 @@ select{
     border:1px solid #d9e2ec;
     border-radius:8px;
     cursor:pointer;
-    background:white;
+    background:#ffffff;
     transition:background .15s;
     overflow-wrap:anywhere;
 }
@@ -316,7 +405,7 @@ button:disabled{
 
 .primary-btn{
     background:#173f5f;
-    color:white;
+    color:#ffffff;
 }
 
 .secondary-btn{
@@ -384,24 +473,10 @@ button:disabled{
     color:#52606d;
 }
 
-.back-btn{
-    display:inline-block;
-    margin-top:16px;
-    background:#173f5f;
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.back-btn:hover{
-    background:#102a43;
-}
-
+/* FOOTER */
 footer{
     background:#102a43;
-    color:white;
+    color:#ffffff;
     text-align:center;
     padding:28px 20px;
     margin-top:60px;
@@ -416,22 +491,60 @@ footer .tagline{
     color:#d9eaf7;
 }
 
+/* TABLET */
 @media(max-width:900px){
     .container{
         width:92%;
     }
 
-    nav{
-        justify-content:center;
+    .site-brand{
+        text-align:center;
     }
 
-    .nav-links{
+    .site-navigation{
         justify-content:center;
-        gap:15px;
+        padding:0 10px;
+    }
+
+    .site-navigation a,
+    .more-button{
+        padding:12px 9px;
     }
 }
 
+/* MOBILE */
 @media(max-width:600px){
+    .site-brand{
+        font-size:22px;
+        padding:16px 10px;
+    }
+
+    .site-navigation{
+        gap:0;
+        padding:5px 8px;
+    }
+
+    .site-navigation a,
+    .more-button{
+        font-size:13px;
+        padding:10px 8px;
+        white-space:normal;
+    }
+
+    .more-dropdown{
+        right:0;
+        min-width:150px;
+    }
+
+    .back-navigation{
+        padding:16px 10px;
+    }
+
+    .back-navigation a{
+        padding:10px 15px;
+        font-size:13px;
+    }
+
     .hero{
         padding:40px 16px;
     }
@@ -464,14 +577,6 @@ footer .tagline{
         padding:16px;
     }
 
-    .nav-links{
-        gap:12px;
-    }
-
-    .nav-links a{
-        font-size:14px;
-    }
-
     .toolbar{
         align-items:flex-start;
         flex-direction:column;
@@ -486,22 +591,92 @@ footer .tagline{
 
 <body>
 
-<nav>
-    <a href="index.html" class="logo">Let's QualifyNow</a>
+<!-- GOOGLE SITES STYLE HEADER AND NAVIGATION -->
+<header class="site-header">
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="study-material.html">Study Material</a>
-        <a href="live-classes.html">Live Classes</a>
-        <a href="test-series.html">Test Series</a>
-        <a href="exams.html">Exams</a>
-        <a href="https://youtube.com/@letsqualifynow7636"
-           target="_blank"
-           rel="noopener noreferrer">YouTube</a>
-    </div>
-</nav>
+    <a
+        href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+        class="site-brand">
+        LET'S QUALIFYNOW
+    </a>
 
+    <nav class="site-navigation" aria-label="Main navigation">
+
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">
+            Home
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">
+            Government Exam Preparation
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">
+            Courses
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">
+            SSC Reasoning Course
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">
+            State Exams Reasoning Course
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">
+            Railway Reasoning Course
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">
+            Banking Reasoning Course
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">
+            YouTube
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">
+            Study Material
+        </a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">
+            Live Classes
+        </a>
+
+        <div class="more-menu" id="moreMenu">
+
+            <button
+                type="button"
+                class="more-button"
+                id="moreButton"
+                aria-expanded="false"
+                aria-haspopup="true">
+                More <span class="more-arrow">▼</span>
+            </button>
+
+            <div class="more-dropdown">
+
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">
+                    Test Series
+                </a>
+
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">
+                    Exams
+                </a>
+
+            </div>
+        </div>
+
+    </nav>
+</header>
+
+<!-- CENTERED BACK LINK UNDER NAVIGATION -->
+<div class="back-navigation">
+    <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html">
+        ← Back to SSC Topic-wise Practice
+    </a>
+</div>
+
+<!-- HERO -->
 <section class="hero">
     <h1>📝 SSC Analogy Practice</h1>
     <p>50 Exam-Oriented Questions with Answers and Explanations</p>
@@ -598,15 +773,12 @@ footer .tagline{
             logical thinking, accuracy and speed for SSC CGL, CHSL, CPO, MTS
             and other government examinations.
         </p>
-        <a href="ssc-topic-wise-practice.html" class="back-btn">
-            ← Back to SSC Topic-wise Practice
-        </a>
     </section>
 
 </main>
 
 <footer>
-    <p><strong>Let's QualifyNow</strong></p>
+    <p><strong>LET'S QUALIFYNOW</strong></p>
     <p class="tagline">You Are Closer To Success</p>
     <p>N Saurabh Sir | Reasoning Faculty</p>
     <p>SSC • Banking • Railway • Government Exams</p>
@@ -616,6 +788,32 @@ footer .tagline{
 
 <script>
 "use strict";
+
+/* MORE MENU: CLICK TO OPEN/CLOSE */
+const moreMenu = document.getElementById("moreMenu");
+const moreButton = document.getElementById("moreButton");
+
+moreButton.addEventListener("click", function(event){
+    event.stopPropagation();
+
+    const isOpen = moreMenu.classList.toggle("open");
+    moreButton.setAttribute("aria-expanded", String(isOpen));
+});
+
+document.addEventListener("click", function(event){
+    if(!moreMenu.contains(event.target)){
+        moreMenu.classList.remove("open");
+        moreButton.setAttribute("aria-expanded", "false");
+    }
+});
+
+document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+        moreMenu.classList.remove("open");
+        moreButton.setAttribute("aria-expanded", "false");
+        moreButton.focus();
+    }
+});
 
 const questions = [
 {
@@ -1360,8 +1558,6 @@ function submitTest(){
         " | Negative marks: " + (wrong * 0.5).toFixed(2);
 
     renderQuestions();
-    showReview();
-    updateStats();
 
     resultCard.classList.add("show");
     submitBtn.disabled = true;
