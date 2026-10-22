@@ -30,13 +30,12 @@ body{
 .navbar{
     background:#102a43;
     width:100%;
-    padding:8px 12px;
+    padding:10px 16px;
     display:flex;
     justify-content:flex-start;
-    align-items:center;
-    flex-wrap:nowrap;
-    gap:10px;
-    min-width:0;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
 .logo{
@@ -46,28 +45,23 @@ body{
     text-decoration:none;
     white-space:nowrap;
     flex:0 0 auto;
-    line-height:1.2;
+    line-height:1.4;
+    padding:8px 0;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    flex-wrap:nowrap;
-    gap:2px;
-    flex:1 1 auto;
+    flex-wrap:wrap;
+    gap:3px;
+    flex:1 1 650px;
     min-width:0;
-    overflow-x:auto;
-    overflow-y:hidden;
-    white-space:nowrap;
-    scrollbar-width:thin;
-    scrollbar-color:#627d98 #102a43;
-    -webkit-overflow-scrolling:touch;
 }
 
-.nav-links a{
+.nav-links > a{
     color:white;
     text-decoration:none;
-    padding:10px 8px;
+    padding:9px 10px;
     border-radius:6px;
     font-size:12px;
     font-weight:600;
@@ -76,8 +70,73 @@ body{
     transition:background 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a:focus-visible{
+.nav-links > a:hover,
+.nav-links > a:focus-visible{
+    background:#173f5f;
+    outline:none;
+}
+
+/* MORE DROPDOWN */
+
+.dropdown{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.dropdown summary{
+    color:white;
+    text-decoration:none;
+    list-style:none;
+    cursor:pointer;
+    padding:9px 10px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:600;
+    white-space:nowrap;
+    transition:background 0.3s;
+}
+
+.dropdown summary::-webkit-details-marker{
+    display:none;
+}
+
+.dropdown summary:hover,
+.dropdown summary:focus-visible,
+.dropdown[open] summary{
+    background:#173f5f;
+    outline:none;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    right:0;
+    min-width:170px;
+    padding:6px;
+    background:#102a43;
+    border:1px solid #627d98;
+    border-radius:8px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.2);
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.dropdown-menu a{
+    display:block;
+    width:100%;
+    color:white;
+    text-decoration:none;
+    padding:10px 12px;
+    border-radius:5px;
+    font-size:13px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible{
     background:#173f5f;
     outline:none;
 }
@@ -291,31 +350,42 @@ footer p{
 @media(max-width:700px){
 
     .navbar{
-        padding:8px;
-        gap:7px;
-        flex-wrap:nowrap;
-        align-items:center;
+        padding:8px 10px;
+        gap:5px;
+        align-items:flex-start;
     }
 
     .logo{
-        font-size:14px;
-        flex:0 0 auto;
+        font-size:15px;
+        width:100%;
+        padding:5px 0;
     }
 
     .nav-links{
-        flex:1 1 auto;
-        min-width:0;
-        flex-wrap:nowrap;
-        justify-content:flex-start;
-        gap:2px;
-        overflow-x:auto;
-        overflow-y:hidden;
+        width:100%;
+        flex:1 1 100%;
+        gap:3px;
     }
 
-    .nav-links a{
+    .nav-links > a{
         font-size:11px;
-        padding:9px 7px;
-        flex:0 0 auto;
+        padding:8px 9px;
+    }
+
+    .dropdown summary{
+        font-size:11px;
+        padding:8px 9px;
+    }
+
+    .dropdown-menu{
+        left:0;
+        right:auto;
+        min-width:160px;
+    }
+
+    .dropdown-menu a{
+        font-size:12px;
+        padding:9px 11px;
     }
 
     .hero{
@@ -389,17 +459,28 @@ footer p{
 
 <!-- NAVBAR -->
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Main navigation">
     <a href="index.html" class="logo">LET'S QUALIFYNOW</a>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="government-exam-preparation.html">Government Exam Preparation</a>
         <a href="courses.html">Courses</a>
+        <a href="ssc-reasoning-course.html">SSC Reasoning Course</a>
+        <a href="state-exams-reasoning-course.html">State Exams Reasoning Course</a>
+        <a href="railway-reasoning-course.html">Railway Reasoning Course</a>
+        <a href="banking-reasoning-course.html">Banking Reasoning Course</a>
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="study-material.html">Study Material</a>
         <a href="live-classes.html">Live Classes</a>
-        <a href="test-series.html">Test Series</a>
-        <a href="exams.html">Exams</a>
-        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
+
+        <details class="dropdown">
+            <summary aria-label="More navigation links">More ▼</summary>
+            <div class="dropdown-menu">
+                <a href="test-series.html">Test Series</a>
+                <a href="exams.html">Exams</a>
+            </div>
+        </details>
     </div>
 </nav>
 
