@@ -25,143 +25,122 @@ body{
     line-height:1.6;
 }
 
-/* NAVIGATION - SAME SINGLE-LINE STYLE AS ANALOGY PRACTICE */
+/* NAVIGATION - MATCHED WITH SSC ANALOGY PRACTICE */
 
-.navbar{
-    width:100%;
+.site-header{
     display:flex;
     align-items:stretch;
-    flex-wrap:nowrap;
-    gap:0;
     background:#102a43;
-    padding:6px 10px;
-    min-width:0;
-    overflow:visible;
+    color:#fff;
+    width:100%;
+    position:relative;
+    z-index:100;
 }
 
-.logo{
+.site-brand{
     display:flex;
     align-items:center;
     flex:0 0 auto;
-    white-space:nowrap;
+    padding:10px 14px;
     color:#fff;
+    font-size:17px;
+    font-weight:800;
     text-decoration:none;
-    font-size:15px;
-    font-weight:bold;
-    padding:8px 6px 8px 10px;
-    line-height:1.4;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
 }
 
-.nav-links{
+.site-navigation{
     display:flex;
     align-items:center;
     flex:1 1 auto;
-    flex-wrap:nowrap;
     min-width:0;
-    gap:2px;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
     overflow-x:auto;
     overflow-y:hidden;
     white-space:nowrap;
-    scrollbar-width:none;
-    -ms-overflow-style:none;
-    overscroll-behavior-x:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
     -webkit-overflow-scrolling:touch;
 }
 
-.nav-links::-webkit-scrollbar{
-    display:none !important;
-    width:0 !important;
-    height:0 !important;
-    background:transparent;
-}
-
-.nav-links>a{
+.site-navigation a,
+.more-button{
     display:block;
     flex:0 0 auto;
-    white-space:nowrap;
     color:#fff;
     text-decoration:none;
-    padding:9px 9px;
-    border-radius:6px;
-    font-size:12px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
     font-weight:600;
-    transition:background .25s;
-}
-
-.nav-links>a:hover,
-.nav-links>a:focus-visible{
-    background:#173f5f;
-    outline:none;
-}
-
-/* MORE MENU - REMAINS VISIBLE AT THE RIGHT SIDE */
-
-.dropdown{
-    position:relative;
-    display:block;
-    flex:0 0 auto;
-    align-self:center;
-    margin-left:2px;
-}
-
-.dropdown summary{
-    list-style:none;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
     cursor:pointer;
     white-space:nowrap;
-    color:#fff;
-    padding:9px 10px;
-    border-radius:6px;
-    font-size:12px;
-    font-weight:600;
 }
 
-.dropdown summary::-webkit-details-marker{
-    display:none;
-}
-
-.dropdown summary:hover,
-.dropdown summary:focus-visible,
-.dropdown[open] summary{
+.site-navigation a:hover,
+.more-button:hover{
     background:#173f5f;
-    outline:none;
+    color:#d9eaf7;
 }
 
-.dropdown-menu{
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.more-arrow{
+    font-size:9px;
+}
+
+.more-dropdown{
     position:fixed;
     top:0;
     left:0;
     right:auto;
-    display:none;
-    flex-direction:column;
-    gap:3px;
+    width:170px;
     min-width:170px;
-    padding:6px;
-    background:#102a43;
-    border:1px solid #627d98;
-    border-radius:8px;
-    box-shadow:0 8px 18px rgba(0,0,0,.2);
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
     z-index:99999;
+    display:none;
 }
 
-.dropdown[open] .dropdown-menu{
-    display:flex;
-}
-
-.dropdown-menu a{
+.more-dropdown.show{
     display:block;
-    color:#fff;
-    text-decoration:none;
-    white-space:nowrap;
-    padding:10px 12px;
-    border-radius:5px;
-    font-size:13px;
-    font-weight:600;
 }
 
-.dropdown-menu a:hover,
-.dropdown-menu a:focus-visible{
-    background:#173f5f;
-    outline:none;
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.more-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
 }
 
 /* HERO */
@@ -398,43 +377,64 @@ footer p{
     margin:5px 0;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE NAVIGATION - SAME AS ANALOGY */
 
-@media(max-width:700px){
-    .navbar{
-        padding:5px 4px;
+@media(max-width:900px){
+    .container{
+        width:92%;
     }
 
-    .logo{
-        font-size:13px;
-        padding:8px 4px 8px 6px;
+    .site-brand{
+        font-size:14px;
+        padding:10px 9px;
     }
 
-    .nav-links{
-        gap:1px;
+    .site-navigation{
+        padding:0 2px;
     }
 
-    .nav-links>a{
-        font-size:11px;
-        padding:8px 7px;
+    .site-navigation a,
+    .more-button{
+        font-size:10.5px;
+        padding:11px 6px;
+    }
+}
+
+@media(max-width:600px){
+    .site-header{
+        width:100%;
+        align-items:stretch;
     }
 
-    .dropdown{
-        margin-left:1px;
-    }
-
-    .dropdown summary{
-        font-size:11px;
-        padding:8px 6px;
-    }
-
-    .dropdown-menu{
-        min-width:160px;
-    }
-
-    .dropdown-menu a{
+    .site-brand{
         font-size:12px;
-        padding:9px 11px;
+        padding:9px 7px;
+        letter-spacing:0;
+    }
+
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .site-navigation a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
     }
 
     .hero{
@@ -508,14 +508,13 @@ footer p{
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION - MATCHED WITH ANALOGY PRACTICE -->
 
-<nav class="navbar" aria-label="Main navigation">
-
+<header class="site-header">
     <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
-       class="logo">LET'S QUALIFYNOW</a>
+       class="site-brand">LET'S QUALIFYNOW</a>
 
-    <div class="nav-links" aria-label="Main navigation links">
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
         <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
         <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
         <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
@@ -526,17 +525,24 @@ footer p{
         <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
         <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
         <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
-    </div>
 
-    <details class="dropdown" id="moreDropdown">
-        <summary aria-label="More navigation links">More ▼</summary>
-        <div class="dropdown-menu" id="moreDropdownMenu">
-            <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
-            <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+        <div class="more-menu" id="moreMenu">
+            <button type="button"
+                    class="more-button"
+                    id="moreButton"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
+
+            <div class="more-dropdown" id="moreDropdown">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+            </div>
         </div>
-    </details>
-
-</nav>
+    </nav>
+</header>
 
 <!-- HERO -->
 
@@ -566,7 +572,7 @@ footer p{
         </p>
     </div>
 
-    <!-- SIX INSTRUCTIONS -->
+    <!-- INSTRUCTIONS -->
 
     <section class="instructions-box">
         <h2>📋 Instructions / निर्देश</h2>
@@ -1204,48 +1210,97 @@ footer p{
     <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
 </footer>
 
+<!-- NAVIGATION DROPDOWN SCRIPT - SAME BEHAVIOR AS ANALOGY -->
+
 <script>
-/* Keep More menu visible outside the horizontally scrolling navigation. */
-(function(){
-    const dropdown = document.getElementById("moreDropdown");
-    const menu = document.getElementById("moreDropdownMenu");
-    const summary = dropdown.querySelector("summary");
+"use strict";
 
-    function positionMenu(){
-        if(!dropdown.open) return;
+const moreMenu = document.getElementById("moreMenu");
+const moreButton = document.getElementById("moreButton");
+const moreDropdown = document.getElementById("moreDropdown");
+const siteNavigation = document.getElementById("siteNavigation");
 
-        const rect = summary.getBoundingClientRect();
-        menu.style.top = (rect.bottom + 4) + "px";
+/* Move dropdown outside the horizontally scrolling navigation. */
+document.body.appendChild(moreDropdown);
 
-        const menuWidth = menu.offsetWidth || 170;
-        const left = Math.max(
-            6,
-            Math.min(rect.right - menuWidth, window.innerWidth - menuWidth - 6)
-        );
+function positionMoreDropdown(){
+    const buttonRect = moreButton.getBoundingClientRect();
 
-        menu.style.left = left + "px";
-        menu.style.right = "auto";
+    moreDropdown.style.left = "8px";
+    moreDropdown.style.top = "0px";
+    moreDropdown.style.visibility = "hidden";
+    moreDropdown.classList.add("show");
+
+    const dropdownRect = moreDropdown.getBoundingClientRect();
+    const dropdownWidth = dropdownRect.width;
+    const dropdownHeight = dropdownRect.height;
+
+    let left = buttonRect.left;
+    let top = buttonRect.bottom;
+
+    if(left + dropdownWidth > window.innerWidth - 8){
+        left = window.innerWidth - dropdownWidth - 8;
     }
 
-    summary.addEventListener("click",function(){
-        requestAnimationFrame(positionMenu);
-    });
+    if(left < 8){
+        left = 8;
+    }
 
-    window.addEventListener("resize",positionMenu);
-    window.addEventListener("scroll",positionMenu,true);
+    if(top + dropdownHeight > window.innerHeight - 8){
+        top = buttonRect.top - dropdownHeight;
+    }
 
-    document.addEventListener("click",function(event){
-        if(!dropdown.contains(event.target)){
-            dropdown.open = false;
-        }
-    });
+    if(top < 8){
+        top = 8;
+    }
 
-    document.addEventListener("keydown",function(event){
-        if(event.key === "Escape"){
-            dropdown.open = false;
-        }
-    });
-})();
+    moreDropdown.style.left = left + "px";
+    moreDropdown.style.top = top + "px";
+    moreDropdown.style.visibility = "visible";
+}
+
+function openMoreMenu(){
+    positionMoreDropdown();
+    moreButton.setAttribute("aria-expanded","true");
+}
+
+function closeMoreMenu(){
+    moreDropdown.classList.remove("show");
+    moreDropdown.style.visibility = "";
+    moreButton.setAttribute("aria-expanded","false");
+}
+
+moreButton.addEventListener("click",function(event){
+    event.stopPropagation();
+
+    if(moreDropdown.classList.contains("show")){
+        closeMoreMenu();
+    }else{
+        openMoreMenu();
+    }
+});
+
+document.addEventListener("click",function(event){
+    if(!moreMenu.contains(event.target) &&
+       !moreDropdown.contains(event.target)){
+        closeMoreMenu();
+    }
+});
+
+moreDropdown.addEventListener("click",function(event){
+    event.stopPropagation();
+});
+
+document.addEventListener("keydown",function(event){
+    if(event.key === "Escape"){
+        closeMoreMenu();
+        moreButton.focus();
+    }
+});
+
+siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("resize",closeMoreMenu);
 </script>
 
 </body>
