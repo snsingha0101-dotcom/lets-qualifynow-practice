@@ -5,66 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSC Series Practice | Let's QualifyNow</title>
+<meta name="description" content="Practice SSC Number Series, Letter Series and Number-Letter Series questions with answers and detailed solutions in English and Hindi.">
 
 <style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f7f9fc;
     color:#243b53;
     line-height:1.6;
 }
 
-/* HEADER */
+/* NAVIGATION — SAME FORMAT AS ANALOGY PRACTICE */
 
-header{
-    background:#102a43;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    padding:18px 20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.15);
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
+.site-header{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
+    align-items:stretch;
+    background:#102a43;
+    color:#fff;
+    width:100%;
+    position:relative;
+    z-index:100;
 }
 
-.logo{
-    color:white;
-    font-size:20px;
-    font-weight:bold;
-    letter-spacing:0.5px;
+.site-brand{
+    display:flex;
+    align-items:center;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    text-decoration:none;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
+}
+
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+
+.site-navigation a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    cursor:pointer;
     white-space:nowrap;
 }
 
-nav{
+.site-navigation a:hover,
+.more-button:hover{
+    background:#173f5f;
+    color:#d9eaf7;
+}
+
+.more-menu{position:relative;flex:0 0 auto}
+
+.more-button{
     display:flex;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    gap:18px;
+    align-items:center;
+    gap:4px;
+    margin-top:0;
 }
 
-nav a{
-    color:white;
+.more-arrow{font-size:9px}
+
+.more-dropdown{
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
+    width:170px;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:99999;
+    display:none;
+}
+
+.more-dropdown.show{display:block}
+
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
     text-decoration:none;
-    font-size:14px;
-    font-weight:600;
+    font-size:13px;
 }
 
-nav a:hover{
-    text-decoration:underline;
+.more-dropdown a:last-child{border-bottom:none}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
+}
+
+@media(max-width:900px){
+    .container{width:92%}
+    .site-brand{font-size:14px;padding:10px 9px}
+    .site-navigation{padding:0 2px}
+    .site-navigation a,
+    .more-button{font-size:10.5px;padding:11px 6px}
+}
+
+@media(max-width:600px){
+    .site-header{width:100%;align-items:stretch}
+    .site-brand{font-size:12px;padding:9px 7px;letter-spacing:0}
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+    .site-navigation a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
+    }
 }
 
 /* HERO */
@@ -76,14 +171,8 @@ nav a:hover{
     padding:58px 20px;
 }
 
-.hero h1{
-    font-size:36px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    font-size:18px;
-}
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero p{font-size:18px}
 
 /* CONTAINER */
 
@@ -100,30 +189,18 @@ nav a:hover{
     padding:25px;
     border-radius:12px;
     border:1px solid #d9e2ec;
-    box-shadow:0 3px 12px rgba(16,42,67,0.08);
+    box-shadow:0 3px 12px rgba(16,42,67,.08);
     margin-bottom:30px;
 }
 
-.intro h2{
-    color:#102a43;
-    margin-bottom:12px;
-}
+.intro h2{color:#102a43;margin-bottom:12px}
+.intro p{margin-bottom:8px}
+.intro ul{margin:12px 0 0 22px}
+.intro li{margin-bottom:5px}
 
-.intro p{
-    margin-bottom:8px;
-}
+/* INSTRUCTIONS */
 
-.intro ul{
-    margin:12px 0 0 22px;
-}
-
-.intro li{
-    margin-bottom:5px;
-}
-
-/* RULES */
-
-.rules{
+.instructions{
     background:#eef6fb;
     border-left:5px solid #173f5f;
     padding:20px;
@@ -131,18 +208,24 @@ nav a:hover{
     margin-top:20px;
 }
 
-.rules h3{
-    color:#102a43;
-    margin-bottom:10px;
+.instructions h3{color:#102a43;margin-bottom:10px}
+.instructions h4{color:#173f5f;margin:14px 0 5px}
+.instructions ul{margin-left:20px}
+.instructions li{margin-bottom:6px}
+
+/* SERIES RULES */
+
+.rules{
+    background:#f7f9fc;
+    border:1px solid #d9e2ec;
+    padding:18px;
+    border-radius:8px;
+    margin-top:20px;
 }
 
-.rules ul{
-    margin-left:20px;
-}
-
-.rules li{
-    margin-bottom:6px;
-}
+.rules h3{color:#102a43;margin-bottom:10px}
+.rules ul{margin-left:20px}
+.rules li{margin-bottom:6px}
 
 /* SECTION */
 
@@ -172,7 +255,7 @@ nav a:hover{
     border-radius:12px;
     padding:22px;
     margin-bottom:18px;
-    box-shadow:0 3px 10px rgba(16,42,67,0.06);
+    box-shadow:0 3px 10px rgba(16,42,67,.06);
 }
 
 .q-number{
@@ -203,7 +286,7 @@ nav a:hover{
     padding:11px 13px;
     border-radius:7px;
     cursor:pointer;
-    transition:0.2s;
+    transition:.2s;
     font-size:15px;
     user-select:none;
 }
@@ -238,19 +321,9 @@ nav a:hover{
     border-radius:7px;
 }
 
-.answer-box.show{
-    display:block;
-}
-
-.answer-title{
-    color:#102a43;
-    font-weight:bold;
-    margin-bottom:6px;
-}
-
-.solution-text{
-    margin-top:6px;
-}
+.answer-box.show{display:block}
+.answer-title{color:#102a43;font-weight:bold;margin-bottom:6px}
+.solution-text{margin-top:6px}
 
 /* RESULT */
 
@@ -261,13 +334,10 @@ nav a:hover{
     padding:25px;
     text-align:center;
     margin:35px 0;
-    box-shadow:0 3px 12px rgba(16,42,67,0.08);
+    box-shadow:0 3px 12px rgba(16,42,67,.08);
 }
 
-.result-box h2{
-    color:#102a43;
-    margin-bottom:10px;
-}
+.result-box h2{color:#102a43;margin-bottom:10px}
 
 .score{
     font-size:28px;
@@ -276,10 +346,7 @@ nav a:hover{
     margin:10px 0;
 }
 
-.result-message{
-    font-size:16px;
-    font-weight:600;
-}
+.result-message{font-size:16px;font-weight:600}
 
 /* BUTTON */
 
@@ -295,9 +362,7 @@ button{
     margin-top:15px;
 }
 
-button:hover{
-    background:#173f5f;
-}
+button:hover{background:#173f5f}
 
 /* NOTE */
 
@@ -322,115 +387,75 @@ button:hover{
     margin:10px 0 40px;
 }
 
-.back-button:hover{
-    background:#173f5f;
-}
-
-/* FOOTER */
-
-footer{
-    background:#102a43;
-    color:white;
-    text-align:center;
-    padding:28px 20px;
-    margin-top:40px;
-}
-
-footer p{
-    margin:5px 0;
-}
+.back-button:hover{background:#173f5f}
 
 /* MOBILE */
 
 @media(max-width:700px){
-
-    .navbar{
-        flex-direction:column;
-    }
-
-    nav{
-        justify-content:center;
-        gap:10px 14px;
-    }
-
-    nav a{
-        font-size:13px;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .options{
-        grid-template-columns:1fr;
-    }
-
-    .question{
-        padding:17px;
-    }
-
-    .section-title{
-        font-size:24px;
-    }
-
-    .category-title{
-        font-size:19px;
-    }
-
+    .hero h1{font-size:28px}
+    .hero p{font-size:16px}
+    .options{grid-template-columns:1fr}
+    .question{padding:17px}
+    .section-title{font-size:24px}
+    .category-title{font-size:19px}
+    .intro{padding:19px}
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- ANALOGY PRACTICE STYLE NAVIGATION -->
 
-    <div class="navbar">
+<header class="site-header">
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="site-brand">LET'S QUALIFYNOW</a>
 
-        <div class="logo">
-            LET'S QUALIFYNOW
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
+
+        <div class="more-menu" id="moreMenu">
+            <button type="button" class="more-button" id="moreButton"
+                    aria-expanded="false" aria-haspopup="true"
+                    aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
+
+            <div class="more-dropdown" id="moreDropdown">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+            </div>
         </div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="study-material.html">Study Material</a>
-            <a href="live-classes.html">Live Classes</a>
-            <a href="test-series.html">Test Series</a>
-            <a href="exams.html">Exams</a>
-            <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
-        </nav>
-
-    </div>
-
+    </nav>
 </header>
 
-
 <section class="hero">
-
     <h1>🔢 SSC Series Practice</h1>
-
-    <p>
-        50 Exam-Oriented Questions with Answers &amp; Detailed Solutions
-    </p>
-
+    <p>45 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
 </section>
-
 
 <div class="container">
 
     <div class="intro">
-
         <h2>SSC Series Practice Set</h2>
 
         <p>
             This practice set covers the major Series patterns asked in
             SSC and other Government Exams.
+        </p>
+
+        <p lang="hi">
+            इस अभ्यास सेट में SSC और अन्य सरकारी परीक्षाओं में पूछे जाने वाले
+            Number Series, Letter Series और Number-Letter Series के महत्वपूर्ण प्रश्न शामिल हैं।
         </p>
 
         <ul>
@@ -440,560 +465,231 @@ footer p{
         </ul>
 
         <p style="margin-top:12px;">
-            <strong>Total Questions:</strong> 50
+            <strong>Total Questions:</strong> <span id="totalQuestions">45</span>
             &nbsp; | &nbsp;
             <strong>Level:</strong> SSC Exam Standard
         </p>
 
+        <div class="instructions">
+            <h3>📌 Instructions / निर्देश</h3>
+
+            <h4>English Instructions</h4>
+            <ul>
+                <li>This practice set contains 45 multiple-choice questions.</li>
+                <li>Each question has four options. Select the option you consider correct.</li>
+                <li>After selecting an option, the correct answer and its explanation will be displayed.</li>
+                <li>You can answer each question only once. Your score updates automatically.</li>
+                <li>Click <strong>Show Final Result</strong> after attempting the questions to view your performance.</li>
+                <li>Read the complete series carefully before selecting an answer.</li>
+            </ul>
+
+            <h4>हिंदी में निर्देश</h4>
+            <ul>
+                <li>इस अभ्यास सेट में कुल 45 बहुविकल्पीय प्रश्न हैं।</li>
+                <li>प्रत्येक प्रश्न में चार विकल्प दिए गए हैं। सही विकल्प का चयन करें।</li>
+                <li>विकल्प चुनने के बाद सही उत्तर और उसका समाधान दिखाई देगा।</li>
+                <li>प्रत्येक प्रश्न का उत्तर केवल एक बार दिया जा सकता है। आपका स्कोर अपने आप अपडेट होगा।</li>
+                <li>प्रश्न हल करने के बाद अपना परिणाम देखने के लिए <strong>Show Final Result</strong> पर क्लिक करें।</li>
+                <li>उत्तर चुनने से पहले पूरी श्रृंखला को ध्यानपूर्वक समझें।</li>
+            </ul>
+        </div>
+
         <div class="rules">
-
-            <h3>📌 Important Series Rules</h3>
-
+            <h3>📌 Important Series Rules / महत्वपूर्ण नियम</h3>
             <ul>
                 <li>Number Series में difference, multiplication, division, squares, cubes और mixed operations को check करें।</li>
                 <li>Letter Series में A=1, B=2, ... Z=26 की alphabet positions का उपयोग करें।</li>
                 <li>Letter pattern में forward और backward jumps को ध्यान से देखें।</li>
                 <li>Number-Letter Series में number और alphabet pattern को अलग-अलग analyse करें।</li>
-                <li>Wrong Number/Letter में पूरे pattern को verify करके केवल टूटने वाले term को पहचानें।</li>
+                <li>Wrong Number/Letter में पूरे pattern को verify करके केवल गलत term को पहचानें।</li>
+                <li>केवल दो लगातार terms देखकर pattern तय न करें; पूरी series को verify करें।</li>
             </ul>
-
         </div>
-
     </div>
 
+    <h2 class="section-title">Practice Questions / अभ्यास प्रश्न</h2>
 
-    <h2 class="section-title">
-        Practice Questions
-    </h2>
-
-
-    <!-- NUMBER SERIES -->
-
-    <div class="category-title">
-        🔢 Part 1 — Number Series: Missing Number
-    </div>
-
+    <div class="category-title">🔢 Part 1 — Number Series: Missing Number</div>
     <div id="numberMissing"></div>
 
-
-    <div class="category-title">
-        🔢 Part 2 — Number Series: Find Wrong Number
-    </div>
-
+    <div class="category-title">🔢 Part 2 — Number Series: Find Wrong Number</div>
     <div id="numberWrong"></div>
 
-
-    <!-- LETTER SERIES -->
-
-    <div class="category-title">
-        🔤 Part 3 — Letter Series: Missing Letter
-    </div>
-
+    <div class="category-title">🔤 Part 3 — Letter Series: Missing Letter</div>
     <div id="letterMissing"></div>
 
-
-    <div class="category-title">
-        🔤 Part 4 — Letter Series: Find Wrong Letter
-    </div>
-
+    <div class="category-title">🔤 Part 4 — Letter Series: Find Wrong Letter</div>
     <div id="letterWrong"></div>
 
-
-    <!-- NUMBER LETTER -->
-
-    <div class="category-title">
-        🔢🔤 Part 5 — Number-Letter Series
-    </div>
-
+    <div class="category-title">🔢🔤 Part 5 — Number-Letter Series</div>
     <div id="numberLetter"></div>
 
-
-    <!-- RESULT -->
-
     <div class="result-box">
+        <h2>📊 Your Practice Result / आपका परिणाम</h2>
 
-        <h2>📊 Your Practice Result</h2>
+        <div class="score" id="score">0 / 45</div>
 
-        <div class="score" id="score">
-            0 / 50
-        </div>
+        <div id="attemptedCount">Attempted: 0 / 45</div>
 
         <div class="result-message" id="resultMessage">
             Attempt the questions to see your score.
+            <br>
+            अपना स्कोर देखने के लिए प्रश्नों के उत्तर दें।
         </div>
 
-        <button type="button" onclick="showResult()">
-            Show Final Result
-        </button>
-
+        <button type="button" id="resultButton">Show Final Result / अंतिम परिणाम देखें</button>
     </div>
-
 
     <div class="note">
-
-        <strong>💡 Note:</strong>
+        <strong>💡 Note / ध्यान दें:</strong>
         Series questions को solve करते समय केवल दो consecutive terms को देखकर
         pattern decide न करें। पूरे sequence को verify करें और उसके बाद answer select करें।
-
+        <br><br>
+        श्रृंखला के प्रश्न हल करते समय केवल दो लगातार पदों के आधार पर पैटर्न तय न करें।
+        पूरी श्रृंखला की जाँच करने के बाद ही उत्तर चुनें।
     </div>
 
-
-    <a href="ssc-topic-wise-practice.html" class="back-button">
+    <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html"
+       class="back-button">
         ← Back to SSC Topic-wise Practice
     </a>
-
 </div>
 
-
-<footer>
-
-    <p><strong>LET'S QUALIFYNOW</strong></p>
-
-    <p>
-        N Saurabh Sir — Reasoning Faculty
-    </p>
-
-    <p>
-        SSC • Banking • Railway • Government Exams
-    </p>
-
-</footer>
-
-
 <script>
+"use strict";
 
 /* =========================================================
-   QUESTIONS
+   QUESTIONS — ORIGINAL SERIES QUESTIONS PRESERVED
 ========================================================= */
 
 const questions = [
 
-/* ================= NUMBER MISSING ================= */
+/* NUMBER SERIES: MISSING NUMBER */
 
-{
-section:"numberMissing",
-q:"2, 5, 9, 14, 20, ?",
-options:["26","27","28","29"],
-answer:"27",
-solution:"The differences are +3, +4, +5 and +6. The next difference is +7. Therefore, 20 + 7 = 27."
-},
+{section:"numberMissing",q:"2, 5, 9, 14, 20, ?",options:["26","27","28","29"],answer:"27",solution:"The differences are +3, +4, +5 and +6. The next difference is +7. Therefore, 20 + 7 = 27."},
 
-{
-section:"numberMissing",
-q:"3, 6, 12, 24, ?",
-options:["36","42","48","54"],
-answer:"48",
-solution:"Each term is multiplied by 2. Therefore, 24 × 2 = 48."
-},
+{section:"numberMissing",q:"3, 6, 12, 24, ?",options:["36","42","48","54"],answer:"48",solution:"Each term is multiplied by 2. Therefore, 24 × 2 = 48."},
 
-{
-section:"numberMissing",
-q:"5, 10, 17, 26, 37, ?",
-options:["48","49","50","51"],
-answer:"50",
-solution:"The differences are +5, +7, +9 and +11. The next difference is +13. Therefore, 37 + 13 = 50."
-},
+{section:"numberMissing",q:"5, 10, 17, 26, 37, ?",options:["48","49","50","51"],answer:"50",solution:"The differences are +5, +7, +9 and +11. The next difference is +13. Therefore, 37 + 13 = 50."},
 
-{
-section:"numberMissing",
-q:"1, 4, 9, 16, ?",
-options:["20","24","25","27"],
-answer:"25",
-solution:"These are consecutive squares: 1², 2², 3², 4² and 5². Therefore, the answer is 25."
-},
+{section:"numberMissing",q:"1, 4, 9, 16, ?",options:["20","24","25","27"],answer:"25",solution:"These are consecutive squares: 1², 2², 3², 4² and 5². Therefore, the answer is 25."},
 
-{
-section:"numberMissing",
-q:"2, 6, 12, 20, 30, ?",
-options:["40","42","44","46"],
-answer:"42",
-solution:"The differences are +4, +6, +8 and +10. The next difference is +12. Therefore, 30 + 12 = 42."
-},
+{section:"numberMissing",q:"2, 6, 12, 20, 30, ?",options:["40","42","44","46"],answer:"42",solution:"The differences are +4, +6, +8 and +10. The next difference is +12. Therefore, 30 + 12 = 42."},
 
-{
-section:"numberMissing",
-q:"81, 64, 49, 36, ?",
-options:["24","25","26","27"],
-answer:"25",
-solution:"These are descending squares: 9², 8², 7², 6² and 5². Therefore, the answer is 25."
-},
+{section:"numberMissing",q:"81, 64, 49, 36, ?",options:["24","25","26","27"],answer:"25",solution:"These are descending squares: 9², 8², 7², 6² and 5². Therefore, the answer is 25."},
 
-{
-section:"numberMissing",
-q:"7, 14, 28, 56, ?",
-options:["98","104","112","120"],
-answer:"112",
-solution:"Each term is multiplied by 2. Therefore, 56 × 2 = 112."
-},
+{section:"numberMissing",q:"7, 14, 28, 56, ?",options:["98","104","112","120"],answer:"112",solution:"Each term is multiplied by 2. Therefore, 56 × 2 = 112."},
 
-{
-section:"numberMissing",
-q:"100, 90, 81, 73, 66, ?",
-options:["58","59","60","61"],
-answer:"60",
-solution:"The differences are -10, -9, -8 and -7. The next difference is -6. Therefore, 66 - 6 = 60."
-},
+{section:"numberMissing",q:"100, 90, 81, 73, 66, ?",options:["58","59","60","61"],answer:"60",solution:"The differences are -10, -9, -8 and -7. The next difference is -6. Therefore, 66 - 6 = 60."},
 
-{
-section:"numberMissing",
-q:"4, 9, 19, 39, 79, ?",
-options:["157","158","159","160"],
-answer:"159",
-solution:"Each term follows ×2 + 1. Therefore, 79 × 2 + 1 = 159."
-},
+{section:"numberMissing",q:"4, 9, 19, 39, 79, ?",options:["157","158","159","160"],answer:"159",solution:"Each term follows ×2 + 1. Therefore, 79 × 2 + 1 = 159."},
 
-{
-section:"numberMissing",
-q:"1, 2, 6, 24, 120, ?",
-options:["480","600","720","840"],
-answer:"720",
-solution:"The terms are multiplied by 2, 3, 4, 5 and then 6. Therefore, 120 × 6 = 720."
-},
+{section:"numberMissing",q:"1, 2, 6, 24, 120, ?",options:["480","600","720","840"],answer:"720",solution:"The terms are multiplied by 2, 3, 4, 5 and then 6. Therefore, 120 × 6 = 720."},
 
+/* NUMBER SERIES: WRONG NUMBER */
 
-/* ================= NUMBER WRONG ================= */
+{section:"numberWrong",q:"2, 4, 8, 16, 31, 64 — Find the wrong number.",options:["8","16","31","64"],answer:"31",solution:"The pattern is ×2. After 16, the correct term should be 32. Therefore, 31 is wrong."},
 
-{
-section:"numberWrong",
-q:"2, 4, 8, 16, 31, 64 — Find the wrong number.",
-options:["8","16","31","64"],
-answer:"31",
-solution:"The pattern is ×2. After 16, the correct term should be 32. Therefore, 31 is wrong."
-},
+{section:"numberWrong",q:"3, 6, 12, 24, 48, 97 — Find the wrong number.",options:["24","48","97","12"],answer:"97",solution:"The pattern is ×2. After 48, the correct term should be 96. Therefore, 97 is wrong."},
 
-{
-section:"numberWrong",
-q:"3, 6, 12, 24, 48, 97 — Find the wrong number.",
-options:["24","48","97","12"],
-answer:"97",
-solution:"The pattern is ×2. After 48, the correct term should be 96. Therefore, 97 is wrong."
-},
+{section:"numberWrong",q:"4, 8, 14, 22, 31, 44 — Find the wrong number.",options:["14","22","31","44"],answer:"31",solution:"The differences should be +4, +6, +8, +10 and +12. After 22, the correct term should be 32, not 31. Therefore, 31 is the wrong number."},
 
-{
-section:"numberWrong",
-q:"4, 8, 14, 22, 31, 44 — Find the wrong number.",
-options:["14","22","31","44"],
-answer:"31",
-solution:"The differences should be +4, +6, +8, +10 and +12. After 22, the correct term should be 32, not 31. Therefore, 31 is the wrong number."
-},
+{section:"numberWrong",q:"1, 4, 9, 16, 26, 36 — Find the wrong number.",options:["9","16","26","36"],answer:"26",solution:"The terms should be consecutive squares: 1, 4, 9, 16, 25 and 36. Therefore, 26 is wrong and should be 25."},
 
-{
-section:"numberWrong",
-q:"1, 4, 9, 16, 26, 36 — Find the wrong number.",
-options:["9","16","26","36"],
-answer:"26",
-solution:"The terms should be consecutive squares: 1, 4, 9, 16, 25 and 36. Therefore, 26 is wrong and should be 25."
-},
+{section:"numberWrong",q:"7, 14, 28, 56, 111, 224 — Find the wrong number.",options:["28","56","111","224"],answer:"111",solution:"The pattern is ×2. After 56, the correct term should be 112. Therefore, 111 is wrong."},
 
-{
-section:"numberWrong",
-q:"7, 14, 28, 56, 111, 224 — Find the wrong number.",
-options:["28","56","111","224"],
-answer:"111",
-solution:"The pattern is ×2. After 56, the correct term should be 112. Therefore, 111 is wrong."
-},
+{section:"numberWrong",q:"50, 45, 39, 32, 23, 15 — Find the wrong number.",options:["32","23","15","39"],answer:"23",solution:"The intended differences are -5, -6, -7, -8 and -9. Therefore, after 32 the correct term should be 24, not 23. Hence, 23 is the wrong number."},
 
-{
-section:"numberWrong",
-q:"50, 45, 39, 32, 23, 15 — Find the wrong number.",
-options:["32","23","15","39"],
-answer:"23",
-solution:"The intended differences are -5, -6, -7, -8 and -9. Therefore, after 32 the correct term should be 24, not 23. Hence, 23 is the wrong number."
-},
+{section:"numberWrong",q:"10, 20, 40, 80, 161, 320 — Find the wrong number.",options:["40","80","161","320"],answer:"161",solution:"The pattern is ×2. After 80, the correct term should be 160. Therefore, 161 is wrong."},
 
-{
-section:"numberWrong",
-q:"10, 20, 40, 80, 161, 320 — Find the wrong number.",
-options:["40","80","161","320"],
-answer:"161",
-solution:"The pattern is ×2. After 80, the correct term should be 160. Therefore, 161 is wrong."
-},
+{section:"numberWrong",q:"121, 100, 81, 64, 49, 35 — Find the wrong number.",options:["64","49","35","81"],answer:"35",solution:"These are descending squares: 11², 10², 9², 8², 7² and 6². The last term should be 36, not 35. Therefore, 35 is wrong."},
 
-{
-section:"numberWrong",
-q:"121, 100, 81, 64, 49, 35 — Find the wrong number.",
-options:["64","49","35","81"],
-answer:"35",
-solution:"These are descending squares: 11², 10², 9², 8², 7² and 6². The last term should be 36, not 35. Therefore, 35 is wrong."
-},
+{section:"numberWrong",q:"2, 5, 10, 17, 26, 38 — Find the wrong number.",options:["10","17","26","38"],answer:"38",solution:"The differences should be +3, +5, +7, +9 and +11. Therefore, after 26 the correct term is 37, not 38. Hence, 38 is wrong."},
 
-{
-section:"numberWrong",
-q:"2, 5, 10, 17, 26, 38 — Find the wrong number.",
-options:["10","17","26","38"],
-answer:"38",
-solution:"The differences should be +3, +5, +7, +9 and +11. Therefore, after 26 the correct term is 37, not 38. Hence, 38 is wrong."
-},
+{section:"numberWrong",q:"6, 12, 24, 48, 95, 192 — Find the wrong number.",options:["24","48","95","192"],answer:"95",solution:"The pattern is ×2. After 48, the correct term should be 96. Therefore, 95 is wrong."},
 
-{
-section:"numberWrong",
-q:"6, 12, 24, 48, 95, 192 — Find the wrong number.",
-options:["24","48","95","192"],
-answer:"95",
-solution:"The pattern is ×2. After 48, the correct term should be 96. Therefore, 95 is wrong."
-},
+/* LETTER SERIES: MISSING LETTER */
 
+{section:"letterMissing",q:"A, C, F, J, O, ?",options:["T","U","V","W"],answer:"U",solution:"The jumps are +2, +3, +4 and +5. The next jump is +6. Therefore, O + 6 = U."},
 
-/* ================= LETTER MISSING ================= */
+{section:"letterMissing",q:"Z, W, S, N, H, ?",options:["A","B","C","D"],answer:"A",solution:"The backward jumps are -3, -4, -5 and -6. The next jump is -7. Therefore, H - 7 = A."},
 
-{
-section:"letterMissing",
-q:"A, C, F, J, O, ?",
-options:["T","U","V","W"],
-answer:"U",
-solution:"The jumps are +2, +3, +4 and +5. The next jump is +6. Therefore, O + 6 = U."
-},
+{section:"letterMissing",q:"B, E, J, Q, ?",options:["X","Y","Z","A"],answer:"Z",solution:"The alphabet positions are 2, 5, 10 and 17. The differences are +3, +5 and +7. The next difference is +9, giving position 26 = Z."},
 
-{
-section:"letterMissing",
-q:"Z, W, S, N, H, ?",
-options:["A","B","C","D"],
-answer:"A",
-solution:"The backward jumps are -3, -4, -5 and -6. The next jump is -7. Therefore, H - 7 = A."
-},
+{section:"letterMissing",q:"D, G, K, P, ?",options:["U","V","W","X"],answer:"V",solution:"The jumps are +3, +4 and +5. The next jump is +6. Therefore, P + 6 = V."},
 
-{
-section:"letterMissing",
-q:"B, E, J, Q, ?",
-options:["X","Y","Z","A"],
-answer:"Z",
-solution:"The alphabet positions are 2, 5, 10 and 17. The differences are +3, +5 and +7. The next difference is +9, giving position 26 = Z."
-},
+{section:"letterMissing",q:"A, D, H, M, S, ?",options:["Y","Z","A","B"],answer:"Z",solution:"The jumps are +3, +4, +5 and +6. The next jump is +7. Therefore, S + 7 = Z."},
 
-{
-section:"letterMissing",
-q:"D, G, K, P, ?",
-options:["U","V","W","X"],
-answer:"V",
-solution:"The jumps are +3, +4 and +5. The next jump is +6. Therefore, P + 6 = V."
-},
+{section:"letterMissing",q:"Y, V, R, M, G, ?",options:["X","Y","Z","A"],answer:"Z",solution:"The backward jumps are -3, -4, -5 and -6. The next jump is -7. Therefore, G - 7 wraps around to Z."},
 
-{
-section:"letterMissing",
-q:"A, D, H, M, S, ?",
-options:["Y","Z","A","B"],
-answer:"Z",
-solution:"The jumps are +3, +4, +5 and +6. The next jump is +7. Therefore, S + 7 = Z."
-},
+{section:"letterMissing",q:"C, F, J, O, U, ?",options:["A","B","C","D"],answer:"B",solution:"The jumps are +3, +4, +5, +6 and then +7. Starting from U, seven positions forward wraps around to B."},
 
-{
-section:"letterMissing",
-q:"Y, V, R, M, G, ?",
-options:["X","Y","Z","A"],
-answer:"Z",
-solution:"The backward jumps are -3, -4, -5 and -6. The next jump is -7. Therefore, G - 7 wraps around to Z."
-},
+{section:"letterMissing",q:"M, K, H, D, Y, ?",options:["R","S","T","U"],answer:"S",solution:"The backward jumps are -2, -3, -4 and -5. The next jump is -6. Therefore, Y - 6 = S."},
 
-{
-section:"letterMissing",
-q:"C, F, J, O, U, ?",
-options:["A","B","C","D"],
-answer:"B",
-solution:"The jumps are +3, +4, +5, +6 and then +7. Starting from U, seven positions forward wraps around to B."
-},
+/* LETTER SERIES: WRONG LETTER */
 
-{
-section:"letterMissing",
-q:"M, K, H, D, Y, ?",
-options:["R","S","T","U"],
-answer:"S",
-solution:"The backward jumps are -2, -3, -4 and -5. The next jump is -6. Therefore, Y - 6 = S."
-},
+{section:"letterWrong",q:"A, C, E, G, J, K — Find the wrong letter.",options:["E","G","J","K"],answer:"J",solution:"The correct series is A, C, E, G, I, K, with a constant jump of +2. Therefore, J is wrong and should be I."},
 
+{section:"letterWrong",q:"B, E, H, K, O, Q — Find the wrong letter.",options:["H","K","O","Q"],answer:"O",solution:"The correct series is B, E, H, K, N, Q, with a constant jump of +3. Therefore, O is wrong and should be N."},
 
-/* ================= LETTER WRONG ================= */
+{section:"letterWrong",q:"Z, W, T, Q, N, J — Find the wrong letter.",options:["T","Q","N","J"],answer:"J",solution:"The correct series is Z, W, T, Q, N, K, with a constant backward jump of -3. Therefore, J is wrong and should be K."},
 
-{
-section:"letterWrong",
-q:"A, C, E, G, J, K — Find the wrong letter.",
-options:["E","G","J","K"],
-answer:"J",
-solution:"The correct series is A, C, E, G, I, K, with a constant jump of +2. Therefore, J is wrong and should be I."
-},
+{section:"letterWrong",q:"C, F, J, L, O — Find the wrong letter.",options:["F","J","L","O"],answer:"J",solution:"The correct series is C, F, I, L, O, with a constant jump of +3. Therefore, J is wrong and should be I."},
 
-{
-section:"letterWrong",
-q:"B, E, H, K, O, Q — Find the wrong letter.",
-options:["H","K","O","Q"],
-answer:"O",
-solution:"The correct series is B, E, H, K, N, Q, with a constant jump of +3. Therefore, O is wrong and should be N."
-},
+{section:"letterWrong",q:"D, H, L, P, U — Find the wrong letter.",options:["H","L","P","U"],answer:"U",solution:"The correct series is D, H, L, P, T, with a constant jump of +4. Therefore, U is wrong and should be T."},
 
-{
-section:"letterWrong",
-q:"Z, W, T, Q, N, J — Find the wrong letter.",
-options:["T","Q","N","J"],
-answer:"J",
-solution:"The correct series is Z, W, T, Q, N, K, with a constant backward jump of -3. Therefore, J is wrong and should be K."
-},
+{section:"letterWrong",q:"A, E, I, M, Q, V — Find the wrong letter.",options:["I","M","Q","V"],answer:"V",solution:"The correct series is A, E, I, M, Q, U, with a constant jump of +4. Therefore, V is wrong and should be U."},
 
-{
-section:"letterWrong",
-q:"C, F, J, L, O — Find the wrong letter.",
-options:["F","J","L","O"],
-answer:"J",
-solution:"The correct series is C, F, I, L, O, with a constant jump of +3. Therefore, J is wrong and should be I."
-},
+{section:"letterWrong",q:"X, U, Q, N, J, E — Find the wrong letter.",options:["U","Q","N","E"],answer:"E",solution:"The pattern is -3, -4, -3, -4, -3. Starting from X: X → U (-3), U → Q (-4), Q → N (-3), N → J (-4), and J should move -3 to G. Therefore, E is wrong and should be G."},
 
-{
-section:"letterWrong",
-q:"D, H, L, P, U — Find the wrong letter.",
-options:["H","L","P","U"],
-answer:"U",
-solution:"The correct series is D, H, L, P, T, with a constant jump of +4. Therefore, U is wrong and should be T."
-},
+/* NUMBER-LETTER SERIES */
 
-{
-section:"letterWrong",
-q:"A, E, I, M, Q, V — Find the wrong letter.",
-options:["I","M","Q","V"],
-answer:"V",
-solution:"The correct series is A, E, I, M, Q, U, with a constant jump of +4. Therefore, V is wrong and should be U."
-},
+{section:"numberLetter",q:"A1, B2, C3, D4, ?",options:["E4","E5","F5","F6"],answer:"E5",solution:"Letters increase by 1 and numbers also increase by 1. Therefore, the next term is E5."},
 
-{
-section:"letterWrong",
-q:"X, U, Q, N, J, E — Find the wrong letter.",
-options:["U","Q","N","E"],
-answer:"E",
-solution:"The pattern is -3, -4, -3, -4, -3. Starting from X: X → U (-3), U → Q (-4), Q → N (-3), N → J (-4), and J should move -3 to G. Therefore, E is wrong and should be G."
-},
+{section:"numberLetter",q:"A2, C4, E6, G8, ?",options:["H9","I10","J10","I12"],answer:"I10",solution:"Letters increase by 2 positions and numbers increase by 2. Therefore, the next term is I10."},
 
+{section:"numberLetter",q:"Z26, Y24, X22, W20, ?",options:["V18","V19","U18","U20"],answer:"V18",solution:"Letters move backward by 1 while numbers decrease by 2. Therefore, the next term is V18."},
 
-/* ================= NUMBER LETTER ================= */
+{section:"numberLetter",q:"A5, C10, E15, G20, ?",options:["H25","I25","I24","J25"],answer:"I25",solution:"Letters increase by 2 positions and numbers increase by 5. Therefore, the next term is I25."},
 
-{
-section:"numberLetter",
-q:"A1, B2, C3, D4, ?",
-options:["E4","E5","F5","F6"],
-answer:"E5",
-solution:"Letters increase by 1 and numbers also increase by 1. Therefore, the next term is E5."
-},
+{section:"numberLetter",q:"B10, D20, F30, H40, ?",options:["I50","J45","J50","K50"],answer:"J50",solution:"Letters increase by 2 positions and numbers increase by 10. Therefore, the next term is J50."},
 
-{
-section:"numberLetter",
-q:"A2, C4, E6, G8, ?",
-options:["H9","I10","J10","I12"],
-answer:"I10",
-solution:"Letters increase by 2 positions and numbers increase by 2. Therefore, the next term is I10."
-},
+{section:"numberLetter",q:"A1, C4, E9, G16, ?",options:["H20","I25","I24","J25"],answer:"I25",solution:"Letters increase by 2 positions. Numbers are consecutive squares: 1, 4, 9, 16 and 25. Therefore, the next term is I25."},
 
-{
-section:"numberLetter",
-q:"Z26, Y24, X22, W20, ?",
-options:["V18","V19","U18","U20"],
-answer:"V18",
-solution:"Letters move backward by 1 while numbers decrease by 2. Therefore, the next term is V18."
-},
+{section:"numberLetter",q:"Z1, X4, V9, T16, ?",options:["R20","R25","S25","Q25"],answer:"R25",solution:"Letters move backward by 2 positions. Numbers are consecutive squares: 1, 4, 9, 16 and 25. Therefore, the next term is R25."},
 
-{
-section:"numberLetter",
-q:"A5, C10, E15, G20, ?",
-options:["H25","I25","I24","J25"],
-answer:"I25",
-solution:"Letters increase by 2 positions and numbers increase by 5. Therefore, the next term is I25."
-},
+{section:"numberLetter",q:"A26, B25, C24, D23, ?",options:["E21","E22","F22","E23"],answer:"E22",solution:"Letters increase by 1 while numbers decrease by 1. Therefore, the next term is E22."},
 
-{
-section:"numberLetter",
-q:"B10, D20, F30, H40, ?",
-options:["I50","J45","J50","K50"],
-answer:"J50",
-solution:"Letters increase by 2 positions and numbers increase by 10. Therefore, the next term is J50."
-},
+{section:"numberLetter",q:"C3, F6, I9, L12, ?",options:["N14","O15","P15","O16"],answer:"O15",solution:"Letters increase by 3 positions and numbers increase by 3. Therefore, the next term is O15."},
 
-{
-section:"numberLetter",
-q:"A1, C4, E9, G16, ?",
-options:["H20","I25","I24","J25"],
-answer:"I25",
-solution:"Letters increase by 2 positions. Numbers are consecutive squares: 1, 4, 9, 16 and 25. Therefore, the next term is I25."
-},
+{section:"numberLetter",q:"B2, E5, H8, K11, ?",options:["M13","N14","O14","N15"],answer:"N14",solution:"Letters increase by 3 positions and numbers increase by 3. Therefore, the next term is N14."},
 
-{
-section:"numberLetter",
-q:"Z1, X4, V9, T16, ?",
-options:["R20","R25","S25","Q25"],
-answer:"R25",
-solution:"Letters move backward by 2 positions. Numbers are consecutive squares: 1, 4, 9, 16 and 25. Therefore, the next term is R25."
-},
+{section:"numberLetter",q:"A10, C9, E8, G7, ?",options:["H6","I6","I5","J6"],answer:"I6",solution:"Letters increase by 2 positions while numbers decrease by 1. Therefore, the next term is I6."},
 
-{
-section:"numberLetter",
-q:"A26, B25, C24, D23, ?",
-options:["E21","E22","F22","E23"],
-answer:"E22",
-solution:"Letters increase by 1 while numbers decrease by 1. Therefore, the next term is E22."
-},
+{section:"numberLetter",q:"D4, G8, J12, M16, ?",options:["N20","O20","P20","Q20"],answer:"P20",solution:"Letters increase by 3 positions and numbers increase by 4. Therefore, the next term is P20."},
 
-{
-section:"numberLetter",
-q:"C3, F6, I9, L12, ?",
-options:["N14","O15","P15","O16"],
-answer:"O15",
-solution:"Letters increase by 3 positions and numbers increase by 3. Therefore, the next term is O15."
-},
+{section:"numberLetter",q:"Z2, W4, T6, Q8, ?",options:["N10","O10","N12","M10"],answer:"N10",solution:"Letters move backward by 3 positions while numbers increase by 2. Therefore, the next term is N10."},
 
-{
-section:"numberLetter",
-q:"B2, E5, H8, K11, ?",
-options:["M13","N14","O14","N15"],
-answer:"N14",
-solution:"Letters increase by 3 positions and numbers increase by 3. Therefore, the next term is N14."
-},
+{section:"numberLetter",q:"A1, D2, G3, J4, ?",options:["K5","L5","M5","N5"],answer:"M5",solution:"Letters increase by 3 positions and numbers increase by 1. Therefore, the next term is M5."},
 
-{
-section:"numberLetter",
-q:"A10, C9, E8, G7, ?",
-options:["H6","I6","I5","J6"],
-answer:"I6",
-solution:"Letters increase by 2 positions while numbers decrease by 1. Therefore, the next term is I6."
-},
-
-{
-section:"numberLetter",
-q:"D4, G8, J12, M16, ?",
-options:["N20","O20","P20","Q20"],
-answer:"P20",
-solution:"Letters increase by 3 positions and numbers increase by 4. Therefore, the next term is P20."
-},
-
-{
-section:"numberLetter",
-q:"Z2, W4, T6, Q8, ?",
-options:["N10","O10","N12","M10"],
-answer:"N10",
-solution:"Letters move backward by 3 positions while numbers increase by 2. Therefore, the next term is N10."
-},
-
-{
-section:"numberLetter",
-q:"A1, D2, G3, J4, ?",
-options:["K5","L5","M5","N5"],
-answer:"M5",
-solution:"Letters increase by 3 positions and numbers increase by 1. Therefore, the next term is M5."
-},
-
-{
-section:"numberLetter",
-q:"B3, D6, F12, H24, ?",
-options:["I36","J48","J36","K48"],
-answer:"J48",
-solution:"Letters increase by 2 positions. Numbers are multiplied by 2: 3, 6, 12, 24 and 48. Therefore, the next term is J48."
-}
+{section:"numberLetter",q:"B3, D6, F12, H24, ?",options:["I36","J48","J36","K48"],answer:"J48",solution:"Letters increase by 2 positions. Numbers are multiplied by 2: 3, 6, 12, 24 and 48. Therefore, the next term is J48."}
 
 ];
 
-
 /* =========================================================
-   VARIABLES
+   SCORE VARIABLES
 ========================================================= */
 
 let score = 0;
 let attempted = 0;
-
 const answeredQuestions = {};
+const totalQuestions = questions.length;
 
+/* Set total question count dynamically */
+document.getElementById("totalQuestions").textContent = totalQuestions;
+document.getElementById("score").textContent = "0 / " + totalQuestions;
+document.getElementById("attemptedCount").textContent =
+    "Attempted: 0 / " + totalQuestions;
 
 /* =========================================================
    RENDER QUESTIONS
@@ -1002,15 +698,12 @@ const answeredQuestions = {};
 function renderQuestions(){
 
     const sectionContainers = {
-
-        numberMissing: document.getElementById("numberMissing"),
-        numberWrong: document.getElementById("numberWrong"),
-        letterMissing: document.getElementById("letterMissing"),
-        letterWrong: document.getElementById("letterWrong"),
-        numberLetter: document.getElementById("numberLetter")
-
+        numberMissing:document.getElementById("numberMissing"),
+        numberWrong:document.getElementById("numberWrong"),
+        letterMissing:document.getElementById("letterMissing"),
+        letterWrong:document.getElementById("letterWrong"),
+        numberLetter:document.getElementById("numberLetter")
     };
-
 
     questions.forEach(function(item,index){
 
@@ -1031,18 +724,24 @@ function renderQuestions(){
         const answerBox = document.createElement("div");
         answerBox.className = "answer-box";
 
-        answerBox.innerHTML =
-            "<div class='answer-title'>✅ Answer: " +
-            item.answer +
-            "</div>" +
-            "<div class='solution-text'><strong>Solution:</strong> " +
-            item.solution +
-            "</div>";
+        const answerTitle = document.createElement("div");
+        answerTitle.className = "answer-title";
+        answerTitle.textContent = "✅ Answer: " + item.answer;
+
+        const solutionText = document.createElement("div");
+        solutionText.className = "solution-text";
+
+        const solutionLabel = document.createElement("strong");
+        solutionLabel.textContent = "Solution: ";
+
+        solutionText.appendChild(solutionLabel);
+        solutionText.appendChild(document.createTextNode(item.solution));
+        answerBox.appendChild(answerTitle);
+        answerBox.appendChild(solutionText);
 
         item.options.forEach(function(option){
 
             const optionBox = document.createElement("div");
-
             optionBox.className = "option";
             optionBox.textContent = option;
             optionBox.setAttribute("role","button");
@@ -1057,61 +756,41 @@ function renderQuestions(){
                 answeredQuestions[index] = true;
                 attempted++;
 
-                const allOptions =
-                    optionsBox.querySelectorAll(".option");
+                const allOptions = optionsBox.querySelectorAll(".option");
 
                 allOptions.forEach(function(opt){
-
                     opt.style.pointerEvents = "none";
                     opt.style.cursor = "default";
-
+                    opt.setAttribute("aria-disabled","true");
                 });
 
                 if(option === item.answer){
-
                     optionBox.classList.add("correct");
                     score++;
-
                 }else{
-
                     optionBox.classList.add("wrong");
 
                     allOptions.forEach(function(opt){
-
                         if(opt.textContent === item.answer){
-
                             opt.classList.add("correct");
-
                         }
-
                     });
-
                 }
-
-                /* SHOW ANSWER AND SOLUTION */
 
                 answerBox.classList.add("show");
-                answerBox.style.display = "block";
-
                 updateScore();
-
             }
 
-            optionBox.onclick = selectAnswer;
+            optionBox.addEventListener("click",selectAnswer);
 
-            optionBox.onkeydown = function(event){
-
+            optionBox.addEventListener("keydown",function(event){
                 if(event.key === "Enter" || event.key === " "){
-
                     event.preventDefault();
                     selectAnswer();
-
                 }
-
-            };
+            });
 
             optionsBox.appendChild(optionBox);
-
         });
 
         questionBox.appendChild(questionNumber);
@@ -1120,15 +799,10 @@ function renderQuestions(){
         questionBox.appendChild(answerBox);
 
         if(sectionContainers[item.section]){
-
             sectionContainers[item.section].appendChild(questionBox);
-
         }
-
     });
-
 }
-
 
 /* =========================================================
    UPDATE SCORE
@@ -1137,10 +811,11 @@ function renderQuestions(){
 function updateScore(){
 
     document.getElementById("score").textContent =
-        score + " / 50";
+        score + " / " + totalQuestions;
 
+    document.getElementById("attemptedCount").textContent =
+        "Attempted: " + attempted + " / " + totalQuestions;
 }
-
 
 /* =========================================================
    FINAL RESULT
@@ -1148,51 +823,133 @@ function updateScore(){
 
 function showResult(){
 
-    const resultMessage =
-        document.getElementById("resultMessage");
+    const resultMessage = document.getElementById("resultMessage");
 
     if(attempted === 0){
-
         resultMessage.textContent =
-            "Please attempt the questions first.";
-
+            "Please attempt the questions first. / कृपया पहले प्रश्नों के उत्तर दें।";
         return;
-
     }
 
-    const percentage =
-        (score / 50) * 100;
+    const percentage = (score / totalQuestions) * 100;
+    const unanswered = totalQuestions - attempted;
+
+    let performanceMessage = "";
 
     if(percentage >= 80){
-
-        resultMessage.textContent =
+        performanceMessage =
             "Excellent! Your Series preparation is very strong. 🎯";
-
-    }
-
-    else if(percentage >= 60){
-
-        resultMessage.textContent =
+    }else if(percentage >= 60){
+        performanceMessage =
             "Good performance! Keep practising Series questions. 👍";
-
-    }
-
-    else if(percentage >= 40){
-
-        resultMessage.textContent =
+    }else if(percentage >= 40){
+        performanceMessage =
             "Keep practising. Focus on identifying the exact pattern. 📚";
-
-    }
-
-    else{
-
-        resultMessage.textContent =
+    }else{
+        performanceMessage =
             "More practice is needed. Revise basic Series patterns and try again. 💪";
-
     }
 
+    resultMessage.textContent =
+        "Score: " + score + " / " + totalQuestions +
+        " | Accuracy: " + percentage.toFixed(1) + "%" +
+        " | Attempted: " + attempted +
+        " | Not attempted: " + unanswered +
+        " — " + performanceMessage;
 }
 
+document.getElementById("resultButton").addEventListener("click",showResult);
+
+/* =========================================================
+   ANALOGY-STYLE MORE DROPDOWN
+========================================================= */
+
+const moreMenu = document.getElementById("moreMenu");
+const moreButton = document.getElementById("moreButton");
+const moreDropdown = document.getElementById("moreDropdown");
+const siteNavigation = document.getElementById("siteNavigation");
+
+document.body.appendChild(moreDropdown);
+
+function positionMoreDropdown(){
+
+    const buttonRect = moreButton.getBoundingClientRect();
+
+    moreDropdown.style.left = "8px";
+    moreDropdown.style.top = "0px";
+    moreDropdown.style.visibility = "hidden";
+    moreDropdown.classList.add("show");
+
+    const dropdownRect = moreDropdown.getBoundingClientRect();
+    const dropdownWidth = dropdownRect.width;
+    const dropdownHeight = dropdownRect.height;
+
+    let left = buttonRect.left;
+    let top = buttonRect.bottom;
+
+    if(left + dropdownWidth > window.innerWidth - 8){
+        left = window.innerWidth - dropdownWidth - 8;
+    }
+
+    if(left < 8){
+        left = 8;
+    }
+
+    if(top + dropdownHeight > window.innerHeight - 8){
+        top = buttonRect.top - dropdownHeight;
+    }
+
+    if(top < 8){
+        top = 8;
+    }
+
+    moreDropdown.style.left = left + "px";
+    moreDropdown.style.top = top + "px";
+    moreDropdown.style.visibility = "visible";
+}
+
+function openMoreMenu(){
+    positionMoreDropdown();
+    moreButton.setAttribute("aria-expanded","true");
+}
+
+function closeMoreMenu(){
+    moreDropdown.classList.remove("show");
+    moreDropdown.style.visibility = "";
+    moreButton.setAttribute("aria-expanded","false");
+}
+
+moreButton.addEventListener("click",function(event){
+    event.stopPropagation();
+
+    if(moreDropdown.classList.contains("show")){
+        closeMoreMenu();
+    }else{
+        openMoreMenu();
+    }
+});
+
+document.addEventListener("click",function(event){
+    if(!moreMenu.contains(event.target) &&
+       !moreDropdown.contains(event.target)){
+        closeMoreMenu();
+    }
+});
+
+moreDropdown.addEventListener("click",function(event){
+    event.stopPropagation();
+});
+
+document.addEventListener("keydown",function(event){
+    if(event.key === "Escape"){
+        closeMoreMenu();
+        moreButton.focus();
+    }
+});
+
+siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("resize",closeMoreMenu);
 
 /* =========================================================
    START
