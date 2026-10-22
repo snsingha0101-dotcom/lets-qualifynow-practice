@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +36,7 @@ body{
     background:#102a43;
     padding:6px 10px;
     min-width:0;
+    overflow:visible;
 }
 
 .logo{
@@ -48,7 +48,7 @@ body{
     text-decoration:none;
     font-size:15px;
     font-weight:bold;
-    padding:8px 10px;
+    padding:8px 6px 8px 10px;
     line-height:1.4;
 }
 
@@ -60,16 +60,19 @@ body{
     min-width:0;
     gap:2px;
     overflow-x:auto;
-    overflow-y:visible;
+    overflow-y:hidden;
     white-space:nowrap;
     scrollbar-width:none;
     -ms-overflow-style:none;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
 }
 
 .nav-links::-webkit-scrollbar{
-    display:none;
-    width:0;
-    height:0;
+    display:none !important;
+    width:0 !important;
+    height:0 !important;
+    background:transparent;
 }
 
 .nav-links>a{
@@ -91,12 +94,14 @@ body{
     outline:none;
 }
 
-/* MORE MENU */
+/* MORE MENU - REMAINS VISIBLE AT THE RIGHT SIDE */
 
 .dropdown{
     position:relative;
     display:block;
     flex:0 0 auto;
+    align-self:center;
+    margin-left:2px;
 }
 
 .dropdown summary{
@@ -124,7 +129,8 @@ body{
 .dropdown-menu{
     position:fixed;
     top:0;
-    right:10px;
+    left:0;
+    right:auto;
     display:none;
     flex-direction:column;
     gap:3px;
@@ -134,7 +140,7 @@ body{
     border:1px solid #627d98;
     border-radius:8px;
     box-shadow:0 8px 18px rgba(0,0,0,.2);
-    z-index:9999;
+    z-index:99999;
 }
 
 .dropdown[open] .dropdown-menu{
@@ -396,12 +402,12 @@ footer p{
 
 @media(max-width:700px){
     .navbar{
-        padding:5px 6px;
+        padding:5px 4px;
     }
 
     .logo{
         font-size:13px;
-        padding:8px 6px;
+        padding:8px 4px 8px 6px;
     }
 
     .nav-links{
@@ -413,13 +419,16 @@ footer p{
         padding:8px 7px;
     }
 
+    .dropdown{
+        margin-left:1px;
+    }
+
     .dropdown summary{
         font-size:11px;
-        padding:8px 7px;
+        padding:8px 6px;
     }
 
     .dropdown-menu{
-        right:6px;
         min-width:160px;
     }
 
@@ -502,9 +511,11 @@ footer p{
 <!-- NAVIGATION -->
 
 <nav class="navbar" aria-label="Main navigation">
-    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0" class="logo">LET'S QUALIFYNOW</a>
 
-    <div class="nav-links">
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="logo">LET'S QUALIFYNOW</a>
+
+    <div class="nav-links" aria-label="Main navigation links">
         <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
         <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
         <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
@@ -515,15 +526,16 @@ footer p{
         <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
         <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
         <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
-
-        <details class="dropdown" id="moreDropdown">
-            <summary aria-label="More navigation links">More ▼</summary>
-            <div class="dropdown-menu" id="moreDropdownMenu">
-                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
-                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
-            </div>
-        </details>
     </div>
+
+    <details class="dropdown" id="moreDropdown">
+        <summary aria-label="More navigation links">More ▼</summary>
+        <div class="dropdown-menu" id="moreDropdownMenu">
+            <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+            <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+        </div>
+    </details>
+
 </nav>
 
 <!-- HERO -->
@@ -1193,7 +1205,7 @@ footer p{
 </footer>
 
 <script>
-/* Keep the More menu visible outside the horizontally scrolling navigation. */
+/* Keep More menu visible outside the horizontally scrolling navigation. */
 (function(){
     const dropdown = document.getElementById("moreDropdown");
     const menu = document.getElementById("moreDropdownMenu");
@@ -1206,26 +1218,29 @@ footer p{
         menu.style.top = (rect.bottom + 4) + "px";
 
         const menuWidth = menu.offsetWidth || 170;
-        const left = Math.max(6, Math.min(rect.right - menuWidth, window.innerWidth - menuWidth - 6));
+        const left = Math.max(
+            6,
+            Math.min(rect.right - menuWidth, window.innerWidth - menuWidth - 6)
+        );
 
         menu.style.left = left + "px";
         menu.style.right = "auto";
     }
 
-    summary.addEventListener("click", function(){
+    summary.addEventListener("click",function(){
         requestAnimationFrame(positionMenu);
     });
 
-    window.addEventListener("resize", positionMenu);
-    window.addEventListener("scroll", positionMenu, true);
+    window.addEventListener("resize",positionMenu);
+    window.addEventListener("scroll",positionMenu,true);
 
-    document.addEventListener("click", function(event){
+    document.addEventListener("click",function(event){
         if(!dropdown.contains(event.target)){
             dropdown.open = false;
         }
     });
 
-    document.addEventListener("keydown", function(event){
+    document.addEventListener("keydown",function(event){
         if(event.key === "Escape"){
             dropdown.open = false;
         }
