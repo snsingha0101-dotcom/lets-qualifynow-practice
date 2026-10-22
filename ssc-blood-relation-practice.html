@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSC Blood Relation Practice | Let's QualifyNow</title>
+<meta name="description" content="Practice 50 bilingual SSC Blood Relation questions with answers, explanations and score calculation for SSC and other government exams.">
 
 <style>
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -16,133 +16,170 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f7f9fc;
     color:#243b53;
     line-height:1.6;
 }
 
-/* ================= HEADER ================= */
+/* ================= HEADER & NAVIGATION ================= */
 
-header{
+.site-header{
+    display:flex;
+    align-items:stretch;
     background:#102a43;
-    color:white;
-    padding:18px 20px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 12px rgba(16,42,67,0.18);
-}
-
-.navbar{
-    max-width:1150px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:.5px;
-    white-space:nowrap;
-}
-
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    justify-content:flex-end;
-    align-items:center;
-}
-
-nav a,
-.dropdown-label{
-    color:white;
-    text-decoration:none;
-    padding:8px 11px;
-    border-radius:6px;
-    font-size:14px;
-    transition:.25s;
-    display:block;
-}
-
-nav a:hover,
-.dropdown-label:hover{
-    background:#173f5f;
-}
-
-.dropdown{
+    color:#fff;
+    width:100%;
     position:relative;
+    z-index:100;
 }
 
-.dropdown-label{
+.site-brand{
+    display:flex;
+    align-items:center;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    text-decoration:none;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
+}
+
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+
+.site-navigation a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
     cursor:pointer;
+    white-space:nowrap;
 }
 
-.dropdown-menu{
+.site-navigation a:hover,
+.more-button:hover{
+    background:#173f5f;
+    color:#d9eaf7;
+}
+
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.more-arrow{
+    font-size:9px;
+}
+
+.more-dropdown{
     display:none;
-    position:absolute;
-    right:0;
-    top:100%;
-    min-width:150px;
-    background:#102a43;
-    border:1px solid #173f5f;
-    border-radius:7px;
-    padding:6px;
-    box-shadow:0 5px 15px rgba(16,42,67,.2);
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
+    width:170px;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:99999;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu{
+.more-dropdown.show{
     display:block;
 }
 
-.dropdown-menu a{
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
     white-space:nowrap;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.more-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-    background:linear-gradient(135deg,#102a43,#173f5f);
-    color:white;
+    background:#173f5f;
+    color:#fff;
     text-align:center;
-    padding:58px 20px;
+    padding:55px 20px;
 }
 
 .hero h1{
     font-size:36px;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .hero p{
     font-size:18px;
-    opacity:.95;
+    max-width:850px;
+    margin:6px auto;
 }
 
 /* ================= MAIN ================= */
 
 .container{
-    max-width:1050px;
+    width:86%;
+    max-width:1000px;
     margin:40px auto;
-    padding:0 18px;
 }
 
 .intro{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    border:1px solid #d9e2ec;
-    box-shadow:0 4px 14px rgba(16,42,67,.06);
-    margin-bottom:30px;
+    background:#fff;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
 }
 
 .intro h2{
     color:#102a43;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .intro p{
@@ -150,19 +187,24 @@ nav a:hover,
 }
 
 .instruction-list{
-    margin:14px 0;
-    padding:15px 18px;
+    margin-top:16px;
+    padding:18px;
     background:#f7f9fc;
     border:1px solid #d9e2ec;
     border-radius:8px;
 }
 
-.instruction-list p{
-    margin-bottom:8px;
+.instruction-list h3{
+    color:#102a43;
+    margin-bottom:10px;
 }
 
-.instruction-list p:last-child{
-    margin-bottom:0;
+.instruction-list ul{
+    padding-left:22px;
+}
+
+.instruction-list li{
+    margin:8px 0;
 }
 
 .section-title{
@@ -174,7 +216,7 @@ nav a:hover,
 
 .category-title{
     background:#173f5f;
-    color:white;
+    color:#fff;
     padding:13px 18px;
     border-radius:9px;
     margin:35px 0 18px;
@@ -184,7 +226,7 @@ nav a:hover,
 /* ================= QUESTION ================= */
 
 .question{
-    background:white;
+    background:#fff;
     border:1px solid #d9e2ec;
     border-radius:12px;
     padding:22px;
@@ -317,7 +359,7 @@ nav a:hover,
 /* ================= RESULT BOX ================= */
 
 .result-box{
-    background:white;
+    background:#fff;
     border:2px solid #173f5f;
     border-radius:12px;
     padding:28px 22px;
@@ -362,7 +404,7 @@ nav a:hover,
 
 .reset-btn{
     background:#102a43;
-    color:white;
+    color:#fff;
     border:none;
     padding:11px 24px;
     border-radius:7px;
@@ -396,22 +438,22 @@ nav a:hover,
 
 /* ================= BACK ================= */
 
-.back{
+.back-navigation{
     text-align:center;
-    margin:35px 0;
+    padding:30px 10px;
 }
 
-.back a{
+.back-navigation a{
     display:inline-block;
     background:#102a43;
-    color:white;
+    color:#fff;
     text-decoration:none;
     padding:11px 20px;
     border-radius:7px;
     transition:.25s;
 }
 
-.back a:hover{
+.back-navigation a:hover{
     background:#173f5f;
 }
 
@@ -419,7 +461,7 @@ nav a:hover,
 
 footer{
     background:#102a43;
-    color:white;
+    color:#fff;
     text-align:center;
     padding:25px 15px;
     margin-top:50px;
@@ -432,22 +474,74 @@ footer p{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:700px){
-
-    .navbar{
-        flex-direction:column;
+@media(max-width:900px){
+    .container{
+        width:92%;
     }
 
-    nav{
-        justify-content:center;
+    .site-brand{
+        font-size:14px;
+        padding:10px 9px;
+    }
+
+    .site-navigation{
+        padding:0 2px;
+    }
+
+    .site-navigation a,
+    .more-button{
+        font-size:10.5px;
+        padding:11px 6px;
+    }
+}
+
+@media(max-width:600px){
+    .site-header{
+        width:100%;
+        align-items:stretch;
+    }
+
+    .site-brand{
+        font-size:12px;
+        padding:9px 7px;
+        letter-spacing:0;
+    }
+
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .site-navigation a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
+    }
+
+    .hero{
+        padding:40px 16px;
     }
 
     .hero h1{
         font-size:28px;
     }
 
-    .hero{
-        padding:48px 16px;
+    .hero p{
+        font-size:16px;
     }
 
     .options{
@@ -455,95 +549,86 @@ footer p{
     }
 
     .question{
-        padding:17px;
+        padding:16px;
     }
 
     .result-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .dropdown-menu{
-        right:auto;
-        left:0;
+    .container{
+        width:92%;
+        margin:28px auto;
     }
 
-}
+    .intro{
+        padding:16px;
+    }
 
+    .instruction-list{
+        padding:14px;
+    }
+
+    .back-navigation{
+        padding:22px 10px;
+    }
+
+    .back-navigation a{
+        padding:10px 15px;
+        font-size:13px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ========================================================= -->
-<!-- HEADER -->
-<!-- ========================================================= -->
+<!-- ================= HEADER & NAVIGATION ================= -->
 
-<header>
-    <div class="navbar">
+<header class="site-header">
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0" class="site-brand">LET'S QUALIFYNOW</a>
 
-        <div class="logo">
-            LET'S QUALIFYNOW
-        </div>
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
-        <nav>
-            <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/index.html">Home</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
-
-            <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
-
-            <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
-
-            <div class="dropdown">
-                <a href="#" class="dropdown-label" aria-haspopup="true">More ▼</a>
-                <div class="dropdown-menu">
-                    <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
-                    <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
-                </div>
+        <div class="more-menu" id="moreMenu">
+            <button type="button" class="more-button" id="moreButton"
+                aria-expanded="false" aria-haspopup="true" aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
+            <div class="more-dropdown" id="moreDropdown">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
             </div>
-        </nav>
-
-    </div>
+        </div>
+    </nav>
 </header>
 
-
-<!-- ========================================================= -->
-<!-- HERO -->
-<!-- ========================================================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
-
     <h1>👨‍👩‍👧‍👦 SSC Blood Relation Practice</h1>
-
     <p>
         50 Exam-Oriented Questions with Answers &amp; Detailed Solutions
         <br>
         50 परीक्षा-उन्मुख प्रश्न उत्तर एवं विस्तृत समाधान सहित
     </p>
-
 </section>
-
 
 <div class="container">
 
-<!-- ========================================================= -->
-<!-- INTRO & INSTRUCTIONS -->
-<!-- ========================================================= -->
+<!-- ================= INTRO & INSTRUCTIONS ================= -->
 
 <div class="intro">
-
     <h2>📘 SSC Blood Relation Practice Set</h2>
 
     <p>
@@ -556,78 +641,49 @@ footer p{
         महत्वपूर्ण Blood Relation patterns को cover करता है।
     </p>
 
-    <p>
-        <strong>Level:</strong>
-        Basic → Moderate → Advanced → SSC Exam Level
-    </p>
+    <p><strong>Level:</strong> Basic → Moderate → Advanced → SSC Exam Level</p>
+    <p><strong>स्तर:</strong> Basic → Moderate → Advanced → SSC Exam Level</p>
 
-    <p>
-        <strong>स्तर:</strong>
-        Basic → Moderate → Advanced → SSC Exam Level
-    </p>
+    <!-- ================= INSTRUCTIONS ================= -->
 
     <div class="instruction-list">
-
-        <p><strong>Total Questions / कुल प्रश्न:</strong> 50</p>
-
-        <p><strong>Correct Answer / सही उत्तर:</strong> 1 correct answer counted</p>
-
-        <p><strong>Wrong Answer / गलत उत्तर:</strong> 0 correct answers counted</p>
-
-        <p><strong>Unattempted / बिना उत्तर:</strong> 0 correct answers counted</p>
-
-        <p>
-            <strong>Instructions:</strong>
-            Choose one option for each question. The correct answer and detailed
-            solution will appear after you attempt the question.
-        </p>
-
-        <p>
-            <strong>निर्देश:</strong>
-            प्रत्येक प्रश्न में एक विकल्प चुनें। प्रश्न का उत्तर देने के बाद
-            सही उत्तर और विस्तृत समाधान दिखाई देगा।
-        </p>
-
-        <p>
-            Each question can be attempted only once until you reset the practice.
-        </p>
-
-        <p>
-            Reset Practice करने तक प्रत्येक प्रश्न का उत्तर केवल एक बार चुना जा सकता है।
-        </p>
-
+        <h3>🎯 Instructions / निर्देश</h3>
+        <ul>
+            <li><strong>Total Questions / कुल प्रश्न:</strong> 50</li>
+            <li><strong>Correct Answer / सही उत्तर:</strong> 1 mark / 1 अंक</li>
+            <li><strong>Wrong Answer / गलत उत्तर:</strong> 0 marks / 0 अंक</li>
+            <li><strong>Unattempted / बिना उत्तर:</strong> 0 marks / 0 अंक</li>
+            <li>Choose one option for each question. The correct answer and detailed solution will appear after you attempt the question.</li>
+            <li>प्रत्येक प्रश्न में एक विकल्प चुनें। उत्तर चुनने के बाद सही उत्तर और विस्तृत समाधान दिखाई देगा।</li>
+            <li>Each question can be attempted only once until you reset the practice.</li>
+            <li>Reset Practice करने तक प्रत्येक प्रश्न का उत्तर केवल एक बार चुना जा सकता है।</li>
+            <li>The correct option will be highlighted in green. If your answer is wrong, your selected option will be highlighted in red.</li>
+            <li>सही विकल्प हरे रंग में दिखेगा। गलत उत्तर चुनने पर आपका चुना हुआ विकल्प लाल रंग में दिखेगा।</li>
+            <li>Your score, attempted questions, correct answers and wrong answers will update automatically.</li>
+            <li>आपका स्कोर, प्रयास किए गए प्रश्न, सही उत्तर और गलत उत्तर अपने-आप अपडेट होंगे।</li>
+            <li>Use Reset Practice to clear your selections and start again.</li>
+            <li>अपने उत्तर हटाकर दोबारा अभ्यास शुरू करने के लिए Reset Practice पर क्लिक करें।</li>
+        </ul>
     </div>
-
 </div>
 
+<!-- ================= PART A ================= -->
 
-<!-- ========================================================= -->
-<!-- PART A -->
-<!-- ========================================================= -->
-
-<div class="category-title">
-    Part A — Basic Blood Relation / मूल Blood Relation
-</div>
-
+<div class="category-title">Part A — Basic Blood Relation / मूल Blood Relation</div>
 
 <!-- Q1 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 1 / प्रश्न 1</div>
-
     <div class="q-text">
         What is the relation of the brother of A's father to A?
         <span class="q-hindi">A के पिता के भाई का A से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandfather / दादा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Uncle / चाचा</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Uncle / चाचा</strong></span>
@@ -636,28 +692,21 @@ footer p{
             <span class="solution-hindi">A के पिता का भाई, A का चाचा होता है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q2 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 2 / प्रश्न 2</div>
-
     <div class="q-text">
         B is the daughter of C and A is the son of B. What is C's relation to A?
         <span class="q-hindi">B, C की पुत्री है और A, B का पुत्र है। C का A से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandparent / दादा या नाना</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Grandparent / दादा या नाना</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Grandparent / दादा या नाना</strong></span>
@@ -666,28 +715,21 @@ footer p{
             <span class="solution-hindi">B, C की पुत्री है और A, B का पुत्र है। इसलिए C, A के दादा या नाना हैं।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q3 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 3 / प्रश्न 3</div>
-
     <div class="q-text">
         P is the mother of Q. Q is the sister of R. How is P related to R?
         <span class="q-hindi">P, Q की माता है। Q, R की बहन है। P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Aunt / चाची</div>
         <div class="option">(C) Sister / बहन</div>
         <div class="option">(D) Grandmother / दादी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Mother / माता</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Mother / माता</strong></span>
@@ -696,28 +738,21 @@ footer p{
             <span class="solution-hindi">P, Q की माता है और Q, R की बहन है। इसलिए P, R की भी माता है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q4 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 4 / प्रश्न 4</div>
-
     <div class="q-text">
         M is the brother of N. N is the daughter of O. How is O related to M?
         <span class="q-hindi">M, N का भाई है। N, O की पुत्री है। O का M से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Uncle / चाचा</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Parent / माता या पिता</div>
         <div class="option">(D) Grandparent / दादा या नाना</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Parent / माता या पिता</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Parent / माता या पिता</strong></span>
@@ -726,28 +761,21 @@ footer p{
             <span class="solution-hindi">N, O की पुत्री है और M, N का भाई है। इसलिए O, M के माता या पिता हैं।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q5 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 5 / प्रश्न 5</div>
-
     <div class="q-text">
         A is the sister of B. B is the father of C. How is A related to C?
         <span class="q-hindi">A, B की बहन है। B, C का पिता है। A का C से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Aunt / बुआ</div>
         <div class="option">(C) Sister / बहन</div>
         <div class="option">(D) Grandmother / दादी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Aunt / बुआ</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Aunt / बुआ</strong></span>
@@ -756,28 +784,21 @@ footer p{
             <span class="solution-hindi">A, C के पिता B की बहन है। इसलिए A, C की बुआ है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q6 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 6 / प्रश्न 6</div>
-
     <div class="q-text">
         X is the daughter of Y. Y is the son of Z. How is Z related to X?
         <span class="q-hindi">X, Y की पुत्री है। Y, Z का पुत्र है। Z का X से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandparent / दादा या नाना</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Grandparent / दादा या नाना</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Grandparent / दादा या नाना</strong></span>
@@ -786,28 +807,21 @@ footer p{
             <span class="solution-hindi">Y, Z का पुत्र है और X, Y की पुत्री है। इसलिए Z, X के दादा या नाना हैं।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q7 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 7 / प्रश्न 7</div>
-
     <div class="q-text">
         R is the wife of S. T is the mother of S. How is T related to R?
         <span class="q-hindi">R, S की पत्नी है। T, S की माता है। T का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Sister / बहन</div>
         <div class="option">(B) Aunt / बुआ</div>
         <div class="option">(C) Mother-in-law / सास</div>
         <div class="option">(D) Daughter / पुत्री</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Mother-in-law / सास</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Mother-in-law / सास</strong></span>
@@ -816,28 +830,21 @@ footer p{
             <span class="solution-hindi">T, R के पति S की माता है। इसलिए T, R की सास है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q8 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 8 / प्रश्न 8</div>
-
     <div class="q-text">
         A is the father of B. C is the mother of A. How is C related to B?
         <span class="q-hindi">A, B का पिता है। C, A की माता है। C का B से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Aunt / बुआ</div>
         <div class="option">(C) Sister / बहन</div>
         <div class="option">(D) Grandmother / दादी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Grandmother / दादी</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Grandmother / दादी</strong></span>
@@ -846,28 +853,21 @@ footer p{
             <span class="solution-hindi">C, A की माता है और A, B का पिता है। इसलिए C, B की दादी है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q9 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 9 / प्रश्न 9</div>
-
     <div class="q-text">
         P is the brother of Q. Q is the mother of R. How is P related to R?
         <span class="q-hindi">P, Q का भाई है। Q, R की माता है। P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Maternal Uncle / मामा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandfather / नाना</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Maternal Uncle / मामा</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Maternal Uncle / मामा</strong></span>
@@ -876,28 +876,21 @@ footer p{
             <span class="solution-hindi">P, R की माता Q का भाई है। इसलिए P, R का मामा है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q10 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 10 / प्रश्न 10</div>
-
     <div class="q-text">
         K is the son of L. M is the sister of L. How is M related to K?
         <span class="q-hindi">K, L का पुत्र है। M, L की बहन है। M का K से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Sister / बहन</div>
         <div class="option">(C) Aunt / बुआ या मौसी</div>
         <div class="option">(D) Grandmother / दादी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Aunt / बुआ या मौसी</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Aunt / बुआ या मौसी</strong></span>
@@ -906,28 +899,21 @@ footer p{
             <span class="solution-hindi">M, K के माता/पिता L की बहन है। इसलिए M, K की aunt है। यदि L, K के पिता हैं तो M बुआ होगी और यदि L, K की माता हैं तो M मौसी होगी।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q11 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 11 / प्रश्न 11</div>
-
     <div class="q-text">
         A and B are brothers. C is the mother of A. D is the father of C. How is D related to B?
         <span class="q-hindi">A और B भाई हैं। C, A की माता है। D, C का पिता है। D का B से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Great-grandfather / परदादा</div>
         <div class="option">(D) Maternal Grandfather / नाना</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Maternal Grandfather / नाना</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Maternal Grandfather / नाना</strong></span>
@@ -936,28 +922,21 @@ footer p{
             <span class="solution-hindi">C, B की माता है और D, C के पिता हैं। इसलिए D, B के नाना हैं।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q12 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 12 / प्रश्न 12</div>
-
     <div class="q-text">
         A is the daughter of B. C is the son of A. D is the husband of A. How is D related to C?
         <span class="q-hindi">A, B की पुत्री है। C, A का पुत्र है। D, A का पति है। D का C से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandfather / नाना</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Father / पिता</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Father / पिता</strong></span>
@@ -966,28 +945,21 @@ footer p{
             <span class="solution-hindi">D, A का पति है और C, A का पुत्र है। इसलिए D, C का पिता है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q13 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 13 / प्रश्न 13</div>
-
     <div class="q-text">
         P is the son of Q. R is the daughter of Q. S is the husband of R. How is S related to P?
         <span class="q-hindi">P, Q का पुत्र है। R, Q की पुत्री है। S, R का पति है। S का P से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Brother-in-law / बहनोई</div>
         <div class="option">(D) Cousin / चचेरा भाई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Brother-in-law / बहनोई</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Brother-in-law / बहनोई</strong></span>
@@ -996,28 +968,21 @@ footer p{
             <span class="solution-hindi">R, P की बहन है और S, R का पति है। इसलिए S, P का बहनोई है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q14 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 14 / प्रश्न 14</div>
-
     <div class="q-text">
         A is the brother of B. B is the wife of C. How is A related to C?
         <span class="q-hindi">A, B का भाई है। B, C की पत्नी है। A का C से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father-in-law / ससुर</div>
         <div class="option">(B) Brother-in-law / साला</div>
         <div class="option">(C) Uncle / मामा</div>
         <div class="option">(D) Brother / भाई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Brother-in-law / साला</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Brother-in-law / साला</strong></span>
@@ -1026,28 +991,21 @@ footer p{
             <span class="solution-hindi">A, C की पत्नी B का भाई है। इसलिए A, C का साला है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q15 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 15 / प्रश्न 15</div>
-
     <div class="q-text">
         M is the mother of N. N is the father of O. P is the mother of M. How is P related to O?
         <span class="q-hindi">M, N की माता है। N, O का पिता है। P, M की माता है। P का O से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Grandmother / दादी</div>
         <div class="option">(B) Aunt / बुआ</div>
         <div class="option">(C) Mother / माता</div>
         <div class="option">(D) Great-grandmother / परदादी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Great-grandmother / परदादी</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Great-grandmother / परदादी</strong></span>
@@ -1056,28 +1014,21 @@ footer p{
             <span class="solution-hindi">P, M की माता है, M, N की माता है और N, O का पिता है। इसलिए P, O की परदादी है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q16 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 16 / प्रश्न 16</div>
-
     <div class="q-text">
         A is the father of B. C is the wife of A. D is the brother of C. How is D related to B?
         <span class="q-hindi">A, B का पिता है। C, A की पत्नी है। D, C का भाई है। D का B से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Paternal Uncle / चाचा</div>
         <div class="option">(B) Father / पिता</div>
         <div class="option">(C) Maternal Uncle / मामा</div>
         <div class="option">(D) Grandfather / दादा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Maternal Uncle / मामा</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Maternal Uncle / मामा</strong></span>
@@ -1086,28 +1037,21 @@ footer p{
             <span class="solution-hindi">C, B की माता है क्योंकि C, A की पत्नी है और A, B का पिता है। D, C का भाई है। इसलिए D, B का मामा है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q17 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 17 / प्रश्न 17</div>
-
     <div class="q-text">
         A is the son of B. C is the daughter of B. D is the husband of C. How is D related to A?
         <span class="q-hindi">A, B का पुत्र है। C, B की पुत्री है। D, C का पति है। D का A से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Cousin / चचेरा भाई</div>
         <div class="option">(D) Brother-in-law / बहनोई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Brother-in-law / बहनोई</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Brother-in-law / बहनोई</strong></span>
@@ -1116,28 +1060,21 @@ footer p{
             <span class="solution-hindi">C, A की बहन है और D, C का पति है। इसलिए D, A का बहनोई है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q18 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 18 / प्रश्न 18</div>
-
     <div class="q-text">
         X is the sister of Y. Y is the son of Z. W is the husband of X. How is W related to Z?
         <span class="q-hindi">X, Y की बहन है। Y, Z का पुत्र है। W, X का पति है। W का Z से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Son-in-law / दामाद</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Uncle / चाचा</div>
         <div class="option">(D) Father / पिता</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Son-in-law / दामाद</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Son-in-law / दामाद</strong></span>
@@ -1146,28 +1083,21 @@ footer p{
             <span class="solution-hindi">X, Z की पुत्री है और W, X का पति है। इसलिए W, Z का दामाद है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q19 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 19 / प्रश्न 19</div>
-
     <div class="q-text">
         P is the father of Q. R is the mother of P. S is the daughter of R. How is S related to Q?
         <span class="q-hindi">P, Q का पिता है। R, P की माता है। S, R की पुत्री है। S का Q से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Sister / बहन</div>
         <div class="option">(C) Aunt / बुआ</div>
         <div class="option">(D) Grandmother / दादी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Aunt / बुआ</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Aunt / बुआ</strong></span>
@@ -1176,28 +1106,21 @@ footer p{
             <span class="solution-hindi">S, Q की दादी R की पुत्री और Q के पिता P की बहन है। इसलिए S, Q की बुआ है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q20 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 20 / प्रश्न 20</div>
-
     <div class="q-text">
         A is the mother of B. C is the father of A. D is the daughter of C. How is D related to B?
         <span class="q-hindi">A, B की माता है। C, A का पिता है। D, C की पुत्री है। D का B से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Maternal Aunt / मौसी</div>
         <div class="option">(C) Sister / बहन</div>
         <div class="option">(D) Grandmother / नानी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Maternal Aunt / मौसी</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Maternal Aunt / मौसी</strong></span>
@@ -1206,37 +1129,25 @@ footer p{
             <span class="solution-hindi">D, B के नाना C की पुत्री और B की माता A की बहन है। इसलिए D, B की मौसी है।</span>
         </div>
     </div>
-
 </div>
 
+<!-- ================= PART B ================= -->
 
-<!-- ========================================================= -->
-<!-- PART B -->
-<!-- ========================================================= -->
-
-<div class="category-title">
-    Part B — Coded Blood Relation / Coded Relation
-</div>
-
+<div class="category-title">Part B — Coded Blood Relation / Coded Relation</div>
 
 <!-- Q21 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 21 / प्रश्न 21</div>
-
     <div class="q-text">
         If P + Q means P is the father of Q and Q − R means Q is the mother of R, then how is P related to R?
         <span class="q-hindi">यदि P + Q का अर्थ है P, Q का पिता है और Q − R का अर्थ है Q, R की माता है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Grandmother / दादी</div>
         <div class="option">(D) Grandfather / नाना</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Grandfather / नाना</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Grandfather / नाना</strong></span>
@@ -1245,28 +1156,21 @@ footer p{
             <span class="solution-hindi">P, Q का पिता है और Q, R की माता है। इसलिए P, R के नाना हैं।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q22 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 22 / प्रश्न 22</div>
-
     <div class="q-text">
         If P # Q means P is the father of Q and Q % R means Q is the mother of R, then how is P related to R?
         <span class="q-hindi">यदि P # Q का अर्थ है P, Q का पिता है और Q % R का अर्थ है Q, R की माता है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Grandfather / नाना</div>
         <div class="option">(D) Brother / भाई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Grandfather / नाना</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Grandfather / नाना</strong></span>
@@ -1275,28 +1179,21 @@ footer p{
             <span class="solution-hindi">P, Q का पिता है और Q, R की माता है। इसलिए P, R के नाना हैं।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q23 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 23 / प्रश्न 23</div>
-
     <div class="q-text">
         If P * Q means P is the daughter of Q and Q + R means Q is the brother of R, how is P related to R?
         <span class="q-hindi">यदि P * Q का अर्थ है P, Q की पुत्री है और Q + R का अर्थ है Q, R का भाई है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Sister / बहन</div>
         <div class="option">(B) Niece / भतीजी या भांजी</div>
         <div class="option">(C) Daughter / पुत्री</div>
         <div class="option">(D) Cousin / चचेरी बहन</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Niece / भतीजी या भांजी</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Niece / भतीजी या भांजी</strong></span>
@@ -1305,28 +1202,21 @@ footer p{
             <span class="solution-hindi">Q, R का भाई है और P, Q की पुत्री है। इसलिए P, R की भतीजी या भांजी है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q24 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 24 / प्रश्न 24</div>
-
     <div class="q-text">
         If P $ Q means P is the father of Q and Q @ R means Q is the sister of R, how is P related to R?
         <span class="q-hindi">यदि P $ Q का अर्थ है P, Q का पिता है और Q @ R का अर्थ है Q, R की बहन है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandfather / दादा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Father / पिता</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Father / पिता</strong></span>
@@ -1335,28 +1225,21 @@ footer p{
             <span class="solution-hindi">P, Q का पिता है और Q, R की बहन है। इसलिए P, R का भी पिता है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q25 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 25 / प्रश्न 25</div>
-
     <div class="q-text">
         If P − Q means P is the wife of Q and Q + R means Q is the son of R, how is P related to R?
         <span class="q-hindi">यदि P − Q का अर्थ है P, Q की पत्नी है और Q + R का अर्थ है Q, R का पुत्र है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Daughter / पुत्री</div>
         <div class="option">(B) Sister / बहन</div>
         <div class="option">(C) Daughter-in-law / बहू</div>
         <div class="option">(D) Mother / माता</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Daughter-in-law / बहू</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Daughter-in-law / बहू</strong></span>
@@ -1365,28 +1248,21 @@ footer p{
             <span class="solution-hindi">Q, R का पुत्र है और P, Q की पत्नी है। इसलिए P, R की बहू है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q26 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 26 / प्रश्न 26</div>
-
     <div class="q-text">
         If P × Q means P is the mother of Q and Q − R means Q is the sister of R, how is P related to R?
         <span class="q-hindi">यदि P × Q का अर्थ है P, Q की माता है और Q − R का अर्थ है Q, R की बहन है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Aunt / चाची</div>
         <div class="option">(C) Sister / बहन</div>
         <div class="option">(D) Grandmother / दादी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Mother / माता</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Mother / माता</strong></span>
@@ -1395,28 +1271,21 @@ footer p{
             <span class="solution-hindi">P, Q की माता है और Q, R की बहन है। इसलिए P, R की माता है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q27 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 27 / प्रश्न 27</div>
-
     <div class="q-text">
         If P &amp; Q means P is the brother of Q and Q % R means Q is the father of R, how is P related to R?
         <span class="q-hindi">यदि P &amp; Q का अर्थ है P, Q का भाई है और Q % R का अर्थ है Q, R का पिता है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Cousin / चचेरा भाई</div>
         <div class="option">(D) Uncle / चाचा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Uncle / चाचा</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Uncle / चाचा</strong></span>
@@ -1425,28 +1294,21 @@ footer p{
             <span class="solution-hindi">P, R के पिता Q का भाई है। इसलिए P, R का चाचा है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q28 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 28 / प्रश्न 28</div>
-
     <div class="q-text">
         If P / Q means P is the husband of Q and Q − R means Q is the mother of R, how is P related to R?
         <span class="q-hindi">यदि P / Q का अर्थ है P, Q का पति है और Q − R का अर्थ है Q, R की माता है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Uncle / मामा</div>
         <div class="option">(B) Father / पिता</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandfather / दादा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Father / पिता</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Father / पिता</strong></span>
@@ -1455,28 +1317,21 @@ footer p{
             <span class="solution-hindi">Q, R की माता है और P, Q का पति है। इसलिए P, R का पिता है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q29 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 29 / प्रश्न 29</div>
-
     <div class="q-text">
         If P @ Q means P is the son of Q and Q # R means Q is the sister of R, how is P related to R?
         <span class="q-hindi">यदि P @ Q का अर्थ है P, Q का पुत्र है और Q # R का अर्थ है Q, R की बहन है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Son / पुत्र</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Nephew / भांजा या भतीजा</div>
         <div class="option">(D) Cousin / चचेरा भाई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Nephew / भांजा या भतीजा</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Nephew / भांजा या भतीजा</strong></span>
@@ -1485,28 +1340,21 @@ footer p{
             <span class="solution-hindi">Q, R की बहन है और P, Q का पुत्र है। इसलिए P, R का भांजा या भतीजा है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q30 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 30 / प्रश्न 30</div>
-
     <div class="q-text">
         If P * Q means P is the mother of Q and Q + R means Q is the brother of R, how is P related to R?
         <span class="q-hindi">यदि P * Q का अर्थ है P, Q की माता है और Q + R का अर्थ है Q, R का भाई है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Aunt / चाची</div>
         <div class="option">(B) Sister / बहन</div>
         <div class="option">(C) Grandmother / दादी</div>
         <div class="option">(D) Mother / माता</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Mother / माता</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Mother / माता</strong></span>
@@ -1515,37 +1363,25 @@ footer p{
             <span class="solution-hindi">P, Q की माता है और Q, R का भाई है। इसलिए P, R की माता है।</span>
         </div>
     </div>
-
 </div>
 
+<!-- ================= PART C ================= -->
 
-<!-- ========================================================= -->
-<!-- PART C -->
-<!-- ========================================================= -->
-
-<div class="category-title">
-    Part C — Statement Based Blood Relation / कथन आधारित प्रश्न
-</div>
-
+<div class="category-title">Part C — Statement Based Blood Relation / कथन आधारित प्रश्न</div>
 
 <!-- Q31 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 31 / प्रश्न 31</div>
-
     <div class="q-text">
         If P @ Q means P is the father of Q and Q # R means Q is the sister of R, how is P related to R?
         <span class="q-hindi">यदि P @ Q का अर्थ है P, Q का पिता है और Q # R का अर्थ है Q, R की बहन है, तो P का R से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandfather / दादा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Father / पिता</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Father / पिता</strong></span>
@@ -1554,28 +1390,21 @@ footer p{
             <span class="solution-hindi">P, Q का पिता है और Q, R की बहन है। इसलिए P, R का पिता है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q32 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 32 / प्रश्न 32</div>
-
     <div class="q-text">
         Amit's mother has only one daughter. That daughter's daughter is related to Amit as what?
         <span class="q-hindi">अमित की माता की केवल एक पुत्री है। उस पुत्री की पुत्री का अमित से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Sister / बहन</div>
         <div class="option">(B) Daughter / पुत्री</div>
         <div class="option">(C) Niece / भांजी</div>
         <div class="option">(D) Cousin / चचेरी बहन</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Niece / भांजी</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Niece / भांजी</strong></span>
@@ -1584,28 +1413,21 @@ footer p{
             <span class="solution-hindi">अमित की माता की इकलौती पुत्री अमित की बहन है। उसकी पुत्री अमित की भांजी है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q33 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 33 / प्रश्न 33</div>
-
     <div class="q-text">
         Seema's father has only one son. That son's son is related to Seema as what?
         <span class="q-hindi">सीमा के पिता का केवल एक पुत्र है। उस पुत्र का पुत्र सीमा से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Cousin / चचेरा भाई</div>
         <div class="option">(B) Nephew / भतीजा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Uncle / मामा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Nephew / भतीजा</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Nephew / भतीजा</strong></span>
@@ -1614,28 +1436,21 @@ footer p{
             <span class="solution-hindi">सीमा के पिता का इकलौता पुत्र सीमा का भाई है। उसके पुत्र का सीमा से संबंध भतीजे का है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q34 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 34 / प्रश्न 34</div>
-
     <div class="q-text">
         Rahul's mother has only one daughter. Her son is related to Rahul as what?
         <span class="q-hindi">राहुल की माता की केवल एक पुत्री है। उस पुत्री का पुत्र राहुल से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Cousin / चचेरा भाई</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Uncle / मामा</div>
         <div class="option">(D) Nephew / भांजा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Nephew / भांजा</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Nephew / भांजा</strong></span>
@@ -1644,28 +1459,21 @@ footer p{
             <span class="solution-hindi">राहुल की माता की इकलौती पुत्री राहुल की बहन है। उसका पुत्र राहुल का भांजा है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q35 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 35 / प्रश्न 35</div>
-
     <div class="q-text">
         Ravi's paternal grandfather has only one son. That son is related to Ravi as what?
         <span class="q-hindi">रवि के दादा का केवल एक पुत्र है। वह पुत्र रवि से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / चाचा</div>
         <div class="option">(C) Brother / भाई</div>
         <div class="option">(D) Grandfather / दादा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Father / पिता</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Father / पिता</strong></span>
@@ -1674,28 +1482,25 @@ footer p{
             <span class="solution-hindi">रवि के दादा, रवि के पिता के पिता हैं। उनके केवल एक पुत्र होने के कारण वह पुत्र रवि का पिता ही होगा।</span>
         </div>
     </div>
-
 </div>
 
+<!-- ================= PART D ================= -->
+
+<div class="category-title">Part D — Advanced Blood Relation / उन्नत Blood Relation</div>
 
 <!-- Q36 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 36 / प्रश्न 36</div>
-
     <div class="q-text">
         Mohan's paternal grandfather has only one son. The son's daughter is related to Mohan as what?
         <span class="q-hindi">मोहन के दादा का केवल एक पुत्र है। उस पुत्र की पुत्री मोहन से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Aunt / बुआ</div>
         <div class="option">(B) Sister / बहन</div>
         <div class="option">(C) Mother / माता</div>
         <div class="option">(D) Cousin / चचेरी बहन</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Sister / बहन</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Sister / बहन</strong></span>
@@ -1704,28 +1509,21 @@ footer p{
             <span class="solution-hindi">मोहन के दादा का केवल एक पुत्र है, जो मोहन का पिता है। उस पुत्र की पुत्री मोहन की बहन है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q37 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 37 / प्रश्न 37</div>
-
     <div class="q-text">
         A man's sister is the mother of Priya's only brother. How is the man related to Priya?
         <span class="q-hindi">एक व्यक्ति की बहन, प्रिया के इकलौते भाई की माता है। उस व्यक्ति का प्रिया से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Maternal Uncle / मामा</div>
         <div class="option">(D) Cousin / ममेरा भाई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Maternal Uncle / मामा</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Maternal Uncle / मामा</strong></span>
@@ -1734,28 +1532,21 @@ footer p{
             <span class="solution-hindi">प्रिया और उसके इकलौते भाई की माता एक ही है। वह माता उस व्यक्ति की बहन है। इसलिए वह व्यक्ति प्रिया का मामा है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q38 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 38 / प्रश्न 38</div>
-
     <div class="q-text">
         A woman's mother is the sister of Ramesh's father. How is the woman related to Ramesh?
         <span class="q-hindi">एक महिला की माता, रमेश के पिता की बहन है। वह महिला रमेश से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Cousin / फुफेरी बहन</div>
         <div class="option">(B) Sister / बहन</div>
         <div class="option">(C) Aunt / बुआ</div>
         <div class="option">(D) Niece / भतीजी</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Cousin / फुफेरी बहन</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Cousin / फुफेरी बहन</strong></span>
@@ -1764,28 +1555,21 @@ footer p{
             <span class="solution-hindi">उस महिला की माता, रमेश के पिता की बहन है। इसलिए वह महिला रमेश की फुफेरी बहन है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q39 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 39 / प्रश्न 39</div>
-
     <div class="q-text">
         What is the relation of the grandson of a mother's only brother to her child?
         <span class="q-hindi">माता के इकलौते भाई के पोते का उसके बच्चे से क्या संबंध होगा?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Nephew / भांजा</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Uncle / मामा</div>
         <div class="option">(D) Cousin's Son / ममेरे भाई या बहन का पुत्र</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Cousin's Son / ममेरे भाई या बहन का पुत्र</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Cousin's Son / ममेरे भाई या बहन का पुत्र</strong></span>
@@ -1794,28 +1578,21 @@ footer p{
             <span class="solution-hindi">माता का इकलौता भाई बच्चे का मामा है। उसके पुत्र या पुत्री बच्चे के ममेरे भाई/बहन होंगे। इसलिए मामा का पोता, बच्चे के ममेरे भाई/बहन का पुत्र होगा।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q40 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 40 / प्रश्न 40</div>
-
     <div class="q-text">
         A person's father's only son is Suresh. Suresh's wife has a daughter. How is the daughter related to the person?
         <span class="q-hindi">किसी व्यक्ति के पिता का इकलौता पुत्र सुरेश है। सुरेश की पत्नी की एक पुत्री है। वह पुत्री उस व्यक्ति से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Cousin / चचेरी बहन</div>
         <div class="option">(B) Niece / भतीजी</div>
         <div class="option">(C) Daughter / पुत्री</div>
         <div class="option">(D) Sister / बहन</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Daughter / पुत्री</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Daughter / पुत्री</strong></span>
@@ -1824,28 +1601,21 @@ footer p{
             <span class="solution-hindi">यदि व्यक्ति के पिता का इकलौता पुत्र सुरेश है, तो सुरेश वही व्यक्ति है। इसलिए सुरेश की पुत्री उस व्यक्ति की पुत्री है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q41 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 41 / प्रश्न 41</div>
-
     <div class="q-text">
         Neha's father's only son is her brother. His wife has a brother. How is that brother related to Neha?
         <span class="q-hindi">नेहा के पिता का इकलौता पुत्र उसका भाई है। उसकी पत्नी का एक भाई है। वह भाई नेहा से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Maternal Uncle / मामा</div>
         <div class="option">(B) Brother of Sister-in-law / भाभी का भाई</div>
         <div class="option">(C) Cousin / चचेरा भाई</div>
         <div class="option">(D) Uncle / चाचा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Brother of Sister-in-law / भाभी का भाई</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Brother of Sister-in-law / भाभी का भाई</strong></span>
@@ -1854,28 +1624,21 @@ footer p{
             <span class="solution-hindi">नेहा के पिता का इकलौता पुत्र उसका भाई है। उसके भाई की पत्नी नेहा की भाभी है और भाभी का भाई, नेहा का विवाह-संबंधी रिश्तेदार है। उसका सटीक संबंध भाभी के भाई का है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q42 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 42 / प्रश्न 42</div>
-
     <div class="q-text">
         Karan's mother's daughter has only one son. How is the mother of that son related to Karan?
         <span class="q-hindi">करण की माता की पुत्री का केवल एक पुत्र है। उस पुत्र की माता का करण से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Sister / बहन</div>
         <div class="option">(B) Mother / माता</div>
         <div class="option">(C) Aunt / बुआ</div>
         <div class="option">(D) Cousin / चचेरी बहन</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Sister / बहन</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Sister / बहन</strong></span>
@@ -1884,28 +1647,21 @@ footer p{
             <span class="solution-hindi">करण की माता की पुत्री करण की बहन है। इसलिए उसके पुत्र की माता करण की बहन है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q43 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 43 / प्रश्न 43</div>
-
     <div class="q-text">
         A person's grandfather has only one daughter. That daughter's daughter is related to the person as what?
         <span class="q-hindi">किसी व्यक्ति के दादा की केवल एक पुत्री है। उस पुत्री की पुत्री का उस व्यक्ति से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Sister / बहन</div>
         <div class="option">(B) Niece / भतीजी</div>
         <div class="option">(C) Cousin / फुफेरी बहन</div>
         <div class="option">(D) Aunt / बुआ</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Cousin / फुफेरी बहन</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Cousin / फुफेरी बहन</strong></span>
@@ -1914,28 +1670,21 @@ footer p{
             <span class="solution-hindi">दादा की इकलौती पुत्री व्यक्ति की बुआ है। उसकी पुत्री व्यक्ति की फुफेरी बहन होगी।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q44 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 44 / प्रश्न 44</div>
-
     <div class="q-text">
         A person's mother's only brother's wife has a son. How is that son related to the person?
         <span class="q-hindi">किसी व्यक्ति की माता के इकलौते भाई की पत्नी का एक पुत्र है। वह पुत्र उस व्यक्ति से किस संबंध में है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Brother / भाई</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Nephew / भांजा</div>
         <div class="option">(D) Cousin / ममेरा भाई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Cousin / ममेरा भाई</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Cousin / ममेरा भाई</strong></span>
@@ -1944,28 +1693,21 @@ footer p{
             <span class="solution-hindi">माता का इकलौता भाई व्यक्ति का मामा है। मामा का पुत्र व्यक्ति का ममेरा भाई है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q45 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 45 / प्रश्न 45</div>
-
     <div class="q-text">
         Arjun's mother's only son is Arjun. Arjun's wife's mother is related to Arjun as what?
         <span class="q-hindi">अर्जुन की माता का इकलौता पुत्र अर्जुन है। अर्जुन की पत्नी की माता का अर्जुन से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Mother / माता</div>
         <div class="option">(B) Mother-in-law / सास</div>
         <div class="option">(C) Aunt / मौसी</div>
         <div class="option">(D) Sister / बहन</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Mother-in-law / सास</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Mother-in-law / सास</strong></span>
@@ -1974,37 +1716,21 @@ footer p{
             <span class="solution-hindi">अर्जुन की पत्नी की माता, अर्जुन की पत्नी की माँ है। इसलिए वह अर्जुन की सास है।</span>
         </div>
     </div>
-
 </div>
-
-
-<!-- ========================================================= -->
-<!-- PART D -->
-<!-- ========================================================= -->
-
-<div class="category-title">
-    Part D — Advanced Blood Relation / उन्नत Blood Relation
-</div>
-
 
 <!-- Q46 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 46 / प्रश्न 46</div>
-
     <div class="q-text">
         A is the mother of B. C is the brother of A. D is the daughter of C. E is the son of D. How is E related to B?
         <span class="q-hindi">A, B की माता है। C, A का भाई है। D, C की पुत्री है। E, D का पुत्र है। E का B से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Brother / भाई</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Maternal Cousin's Son / ममेरी बहन का पुत्र</div>
         <div class="option">(D) Nephew / भतीजा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Maternal Cousin's Son / ममेरी बहन का पुत्र</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Maternal Cousin's Son / ममेरी बहन का पुत्र</strong></span>
@@ -2013,28 +1739,21 @@ footer p{
             <span class="solution-hindi">C, B का मामा है। D, C की पुत्री है, इसलिए D, B की ममेरी बहन है। E, D का पुत्र है। अतः E, B की ममेरी बहन का पुत्र है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q47 -->
-
 <div class="question" data-answer="B">
-
     <div class="q-number">Question 47 / प्रश्न 47</div>
-
     <div class="q-text">
         P is the father of Q. R is the sister of P. S is the son of R. T is the daughter of S. How is T related to Q?
         <span class="q-hindi">P, Q का पिता है। R, P की बहन है। S, R का पुत्र है। T, S की पुत्री है। T का Q से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Sister / बहन</div>
         <div class="option">(B) Cousin's Daughter / चचेरे भाई की पुत्री</div>
         <div class="option">(C) Niece / भतीजी</div>
         <div class="option">(D) Aunt / बुआ</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (B) Cousin's Daughter / चचेरे भाई की पुत्री</strong>
         <span class="answer-hindi"><strong>उत्तर: (B) Cousin's Daughter / चचेरे भाई की पुत्री</strong></span>
@@ -2043,28 +1762,21 @@ footer p{
             <span class="solution-hindi">R, P की बहन है। इसलिए S, Q का चचेरा भाई है। T, S की पुत्री है। अतः T, Q के चचेरे भाई की पुत्री है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q48 -->
-
 <div class="question" data-answer="D">
-
     <div class="q-number">Question 48 / प्रश्न 48</div>
-
     <div class="q-text">
         A is the son of B. C is the daughter of B. D is the son of C. E is the sister of D. F is the father of D and E. How is F related to A?
         <span class="q-hindi">A, B का पुत्र है। C, B की पुत्री है। D, C का पुत्र है। E, D की बहन है। F, D और E का पिता है। F का A से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Father / पिता</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Grandfather / दादा</div>
         <div class="option">(D) Brother-in-law / बहनोई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (D) Brother-in-law / बहनोई</strong>
         <span class="answer-hindi"><strong>उत्तर: (D) Brother-in-law / बहनोई</strong></span>
@@ -2073,28 +1785,21 @@ footer p{
             <span class="solution-hindi">C, A की बहन है। D और E, C के बच्चे हैं तथा F, उनका पिता है। इसलिए F, C का पति है। अतः F, A का बहनोई है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q49 -->
-
 <div class="question" data-answer="A">
-
     <div class="q-number">Question 49 / प्रश्न 49</div>
-
     <div class="q-text">
         M is the brother of N. N is the daughter of O. P is the wife of M. Q is the daughter of P. R is the son of Q. How is R related to N?
         <span class="q-hindi">M, N का भाई है। N, O की पुत्री है। P, M की पत्नी है। Q, P की पुत्री है। R, Q का पुत्र है। R का N से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Grand-nephew / भतीजी की संतान</div>
         <div class="option">(B) Brother / भाई</div>
         <div class="option">(C) Uncle / चाचा</div>
         <div class="option">(D) Cousin / चचेरा भाई</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (A) Grand-nephew / भतीजी की संतान</strong>
         <span class="answer-hindi"><strong>उत्तर: (A) Grand-nephew / भतीजी की संतान</strong></span>
@@ -2103,28 +1808,21 @@ footer p{
             <span class="solution-hindi">M, N का भाई है। Q, M की पुत्री है, इसलिए Q, N की भतीजी है। R, Q का पुत्र है। अतः R, N की भतीजी की संतान अर्थात grand-nephew है।</span>
         </div>
     </div>
-
 </div>
 
-
 <!-- Q50 -->
-
 <div class="question" data-answer="C">
-
     <div class="q-number">Question 50 / प्रश्न 50</div>
-
     <div class="q-text">
         A is the father of B. C is the mother of A. D is the brother of C. E is the daughter of D. F is the son of E. How is F related to B?
         <span class="q-hindi">A, B का पिता है। C, A की माता है। D, C का भाई है। E, D की पुत्री है। F, E का पुत्र है। F का B से क्या संबंध है?</span>
     </div>
-
     <div class="options">
         <div class="option">(A) Brother / भाई</div>
         <div class="option">(B) Uncle / मामा</div>
         <div class="option">(C) Second Cousin / द्वितीय कजिन</div>
         <div class="option">(D) Nephew / भतीजा</div>
     </div>
-
     <div class="answer">
         <strong>Answer: (C) Second Cousin / द्वितीय कजिन</strong>
         <span class="answer-hindi"><strong>उत्तर: (C) Second Cousin / द्वितीय कजिन</strong></span>
@@ -2133,119 +1831,165 @@ footer p{
             <span class="solution-hindi">D, A के मामा हैं और E, D की पुत्री है, इसलिए E, A की ममेरी बहन है। B, A का पुत्र है और F, E का पुत्र है। A और E first cousins हैं, इसलिए उनके बच्चे B और F second cousins हैं। अतः F, B का second cousin है।</span>
         </div>
     </div>
-
 </div>
 
-
-<!-- ========================================================= -->
-<!-- RESULT -->
-<!-- ========================================================= -->
+<!-- ================= RESULT ================= -->
 
 <div class="result-box">
-
     <h2>📊 Your Practice Result / आपका Practice Result</h2>
 
     <div class="result-grid">
-
         <div class="result-item">
             <span class="number" id="score">0 / 50</span>
             <span class="label">Score / स्कोर</span>
         </div>
-
         <div class="result-item">
             <span class="number" id="attempted">0</span>
             <span class="label">Attempted / प्रयास</span>
         </div>
-
         <div class="result-item">
             <span class="number" id="correct">0</span>
             <span class="label">Correct / सही</span>
         </div>
-
         <div class="result-item">
             <span class="number" id="wrong">0</span>
             <span class="label">Wrong / गलत</span>
         </div>
-
     </div>
 
-    <button class="reset-btn" id="resetBtn">
+    <button class="reset-btn" id="resetBtn" type="button">
         Reset Practice / दोबारा शुरू करें
     </button>
-
 </div>
 
-
-<!-- ========================================================= -->
-<!-- TIP -->
-<!-- ========================================================= -->
+<!-- ================= TIP ================= -->
 
 <div class="tip">
-
     <h3>💡 Practice Tip / अभ्यास सुझाव</h3>
-
     <p>
         First identify the direct relationship and then move step-by-step through
         the family tree. Avoid solving the complete relation mentally at once.
     </p>
-
     <p>
         सबसे पहले direct relationship पहचानें और फिर family tree में step-by-step आगे बढ़ें।
         पूरे relation को एक साथ mentally solve करने के बजाय प्रत्येक step को अलग-अलग देखें।
     </p>
-
 </div>
 
+<!-- ================= BACK LINK ================= -->
 
-<!-- ========================================================= -->
-<!-- BACK LINK -->
-<!-- ========================================================= -->
-
-<div class="back">
-
-    <a href="ssc-topic-wise-practice.html">
-        ← Back to SSC Topic-wise Practice
-    </a>
-
+<div class="back-navigation">
+    <a href="ssc-topic-wise-practice.html">← Back to SSC Topic-wise Practice</a>
 </div>
 
 </div>
 
-
-<!-- ========================================================= -->
-<!-- FOOTER -->
-<!-- ========================================================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
-
     <p><strong>LET'S QUALIFYNOW</strong></p>
-
-    <p>
-        Reasoning Preparation for SSC • Banking • Railway • Defence • State Government Exams
-    </p>
-
-    <p>
-        © 2026 Let's QualifyNow. All Rights Reserved.
-    </p>
-
+    <p>Reasoning Preparation for SSC • Banking • Railway • Defence • State Government Exams</p>
+    <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
 </footer>
 
-
-<!-- ========================================================= -->
-<!-- JAVASCRIPT -->
-<!-- ========================================================= -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
-
 let attemptedCount = 0;
 let correctCount = 0;
 let wrongCount = 0;
 
+/* ================= MORE DROPDOWN ================= */
+
+const moreMenu = document.getElementById("moreMenu");
+const moreButton = document.getElementById("moreButton");
+const moreDropdown = document.getElementById("moreDropdown");
+const siteNavigation = document.getElementById("siteNavigation");
+
+/* Keep the dropdown outside the horizontally scrolling navigation. */
+document.body.appendChild(moreDropdown);
+
+function positionMoreDropdown(){
+    const buttonRect = moreButton.getBoundingClientRect();
+
+    moreDropdown.style.left = "8px";
+    moreDropdown.style.top = "0px";
+    moreDropdown.style.visibility = "hidden";
+    moreDropdown.classList.add("show");
+
+    const dropdownRect = moreDropdown.getBoundingClientRect();
+    const dropdownWidth = dropdownRect.width;
+    const dropdownHeight = dropdownRect.height;
+
+    let left = buttonRect.left;
+    let top = buttonRect.bottom;
+
+    if(left + dropdownWidth > window.innerWidth - 8){
+        left = window.innerWidth - dropdownWidth - 8;
+    }
+
+    if(left < 8){
+        left = 8;
+    }
+
+    if(top + dropdownHeight > window.innerHeight - 8){
+        top = buttonRect.top - dropdownHeight;
+    }
+
+    if(top < 8){
+        top = 8;
+    }
+
+    moreDropdown.style.left = left + "px";
+    moreDropdown.style.top = top + "px";
+    moreDropdown.style.visibility = "visible";
+}
+
+function openMoreMenu(){
+    positionMoreDropdown();
+    moreButton.setAttribute("aria-expanded","true");
+}
+
+function closeMoreMenu(){
+    moreDropdown.classList.remove("show");
+    moreDropdown.style.visibility = "";
+    moreButton.setAttribute("aria-expanded","false");
+}
+
+moreButton.addEventListener("click",function(event){
+    event.stopPropagation();
+
+    if(moreDropdown.classList.contains("show")){
+        closeMoreMenu();
+    }else{
+        openMoreMenu();
+    }
+});
+
+document.addEventListener("click",function(event){
+    if(!moreMenu.contains(event.target) && !moreDropdown.contains(event.target)){
+        closeMoreMenu();
+    }
+});
+
+moreDropdown.addEventListener("click",function(event){
+    event.stopPropagation();
+});
+
+document.addEventListener("keydown",function(event){
+    if(event.key === "Escape"){
+        closeMoreMenu();
+        moreButton.focus();
+    }
+});
+
+siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("resize",closeMoreMenu);
 
 /* ================= UPDATE RESULT ================= */
 
 function updateResult(){
-
     document.getElementById("score").textContent =
         correctCount + " / 50";
 
@@ -2257,102 +2001,64 @@ function updateResult(){
 
     document.getElementById("wrong").textContent =
         wrongCount;
-
 }
-
 
 /* ================= CHECK ANSWER ================= */
 
 function checkAnswer(option){
-
     const question = option.closest(".question");
 
     if(question.dataset.answered === "true"){
         return;
     }
 
-    const correctAnswer =
-        question.dataset.answer.toUpperCase();
-
-    const optionText =
-        option.textContent.trim();
-
-    const match =
-        optionText.match(/^\(([A-D])\)/i);
+    const correctAnswer = question.dataset.answer.toUpperCase();
+    const optionText = option.textContent.trim();
+    const match = optionText.match(/^\(([A-D])\)/i);
 
     if(!match){
         return;
     }
 
-    const selectedAnswer =
-        match[1].toUpperCase();
+    const selectedAnswer = match[1].toUpperCase();
 
     question.dataset.answered = "true";
-
     attemptedCount++;
 
-    const options =
-        question.querySelectorAll(".option");
+    const options = question.querySelectorAll(".option");
 
     option.classList.add("selected");
 
     options.forEach(function(item){
-
         item.style.pointerEvents = "none";
 
-        const itemMatch =
-            item.textContent.trim().match(/^\(([A-D])\)/i);
+        const itemMatch = item.textContent.trim().match(/^\(([A-D])\)/i);
 
         if(itemMatch){
-
-            const itemAnswer =
-                itemMatch[1].toUpperCase();
+            const itemAnswer = itemMatch[1].toUpperCase();
 
             if(itemAnswer === correctAnswer){
                 item.classList.add("correct");
             }
-
         }
-
     });
 
-    const answerBox =
-        question.querySelector(".answer");
-
-    const solution =
-        question.querySelector(".solution");
+    const answerBox = question.querySelector(".answer");
 
     if(selectedAnswer === correctAnswer){
-
         correctCount++;
 
-        const message =
-            document.createElement("div");
+        const message = document.createElement("div");
+        message.className = "result-message correct-message";
+        message.innerHTML = "✅ Correct Answer!<br>✅ सही उत्तर!";
 
-        message.className =
-            "result-message correct-message";
-
-        message.innerHTML =
-            "✅ Correct Answer!<br>✅ सही उत्तर!";
-
-        question.insertBefore(
-            message,
-            answerBox
-        );
-
-    }
-    else{
-
+        question.insertBefore(message,answerBox);
+    }else{
         wrongCount++;
-
         option.classList.add("wrong");
 
-        const message =
-            document.createElement("div");
-
-        message.className =
-            "result-message wrong-message";
-
+        const message = document.createElement("div");
+        message.className = "result-message wrong-message";
         message.innerHTML =
             "❌ Incorrect. Correct Answer: (" +
             correctAnswer +
@@ -2360,68 +2066,47 @@ function checkAnswer(option){
             correctAnswer +
             ")";
 
-        question.insertBefore(
-            message,
-            answerBox
-        );
-
+        question.insertBefore(message,answerBox);
     }
 
     answerBox.style.display = "block";
+
+    const solution = question.querySelector(".solution");
     solution.style.display = "block";
 
     updateResult();
-
 }
-
 
 /* ================= RESET PRACTICE ================= */
 
 function resetPractice(){
-
     attemptedCount = 0;
     correctCount = 0;
     wrongCount = 0;
 
-    const questions =
-        document.querySelectorAll(".question");
+    const questions = document.querySelectorAll(".question");
 
     questions.forEach(function(question){
-
         question.dataset.answered = "false";
 
-        const options =
-            question.querySelectorAll(".option");
+        const options = question.querySelectorAll(".option");
 
         options.forEach(function(option){
-
-            option.classList.remove(
-                "selected",
-                "correct",
-                "wrong"
-            );
-
+            option.classList.remove("selected","correct","wrong");
             option.style.pointerEvents = "auto";
-
         });
 
-        const answerBox =
-            question.querySelector(".answer");
-
+        const answerBox = question.querySelector(".answer");
         answerBox.style.display = "none";
 
-        const solution =
-            question.querySelector(".solution");
-
+        const solution = question.querySelector(".solution");
         solution.style.display = "none";
 
-        const resultMessages =
-            question.querySelectorAll(".result-message");
+        const resultMessages = question.querySelectorAll(".result-message");
 
         resultMessages.forEach(function(message){
             message.remove();
         });
-
     });
 
     updateResult();
@@ -2430,48 +2115,29 @@ function resetPractice(){
         top:0,
         behavior:"smooth"
     });
-
 }
-
 
 /* ================= EVENT LISTENERS ================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+document.addEventListener("DOMContentLoaded",function(){
+    const questions = document.querySelectorAll(".question");
 
-        const questions =
-            document.querySelectorAll(".question");
+    questions.forEach(function(question){
+        question.dataset.answered = "false";
+    });
 
-        questions.forEach(function(question){
-            question.dataset.answered = "false";
+    const options = document.querySelectorAll(".option");
+
+    options.forEach(function(option){
+        option.addEventListener("click",function(){
+            checkAnswer(this);
         });
+    });
 
-        const options =
-            document.querySelectorAll(".option");
+    document.getElementById("resetBtn").addEventListener("click",resetPractice);
 
-        options.forEach(function(option){
-
-            option.addEventListener(
-                "click",
-                function(){
-                    checkAnswer(this);
-                }
-            );
-
-        });
-
-        document.getElementById("resetBtn")
-            .addEventListener(
-                "click",
-                resetPractice
-            );
-
-        updateResult();
-
-    }
-);
-
+    updateResult();
+});
 </script>
 
 </body>
