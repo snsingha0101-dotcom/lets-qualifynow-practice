@@ -20,49 +20,120 @@ body{
     line-height:1.6;
 }
 
-header{
+.site-header{
+    display:flex;
+    align-items:stretch;
     background:#102a43;
-    color:white;
-    padding:18px 20px;
-    position:sticky;
-    top:0;
+    color:#fff;
+    width:100%;
+    position:relative;
     z-index:1000;
-    box-shadow:0 3px 12px rgba(16,42,67,0.18);
 }
 
-.navbar{
-    max-width:1150px;
-    margin:auto;
+.site-brand{
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    gap:20px;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:.5px;
-}
-
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    justify-content:flex-end;
-}
-
-nav a{
-    color:white;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
     text-decoration:none;
-    padding:8px 11px;
-    border-radius:6px;
-    font-size:14px;
-    transition:.25s;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
 }
 
-nav a:hover{
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+
+.site-navigation a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.site-navigation a:hover,
+.more-button:hover{
     background:#173f5f;
+    color:#d9eaf7;
+}
+
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.more-arrow{
+    font-size:9px;
+}
+
+.more-dropdown{
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
+    width:170px;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:99999;
+    display:none;
+}
+
+.more-dropdown.show{
+    display:block;
+}
+
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.more-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
 }
 
 .hero{
@@ -296,14 +367,62 @@ footer p{
     font-size:14px;
 }
 
-@media(max-width:700px){
-
-    .navbar{
-        flex-direction:column;
+@media(max-width:900px){
+    .container{
+        width:92%;
     }
 
-    nav{
-        justify-content:center;
+    .site-brand{
+        font-size:14px;
+        padding:10px 9px;
+    }
+
+    .site-navigation{
+        padding:0 2px;
+    }
+
+    .site-navigation a,
+    .more-button{
+        font-size:10.5px;
+        padding:11px 6px;
+    }
+}
+
+@media(max-width:700px){
+    .site-header{
+        width:100%;
+        align-items:stretch;
+    }
+
+    .site-brand{
+        font-size:12px;
+        padding:9px 7px;
+        letter-spacing:0;
+    }
+
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .site-navigation a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
     }
 
     .hero h1{
@@ -323,24 +442,60 @@ footer p{
 
 <body>
 
-<header>
-    <div class="navbar">
+<header class="site-header">
 
-        <div class="logo">
-            LET'S QUALIFYNOW
+    <a class="site-brand"
+       href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/index.html">
+        LET'S QUALIFYNOW
+    </a>
+
+    <nav class="site-navigation">
+
+        <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/index.html">Home</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
+
+        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
+
+        <div class="more-menu">
+
+            <button class="more-button"
+                    type="button"
+                    aria-expanded="false"
+                    aria-haspopup="true">
+                More <span class="more-arrow">▼</span>
+            </button>
+
+            <div class="more-dropdown">
+
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">
+                    Test Series
+                </a>
+
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">
+                    Exams
+                </a>
+
+            </div>
+
         </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="study-material.html">Study Material</a>
-            <a href="live-classes.html">Live Classes</a>
-            <a href="test-series.html">Test Series</a>
-            <a href="exams.html">Exams</a>
-            <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
-        </nav>
+    </nav>
 
-    </div>
 </header>
 
 <section class="hero">
@@ -384,15 +539,35 @@ footer p{
         </p>
 
         <p style="margin-top:12px;">
-            <strong>Instruction:</strong>
-            Select an option. The answer and detailed solution will appear
-            only after you attempt the question.
+            <strong>Instructions:</strong>
+        </p>
+
+        <p>
+            1. Read each question carefully and identify the coding rule.
+            <br>
+            2. Select the correct option from the four given options.
+            <br>
+            3. Select only one option for each question.
+            <br>
+            4. Once you select an option, your answer cannot be changed.
+            <br>
+            5. After attempting the question, your result, correct answer
+            and detailed solution will appear.
         </p>
 
         <p class="q-hindi">
             <strong>निर्देश:</strong>
-            एक option select करें। Question attempt करने के बाद ही
-            answer और detailed solution दिखाई देगा।
+            <br>
+            1. प्रत्येक प्रश्न को ध्यान से पढ़ें और Coding Rule पहचानें।
+            <br>
+            2. दिए गए चार options में से सही option चुनें।
+            <br>
+            3. प्रत्येक प्रश्न के लिए केवल एक option चुनें।
+            <br>
+            4. एक बार option चुनने के बाद आप अपना उत्तर बदल नहीं सकते।
+            <br>
+            5. प्रश्न attempt करने के बाद आपका result, सही उत्तर और
+            विस्तृत solution दिखाई देगा।
         </p>
 
     </div>
@@ -402,9 +577,7 @@ footer p{
     </h2>
 
 
-    <!-- ===================================================== -->
     <!-- CATEGORY 1 -->
-    <!-- ===================================================== -->
 
     <div class="category-title">
         🔤 A. Letter / Alphabet Coding
@@ -823,9 +996,7 @@ footer p{
     </div>
 
 
-    <!-- ===================================================== -->
     <!-- CATEGORY 2 -->
-    <!-- ===================================================== -->
 
     <div class="category-title">
         🔄 B. Reverse / Opposite Alphabet Coding
@@ -1026,9 +1197,7 @@ footer p{
     </div>
 
 
-    <!-- ===================================================== -->
     <!-- CATEGORY 3 -->
-    <!-- ===================================================== -->
 
     <div class="category-title">
         🔢 C. Number / Position Coding
@@ -1238,9 +1407,7 @@ footer p{
     </div>
 
 
-    <!-- ===================================================== -->
     <!-- CATEGORY 4 -->
-    <!-- ===================================================== -->
 
     <div class="category-title">
         🧩 D. Artificial / Chinese Language Coding
@@ -1707,9 +1874,7 @@ footer p{
     </div>
 
 
-    <!-- ===================================================== -->
     <!-- CATEGORY 5 -->
-    <!-- ===================================================== -->
 
     <div class="category-title">
         🔀 E. Substitution / Rearrangement Coding
@@ -1776,7 +1941,7 @@ footer p{
         <div class="options">
             <div class="option">(A) NRAIT</div>
             <div class="option">(B) NARIT</div>
-            <div class="option">(C) TRA IN</div>
+            <div class="option">(C) TRIAN</div>
             <div class="option">(D) NRIAT</div>
         </div>
 
@@ -1940,9 +2105,7 @@ footer p{
     </div>
 
 
-    <!-- ===================================================== -->
     <!-- CATEGORY 6 -->
-    <!-- ===================================================== -->
 
     <div class="category-title">
         🧠 F. Mixed & Higher-Level Coding
@@ -2681,9 +2844,7 @@ footer p{
     </div>
 
 
-    <!-- ===================================================== -->
     <!-- PRACTICE STRATEGY -->
-    <!-- ===================================================== -->
 
     <div class="note">
 
@@ -2748,6 +2909,63 @@ footer p{
 <script>
 
 document.addEventListener("DOMContentLoaded", function(){
+
+    /* MORE DROPDOWN NAVIGATION */
+
+    const moreButton = document.querySelector(".more-button");
+    const moreDropdown = document.querySelector(".more-dropdown");
+
+    if(moreButton && moreDropdown){
+
+        moreButton.addEventListener("click", function(event){
+
+            event.stopPropagation();
+
+            const isOpen = moreDropdown.classList.toggle("show");
+
+            moreButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            if(isOpen){
+
+                const buttonRect = moreButton.getBoundingClientRect();
+
+                moreDropdown.style.top = buttonRect.bottom + "px";
+
+                moreDropdown.style.left =
+                    Math.min(
+                        buttonRect.left,
+                        window.innerWidth - moreDropdown.offsetWidth - 8
+                    ) + "px";
+
+            }
+
+        });
+
+        document.addEventListener("click", function(event){
+
+            if(
+                !moreDropdown.contains(event.target) &&
+                !moreButton.contains(event.target)
+            ){
+
+                moreDropdown.classList.remove("show");
+
+                moreButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        });
+
+    }
+
+
+    /* QUESTION ANSWER CHECKING */
 
     const questions = document.querySelectorAll(".question");
 
