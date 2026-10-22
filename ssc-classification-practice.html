@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSC Classification Practice | Let's QualifyNow</title>
-<meta name="description" content="Practice SSC Classification questions with answers and explanations for SSC CGL, CHSL, CPO, MTS and other government exams.">
+<meta name="description" content="Practice 50 SSC Classification questions with answers and explanations for SSC CGL, CHSL, CPO, MTS and other government exams.">
 
 <style>
 *{
@@ -25,43 +26,49 @@ body{
     line-height:1.6;
 }
 
-/* NAVBAR */
+/* NAVIGATION: BRAND AND LINKS ON ONE LINE */
 
 .navbar{
     background:#102a43;
     width:100%;
-    padding:10px 16px;
+    padding:8px 12px;
     display:flex;
     justify-content:flex-start;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    gap:12px;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:8px;
+    min-width:0;
 }
 
 .logo{
     color:white;
-    font-size:18px;
+    font-size:17px;
     font-weight:bold;
     text-decoration:none;
     white-space:nowrap;
     flex:0 0 auto;
     line-height:1.4;
-    padding:8px 0;
+    padding:8px 4px;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    flex-wrap:wrap;
-    gap:3px;
-    flex:1 1 650px;
+    flex-wrap:nowrap;
+    gap:2px;
+    flex:1 1 auto;
     min-width:0;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
 }
 
 .nav-links > a{
     color:white;
     text-decoration:none;
-    padding:9px 10px;
+    padding:9px 9px;
     border-radius:6px;
     font-size:12px;
     font-weight:600;
@@ -85,7 +92,6 @@ body{
 
 .dropdown summary{
     color:white;
-    text-decoration:none;
     list-style:none;
     cursor:pointer;
     padding:9px 10px;
@@ -147,7 +153,7 @@ body{
     background:linear-gradient(135deg,#102a43,#173f5f);
     color:white;
     text-align:center;
-    padding:55px 20px;
+    padding:45px 20px;
 }
 
 .hero h1{
@@ -178,7 +184,7 @@ body{
     border:1px solid #d9e2ec;
     border-radius:12px;
     padding:25px;
-    margin-bottom:30px;
+    margin-bottom:25px;
     box-shadow:0 4px 14px rgba(16,42,67,0.06);
 }
 
@@ -186,6 +192,35 @@ body{
     color:#102a43;
     margin-bottom:10px;
     line-height:1.4;
+}
+
+/* INSTRUCTIONS */
+
+.instructions-box{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:12px;
+    padding:23px 25px;
+    margin-bottom:30px;
+    box-shadow:0 4px 14px rgba(16,42,67,0.05);
+}
+
+.instructions-box h2{
+    color:#102a43;
+    margin-bottom:12px;
+}
+
+.instructions-list{
+    padding-left:23px;
+}
+
+.instructions-list li{
+    margin:8px 0;
+    padding-left:4px;
+}
+
+.instructions-list strong{
+    color:#173f5f;
 }
 
 /* CATEGORY */
@@ -350,21 +385,22 @@ footer p{
 @media(max-width:700px){
 
     .navbar{
-        padding:8px 10px;
+        padding:7px 8px;
         gap:5px;
-        align-items:flex-start;
+        align-items:center;
+        flex-wrap:nowrap;
     }
 
     .logo{
-        font-size:15px;
-        width:100%;
-        padding:5px 0;
+        font-size:14px;
+        padding:7px 2px;
     }
 
     .nav-links{
-        width:100%;
-        flex:1 1 100%;
-        gap:3px;
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        overflow-x:auto;
     }
 
     .nav-links > a{
@@ -378,8 +414,10 @@ footer p{
     }
 
     .dropdown-menu{
-        left:0;
-        right:auto;
+        position:fixed;
+        top:55px;
+        right:8px;
+        left:auto;
         min-width:160px;
     }
 
@@ -389,7 +427,7 @@ footer p{
     }
 
     .hero{
-        padding:38px 16px;
+        padding:35px 16px;
     }
 
     .hero h1{
@@ -405,11 +443,13 @@ footer p{
         margin:24px auto;
     }
 
-    .intro-box{
+    .intro-box,
+    .instructions-box{
         padding:18px;
     }
 
-    .intro-box h2{
+    .intro-box h2,
+    .instructions-box h2{
         font-size:21px;
     }
 
@@ -460,25 +500,25 @@ footer p{
 <!-- NAVBAR -->
 
 <nav class="navbar" aria-label="Main navigation">
-    <a href="index.html" class="logo">LET'S QUALIFYNOW</a>
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0" class="logo">LET'S QUALIFYNOW</a>
 
     <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="government-exam-preparation.html">Government Exam Preparation</a>
-        <a href="courses.html">Courses</a>
-        <a href="ssc-reasoning-course.html">SSC Reasoning Course</a>
-        <a href="state-exams-reasoning-course.html">State Exams Reasoning Course</a>
-        <a href="railway-reasoning-course.html">Railway Reasoning Course</a>
-        <a href="banking-reasoning-course.html">Banking Reasoning Course</a>
-        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="study-material.html">Study Material</a>
-        <a href="live-classes.html">Live Classes</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
         <details class="dropdown">
             <summary aria-label="More navigation links">More ▼</summary>
             <div class="dropdown-menu">
-                <a href="test-series.html">Test Series</a>
-                <a href="exams.html">Exams</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
             </div>
         </details>
     </div>
@@ -488,7 +528,6 @@ footer p{
 
 <section class="hero">
     <h1>📝 SSC Classification Practice</h1>
-
     <p>
         High-quality Classification questions for SSC CGL, CHSL, CPO, MTS and other
         competitive examinations.
@@ -509,9 +548,29 @@ footer p{
         </p>
 
         <p style="margin-top:10px;">
-            Each question contains four options with one uniquely correct answer
-            followed by a concise explanation. If a question is marked as needing
-            correction, review it before using it as a verified exam question.
+            Each question contains four options and an explanation. Questions
+            identified for correction have been revised to provide one intended
+            answer wherever possible.
+        </p>
+    </div>
+
+    <!-- SIX MAIN INSTRUCTIONS -->
+
+    <div class="instructions-box">
+        <h2>📋 Instructions / निर्देश</h2>
+        <ol class="instructions-list">
+            <li><strong>Total Questions / कुल प्रश्न:</strong> 50</li>
+            <li><strong>Correct Answer / सही उत्तर:</strong> +2 marks</li>
+            <li><strong>Wrong Answer / गलत उत्तर:</strong> −0.5 marks</li>
+            <li><strong>Unattempted / बिना उत्तर:</strong> 0 marks</li>
+            <li>Choose one option for each question. Click Submit Test to calculate your score.</li>
+            <li>प्रत्येक प्रश्न में एक विकल्प चुनें। अंक देखने के लिए Submit Test पर क्लिक करें।</li>
+        </ol>
+        <p style="margin-top:12px;">
+            <strong>Check Answers:</strong> Use the answers and explanations below to review your responses before completing your practice.
+        </p>
+        <p style="margin-top:5px;">
+            <strong>ध्यान दें:</strong> यह पृष्ठ अभ्यास और उत्तरों की समीक्षा के लिए है। इसमें विकल्प चुनने या Submit Test से अपने आप अंक निकालने वाला interactive test system शामिल नहीं है।
         </p>
     </div>
 
@@ -593,15 +652,15 @@ footer p{
         <div class="question-card">
             <span class="question-number">Question 6</span>
             <span class="level">Moderate</span>
-            <div class="question">Select the odd one out.</div>
+            <div class="question">Select the organ that is different from the other three.</div>
             <div class="options">
                 <div class="option">(A) Kidney</div>
-                <div class="option">(B) Liver</div>
-                <div class="option">(C) Heart</div>
-                <div class="option">(D) Lung</div>
+                <div class="option">(B) Ureter</div>
+                <div class="option">(C) Urinary bladder</div>
+                <div class="option">(D) Heart</div>
             </div>
-            <div class="answer-box"><strong>Answer: (C) Heart</strong></div>
-            <div class="solution"><strong>Solution:</strong> Kidney, Liver and Lung are associated with major excretory/metabolic functions, while Heart is primarily a circulatory organ.</div>
+            <div class="answer-box"><strong>Answer: (D) Heart</strong></div>
+            <div class="solution"><strong>Solution:</strong> Kidney, Ureter and Urinary bladder are parts of the urinary system. Heart belongs to the circulatory system.</div>
         </div>
 
         <div class="question-card">
@@ -917,11 +976,11 @@ footer p{
             <div class="options">
                 <div class="option">(A) ACEG</div>
                 <div class="option">(B) IKMO</div>
-                <div class="option">(C) QSUV</div>
+                <div class="option">(C) QSUW</div>
                 <div class="option">(D) TWYZ</div>
             </div>
-            <div class="answer-box"><strong>Answer: Question needs review</strong></div>
-            <div class="solution"><strong>Solution:</strong> ACEG and IKMO move by +2 at every step. QSUV has gaps +2, +2, +1, while TWYZ has gaps +3, +2, +1. Both C and D differ from the +2 pattern, so the question does not have a unique answer as written.</div>
+            <div class="answer-box"><strong>Answer: (D) TWYZ</strong></div>
+            <div class="solution"><strong>Solution:</strong> ACEG, IKMO and QSUW each move forward by +2 alphabet positions at every step. TWYZ has gaps of +3, +2 and +1, so it is different.</div>
         </div>
 
         <div class="question-card">
@@ -946,10 +1005,10 @@ footer p{
                 <div class="option">(A) AB</div>
                 <div class="option">(B) EF</div>
                 <div class="option">(C) IJ</div>
-                <div class="option">(D) MN</div>
+                <div class="option">(D) MO</div>
             </div>
-            <div class="answer-box"><strong>Answer: No unique odd pair</strong></div>
-            <div class="solution"><strong>Solution:</strong> All four options are consecutive-letter pairs. Their starting letters A, E, I and M are separated by four alphabet positions, so MN continues the same pattern. The question needs a revised option to have one uniquely correct answer.</div>
+            <div class="answer-box"><strong>Answer: (D) MO</strong></div>
+            <div class="solution"><strong>Solution:</strong> AB, EF and IJ are consecutive-letter pairs. MO has one letter, N, between M and O, so it is different.</div>
         </div>
 
         <div class="question-card">
@@ -1166,12 +1225,12 @@ footer p{
             <div class="question">Select the odd pair.</div>
             <div class="options">
                 <div class="option">(A) 7 : 16</div>
-                <div class="option">(B) 10 : 23</div>
-                <div class="option">(C) 13 : 30</div>
+                <div class="option">(B) 10 : 22</div>
+                <div class="option">(C) 13 : 28</div>
                 <div class="option">(D) 16 : 36</div>
             </div>
-            <div class="answer-box"><strong>Answer: Question needs correction</strong></div>
-            <div class="solution"><strong>Solution:</strong> The original options do not follow a consistent rule for A, B and C. A corrected pattern could use (7,16), (10,22), (13,28) and (16,34), where the second number is 2 × the first + 2. The original question needs correction before being used as a verified exam question.</div>
+            <div class="answer-box"><strong>Answer: (D) 16 : 36</strong></div>
+            <div class="solution"><strong>Solution:</strong> In A, B and C, the second number = 2 × the first number + 2. Thus, 7×2+2=16, 10×2+2=22 and 13×2+2=28. For D, the expected second number is 16×2+2=34, not 36.</div>
         </div>
     </section>
 
@@ -1255,20 +1314,18 @@ footer p{
 
     <div class="info-box">
         <h2>📌 Practice Strategy</h2>
-
         <p>
             Classification questions should be solved by identifying the exact
             common property shared by three options and then locating the option
             that does not follow that property.
         </p>
-
         <p style="margin-top:10px;">
             For SSC-level preparation, pay special attention to number relations,
             alphabet positions, mathematical patterns and three-number set relations.
         </p>
     </div>
 
-    <a href="ssc-topic-wise-practice.html" class="back-btn">
+    <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html" class="back-btn">
         ← Back to Topic-wise Practice
     </a>
 
@@ -1278,9 +1335,53 @@ footer p{
 
 <footer>
     <p><strong>LET'S QUALIFYNOW</strong></p>
+    <p>You Are Closer To Success</p>
+    <p>N Saurabh Sir | Reasoning Faculty</p>
+    <p>SSC • Banking • Railway • Government Exams</p>
     <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
-    <p>SSC • Banking • Railway • Defence • State Government Exams</p>
+    <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
 </footer>
+
+<script>
+/* Keep the More menu usable without letting the navbar wrap. */
+(function(){
+    const dropdown = document.querySelector(".dropdown");
+    const summary = dropdown ? dropdown.querySelector("summary") : null;
+    const menu = dropdown ? dropdown.querySelector(".dropdown-menu") : null;
+
+    if(!dropdown || !summary || !menu) return;
+
+    function positionMenu(){
+        if(!dropdown.open) return;
+
+        const rect = summary.getBoundingClientRect();
+        menu.style.position = "fixed";
+        menu.style.top = (rect.bottom + 4) + "px";
+        menu.style.right = Math.max(8, window.innerWidth - rect.right) + "px";
+        menu.style.left = "auto";
+    }
+
+    summary.addEventListener("click", function(){
+        requestAnimationFrame(positionMenu);
+    });
+
+    window.addEventListener("resize", positionMenu);
+    window.addEventListener("scroll", positionMenu, true);
+
+    document.addEventListener("click", function(event){
+        if(!dropdown.contains(event.target)){
+            dropdown.open = false;
+        }
+    });
+
+    document.addEventListener("keydown", function(event){
+        if(event.key === "Escape"){
+            dropdown.open = false;
+            summary.focus();
+        }
+    });
+})();
+</script>
 
 </body>
 </html>
