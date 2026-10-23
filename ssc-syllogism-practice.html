@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,6 +103,8 @@ body{
     font-size:9px;
 }
 
+/* MORE DROPDOWN — FIXED OUTSIDE NAVIGATION OVERFLOW */
+
 .more-dropdown{
     display:none;
     position:fixed;
@@ -123,12 +126,15 @@ body{
 
 .more-dropdown a{
     display:block;
+    width:100%;
     color:#102a43;
     padding:11px 14px;
     border-bottom:1px solid #edf1f5;
     white-space:nowrap;
     text-decoration:none;
     font-size:13px;
+    font-weight:600;
+    background:#fff;
 }
 
 .more-dropdown a:last-child{
@@ -571,6 +577,112 @@ footer p{
 
 </header>
 
+<!-- MORE DROPDOWN FIX -->
+
+<script>
+(function(){
+
+    const moreButton = document.getElementById("moreButton");
+    const moreDropdown = document.getElementById("moreDropdown");
+    const siteNavigation = document.getElementById("siteNavigation");
+
+    if(!moreButton || !moreDropdown || !siteNavigation){
+        return;
+    }
+
+    /* Move dropdown outside the horizontally scrolling navigation */
+    document.body.appendChild(moreDropdown);
+
+    function positionMoreDropdown(){
+
+        const buttonRect = moreButton.getBoundingClientRect();
+        const dropdownWidth = moreDropdown.offsetWidth || 170;
+
+        let leftPosition = buttonRect.left;
+        let topPosition = buttonRect.bottom;
+
+        if(leftPosition + dropdownWidth > window.innerWidth - 8){
+            leftPosition = window.innerWidth - dropdownWidth - 8;
+        }
+
+        if(leftPosition < 8){
+            leftPosition = 8;
+        }
+
+        moreDropdown.style.left = leftPosition + "px";
+        moreDropdown.style.top = topPosition + "px";
+        moreDropdown.style.right = "auto";
+    }
+
+    function openMoreMenu(){
+
+        positionMoreDropdown();
+        moreDropdown.classList.add("show");
+        moreButton.setAttribute("aria-expanded","true");
+    }
+
+    function closeMoreMenu(){
+
+        moreDropdown.classList.remove("show");
+        moreButton.setAttribute("aria-expanded","false");
+    }
+
+    moreButton.addEventListener("click",function(event){
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if(moreDropdown.classList.contains("show")){
+            closeMoreMenu();
+        }else{
+            openMoreMenu();
+        }
+    });
+
+    moreDropdown.addEventListener("click",function(event){
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click",function(event){
+
+        if(
+            !moreButton.contains(event.target) &&
+            !moreDropdown.contains(event.target)
+        ){
+            closeMoreMenu();
+        }
+    });
+
+    document.addEventListener("keydown",function(event){
+
+        if(event.key === "Escape"){
+            closeMoreMenu();
+        }
+    });
+
+    siteNavigation.addEventListener("scroll",function(){
+
+        if(moreDropdown.classList.contains("show")){
+            positionMoreDropdown();
+        }
+    },{passive:true});
+
+    window.addEventListener("scroll",function(){
+
+        if(moreDropdown.classList.contains("show")){
+            positionMoreDropdown();
+        }
+    },{passive:true});
+
+    window.addEventListener("resize",function(){
+
+        if(moreDropdown.classList.contains("show")){
+            positionMoreDropdown();
+        }
+    });
+
+})();
+</script>
 
 <section class="hero">
 
