@@ -104,10 +104,9 @@ body{
 
 .more-dropdown{
     display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    right:auto;
+    position:absolute;
+    top:100%;
+    right:0;
     width:170px;
     min-width:170px;
     background:#fff;
@@ -117,7 +116,8 @@ body{
     z-index:99999;
 }
 
-.more-dropdown.show{
+.more-menu:hover .more-dropdown,
+.more-menu:focus-within .more-dropdown{
     display:block;
 }
 
@@ -507,7 +507,7 @@ footer a{
 <section class="hero">
 
     <h1>🔗 SSC Cause & Effect Practice</h1>
-
+    
     <p>
         50 Exam-Oriented Questions with Answers & Detailed Solutions
         <br>
