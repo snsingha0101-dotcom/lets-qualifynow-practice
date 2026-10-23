@@ -52,21 +52,167 @@ nav{
     margin-top:15px;
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
-    gap:8px;
+    flex-wrap:wrap;<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSC Assertion & Reason Practice | Let's QualifyNow</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-nav a{
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#243b53;
+    line-height:1.6;
+}
+
+/* ================= NAVIGATION ================= */
+
+.site-header{
+    display:flex;
+    align-items:stretch;
+    background:#102a43;
+    color:#fff;
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.site-brand{
+    display:flex;
+    align-items:center;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    text-decoration:none;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
+}
+
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+
+.site-navigation a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
     color:#fff;
     text-decoration:none;
-    padding:7px 11px;
-    border-radius:5px;
-    font-size:14px;
-    transition:.2s;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    cursor:pointer;
+    white-space:nowrap;
 }
 
-nav a:hover{
+.site-navigation a:hover,
+.more-button:hover{
     background:#173f5f;
+    color:#d9eaf7;
+}
+
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.more-arrow{
+    font-size:9px;
+}
+
+.more-dropdown{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
+    width:170px;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:99999;
+}
+
+.more-dropdown.show{
+    display:block;
+}
+
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.more-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
+}
+
+/* ================= HEADER CONTENT ================= */
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.tagline{
+    font-size:14px;
+    margin-top:3px;
+    color:#d9eaf7;
+}
+
+.faculty{
+    font-size:14px;
+    margin-top:6px;
+    color:#fff;
+    font-weight:600;
 }
 
 /* ================= HERO ================= */
@@ -333,6 +479,42 @@ footer strong{
 
 @media(max-width:700px){
 
+    .site-header{
+        width:100%;
+        align-items:stretch;
+    }
+
+    .site-brand{
+        font-size:12px;
+        padding:9px 7px;
+        letter-spacing:0;
+    }
+
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .site-navigation a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
+    }
+
     .logo{
         font-size:24px;
     }
@@ -352,45 +534,150 @@ footer strong{
     .result-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
-    nav{
-        gap:4px;
-    }
-
-    nav a{
-        font-size:13px;
-        padding:6px 8px;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-    <div class="logo">LET'S QUALIFYNOW</div>
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="site-brand">LET'S QUALIFYNOW</a>
 
-    <div class="tagline">
-        You Are Closer To Success
-    </div>
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
 
-    <div class="faculty">
-        N Saurabh Sir — Reasoning Faculty | SSC • Banking • Railway • Government Exams
-    </div>
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="ssc-reasoning.html">SSC Reasoning</a>
-        <a href="courses.html">Courses</a>
-        <a href="study-material.html">Study Material</a>
-        <a href="live-classes.html">Live Classes</a>
-        <a href="test-series.html">Test Series</a>
-        <a href="exams.html">Exams</a>
-        <a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
+
+        <div class="more-menu" id="moreMenu">
+
+            <button type="button"
+                    class="more-button"
+                    id="moreButton"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
+
+            <div class="more-dropdown" id="moreDropdown">
+
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+
+            </div>
+
+        </div>
+
     </nav>
 
 </header>
+
+<!-- Dropdown ko scrolling navigation se bahar rakha gaya hai -->
+
+<script>
+(function(){
+
+    const moreButton = document.getElementById("moreButton");
+    const moreDropdown = document.getElementById("moreDropdown");
+    const siteNavigation = document.getElementById("siteNavigation");
+
+    if(!moreButton || !moreDropdown || !siteNavigation) return;
+
+    document.body.appendChild(moreDropdown);
+
+    function positionMoreDropdown(){
+
+        const buttonRect = moreButton.getBoundingClientRect();
+        const dropdownWidth = window.innerWidth <= 700 ? 155 : 170;
+
+        moreDropdown.style.width = dropdownWidth + "px";
+        moreDropdown.style.minWidth = dropdownWidth + "px";
+        moreDropdown.style.maxWidth = "calc(100vw - 16px)";
+
+        let left = buttonRect.left;
+
+        left = Math.min(left, window.innerWidth - dropdownWidth - 8);
+        left = Math.max(8, left);
+
+        moreDropdown.style.left = left + "px";
+        moreDropdown.style.top = buttonRect.bottom + "px";
+        moreDropdown.style.right = "auto";
+    }
+
+    function closeMoreMenu(){
+
+        moreDropdown.classList.remove("show");
+        moreButton.setAttribute("aria-expanded","false");
+    }
+
+    moreButton.addEventListener("click",function(event){
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if(moreDropdown.classList.contains("show")){
+            closeMoreMenu();
+        }else{
+            positionMoreDropdown();
+            moreDropdown.classList.add("show");
+            moreButton.setAttribute("aria-expanded","true");
+        }
+    });
+
+    moreDropdown.addEventListener("click",function(event){
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click",function(event){
+
+        if(
+            !moreButton.contains(event.target) &&
+            !moreDropdown.contains(event.target)
+        ){
+            closeMoreMenu();
+        }
+    });
+
+    document.addEventListener("keydown",function(event){
+
+        if(event.key === "Escape"){
+            closeMoreMenu();
+        }
+    });
+
+    function repositionIfOpen(){
+
+        if(moreDropdown.classList.contains("show")){
+            positionMoreDropdown();
+        }
+    }
+
+    siteNavigation.addEventListener("scroll",repositionIfOpen,{passive:true});
+    window.addEventListener("scroll",repositionIfOpen,{passive:true});
+    window.addEventListener("resize",repositionIfOpen);
+
+})();
+</script>
 
 
 <section class="hero">
