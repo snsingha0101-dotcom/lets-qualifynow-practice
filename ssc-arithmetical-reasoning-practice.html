@@ -50,6 +50,7 @@ header{
     flex:0 0 auto;
     display:flex;
     align-items:center;
+    justify-content:center;
     padding:10px 14px;
     color:#ffffff;
     font-size:17px;
@@ -62,7 +63,7 @@ header{
 .nav-links{
     display:flex;
     flex:1 1 auto;
-    align-items:center;
+    align-items:stretch;
     justify-content:flex-start;
     flex-wrap:nowrap;
     gap:0;
@@ -77,18 +78,24 @@ header{
 }
 
 .nav-links a{
-    display:block;
+    display:flex;
     flex:0 0 auto;
+    align-items:center;
+    justify-content:center;
     color:#ffffff;
     text-decoration:none;
     font-family:Arial,Helvetica,sans-serif;
     font-size:11px;
     font-weight:600;
+    line-height:1.3;
     padding:11px 7px;
+    margin:0;
     border:0;
     border-radius:0;
     background:transparent;
     white-space:nowrap;
+    word-break:normal;
+    overflow-wrap:normal;
     transition:background .2s,color .2s;
 }
 
@@ -383,6 +390,7 @@ footer p{
 
     .nav-links{
         flex:1 1 auto;
+        width:0;
         min-width:0;
         justify-content:flex-start;
         flex-wrap:nowrap;
@@ -390,6 +398,7 @@ footer p{
         padding:0 2px;
         overflow-x:auto;
         overflow-y:hidden;
+        white-space:nowrap;
     }
 
     .nav-links a{
@@ -601,190 +610,100 @@ const questions = [
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"A number is increased by 15 and the result is 42. What is the number?",
     qHindi:"एक संख्या में 15 जोड़ने पर परिणाम 42 प्राप्त होता है। वह संख्या क्या है?",
-
-    options:[
-        ["27","27"],
-        ["25","25"],
-        ["30","30"],
-        ["32","32"]
-    ],
-
+    options:[["27","27"],["25","25"],["30","30"],["32","32"]],
     answer:0,
-
     solution:"Let the number be x. x + 15 = 42. Therefore, x = 42 − 15 = 27.",
     solutionHindi:"मान लेते हैं संख्या x है। x + 15 = 42. अतः x = 42 − 15 = 27।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"The sum of two consecutive integers is 41. What is the smaller integer?",
     qHindi:"दो क्रमागत पूर्णांकों का योग 41 है। छोटी पूर्णांक संख्या क्या है?",
-
-    options:[
-        ["19","19"],
-        ["20","20"],
-        ["21","21"],
-        ["22","22"]
-    ],
-
+    options:[["19","19"],["20","20"],["21","21"],["22","22"]],
     answer:1,
-
     solution:"Let the consecutive integers be x and x + 1. x + x + 1 = 41. Therefore, 2x = 40 and x = 20.",
     solutionHindi:"मान लेते हैं क्रमागत पूर्णांक x और x + 1 हैं। x + x + 1 = 41. अतः 2x = 40 और x = 20।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"A number is multiplied by 4 and then 7 is added. The result is 31. Find the number.",
     qHindi:"एक संख्या को 4 से गुणा करके उसमें 7 जोड़ा जाता है। परिणाम 31 है। संख्या ज्ञात कीजिए।",
-
-    options:[
-        ["5","5"],
-        ["6","6"],
-        ["7","7"],
-        ["8","8"]
-    ],
-
+    options:[["5","5"],["6","6"],["7","7"],["8","8"]],
     answer:1,
-
     solution:"Let the number be x. 4x + 7 = 31. Therefore, 4x = 24 and x = 6.",
     solutionHindi:"मान लेते हैं संख्या x है। 4x + 7 = 31. अतः 4x = 24 और x = 6।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"The difference between two numbers is 18. If the smaller number is 27, find the larger number.",
     qHindi:"दो संख्याओं का अंतर 18 है। यदि छोटी संख्या 27 है, तो बड़ी संख्या ज्ञात कीजिए।",
-
-    options:[
-        ["45","45"],
-        ["42","42"],
-        ["48","48"],
-        ["51","51"]
-    ],
-
+    options:[["45","45"],["42","42"],["48","48"],["51","51"]],
     answer:0,
-
     solution:"Larger number = 27 + 18 = 45.",
     solutionHindi:"बड़ी संख्या = 27 + 18 = 45।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"A number is divided by 5 and the quotient is 9. What is the number?",
     qHindi:"एक संख्या को 5 से भाग देने पर भागफल 9 प्राप्त होता है। वह संख्या क्या है?",
-
-    options:[
-        ["40","40"],
-        ["45","45"],
-        ["50","50"],
-        ["54","54"]
-    ],
-
+    options:[["40","40"],["45","45"],["50","50"],["54","54"]],
     answer:1,
-
     solution:"Number = 9 × 5 = 45.",
     solutionHindi:"संख्या = 9 × 5 = 45।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"The average of 18 and 32 is:",
     qHindi:"18 और 32 का औसत है:",
-
-    options:[
-        ["24","24"],
-        ["25","25"],
-        ["26","26"],
-        ["27","27"]
-    ],
-
+    options:[["24","24"],["25","25"],["26","26"],["27","27"]],
     answer:1,
-
     solution:"Average = (18 + 32) ÷ 2 = 50 ÷ 2 = 25.",
     solutionHindi:"औसत = (18 + 32) ÷ 2 = 50 ÷ 2 = 25।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"A number is 12 less than 35. Find the number.",
     qHindi:"एक संख्या 35 से 12 कम है। वह संख्या ज्ञात कीजिए।",
-
-    options:[
-        ["21","21"],
-        ["22","22"],
-        ["23","23"],
-        ["24","24"]
-    ],
-
+    options:[["21","21"],["22","22"],["23","23"],["24","24"]],
     answer:2,
-
     solution:"35 − 12 = 23.",
     solutionHindi:"35 − 12 = 23।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"If 8 pens cost ₹96, what is the cost of one pen?",
     qHindi:"यदि 8 पेन की कीमत ₹96 है, तो एक पेन की कीमत कितनी है?",
-
-    options:[
-        ["₹10","₹10"],
-        ["₹12","₹12"],
-        ["₹14","₹14"],
-        ["₹16","₹16"]
-    ],
-
+    options:[["₹10","₹10"],["₹12","₹12"],["₹14","₹14"],["₹16","₹16"]],
     answer:1,
-
     solution:"Cost of one pen = ₹96 ÷ 8 = ₹12.",
     solutionHindi:"एक पेन की कीमत = ₹96 ÷ 8 = ₹12।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"A number is doubled and then 6 is subtracted. The result is 20. Find the number.",
     qHindi:"एक संख्या को दोगुना करके उसमें से 6 घटाया जाता है। परिणाम 20 है। संख्या ज्ञात कीजिए।",
-
-    options:[
-        ["11","11"],
-        ["12","12"],
-        ["13","13"],
-        ["14","14"]
-    ],
-
+    options:[["11","11"],["12","12"],["13","13"],["14","14"]],
     answer:2,
-
     solution:"Let the number be x. 2x − 6 = 20. Therefore, 2x = 26 and x = 13.",
     solutionHindi:"मान लेते हैं संख्या x है। 2x − 6 = 20. अतः 2x = 26 और x = 13।"
 },
 
 {
     part:"Part 1: Basic Arithmetical Reasoning / भाग 1: Basic Arithmetical Reasoning",
-
     q:"The sum of three consecutive numbers is 48. What is the middle number?",
     qHindi:"तीन क्रमागत संख्याओं का योग 48 है। बीच की संख्या क्या है?",
-
-    options:[
-        ["15","15"],
-        ["16","16"],
-        ["17","17"],
-        ["18","18"]
-    ],
-
+    options:[["15","15"],["16","16"],["17","17"],["18","18"]],
     answer:1,
-
     solution:"The middle number is the average of the three numbers. 48 ÷ 3 = 16.",
     solutionHindi:"बीच की संख्या तीनों संख्याओं का औसत होती है। 48 ÷ 3 = 16।"
 },
@@ -796,190 +715,100 @@ const questions = [
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"A father is 3 times as old as his son. Their total age is 48 years. What is the son's age?",
     qHindi:"एक पिता की आयु उसके पुत्र की आयु की 3 गुनी है। दोनों की कुल आयु 48 वर्ष है। पुत्र की आयु कितनी है?",
-
-    options:[
-        ["10 years","10 वर्ष"],
-        ["12 years","12 वर्ष"],
-        ["14 years","14 वर्ष"],
-        ["16 years","16 वर्ष"]
-    ],
-
+    options:[["10 years","10 वर्ष"],["12 years","12 वर्ष"],["14 years","14 वर्ष"],["16 years","16 वर्ष"]],
     answer:1,
-
     solution:"Let son's age = x. Father's age = 3x. Therefore, 4x = 48 and x = 12 years.",
     solutionHindi:"मान लेते हैं पुत्र की आयु = x। पिता की आयु = 3x। अतः 4x = 48 और x = 12 वर्ष।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"The present ages of A and B are in the ratio 3:5. If their total age is 40 years, what is A's age?",
     qHindi:"A और B की वर्तमान आयु का अनुपात 3:5 है। यदि उनकी कुल आयु 40 वर्ष है, तो A की आयु कितनी है?",
-
-    options:[
-        ["12 years","12 वर्ष"],
-        ["15 years","15 वर्ष"],
-        ["18 years","18 वर्ष"],
-        ["20 years","20 वर्ष"]
-    ],
-
+    options:[["12 years","12 वर्ष"],["15 years","15 वर्ष"],["18 years","18 वर्ष"],["20 years","20 वर्ष"]],
     answer:1,
-
     solution:"Total parts = 3 + 5 = 8. One part = 40 ÷ 8 = 5. A's age = 3 × 5 = 15 years.",
     solutionHindi:"कुल भाग = 3 + 5 = 8। एक भाग = 40 ÷ 8 = 5। A की आयु = 3 × 5 = 15 वर्ष।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"A is 5 years older than B. If B is 17 years old, what is A's age?",
     qHindi:"A, B से 5 वर्ष बड़ा है। यदि B की आयु 17 वर्ष है, तो A की आयु कितनी है?",
-
-    options:[
-        ["20 years","20 वर्ष"],
-        ["21 years","21 वर्ष"],
-        ["22 years","22 वर्ष"],
-        ["23 years","23 वर्ष"]
-    ],
-
+    options:[["20 years","20 वर्ष"],["21 years","21 वर्ष"],["22 years","22 वर्ष"],["23 years","23 वर्ष"]],
     answer:2,
-
     solution:"A = 17 + 5 = 22 years.",
     solutionHindi:"A = 17 + 5 = 22 वर्ष।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"The sum of the ages of a mother and daughter is 54 years. If the mother is twice the daughter's age, find the daughter's age.",
     qHindi:"एक माता और पुत्री की आयु का योग 54 वर्ष है। यदि माता की आयु पुत्री की आयु की दोगुनी है, तो पुत्री की आयु ज्ञात कीजिए।",
-
-    options:[
-        ["16 years","16 वर्ष"],
-        ["18 years","18 वर्ष"],
-        ["20 years","20 वर्ष"],
-        ["22 years","22 वर्ष"]
-    ],
-
+    options:[["16 years","16 वर्ष"],["18 years","18 वर्ष"],["20 years","20 वर्ष"],["22 years","22 वर्ष"]],
     answer:1,
-
     solution:"Let daughter's age = x. Mother's age = 2x. Therefore, 3x = 54 and x = 18 years.",
     solutionHindi:"मान लेते हैं पुत्री की आयु = x। माता की आयु = 2x। अतः 3x = 54 और x = 18 वर्ष।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"A number is 7 more than twice another number. If the smaller number is 9, find the larger number.",
     qHindi:"एक संख्या दूसरी संख्या के दोगुने से 7 अधिक है। यदि छोटी संख्या 9 है, तो बड़ी संख्या ज्ञात कीजिए।",
-
-    options:[
-        ["23","23"],
-        ["24","24"],
-        ["25","25"],
-        ["26","26"]
-    ],
-
+    options:[["23","23"],["24","24"],["25","25"],["26","26"]],
     answer:2,
-
     solution:"Larger number = 2 × 9 + 7 = 25.",
     solutionHindi:"बड़ी संख्या = 2 × 9 + 7 = 25।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"The sum of two numbers is 64 and their difference is 18. What is the larger number?",
     qHindi:"दो संख्याओं का योग 64 और उनका अंतर 18 है। बड़ी संख्या क्या है?",
-
-    options:[
-        ["39","39"],
-        ["40","40"],
-        ["41","41"],
-        ["42","42"]
-    ],
-
+    options:[["39","39"],["40","40"],["41","41"],["42","42"]],
     answer:2,
-
     solution:"Larger number = (64 + 18) ÷ 2 = 82 ÷ 2 = 41.",
     solutionHindi:"बड़ी संख्या = (64 + 18) ÷ 2 = 82 ÷ 2 = 41।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"The sum of two numbers is 52 and their difference is 12. What is the smaller number?",
     qHindi:"दो संख्याओं का योग 52 और उनका अंतर 12 है। छोटी संख्या क्या है?",
-
-    options:[
-        ["18","18"],
-        ["20","20"],
-        ["22","22"],
-        ["24","24"]
-    ],
-
+    options:[["18","18"],["20","20"],["22","22"],["24","24"]],
     answer:1,
-
     solution:"Smaller number = (52 − 12) ÷ 2 = 40 ÷ 2 = 20.",
     solutionHindi:"छोटी संख्या = (52 − 12) ÷ 2 = 40 ÷ 2 = 20।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"A two-digit number has digits whose sum is 11. If the tens digit is 3 more than the units digit, find the number.",
     qHindi:"एक दो-अंकीय संख्या के अंकों का योग 11 है। यदि दहाई का अंक इकाई के अंक से 3 अधिक है, तो संख्या ज्ञात कीजिए।",
-
-    options:[
-        ["65","65"],
-        ["74","74"],
-        ["83","83"],
-        ["92","92"]
-    ],
-
+    options:[["65","65"],["74","74"],["83","83"],["92","92"]],
     answer:1,
-
     solution:"Let units digit = x. Tens digit = x + 3. Therefore, x + x + 3 = 11, giving x = 4. Tens digit = 7. Number = 74.",
     solutionHindi:"मान लेते हैं इकाई का अंक = x। दहाई का अंक = x + 3। अतः x + x + 3 = 11, जिससे x = 4। दहाई का अंक = 7। संख्या = 74।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"A two-digit number has digits whose sum is 9. If the tens digit is twice the units digit, find the number.",
     qHindi:"एक दो-अंकीय संख्या के अंकों का योग 9 है। यदि दहाई का अंक इकाई के अंक का दोगुना है, तो संख्या ज्ञात कीजिए।",
-
-    options:[
-        ["36","36"],
-        ["63","63"],
-        ["72","72"],
-        ["81","81"]
-    ],
-
+    options:[["36","36"],["63","63"],["72","72"],["81","81"]],
     answer:1,
-
     solution:"Let units digit = x. Tens digit = 2x. Therefore, 3x = 9, so x = 3. Tens digit = 6. Number = 63.",
     solutionHindi:"मान लेते हैं इकाई का अंक = x। दहाई का अंक = 2x। अतः 3x = 9, इसलिए x = 3। दहाई का अंक = 6। संख्या = 63।"
 },
 
 {
     part:"Part 2: Age & Number Reasoning / भाग 2: आयु एवं संख्या तर्क",
-
     q:"The product of two consecutive positive integers is 72. What is the smaller integer?",
     qHindi:"दो क्रमागत धनात्मक पूर्णांकों का गुणनफल 72 है। छोटी पूर्णांक संख्या क्या है?",
-
-    options:[
-        ["7","7"],
-        ["8","8"],
-        ["9","9"],
-        ["10","10"]
-    ],
-
+    options:[["7","7"],["8","8"],["9","9"],["10","10"]],
     answer:1,
-
     solution:"8 × 9 = 72. Therefore, the smaller integer is 8.",
     solutionHindi:"8 × 9 = 72। अतः छोटी पूर्णांक संख्या 8 है।"
 },
@@ -991,190 +820,100 @@ const questions = [
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"The ratio of boys to girls in a class is 3:2. If there are 25 students, how many are boys?",
     qHindi:"एक कक्षा में लड़कों और लड़कियों का अनुपात 3:2 है। यदि कुल 25 विद्यार्थी हैं, तो लड़कों की संख्या कितनी है?",
-
-    options:[
-        ["12","12"],
-        ["15","15"],
-        ["18","18"],
-        ["20","20"]
-    ],
-
+    options:[["12","12"],["15","15"],["18","18"],["20","20"]],
     answer:1,
-
     solution:"Total parts = 3 + 2 = 5. One part = 25 ÷ 5 = 5. Boys = 3 × 5 = 15.",
     solutionHindi:"कुल भाग = 3 + 2 = 5। एक भाग = 25 ÷ 5 = 5। लड़के = 3 × 5 = 15।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"The ratio of A:B is 4:5. If A = 28, what is B?",
     qHindi:"A:B का अनुपात 4:5 है। यदि A = 28 है, तो B कितना है?",
-
-    options:[
-        ["30","30"],
-        ["32","32"],
-        ["35","35"],
-        ["40","40"]
-    ],
-
+    options:[["30","30"],["32","32"],["35","35"],["40","40"]],
     answer:2,
-
     solution:"4 parts = 28, so 1 part = 7. Therefore, B = 5 × 7 = 35.",
     solutionHindi:"4 भाग = 28, इसलिए 1 भाग = 7। अतः B = 5 × 7 = 35।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"The average of 5 numbers is 24. What is their total?",
     qHindi:"5 संख्याओं का औसत 24 है। उनका कुल योग कितना है?",
-
-    options:[
-        ["100","100"],
-        ["110","110"],
-        ["120","120"],
-        ["125","125"]
-    ],
-
+    options:[["100","100"],["110","110"],["120","120"],["125","125"]],
     answer:2,
-
     solution:"Total = Average × Number of values = 24 × 5 = 120.",
     solutionHindi:"कुल योग = औसत × संख्याओं की संख्या = 24 × 5 = 120।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"The average of 4 numbers is 18. If one number is 24, what is the sum of the other three?",
     qHindi:"4 संख्याओं का औसत 18 है। यदि उनमें से एक संख्या 24 है, तो शेष तीन संख्याओं का योग कितना है?",
-
-    options:[
-        ["42","42"],
-        ["48","48"],
-        ["50","50"],
-        ["54","54"]
-    ],
-
+    options:[["42","42"],["48","48"],["50","50"],["54","54"]],
     answer:1,
-
     solution:"Total of four numbers = 18 × 4 = 72. Other three = 72 − 24 = 48.",
     solutionHindi:"चारों संख्याओं का योग = 18 × 4 = 72। शेष तीन का योग = 72 − 24 = 48।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"A sum of ₹720 is divided between A and B in the ratio 5:4. How much does A receive?",
     qHindi:"₹720 की राशि A और B के बीच 5:4 के अनुपात में बाँटी जाती है। A को कितनी राशि मिलेगी?",
-
-    options:[
-        ["₹360","₹360"],
-        ["₹400","₹400"],
-        ["₹420","₹420"],
-        ["₹450","₹450"]
-    ],
-
+    options:[["₹360","₹360"],["₹400","₹400"],["₹420","₹420"],["₹450","₹450"]],
     answer:1,
-
     solution:"Total parts = 5 + 4 = 9. One part = 720 ÷ 9 = 80. A receives 5 × 80 = ₹400.",
     solutionHindi:"कुल भाग = 5 + 4 = 9। एक भाग = 720 ÷ 9 = 80। A को 5 × 80 = ₹400 प्राप्त होंगे।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"If 6 notebooks cost ₹150, what will 10 notebooks cost at the same rate?",
     qHindi:"यदि 6 नोटबुक की कीमत ₹150 है, तो उसी दर पर 10 नोटबुक की कीमत कितनी होगी?",
-
-    options:[
-        ["₹200","₹200"],
-        ["₹225","₹225"],
-        ["₹250","₹250"],
-        ["₹275","₹275"]
-    ],
-
+    options:[["₹200","₹200"],["₹225","₹225"],["₹250","₹250"],["₹275","₹275"]],
     answer:2,
-
     solution:"Cost of one notebook = 150 ÷ 6 = ₹25. Cost of 10 notebooks = 10 × 25 = ₹250.",
     solutionHindi:"एक नोटबुक की कीमत = 150 ÷ 6 = ₹25। 10 नोटबुक की कीमत = 10 × 25 = ₹250।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"The average of 6 numbers is 25. What is their sum?",
     qHindi:"6 संख्याओं का औसत 25 है। उनका योग कितना है?",
-
-    options:[
-        ["120","120"],
-        ["140","140"],
-        ["150","150"],
-        ["160","160"]
-    ],
-
+    options:[["120","120"],["140","140"],["150","150"],["160","160"]],
     answer:2,
-
     solution:"Sum = Average × Number of values = 25 × 6 = 150.",
     solutionHindi:"योग = औसत × संख्याओं की संख्या = 25 × 6 = 150।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"If 4 workers complete a task in 12 days, how many worker-days are required for the task?",
     qHindi:"यदि 4 श्रमिक किसी कार्य को 12 दिनों में पूरा करते हैं, तो उस कार्य के लिए कितने worker-days की आवश्यकता होगी?",
-
-    options:[
-        ["36","36"],
-        ["40","40"],
-        ["48","48"],
-        ["52","52"]
-    ],
-
+    options:[["36","36"],["40","40"],["48","48"],["52","52"]],
     answer:2,
-
     solution:"Worker-days = Number of workers × Number of days = 4 × 12 = 48.",
     solutionHindi:"Worker-days = श्रमिकों की संख्या × दिनों की संख्या = 4 × 12 = 48।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"A recipe requires 3 cups of flour for 6 cakes. How many cups are required for 10 cakes at the same rate?",
     qHindi:"एक recipe में 6 cakes के लिए 3 cups flour की आवश्यकता होती है। उसी दर पर 10 cakes के लिए कितने cups flour चाहिए?",
-
-    options:[
-        ["4 cups","4 कप"],
-        ["5 cups","5 कप"],
-        ["6 cups","6 कप"],
-        ["7 cups","7 कप"]
-    ],
-
+    options:[["4 cups","4 कप"],["5 cups","5 कप"],["6 cups","6 कप"],["7 cups","7 कप"]],
     answer:1,
-
     solution:"Flour per cake = 3 ÷ 6 = 1/2 cup. For 10 cakes = 10 × 1/2 = 5 cups.",
     solutionHindi:"प्रति cake flour = 3 ÷ 6 = 1/2 cup। 10 cakes के लिए = 10 × 1/2 = 5 cups।"
 },
 
 {
     part:"Part 3: Ratio, Average & Proportion / भाग 3: अनुपात, औसत एवं समानुपात",
-
     q:"The average of 7 numbers is 16. If six of them have a total of 90, what is the seventh number?",
     qHindi:"7 संख्याओं का औसत 16 है। यदि उनमें से छह संख्याओं का योग 90 है, तो सातवीं संख्या क्या है?",
-
-    options:[
-        ["20","20"],
-        ["21","21"],
-        ["22","22"],
-        ["23","23"]
-    ],
-
+    options:[["20","20"],["21","21"],["22","22"],["23","23"]],
     answer:2,
-
     solution:"Total of seven numbers = 7 × 16 = 112. Seventh number = 112 − 90 = 22.",
     solutionHindi:"सातों संख्याओं का योग = 7 × 16 = 112। सातवीं संख्या = 112 − 90 = 22।"
 },
@@ -1186,190 +925,100 @@ const questions = [
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A man buys an article for ₹500 and sells it for ₹600. What is his profit?",
     qHindi:"एक व्यक्ति किसी वस्तु को ₹500 में खरीदता है और ₹600 में बेचता है। उसका लाभ कितना है?",
-
-    options:[
-        ["₹80","₹80"],
-        ["₹90","₹90"],
-        ["₹100","₹100"],
-        ["₹120","₹120"]
-    ],
-
+    options:[["₹80","₹80"],["₹90","₹90"],["₹100","₹100"],["₹120","₹120"]],
     answer:2,
-
     solution:"Profit = Selling Price − Cost Price = 600 − 500 = ₹100.",
     solutionHindi:"लाभ = विक्रय मूल्य − क्रय मूल्य = 600 − 500 = ₹100।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"An article costing ₹800 is sold for ₹720. What is the loss?",
     qHindi:"₹800 की लागत वाली वस्तु ₹720 में बेची जाती है। हानि कितनी है?",
-
-    options:[
-        ["₹60","₹60"],
-        ["₹70","₹70"],
-        ["₹80","₹80"],
-        ["₹90","₹90"]
-    ],
-
+    options:[["₹60","₹60"],["₹70","₹70"],["₹80","₹80"],["₹90","₹90"]],
     answer:2,
-
     solution:"Loss = Cost Price − Selling Price = 800 − 720 = ₹80.",
     solutionHindi:"हानि = क्रय मूल्य − विक्रय मूल्य = 800 − 720 = ₹80।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A person earns ₹600 per day. How much will he earn in 15 days?",
     qHindi:"एक व्यक्ति प्रतिदिन ₹600 कमाता है। वह 15 दिनों में कितना कमाएगा?",
-
-    options:[
-        ["₹8,000","₹8,000"],
-        ["₹9,000","₹9,000"],
-        ["₹9,500","₹9,500"],
-        ["₹10,000","₹10,000"]
-    ],
-
+    options:[["₹8,000","₹8,000"],["₹9,000","₹9,000"],["₹9,500","₹9,500"],["₹10,000","₹10,000"]],
     answer:1,
-
     solution:"Earning = ₹600 × 15 = ₹9,000.",
     solutionHindi:"कमाई = ₹600 × 15 = ₹9,000।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A worker completes a job in 10 days. What fraction of the job does he complete in one day?",
     qHindi:"एक श्रमिक किसी कार्य को 10 दिनों में पूरा करता है। वह एक दिन में कार्य का कितना भाग पूरा करता है?",
-
-    options:[
-        ["1/5","1/5"],
-        ["1/10","1/10"],
-        ["1/15","1/15"],
-        ["1/20","1/20"]
-    ],
-
+    options:[["1/5","1/5"],["1/10","1/10"],["1/15","1/15"],["1/20","1/20"]],
     answer:1,
-
     solution:"If the complete job takes 10 days, work completed in one day = 1/10.",
     solutionHindi:"यदि पूरा कार्य 10 दिनों में होता है, तो एक दिन में किया गया कार्य = 1/10।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A can complete a work in 12 days and B can complete it in 6 days. Working together, how much work do they complete per day?",
     qHindi:"A किसी कार्य को 12 दिनों में और B उसे 6 दिनों में पूरा कर सकता है। दोनों मिलकर एक दिन में कार्य का कितना भाग पूरा करते हैं?",
-
-    options:[
-        ["1/4","1/4"],
-        ["1/6","1/6"],
-        ["1/8","1/8"],
-        ["1/10","1/10"]
-    ],
-
+    options:[["1/4","1/4"],["1/6","1/6"],["1/8","1/8"],["1/10","1/10"]],
     answer:0,
-
     solution:"A's one-day work = 1/12. B's one-day work = 1/6 = 2/12. Together = 3/12 = 1/4.",
     solutionHindi:"A का एक दिन का कार्य = 1/12। B का एक दिन का कार्य = 1/6 = 2/12। दोनों मिलकर = 3/12 = 1/4।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A tap fills a tank in 8 hours. What fraction of the tank is filled in 2 hours?",
     qHindi:"एक नल किसी टैंक को 8 घंटे में भरता है। 2 घंटे में टैंक का कितना भाग भर जाएगा?",
-
-    options:[
-        ["1/2","1/2"],
-        ["1/3","1/3"],
-        ["1/4","1/4"],
-        ["1/5","1/5"]
-    ],
-
+    options:[["1/2","1/2"],["1/3","1/3"],["1/4","1/4"],["1/5","1/5"]],
     answer:2,
-
     solution:"In 1 hour, 1/8 of the tank is filled. In 2 hours = 2/8 = 1/4.",
     solutionHindi:"1 घंटे में टैंक का 1/8 भाग भरता है। 2 घंटे में = 2/8 = 1/4।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A person spends ₹750 from an income of ₹1,000. What percentage of income does he save?",
     qHindi:"एक व्यक्ति ₹1,000 की आय में से ₹750 खर्च करता है। वह अपनी आय का कितने प्रतिशत बचाता है?",
-
-    options:[
-        ["20%","20%"],
-        ["25%","25%"],
-        ["30%","30%"],
-        ["35%","35%"]
-    ],
-
+    options:[["20%","20%"],["25%","25%"],["30%","30%"],["35%","35%"]],
     answer:1,
-
     solution:"Saving = 1000 − 750 = ₹250. Percentage saved = 250/1000 × 100 = 25%.",
     solutionHindi:"बचत = 1000 − 750 = ₹250। बचत प्रतिशत = 250/1000 × 100 = 25%।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A shopkeeper gives ₹20 discount on an article marked ₹200. What is the selling price?",
     qHindi:"एक दुकानदार ₹200 अंकित मूल्य वाली वस्तु पर ₹20 की छूट देता है। विक्रय मूल्य कितना होगा?",
-
-    options:[
-        ["₹160","₹160"],
-        ["₹170","₹170"],
-        ["₹180","₹180"],
-        ["₹190","₹190"]
-    ],
-
+    options:[["₹160","₹160"],["₹170","₹170"],["₹180","₹180"],["₹190","₹190"]],
     answer:2,
-
     solution:"Selling price = 200 − 20 = ₹180.",
     solutionHindi:"विक्रय मूल्य = 200 − 20 = ₹180।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A man saves ₹300 every month. How much will he save in one year?",
     qHindi:"एक व्यक्ति हर महीने ₹300 बचाता है। वह एक वर्ष में कितनी बचत करेगा?",
-
-    options:[
-        ["₹3,000","₹3,000"],
-        ["₹3,200","₹3,200"],
-        ["₹3,600","₹3,600"],
-        ["₹4,000","₹4,000"]
-    ],
-
+    options:[["₹3,000","₹3,000"],["₹3,200","₹3,200"],["₹3,600","₹3,600"],["₹4,000","₹4,000"]],
     answer:2,
-
     solution:"One year = 12 months. Saving = 300 × 12 = ₹3,600.",
     solutionHindi:"एक वर्ष = 12 महीने। बचत = 300 × 12 = ₹3,600।"
 },
 
 {
     part:"Part 4: Money, Time & Work / भाग 4: धन, समय एवं कार्य",
-
     q:"A train takes 5 hours to complete a journey. If it travels for 3 hours, what fraction of the journey is completed?",
     qHindi:"एक ट्रेन किसी यात्रा को पूरा करने में 5 घंटे लेती है। यदि वह 3 घंटे चलती है, तो यात्रा का कितना भाग पूरा हो गया?",
-
-    options:[
-        ["2/5","2/5"],
-        ["3/5","3/5"],
-        ["4/5","4/5"],
-        ["1/2","1/2"]
-    ],
-
+    options:[["2/5","2/5"],["3/5","3/5"],["4/5","4/5"],["1/2","1/2"]],
     answer:1,
-
     solution:"Fraction completed = 3/5.",
     solutionHindi:"पूरा किया गया भाग = 3/5।"
 },
@@ -1381,190 +1030,100 @@ const questions = [
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A number is first increased by 20% and then decreased by 20%. If the original number is 100, what is the final number?",
     qHindi:"एक संख्या को पहले 20% बढ़ाया जाता है और फिर 20% घटाया जाता है। यदि मूल संख्या 100 है, तो अंतिम संख्या क्या होगी?",
-
-    options:[
-        ["96","96"],
-        ["98","98"],
-        ["100","100"],
-        ["102","102"]
-    ],
-
+    options:[["96","96"],["98","98"],["100","100"],["102","102"]],
     answer:0,
-
     solution:"100 increased by 20% = 120. Decreasing 120 by 20% gives 120 − 24 = 96.",
     solutionHindi:"100 को 20% बढ़ाने पर = 120। 120 को 20% घटाने पर 120 − 24 = 96।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A student scores 72 marks out of 90. What percentage does he score?",
     qHindi:"एक विद्यार्थी 90 में से 72 अंक प्राप्त करता है। उसने कितने प्रतिशत अंक प्राप्त किए?",
-
-    options:[
-        ["75%","75%"],
-        ["80%","80%"],
-        ["82%","82%"],
-        ["85%","85%"]
-    ],
-
+    options:[["75%","75%"],["80%","80%"],["82%","82%"],["85%","85%"]],
     answer:1,
-
     solution:"Percentage = 72/90 × 100 = 80%.",
     solutionHindi:"प्रतिशत = 72/90 × 100 = 80%।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A number is 25% of 240. What is the number?",
     qHindi:"एक संख्या 240 का 25% है। वह संख्या क्या है?",
-
-    options:[
-        ["50","50"],
-        ["60","60"],
-        ["70","70"],
-        ["80","80"]
-    ],
-
+    options:[["50","50"],["60","60"],["70","70"],["80","80"]],
     answer:1,
-
     solution:"25% of 240 = 240 × 25/100 = 60.",
     solutionHindi:"240 का 25% = 240 × 25/100 = 60।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A man travels 120 km in 3 hours. What is his average speed?",
     qHindi:"एक व्यक्ति 3 घंटे में 120 km की यात्रा करता है। उसकी औसत गति क्या है?",
-
-    options:[
-        ["30 km/h","30 km/h"],
-        ["35 km/h","35 km/h"],
-        ["40 km/h","40 km/h"],
-        ["45 km/h","45 km/h"]
-    ],
-
+    options:[["30 km/h","30 km/h"],["35 km/h","35 km/h"],["40 km/h","40 km/h"],["45 km/h","45 km/h"]],
     answer:2,
-
     solution:"Speed = Distance ÷ Time = 120 ÷ 3 = 40 km/h.",
     solutionHindi:"गति = दूरी ÷ समय = 120 ÷ 3 = 40 km/h।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A car travels at 60 km/h. How far will it travel in 2.5 hours?",
     qHindi:"एक कार 60 km/h की गति से चलती है। 2.5 घंटे में वह कितनी दूरी तय करेगी?",
-
-    options:[
-        ["120 km","120 km"],
-        ["140 km","140 km"],
-        ["150 km","150 km"],
-        ["160 km","160 km"]
-    ],
-
+    options:[["120 km","120 km"],["140 km","140 km"],["150 km","150 km"],["160 km","160 km"]],
     answer:2,
-
     solution:"Distance = Speed × Time = 60 × 2.5 = 150 km.",
     solutionHindi:"दूरी = गति × समय = 60 × 2.5 = 150 km।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A clock shows 3:00. What is the angle between the hour hand and minute hand?",
     qHindi:"एक घड़ी में 3:00 बज रहे हैं। घंटे की सुई और मिनट की सुई के बीच कितना कोण होगा?",
-
-    options:[
-        ["60°","60°"],
-        ["90°","90°"],
-        ["120°","120°"],
-        ["180°","180°"]
-    ],
-
+    options:[["60°","60°"],["90°","90°"],["120°","120°"],["180°","180°"]],
     answer:1,
-
     solution:"At 3:00, the hour hand is at 3 and the minute hand is at 12. The angle is 90°.",
     solutionHindi:"3:00 बजे घंटे की सुई 3 पर और मिनट की सुई 12 पर होती है। दोनों के बीच का कोण 90° होता है।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"If today is Monday, what day will it be after 10 days?",
     qHindi:"यदि आज सोमवार है, तो 10 दिनों के बाद कौन-सा दिन होगा?",
-
-    options:[
-        ["Wednesday","बुधवार"],
-        ["Thursday","गुरुवार"],
-        ["Friday","शुक्रवार"],
-        ["Saturday","शनिवार"]
-    ],
-
+    options:[["Wednesday","बुधवार"],["Thursday","गुरुवार"],["Friday","शुक्रवार"],["Saturday","शनिवार"]],
     answer:1,
-
     solution:"10 days = 7 days + 3 days. Monday + 3 days = Thursday.",
     solutionHindi:"10 दिन = 7 दिन + 3 दिन। सोमवार + 3 दिन = गुरुवार।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A number when divided by 7 leaves remainder 3. Which of the following can be the number?",
     qHindi:"किसी संख्या को 7 से भाग देने पर शेषफल 3 आता है। निम्नलिखित में से कौन-सी संख्या हो सकती है?",
-
-    options:[
-        ["24","24"],
-        ["25","25"],
-        ["26","26"],
-        ["27","27"]
-    ],
-
+    options:[["24","24"],["25","25"],["26","26"],["27","27"]],
     answer:0,
-
     solution:"24 ÷ 7 gives quotient 3 and remainder 3. Therefore, 24 is correct.",
     solutionHindi:"24 ÷ 7 करने पर भागफल 3 और शेषफल 3 प्राप्त होता है। इसलिए 24 सही है।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"The sum of the first five natural numbers is:",
     qHindi:"पहली पाँच प्राकृतिक संख्याओं का योग है:",
-
-    options:[
-        ["10","10"],
-        ["12","12"],
-        ["15","15"],
-        ["20","20"]
-    ],
-
+    options:[["10","10"],["12","12"],["15","15"],["20","20"]],
     answer:2,
-
     solution:"The first five natural numbers are 1, 2, 3, 4 and 5. Their sum = 15.",
     solutionHindi:"पहली पाँच प्राकृतिक संख्याएँ 1, 2, 3, 4 और 5 हैं। उनका योग = 15।"
 },
 
 {
     part:"Part 5: Mixed Arithmetical Reasoning / भाग 5: मिश्रित अंकगणितीय तर्क",
-
     q:"A number is divisible by both 3 and 4. Which of the following is the smallest possible two-digit number?",
     qHindi:"एक संख्या 3 और 4 दोनों से विभाज्य है। निम्नलिखित में से सबसे छोटी संभव दो-अंकीय संख्या कौन-सी है?",
-
-    options:[
-        ["12","12"],
-        ["16","16"],
-        ["18","18"],
-        ["24","24"]
-    ],
-
+    options:[["12","12"],["16","16"],["18","18"],["24","24"]],
     answer:0,
-
     solution:"A number divisible by both 3 and 4 must be divisible by LCM(3,4) = 12. The smallest two-digit multiple is 12.",
     solutionHindi:"3 और 4 दोनों से विभाज्य संख्या, LCM(3,4) = 12 से विभाज्य होनी चाहिए। सबसे छोटी दो-अंकीय गुणज संख्या 12 है।"
 }
@@ -1637,9 +1196,7 @@ function renderQuestions(){
                 optionText[1];
 
             button.onclick = function(){
-
                 checkAnswer(index,optionIndex);
-
             };
 
             options.appendChild(button);
@@ -1651,26 +1208,21 @@ function renderQuestions(){
             document.createElement("div");
 
         feedback.className = "feedback";
-
-        feedback.id =
-            "feedback-" + index;
+        feedback.id = "feedback-" + index;
 
         card.appendChild(feedback);
-
         container.appendChild(card);
     });
 }
 
 function checkAnswer(questionIndex,selectedIndex){
 
-    const item =
-        questions[questionIndex];
+    const item = questions[questionIndex];
 
     const cards =
         document.querySelectorAll(".question-card");
 
-    const card =
-        cards[questionIndex];
+    const card = cards[questionIndex];
 
     const buttons =
         card.querySelectorAll(".option");
@@ -1686,17 +1238,12 @@ function checkAnswer(questionIndex,selectedIndex){
         button.disabled = true;
 
         if(index === item.answer){
-
             button.classList.add("correct");
-
         }
-
     });
 
     const feedback =
-        document.getElementById(
-            "feedback-" + questionIndex
-        );
+        document.getElementById("feedback-" + questionIndex);
 
     const correctLetter =
         String.fromCharCode(65 + item.answer);
@@ -1725,7 +1272,6 @@ function checkAnswer(questionIndex,selectedIndex){
     }else{
 
         buttons[selectedIndex].classList.add("wrong");
-
         wrongCount++;
 
         feedback.innerHTML =
@@ -1849,12 +1395,10 @@ function resetTest(){
         buttons.forEach(button=>{
 
             button.disabled = false;
-
             button.classList.remove("correct");
             button.classList.remove("wrong");
 
         });
-
     });
 
     document.querySelectorAll(".feedback")
