@@ -1,591 +1,591 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SSC Blood Relation Practice | Let's QualifyNow</title>
-<meta name="description" content="Practice 50 bilingual SSC Blood Relation questions with answers, explanations and score calculation for SSC and other government exams.">
-
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f7f9fc;
-    color:#243b53;
-    line-height:1.6;
-}
-
-/* ================= HEADER & NAVIGATION ================= */
-
-.site-header{
-    display:flex;
-    align-items:stretch;
-    background:#102a43;
-    color:#fff;
-    width:100%;
-    position:relative;
-    z-index:100;
-}
-
-.site-brand{
-    display:flex;
-    align-items:center;
-    flex:0 0 auto;
-    padding:10px 14px;
-    color:#fff;
-    font-size:17px;
-    font-weight:800;
-    text-decoration:none;
-    letter-spacing:.2px;
-    white-space:nowrap;
-    border-right:1px solid rgba(255,255,255,.12);
-}
-
-.site-navigation{
-    display:flex;
-    align-items:center;
-    flex:1 1 auto;
-    min-width:0;
-    flex-wrap:nowrap;
-    gap:0;
-    padding:0 4px;
-    overflow-x:auto;
-    overflow-y:hidden;
-    white-space:nowrap;
-    scrollbar-width:thin;
-    scrollbar-color:#627d98 #102a43;
-    -webkit-overflow-scrolling:touch;
-}
-
-.site-navigation a,
-.more-button{
-    display:block;
-    flex:0 0 auto;
-    color:#fff;
-    text-decoration:none;
-    font-family:Arial,Helvetica,sans-serif;
-    font-size:11px;
-    font-weight:600;
-    padding:11px 7px;
-    border:0;
-    border-radius:0;
-    background:transparent;
-    cursor:pointer;
-    white-space:nowrap;
-}
-
-.site-navigation a:hover,
-.more-button:hover{
-    background:#173f5f;
-    color:#d9eaf7;
-}
-
-.more-menu{
-    position:relative;
-    flex:0 0 auto;
-}
-
-.more-button{
-    display:flex;
-    align-items:center;
-    gap:4px;
-}
-
-.more-arrow{
-    font-size:9px;
-}
-
-.more-dropdown{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    right:auto;
-    width:170px;
-    min-width:170px;
-    background:#fff;
-    border:1px solid #d9e2ec;
-    border-radius:0 0 8px 8px;
-    box-shadow:0 8px 20px rgba(16,42,67,.16);
-    z-index:99999;
-}
-
-.more-dropdown.show{
-    display:block;
-}
-
-.more-dropdown a{
-    display:block;
-    color:#102a43;
-    padding:11px 14px;
-    border-bottom:1px solid #edf1f5;
-    white-space:nowrap;
-    text-decoration:none;
-    font-size:13px;
-}
-
-.more-dropdown a:last-child{
-    border-bottom:none;
-}
-
-.more-dropdown a:hover{
-    background:#eef6fb;
-    color:#102a43;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    background:#173f5f;
-    color:#fff;
-    text-align:center;
-    padding:55px 20px;
-}
-
-.hero h1{
-    font-size:36px;
-    margin-bottom:12px;
-}
-
-.hero p{
-    font-size:18px;
-    max-width:850px;
-    margin:6px auto;
-}
-
-/* ================= MAIN ================= */
-
-.container{
-    width:86%;
-    max-width:1000px;
-    margin:40px auto;
-}
-
-.intro{
-    background:#fff;
-    border:1px solid #e1e8ed;
-    border-radius:14px;
-    padding:22px;
-    margin-bottom:20px;
-    box-shadow:0 5px 18px rgba(16,42,67,.06);
-}
-
-.intro h2{
-    color:#102a43;
-    margin-bottom:12px;
-}
-
-.intro p{
-    margin-bottom:8px;
-}
-
-.instruction-list{
-    margin-top:16px;
-    padding:18px;
-    background:#f7f9fc;
-    border:1px solid #d9e2ec;
-    border-radius:8px;
-}
-
-.instruction-list h3{
-    color:#102a43;
-    margin-bottom:10px;
-}
-
-.instruction-list ul{
-    padding-left:22px;
-}
-
-.instruction-list li{
-    margin:8px 0;
-}
-
-.section-title{
-    color:#102a43;
-    text-align:center;
-    margin:35px 0 20px;
-    font-size:28px;
-}
-
-.category-title{
-    background:#173f5f;
-    color:#fff;
-    padding:13px 18px;
-    border-radius:9px;
-    margin:35px 0 18px;
-    font-size:21px;
-}
-
-/* ================= QUESTION ================= */
-
-.question{
-    background:#fff;
-    border:1px solid #d9e2ec;
-    border-radius:12px;
-    padding:22px;
-    margin-bottom:18px;
-    box-shadow:0 3px 12px rgba(16,42,67,.05);
-    transition:.25s;
-}
-
-.question:hover{
-    transform:translateY(-2px);
-    box-shadow:0 6px 18px rgba(16,42,67,.09);
-}
-
-.q-number{
-    color:#102a43;
-    font-weight:bold;
-    font-size:17px;
-    margin-bottom:12px;
-}
-
-.q-text{
-    font-size:16px;
-    font-weight:600;
-    margin-bottom:15px;
-    color:#243b53;
-}
-
-.q-hindi{
-    display:block;
-    margin-top:8px;
-    padding-top:8px;
-    border-top:1px dashed #d9e2ec;
-    color:#52606d;
-    font-weight:600;
-}
-
-/* ================= OPTIONS ================= */
-
-.options{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-}
-
-.option{
-    border:1px solid #d9e2ec;
-    background:#f7f9fc;
-    padding:10px 13px;
-    border-radius:7px;
-    cursor:pointer;
-    transition:all .2s ease;
-    user-select:none;
-}
-
-.option:hover{
-    background:#d9eaf7;
-    border-color:#829ab1;
-}
-
-.option.selected{
-    border-color:#173f5f;
-    background:#d9eaf7;
-    font-weight:bold;
-}
-
-.option.correct{
-    background:#e6f4ea;
-    border-color:#2e7d32;
-    color:#1b5e20;
-}
-
-.option.wrong{
-    background:#fdecea;
-    border-color:#c62828;
-    color:#b71c1c;
-}
-
-/* ================= ANSWER & SOLUTION ================= */
-
-.answer{
-    display:none;
-    margin-top:16px;
-    padding:14px;
-    background:#eef6fb;
-    border-left:4px solid #173f5f;
-    border-radius:7px;
-}
-
-.answer strong{
-    color:#102a43;
-}
-
-.answer-hindi{
-    display:block;
-    margin-top:5px;
-}
-
-.solution{
-    display:none;
-    margin-top:12px;
-    color:#52606d;
-}
-
-.solution-hindi{
-    display:block;
-    margin-top:12px;
-    padding-top:10px;
-    border-top:1px dashed #d9e2ec;
-}
-
-/* ================= RESULT MESSAGE ================= */
-
-.result-message{
-    margin-top:12px;
-    padding:10px 12px;
-    border-radius:7px;
-    font-weight:bold;
-}
-
-.result-message.correct-message{
-    background:#e6f4ea;
-    color:#1b5e20;
-}
-
-.result-message.wrong-message{
-    background:#fdecea;
-    color:#b71c1c;
-}
-
-/* ================= RESULT BOX ================= */
-
-.result-box{
-    background:#fff;
-    border:2px solid #173f5f;
-    border-radius:12px;
-    padding:28px 22px;
-    margin-top:40px;
-    text-align:center;
-    box-shadow:0 3px 10px rgba(16,42,67,.07);
-}
-
-.result-box h2{
-    color:#102a43;
-    margin-bottom:20px;
-    font-size:25px;
-}
-
-.result-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
-    margin-bottom:22px;
-}
-
-.result-item{
-    background:#f7f9fc;
-    border:1px solid #d9e2ec;
-    border-radius:8px;
-    padding:15px 8px;
-}
-
-.result-item .number{
-    display:block;
-    font-size:24px;
-    font-weight:bold;
-    color:#102a43;
-}
-
-.result-item .label{
-    display:block;
-    margin-top:4px;
-    color:#52606d;
-    font-size:14px;
-}
-
-.reset-btn{
-    background:#102a43;
-    color:#fff;
-    border:none;
-    padding:11px 24px;
-    border-radius:7px;
-    cursor:pointer;
-    font-size:15px;
-    transition:.25s;
-}
-
-.reset-btn:hover{
-    background:#173f5f;
-}
-
-/* ================= TIP ================= */
-
-.tip{
-    background:#f7f9fc;
-    border:1px solid #d9e2ec;
-    padding:20px;
-    border-radius:10px;
-    margin-top:30px;
-}
-
-.tip h3{
-    color:#102a43;
-    margin-bottom:8px;
-}
-
-.tip p{
-    margin-bottom:8px;
-}
-
-/* ================= BACK ================= */
-
-.back-navigation{
-    text-align:center;
-    padding:30px 10px;
-}
-
-.back-navigation a{
-    display:inline-block;
-    background:#102a43;
-    color:#fff;
-    text-decoration:none;
-    padding:11px 20px;
-    border-radius:7px;
-    transition:.25s;
-}
-
-.back-navigation a:hover{
-    background:#173f5f;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#102a43;
-    color:#fff;
-    text-align:center;
-    padding:25px 15px;
-    margin-top:50px;
-}
-
-footer p{
-    margin:4px 0;
-    font-size:14px;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:900px){
-    .container{
-        width:92%;
-    }
-
-    .site-brand{
-        font-size:14px;
-        padding:10px 9px;
-    }
-
-    .site-navigation{
-        padding:0 2px;
-    }
-
-    .site-navigation a,
-    .more-button{
-        font-size:10.5px;
-        padding:11px 6px;
-    }
-}
-
-@media(max-width:600px){
-    .site-header{
-        width:100%;
-        align-items:stretch;
-    }
-
-    .site-brand{
-        font-size:12px;
-        padding:9px 7px;
-        letter-spacing:0;
-    }
-
-    .site-navigation{
-        flex:1 1 auto;
-        min-width:0;
-        flex-wrap:nowrap;
-        justify-content:flex-start;
-        padding:0 2px;
-        overflow-x:auto;
-        overflow-y:hidden;
-        -webkit-overflow-scrolling:touch;
-    }
-
-    .site-navigation a,
-    .more-button{
-        flex:0 0 auto;
-        font-size:10px;
-        padding:10px 6px;
-        white-space:nowrap;
-    }
-
-    .more-dropdown{
-        width:155px;
-        min-width:155px;
-        max-width:calc(100vw - 16px);
-    }
-
-    .hero{
-        padding:40px 16px;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .options{
-        grid-template-columns:1fr;
-    }
-
-    .question{
-        padding:16px;
-    }
-
-    .result-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .container{
-        width:92%;
-        margin:28px auto;
-    }
-
-    .intro{
-        padding:16px;
-    }
-
-    .instruction-list{
-        padding:14px;
-    }
-
-    .back-navigation{
-        padding:22px 10px;
-    }
-
-    .back-navigation a{
-        padding:10px 15px;
-        font-size:13px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<!-- ================= HEADER & NAVIGATION ================= -->
-
-<header class="site-header">
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+<title>SSC Blood Relation Practice | Let's QualifyNow</title> 
+<meta name="description" content="Practice 50 bilingual SSC Blood Relation questions with answers, explanations and score calculation for SSC and other government exams."> 
+ 
+<style> 
+*{ 
+    box-sizing:border-box; 
+    margin:0; 
+    padding:0; 
+} 
+ 
+body{ 
+    font-family:Arial,Helvetica,sans-serif; 
+    background:#f7f9fc; 
+    color:#243b53; 
+    line-height:1.6; 
+} 
+ 
+/* ================= HEADER & NAVIGATION ================= */ 
+ 
+.site-header{ 
+    display:flex; 
+    align-items:stretch; 
+    background:#102a43; 
+    color:#fff; 
+    width:100%; 
+    position:relative; 
+    z-index:100; 
+} 
+ 
+.site-brand{ 
+    display:flex; 
+    align-items:center; 
+    flex:0 0 auto; 
+    padding:10px 14px; 
+    color:#fff; 
+    font-size:17px; 
+    font-weight:800; 
+    text-decoration:none; 
+    letter-spacing:.2px; 
+    white-space:nowrap; 
+    border-right:1px solid rgba(255,255,255,.12); 
+} 
+ 
+.site-navigation{ 
+    display:flex; 
+    align-items:center; 
+    flex:1 1 auto; 
+    min-width:0; 
+    flex-wrap:nowrap; 
+    gap:0; 
+    padding:0 4px; 
+    overflow-x:auto; 
+    overflow-y:hidden; 
+    white-space:nowrap; 
+    scrollbar-width:thin; 
+    scrollbar-color:#627d98 #102a43; 
+    -webkit-overflow-scrolling:touch; 
+} 
+ 
+.site-navigation a, 
+.more-button{ 
+    display:block; 
+    flex:0 0 auto; 
+    color:#fff; 
+    text-decoration:none; 
+    font-family:Arial,Helvetica,sans-serif; 
+    font-size:11px; 
+    font-weight:600; 
+    padding:11px 7px; 
+    border:0; 
+    border-radius:0; 
+    background:transparent; 
+    cursor:pointer; 
+    white-space:nowrap; 
+} 
+ 
+.site-navigation a:hover, 
+.more-button:hover{ 
+    background:#173f5f; 
+    color:#d9eaf7; 
+} 
+ 
+.more-menu{ 
+    position:relative; 
+    flex:0 0 auto; 
+} 
+ 
+.more-button{ 
+    display:flex; 
+    align-items:center; 
+    gap:4px; 
+} 
+ 
+.more-arrow{ 
+    font-size:9px; 
+} 
+ 
+.more-dropdown{ 
+    display:none; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    right:auto; 
+    width:170px; 
+    min-width:170px; 
+    background:#fff; 
+    border:1px solid #d9e2ec; 
+    border-radius:0 0 8px 8px; 
+    box-shadow:0 8px 20px rgba(16,42,67,.16); 
+    z-index:99999; 
+} 
+ 
+.more-dropdown.show{ 
+    display:block; 
+} 
+ 
+.more-dropdown a{ 
+    display:block; 
+    color:#102a43; 
+    padding:11px 14px; 
+    border-bottom:1px solid #edf1f5; 
+    white-space:nowrap; 
+    text-decoration:none; 
+    font-size:13px; 
+} 
+ 
+.more-dropdown a:last-child{ 
+    border-bottom:none; 
+} 
+ 
+.more-dropdown a:hover{ 
+    background:#eef6fb; 
+    color:#102a43; 
+} 
+ 
+/* ================= HERO ================= */ 
+ 
+.hero{ 
+    background:#173f5f; 
+    color:#fff; 
+    text-align:center; 
+    padding:55px 20px; 
+} 
+ 
+.hero h1{ 
+    font-size:36px; 
+    margin-bottom:12px; 
+} 
+ 
+.hero p{ 
+    font-size:18px; 
+    max-width:850px; 
+    margin:6px auto; 
+} 
+ 
+/* ================= MAIN ================= */ 
+ 
+.container{ 
+    width:86%; 
+    max-width:1000px; 
+    margin:40px auto; 
+} 
+ 
+.intro{ 
+    background:#fff; 
+    border:1px solid #e1e8ed; 
+    border-radius:14px; 
+    padding:22px; 
+    margin-bottom:20px; 
+    box-shadow:0 5px 18px rgba(16,42,67,.06); 
+} 
+ 
+.intro h2{ 
+    color:#102a43; 
+    margin-bottom:12px; 
+} 
+ 
+.intro p{ 
+    margin-bottom:8px; 
+} 
+ 
+.instruction-list{ 
+    margin-top:16px; 
+    padding:18px; 
+    background:#f7f9fc; 
+    border:1px solid #d9e2ec; 
+    border-radius:8px; 
+} 
+ 
+.instruction-list h3{ 
+    color:#102a43; 
+    margin-bottom:10px; 
+} 
+ 
+.instruction-list ul{ 
+    padding-left:22px; 
+} 
+ 
+.instruction-list li{ 
+    margin:8px 0; 
+} 
+ 
+.section-title{ 
+    color:#102a43; 
+    text-align:center; 
+    margin:35px 0 20px; 
+    font-size:28px; 
+} 
+ 
+.category-title{ 
+    background:#173f5f; 
+    color:#fff; 
+    padding:13px 18px; 
+    border-radius:9px; 
+    margin:35px 0 18px; 
+    font-size:21px; 
+} 
+ 
+/* ================= QUESTION ================= */ 
+ 
+.question{ 
+    background:#fff; 
+    border:1px solid #d9e2ec; 
+    border-radius:12px; 
+    padding:22px; 
+    margin-bottom:18px; 
+    box-shadow:0 3px 12px rgba(16,42,67,.05); 
+    transition:.25s; 
+} 
+ 
+.question:hover{ 
+    transform:translateY(-2px); 
+    box-shadow:0 6px 18px rgba(16,42,67,.09); 
+} 
+ 
+.q-number{ 
+    color:#102a43; 
+    font-weight:bold; 
+    font-size:17px; 
+    margin-bottom:12px; 
+} 
+ 
+.q-text{ 
+    font-size:16px; 
+    font-weight:600; 
+    margin-bottom:15px; 
+    color:#243b53; 
+} 
+ 
+.q-hindi{ 
+    display:block; 
+    margin-top:8px; 
+    padding-top:8px; 
+    border-top:1px dashed #d9e2ec; 
+    color:#52606d; 
+    font-weight:600; 
+} 
+ 
+/* ================= OPTIONS ================= */ 
+ 
+.options{ 
+    display:grid; 
+    grid-template-columns:1fr 1fr; 
+    gap:10px; 
+} 
+ 
+.option{ 
+    border:1px solid #d9e2ec; 
+    background:#f7f9fc; 
+    padding:10px 13px; 
+    border-radius:7px; 
+    cursor:pointer; 
+    transition:all .2s ease; 
+    user-select:none; 
+} 
+ 
+.option:hover{ 
+    background:#d9eaf7; 
+    border-color:#829ab1; 
+} 
+ 
+.option.selected{ 
+    border-color:#173f5f; 
+    background:#d9eaf7; 
+    font-weight:bold; 
+} 
+ 
+.option.correct{ 
+    background:#e6f4ea; 
+    border-color:#2e7d32; 
+    color:#1b5e20; 
+} 
+ 
+.option.wrong{ 
+    background:#fdecea; 
+    border-color:#c62828; 
+    color:#b71c1c; 
+} 
+ 
+/* ================= ANSWER & SOLUTION ================= */ 
+ 
+.answer{ 
+    display:none; 
+    margin-top:16px; 
+    padding:14px; 
+    background:#eef6fb; 
+    border-left:4px solid #173f5f; 
+    border-radius:7px; 
+} 
+ 
+.answer strong{ 
+    color:#102a43; 
+} 
+ 
+.answer-hindi{ 
+    display:block; 
+    margin-top:5px; 
+} 
+ 
+.solution{ 
+    display:none; 
+    margin-top:12px; 
+    color:#52606d; 
+} 
+ 
+.solution-hindi{ 
+    display:block; 
+    margin-top:12px; 
+    padding-top:10px; 
+    border-top:1px dashed #d9e2ec; 
+} 
+ 
+/* ================= RESULT MESSAGE ================= */ 
+ 
+.result-message{ 
+    margin-top:12px; 
+    padding:10px 12px; 
+    border-radius:7px; 
+    font-weight:bold; 
+} 
+ 
+.result-message.correct-message{ 
+    background:#e6f4ea; 
+    color:#1b5e20; 
+} 
+ 
+.result-message.wrong-message{ 
+    background:#fdecea; 
+    color:#b71c1c; 
+} 
+ 
+/* ================= RESULT BOX ================= */ 
+ 
+.result-box{ 
+    background:#fff; 
+    border:2px solid #173f5f; 
+    border-radius:12px; 
+    padding:28px 22px; 
+    margin-top:40px; 
+    text-align:center; 
+    box-shadow:0 3px 10px rgba(16,42,67,.07); 
+} 
+ 
+.result-box h2{ 
+    color:#102a43; 
+    margin-bottom:20px; 
+    font-size:25px; 
+} 
+ 
+.result-grid{ 
+    display:grid; 
+    grid-template-columns:repeat(4,1fr); 
+    gap:12px; 
+    margin-bottom:22px; 
+} 
+ 
+.result-item{ 
+    background:#f7f9fc; 
+    border:1px solid #d9e2ec; 
+    border-radius:8px; 
+    padding:15px 8px; 
+} 
+ 
+.result-item .number{ 
+    display:block; 
+    font-size:24px; 
+    font-weight:bold; 
+    color:#102a43; 
+} 
+ 
+.result-item .label{ 
+    display:block; 
+    margin-top:4px; 
+    color:#52606d; 
+    font-size:14px; 
+} 
+ 
+.reset-btn{ 
+    background:#102a43; 
+    color:#fff; 
+    border:none; 
+    padding:11px 24px; 
+    border-radius:7px; 
+    cursor:pointer; 
+    font-size:15px; 
+    transition:.25s; 
+} 
+ 
+.reset-btn:hover{ 
+    background:#173f5f; 
+} 
+ 
+/* ================= TIP ================= */ 
+ 
+.tip{ 
+    background:#f7f9fc; 
+    border:1px solid #d9e2ec; 
+    padding:20px; 
+    border-radius:10px; 
+    margin-top:30px; 
+} 
+ 
+.tip h3{ 
+    color:#102a43; 
+    margin-bottom:8px; 
+} 
+ 
+.tip p{ 
+    margin-bottom:8px; 
+} 
+ 
+/* ================= BACK ================= */ 
+ 
+.back-navigation{ 
+    text-align:center; 
+    padding:30px 10px; 
+} 
+ 
+.back-navigation a{ 
+    display:inline-block; 
+    background:#102a43; 
+    color:#fff; 
+    text-decoration:none; 
+    padding:11px 20px; 
+    border-radius:7px; 
+    transition:.25s; 
+} 
+ 
+.back-navigation a:hover{ 
+    background:#173f5f; 
+} 
+ 
+/* ================= FOOTER ================= */ 
+ 
+footer{ 
+    background:#102a43; 
+    color:#fff; 
+    text-align:center; 
+    padding:25px 15px; 
+    margin-top:50px; 
+} 
+ 
+footer p{ 
+    margin:4px 0; 
+    font-size:14px; 
+} 
+ 
+/* ================= RESPONSIVE ================= */ 
+ 
+@media(max-width:900px){ 
+    .container{ 
+        width:92%; 
+    } 
+ 
+    .site-brand{ 
+        font-size:14px; 
+        padding:10px 9px; 
+    } 
+ 
+    .site-navigation{ 
+        padding:0 2px; 
+    } 
+ 
+    .site-navigation a, 
+    .more-button{ 
+        font-size:10.5px; 
+        padding:11px 6px; 
+    } 
+} 
+ 
+@media(max-width:600px){ 
+    .site-header{ 
+        width:100%; 
+        align-items:stretch; 
+    } 
+ 
+    .site-brand{ 
+        font-size:12px; 
+        padding:9px 7px; 
+        letter-spacing:0; 
+    } 
+ 
+    .site-navigation{ 
+        flex:1 1 auto; 
+        min-width:0; 
+        flex-wrap:nowrap; 
+        justify-content:flex-start; 
+        padding:0 2px; 
+        overflow-x:auto; 
+        overflow-y:hidden; 
+        -webkit-overflow-scrolling:touch; 
+    } 
+ 
+    .site-navigation a, 
+    .more-button{ 
+        flex:0 0 auto; 
+        font-size:10px; 
+        padding:10px 6px; 
+        white-space:nowrap; 
+    } 
+ 
+    .more-dropdown{ 
+        width:155px; 
+        min-width:155px; 
+        max-width:calc(100vw - 16px); 
+    } 
+ 
+    .hero{ 
+        padding:40px 16px; 
+    } 
+ 
+    .hero h1{ 
+        font-size:28px; 
+    } 
+ 
+    .hero p{ 
+        font-size:16px; 
+    } 
+ 
+    .options{ 
+        grid-template-columns:1fr; 
+    } 
+ 
+    .question{ 
+        padding:16px; 
+    } 
+ 
+    .result-grid{ 
+        grid-template-columns:repeat(2,1fr); 
+    } 
+ 
+    .container{ 
+        width:92%; 
+        margin:28px auto; 
+    } 
+ 
+    .intro{ 
+        padding:16px; 
+    } 
+ 
+    .instruction-list{ 
+        padding:14px; 
+    } 
+ 
+    .back-navigation{ 
+        padding:22px 10px; 
+    } 
+ 
+    .back-navigation a{ 
+        padding:10px 15px; 
+        font-size:13px; 
+    } 
+} 
+</style> 
+</head> 
+ 
+<body> 
+ 
+<!-- ================= HEADER & NAVIGATION ================= --> 
+ 
+<header class="site-header"> 
     <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0" class="site-brand">LET'S QUALIFYNOW</a>
 
     <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
@@ -650,19 +650,12 @@ footer p{
         <h3>🎯 Instructions / निर्देश</h3>
         <ul>
             <li><strong>Total Questions / कुल प्रश्न:</strong> 50</li>
-            <li><strong>Correct Answer / सही उत्तर:</strong> 1 mark / 1 अंक</li>
-            <li><strong>Wrong Answer / गलत उत्तर:</strong> 0 marks / 0 अंक</li>
-            <li><strong>Unattempted / बिना उत्तर:</strong> 0 marks / 0 अंक</li>
-            <li>Choose one option for each question. The correct answer and detailed solution will appear after you attempt the question.</li>
-            <li>प्रत्येक प्रश्न में एक विकल्प चुनें। उत्तर चुनने के बाद सही उत्तर और विस्तृत समाधान दिखाई देगा।</li>
-            <li>Each question can be attempted only once until you reset the practice.</li>
-            <li>Reset Practice करने तक प्रत्येक प्रश्न का उत्तर केवल एक बार चुना जा सकता है।</li>
-            <li>The correct option will be highlighted in green. If your answer is wrong, your selected option will be highlighted in red.</li>
-            <li>सही विकल्प हरे रंग में दिखेगा। गलत उत्तर चुनने पर आपका चुना हुआ विकल्प लाल रंग में दिखेगा।</li>
-            <li>Your score, attempted questions, correct answers and wrong answers will update automatically.</li>
-            <li>आपका स्कोर, प्रयास किए गए प्रश्न, सही उत्तर और गलत उत्तर अपने-आप अपडेट होंगे।</li>
-            <li>Use Reset Practice to clear your selections and start again.</li>
-            <li>अपने उत्तर हटाकर दोबारा अभ्यास शुरू करने के लिए Reset Practice पर क्लिक करें।</li>
+            <li><strong>Correct Answer / सही उत्तर:</strong> +2 marks</li>
+            <li><strong>Wrong Answer / गलत उत्तर:</strong> −0.5 marks</li>
+            <li><strong>Unattempted / बिना उत्तर:</strong> 0 marks</li>
+            <li>Choose one option for each question. Click Submit Test to calculate your score.</li>
+            <li>प्रत्येक प्रश्न में एक विकल्प चुनें। अंक देखने के लिए Submit Test पर क्लिक करें।</li>
+            <li>Click Check Answers to move to unanswered questions before submitting.</li>
         </ul>
     </div>
 </div>
@@ -670,6 +663,7 @@ footer p{
 <!-- ================= PART A ================= -->
 
 <div class="category-title">Part A — Basic Blood Relation / मूल Blood Relation</div>
+
 
 <!-- Q1 -->
 <div class="question" data-answer="B">
