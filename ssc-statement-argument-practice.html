@@ -450,9 +450,125 @@ footer{
 
 </header>
 
+<!-- ================= MORE DROPDOWN FIX ================= -->
+
+<script>
+(function(){
+
+    const moreButton = document.getElementById("moreButton");
+    const moreDropdown = document.getElementById("moreDropdown");
+    const siteNavigation = document.getElementById("siteNavigation");
+
+    if(!moreButton || !moreDropdown || !siteNavigation) return;
+
+    /* Move dropdown outside the scrolling navigation
+       to prevent it from being clipped by overflow. */
+    document.body.appendChild(moreDropdown);
+
+    function positionMoreDropdown(){
+
+        const buttonRect = moreButton.getBoundingClientRect();
+
+        const dropdownWidth = window.innerWidth <= 700 ? 155 : 170;
+
+        moreDropdown.style.width = dropdownWidth + "px";
+        moreDropdown.style.minWidth = dropdownWidth + "px";
+        moreDropdown.style.maxWidth = "calc(100vw - 16px)";
+
+        let left = buttonRect.left;
+
+        left = Math.min(left, window.innerWidth - dropdownWidth - 8);
+        left = Math.max(8, left);
+
+        moreDropdown.style.left = left + "px";
+        moreDropdown.style.top = buttonRect.bottom + "px";
+        moreDropdown.style.right = "auto";
+
+    }
+
+    function closeMoreMenu(){
+
+        moreDropdown.classList.remove("show");
+        moreButton.setAttribute("aria-expanded","false");
+
+    }
+
+    moreButton.addEventListener("click",function(event){
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if(moreDropdown.classList.contains("show")){
+
+            closeMoreMenu();
+
+        }else{
+
+            positionMoreDropdown();
+            moreDropdown.classList.add("show");
+            moreButton.setAttribute("aria-expanded","true");
+
+        }
+
+    });
+
+    moreDropdown.addEventListener("click",function(event){
+
+        event.stopPropagation();
+
+    });
+
+    document.addEventListener("click",function(event){
+
+        if(
+            !moreButton.contains(event.target) &&
+            !moreDropdown.contains(event.target)
+        ){
+
+            closeMoreMenu();
+
+        }
+
+    });
+
+    document.addEventListener("keydown",function(event){
+
+        if(event.key === "Escape"){
+            closeMoreMenu();
+        }
+
+    });
+
+    function repositionIfOpen(){
+
+        if(moreDropdown.classList.contains("show")){
+            positionMoreDropdown();
+        }
+
+    }
+
+    siteNavigation.addEventListener(
+        "scroll",
+        repositionIfOpen,
+        {passive:true}
+    );
+
+    window.addEventListener(
+        "scroll",
+        repositionIfOpen,
+        {passive:true}
+    );
+
+    window.addEventListener(
+        "resize",
+        repositionIfOpen
+    );
+
+})();
+</script>
 
 <section class="hero">
-<h1>🗣️ SSC Statement & Argument Practice</h1>
+<h1>🗣️ SSC Statement &amp; Argument Practice</h1>
 <p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
 </section>
 
