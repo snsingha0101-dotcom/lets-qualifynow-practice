@@ -48,67 +48,16 @@ header{
     font-weight:600;
 }
 
+/* ================= NAVIGATION ================= */
+
 nav{
     margin-top:15px;
     display:flex;
-    justify-content:center;
-    flex-wrap:wrap;<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SSC Assertion & Reason Practice | Let's QualifyNow</title>
-
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7f9fc;
-    color:#243b53;
-    line-height:1.6;
-}
-
-/* ================= NAVIGATION ================= */
-
-.site-header{
-    display:flex;
-    align-items:stretch;
-    background:#102a43;
-    color:#fff;
-    width:100%;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 8px rgba(0,0,0,0.15);
-}
-
-.site-brand{
-    display:flex;
     align-items:center;
-    flex:0 0 auto;
-    padding:10px 14px;
-    color:#fff;
-    font-size:17px;
-    font-weight:800;
-    text-decoration:none;
-    letter-spacing:.2px;
-    white-space:nowrap;
-    border-right:1px solid rgba(255,255,255,.12);
-}
-
-.site-navigation{
-    display:flex;
-    align-items:center;
-    flex:1 1 auto;
-    min-width:0;
+    justify-content:flex-start;
     flex-wrap:nowrap;
     gap:0;
+    width:100%;
     padding:0 4px;
     overflow-x:auto;
     overflow-y:hidden;
@@ -118,24 +67,25 @@ body{
     -webkit-overflow-scrolling:touch;
 }
 
-.site-navigation a,
+nav>a,
 .more-button{
     display:block;
     flex:0 0 auto;
     color:#fff;
     text-decoration:none;
-    font-family:Arial,Helvetica,sans-serif;
-    font-size:11px;
-    font-weight:600;
     padding:11px 7px;
     border:0;
     border-radius:0;
     background:transparent;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
     cursor:pointer;
     white-space:nowrap;
+    transition:background .2s;
 }
 
-.site-navigation a:hover,
+nav>a:hover,
 .more-button:hover{
     background:#173f5f;
     color:#d9eaf7;
@@ -156,6 +106,8 @@ body{
     font-size:9px;
 }
 
+/* DROPDOWN */
+
 .more-dropdown{
     display:none;
     position:fixed;
@@ -169,6 +121,7 @@ body{
     border-radius:0 0 8px 8px;
     box-shadow:0 8px 20px rgba(16,42,67,.16);
     z-index:99999;
+    text-align:left;
 }
 
 .more-dropdown.show{
@@ -183,6 +136,7 @@ body{
     white-space:nowrap;
     text-decoration:none;
     font-size:13px;
+    font-weight:600;
 }
 
 .more-dropdown a:last-child{
@@ -192,27 +146,6 @@ body{
 .more-dropdown a:hover{
     background:#eef6fb;
     color:#102a43;
-}
-
-/* ================= HEADER CONTENT ================= */
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-    letter-spacing:.5px;
-}
-
-.tagline{
-    font-size:14px;
-    margin-top:3px;
-    color:#d9eaf7;
-}
-
-.faculty{
-    font-size:14px;
-    margin-top:6px;
-    color:#fff;
-    font-weight:600;
 }
 
 /* ================= HERO ================= */
@@ -475,45 +408,24 @@ footer strong{
     color:#fff;
 }
 
+/* ================= TABLET ================= */
+
+@media(max-width:900px){
+
+    .logo{
+        font-size:25px;
+    }
+
+    nav>a,
+    .more-button{
+        font-size:10.5px;
+        padding:11px 6px;
+    }
+}
+
 /* ================= MOBILE ================= */
 
 @media(max-width:700px){
-
-    .site-header{
-        width:100%;
-        align-items:stretch;
-    }
-
-    .site-brand{
-        font-size:12px;
-        padding:9px 7px;
-        letter-spacing:0;
-    }
-
-    .site-navigation{
-        flex:1 1 auto;
-        min-width:0;
-        flex-wrap:nowrap;
-        justify-content:flex-start;
-        padding:0 2px;
-        overflow-x:auto;
-        overflow-y:hidden;
-        -webkit-overflow-scrolling:touch;
-    }
-
-    .site-navigation a,
-    .more-button{
-        flex:0 0 auto;
-        font-size:10px;
-        padding:10px 6px;
-        white-space:nowrap;
-    }
-
-    .more-dropdown{
-        width:155px;
-        min-width:155px;
-        max-width:calc(100vw - 16px);
-    }
 
     .logo{
         font-size:24px;
@@ -534,18 +446,48 @@ footer strong{
     .result-grid{
         grid-template-columns:repeat(2,1fr);
     }
+
+    nav{
+        gap:0;
+        justify-content:flex-start;
+        flex-wrap:nowrap;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+    }
+
+    nav>a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header class="site-header">
+<header>
 
-    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
-       class="site-brand">LET'S QUALIFYNOW</a>
+    <div class="logo">LET'S QUALIFYNOW</div>
 
-    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+    <div class="tagline">
+        You Are Closer To Success
+    </div>
+
+    <div class="faculty">
+        N Saurabh Sir — Reasoning Faculty | SSC • Banking • Railway • Government Exams
+    </div>
+
+    <nav id="siteNavigation" aria-label="Main navigation">
 
         <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
 
@@ -569,13 +511,16 @@ footer strong{
 
         <div class="more-menu" id="moreMenu">
 
-            <button type="button"
-                    class="more-button"
-                    id="moreButton"
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-controls="moreDropdown">
+            <button
+                type="button"
+                class="more-button"
+                id="moreButton"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="moreDropdown">
+
                 More <span class="more-arrow">▼</span>
+
             </button>
 
             <div class="more-dropdown" id="moreDropdown">
@@ -592,41 +537,71 @@ footer strong{
 
 </header>
 
-<!-- Dropdown ko scrolling navigation se bahar rakha gaya hai -->
 
 <script>
+/* ================= MORE DROPDOWN NAVIGATION FIX ================= */
+
 (function(){
 
+    const moreMenu = document.getElementById("moreMenu");
     const moreButton = document.getElementById("moreButton");
     const moreDropdown = document.getElementById("moreDropdown");
     const siteNavigation = document.getElementById("siteNavigation");
 
-    if(!moreButton || !moreDropdown || !siteNavigation) return;
+    if(!moreMenu || !moreButton || !moreDropdown || !siteNavigation){
+        return;
+    }
 
+    /* Move dropdown outside the horizontally scrolling navigation */
     document.body.appendChild(moreDropdown);
 
     function positionMoreDropdown(){
 
         const buttonRect = moreButton.getBoundingClientRect();
-        const dropdownWidth = window.innerWidth <= 700 ? 155 : 170;
 
-        moreDropdown.style.width = dropdownWidth + "px";
-        moreDropdown.style.minWidth = dropdownWidth + "px";
-        moreDropdown.style.maxWidth = "calc(100vw - 16px)";
+        moreDropdown.style.left = "8px";
+        moreDropdown.style.top = "0px";
+        moreDropdown.style.visibility = "hidden";
+
+        moreDropdown.classList.add("show");
+
+        const dropdownRect = moreDropdown.getBoundingClientRect();
+
+        const dropdownWidth = dropdownRect.width;
+        const dropdownHeight = dropdownRect.height;
 
         let left = buttonRect.left;
+        let top = buttonRect.bottom;
 
-        left = Math.min(left, window.innerWidth - dropdownWidth - 8);
-        left = Math.max(8, left);
+        if(left + dropdownWidth > window.innerWidth - 8){
+            left = window.innerWidth - dropdownWidth - 8;
+        }
+
+        if(left < 8){
+            left = 8;
+        }
+
+        if(top + dropdownHeight > window.innerHeight - 8){
+            top = buttonRect.top - dropdownHeight;
+        }
+
+        if(top < 8){
+            top = 8;
+        }
 
         moreDropdown.style.left = left + "px";
-        moreDropdown.style.top = buttonRect.bottom + "px";
-        moreDropdown.style.right = "auto";
+        moreDropdown.style.top = top + "px";
+        moreDropdown.style.visibility = "visible";
+    }
+
+    function openMoreMenu(){
+        positionMoreDropdown();
+        moreButton.setAttribute("aria-expanded","true");
     }
 
     function closeMoreMenu(){
-
         moreDropdown.classList.remove("show");
+        moreDropdown.style.visibility = "";
         moreButton.setAttribute("aria-expanded","false");
     }
 
@@ -638,10 +613,9 @@ footer strong{
         if(moreDropdown.classList.contains("show")){
             closeMoreMenu();
         }else{
-            positionMoreDropdown();
-            moreDropdown.classList.add("show");
-            moreButton.setAttribute("aria-expanded","true");
+            openMoreMenu();
         }
+
     });
 
     moreDropdown.addEventListener("click",function(event){
@@ -651,30 +625,26 @@ footer strong{
     document.addEventListener("click",function(event){
 
         if(
-            !moreButton.contains(event.target) &&
+            !moreMenu.contains(event.target) &&
             !moreDropdown.contains(event.target)
         ){
             closeMoreMenu();
         }
+
     });
 
     document.addEventListener("keydown",function(event){
 
         if(event.key === "Escape"){
             closeMoreMenu();
+            moreButton.focus();
         }
+
     });
 
-    function repositionIfOpen(){
-
-        if(moreDropdown.classList.contains("show")){
-            positionMoreDropdown();
-        }
-    }
-
-    siteNavigation.addEventListener("scroll",repositionIfOpen,{passive:true});
-    window.addEventListener("scroll",repositionIfOpen,{passive:true});
-    window.addEventListener("resize",repositionIfOpen);
+    siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+    window.addEventListener("scroll",closeMoreMenu,{passive:true});
+    window.addEventListener("resize",closeMoreMenu);
 
 })();
 </script>
@@ -729,7 +699,6 @@ footer strong{
     <div class="result-box">
 
         <h2>📊 Practice Result / अभ्यास परिणाम</h2>
-
         <div class="result-grid">
 
             <div class="result-item">
