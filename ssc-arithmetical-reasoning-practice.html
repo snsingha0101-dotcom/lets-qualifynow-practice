@@ -62,12 +62,13 @@ header{
 
 .nav-links{
     display:flex;
-    flex:1 1 auto;
+    flex:1 1 0%;
     align-items:stretch;
     justify-content:flex-start;
     flex-wrap:nowrap;
     gap:0;
     min-width:0;
+    width:0;
     padding:0 4px;
     overflow-x:auto;
     overflow-y:hidden;
@@ -75,9 +76,11 @@ header{
     scrollbar-width:thin;
     scrollbar-color:#627d98 #102a43;
     -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
 }
 
-.nav-links a{
+.nav-links a,
+.dropdown-toggle{
     display:flex;
     flex:0 0 auto;
     align-items:center;
@@ -96,14 +99,61 @@ header{
     white-space:nowrap;
     word-break:normal;
     overflow-wrap:normal;
+    cursor:pointer;
     transition:background .2s,color .2s;
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible{
+.nav-links a:focus-visible,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus-visible{
     background:#173f5f;
     color:#d9eaf7;
     outline:none;
+}
+
+.dropdown{
+    position:relative;
+    display:flex;
+    flex:0 0 auto;
+    align-items:stretch;
+}
+
+.dropdown-toggle::after{
+    content:"";
+    width:6px;
+    height:6px;
+    margin-left:6px;
+    margin-top:-3px;
+    border-right:1.5px solid currentColor;
+    border-bottom:1.5px solid currentColor;
+    transform:rotate(45deg);
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    min-width:135px;
+    background:#102a43;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    border:1px solid rgba(255,255,255,.12);
+    z-index:1001;
+}
+
+.dropdown-content a{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:11px 14px;
+    font-size:12px;
+    white-space:nowrap;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content{
+    display:block;
 }
 
 /* ================= HERO ================= */
@@ -366,7 +416,8 @@ footer p{
         padding:0 2px;
     }
 
-    .nav-links a{
+    .nav-links a,
+    .dropdown-toggle{
         font-size:10.5px;
         padding:11px 6px;
     }
@@ -389,7 +440,7 @@ footer p{
     }
 
     .nav-links{
-        flex:1 1 auto;
+        flex:1 1 0%;
         width:0;
         min-width:0;
         justify-content:flex-start;
@@ -401,11 +452,18 @@ footer p{
         white-space:nowrap;
     }
 
-    .nav-links a{
+    .nav-links a,
+    .dropdown-toggle{
         flex:0 0 auto;
         font-size:10px;
         padding:10px 6px;
         white-space:nowrap;
+    }
+
+    .dropdown-content a{
+        display:block;
+        padding:11px 14px;
+        font-size:12px;
     }
 
     .hero{
@@ -448,12 +506,21 @@ footer p{
 
         <nav class="nav-links" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="ssc-reasoning.html">SSC Reasoning Course</a>
+            <a href="ssc-reasoning.html">SSC Reasoning</a>
             <a href="courses.html">Courses</a>
             <a href="study-material.html">Study Material</a>
             <a href="live-classes.html">Live Classes</a>
-            <a href="test-series.html">Test Series</a>
-            <a href="exams.html">Exams</a>
+
+            <div class="dropdown">
+                <button type="button" class="dropdown-toggle" aria-haspopup="true">
+                    More
+                </button>
+                <div class="dropdown-content">
+                    <a href="test-series.html">Test Series</a>
+                    <a href="exams.html">Exams</a>
+                </div>
+            </div>
+
             <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">YouTube</a>
         </nav>
 
