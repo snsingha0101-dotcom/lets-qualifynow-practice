@@ -7,7 +7,6 @@
 <title>SSC Ranking & Order Practice | Let's QualifyNow</title>
 
 <style>
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -21,49 +20,112 @@ body{
     line-height:1.6;
 }
 
-header{
+/* HEADER & NAVIGATION — MATCHED WITH ANALOGY PRACTICE */
+
+.site-header{
+    display:flex;
+    align-items:stretch;
     background:#102a43;
-    color:white;
-    padding:18px 20px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 12px rgba(16,42,67,0.18);
+    color:#fff;
+    width:100%;
+    position:relative;
+    z-index:100;
 }
 
-.navbar{
-    max-width:1150px;
-    margin:auto;
+.site-brand{
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    gap:20px;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:.5px;
-}
-
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    justify-content:flex-end;
-}
-
-nav a{
-    color:white;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
     text-decoration:none;
-    padding:8px 11px;
-    border-radius:6px;
-    font-size:14px;
-    transition:.25s;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
 }
 
-nav a:hover{
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+
+.site-navigation>a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.site-navigation>a:hover,
+.more-button:hover{
     background:#173f5f;
+    color:#d9eaf7;
+}
+
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.more-arrow{
+    font-size:9px;
+}
+
+.more-dropdown{
+    display:none;
+    position:fixed;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    box-shadow:0 8px 24px rgba(16,42,67,.18);
+    z-index:99999;
+}
+
+.more-dropdown.open{
+    display:block;
+}
+
+.more-dropdown a{
+    display:block;
+    color:#243b53;
+    font-size:12px;
+    padding:10px 13px;
+    text-decoration:none;
+    white-space:nowrap;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
 }
 
 .hero{
@@ -370,16 +432,24 @@ footer p{
     font-size:14px;
 }
 
+@media(max-width:900px){
+    .site-brand{
+        font-size:14px;
+        padding:10px 9px;
+    }
+
+    .site-navigation{
+        padding:0 2px;
+    }
+
+    .site-navigation>a,
+    .more-button{
+        font-size:10.5px;
+        padding:11px 6px;
+    }
+}
+
 @media(max-width:700px){
-
-    .navbar{
-        flex-direction:column;
-    }
-
-    nav{
-        justify-content:center;
-    }
-
     .hero h1{
         font-size:28px;
     }
@@ -395,214 +465,359 @@ footer p{
     .result-grid{
         grid-template-columns:1fr 1fr;
     }
-
 }
 
+@media(max-width:600px){
+    .site-brand{
+        font-size:12px;
+        padding:9px 7px;
+    }
+
+    .site-navigation{
+        flex-wrap:nowrap;
+        overflow-x:auto;
+    }
+
+    .site-navigation>a,
+    .more-button{
+        font-size:10px;
+        padding:10px 6px;
+    }
+
+    .more-dropdown{
+        max-width:calc(100vw - 16px);
+    }
+}
 </style>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-<div class="navbar">
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="site-brand">LET'S QUALIFYNOW</a>
 
-<div class="logo">
-LET'S QUALIFYNOW
-</div>
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
 
-<nav>
-<a href="index.html">Home</a>
-<a href="courses.html">Courses</a>
-<a href="study-material.html">Study Material</a>
-<a href="live-classes.html">Live Classes</a>
-<a href="test-series.html">Test Series</a>
-<a href="exams.html">Exams</a>
-<a href="https://youtube.com/@letsqualifynow7636" target="_blank">YouTube</a>
-</nav>
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
 
-</div>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
+
+        <div class="more-menu" id="moreMenu">
+
+            <button type="button"
+                    class="more-button"
+                    id="moreButton"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
+
+            <div class="more-dropdown" id="moreDropdown">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+            </div>
+
+        </div>
+
+    </nav>
 
 </header>
 
 
 <section class="hero">
 
-<h1>🏆 SSC Ranking & Order Practice</h1>
+    <h1>🏆 SSC Ranking & Order Practice</h1>
 
-<p>
-50 Exam-Oriented Questions with Answers & Detailed Solutions
-</p>
+    <p>
+        50 Exam-Oriented Questions with Answers & Detailed Solutions
+    </p>
 
-<p>
-50 परीक्षा-उन्मुख प्रश्न, उत्तर एवं विस्तृत समाधान सहित
-</p>
+    <p>
+        50 परीक्षा-उन्मुख प्रश्न, उत्तर एवं विस्तृत समाधान सहित
+    </p>
 
 </section>
 
 
 <div class="container">
 
-<div class="intro">
+    <div class="intro">
 
-<h2>📘 SSC Ranking & Order Practice Set</h2>
+        <h2>📘 SSC Ranking & Order Practice Set</h2>
 
-<p>
-This practice set covers important SSC-level questions based on
-Ranking, Position, Order, Left-Right Position, Top-Bottom Ranking
-and Mixed Ranking & Order concepts.
-</p>
+        <p>
+            This practice set covers important SSC-level questions based on
+            Ranking, Position, Order, Left-Right Position, Top-Bottom Ranking
+            and Mixed Ranking & Order concepts.
+        </p>
 
-<p class="q-hindi">
-इस Practice Set में Ranking, Position, Order, बाएँ-दाएँ की Position,
-ऊपर-नीचे की Ranking तथा Mixed Ranking & Order से संबंधित
-महत्वपूर्ण SSC-level प्रश्न शामिल हैं।
-</p>
+        <p class="q-hindi">
+            इस Practice Set में Ranking, Position, Order, बाएँ-दाएँ की Position,
+            ऊपर-नीचे की Ranking तथा Mixed Ranking & Order से संबंधित
+            महत्वपूर्ण SSC-level प्रश्न शामिल हैं।
+        </p>
 
-<p>
-<strong>Total Questions:</strong> 50
-&nbsp; | &nbsp;
-<strong>Level:</strong> SSC Exam Standard
-</p>
+        <p>
+            <strong>Total Questions:</strong> 50
+            &nbsp; | &nbsp;
+            <strong>Level:</strong> SSC Exam Standard
+        </p>
 
-<p class="q-hindi">
-<strong>कुल प्रश्न:</strong> 50
-&nbsp; | &nbsp;
-<strong>स्तर:</strong> SSC परीक्षा स्तर
-</p>
+        <p class="q-hindi">
+            <strong>कुल प्रश्न:</strong> 50
+            &nbsp; | &nbsp;
+            <strong>स्तर:</strong> SSC परीक्षा स्तर
+        </p>
 
-<p style="margin-top:12px;">
-<strong>Instruction:</strong> Select an option. The answer and detailed
-solution will appear only after you attempt the question.
-</p>
+        <p style="margin-top:12px;">
+            <strong>Instruction:</strong> Select an option. The answer and detailed
+            solution will appear only after you attempt the question.
+        </p>
 
-<p class="q-hindi">
-<strong>निर्देश:</strong> एक विकल्प चुनें। उत्तर और विस्तृत समाधान
-केवल प्रश्न attempt करने के बाद दिखाई देंगे।
-</p>
+        <p class="q-hindi">
+            <strong>निर्देश:</strong> एक विकल्प चुनें। उत्तर और विस्तृत समाधान
+            केवल प्रश्न attempt करने के बाद दिखाई देंगे।
+        </p>
 
-</div>
-
-
-<h2 class="section-title">
-Ranking & Order Questions / Ranking एवं Order के प्रश्न
-</h2>
+    </div>
 
 
-<div id="questionsContainer"></div>
+    <h2 class="section-title">
+        Ranking & Order Questions / Ranking एवं Order के प्रश्न
+    </h2>
+
+    <div id="questionsContainer"></div>
 
 
-<!-- PRACTICE RESULT -->
+    <!-- PRACTICE RESULT -->
 
-<div class="practice-result" id="practiceResult">
+    <div class="practice-result" id="practiceResult">
 
-<h2>
-📊 Your Practice Result / आपका Practice Result
-</h2>
+        <h2>
+            📊 Your Practice Result / आपका Practice Result
+        </h2>
 
-<div class="result-grid">
+        <div class="result-grid">
 
-<div class="result-card">
-<span class="result-number" id="score">0 / 50</span>
-<span class="result-label">Score / स्कोर</span>
-</div>
+            <div class="result-card">
+                <span class="result-number" id="score">0 / 50</span>
+                <span class="result-label">Score / स्कोर</span>
+            </div>
 
-<div class="result-card">
-<span class="result-number" id="attempted">0</span>
-<span class="result-label">Attempted / प्रयास किए</span>
-</div>
+            <div class="result-card">
+                <span class="result-number" id="attempted">0</span>
+                <span class="result-label">Attempted / प्रयास किए</span>
+            </div>
 
-<div class="result-card">
-<span class="result-number" id="correct">0</span>
-<span class="result-label">Correct / सही</span>
-</div>
+            <div class="result-card">
+                <span class="result-number" id="correct">0</span>
+                <span class="result-label">Correct / सही</span>
+            </div>
 
-<div class="result-card">
-<span class="result-number" id="wrong">0</span>
-<span class="result-label">Wrong / गलत</span>
-</div>
+            <div class="result-card">
+                <span class="result-number" id="wrong">0</span>
+                <span class="result-label">Wrong / गलत</span>
+            </div>
 
-</div>
+        </div>
 
-<button class="reset-btn" onclick="resetPractice()">
-Reset Practice / दोबारा शुरू करें
-</button>
+        <button class="reset-btn" onclick="resetPractice()">
+            Reset Practice / दोबारा शुरू करें
+        </button>
 
-</div>
-
-
-<!-- IMPORTANT RULES -->
-
-<div class="note">
-
-<h3>
-📌 Important Ranking & Order Rules / महत्वपूर्ण Ranking एवं Order के नियम
-</h3>
-
-<p>
-<strong>1.</strong>
-Rank from opposite side = Total − Given Rank + 1
-<br>
-विपरीत दिशा से Rank = कुल व्यक्तियों की संख्या − दी गई Rank + 1
-</p>
-
-<p>
-<strong>2.</strong>
-Total persons = Rank from one side + Rank from opposite side − 1
-<br>
-कुल व्यक्ति = एक दिशा की Rank + विपरीत दिशा की Rank − 1
-</p>
-
-<p>
-<strong>3.</strong>
-Persons between two positions = Difference between positions − 1
-<br>
-दो स्थानों के बीच व्यक्तियों की संख्या = दोनों स्थानों का अंतर − 1
-</p>
-
-<p>
-<strong>4.</strong>
-Always convert left/right or top/bottom positions to the same
-reference side before calculating.
-<br>
-Calculation करने से पहले हमेशा left/right या top/bottom की
-positions को एक ही दिशा में बदलें।
-</p>
-
-</div>
+    </div>
 
 
-<div class="back">
+    <!-- IMPORTANT RULES -->
 
-<a href="ssc-topic-wise-practice.html">
-← Back to SSC Topic-wise Practice / SSC Topic-wise Practice पर वापस जाएँ
-</a>
+    <div class="note">
 
-</div>
+        <h3>
+            📌 Important Ranking & Order Rules / महत्वपूर्ण Ranking एवं Order के नियम
+        </h3>
+
+        <p>
+            <strong>1.</strong>
+            Rank from opposite side = Total − Given Rank + 1
+            <br>
+            विपरीत दिशा से Rank = कुल व्यक्तियों की संख्या − दी गई Rank + 1
+        </p>
+
+        <p>
+            <strong>2.</strong>
+            Total persons = Rank from one side + Rank from opposite side − 1
+            <br>
+            कुल व्यक्ति = एक दिशा की Rank + विपरीत दिशा की Rank − 1
+        </p>
+
+        <p>
+            <strong>3.</strong>
+            Persons between two positions = Difference between positions − 1
+            <br>
+            दो स्थानों के बीच व्यक्तियों की संख्या = दोनों स्थानों का अंतर − 1
+        </p>
+
+        <p>
+            <strong>4.</strong>
+            Always convert left/right or top/bottom positions to the same
+            reference side before calculating.
+            <br>
+            Calculation करने से पहले हमेशा left/right या top/bottom की
+            positions को एक ही दिशा में बदलें।
+        </p>
+
+    </div>
+
+
+    <div class="back">
+
+        <a href="ssc-topic-wise-practice.html">
+            ← Back to SSC Topic-wise Practice / SSC Topic-wise Practice पर वापस जाएँ
+        </a>
+
+    </div>
 
 </div>
 
 
 <footer>
 
-<p><strong>LET'S QUALIFYNOW</strong></p>
+    <p><strong>LET'S QUALIFYNOW</strong></p>
 
-<p>
-N Saurabh Sir — Reasoning Faculty
-</p>
+    <p>
+        N Saurabh Sir — Reasoning Faculty
+    </p>
 
-<p>
-SSC • Banking • Railway • Government Exams
-</p>
+    <p>
+        SSC • Banking • Railway • Government Exams
+    </p>
 
-<p>
-© 2026 Let's QualifyNow. All Rights Reserved.
-</p>
+    <p>
+        © 2026 Let's QualifyNow. All Rights Reserved.
+    </p>
 
 </footer>
 
 
 <script>
+
+/* MORE DROPDOWN NAVIGATION */
+
+(function(){
+
+    const moreButton = document.getElementById("moreButton");
+    const moreDropdown = document.getElementById("moreDropdown");
+
+    if(!moreButton || !moreDropdown){
+        return;
+    }
+
+    /* Move dropdown outside the horizontally scrolling navigation. */
+    document.body.appendChild(moreDropdown);
+
+    function positionDropdown(){
+
+        const rect = moreButton.getBoundingClientRect();
+        const width = Math.min(170, window.innerWidth - 16);
+
+        let left = Math.min(
+            rect.left,
+            window.innerWidth - width - 8
+        );
+
+        left = Math.max(8, left);
+
+        moreDropdown.style.left = left + "px";
+        moreDropdown.style.top = rect.bottom + "px";
+        moreDropdown.style.minWidth = width + "px";
+    }
+
+    function closeDropdown(){
+
+        moreDropdown.classList.remove("open");
+
+        moreButton.setAttribute("aria-expanded","false");
+    }
+
+    moreButton.addEventListener("click",function(event){
+
+        event.stopPropagation();
+
+        if(moreDropdown.classList.contains("open")){
+
+            closeDropdown();
+
+        }else{
+
+            positionDropdown();
+
+            moreDropdown.classList.add("open");
+
+            moreButton.setAttribute("aria-expanded","true");
+        }
+
+    });
+
+    moreDropdown.addEventListener("click",function(event){
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click",function(event){
+
+        if(
+            !moreButton.contains(event.target) &&
+            !moreDropdown.contains(event.target)
+        ){
+            closeDropdown();
+        }
+
+    });
+
+    document.addEventListener("keydown",function(event){
+
+        if(event.key === "Escape"){
+            closeDropdown();
+        }
+
+    });
+
+    window.addEventListener("resize",function(){
+
+        if(moreDropdown.classList.contains("open")){
+            positionDropdown();
+        }
+
+    });
+
+    window.addEventListener("scroll",function(){
+
+        if(moreDropdown.classList.contains("open")){
+            closeDropdown();
+        }
+
+    },true);
+
+})();
+
 
 const questionData = [
 
@@ -1980,11 +2195,9 @@ function attachQuestionEvents(){
                     return;
                 }
 
-
                 question.dataset.answered = "true";
 
                 attempted++;
-
 
                 const selected =
                     this.dataset.option;
@@ -1992,25 +2205,20 @@ function attachQuestionEvents(){
                 const answer =
                     question.dataset.answer;
 
-
                 this.classList.add("selected");
-
 
                 options.forEach(function(opt){
                     opt.style.pointerEvents = "none";
                 });
 
-
                 const resultHolder =
                     question.querySelector(".result-holder");
-
 
                 if(selected === answer){
 
                     correct++;
 
                     this.classList.add("correct");
-
 
                     resultHolder.innerHTML = `
                         <div class="result-message correct-message">
@@ -2024,17 +2232,13 @@ function attachQuestionEvents(){
 
                     this.classList.add("wrong");
 
-
                     options.forEach(function(opt){
 
                         if(opt.dataset.option === answer){
-
                             opt.classList.add("correct");
-
                         }
 
                     });
-
 
                     resultHolder.innerHTML = `
                         <div class="result-message wrong-message">
@@ -2045,14 +2249,11 @@ function attachQuestionEvents(){
 
                 }
 
-
                 question.querySelector(".answer")
                     .style.display = "block";
 
-
                 question.querySelector(".solution")
                     .style.display = "block";
-
 
                 updateResult();
 
@@ -2088,17 +2289,14 @@ function resetPractice(){
     correct = 0;
     wrong = 0;
 
-
     document
     .querySelectorAll(".question")
     .forEach(function(question){
 
         question.dataset.answered = "false";
 
-
         const options =
             question.querySelectorAll(".option");
-
 
         options.forEach(function(option){
 
@@ -2112,7 +2310,6 @@ function resetPractice(){
 
         });
 
-
         const resultHolder =
             question.querySelector(".result-holder");
 
@@ -2120,14 +2317,12 @@ function resetPractice(){
             resultHolder.innerHTML = "";
         }
 
-
         const answer =
             question.querySelector(".answer");
 
         if(answer){
             answer.style.display = "none";
         }
-
 
         const solution =
             question.querySelector(".solution");
@@ -2138,9 +2333,7 @@ function resetPractice(){
 
     });
 
-
     updateResult();
-
 
     window.scrollTo({
         top:0,
