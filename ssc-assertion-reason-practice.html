@@ -20,44 +20,39 @@ body{
     line-height:1.6;
 }
 
-/* ================= HEADER ================= */
+/* ================= HEADER & NAVIGATION ================= */
 
-header{
+.site-header{
+    display:flex;
+    align-items:stretch;
     background:#102a43;
     color:#fff;
-    padding:18px 20px 14px;
-    text-align:center;
+    width:100%;
+    position:relative;
+    z-index:100;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-    letter-spacing:.5px;
-}
-
-.tagline{
-    font-size:14px;
-    margin-top:3px;
-    color:#d9eaf7;
-}
-
-.faculty{
-    font-size:14px;
-    margin-top:6px;
-    color:#fff;
-    font-weight:600;
-}
-
-/* ================= NAVIGATION ================= */
-
-nav{
-    margin-top:15px;
+.site-brand{
+    flex:0 0 auto;
     display:flex;
     align-items:center;
-    justify-content:flex-start;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    text-decoration:none;
+    border-right:1px solid rgba(255,255,255,.12);
+}
+
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
     flex-wrap:nowrap;
     gap:0;
-    width:100%;
     padding:0 4px;
     overflow-x:auto;
     overflow-y:hidden;
@@ -67,7 +62,7 @@ nav{
     -webkit-overflow-scrolling:touch;
 }
 
-nav>a,
+.site-navigation>a,
 .more-button{
     display:block;
     flex:0 0 auto;
@@ -85,7 +80,7 @@ nav>a,
     transition:background .2s;
 }
 
-nav>a:hover,
+.site-navigation>a:hover,
 .more-button:hover{
     background:#173f5f;
     color:#d9eaf7;
@@ -412,11 +407,16 @@ footer strong{
 
 @media(max-width:900px){
 
-    .logo{
-        font-size:25px;
+    .site-brand{
+        font-size:14px;
+        padding:10px 9px;
     }
 
-    nav>a,
+    .site-navigation{
+        padding:0 2px;
+    }
+
+    .site-navigation>a,
     .more-button{
         font-size:10.5px;
         padding:11px 6px;
@@ -425,7 +425,42 @@ footer strong{
 
 /* ================= MOBILE ================= */
 
-@media(max-width:700px){
+@media(max-width:600px){
+
+    .site-header{
+        align-items:stretch;
+    }
+
+    .site-brand{
+        font-size:12px;
+        padding:9px 7px;
+        letter-spacing:0;
+    }
+
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        gap:0;
+        justify-content:flex-start;
+        flex-wrap:nowrap;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+    }
+
+    .site-navigation>a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
+    }
 
     .logo{
         font-size:24px;
@@ -446,48 +481,20 @@ footer strong{
     .result-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
-    nav{
-        gap:0;
-        justify-content:flex-start;
-        flex-wrap:nowrap;
-        padding:0 2px;
-        overflow-x:auto;
-        overflow-y:hidden;
-    }
-
-    nav>a,
-    .more-button{
-        flex:0 0 auto;
-        font-size:10px;
-        padding:10px 6px;
-        white-space:nowrap;
-    }
-
-    .more-dropdown{
-        width:155px;
-        min-width:155px;
-        max-width:calc(100vw - 16px);
-    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-    <div class="logo">LET'S QUALIFYNOW</div>
+    <a class="site-brand"
+       href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">
+        LET'S QUALIFYNOW
+    </a>
 
-    <div class="tagline">
-        You Are Closer To Success
-    </div>
-
-    <div class="faculty">
-        N Saurabh Sir — Reasoning Faculty | SSC • Banking • Railway • Government Exams
-    </div>
-
-    <nav id="siteNavigation" aria-label="Main navigation">
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
 
         <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
 
@@ -518,9 +525,7 @@ footer strong{
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-controls="moreDropdown">
-
                 More <span class="more-arrow">▼</span>
-
             </button>
 
             <div class="more-dropdown" id="moreDropdown">
@@ -537,8 +542,8 @@ footer strong{
 
 </header>
 
-
 <script>
+    
 /* ================= MORE DROPDOWN NAVIGATION FIX ================= */
 
 (function(){
