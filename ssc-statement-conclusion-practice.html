@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSC Statement & Conclusion Practice | Let's QualifyNow</title>
+<meta name="description" content="Practice SSC Statement and Conclusion reasoning questions with answers and explanations for SSC CGL, CHSL, CPO and MTS exams.">
 
 <style>
 *{
@@ -14,307 +15,266 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f7f9fc;
     color:#243b53;
     line-height:1.6;
 }
 
-header{
+/* ================= NAVIGATION ================= */
+
+.site-header{
+    display:flex;
+    align-items:stretch;
+    background:#102a43;
+    color:#fff;
+    width:100%;
     position:sticky;
     top:0;
     z-index:1000;
-    background:#102a43;
-    color:white;
-    padding:15px 20px;
     box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
 
-.header-inner{
-    max-width:1200px;
-    margin:auto;
+.site-brand{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:20px;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    text-decoration:none;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
 }
 
-.logo{
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:1px;
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+
+.site-navigation a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    cursor:pointer;
     white-space:nowrap;
 }
 
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    gap:8px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:7px 10px;
-    border-radius:5px;
-    font-size:14px;
-}
-
-nav a:hover{
+.site-navigation a:hover,
+.more-button:hover{
     background:#173f5f;
+    color:#d9eaf7;
+}
+
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.more-arrow{
+    font-size:9px;
+}
+
+.more-dropdown{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
+    width:170px;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:99999;
+}
+
+.more-dropdown.show{
+    display:block;
+}
+
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.more-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
+}
+
+/* ================= PAGE CONTENT ================= */
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:20px;
 }
 
 .hero{
-    background:#173f5f;
-    color:white;
+    background:#102a43;
+    color:#fff;
     text-align:center;
-    padding:45px 20px;
+    padding:30px 20px;
+    border-radius:12px;
+    margin:20px 0;
 }
 
 .hero h1{
-    font-size:34px;
-    margin-bottom:10px;
+    font-size:28px;
+    margin-bottom:8px;
 }
 
 .hero p{
-    font-size:18px;
-    max-width:850px;
-    margin:auto;
-}
-
-.container{
-    max-width:1000px;
-    margin:35px auto;
-    padding:0 15px;
-}
-
-.intro{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    border:1px solid #d9e2ec;
-    margin-bottom:30px;
-}
-
-.intro h2{
-    color:#102a43;
-    margin-bottom:12px;
-}
-
-.intro p{
-    color:#52606d;
-    margin-bottom:12px;
-}
-
-.intro ul{
-    margin-left:20px;
-    color:#52606d;
-}
-
-.intro li{
-    margin-bottom:6px;
+    font-size:16px;
+    color:#d9eaf7;
 }
 
 .part{
-    margin-bottom:35px;
+    margin:24px 0;
 }
 
 .part-title{
     background:#d9eaf7;
     color:#102a43;
-    padding:14px 18px;
-    border-left:5px solid #173f5f;
-    border-radius:7px;
-    margin-bottom:18px;
-    font-size:21px;
+    padding:14px 16px;
+    border-radius:8px;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:16px;
 }
 
 .question-card{
-    background:white;
+    background:#fff;
     border:1px solid #d9e2ec;
     border-radius:10px;
-    padding:20px;
+    padding:18px;
     margin-bottom:18px;
-    box-shadow:0 2px 6px rgba(36,59,83,0.05);
+    box-shadow:0 2px 6px rgba(16,42,67,.05);
 }
 
 .question{
-    font-size:17px;
-    font-weight:bold;
-    color:#243b53;
-    margin-bottom:15px;
+    font-weight:700;
+    margin-bottom:12px;
 }
 
 .options{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
 }
 
 .option{
-    border:1px solid #829ab1;
-    background:#f7f9fc;
-    color:#243b53;
-    padding:12px 14px;
+    padding:10px 12px;
+    border:1px solid #d9e2ec;
     border-radius:7px;
+    background:#fff;
     cursor:pointer;
-    transition:0.2s;
-    font-size:15px;
 }
 
 .option:hover{
-    background:#d9eaf7;
+    background:#eef6fb;
 }
 
-.option.correct{
-    background:#d4edda;
-    border-color:#28a745;
-    color:#155724;
-}
-
-.option.wrong{
-    background:#f8d7da;
-    border-color:#dc3545;
-    color:#721c24;
-}
-
-.solution{
-    display:none;
-    margin-top:15px;
-    padding:14px;
-    background:#f7f9fc;
-    border-left:4px solid #173f5f;
-    border-radius:5px;
-    color:#243b53;
-}
-
-.solution strong{
-    color:#102a43;
-}
-
-.score-box{
-    background:#102a43;
-    color:white;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    margin:40px 0 25px;
-}
-
-.score-box h2{
-    margin-bottom:15px;
-}
-
-.score-number{
-    font-size:32px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    font-size:16px;
-}
-
-.stats span{
-    background:#173f5f;
-    padding:8px 14px;
-    border-radius:5px;
-}
-
-.button-area{
-    text-align:center;
-    margin:25px 0 40px;
-}
-
-.btn{
-    display:inline-block;
-    border:none;
-    background:#173f5f;
-    color:white;
-    padding:12px 22px;
-    border-radius:6px;
-    cursor:pointer;
-    text-decoration:none;
-    font-size:15px;
-    margin:5px;
-}
-
-.btn:hover{
-    background:#102a43;
-}
-
-.note{
+.instructions{
     background:#fff;
-    border:1px solid #d9e2ec;
-    padding:18px;
+    border-left:4px solid #173f5f;
     border-radius:8px;
-    margin-bottom:30px;
-    color:#52606d;
-}
-
-.note strong{
-    color:#102a43;
-}
-
-footer{
-    background:#102a43;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-    margin-top:40px;
-}
-
-footer p{
-    margin:5px 0;
-}
-
-footer a{
-    color:white;
-    text-decoration:none;
+    padding:16px 18px;
+    margin:20px 0;
 }
 
 @media(max-width:700px){
 
-    .header-inner{
-        flex-direction:column;
+    .site-header{
+        width:100%;
+        align-items:stretch;
     }
 
-    nav{
-        justify-content:center;
+    .site-brand{
+        font-size:12px;
+        padding:9px 7px;
+        letter-spacing:0;
     }
 
-    nav a{
-        font-size:13px;
-        padding:6px 8px;
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
     }
 
-    .hero{
-        padding:35px 15px;
+    .site-navigation a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
+    }
+
+    .container{
+        padding:12px;
     }
 
     .hero h1{
-        font-size:27px;
+        font-size:23px;
     }
 
-    .hero p{
-        font-size:16px;
+    .part-title{
+        font-size:18px;
     }
 
-    .options{
-        grid-template-columns:1fr;
-    }
-
-    .question{
-        font-size:16px;
-    }
-
-    .stats{
-        gap:10px;
+    .question-card{
+        padding:14px;
     }
 }
 </style>
@@ -322,85 +282,61 @@ footer a{
 
 <body>
 
-<header>
-<div class="header-inner">
+<header class="site-header">
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="site-brand">LET'S QUALIFYNOW</a>
 
-<div class="logo">LET'S QUALIFYNOW</div>
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="ssc-reasoning.html">SSC Reasoning</a>
-<a href="courses.html">Courses</a>
-<a href="study-material.html">Study Material</a>
-<a href="live-classes.html">Live Classes</a>
-<a href="test-series.html">Test Series</a>
-<a href="exams.html">Exams</a>
-<a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
-</nav>
+        <div class="more-menu" id="moreMenu">
+            <button type="button"
+                    class="more-button"
+                    id="moreButton"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
 
-</div>
+            <div class="more-dropdown" id="moreDropdown">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+            </div>
+        </div>
+    </nav>
 </header>
-
-
-<section class="hero">
-
-<h1>📝 SSC Statement &amp; Conclusion Practice</h1>
-
-<p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
-
-</section>
-
 
 <div class="container">
 
-<div class="intro">
+    <section class="hero">
+        <h1>📝 SSC Statement &amp; Conclusion Practice</h1>
+        <p>Exam-Oriented Reasoning Practice for SSC CGL, CHSL, CPO and MTS</p>
+    </section>
 
-<h2>SSC Statement &amp; Conclusion Practice Set</h2>
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <p>Read each statement carefully and select the conclusion that logically follows from the given statement.</p>
+        <p>प्रत्येक कथन को ध्यानपूर्वक पढ़िए और उस निष्कर्ष का चयन कीजिए जो दिए गए कथन से तार्किक रूप से निकलता है।</p>
+    </div>
 
-<p>
-This practice set covers important Statement &amp; Conclusion patterns commonly asked in SSC and other Government Exams.
-</p>
+    <!-- PART 1 -->
+    <div class="part">
+        <div class="part-title">
+            Part 1 — Basic Statement &amp; Conclusion
+        </div>
 
-<ul>
-<li>Identify the conclusion that logically follows from a statement.</li>
-<li>Distinguish between a valid and invalid conclusion.</li>
-<li>Understand what can be inferred from the given information.</li>
-<li>Avoid assumptions based on outside knowledge.</li>
-<li>Apply logical reasoning to exam-oriented statements.</li>
-</ul>
-
-</div>
-
-
-<div class="note">
-
-<strong>📌 How to Attempt</strong>
-
-<ul style="margin:10px 0 0 20px;">
-
-<li>Read the statement carefully.</li>
-<li>Do not add information that is not given in the statement.</li>
-<li>Check whether the conclusion necessarily or logically follows.</li>
-<li>Choose the option that is best supported by the statement.</li>
-<li>After selecting an option, the correct answer and solution will appear.</li>
-<li>Try all 50 questions and check your final score.</li>
-
-</ul>
-
-</div>
-
-
-<!-- PART 1 -->
-
-<div class="part">
-
-<div class="part-title">
-Part 1 — Basic Statement &amp; Conclusion
-</div>
-
-
-<div class="question-card" data-answer="B">
-
+        <div class="question-card" data-answer="B">
+            
 <div class="question">
 Q1. Statement: Regular practice improves performance in competitive examinations. Which conclusion follows?<br>
 हिंदी: कथन: नियमित अभ्यास प्रतियोगी परीक्षाओं में प्रदर्शन को बेहतर बनाता है। कौन-सा निष्कर्ष निकलता है?
