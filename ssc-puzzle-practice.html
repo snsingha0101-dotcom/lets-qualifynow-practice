@@ -2073,6 +2073,7 @@ body{
 </section>
 
 
+
 <!-- SCORE -->
 <section class="score-section">
 
@@ -2099,14 +2100,14 @@ body{
 
     </div>
 
-
     <div class="button-area">
 
-        <button class="action-btn reset-btn" onclick="resetQuiz()">
+        <button type="button" class="action-btn reset-btn" onclick="resetQuiz()">
             Reset Practice
         </button>
 
-        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0" class="action-btn home-btn">
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+           class="action-btn home-btn">
             Back to Home
         </a>
 
@@ -2115,7 +2116,6 @@ body{
 </section>
 
 </main>
-
 
 
 <!-- FOOTER -->
@@ -2147,6 +2147,97 @@ body{
 
 
 <style>
+/* SCORE SECTION */
+.score-section{
+    background:#fff;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
+    padding:24px 22px;
+    margin:30px 0;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
+}
+
+.score-section h2{
+    color:#102a43;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.score{
+    color:#173f5f;
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.score-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+    margin-bottom:22px;
+}
+
+.score-item{
+    background:#f7f9fc;
+    border:1px solid #e1e8ed;
+    border-radius:10px;
+    padding:14px 8px;
+}
+
+.score-item strong{
+    display:block;
+    color:#102a43;
+    font-size:24px;
+}
+
+.score-item span{
+    display:block;
+    color:#52606d;
+    font-size:14px;
+    margin-top:4px;
+}
+
+.button-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.action-btn{
+    display:inline-block;
+    padding:11px 20px;
+    border-radius:8px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    cursor:pointer;
+    transition:background .2s;
+}
+
+.reset-btn{
+    background:#173f5f;
+    color:#fff;
+    border:1px solid #173f5f;
+}
+
+.reset-btn:hover{
+    background:#102a43;
+}
+
+.home-btn{
+    background:#e8f1f8;
+    color:#173f5f;
+    border:1px solid #d9e2ec;
+}
+
+.home-btn:hover{
+    background:#d9eaf7;
+}
+
 /* FOOTER */
 footer{
     background:#102a43;
@@ -2190,8 +2281,42 @@ footer .copyright{
     color:#d9e2ec;
 }
 
-/* MOBILE FOOTER */
+/* MOBILE */
 @media(max-width:600px){
+
+    .score-section{
+        padding:18px 12px;
+    }
+
+    .score-section h2{
+        font-size:22px;
+    }
+
+    .score{
+        font-size:29px;
+    }
+
+    .score-grid{
+        gap:7px;
+    }
+
+    .score-item{
+        padding:12px 4px;
+    }
+
+    .score-item strong{
+        font-size:21px;
+    }
+
+    .score-item span{
+        font-size:12px;
+    }
+
+    .action-btn{
+        padding:10px 14px;
+        font-size:13px;
+    }
+
     footer{
         padding:25px 15px;
     }
