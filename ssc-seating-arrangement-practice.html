@@ -2361,5 +2361,104 @@ updateScore();
 
 </script>
 
+
+<script>
+"use strict";
+
+const moreMenu = document.getElementById("moreMenu");
+const moreButton = document.getElementById("moreButton");
+const moreDropdown = document.getElementById("moreDropdown");
+const siteNavigation = document.getElementById("siteNavigation");
+
+if (moreMenu && moreButton && moreDropdown && siteNavigation) {
+
+    document.body.appendChild(moreDropdown);
+
+    function positionMoreDropdown() {
+        const buttonRect = moreButton.getBoundingClientRect();
+
+        moreDropdown.style.left = "8px";
+        moreDropdown.style.top = "0px";
+        moreDropdown.style.visibility = "hidden";
+        moreDropdown.classList.add("show");
+
+        const dropdownRect = moreDropdown.getBoundingClientRect();
+        const dropdownWidth = dropdownRect.width;
+        const dropdownHeight = dropdownRect.height;
+
+        let left = buttonRect.left;
+        let top = buttonRect.bottom;
+
+        if (left + dropdownWidth > window.innerWidth - 8) {
+            left = window.innerWidth - dropdownWidth - 8;
+        }
+
+        if (left < 8) {
+            left = 8;
+        }
+
+        if (top + dropdownHeight > window.innerHeight - 8) {
+            top = buttonRect.top - dropdownHeight;
+        }
+
+        if (top < 8) {
+            top = 8;
+        }
+
+        moreDropdown.style.left = left + "px";
+        moreDropdown.style.top = top + "px";
+        moreDropdown.style.visibility = "visible";
+    }
+
+    function openMoreMenu() {
+        positionMoreDropdown();
+        moreButton.setAttribute("aria-expanded", "true");
+    }
+
+    function closeMoreMenu() {
+        moreDropdown.classList.remove("show");
+        moreDropdown.style.visibility = "";
+        moreButton.setAttribute("aria-expanded", "false");
+    }
+
+    moreButton.addEventListener("click", function(event) {
+        event.stopPropagation();
+
+        if (moreDropdown.classList.contains("show")) {
+            closeMoreMenu();
+        } else {
+            openMoreMenu();
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (
+            !moreMenu.contains(event.target) &&
+            !moreDropdown.contains(event.target)
+        ) {
+            closeMoreMenu();
+        }
+    });
+
+    moreDropdown.addEventListener("click", function(event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeMoreMenu();
+            moreButton.focus();
+        }
+    });
+
+    siteNavigation.addEventListener("scroll", closeMoreMenu, {
+        passive: true
+    });
+
+    window.addEventListener("scroll", closeMoreMenu);
+    window.addEventListener("resize", closeMoreMenu);
+}
+</script>
+
 </body>
 </html>
