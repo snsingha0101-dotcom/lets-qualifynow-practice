@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +8,7 @@
 <meta name="description" content="Practice SSC Puzzle questions with answers and detailed solutions for SSC CGL, CHSL, CPO, MTS and other government exams.">
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
     font-family:Arial,Helvetica,sans-serif;
@@ -22,7 +17,7 @@ body{
     line-height:1.6;
 }
 
-/* HEADER AND NAVIGATION */
+/* HEADER: BRAND AND NAVIGATION ON THE SAME LINE */
 .site-header{
     display:flex;
     align-items:stretch;
@@ -47,6 +42,7 @@ body{
     border-right:1px solid rgba(255,255,255,.12);
 }
 
+/* SINGLE-LINE, SMALLER NAVIGATION */
 .site-navigation{
     display:flex;
     align-items:center;
@@ -86,10 +82,7 @@ body{
     color:#d9eaf7;
 }
 
-.more-menu{
-    position:relative;
-    flex:0 0 auto;
-}
+.more-menu{position:relative;flex:0 0 auto}
 
 .more-button{
     display:flex;
@@ -97,10 +90,9 @@ body{
     gap:4px;
 }
 
-.more-arrow{
-    font-size:9px;
-}
+.more-arrow{font-size:9px}
 
+/* DROPDOWN IS MOVED TO BODY TO PREVENT NAVIGATION CLIPPING */
 .more-dropdown{
     display:none;
     position:fixed;
@@ -116,9 +108,7 @@ body{
     z-index:99999;
 }
 
-.more-dropdown.show{
-    display:block;
-}
+.more-dropdown.show{display:block}
 
 .more-dropdown a{
     display:block;
@@ -130,9 +120,7 @@ body{
     font-size:13px;
 }
 
-.more-dropdown a:last-child{
-    border-bottom:none;
-}
+.more-dropdown a:last-child{border-bottom:none}
 
 .more-dropdown a:hover{
     background:#eef6fb;
@@ -142,53 +130,57 @@ body{
 /* HERO */
 .hero{
     background:#173f5f;
-    color:#ffffff;
-    padding:42px 15px;
+    color:#fff;
     text-align:center;
+    padding:55px 20px;
 }
 
 .hero h1{
-    font-size:32px;
-    margin-bottom:10px;
+    color:#fff;
+    font-size:36px;
+    margin-bottom:12px;
 }
 
 .hero p{
-    font-size:17px;
+    color:#fff;
+    font-size:18px;
+    max-width:850px;
+    margin:6px auto;
 }
 
-/* MAIN */
+/* MAIN CONTAINER */
 .container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:30px 15px 50px;
+    width:86%;
+    max-width:1000px;
+    margin:40px auto;
 }
 
 /* INTRO */
 .intro{
     background:#fff;
-    border:1px solid #d9e2ec;
-    border-radius:10px;
-    padding:25px;
-    margin-bottom:25px;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
 }
 
 .intro h2{
     color:#102a43;
-    margin-bottom:10px;
+    margin-bottom:12px;
     font-size:24px;
 }
 
-.intro p{
-    color:#52606d;
-}
+.intro p{color:#52606d}
 
 /* TOPICS */
 .topic-box{
-    background:#d9eaf7;
-    border:1px solid #d9e2ec;
-    border-radius:10px;
-    padding:20px;
-    margin-bottom:28px;
+    background:#fff;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
 }
 
 .topic-box h3{
@@ -198,22 +190,20 @@ body{
 
 .topic-list{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:8px 25px;
 }
 
-.topic-list div{
-    color:#243b53;
-}
+.topic-list div{color:#243b53}
 
-/* HOW TO ATTEMPT */
+/* INSTRUCTIONS */
 .instructions{
     background:#fff;
-    border:1px solid #d9e2ec;
-    border-left:5px solid #173f5f;
-    border-radius:8px;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
     padding:22px;
-    margin-bottom:35px;
+    margin-bottom:30px;
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
 }
 
 .instructions h3{
@@ -221,18 +211,11 @@ body{
     margin-bottom:12px;
 }
 
-.instructions ul{
-    padding-left:22px;
-}
-
-.instructions li{
-    margin-bottom:7px;
-}
+.instructions ul{padding-left:22px}
+.instructions li{margin:6px 0}
 
 /* PART AND QUESTION FORMATTING */
-.part{
-    margin-bottom:35px;
-}
+.part{margin-bottom:35px}
 
 .part-title{
     color:#102a43;
@@ -244,109 +227,133 @@ body{
 
 .question-card{
     background:#fff;
-    border:1px solid #d9e2ec;
-    border-radius:12px;
+    border:1px solid #e1e8ed;
+    border-radius:14px;
     padding:22px;
     margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(16,42,67,.06);
+    box-shadow:0 5px 18px rgba(16,42,67,.06);
+    scroll-margin-top:15px;
 }
 
 .question{
     color:#102a43;
-    font-size:16px;
-    font-weight:600;
-    margin-bottom:18px;
+    font-size:17px;
+    font-weight:bold;
+    margin-bottom:15px;
+    overflow-wrap:anywhere;
 }
 
 .question span{
     display:inline-block;
     margin-top:4px;
-    color:#334e68;
+    color:#52606d;
     font-weight:500;
 }
 
+/* OPTIONS: RADIO CIRCLE BEFORE EVERY OPTION */
 .options{
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
 }
 
 .option{
+    display:flex;
+    align-items:flex-start;
+    gap:9px;
     width:100%;
     text-align:left;
-    padding:12px 14px;
+    padding:12px;
     border:1px solid #d9e2ec;
     border-radius:8px;
-    background:#f7f9fc;
+    background:#fff;
     color:#243b53;
     font-family:Arial,Helvetica,sans-serif;
     font-size:15px;
     cursor:pointer;
-    transition:background .2s,border-color .2s;
+    transition:background .15s,border-color .15s;
+    overflow-wrap:anywhere;
 }
 
-.option:hover{
-    background:#eef6fb;
-    border-color:#829ab1;
+.option::before{
+    content:"";
+    display:inline-block;
+    width:16px;
+    height:16px;
+    flex:0 0 16px;
+    margin-top:3px;
+    border:2px solid #829ab1;
+    border-radius:50%;
+    background:#fff;
 }
+
+.option:hover{background:#f0f6fa}
 
 .option:focus-visible{
     outline:2px solid #173f5f;
     outline-offset:2px;
 }
 
+.option.selected{
+    border-color:#173f5f;
+    background:#eaf3f9;
+}
+
+.option.selected::before{
+    border-color:#173f5f;
+    background:#173f5f;
+    box-shadow:inset 0 0 0 3px #fff;
+}
+
 .option.correct{
+    border-color:#2e7d32;
     background:#e6f4ea;
-    border-color:#2f855a;
     color:#22543d;
 }
 
+.option.correct::before{
+    border-color:#2e7d32;
+    background:#2e7d32;
+    box-shadow:inset 0 0 0 3px #fff;
+}
+
 .option.incorrect{
+    border-color:#c62828;
     background:#fdecea;
-    border-color:#c53030;
     color:#9b2c2c;
 }
 
-.solution{
-    margin-top:18px;
-    padding:16px;
-    background:#eef6fb;
-    border-left:4px solid #173f5f;
-    border-radius:6px;
-    color:#243b53;
+.option.incorrect::before{
+    border-color:#c62828;
+    background:#c62828;
+    box-shadow:inset 0 0 0 3px #fff;
 }
 
-.solution[hidden]{
-    display:none;
+/* SOLUTION */
+.solution{
+    margin-top:16px;
+    padding:15px;
+    border-left:4px solid #627d98;
+    background:#f7f9fc;
+    border-radius:6px;
+    color:#243b53;
+    overflow-wrap:anywhere;
+}
+
+.solution[hidden]{display:none}
+.solution strong{color:#102a43}
+
+/* TABLET */
+@media(max-width:900px){
+    .container{width:92%}
+    .site-brand{font-size:14px;padding:10px 9px}
+    .site-navigation{padding:0 2px}
+    .site-navigation a,.more-button{font-size:10.5px;padding:11px 6px}
 }
 
 /* MOBILE */
-@media(max-width:900px){
-    .container{
-        width:92%;
-    }
-
-    .site-brand{
-        font-size:14px;
-        padding:10px 9px;
-    }
-
-    .site-navigation{
-        padding:0 2px;
-    }
-
-    .site-navigation a,
-    .more-button{
-        font-size:10.5px;
-        padding:11px 6px;
-    }
-}
-
 @media(max-width:600px){
-    .site-header{
-        width:100%;
-        align-items:stretch;
-    }
+    .site-header{width:100%;align-items:stretch}
 
     .site-brand{
         font-size:12px;
@@ -365,8 +372,7 @@ body{
         -webkit-overflow-scrolling:touch;
     }
 
-    .site-navigation a,
-    .more-button{
+    .site-navigation a,.more-button{
         flex:0 0 auto;
         font-size:10px;
         padding:10px 6px;
@@ -379,29 +385,17 @@ body{
         max-width:calc(100vw - 16px);
     }
 
-    .hero h1{
-        font-size:26px;
-    }
+    .hero{padding:40px 16px}
+    .hero h1{font-size:28px}
+    .hero p{font-size:16px}
 
-    .hero p{
-        font-size:15px;
-    }
+    .container{width:92%;margin:28px auto}
 
-    .topic-list{
-        grid-template-columns:1fr;
-    }
+    .intro,.topic-box,.instructions,.question-card{padding:16px}
 
-    .part-title{
-        font-size:21px;
-    }
-
-    .question-card{
-        padding:16px;
-    }
-
-    .options{
-        grid-template-columns:1fr;
-    }
+    .topic-list{grid-template-columns:1fr}
+    .part-title{font-size:21px}
+    .options{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -414,7 +408,6 @@ body{
        class="site-brand">LET'S QUALIFYNOW</a>
 
     <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
-
         <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
         <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
         <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
@@ -427,13 +420,9 @@ body{
         <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
         <div class="more-menu" id="moreMenu">
-            <button
-                type="button"
-                class="more-button"
-                id="moreButton"
-                aria-expanded="false"
-                aria-haspopup="true"
-                aria-controls="moreDropdown">
+            <button type="button" class="more-button" id="moreButton"
+                    aria-expanded="false" aria-haspopup="true"
+                    aria-controls="moreDropdown">
                 More <span class="more-arrow">▼</span>
             </button>
 
@@ -442,14 +431,14 @@ body{
                 <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
             </div>
         </div>
-
     </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
     <h1>🧩 SSC Puzzle Practice</h1>
-    <p>50 Exam-Oriented Puzzle Questions with Answers &amp; Detailed Solutions</p>
+    <p>50 Exam-Oriented Puzzle Questions with Answers and Detailed Solutions</p>
+    <p>पज़ल के 50 अभ्यास प्रश्न — उत्तर और विस्तृत समाधान सहित</p>
 </section>
 
 <!-- MAIN -->
@@ -484,18 +473,24 @@ body{
 
     <!-- INSTRUCTIONS -->
     <section class="instructions">
-        <h3>How to Attempt:</h3>
+        <h3>🎯 Instructions / निर्देश</h3>
 
         <ul>
-            <li>Read all the conditions carefully.</li>
-            <li>Try to arrange the information systematically.</li>
+            <li>Total Questions / कुल प्रश्न: <strong>50</strong></li>
+            <li>Correct Answer / सही उत्तर: <strong>+2 marks</strong></li>
+            <li>Wrong Answer / गलत उत्तर: <strong>−0.5 marks</strong></li>
+            <li>Unattempted / बिना उत्तर: <strong>0 marks</strong></li>
+            <li>Read all the conditions carefully and arrange the information systematically.</li>
             <li>Do not make assumptions that are not given in the question.</li>
+            <li>प्रत्येक प्रश्न की सभी शर्तों को ध्यान से पढ़ें और जानकारी को व्यवस्थित करें।</li>
+            <li>प्रश्न में दी गई जानकारी के अतिरिक्त कोई अनुमान न लगाएँ।</li>
+            <li>Choose one option for each question. Click Submit Test to calculate your score.</li>
+            <li>अंक देखने के लिए Submit Test पर क्लिक करें।</li>
+            <li>Click Check Answers to move to unanswered questions before submitting.</li>
             <li>Options are shuffled automatically on every page load.</li>
             <li><strong>No option is selected automatically.</strong></li>
-            <li>Click one option to check your answer and solution.</li>
         </ul>
     </section>
-
 
     <!-- MORE DROPDOWN JAVASCRIPT -->
     <script>
@@ -528,17 +523,13 @@ body{
             left = window.innerWidth - dropdownWidth - 8;
         }
 
-        if(left < 8){
-            left = 8;
-        }
+        if(left < 8) left = 8;
 
         if(top + dropdownHeight > window.innerHeight - 8){
             top = buttonRect.top - dropdownHeight;
         }
 
-        if(top < 8){
-            top = 8;
-        }
+        if(top < 8) top = 8;
 
         moreDropdown.style.left = left + "px";
         moreDropdown.style.top = top + "px";
@@ -591,7 +582,6 @@ body{
     window.addEventListener("resize",closeMoreMenu);
     </script>
 
-
     <!-- PART 1 -->
     <section class="part">
 
@@ -610,10 +600,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. C — C</button>
-                <button class="option" data-option="B">B. E — E</button>
-                <button class="option" data-option="C">C. F — F</button>
-                <button class="option" data-option="D">D. D — D</button>
+                <button type="button" class="option" data-option="A">A. C — C</button>
+                <button type="button" class="option" data-option="B">B. E — E</button>
+                <button type="button" class="option" data-option="C">C. F — F</button>
+                <button type="button" class="option" data-option="D">D. D — D</button>
             </div>
 
             <div class="solution" hidden>
@@ -624,7 +614,6 @@ body{
                 इसलिए E सबसे नीचे है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="C">
             <div class="question">
@@ -637,10 +626,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. Q — Q</button>
-                <button class="option" data-option="C">C. R — R</button>
-                <button class="option" data-option="D">D. T — T</button>
+                <button type="button" class="option" data-option="A">A. P — P</button>
+                <button type="button" class="option" data-option="B">B. Q — Q</button>
+                <button type="button" class="option" data-option="C">C. R — R</button>
+                <button type="button" class="option" data-option="D">D. T — T</button>
             </div>
 
             <div class="solution" hidden>
@@ -649,7 +638,6 @@ body{
                 S, R के ठीक नीचे है। इसलिए R, S के ठीक ऊपर है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="A">
             <div class="question">
@@ -662,10 +650,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. D — D</button>
-                <button class="option" data-option="B">B. A — A</button>
-                <button class="option" data-option="C">C. B — B</button>
-                <button class="option" data-option="D">D. E — E</button>
+                <button type="button" class="option" data-option="A">A. D — D</button>
+                <button type="button" class="option" data-option="B">B. A — A</button>
+                <button type="button" class="option" data-option="C">C. B — B</button>
+                <button type="button" class="option" data-option="D">D. E — E</button>
             </div>
 
             <div class="solution" hidden>
@@ -676,7 +664,6 @@ body{
                 इसलिए इनमें D सबसे ऊपर है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="D">
             <div class="question">
@@ -690,10 +677,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. Q — Q</button>
-                <button class="option" data-option="C">C. R — R</button>
-                <button class="option" data-option="D">D. T — T</button>
+                <button type="button" class="option" data-option="A">A. P — P</button>
+                <button type="button" class="option" data-option="B">B. Q — Q</button>
+                <button type="button" class="option" data-option="C">C. R — R</button>
+                <button type="button" class="option" data-option="D">D. T — T</button>
             </div>
 
             <div class="solution" hidden>
@@ -702,7 +689,6 @@ body{
                 दी गई शर्त के अनुसार T, S के ठीक नीचे है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="B">
             <div class="question">
@@ -715,10 +701,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. B — B</button>
-                <button class="option" data-option="B">B. C — C</button>
-                <button class="option" data-option="C">C. D — D</button>
-                <button class="option" data-option="D">D. E — E</button>
+                <button type="button" class="option" data-option="A">A. B — B</button>
+                <button type="button" class="option" data-option="B">B. C — C</button>
+                <button type="button" class="option" data-option="C">C. D — D</button>
+                <button type="button" class="option" data-option="D">D. E — E</button>
             </div>
 
             <div class="solution" hidden>
@@ -729,7 +715,6 @@ body{
                 इसलिए C ऊपर से तीसरे स्थान पर है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="C">
             <div class="question">
@@ -742,10 +727,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. R — R</button>
-                <button class="option" data-option="B">B. S — S</button>
-                <button class="option" data-option="C">C. T — T</button>
-                <button class="option" data-option="D">D. U — U</button>
+                <button type="button" class="option" data-option="A">A. R — R</button>
+                <button type="button" class="option" data-option="B">B. S — S</button>
+                <button type="button" class="option" data-option="C">C. T — T</button>
+                <button type="button" class="option" data-option="D">D. U — U</button>
             </div>
 
             <div class="solution" hidden>
@@ -758,7 +743,6 @@ body{
         </div>
 
     </section>
-
 
     <!-- PART 2 -->
     <section class="part">
@@ -776,10 +760,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. E — E</button>
-                <button class="option" data-option="D">D. C — C</button>
+                <button type="button" class="option" data-option="A">A. A — A</button>
+                <button type="button" class="option" data-option="B">B. B — B</button>
+                <button type="button" class="option" data-option="C">C. E — E</button>
+                <button type="button" class="option" data-option="D">D. C — C</button>
             </div>
 
             <div class="solution" hidden>
@@ -790,7 +774,6 @@ body{
                 इसलिए E सबसे ऊपरी मंजिल पर रहता है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="A">
             <div class="question">
@@ -805,10 +788,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. 5 — 5</button>
-                <button class="option" data-option="B">B. 4 — 4</button>
-                <button class="option" data-option="C">C. 3 — 3</button>
-                <button class="option" data-option="D">D. 6 — 6</button>
+                <button type="button" class="option" data-option="A">A. 5 — 5</button>
+                <button type="button" class="option" data-option="B">B. 4 — 4</button>
+                <button type="button" class="option" data-option="C">C. 3 — 3</button>
+                <button type="button" class="option" data-option="D">D. 6 — 6</button>
             </div>
 
             <div class="solution" hidden>
@@ -819,7 +802,6 @@ body{
                 R मंजिल 4 पर और S मंजिल 5 पर रहता है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="D">
             <div class="question">
@@ -832,10 +814,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. 2 — 2</button>
-                <button class="option" data-option="B">B. 3 — 3</button>
-                <button class="option" data-option="C">C. 5 — 5</button>
-                <button class="option" data-option="D">D. 4 — 4</button>
+                <button type="button" class="option" data-option="A">A. 2 — 2</button>
+                <button type="button" class="option" data-option="B">B. 3 — 3</button>
+                <button type="button" class="option" data-option="C">C. 5 — 5</button>
+                <button type="button" class="option" data-option="D">D. 4 — 4</button>
             </div>
 
             <div class="solution" hidden>
@@ -846,7 +828,6 @@ body{
                 इसलिए D मंजिल 4 पर रहता है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="B">
             <div class="question">
@@ -859,10 +840,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. 2 — 2</button>
-                <button class="option" data-option="B">B. 4 — 4</button>
-                <button class="option" data-option="C">C. 5 — 5</button>
-                <button class="option" data-option="D">D. 3 — 3</button>
+                <button type="button" class="option" data-option="A">A. 2 — 2</button>
+                <button type="button" class="option" data-option="B">B. 4 — 4</button>
+                <button type="button" class="option" data-option="C">C. 5 — 5</button>
+                <button type="button" class="option" data-option="D">D. 3 — 3</button>
             </div>
 
             <div class="solution" hidden>
@@ -873,7 +854,6 @@ body{
                 R, Q के ठीक ऊपर है, इसलिए R मंजिल 4 पर रहता है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="A">
             <div class="question">
@@ -886,10 +866,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. D — D</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. E — E</button>
-                <button class="option" data-option="D">D. F — F</button>
+                <button type="button" class="option" data-option="A">A. D — D</button>
+                <button type="button" class="option" data-option="B">B. B — B</button>
+                <button type="button" class="option" data-option="C">C. E — E</button>
+                <button type="button" class="option" data-option="D">D. F — F</button>
             </div>
 
             <div class="solution" hidden>
@@ -898,7 +878,6 @@ body{
                 C, D के ठीक ऊपर है। इसलिए D, C के ठीक नीचे है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="C">
             <div class="question">
@@ -911,10 +890,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. 3 — 3</button>
-                <button class="option" data-option="B">B. 5 — 5</button>
-                <button class="option" data-option="C">C. 4 — 4</button>
-                <button class="option" data-option="D">D. 2 — 2</button>
+                <button type="button" class="option" data-option="A">A. 3 — 3</button>
+                <button type="button" class="option" data-option="B">B. 5 — 5</button>
+                <button type="button" class="option" data-option="C">C. 4 — 4</button>
+                <button type="button" class="option" data-option="D">D. 2 — 2</button>
             </div>
 
             <div class="solution" hidden>
@@ -925,7 +904,6 @@ body{
         </div>
 
     </section>
-
 
     <!-- PART 3 -->
     <section class="part">
@@ -945,10 +923,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. C — C</button>
-                <button class="option" data-option="B">B. D — D</button>
-                <button class="option" data-option="C">C. E — E</button>
-                <button class="option" data-option="D">D. A — A</button>
+                <button type="button" class="option" data-option="A">A. C — C</button>
+                <button type="button" class="option" data-option="B">B. D — D</button>
+                <button type="button" class="option" data-option="C">C. E — E</button>
+                <button type="button" class="option" data-option="D">D. A — A</button>
             </div>
 
             <div class="solution" hidden>
@@ -957,7 +935,6 @@ body{
                 प्रश्न के अनुसार D की कक्षा गुरुवार को है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="D">
             <div class="question">
@@ -971,10 +948,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. Q — Q</button>
-                <button class="option" data-option="C">C. S — S</button>
-                <button class="option" data-option="D">D. T — T</button>
+                <button type="button" class="option" data-option="A">A. P — P</button>
+                <button type="button" class="option" data-option="B">B. Q — Q</button>
+                <button type="button" class="option" data-option="C">C. S — S</button>
+                <button type="button" class="option" data-option="D">D. T — T</button>
             </div>
 
             <div class="solution" hidden>
@@ -985,7 +962,6 @@ body{
                 इसलिए T शुक्रवार को है।
             </div>
         </div>
-
 
         <div class="question-card" data-answer="A">
             <div class="question">
@@ -998,10 +974,10 @@ body{
             </div>
 
             <div class="options">
-                <button class="option" data-option="A">A. D — D</button>
-                <button class="option" data-option="B">B. C — C</button>
-                <button class="option" data-option="C">C. A — A</button>
-                <button class="option" data-option="D">D. B — B</button>
+                <button type="button" class="option" data-option="A">A. D — D</button>
+                <button type="button" class="option" data-option="B">B. C — C</button>
+                <button type="button" class="option" data-option="C">C. A — A</button>
+                <button type="button" class="option" data-option="D">D. B — B</button>
             </div>
 
             <div class="solution" hidden>
@@ -1013,1128 +989,1130 @@ body{
             </div>
         </div>
 
-
         <div class="question-card" data-answer="C">
-```
 
              
             <div class="question">
-                Q16. Six activities P, Q, R, S, T and U are scheduled from Monday to Saturday.
-                P is Monday, Q Tuesday, R Wednesday, S Thursday and T Friday.
-                Which activity is scheduled on Saturday?<br><br>
-                <span>Q16. छह गतिविधियाँ P, Q, R, S, T और U सोमवार से शनिवार तक निर्धारित हैं।
-                P सोमवार, Q मंगलवार, R बुधवार, S गुरुवार और T शुक्रवार को है।
-                शनिवार को कौन-सी गतिविधि निर्धारित है?</span>
-            </div>
+    Q16. Six activities P, Q, R, S, T and U are scheduled from Monday to Saturday.
+    P is Monday, Q Tuesday, R Wednesday, S Thursday and T Friday.
+    Which activity is scheduled on Saturday?<br><br>
+    <span>Q16. छह गतिविधियाँ P, Q, R, S, T और U सोमवार से शनिवार तक निर्धारित हैं।
+    P सोमवार, Q मंगलवार, R बुधवार, S गुरुवार और T शुक्रवार को है।
+    शनिवार को कौन-सी गतिविधि निर्धारित है?</span>
+</div>
 
-            <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. R — R</button>
-                <button class="option" data-option="C">C. U — U</button>
-                <button class="option" data-option="D">D. S — S</button>
-            </div>
+<div class="options">
+    <button class="option" data-option="A">A. P — P</button>
+    <button class="option" data-option="B">B. R — R</button>
+    <button class="option" data-option="C">C. U — U</button>
+    <button class="option" data-option="D">D. S — S</button>
+</div>
 
-            <div class="solution" hidden>
-                <strong>Answer: C. U — उत्तर: C. U</strong><br>
-                P, Q, R, S and T occupy Monday to Friday respectively.
-                Therefore, U is scheduled on Saturday.<br><br>
-                P, Q, R, S और T क्रमशः सोमवार से शुक्रवार तक हैं।
-                इसलिए U शनिवार को निर्धारित है।
-            </div>
+<div class="solution" hidden>
+    <strong>Answer: C. U — उत्तर: C. U</strong><br>
+    P, Q, R, S and T occupy Monday to Friday respectively.
+    Therefore, U is scheduled on Saturday.<br><br>
+    P, Q, R, S और T क्रमशः सोमवार से शुक्रवार तक हैं।
+    इसलिए U शनिवार को निर्धारित है।
+</div>
 
+</div>
+
+
+<div class="question-card" data-answer="D">
+
+    <div class="question">
+        Q17. Five persons A, B, C, D and E attend interviews from Monday to Friday.
+        A attends on Monday, C on Tuesday, B on Wednesday and D on Thursday.
+        Who attends on Friday?<br><br>
+        <span>Q17. पाँच व्यक्ति A, B, C, D और E सोमवार से शुक्रवार तक साक्षात्कार में शामिल होते हैं।
+        A सोमवार, C मंगलवार, B बुधवार और D गुरुवार को शामिल होता है।
+        शुक्रवार को कौन शामिल होता है?</span>
+    </div>
+
+    <div class="options">
+        <button class="option" data-option="A">A. A — A</button>
+        <button class="option" data-option="B">B. B — B</button>
+        <button class="option" data-option="C">C. D — D</button>
+        <button class="option" data-option="D">D. E — E</button>
+    </div>
+
+    <div class="solution" hidden>
+        <strong>Answer: D. E — उत्तर: D. E</strong><br>
+        A, C, B and D occupy Monday to Thursday.
+        Therefore, E attends on Friday.<br><br>
+        A, C, B और D सोमवार से गुरुवार तक हैं।
+        इसलिए E शुक्रवार को शामिल होता है।
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PART 4 -->
+<section class="part">
+
+    <h2 class="part-title">🗓️ Part 4 — Year Based Puzzles</h2>
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+            Q18. Five persons A, B, C, D and E were born in different years:
+            1988, 1990, 1992, 1994 and 1996.
+            A was born in 1990. B was born in the next listed year after A.
+            C was born in the next listed year after B. D was born in 1988.
+            Who was born in 1996?<br><br>
+            <span>Q18. पाँच व्यक्ति A, B, C, D और E का जन्म अलग-अलग वर्षों:
+            1988, 1990, 1992, 1994 और 1996 में हुआ।
+            A का जन्म 1990 में हुआ। B का जन्म A के बाद दी गई सूची के अगले वर्ष में हुआ।
+            C का जन्म B के बाद दी गई सूची के अगले वर्ष में हुआ। D का जन्म 1988 में हुआ।
+            1996 में किसका जन्म हुआ?</span>
         </div>
 
-
-        <div class="question-card" data-answer="D">
-
-            <div class="question">
-                Q17. Five persons A, B, C, D and E attend interviews from Monday to Friday.
-                A attends on Monday, C on Tuesday, B on Wednesday and D on Thursday.
-                Who attends on Friday?<br><br>
-                <span>Q17. पाँच व्यक्ति A, B, C, D और E सोमवार से शुक्रवार तक साक्षात्कार में शामिल होते हैं।
-                A सोमवार, C मंगलवार, B बुधवार और D गुरुवार को शामिल होता है।
-                शुक्रवार को कौन शामिल होता है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. D — D</button>
-                <button class="option" data-option="D">D. E — E</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. E — उत्तर: D. E</strong><br>
-                A, C, B and D occupy Monday to Thursday.
-                Therefore, E attends on Friday.<br><br>
-                A, C, B और D सोमवार से गुरुवार तक हैं।
-                इसलिए E शुक्रवार को शामिल होता है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. B — B</button>
+            <button class="option" data-option="B">B. C — C</button>
+            <button class="option" data-option="C">C. D — D</button>
+            <button class="option" data-option="D">D. E — E</button>
         </div>
 
-    </section>
-
-
-    <!-- PART 4 -->
-    <section class="part">
-
-        <h2 class="part-title">🗓️ Part 4 — Year Based Puzzles</h2>
-
-        <div class="question-card" data-answer="D">
-
-            <div class="question">
-                Q18. Five persons A, B, C, D and E were born in different years:
-                1988, 1990, 1992, 1994 and 1996.
-                A was born in 1990. B was born immediately after A.
-                C was born immediately after B. D was born in 1988.
-                Who was born in 1996?<br><br>
-                <span>Q18. पाँच व्यक्ति A, B, C, D और E का जन्म अलग-अलग वर्षों:
-                1988, 1990, 1992, 1994 और 1996 में हुआ।
-                A का जन्म 1990 में हुआ। B का जन्म A के तुरंत बाद वाले वर्ष में हुआ।
-                C का जन्म B के तुरंत बाद वाले वर्ष में हुआ। D का जन्म 1988 में हुआ।
-                1996 में किसका जन्म हुआ?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. B — B</button>
-                <button class="option" data-option="B">B. C — C</button>
-                <button class="option" data-option="C">C. D — D</button>
-                <button class="option" data-option="D">D. E — E</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. E — उत्तर: D. E</strong><br>
-                A = 1990, B = 1992, C = 1994 and D = 1988.
-                Therefore, E = 1996.<br><br>
-                A = 1990, B = 1992, C = 1994 और D = 1988।
-                इसलिए E = 1996।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: D. E — उत्तर: D. E</strong><br>
+            A = 1990, B = 1992, C = 1994 and D = 1988.
+            Therefore, E = 1996.<br><br>
+            A = 1990, B = 1992, C = 1994 और D = 1988।
+            इसलिए E = 1996।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="D">
 
-            <div class="question">
-                Q19. Five employees P, Q, R, S and T joined a company in
-                2018, 2019, 2020, 2021 and 2022.
-                P joined in 2019. Q joined immediately after P.
-                R joined immediately after Q. S joined in 2018.
-                Who joined in 2022?<br><br>
-                <span>Q19. पाँच कर्मचारियों P, Q, R, S और T ने 2018, 2019, 2020,
-                2021 और 2022 में कंपनी ज्वाइन की।
-                P ने 2019 में ज्वाइन किया। Q ने P के तुरंत बाद ज्वाइन किया।
-                R ने Q के तुरंत बाद ज्वाइन किया। S ने 2018 में ज्वाइन किया।
-                2022 में किसने ज्वाइन किया?</span>
-            </div>
+    <div class="question-card" data-answer="D">
 
-            <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. Q — Q</button>
-                <button class="option" data-option="C">C. R — R</button>
-                <button class="option" data-option="D">D. T — T</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. T — उत्तर: D. T</strong><br>
-                P = 2019, Q = 2020 and R = 2021.
-                S = 2018. Therefore, T = 2022.<br><br>
-                P = 2019, Q = 2020 और R = 2021।
-                S = 2018। इसलिए T = 2022।
-            </div>
-
+        <div class="question">
+            Q19. Five employees P, Q, R, S and T joined a company in
+            2018, 2019, 2020, 2021 and 2022.
+            P joined in 2019. Q joined in the next listed year after P.
+            R joined in the next listed year after Q. S joined in 2018.
+            Who joined in 2022?<br><br>
+            <span>Q19. पाँच कर्मचारियों P, Q, R, S और T ने 2018, 2019, 2020,
+            2021 और 2022 में कंपनी ज्वाइन की।
+            P ने 2019 में ज्वाइन किया। Q ने P के बाद सूची में दिए गए अगले वर्ष में ज्वाइन किया।
+            R ने Q के बाद सूची में दिए गए अगले वर्ष में ज्वाइन किया। S ने 2018 में ज्वाइन किया।
+            2022 में किसने ज्वाइन किया?</span>
         </div>
 
-
-        <div class="question-card" data-answer="D">
-
-            <div class="question">
-                Q20. Four events A, B, C and D occurred in 2010, 2012, 2014 and 2016.
-                A occurred in 2012. C occurred in 2010.
-                B occurred immediately after A. Which event occurred in 2016?<br><br>
-                <span>Q20. चार घटनाएँ A, B, C और D 2010, 2012, 2014 और 2016 में हुईं।
-                A, 2012 में हुई। C, 2010 में हुई। B, A के तुरंत बाद वाले वर्ष में हुई।
-                2016 में कौन-सी घटना हुई?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. C — C</button>
-                <button class="option" data-option="C">C. B — B</button>
-                <button class="option" data-option="D">D. D — D</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. D — उत्तर: D. D</strong><br>
-                A = 2012 and C = 2010. B = 2014.
-                Therefore, D = 2016.<br><br>
-                A = 2012 और C = 2010। B = 2014।
-                इसलिए D = 2016।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. P — P</button>
+            <button class="option" data-option="B">B. Q — Q</button>
+            <button class="option" data-option="C">C. R — R</button>
+            <button class="option" data-option="D">D. T — T</button>
         </div>
 
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q21. Five persons A, B, C, D and E completed their degrees in
-                2017, 2018, 2019, 2020 and 2021.
-                A completed in 2018. B completed immediately after A.
-                D completed in 2020. C completed in 2021.
-                Who completed in 2021?<br><br>
-                <span>Q21. पाँच व्यक्तियों A, B, C, D और E ने अपनी डिग्री
-                2017, 2018, 2019, 2020 और 2021 में पूरी की।
-                A ने 2018 में पूरी की। B ने A के तुरंत बाद वाली अवधि में पूरी की।
-                D ने 2020 में पूरी की। C ने 2021 में पूरी की।
-                2021 में किसने अपनी डिग्री पूरी की?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. C — C</button>
-                <button class="option" data-option="D">D. D — D</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. C — उत्तर: C. C</strong><br>
-                The question states that C completed the degree in 2021.
-                Hence, C is the answer.<br><br>
-                प्रश्न में दिया गया है कि C ने 2021 में डिग्री पूरी की।
-                इसलिए उत्तर C है।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: D. T — उत्तर: D. T</strong><br>
+            P = 2019, Q = 2020 and R = 2021.
+            S = 2018. Therefore, T = 2022.<br><br>
+            P = 2019, Q = 2020 और R = 2021।
+            S = 2018। इसलिए T = 2022।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="B">
 
-            <div class="question">
-                Q22. Six projects P, Q, R, S, T and U were completed in different years
-                from 2015 to 2020. P was completed in 2016, Q in 2017,
-                S in 2015, T in 2018 and U in 2019.
-                Which project was completed in 2020?<br><br>
-                <span>Q22. छह परियोजनाएँ P, Q, R, S, T और U 2015 से 2020 के बीच
-                अलग-अलग वर्षों में पूरी हुईं। P 2016 में, Q 2017 में,
-                S 2015 में, T 2018 में और U 2019 में पूरी हुई।
-                2020 में कौन-सी परियोजना पूरी हुई?</span>
-            </div>
+    <div class="question-card" data-answer="D">
 
-            <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. R — R</button>
-                <button class="option" data-option="C">C. Q — Q</button>
-                <button class="option" data-option="D">D. S — S</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: B. R — उत्तर: B. R</strong><br>
-                The years 2015 to 2019 are assigned to S, P, Q, T and U.
-                Therefore, R was completed in 2020.<br><br>
-                2015 से 2019 तक के वर्ष S, P, Q, T और U को दिए गए हैं।
-                इसलिए R वर्ष 2020 में पूरी हुई।
-            </div>
-
+        <div class="question">
+            Q20. Four events A, B, C and D occurred in 2010, 2012, 2014 and 2016.
+            A occurred in 2012. C occurred in 2010.
+            B occurred in the next listed year after A.
+            Which event occurred in 2016?<br><br>
+            <span>Q20. चार घटनाएँ A, B, C और D 2010, 2012, 2014 और 2016 में हुईं।
+            A, 2012 में हुई। C, 2010 में हुई।
+            B, A के बाद सूची में दिए गए अगले वर्ष में हुई।
+            2016 में कौन-सी घटना हुई?</span>
         </div>
 
-    </section>
-
-
-    <!-- PART 5 -->
-    <section class="part">
-
-        <h2 class="part-title">📆 Part 5 — Month Based Puzzles</h2>
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q23. Five seminars A, B, C, D and E are held in January, February,
-                March, April and May. A is in January, B in February,
-                C in March and D in April. In which month is E?<br><br>
-                <span>Q23. पाँच सेमिनार A, B, C, D और E जनवरी, फरवरी, मार्च,
-                अप्रैल और मई में आयोजित होते हैं। A जनवरी में, B फरवरी में,
-                C मार्च में और D अप्रैल में है। E किस महीने में है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. January — जनवरी</button>
-                <button class="option" data-option="B">B. April — अप्रैल</button>
-                <button class="option" data-option="C">C. May — मई</button>
-                <button class="option" data-option="D">D. March — मार्च</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. May — उत्तर: C. मई</strong><br>
-                May is the remaining month.<br><br>
-                मई बचा हुआ महीना है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. C — C</button>
+            <button class="option" data-option="C">C. B — B</button>
+            <button class="option" data-option="D">D. D — D</button>
         </div>
 
-
-        <div class="question-card" data-answer="A">
-
-            <div class="question">
-                Q24. Six persons P, Q, R, S, T and U were born in six consecutive
-                months from January to June. P was born in January,
-                Q in February, R in March, S in April and T in May.
-                Who was born in June?<br><br>
-                <span>Q24. छह व्यक्ति P, Q, R, S, T और U जनवरी से जून तक लगातार
-                छह महीनों में जन्मे। P का जन्म जनवरी में, Q का फरवरी में,
-                R का मार्च में, S का अप्रैल में और T का मई में हुआ।
-                जून में किसका जन्म हुआ?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. U — U</button>
-                <button class="option" data-option="B">B. T — T</button>
-                <button class="option" data-option="C">C. S — S</button>
-                <button class="option" data-option="D">D. R — R</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: A. U — उत्तर: A. U</strong><br>
-                U occupies the remaining June position.<br><br>
-                जून का बचा हुआ स्थान U का है।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: D. D — उत्तर: D. D</strong><br>
+            A = 2012, C = 2010 and B = 2014.
+            Therefore, D = 2016.<br><br>
+            A = 2012, C = 2010 और B = 2014।
+            इसलिए D = 2016।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="D">
 
-            <div class="question">
-                Q25. Five festivals A, B, C, D and E occur in January, February,
-                March, April and May. A occurs in January.
-                B occurs immediately after A, and C immediately after B.
-                Which festival occurs in March?<br><br>
-                <span>Q25. पाँच त्योहार A, B, C, D और E जनवरी, फरवरी, मार्च,
-                अप्रैल और मई में होते हैं। A जनवरी में होता है।
-                B, A के तुरंत बाद और C, B के तुरंत बाद होता है।
-                मार्च में कौन-सा त्योहार होता है?</span>
-            </div>
+    <div class="question-card" data-answer="C">
 
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. D — D</button>
-                <button class="option" data-option="D">D. C — C</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. C — उत्तर: D. C</strong><br>
-                A = January, B = February and C = March.<br><br>
-                A = जनवरी, B = फरवरी और C = मार्च।
-            </div>
-
+        <div class="question">
+            Q21. Five persons A, B, C, D and E completed their degrees in
+            2017, 2018, 2019, 2020 and 2021.
+            A completed in 2018. B completed immediately after A.
+            D completed in 2020. C completed in 2021.
+            Who completed in 2021?<br><br>
+            <span>Q21. पाँच व्यक्तियों A, B, C, D और E ने अपनी डिग्री
+            2017, 2018, 2019, 2020 और 2021 में पूरी की।
+            A ने 2018 में पूरी की। B ने A के तुरंत बाद वाली अवधि में पूरी की।
+            D ने 2020 में पूरी की। C ने 2021 में पूरी की।
+            2021 में किसने अपनी डिग्री पूरी की?</span>
         </div>
 
-
-        <div class="question-card" data-answer="B">
-
-            <div class="question">
-                Q26. Five courses P, Q, R, S and T are offered from January to May,
-                one course per month. P is in January, S is in April,
-                and R is immediately after Q. Which course is in March?<br><br>
-                <span>Q26. पाँच पाठ्यक्रम P, Q, R, S और T जनवरी से मई तक,
-                प्रत्येक महीने एक पाठ्यक्रम के हिसाब से उपलब्ध हैं।
-                P जनवरी में, S अप्रैल में और R, Q के तुरंत बाद है।
-                मार्च में कौन-सा पाठ्यक्रम है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. R — R</button>
-                <button class="option" data-option="C">C. S — S</button>
-                <button class="option" data-option="D">D. T — T</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: B. R — उत्तर: B. R</strong><br>
-                P is in January and S is in April. Q and R must occupy
-                February and March respectively because R is immediately after Q.
-                Therefore, R is in March.<br><br>
-                P जनवरी में और S अप्रैल में है। Q और R क्रमशः फरवरी और मार्च में होंगे,
-                क्योंकि R, Q के तुरंत बाद है। इसलिए R मार्च में है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. B — B</button>
+            <button class="option" data-option="C">C. C — C</button>
+            <button class="option" data-option="D">D. D — D</button>
         </div>
 
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q27. Six persons A, B, C, D, E and F were born from January to June.
-                A was born in January, B in February and F in June.
-                D was born in April and E immediately after D.
-                Which person was born in March?<br><br>
-                <span>Q27. छह व्यक्ति A, B, C, D, E और F जनवरी से जून के बीच जन्मे।
-                A का जन्म जनवरी में, B का फरवरी में और F का जून में हुआ।
-                D का जन्म अप्रैल में और E का जन्म D के तुरंत बाद हुआ।
-                मार्च में किस व्यक्ति का जन्म हुआ?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. D — D</button>
-                <button class="option" data-option="C">C. C — C</button>
-                <button class="option" data-option="D">D. F — F</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. C — उत्तर: C. C</strong><br>
-                A = January, B = February, D = April,
-                E = May and F = June. Therefore, C was born in March.<br><br>
-                A = जनवरी, B = फरवरी, D = अप्रैल,
-                E = मई और F = जून। इसलिए C का जन्म मार्च में हुआ।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: C. C — उत्तर: C. C</strong><br>
+            The question states that C completed the degree in 2021.
+            Hence, C is the answer.<br><br>
+            प्रश्न में दिया गया है कि C ने 2021 में डिग्री पूरी की।
+            इसलिए उत्तर C है।
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PART 6 -->
-    <section class="part">
+    <div class="question-card" data-answer="B">
 
-        <h2 class="part-title">🗓️ Part 6 — Month &amp; Date Based Puzzles</h2>
-
-        <div class="question-card" data-answer="A">
-
-            <div class="question">
-                Q28. Five appointments are scheduled on the 5th, 10th, 15th, 20th and 25th
-                of a month. P is on the 5th, Q on the 10th, R on the 15th and S on the 20th.
-                Who is scheduled on the 25th?<br><br>
-                <span>Q28. किसी महीने की 5, 10, 15, 20 और 25 तारीख को पाँच नियुक्तियाँ निर्धारित हैं।
-                P की नियुक्ति 5 तारीख को, Q की 10 तारीख को, R की 15 तारीख को
-                और S की 20 तारीख को है। 25 तारीख को किसकी नियुक्ति है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. T — T</button>
-                <button class="option" data-option="B">B. S — S</button>
-                <button class="option" data-option="C">C. R — R</button>
-                <button class="option" data-option="D">D. Q — Q</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: A. T — उत्तर: A. T</strong><br>
-                25th is the remaining date, so T is scheduled on the 25th.<br><br>
-                25 तारीख बची हुई तारीख है, इसलिए T की नियुक्ति 25 तारीख को है।
-            </div>
-
+        <div class="question">
+            Q22. Six projects P, Q, R, S, T and U were completed in different years
+            from 2015 to 2020. P was completed in 2016, Q in 2017,
+            S in 2015, T in 2018 and U in 2019.
+            Which project was completed in 2020?<br><br>
+            <span>Q22. छह परियोजनाएँ P, Q, R, S, T और U 2015 से 2020 के बीच
+            अलग-अलग वर्षों में पूरी हुईं। P 2016 में, Q 2017 में,
+            S 2015 में, T 2018 में और U 2019 में पूरी हुई।
+            2020 में कौन-सी परियोजना पूरी हुई?</span>
         </div>
 
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q29. Four exams are held on the 3rd, 8th, 13th and 18th of a month.
-                A is on the 3rd, B is on the 8th and C is on the 13th.
-                Which exam is on the 18th?<br><br>
-                <span>Q29. किसी महीने की 3, 8, 13 और 18 तारीख को चार परीक्षाएँ होती हैं।
-                A की परीक्षा 3 तारीख को, B की 8 तारीख को और C की 13 तारीख को है।
-                18 तारीख को किसकी परीक्षा है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. D — D</button>
-                <button class="option" data-option="D">D. C — C</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. D — उत्तर: C. D</strong><br>
-                D occupies the remaining 18th date.<br><br>
-                बची हुई 18 तारीख D की है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. P — P</button>
+            <button class="option" data-option="B">B. R — R</button>
+            <button class="option" data-option="C">C. Q — Q</button>
+            <button class="option" data-option="D">D. S — S</button>
         </div>
 
-
-        <div class="question-card" data-answer="D">
-
-            <div class="question">
-                Q30. Five events are scheduled on the 2nd, 7th, 12th, 17th and 22nd.
-                P is on the 2nd, Q is immediately after P, and R is immediately after Q.
-                On which date is R scheduled?<br><br>
-                <span>Q30. पाँच घटनाएँ 2, 7, 12, 17 और 22 तारीख को निर्धारित हैं।
-                P की घटना 2 तारीख को है। Q, P के तुरंत बाद और R, Q के तुरंत बाद है।
-                R की घटना किस तारीख को है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. 7th — 7 तारीख</button>
-                <button class="option" data-option="B">B. 17th — 17 तारीख</button>
-                <button class="option" data-option="C">C. 22nd — 22 तारीख</button>
-                <button class="option" data-option="D">D. 12th — 12 तारीख</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. 12th — उत्तर: D. 12 तारीख</strong><br>
-                P = 2nd, Q = 7th and R = 12th.<br><br>
-                P = 2 तारीख, Q = 7 तारीख और R = 12 तारीख।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: B. R — उत्तर: B. R</strong><br>
+            The years 2015 to 2019 are assigned to S, P, Q, T and U.
+            Therefore, R was completed in 2020.<br><br>
+            2015 से 2019 तक के वर्ष S, P, Q, T और U को दिए गए हैं।
+            इसलिए R वर्ष 2020 में पूरी हुई।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="B">
+</section>
 
-            <div class="question">
-                Q31. Five meetings are held on the 4th, 9th, 14th, 19th and 24th.
-                A is on the 4th, B on the 9th, C on the 14th and D on the 19th.
-                Which person has the meeting on the 24th?<br><br>
-                <span>Q31. पाँच बैठकें 4, 9, 14, 19 और 24 तारीख को होती हैं।
-                A की बैठक 4 तारीख को, B की 9 तारीख को, C की 14 तारीख को
-                और D की 19 तारीख को है। 24 तारीख को किस व्यक्ति की बैठक है?</span>
-            </div>
 
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. E — E</button>
-                <button class="option" data-option="C">C. C — C</button>
-                <button class="option" data-option="D">D. D — D</button>
-            </div>
+<!-- PART 5 -->
+<section class="part">
 
-            <div class="solution" hidden>
-                <strong>Answer: B. E — उत्तर: B. E</strong><br>
-                A, B, C and D occupy the 4th, 9th, 14th and 19th respectively.
-                Therefore, E occupies the 24th.<br><br>
-                A, B, C और D क्रमशः 4, 9, 14 और 19 तारीख को हैं।
-                इसलिए E 24 तारीख को है।
-            </div>
+    <h2 class="part-title">📆 Part 5 — Month Based Puzzles</h2>
 
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+            Q23. Five seminars A, B, C, D and E are held in January, February,
+            March, April and May. A is in January, B in February,
+            C in March and D in April. In which month is E?<br><br>
+            <span>Q23. पाँच सेमिनार A, B, C, D और E जनवरी, फरवरी, मार्च,
+            अप्रैल और मई में आयोजित होते हैं। A जनवरी में, B फरवरी में,
+            C मार्च में और D अप्रैल में है। E किस महीने में है?</span>
         </div>
 
-
-        <div class="question-card" data-answer="A">
-
-            <div class="question">
-                Q32. Five interviews are scheduled on the 6th, 11th, 16th, 21st and 26th.
-                P is on the 6th, Q immediately after P, and R immediately after Q.
-                Which date is R's interview?<br><br>
-                <span>Q32. पाँच साक्षात्कार 6, 11, 16, 21 और 26 तारीख को निर्धारित हैं।
-                P का साक्षात्कार 6 तारीख को है, Q, P के तुरंत बाद और R, Q के तुरंत बाद है।
-                R का साक्षात्कार किस तारीख को है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. 16th — 16 तारीख</button>
-                <button class="option" data-option="B">B. 11th — 11 तारीख</button>
-                <button class="option" data-option="C">C. 21st — 21 तारीख</button>
-                <button class="option" data-option="D">D. 26th — 26 तारीख</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: A. 16th — उत्तर: A. 16 तारीख</strong><br>
-                P = 6th, Q = 11th and R = 16th.<br><br>
-                P = 6 तारीख, Q = 11 तारीख और R = 16 तारीख।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. January — जनवरी</button>
+            <button class="option" data-option="B">B. April — अप्रैल</button>
+            <button class="option" data-option="C">C. May — मई</button>
+            <button class="option" data-option="D">D. March — मार्च</button>
         </div>
 
-    </section>
-
-
-    <!-- PART 7 -->
-    <section class="part">
-
-        <h2 class="part-title">👨‍💼 Part 7 — Occupation Based Puzzles</h2>
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q33. Four persons A, B, C and D have different professions:
-                Teacher, Doctor, Engineer and Lawyer. A is a Teacher, B is a Doctor
-                and D is a Lawyer. What is C's profession?<br><br>
-                <span>Q33. चार व्यक्ति A, B, C और D के अलग-अलग व्यवसाय हैं:
-                Teacher, Doctor, Engineer और Lawyer। A Teacher, B Doctor
-                और D Lawyer है। C का व्यवसाय क्या है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. Teacher — शिक्षक</button>
-                <button class="option" data-option="B">B. Doctor — डॉक्टर</button>
-                <button class="option" data-option="C">C. Engineer — इंजीनियर</button>
-                <button class="option" data-option="D">D. Lawyer — वकील</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. Engineer — उत्तर: C. Engineer (इंजीनियर)</strong><br>
-                Teacher, Doctor and Lawyer are already assigned.
-                Therefore, C is an Engineer.<br><br>
-                Teacher, Doctor और Lawyer पहले ही दिए जा चुके हैं।
-                इसलिए C, Engineer है।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: C. May — उत्तर: C. मई</strong><br>
+            May is the remaining month.<br><br>
+            मई बचा हुआ महीना है।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="D">
 
-            <div class="question">
-                Q34. Five persons P, Q, R, S and T have different professions:
-                Manager, Clerk, Officer, Teacher and Pilot. P is Manager,
-                Q is Clerk, R is Officer and T is Pilot. What is S's profession?<br><br>
-                <span>Q34. पाँच व्यक्ति P, Q, R, S और T के अलग-अलग व्यवसाय हैं:
-                Manager, Clerk, Officer, Teacher और Pilot। P Manager,
-                Q Clerk, R Officer और T Pilot है। S का व्यवसाय क्या है?</span>
-            </div>
+    <div class="question-card" data-answer="A">
 
-            <div class="options">
-                <button class="option" data-option="A">A. Manager — प्रबंधक</button>
-                <button class="option" data-option="B">B. Clerk — लिपिक</button>
-                <button class="option" data-option="C">C. Pilot — पायलट</button>
-                <button class="option" data-option="D">D. Teacher — शिक्षक</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. Teacher — उत्तर: D. Teacher (शिक्षक)</strong><br>
-                Teacher is the remaining profession for S.<br><br>
-                S के लिए बचा हुआ व्यवसाय Teacher है।
-            </div>
-
+        <div class="question">
+            Q24. Six persons P, Q, R, S, T and U were born in six consecutive
+            months from January to June. P was born in January,
+            Q in February, R in March, S in April and T in May.
+            Who was born in June?<br><br>
+            <span>Q24. छह व्यक्ति P, Q, R, S, T और U जनवरी से जून तक लगातार
+            छह महीनों में जन्मे। P का जन्म जनवरी में, Q का फरवरी में,
+            R का मार्च में, S का अप्रैल में और T का मई में हुआ।
+            जून में किसका जन्म हुआ?</span>
         </div>
 
-
-        <div class="question-card" data-answer="A">
-
-            <div class="question">
-                Q35. Five persons A, B, C, D and E have different occupations:
-                Teacher, Doctor, Lawyer, Engineer and Pilot.
-                A is a Teacher, B is a Doctor, D is a Lawyer and E is an Engineer.
-                What is C's occupation?<br><br>
-                <span>Q35. पाँच व्यक्तियों A, B, C, D और E के अलग-अलग व्यवसाय हैं:
-                Teacher, Doctor, Lawyer, Engineer और Pilot।
-                A Teacher, B Doctor, D Lawyer और E Engineer है।
-                C का व्यवसाय क्या है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. Pilot — पायलट</button>
-                <button class="option" data-option="B">B. Engineer — इंजीनियर</button>
-                <button class="option" data-option="C">C. Doctor — डॉक्टर</button>
-                <button class="option" data-option="D">D. Lawyer — वकील</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: A. Pilot — उत्तर: A. Pilot (पायलट)</strong><br>
-                Teacher, Doctor, Lawyer and Engineer are assigned to A, B, D and E.
-                Therefore, C is a Pilot.<br><br>
-                Teacher, Doctor, Lawyer और Engineer क्रमशः A, B, D और E को दिए गए हैं।
-                इसलिए C, Pilot है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. U — U</button>
+            <button class="option" data-option="B">B. T — T</button>
+            <button class="option" data-option="C">C. S — S</button>
+            <button class="option" data-option="D">D. R — R</button>
         </div>
 
-
-        <div class="question-card" data-answer="B">
-
-            <div class="question">
-                Q36. Five persons P, Q, R, S and T have different occupations:
-                Manager, Clerk, Officer, Assistant and Supervisor.
-                P is Manager, Q is Clerk, R is Officer and T is Assistant.
-                What is S's occupation?<br><br>
-                <span>Q36. पाँच व्यक्ति P, Q, R, S और T के अलग-अलग व्यवसाय हैं:
-                Manager, Clerk, Officer, Assistant और Supervisor।
-                P Manager, Q Clerk, R Officer और T Assistant है।
-                S का व्यवसाय क्या है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. Assistant — सहायक</button>
-                <button class="option" data-option="B">B. Supervisor — पर्यवेक्षक</button>
-                <button class="option" data-option="C">C. Manager — प्रबंधक</button>
-                <button class="option" data-option="D">D. Clerk — लिपिक</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: B. Supervisor — उत्तर: B. Supervisor (पर्यवेक्षक)</strong><br>
-                Manager, Clerk, Officer and Assistant are assigned.
-                Supervisor is the remaining occupation for S.<br><br>
-                Manager, Clerk, Officer और Assistant पहले ही दिए जा चुके हैं।
-                इसलिए S के लिए Supervisor बचता है।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: A. U — उत्तर: A. U</strong><br>
+            U occupies the remaining June position.<br><br>
+            जून का बचा हुआ स्थान U का है।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="C">
 
-            <div class="question">
-                Q37. Four persons A, B, C and D have different professions:
-                Engineer, Teacher, Doctor and Pilot. A is an Engineer,
-                B is a Teacher and D is a Pilot. Who is the Doctor?<br><br>
-                <span>Q37. चार व्यक्ति A, B, C और D के अलग-अलग व्यवसाय हैं:
-                Engineer, Teacher, Doctor और Pilot। A Engineer,
-                B Teacher और D Pilot है। Doctor कौन है?</span>
-            </div>
+    <div class="question-card" data-answer="D">
 
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. C — C</button>
-                <button class="option" data-option="D">D. D — D</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. C — उत्तर: C. C</strong><br>
-                Doctor is the only remaining occupation for C.<br><br>
-                C के लिए Doctor ही एकमात्र बचा हुआ व्यवसाय है।
-            </div>
-
+        <div class="question">
+            Q25. Five festivals A, B, C, D and E occur in January, February,
+            March, April and May. A occurs in January.
+            B occurs immediately after A, and C immediately after B.
+            Which festival occurs in March?<br><br>
+            <span>Q25. पाँच त्योहार A, B, C, D और E जनवरी, फरवरी, मार्च,
+            अप्रैल और मई में होते हैं। A जनवरी में होता है।
+            B, A के तुरंत बाद और C, B के तुरंत बाद होता है।
+            मार्च में कौन-सा त्योहार होता है?</span>
         </div>
 
-
-        <div class="question-card" data-answer="D">
-
-            <div class="question">
-                Q38. Five people A, B, C, D and E have different professions:
-                Professor, Doctor, Lawyer, Engineer and Banker.
-                A is a Professor, B is a Doctor, D is a Lawyer and E is a Banker.
-                Who is the Engineer?<br><br>
-                <span>Q38. पाँच व्यक्ति A, B, C, D और E के अलग-अलग व्यवसाय हैं:
-                Professor, Doctor, Lawyer, Engineer और Banker।
-                A Professor, B Doctor, D Lawyer और E Banker है।
-                Engineer कौन है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A — A</button>
-                <button class="option" data-option="B">B. B — B</button>
-                <button class="option" data-option="C">C. E — E</button>
-                <button class="option" data-option="D">D. C — C</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. C — उत्तर: D. C</strong><br>
-                Professor, Doctor, Lawyer and Banker are assigned to A, B, D and E.
-                Therefore, C is the Engineer.<br><br>
-                Professor, Doctor, Lawyer और Banker क्रमशः A, B, D और E को दिए गए हैं।
-                इसलिए C, Engineer है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. B — B</button>
+            <button class="option" data-option="C">C. D — D</button>
+            <button class="option" data-option="D">D. C — C</button>
         </div>
 
-    </section>
-
-
-    <!-- PART 8 -->
-    <section class="part">
-
-        <h2 class="part-title">🌍 Part 8 — Person, City &amp; Colour Based Puzzles</h2>
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q39. Four persons A, B, C and D live in Delhi, Mumbai, Pune and Jaipur.
-                A lives in Delhi, B in Pune and D in Jaipur.
-                Where does C live?<br><br>
-                <span>Q39. चार व्यक्ति A, B, C और D दिल्ली, मुंबई, पुणे और जयपुर में रहते हैं।
-                A दिल्ली में, B पुणे में और D जयपुर में रहता है।
-                C कहाँ रहता है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. Delhi — दिल्ली</button>
-                <button class="option" data-option="B">B. Jaipur — जयपुर</button>
-                <button class="option" data-option="C">C. Mumbai — मुंबई</button>
-                <button class="option" data-option="D">D. Pune — पुणे</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. Mumbai — उत्तर: C. Mumbai (मुंबई)</strong><br>
-                Delhi, Pune and Jaipur are occupied by A, B and D.
-                Therefore, C lives in Mumbai.<br><br>
-                दिल्ली, पुणे और जयपुर में क्रमशः A, B और D रहते हैं।
-                इसलिए C मुंबई में रहता है।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: D. C — उत्तर: D. C</strong><br>
+            A = January, B = February and C = March.<br><br>
+            A = जनवरी, B = फरवरी और C = मार्च।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="A">
 
-            <div class="question">
-                Q40. Five persons P, Q, R, S and T each like a different colour:
-                Red, Blue, Green, Yellow and White. P likes Red, Q likes Blue,
-                T likes White and S likes Green. Which colour does R like?<br><br>
-                <span>Q40. पाँच व्यक्ति P, Q, R, S और T में से प्रत्येक को अलग-अलग रंग पसंद हैं:
-                Red, Blue, Green, Yellow और White। P को Red, Q को Blue,
-                T को White और S को Green पसंद है। R को कौन-सा रंग पसंद है?</span>
-            </div>
+    <div class="question-card" data-answer="B">
 
-            <div class="options">
-                <button class="option" data-option="A">A. Yellow — पीला</button>
-                <button class="option" data-option="B">B. Red — लाल</button>
-                <button class="option" data-option="C">C. Green — हरा</button>
-                <button class="option" data-option="D">D. Blue — नीला</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: A. Yellow — उत्तर: A. Yellow (पीला)</strong><br>
-                Red, Blue, White and Green are already assigned.
-                Yellow remains for R.<br><br>
-                Red, Blue, White और Green पहले ही दिए जा चुके हैं।
-                इसलिए R के लिए Yellow बचा है।
-            </div>
-
+        <div class="question">
+            Q26. Five courses P, Q, R, S and T are offered from January to May,
+            one course per month. P is in January, S is in April,
+            and R is immediately after Q. Which course is in March?<br><br>
+            <span>Q26. पाँच पाठ्यक्रम P, Q, R, S और T जनवरी से मई तक,
+            प्रत्येक महीने एक पाठ्यक्रम के हिसाब से उपलब्ध हैं।
+            P जनवरी में, S अप्रैल में और R, Q के तुरंत बाद है।
+            मार्च में कौन-सा पाठ्यक्रम है?</span>
         </div>
 
-
-        <div class="question-card" data-answer="B">
-
-            <div class="question">
-                Q41. Four persons A, B, C and D live in Delhi, Patna, Ranchi and Pune.
-                A lives in Delhi, B in Pune and D in Ranchi.
-                Where does C live?<br><br>
-                <span>Q41. चार व्यक्ति A, B, C और D दिल्ली, पटना, रांची और पुणे में रहते हैं।
-                A दिल्ली में, B पुणे में और D रांची में रहता है।
-                C कहाँ रहता है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. Ranchi — रांची</button>
-                <button class="option" data-option="B">B. Patna — पटना</button>
-                <button class="option" data-option="C">C. Delhi — दिल्ली</button>
-                <button class="option" data-option="D">D. Pune — पुणे</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: B. Patna — उत्तर: B. Patna (पटना)</strong><br>
-                Delhi, Pune and Ranchi are occupied by A, B and D.
-                Therefore, C lives in Patna.<br><br>
-                दिल्ली, पुणे और रांची में क्रमशः A, B और D रहते हैं।
-                इसलिए C पटना में रहता है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. P — P</button>
+            <button class="option" data-option="B">B. R — R</button>
+            <button class="option" data-option="C">C. S — S</button>
+            <button class="option" data-option="D">D. T — T</button>
         </div>
 
-
-        <div class="question-card" data-answer="D">
-
-            <div class="question">
-                Q42. Five persons A, B, C, D and E each like a different colour:
-                Red, Blue, Green, Yellow and White. A likes Red, B likes Blue,
-                D likes Yellow and E likes White. Which colour does C like?<br><br>
-                <span>Q42. पाँच व्यक्ति A, B, C, D और E में से प्रत्येक को अलग-अलग रंग पसंद हैं:
-                Red, Blue, Green, Yellow और White। A को Red, B को Blue,
-                D को Yellow और E को White पसंद है। C को कौन-सा रंग पसंद है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. Red — लाल</button>
-                <button class="option" data-option="B">B. Blue — नीला</button>
-                <button class="option" data-option="C">C. White — सफेद</button>
-                <button class="option" data-option="D">D. Green — हरा</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. Green — उत्तर: D. Green (हरा)</strong><br>
-                Red, Blue, Yellow and White are already assigned.
-                Green remains for C.<br><br>
-                Red, Blue, Yellow और White पहले ही दिए जा चुके हैं।
-                इसलिए C के लिए Green बचा है।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: B. R — उत्तर: B. R</strong><br>
+            P is in January and S is in April. Since R is immediately after Q,
+            Q and R must occupy February and March respectively.
+            Therefore, R is in March.<br><br>
+            P जनवरी में और S अप्रैल में है। R, Q के तुरंत बाद है,
+            इसलिए Q और R क्रमशः फरवरी और मार्च में होंगे।
+            अतः R मार्च में है।
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- PART 9 -->
-    <section class="part">
+    <div class="question-card" data-answer="C">
 
-        <h2 class="part-title">🔢 Part 9 — Ranking &amp; Order Based Puzzles</h2>
-
-        <div class="question-card" data-answer="A">
-
-            <div class="question">
-                Q43. Five students A, B, C, D and E are ranked from highest to lowest.
-                D ranks above A, A above B, B above C and C above E.
-                Who ranks highest?<br><br>
-                <span>Q43. पाँच विद्यार्थियों A, B, C, D और E को उच्चतम से निम्नतम क्रम में रैंक दिया गया है।
-                D की रैंक A से ऊपर, A की B से ऊपर, B की C से ऊपर और C की E से ऊपर है।
-                सबसे ऊँची रैंक किसकी है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. D — D</button>
-                <button class="option" data-option="B">B. A — A</button>
-                <button class="option" data-option="C">C. B — B</button>
-                <button class="option" data-option="D">D. E — E</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: A. D — उत्तर: A. D</strong><br>
-                The order is D &gt; A &gt; B &gt; C &gt; E.<br><br>
-                क्रम D &gt; A &gt; B &gt; C &gt; E है।
-            </div>
-
+        <div class="question">
+            Q27. Six persons A, B, C, D, E and F were born from January to June.
+            A was born in January, B in February and F in June.
+            D was born in April and E immediately after D.
+            Which person was born in March?<br><br>
+            <span>Q27. छह व्यक्ति A, B, C, D, E और F जनवरी से जून के बीच जन्मे।
+            A का जन्म जनवरी में, B का फरवरी में और F का जून में हुआ।
+            D का जन्म अप्रैल में और E का जन्म D के तुरंत बाद हुआ।
+            मार्च में किस व्यक्ति का जन्म हुआ?</span>
         </div>
 
-
-        <div class="question-card" data-answer="D">
-
-            <div class="question">
-                Q44. Five children P, Q, R, S and T are arranged from oldest to youngest.
-                P is older than Q, Q is older than R, R is older than S and S is older than T.
-                Who is youngest?<br><br>
-                <span>Q44. पाँच बच्चों P, Q, R, S और T को सबसे बड़े से सबसे छोटे के क्रम में रखा गया है।
-                P, Q से बड़ा है; Q, R से बड़ा है; R, S से बड़ा है और S, T से बड़ा है।
-                सबसे छोटा कौन है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. P — P</button>
-                <button class="option" data-option="B">B. Q — Q</button>
-                <button class="option" data-option="C">C. S — S</button>
-                <button class="option" data-option="D">D. T — T</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. T — उत्तर: D. T</strong><br>
-                The order from oldest to youngest is P, Q, R, S, T.
-                Therefore, T is the youngest.<br><br>
-                सबसे बड़े से सबसे छोटे का क्रम P, Q, R, S, T है।
-                इसलिए T सबसे छोटा है।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. D — D</button>
+            <button class="option" data-option="C">C. C — C</button>
+            <button class="option" data-option="D">D. F — F</button>
         </div>
 
-
-        <div class="question-card" data-answer="B">
-
-            <div class="question">
-                Q45. Five employees A, B, C, D and E are ranked according to performance.
-                D ranks first, and A ranks above B, B above C and C above E.
-                Who ranks second?<br><br>
-                <span>Q45. पाँच कर्मचारियों A, B, C, D और E को प्रदर्शन के आधार पर रैंक दिया गया है।
-                D प्रथम स्थान पर है और A की रैंक B से ऊपर, B की C से ऊपर तथा C की E से ऊपर है।
-                दूसरे स्थान पर कौन है?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. B — B</button>
-                <button class="option" data-option="B">B. A — A</button>
-                <button class="option" data-option="C">C. C — C</button>
-                <button class="option" data-option="D">D. E — E</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: B. A — उत्तर: B. A</strong><br>
-                The order is D, A, B, C, E. Therefore, A ranks second.<br><br>
-                क्रम D, A, B, C, E है। इसलिए A दूसरे स्थान पर है।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: C. C — उत्तर: C. C</strong><br>
+            A = January, B = February, D = April,
+            E = May and F = June. Therefore, C was born in March.<br><br>
+            A = जनवरी, B = फरवरी, D = अप्रैल,
+            E = मई और F = जून। इसलिए C का जन्म मार्च में हुआ।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="C">
+</section>
 
-            <div class="question">
-                Q46. Six runners P, Q, R, S, T and U finish a race.
-                P finishes before Q, Q before R, R before S,
-                S before T and T before U. Who finishes third?<br><br>
-                <span>Q46. छह धावक P, Q, R, S, T और U एक दौड़ पूरी करते हैं।
-                P, Q से पहले; Q, R से पहले; R, S से पहले;
-                S, T से पहले और T, U से पहले दौड़ पूरी करता है।
-                तीसरे स्थान पर कौन आता है?</span>
-            </div>
 
-            <div class="options">
-                <button class="option" data-option="A">A. Q — Q</button>
-                <button class="option" data-option="B">B. S — S</button>
-                <button class="option" data-option="C">C. R — R</button>
-                <button class="option" data-option="D">D. T — T</button>
-            </div>
+<!-- PART 6 -->
+<section class="part">
 
-            <div class="solution" hidden>
-                <strong>Answer: C. R — उत्तर: C. R</strong><br>
-                The order is P, Q, R, S, T, U. R finishes third.<br><br>
-                क्रम P, Q, R, S, T, U है। R तीसरे स्थान पर है।
-            </div>
+    <h2 class="part-title">🗓️ Part 6 — Month &amp; Date Based Puzzles</h2>
 
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+            Q28. Five appointments are scheduled on the 5th, 10th, 15th, 20th and 25th
+            of a month. P is on the 5th, Q on the 10th, R on the 15th and S on the 20th.
+            Who is scheduled on the 25th?<br><br>
+            <span>Q28. किसी महीने की 5, 10, 15, 20 और 25 तारीख को पाँच नियुक्तियाँ निर्धारित हैं।
+            P की नियुक्ति 5 तारीख को, Q की 10 तारीख को, R की 15 तारीख को
+            और S की 20 तारीख को है। 25 तारीख को किसकी नियुक्ति है?</span>
         </div>
 
-    </section>
-
-
-    <!-- PART 10 -->
-    <section class="part">
-
-        <h2 class="part-title">🧩 Part 10 — Selection, Distribution &amp; Logical Conditions</h2>
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q47. A committee must select exactly two people from A, B and C.
-                A and B cannot be selected together. If B is not selected,
-                which pair must be selected?<br><br>
-                <span>Q47. एक समिति को A, B और C में से ठीक दो लोगों का चयन करना है।
-                A और B को एक साथ चयनित नहीं किया जा सकता।
-                यदि B का चयन नहीं किया जाता है, तो कौन-सी जोड़ी अवश्य चयनित होगी?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A and B — A और B</button>
-                <button class="option" data-option="B">B. B and C — B और C</button>
-                <button class="option" data-option="C">C. A and C — A और C</button>
-                <button class="option" data-option="D">D. A only — केवल A</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. A and C — उत्तर: C. A और C</strong><br>
-                Exactly two people must be selected. Since B is not selected,
-                the selected pair must be A and C.<br><br>
-                ठीक दो लोगों का चयन करना है। चूँकि B का चयन नहीं किया गया है,
-                इसलिए चयनित जोड़ी A और C होगी।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. T — T</button>
+            <button class="option" data-option="B">B. S — S</button>
+            <button class="option" data-option="C">C. R — R</button>
+            <button class="option" data-option="D">D. Q — Q</button>
         </div>
 
-
-        <div class="question-card" data-answer="C">
-
-            <div class="question">
-                Q48. Five books P, Q, R, S and T are distributed among two students.
-                P and Q must go to the same student. R and S must go to different students.
-                If P and Q go to Student 1 and R goes to Student 1,
-                where must S go?<br><br>
-                <span>Q48. पाँच पुस्तकें P, Q, R, S और T दो विद्यार्थियों के बीच बाँटी जाती हैं।
-                P और Q एक ही विद्यार्थी को मिलनी चाहिए। R और S अलग-अलग विद्यार्थियों को मिलनी चाहिए।
-                यदि P और Q विद्यार्थी 1 को तथा R विद्यार्थी 1 को मिलती है,
-                तो S को कहाँ जाना चाहिए?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. Student 1 — विद्यार्थी 1</button>
-                <button class="option" data-option="B">B. Either student — कोई भी विद्यार्थी</button>
-                <button class="option" data-option="C">C. Student 2 — विद्यार्थी 2</button>
-                <button class="option" data-option="D">D. Cannot be determined — निर्धारित नहीं किया जा सकता</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: C. Student 2 — उत्तर: C. विद्यार्थी 2</strong><br>
-                R and S must go to different students. Since R is with Student 1,
-                S must go to Student 2.<br><br>
-                R और S अलग-अलग विद्यार्थियों को मिलनी चाहिए। चूँकि R विद्यार्थी 1 के पास है,
-                इसलिए S विद्यार्थी 2 को मिलेगी।
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: A. T — उत्तर: A. T</strong><br>
+            25th is the remaining date, so T is scheduled on the 25th.<br><br>
+            25 तारीख बची हुई तारीख है, इसलिए T की नियुक्ति 25 तारीख को है।
         </div>
 
+    </div>
 
-        <div class="question-card" data-answer="D">
 
-            <div class="question">
-                Q49. Four subjects P, Q, R and S are available for selection.
-                If P is selected, Q must also be selected.
-                If R is selected, S must also be selected.
-                P is selected and R is not selected.
-                Which subject must also be selected?<br><br>
-                <span>Q49. चयन के लिए चार विषय P, Q, R और S उपलब्ध हैं।
-                यदि P का चयन होता है, तो Q का चयन भी होना चाहिए।
-                यदि R का चयन होता है, तो S का चयन भी होना चाहिए।
-                P चयनित है और R चयनित नहीं है।
-                कौन-सा विषय भी अवश्य चयनित होगा?</span>
-            </div>
+    <div class="question-card" data-answer="C">
 
-            <div class="options">
-                <button class="option" data-option="A">A. R — R</button>
-                <button class="option" data-option="B">B. S — S</button>
-                <button class="option" data-option="C">C. P — P</button>
-                <button class="option" data-option="D">D. Q — Q</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: D. Q — उत्तर: D. Q</strong><br>
-                P is selected. According to the condition, whenever P is selected,
-                Q must also be selected. Therefore, Q must be selected.<br><br>
-                P चयनित है। दिए गए नियम के अनुसार जब P चयनित होगा,
-                Q भी चयनित होना चाहिए। इसलिए Q भी अवश्य चयनित होगा।
-            </div>
-
+        <div class="question">
+            Q29. Four exams are held on the 3rd, 8th, 13th and 18th of a month.
+            A is on the 3rd, B is on the 8th and C is on the 13th.
+            Which exam is on the 18th?<br><br>
+            <span>Q29. किसी महीने की 3, 8, 13 और 18 तारीख को चार परीक्षाएँ होती हैं।
+            A की परीक्षा 3 तारीख को, B की 8 तारीख को और C की 13 तारीख को है।
+            18 तारीख को किसकी परीक्षा है?</span>
         </div>
 
-
-        <div class="question-card" data-answer="B">
-
-            <div class="question">
-                Q50. Six people A, B, C, D, E and F are divided into two groups of three.
-                A and B must be in the same group. C and D must be in different groups.
-                If A and B are in Group 1 and C is also in Group 1,
-                who must be in Group 2?<br><br>
-                <span>Q50. छह लोगों A, B, C, D, E और F को तीन-तीन के दो समूहों में बाँटा गया है।
-                A और B एक ही समूह में होने चाहिए। C और D अलग-अलग समूहों में होने चाहिए।
-                यदि A और B समूह 1 में हैं और C भी समूह 1 में है,
-                तो समूह 2 में कौन अवश्य होगा?</span>
-            </div>
-
-            <div class="options">
-                <button class="option" data-option="A">A. A and B — A और B</button>
-                <button class="option" data-option="B">B. D — D</button>
-                <button class="option" data-option="C">C. C — C</button>
-                <button class="option" data-option="D">D. A — A</button>
-            </div>
-
-            <div class="solution" hidden>
-                <strong>Answer: B. D — उत्तर: B. D</strong><br>
-                C and D must be in different groups. Since C is in Group 1,
-                D must be in Group 2.<br><br>
-                C और D अलग-अलग समूहों में होने चाहिए।
-                चूँकि C समूह 1 में है, इसलिए D समूह 2 में अवश्य होगा।
-            </div>
-
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. B — B</button>
+            <button class="option" data-option="C">C. D — D</button>
+            <button class="option" data-option="D">D. C — C</button>
         </div>
 
-    </section>
-
-
-    <!-- SCORE -->
-    <section class="score-section">
-
-        <h2>Your Score</h2>
-
-        <div class="score" id="score">0 / 50</div>
-
-        <div class="score-grid">
-
-            <div class="score-item">
-                <strong id="attempted">0</strong>
-                <span>Attempted</span>
-            </div>
-
-            <div class="score-item">
-                <strong id="correct">0</strong>
-                <span>Correct</span>
-            </div>
-
-            <div class="score-item">
-                <strong id="wrong">0</strong>
-                <span>Wrong</span>
-            </div>
-
+        <div class="solution" hidden>
+            <strong>Answer: C. D — उत्तर: C. D</strong><br>
+            D occupies the remaining 18th date.<br><br>
+            बची हुई 18 तारीख D की है।
         </div>
 
+    </div>
 
-        <div class="button-area">
 
-            <button class="action-btn reset-btn" onclick="resetQuiz()">
-                Reset Practice
-            </button>
+    <div class="question-card" data-answer="D">
 
-            <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0" class="action-btn home-btn">
-                Back to Home
-            </a>
-
+        <div class="question">
+            Q30. Five events are scheduled on the 2nd, 7th, 12th, 17th and 22nd.
+            P is on the 2nd, Q is immediately after P in the listed order,
+            and R is immediately after Q in the listed order.
+            On which date is R scheduled?<br><br>
+            <span>Q30. पाँच घटनाएँ 2, 7, 12, 17 और 22 तारीख को निर्धारित हैं।
+            P की घटना 2 तारीख को है। सूची में Q, P के तुरंत बाद और R, Q के तुरंत बाद है।
+            R की घटना किस तारीख को है?</span>
         </div>
 
-    </section>
+        <div class="options">
+            <button class="option" data-option="A">A. 7th — 7 तारीख</button>
+            <button class="option" data-option="B">B. 17th — 17 तारीख</button>
+            <button class="option" data-option="C">C. 22nd — 22 तारीख</button>
+            <button class="option" data-option="D">D. 12th — 12 तारीख</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: D. 12th — उत्तर: D. 12 तारीख</strong><br>
+            In the listed order, P = 2nd, Q = 7th and R = 12th.<br><br>
+            सूची के क्रम में P = 2 तारीख, Q = 7 तारीख और R = 12 तारीख।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+            Q31. Five meetings are held on the 4th, 9th, 14th, 19th and 24th.
+            A is on the 4th, B on the 9th, C on the 14th and D on the 19th.
+            Which person has the meeting on the 24th?<br><br>
+            <span>Q31. पाँच बैठकें 4, 9, 14, 19 और 24 तारीख को होती हैं।
+            A की बैठक 4 तारीख को, B की 9 तारीख को, C की 14 तारीख को
+            और D की 19 तारीख को है। 24 तारीख को किस व्यक्ति की बैठक है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. E — E</button>
+            <button class="option" data-option="C">C. C — C</button>
+            <button class="option" data-option="D">D. D — D</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: B. E — उत्तर: B. E</strong><br>
+            A, B, C and D occupy the 4th, 9th, 14th and 19th respectively.
+            Therefore, E occupies the 24th.<br><br>
+            A, B, C और D क्रमशः 4, 9, 14 और 19 तारीख को हैं।
+            इसलिए E 24 तारीख को है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+            Q32. Five interviews are scheduled on the 6th, 11th, 16th, 21st and 26th.
+            P is on the 6th, Q immediately after P in the listed order,
+            and R immediately after Q in the listed order.
+            Which date is R's interview?<br><br>
+            <span>Q32. पाँच साक्षात्कार 6, 11, 16, 21 और 26 तारीख को निर्धारित हैं।
+            P का साक्षात्कार 6 तारीख को है, सूची में Q, P के तुरंत बाद
+            और R, Q के तुरंत बाद है। R का साक्षात्कार किस तारीख को है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. 16th — 16 तारीख</button>
+            <button class="option" data-option="B">B. 11th — 11 तारीख</button>
+            <button class="option" data-option="C">C. 21st — 21 तारीख</button>
+            <button class="option" data-option="D">D. 26th — 26 तारीख</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: A. 16th — उत्तर: A. 16 तारीख</strong><br>
+            In the listed order, P = 6th, Q = 11th and R = 16th.<br><br>
+            सूची के क्रम में P = 6 तारीख, Q = 11 तारीख और R = 16 तारीख।
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PART 7 -->
+<section class="part">
+
+    <h2 class="part-title">👨‍💼 Part 7 — Occupation Based Puzzles</h2>
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+            Q33. Four persons A, B, C and D have different professions:
+            Teacher, Doctor, Engineer and Lawyer. A is a Teacher, B is a Doctor
+            and D is a Lawyer. What is C's profession?<br><br>
+            <span>Q33. चार व्यक्ति A, B, C और D के अलग-अलग व्यवसाय हैं:
+            Teacher, Doctor, Engineer और Lawyer। A Teacher, B Doctor
+            और D Lawyer है। C का व्यवसाय क्या है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Teacher — शिक्षक</button>
+            <button class="option" data-option="B">B. Doctor — डॉक्टर</button>
+            <button class="option" data-option="C">C. Engineer — इंजीनियर</button>
+            <button class="option" data-option="D">D. Lawyer — वकील</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: C. Engineer — उत्तर: C. Engineer (इंजीनियर)</strong><br>
+            Teacher, Doctor and Lawyer are already assigned.
+            Therefore, C is an Engineer.<br><br>
+            Teacher, Doctor और Lawyer पहले ही दिए जा चुके हैं।
+            इसलिए C, Engineer है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+            Q34. Five persons P, Q, R, S and T have different professions:
+            Manager, Clerk, Officer, Teacher and Pilot. P is Manager,
+            Q is Clerk, R is Officer and T is Pilot. What is S's profession?<br><br>
+            <span>Q34. पाँच व्यक्ति P, Q, R, S और T के अलग-अलग व्यवसाय हैं:
+            Manager, Clerk, Officer, Teacher और Pilot। P Manager,
+            Q Clerk, R Officer और T Pilot है। S का व्यवसाय क्या है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Manager — प्रबंधक</button>
+            <button class="option" data-option="B">B. Clerk — लिपिक</button>
+            <button class="option" data-option="C">C. Pilot — पायलट</button>
+            <button class="option" data-option="D">D. Teacher — शिक्षक</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: D. Teacher — उत्तर: D. Teacher (शिक्षक)</strong><br>
+            Teacher is the remaining profession for S.<br><br>
+            S के लिए बचा हुआ व्यवसाय Teacher है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+            Q35. Five persons A, B, C, D and E have different occupations:
+            Teacher, Doctor, Lawyer, Engineer and Pilot.
+            A is a Teacher, B is a Doctor, D is a Lawyer and E is an Engineer.
+            What is C's occupation?<br><br>
+            <span>Q35. पाँच व्यक्तियों A, B, C, D और E के अलग-अलग व्यवसाय हैं:
+            Teacher, Doctor, Lawyer, Engineer और Pilot।
+            A Teacher, B Doctor, D Lawyer और E Engineer है।
+            C का व्यवसाय क्या है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Pilot — पायलट</button>
+            <button class="option" data-option="B">B. Engineer — इंजीनियर</button>
+            <button class="option" data-option="C">C. Doctor — डॉक्टर</button>
+            <button class="option" data-option="D">D. Lawyer — वकील</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: A. Pilot — उत्तर: A. Pilot (पायलट)</strong><br>
+            Teacher, Doctor, Lawyer and Engineer are assigned to A, B, D and E.
+            Therefore, C is a Pilot.<br><br>
+            Teacher, Doctor, Lawyer और Engineer क्रमशः A, B, D और E को दिए गए हैं।
+            इसलिए C, Pilot है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+            Q36. Five persons P, Q, R, S and T have different occupations:
+            Manager, Clerk, Officer, Assistant and Supervisor.
+            P is Manager, Q is Clerk, R is Officer and T is Assistant.
+            What is S's occupation?<br><br>
+            <span>Q36. पाँच व्यक्ति P, Q, R, S और T के अलग-अलग व्यवसाय हैं:
+            Manager, Clerk, Officer, Assistant और Supervisor।
+            P Manager, Q Clerk, R Officer और T Assistant है।
+            S का व्यवसाय क्या है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Assistant — सहायक</button>
+            <button class="option" data-option="B">B. Supervisor — पर्यवेक्षक</button>
+            <button class="option" data-option="C">C. Manager — प्रबंधक</button>
+            <button class="option" data-option="D">D. Clerk — लिपिक</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: B. Supervisor — उत्तर: B. Supervisor (पर्यवेक्षक)</strong><br>
+            Manager, Clerk, Officer and Assistant are assigned.
+            Supervisor is the remaining occupation for S.<br><br>
+            Manager, Clerk, Officer और Assistant पहले ही दिए जा चुके हैं।
+            इसलिए S के लिए Supervisor बचता है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+            Q37. Four persons A, B, C and D have different professions:
+            Engineer, Teacher, Doctor and Pilot. A is an Engineer,
+            B is a Teacher and D is a Pilot. Who is the Doctor?<br><br>
+            <span>Q37. चार व्यक्ति A, B, C और D के अलग-अलग व्यवसाय हैं:
+            Engineer, Teacher, Doctor और Pilot। A Engineer,
+            B Teacher और D Pilot है। Doctor कौन है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. B — B</button>
+            <button class="option" data-option="C">C. C — C</button>
+            <button class="option" data-option="D">D. D — D</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: C. C — उत्तर: C. C</strong><br>
+            Doctor is the only remaining occupation for C.<br><br>
+            C के लिए Doctor ही एकमात्र बचा हुआ व्यवसाय है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+            Q38. Five people A, B, C, D and E have different professions:
+            Professor, Doctor, Lawyer, Engineer and Banker.
+            A is a Professor, B is a Doctor, D is a Lawyer and E is a Banker.
+            Who is the Engineer?<br><br>
+            <span>Q38. पाँच व्यक्ति A, B, C, D और E के अलग-अलग व्यवसाय हैं:
+            Professor, Doctor, Lawyer, Engineer और Banker।
+            A Professor, B Doctor, D Lawyer और E Banker है।
+            Engineer कौन है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. A — A</button>
+            <button class="option" data-option="B">B. B — B</button>
+            <button class="option" data-option="C">C. E — E</button>
+            <button class="option" data-option="D">D. C — C</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: D. C — उत्तर: D. C</strong><br>
+            Professor, Doctor, Lawyer and Banker are assigned to A, B, D and E.
+            Therefore, C is the Engineer.<br><br>
+            Professor, Doctor, Lawyer और Banker क्रमशः A, B, D और E को दिए गए हैं।
+            इसलिए C, Engineer है।
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PART 8 -->
+<section class="part">
+
+    <h2 class="part-title">🌍 Part 8 — Person, City &amp; Colour Based Puzzles</h2>
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+            Q39. Four persons A, B, C and D live in Delhi, Mumbai, Pune and Jaipur.
+            A lives in Delhi, B in Pune and D in Jaipur.
+            Where does C live?<br><br>
+            <span>Q39. चार व्यक्ति A, B, C और D दिल्ली, मुंबई, पुणे और जयपुर में रहते हैं।
+            A दिल्ली में, B पुणे में और D जयपुर में रहता है।
+            C कहाँ रहता है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Delhi — दिल्ली</button>
+            <button class="option" data-option="B">B. Jaipur — जयपुर</button>
+            <button class="option" data-option="C">C. Mumbai — मुंबई</button>
+            <button class="option" data-option="D">D. Pune — पुणे</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: C. Mumbai — उत्तर: C. Mumbai (मुंबई)</strong><br>
+            Delhi, Pune and Jaipur are occupied by A, B and D.
+            Therefore, C lives in Mumbai.<br><br>
+            दिल्ली, पुणे और जयपुर में क्रमशः A, B और D रहते हैं।
+            इसलिए C मुंबई में रहता है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+            Q40. Five persons P, Q, R, S and T each like a different colour:
+            Red, Blue, Green, Yellow and White. P likes Red, Q likes Blue,
+            T likes White and S likes Green. Which colour does R like?<br><br>
+            <span>Q40. पाँच व्यक्ति P, Q, R, S और T में से प्रत्येक को अलग-अलग रंग पसंद हैं:
+            Red, Blue, Green, Yellow और White। P को Red, Q को Blue,
+            T को White और S को Green पसंद है। R को कौन-सा रंग पसंद है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Yellow — पीला</button>
+            <button class="option" data-option="B">B. Red — लाल</button>
+            <button class="option" data-option="C">C. Green — हरा</button>
+            <button class="option" data-option="D">D. Blue — नीला</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: A. Yellow — उत्तर: A. Yellow (पीला)</strong><br>
+            Red, Blue, White and Green are already assigned.
+            Yellow remains for R.<br><br>
+            Red, Blue, White और Green पहले ही दिए जा चुके हैं।
+            इसलिए R के लिए Yellow बचा है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+            Q41. Four persons A, B, C and D live in Delhi, Patna, Ranchi and Pune.
+            A lives in Delhi, B in Pune and D in Ranchi.
+            Where does C live?<br><br>
+            <span>Q41. चार व्यक्ति A, B, C और D दिल्ली, पटना, रांची और पुणे में रहते हैं।
+            A दिल्ली में, B पुणे में और D रांची में रहता है।
+            C कहाँ रहता है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Ranchi — रांची</button>
+            <button class="option" data-option="B">B. Patna — पटना</button>
+            <button class="option" data-option="C">C. Delhi — दिल्ली</button>
+            <button class="option" data-option="D">D. Pune — पुणे</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: B. Patna — उत्तर: B. Patna (पटना)</strong><br>
+            Delhi, Pune and Ranchi are occupied by A, B and D.
+            Therefore, C lives in Patna.<br><br>
+            दिल्ली, पुणे और रांची में क्रमशः A, B और D रहते हैं।
+            इसलिए C पटना में रहता है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+            Q42. Five persons A, B, C, D and E each like a different colour:
+            Red, Blue, Green, Yellow and White. A likes Red, B likes Blue,
+            D likes Yellow and E likes White. Which colour does C like?<br><br>
+            <span>Q42. पाँच व्यक्ति A, B, C, D और E में से प्रत्येक को अलग-अलग रंग पसंद हैं:
+            Red, Blue, Green, Yellow और White। A को Red, B को Blue,
+            D को Yellow और E को White पसंद है। C को कौन-सा रंग पसंद है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Red — लाल</button>
+            <button class="option" data-option="B">B. Blue — नीला</button>
+            <button class="option" data-option="C">C. White — सफेद</button>
+            <button class="option" data-option="D">D. Green — हरा</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: D. Green — उत्तर: D. Green (हरा)</strong><br>
+            Red, Blue, Yellow and White are already assigned.
+            Green remains for C.<br><br>
+            Red, Blue, Yellow और White पहले ही दिए जा चुके हैं।
+            इसलिए C के लिए Green बचा है।
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PART 9 -->
+<section class="part">
+
+    <h2 class="part-title">🔢 Part 9 — Ranking &amp; Order Based Puzzles</h2>
+
+    <div class="question-card" data-answer="A">
+
+        <div class="question">
+            Q43. Five students A, B, C, D and E are ranked from highest to lowest.
+            D ranks above A, A above B, B above C and C above E.
+            Who ranks highest?<br><br>
+            <span>Q43. पाँच विद्यार्थियों A, B, C, D और E को उच्चतम से निम्नतम क्रम में रैंक दिया गया है।
+            D की रैंक A से ऊपर, A की B से ऊपर, B की C से ऊपर और C की E से ऊपर है।
+            सबसे ऊँची रैंक किसकी है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. D — D</button>
+            <button class="option" data-option="B">B. A — A</button>
+            <button class="option" data-option="C">C. B — B</button>
+            <button class="option" data-option="D">D. E — E</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: A. D — उत्तर: A. D</strong><br>
+            The order is D &gt; A &gt; B &gt; C &gt; E.<br><br>
+            क्रम D &gt; A &gt; B &gt; C &gt; E है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+            Q44. Five children P, Q, R, S and T are arranged from oldest to youngest.
+            P is older than Q, Q is older than R, R is older than S and S is older than T.
+            Who is youngest?<br><br>
+            <span>Q44. पाँच बच्चों P, Q, R, S और T को सबसे बड़े से सबसे छोटे के क्रम में रखा गया है।
+            P, Q से बड़ा है; Q, R से बड़ा है; R, S से बड़ा है और S, T से बड़ा है।
+            सबसे छोटा कौन है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. P — P</button>
+            <button class="option" data-option="B">B. Q — Q</button>
+            <button class="option" data-option="C">C. S — S</button>
+            <button class="option" data-option="D">D. T — T</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: D. T — उत्तर: D. T</strong><br>
+            The order from oldest to youngest is P, Q, R, S, T.
+            Therefore, T is the youngest.<br><br>
+            सबसे बड़े से सबसे छोटे का क्रम P, Q, R, S, T है।
+            इसलिए T सबसे छोटा है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="B">
+
+        <div class="question">
+            Q45. Five employees A, B, C, D and E are ranked according to performance.
+            D ranks first, and A ranks above B, B above C and C above E.
+            Who ranks second?<br><br>
+            <span>Q45. पाँच कर्मचारियों A, B, C, D और E को प्रदर्शन के आधार पर रैंक दिया गया है।
+            D प्रथम स्थान पर है और A की रैंक B से ऊपर, B की C से ऊपर तथा C की E से ऊपर है।
+            दूसरे स्थान पर कौन है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. B — B</button>
+            <button class="option" data-option="B">B. A — A</button>
+            <button class="option" data-option="C">C. C — C</button>
+            <button class="option" data-option="D">D. E — E</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: B. A — उत्तर: B. A</strong><br>
+            The order is D, A, B, C, E. Therefore, A ranks second.<br><br>
+            क्रम D, A, B, C, E है। इसलिए A दूसरे स्थान पर है।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+            Q46. Six runners P, Q, R, S, T and U finish a race.
+            P finishes before Q, Q before R, R before S,
+            S before T and T before U. Who finishes third?<br><br>
+            <span>Q46. छह धावक P, Q, R, S, T और U एक दौड़ पूरी करते हैं।
+            P, Q से पहले; Q, R से पहले; R, S से पहले;
+            S, T से पहले और T, U से पहले दौड़ पूरी करता है।
+            तीसरे स्थान पर कौन आता है?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Q — Q</button>
+            <button class="option" data-option="B">B. S — S</button>
+            <button class="option" data-option="C">C. R — R</button>
+            <button class="option" data-option="D">D. T — T</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: C. R — उत्तर: C. R</strong><br>
+            The order is P, Q, R, S, T, U. R finishes third.<br><br>
+            क्रम P, Q, R, S, T, U है। R तीसरे स्थान पर है।
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PART 10 -->
+<section class="part">
+
+    <h2 class="part-title">🧩 Part 10 — Selection, Distribution &amp; Logical Conditions</h2>
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+            Q47. A committee must select exactly two people from A, B and C.
+            A and B cannot be selected together. If B is not selected,
+            which pair must be selected?<br><br>
+            <span>Q47. एक समिति को A, B और C में से ठीक दो लोगों का चयन करना है।
+            A और B को एक साथ चयनित नहीं किया जा सकता।
+            यदि B का चयन नहीं किया जाता है, तो कौन-सी जोड़ी अवश्य चयनित होगी?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. A and B — A और B</button>
+            <button class="option" data-option="B">B. B and C — B और C</button>
+            <button class="option" data-option="C">C. A and C — A और C</button>
+            <button class="option" data-option="D">D. A only — केवल A</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: C. A and C — उत्तर: C. A और C</strong><br>
+            Exactly two people must be selected. Since B is not selected,
+            the selected pair must be A and C.<br><br>
+            ठीक दो लोगों का चयन करना है। चूँकि B का चयन नहीं किया गया है,
+            इसलिए चयनित जोड़ी A और C होगी।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="C">
+
+        <div class="question">
+            Q48. Five books P, Q, R, S and T are distributed among two students.
+            P and Q must go to the same student. R and S must go to different students.
+            If P and Q go to Student 1 and R goes to Student 1,
+            where must S go?<br><br>
+            <span>Q48. पाँच पुस्तकें P, Q, R, S और T दो विद्यार्थियों के बीच बाँटी जाती हैं।
+            P और Q एक ही विद्यार्थी को मिलनी चाहिए। R और S अलग-अलग विद्यार्थियों को मिलनी चाहिए।
+            यदि P और Q विद्यार्थी 1 को तथा R विद्यार्थी 1 को मिलती है,
+            तो S को कहाँ जाना चाहिए?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. Student 1 — विद्यार्थी 1</button>
+            <button class="option" data-option="B">B. Either student — कोई भी विद्यार्थी</button>
+            <button class="option" data-option="C">C. Student 2 — विद्यार्थी 2</button>
+            <button class="option" data-option="D">D. Cannot be determined — निर्धारित नहीं किया जा सकता</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: C. Student 2 — उत्तर: C. विद्यार्थी 2</strong><br>
+            R and S must go to different students. Since R is with Student 1,
+            S must go to Student 2.<br><br>
+            R और S अलग-अलग विद्यार्थियों को मिलनी चाहिए। चूँकि R विद्यार्थी 1 के पास है,
+            इसलिए S विद्यार्थी 2 को मिलेगी।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+            Q49. Four subjects P, Q, R and S are available for selection.
+            If P is selected, Q must also be selected.
+            If R is selected, S must also be selected.
+            P is selected and R is not selected.
+            Which subject must also be selected?<br><br>
+            <span>Q49. चयन के लिए चार विषय P, Q, R और S उपलब्ध हैं।
+            यदि P का चयन होता है, तो Q का चयन भी होना चाहिए।
+            यदि R का चयन होता है, तो S का चयन भी होना चाहिए।
+            P चयनित है और R चयनित नहीं है।
+            कौन-सा विषय भी अवश्य चयनित होगा?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. R — R</button>
+            <button class="option" data-option="B">B. S — S</button>
+            <button class="option" data-option="C">C. P — P</button>
+            <button class="option" data-option="D">D. Q — Q</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: D. Q — उत्तर: D. Q</strong><br>
+            P is selected. According to the condition, whenever P is selected,
+            Q must also be selected. Therefore, Q must be selected.<br><br>
+            P चयनित है। दिए गए नियम के अनुसार जब P चयनित होगा,
+            Q भी चयनित होना चाहिए। इसलिए Q भी अवश्य चयनित होगा।
+        </div>
+
+    </div>
+
+
+    <div class="question-card" data-answer="D">
+
+        <div class="question">
+            Q50. Six people A, B, C, D, E and F are divided into two groups of three.
+            A and B must be in the same group. C and D must be in different groups.
+            If A, B and C are in Group 1, which set of people must form Group 2?<br><br>
+            <span>Q50. छह लोगों A, B, C, D, E और F को तीन-तीन के दो समूहों में बाँटा गया है।
+            A और B एक ही समूह में होने चाहिए। C और D अलग-अलग समूहों में होने चाहिए।
+            यदि A, B और C समूह 1 में हैं, तो कौन-से लोग मिलकर समूह 2 बनाएँगे?</span>
+        </div>
+
+        <div class="options">
+            <button class="option" data-option="A">A. A, B and C — A, B और C</button>
+            <button class="option" data-option="B">B. A, C and D — A, C और D</button>
+            <button class="option" data-option="C">C. B, D and E — B, D और E</button>
+            <button class="option" data-option="D">D. D, E and F — D, E और F</button>
+        </div>
+
+        <div class="solution" hidden>
+            <strong>Answer: D. D, E and F — उत्तर: D. D, E और F</strong><br>
+            Group 1 already contains A, B and C. Since each group has exactly three people,
+            the remaining people D, E and F must form Group 2. This also satisfies
+            the condition that C and D are in different groups.<br><br>
+            समूह 1 में A, B और C पहले से हैं। प्रत्येक समूह में ठीक तीन लोग होने के कारण,
+            शेष D, E और F समूह 2 बनाएँगे। इससे C और D के अलग-अलग समूहों में होने की शर्त भी पूरी होती है।
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SCORE -->
+<section class="score-section">
+
+    <h2>Your Score</h2>
+
+    <div class="score" id="score">0 / 50</div>
+
+    <div class="score-grid">
+
+        <div class="score-item">
+            <strong id="attempted">0</strong>
+            <span>Attempted</span>
+        </div>
+
+        <div class="score-item">
+            <strong id="correct">0</strong>
+            <span>Correct</span>
+        </div>
+
+        <div class="score-item">
+            <strong id="wrong">0</strong>
+            <span>Wrong</span>
+        </div>
+
+    </div>
+
+
+    <div class="button-area">
+
+        <button class="action-btn reset-btn" onclick="resetQuiz()">
+            Reset Practice
+        </button>
+
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0" class="action-btn home-btn">
+            Back to Home
+        </a>
+
+    </div>
+
+</section>
 
 </main>
 
