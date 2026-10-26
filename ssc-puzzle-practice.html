@@ -2117,24 +2117,94 @@ body{
 </main>
 
 
+
 <!-- FOOTER -->
 <footer>
 
     <div class="footer-title">LET'S QUALIFYNOW</div>
 
-    <p>N Saurabh Sir — Reasoning Faculty</p>
+    <p class="tagline">You Are Closer To Success</p>
+
+    <p>N Saurabh Sir | Reasoning Faculty</p>
 
     <p>SSC • Banking • Railway • Government Exams</p>
 
     <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
 
     <p>
-        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">
+        <a href="https://youtube.com/@letsqualifynow7636"
+           target="_blank"
+           rel="noopener noreferrer">
             YouTube — Let's QualifyNow
         </a>
     </p>
 
+    <p class="copyright">
+        © 2026 Let's QualifyNow. All Rights Reserved.
+    </p>
+
 </footer>
+
+
+<style>
+/* FOOTER */
+footer{
+    background:#102a43;
+    color:#fff;
+    text-align:center;
+    padding:28px 20px;
+    margin-top:0;
+}
+
+.footer-title{
+    color:#fff;
+    font-size:18px;
+    font-weight:800;
+    margin-bottom:8px;
+    letter-spacing:.2px;
+}
+
+footer p{
+    margin:5px 0;
+    font-size:14px;
+    line-height:1.6;
+}
+
+footer .tagline{
+    color:#d9eaf7;
+}
+
+footer a{
+    color:#d9eaf7;
+    font-weight:600;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+footer .copyright{
+    margin-top:12px;
+    font-size:12px;
+    color:#d9e2ec;
+}
+
+/* MOBILE FOOTER */
+@media(max-width:600px){
+    footer{
+        padding:25px 15px;
+    }
+
+    footer p{
+        font-size:13px;
+    }
+
+    .footer-title{
+        font-size:17px;
+    }
+}
+</style>
 
 
 <script>
@@ -2161,6 +2231,8 @@ function shuffleOptions(){
     cards.forEach(function(card){
 
         const container = card.querySelector(".options");
+
+        if(!container) return;
 
         const options = Array.from(
             container.querySelectorAll(".option")
@@ -2192,17 +2264,26 @@ function shuffleOptions(){
 
 function updateScore(){
 
-    document.getElementById("score").textContent =
-        correct + " / 50";
+    const scoreElement = document.getElementById("score");
+    const attemptedElement = document.getElementById("attempted");
+    const correctElement = document.getElementById("correct");
+    const wrongElement = document.getElementById("wrong");
 
-    document.getElementById("attempted").textContent =
-        attempted;
+    if(scoreElement){
+        scoreElement.textContent = correct + " / 50";
+    }
 
-    document.getElementById("correct").textContent =
-        correct;
+    if(attemptedElement){
+        attemptedElement.textContent = attempted;
+    }
 
-    document.getElementById("wrong").textContent =
-        wrong;
+    if(correctElement){
+        correctElement.textContent = correct;
+    }
+
+    if(wrongElement){
+        wrongElement.textContent = wrong;
+    }
 }
 
 
