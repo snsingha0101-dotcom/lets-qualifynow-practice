@@ -10,7 +10,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;line-height:1.6}
 
-/* HEADER: BRAND AND NAVIGATION ON THE SAME LINE */
+/* HEADER AND NAVIGATION */
 .site-header{
     display:flex;
     align-items:stretch;
@@ -48,8 +48,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;lin
     scrollbar-color:#627d98 #102a43;
     -webkit-overflow-scrolling:touch;
 }
-.site-navigation a,
-.more-button{
+.site-navigation a,.more-button{
     display:block;
     flex:0 0 auto;
     color:#fff;
@@ -64,20 +63,12 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;lin
     cursor:pointer;
     white-space:nowrap;
 }
-.site-navigation a:hover,
-.more-button:hover{
+.site-navigation a:hover,.more-button:hover{
     background:#173f5f;
     color:#d9eaf7;
 }
-.more-menu{
-    position:relative;
-    flex:0 0 auto;
-}
-.more-button{
-    display:flex;
-    align-items:center;
-    gap:4px;
-}
+.more-menu{position:relative;flex:0 0 auto}
+.more-button{display:flex;align-items:center;gap:4px}
 .more-arrow{font-size:9px}
 .more-dropdown{
     display:none;
@@ -104,57 +95,265 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;lin
     font-size:13px;
 }
 .more-dropdown a:last-child{border-bottom:none}
-.more-dropdown a:hover{
-    background:#eef6fb;
-    color:#102a43;
-}
+.more-dropdown a:hover{background:#eef6fb;color:#102a43}
 
-.hero{background:#173f5f;color:#fff;text-align:center;padding:30px 16px}
+/* HERO */
+.hero{
+    background:#173f5f;
+    color:#fff;
+    text-align:center;
+    padding:30px 16px;
+}
 .hero h1{font-size:27px;margin-bottom:8px}
 .hero p{font-size:15px;color:#e1e8ed}
+
+/* PAGE CONTENT */
 .container{width:94%;max-width:1100px;margin:24px auto}
-.intro{background:#fff;border:1px solid #d9e2ec;border-radius:10px;padding:20px;margin-bottom:22px}
-.section-heading{color:#102a43;background:#eef6fb;border-left:5px solid #173f5f;padding:12px 15px;border-radius:5px;margin-bottom:16px;font-size:20px}
-.question-card{background:#fff;border:1px solid #d9e2ec;border-radius:10px;padding:20px;margin-bottom:18px;box-shadow:0 2px 6px rgba(16,42,67,.04)}
-.question-number{color:#173f5f;font-size:17px;font-weight:bold;margin-bottom:8px}
+.intro{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:22px;
+}
+.section-heading{
+    color:#102a43;
+    background:#eef6fb;
+    border-left:5px solid #173f5f;
+    padding:12px 15px;
+    border-radius:5px;
+    margin-bottom:16px;
+    font-size:20px;
+}
+
+/* QUESTION CARDS */
+.question-card{
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(16,42,67,.04);
+}
+.question-number{
+    color:#173f5f;
+    font-size:17px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
 .question-instruction{margin-bottom:14px;font-size:15px}
-.analogy-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;margin:16px 0}
-.figure-box{min-width:0;border:1px solid #d9e2ec;border-radius:8px;background:#fff;text-align:center;padding:8px 5px}
-.figure-label{color:#173f5f;font-weight:bold;font-size:16px;margin-bottom:4px}
-.figure-box svg{display:block;width:100%;max-width:145px;height:112px;margin:0 auto}
-.question-mark{font-size:42px;color:#173f5f;font-weight:bold;height:112px;display:flex;align-items:center;justify-content:center}
+.analogy-row{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+    align-items:stretch;
+    margin:16px 0;
+}
+.figure-box{
+    min-width:0;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    background:#fff;
+    text-align:center;
+    padding:8px 5px;
+}
+.figure-label{
+    color:#173f5f;
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:4px;
+}
+.figure-box svg{
+    display:block;
+    width:100%;
+    max-width:145px;
+    height:112px;
+    margin:0 auto;
+}
+.question-mark{
+    font-size:42px;
+    color:#173f5f;
+    font-weight:bold;
+    height:112px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 .options-title{font-weight:bold;margin:14px 0 9px}
-.options-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.option{min-width:0;border:1px solid #d9e2ec;border-radius:8px;padding:8px 7px;cursor:pointer;background:#fff;text-align:center;transition:border-color .15s,background .15s}
+.options-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:10px;
+}
+.option{
+    min-width:0;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:8px 7px;
+    cursor:pointer;
+    background:#fff;
+    text-align:center;
+    transition:border-color .15s,background .15s;
+}
 .option:hover{border-color:#627d98;background:#f7f9fc}
 .option-head{font-weight:bold;color:#173f5f;margin-bottom:2px}
-.option svg{display:block;width:100%;max-width:125px;height:100px;margin:0 auto}
+.option svg{
+    display:block;
+    width:100%;
+    max-width:125px;
+    height:100px;
+    margin:0 auto;
+}
 .option.selected{border:2px solid #173f5f;background:#eef6fb;padding:7px 6px}
 .option.correct{border:2px solid #218838;background:#e6f4ea;padding:7px 6px}
 .option.wrong{border:2px solid #c62828;background:#fdecea;padding:7px 6px}
-.submit-btn,.reset-btn{border:none;border-radius:6px;padding:10px 17px;cursor:pointer;font-size:14px;font-weight:bold;margin-top:13px}
-.submit-btn{background:#173f5f;color:#fff}
+
+/* SUBMIT ANSWER BUTTON: CENTERED */
+.submit-btn,.reset-btn{
+    border:none;
+    border-radius:6px;
+    padding:10px 17px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+    margin-top:13px;
+}
+.question-card .submit-btn{
+    display:block;
+    width:fit-content;
+    max-width:100%;
+    margin:13px auto 0;
+    background:#173f5f;
+    color:#fff;
+    text-align:center;
+}
 .submit-btn:hover{background:#102a43}
 .submit-btn:disabled{opacity:.65;cursor:not-allowed}
-.feedback{margin-top:14px;padding:13px;border-radius:7px;display:none;font-size:14px}
-.feedback.correct-feedback{display:block;background:#e6f4ea;border:1px solid #b7dfc1;color:#155724}
-.feedback.wrong-feedback{display:block;background:#fdecea;border:1px solid #f2b8b5;color:#842029}
-.solution-title{font-weight:bold;margin-bottom:5px}
-.score-box{background:#fff;border:2px solid #173f5f;border-radius:10px;padding:22px;margin:28px 0}
-.score-box h2{color:#102a43;margin-bottom:14px;font-size:23px}
-.score-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
-.score-item{background:#f7f9fc;border:1px solid #d9e2ec;border-radius:8px;padding:13px 7px;text-align:center}
-.score-item span{display:block;font-size:13px;color:#52606d;margin-bottom:5px}
-.score-item strong{font-size:25px;color:#102a43}
-.reset-btn{background:#52606d;color:#fff}
-.reset-btn:hover{background:#243b53}
-footer{background:#102a43;color:#e1e8ed;text-align:center;padding:18px 10px;font-size:13px;margin-top:30px}
 
+/* ANSWER FEEDBACK */
+.feedback{
+    margin-top:14px;
+    padding:13px;
+    border-radius:7px;
+    display:none;
+    font-size:14px;
+}
+.feedback.correct-feedback{
+    display:block;
+    background:#e6f4ea;
+    border:1px solid #b7dfc1;
+    color:#155724;
+}
+.feedback.wrong-feedback{
+    display:block;
+    background:#fdecea;
+    border:1px solid #f2b8b5;
+    color:#842029;
+}
+.solution-title{font-weight:bold;margin-bottom:5px}
+
+/* TEST RESULT: CENTERED WITH COLOURED BACKGROUNDS */
+.score-box{
+    background:#eef6fb;
+    border:2px solid #173f5f;
+    border-radius:10px;
+    padding:22px;
+    margin:28px 0;
+    text-align:center;
+}
+.score-box h2{
+    display:block;
+    width:100%;
+    color:#102a43;
+    background:#d9eaf7;
+    border:1px solid #d9e2ec;
+    border-radius:6px;
+    padding:12px 8px;
+    margin:0 auto 16px;
+    font-size:23px;
+    text-align:center;
+}
+
+/* FOUR SCORE BOXES */
+.score-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+    margin:0 0 18px;
+    width:100%;
+    text-align:center;
+}
+.score-item{
+    background:#d9eaf7;
+    border:1px solid #829ab1;
+    border-radius:8px;
+    padding:15px 8px;
+    text-align:center;
+}
+.score-item span{
+    display:block;
+    font-size:13px;
+    color:#243b53;
+    margin-bottom:5px;
+    text-align:center;
+}
+.score-item strong{
+    display:block;
+    font-size:25px;
+    color:#102a43;
+    text-align:center;
+}
+
+/* MARKS AND ACCURACY */
+.score-box > p{
+    display:block;
+    width:100%;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:6px;
+    padding:10px;
+    margin:10px auto;
+    color:#102a43;
+    text-align:center;
+}
+
+/* RESET TEST BUTTON: CENTERED */
+.score-box .reset-btn{
+    display:block;
+    width:fit-content;
+    max-width:100%;
+    margin:16px auto 0;
+    background:#173f5f;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    padding:11px 20px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+}
+.score-box .reset-btn:hover{background:#102a43}
+
+/* FOOTER */
+footer{
+    background:#102a43;
+    color:#e1e8ed;
+    text-align:center;
+    padding:18px 10px;
+    font-size:13px;
+    margin-top:30px;
+    line-height:1.8;
+}
+
+/* NAVIGATION RESPONSIVE */
 @media(max-width:900px){
     .site-brand{font-size:14px;padding:10px 9px}
     .site-navigation{padding:0 2px}
     .site-navigation a,.more-button{font-size:10.5px;padding:11px 6px}
 }
+
+/* MOBILE */
 @media(max-width:600px){
     .site-header{width:100%;align-items:stretch}
     .site-brand{font-size:12px;padding:9px 7px;letter-spacing:0}
@@ -174,7 +373,11 @@ footer{background:#102a43;color:#e1e8ed;text-align:center;padding:18px 10px;font
         padding:10px 6px;
         white-space:nowrap;
     }
-    .more-dropdown{width:155px;min-width:155px;max-width:calc(100vw - 16px)}
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
+    }
     .hero{padding:35px 15px}
     .hero h1{font-size:22px}
     .hero p{font-size:15px}
@@ -188,8 +391,33 @@ footer{background:#102a43;color:#e1e8ed;text-align:center;padding:18px 10px;font
     .option{padding:5px 2px}
     .option svg{height:75px}
     .option-head{font-size:13px}
-    .score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+    .score-box{
+        padding:16px 10px;
+        text-align:center;
+    }
+    .score-box h2{
+        font-size:20px;
+        text-align:center;
+    }
+    .score-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+    }
+    .score-item{
+        padding:13px 5px;
+        text-align:center;
+    }
+    .score-item span{font-size:12px}
+    .score-item strong{font-size:24px}
+    .score-box > p{
+        padding:9px 5px;
+        text-align:center;
+    }
+    .score-box .reset-btn{margin:16px auto 0}
+    footer{text-align:center;padding:18px 10px}
 }
+
 @media(max-width:390px){
     .analogy-row{gap:3px}
     .figure-box svg{height:70px}
@@ -197,123 +425,6 @@ footer{background:#102a43;color:#e1e8ed;text-align:center;padding:18px 10px;font
     .option svg{height:65px}
     .figure-label{font-size:14px}
 }
-
-/* TEST RESULT: CENTER ALIGNMENT */
-.score-box{
-    background:#fff;
-    border:2px solid #173f5f;
-    border-radius:10px;
-    padding:22px;
-    margin:28px 0;
-    text-align:center;
-}
-
-.score-box h2{
-    color:#102a43;
-    margin-bottom:14px;
-    font-size:23px;
-    text-align:center;
-}
-
-.score-grid{
-    display:grid;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:12px;
-    margin-bottom:16px;
-    text-align:center;
-}
-
-.score-item{
-    background:#eef6fb;
-    border:1px solid #d9e2ec;
-    border-radius:8px;
-    padding:13px 7px;
-    text-align:center;
-}
-
-.score-item span{
-    display:block;
-    font-size:13px;
-    color:#52606d;
-    margin-bottom:5px;
-}
-
-.score-item strong{
-    display:block;
-    font-size:25px;
-    color:#102a43;
-}
-
-.score-box p{
-    text-align:center;
-    margin:8px 0;
-}
-
-/* RESET BUTTON: CENTER */
-.reset-btn{
-    display:block;
-    margin:16px auto 0;
-    background:#173f5f;
-    color:#fff;
-    border:none;
-    border-radius:6px;
-    padding:10px 17px;
-    cursor:pointer;
-    font-size:14px;
-    font-weight:bold;
-}
-
-.reset-btn:hover{
-    background:#102a43;
-}
-
-/* FOOTER: CENTER ALIGNMENT */
-footer{
-    background:#102a43;
-    color:#e1e8ed;
-    text-align:center;
-    padding:18px 10px;
-    font-size:13px;
-    margin-top:30px;
-    line-height:1.8;
-}
-
-/* MOBILE ALIGNMENT */
-@media(max-width:600px){
-    .score-box{
-        padding:16px 10px;
-        text-align:center;
-    }
-
-    .score-box h2{
-        font-size:21px;
-        text-align:center;
-    }
-
-    .score-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-        gap:10px;
-        text-align:center;
-    }
-
-    .score-item{
-        text-align:center;
-    }
-
-    .score-box p{
-        text-align:center;
-    }
-
-    .reset-btn{
-        margin:16px auto 0;
-    }
-
-    footer{
-        text-align:center;
-        padding:18px 10px;
-    }
-}
-    
 </style>
 </head>
 
@@ -478,7 +589,14 @@ I2:{en:"Advance the inner mark by two steps in the sequence.",hi:"भीतर�
 
 function parseSpec(str){
     const p=str.split("|");
-    return {shape:p[0],rot:Number(p[1])||0,fill:Number(p[2])||0,dots:Number(p[3])||0,inner:Number(p[4])||0,flip:Number(p[5])||0};
+    return {
+        shape:p[0],
+        rot:Number(p[1])||0,
+        fill:Number(p[2])||0,
+        dots:Number(p[3])||0,
+        inner:Number(p[4])||0,
+        flip:Number(p[5])||0
+    };
 }
 function specKey(s){
     return [s.shape,s.rot,s.fill,s.dots,s.inner,s.flip].join("|");
@@ -496,13 +614,18 @@ function transformOne(input,op){
     return s;
 }
 function transform(spec,opString){
-    return opString.split("+").map(x=>x.trim()).reduce((s,op)=>transformOne(s,op),{...spec});
+    return opString.split("+").map(x=>x.trim()).reduce(
+        (s,op)=>transformOne(s,op),{...spec}
+    );
 }
 function polygonPoints(n,cx=50,cy=50,r=29,start=-90){
     const pts=[];
     for(let i=0;i<n;i++){
         const a=(start+i*360/n)*Math.PI/180;
-        pts.push((cx+r*Math.cos(a)).toFixed(2)+","+(cy+r*Math.sin(a)).toFixed(2));
+        pts.push(
+            (cx+r*Math.cos(a)).toFixed(2)+","+
+            (cy+r*Math.sin(a)).toFixed(2)
+        );
     }
     return pts.join(" ");
 }
@@ -511,7 +634,10 @@ function starPoints(){
     for(let i=0;i<10;i++){
         const r=i%2===0?31:14;
         const a=(-90+i*36)*Math.PI/180;
-        pts.push((50+r*Math.cos(a)).toFixed(2)+","+(50+r*Math.sin(a)).toFixed(2));
+        pts.push(
+            (50+r*Math.cos(a)).toFixed(2)+","+
+            (50+r*Math.sin(a)).toFixed(2)
+        );
     }
     return pts.join(" ");
 }
@@ -542,7 +668,10 @@ function innerMarkup(inner){
 }
 function renderFigure(spec){
     const s=typeof spec==="string"?parseSpec(spec):spec;
-    const positions=[[15,15],[85,15],[15,85],[85,85],[50,12],[88,50],[50,88],[12,50],[28,12]];
+    const positions=[
+        [15,15],[85,15],[15,85],[85,85],
+        [50,12],[88,50],[50,88],[12,50],[28,12]
+    ];
     let dots="";
     for(let i=0;i<Math.min(s.dots,positions.length);i++){
         const p=positions[i];
@@ -602,7 +731,13 @@ function renderQuestions(){
         const c=parseSpec(cText);
         const correct=transform(c,op);
         const options=shuffleArray([correct,...createDistractors(correct)]);
-        const state={selected:null,submitted:false,correctKey:specKey(correct),options,isCorrect:false};
+        const state={
+            selected:null,
+            submitted:false,
+            correctKey:specKey(correct),
+            options,
+            isCorrect:false
+        };
         questionStates.push(state);
 
         const card=document.createElement("section");
@@ -634,7 +769,8 @@ function renderQuestions(){
             optionDiv.setAttribute("role","radio");
             optionDiv.setAttribute("aria-checked","false");
             optionDiv.tabIndex=0;
-            optionDiv.innerHTML=`<div class="option-head"><span class="radio-mark">◯</span> ${String.fromCharCode(65+optionIndex)}</div>${renderFigure(option)}`;
+            optionDiv.innerHTML=
+                `<div class="option-head"><span class="radio-mark">◯</span> ${String.fromCharCode(65+optionIndex)}</div>${renderFigure(option)}`;
 
             function selectOption(){
                 if(state.submitted)return;
@@ -648,6 +784,7 @@ function renderQuestions(){
                 optionDiv.setAttribute("aria-checked","true");
                 optionDiv.querySelector(".radio-mark").textContent="🔘";
             }
+
             optionDiv.addEventListener("click",selectOption);
             optionDiv.addEventListener("keydown",event=>{
                 if(event.key==="Enter"||event.key===" "){
@@ -657,22 +794,28 @@ function renderQuestions(){
             });
             optionContainer.appendChild(optionDiv);
         });
-        card.querySelector(`#submit-${index}`).addEventListener("click",()=>submitAnswer(index));
+
+        card.querySelector(`#submit-${index}`).addEventListener(
+            "click",()=>submitAnswer(index)
+        );
     });
 }
 
 function submitAnswer(index){
     const state=questionStates[index];
     if(state.submitted)return;
+
     if(state.selected===null){
         alert("Please select an option first.\nकृपया पहले एक विकल्प चुनें।");
         return;
     }
+
     state.submitted=true;
     state.isCorrect=specKey(state.options[state.selected])===state.correctKey;
 
     const card=document.getElementById(`question-${index+1}`);
     const optionElements=card.querySelectorAll(".option");
+
     optionElements.forEach((el,i)=>{
         el.classList.remove("selected");
         if(specKey(state.options[i])===state.correctKey)el.classList.add("correct");
@@ -692,7 +835,9 @@ function submitAnswer(index){
     const feedback=document.getElementById(`feedback-${index}`);
     feedback.className="feedback "+(state.isCorrect?"correct-feedback":"wrong-feedback");
 
-    const correctIndex=state.options.findIndex(option=>specKey(option)===state.correctKey);
+    const correctIndex=state.options.findIndex(
+        option=>specKey(option)===state.correctKey
+    );
     const correctLetter=String.fromCharCode(65+correctIndex);
     const english=explanations.map(x=>x.en).join(" Then ");
     const hindi=explanations.map(x=>x.hi).join(" इसके बाद ");
@@ -704,11 +849,13 @@ function submitAnswer(index){
         <p style="margin-top:7px"><strong>व्याख्या (हिंदी):</strong> A से B में: ${hindi} यही नियम आकृति C पर लागू करें।</p>
         <p style="margin-top:7px"><strong>Marks / अंक:</strong> ${state.isCorrect?"+1":"0"}</p>
     `;
+
     updateScore();
 }
 
 function updateScore(){
     let correct=0,wrong=0,attempted=0;
+
     questionStates.forEach(state=>{
         if(state.submitted){
             attempted++;
@@ -716,8 +863,10 @@ function updateScore(){
             else wrong++;
         }
     });
+
     const unattempted=questionsData.length-attempted;
     const accuracy=attempted?Math.round(correct/attempted*100):0;
+
     document.getElementById("correctCount").textContent=correct;
     document.getElementById("wrongCount").textContent=wrong;
     document.getElementById("attemptedCount").textContent=attempted;
@@ -725,6 +874,7 @@ function updateScore(){
     document.getElementById("marks").textContent=correct;
     document.getElementById("accuracy").textContent=accuracy+"%";
 }
+
 function resetTest(){
     if(!confirm("Are you sure you want to reset the test?\nक्या आप अभ्यास दोबारा शुरू करना चाहते हैं?"))return;
     renderQuestions();
@@ -739,42 +889,42 @@ updateScore();
 <script>
 "use strict";
 
-const moreMenu = document.getElementById("moreMenu");
-const moreButton = document.getElementById("moreButton");
-const moreDropdown = document.getElementById("moreDropdown");
-const siteNavigation = document.getElementById("siteNavigation");
+const moreMenu=document.getElementById("moreMenu");
+const moreButton=document.getElementById("moreButton");
+const moreDropdown=document.getElementById("moreDropdown");
+const siteNavigation=document.getElementById("siteNavigation");
 
-/* Move dropdown outside the scrolling navigation so it is not clipped. */
+/* Keep the dropdown outside the scrolling navigation. */
 document.body.appendChild(moreDropdown);
 
 function positionMoreDropdown(){
-    const buttonRect = moreButton.getBoundingClientRect();
+    const buttonRect=moreButton.getBoundingClientRect();
 
-    moreDropdown.style.left = "8px";
-    moreDropdown.style.top = "0px";
-    moreDropdown.style.visibility = "hidden";
+    moreDropdown.style.left="8px";
+    moreDropdown.style.top="0px";
+    moreDropdown.style.visibility="hidden";
     moreDropdown.classList.add("show");
 
-    const dropdownRect = moreDropdown.getBoundingClientRect();
-    const dropdownWidth = dropdownRect.width;
-    const dropdownHeight = dropdownRect.height;
+    const dropdownRect=moreDropdown.getBoundingClientRect();
+    const dropdownWidth=dropdownRect.width;
+    const dropdownHeight=dropdownRect.height;
 
-    let left = buttonRect.left;
-    let top = buttonRect.bottom;
+    let left=buttonRect.left;
+    let top=buttonRect.bottom;
 
-    if(left + dropdownWidth > window.innerWidth - 8){
-        left = window.innerWidth - dropdownWidth - 8;
+    if(left+dropdownWidth>window.innerWidth-8){
+        left=window.innerWidth-dropdownWidth-8;
     }
-    if(left < 8) left = 8;
+    if(left<8)left=8;
 
-    if(top + dropdownHeight > window.innerHeight - 8){
-        top = buttonRect.top - dropdownHeight;
+    if(top+dropdownHeight>window.innerHeight-8){
+        top=buttonRect.top-dropdownHeight;
     }
-    if(top < 8) top = 8;
+    if(top<8)top=8;
 
-    moreDropdown.style.left = left + "px";
-    moreDropdown.style.top = top + "px";
-    moreDropdown.style.visibility = "visible";
+    moreDropdown.style.left=left+"px";
+    moreDropdown.style.top=top+"px";
+    moreDropdown.style.visibility="visible";
 }
 
 function openMoreMenu(){
@@ -784,7 +934,7 @@ function openMoreMenu(){
 
 function closeMoreMenu(){
     moreDropdown.classList.remove("show");
-    moreDropdown.style.visibility = "";
+    moreDropdown.style.visibility="";
     moreButton.setAttribute("aria-expanded","false");
 }
 
@@ -799,7 +949,7 @@ moreButton.addEventListener("click",function(event){
 });
 
 document.addEventListener("click",function(event){
-    if(!moreMenu.contains(event.target) && !moreDropdown.contains(event.target)){
+    if(!moreMenu.contains(event.target)&&!moreDropdown.contains(event.target)){
         closeMoreMenu();
     }
 });
