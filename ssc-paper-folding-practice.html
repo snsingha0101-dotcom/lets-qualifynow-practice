@@ -22,107 +22,118 @@ body{
  line-height:1.6;
 }
 
-/* ================= HEADER & NAVIGATION ================= */
-header{
+/* ================= HEADER & NAVIGATION - ANALOGY FORMAT ================= */
+.site-header{
  background:#102a43;
  color:#fff;
- padding:15px 5%;
  position:sticky;
  top:0;
  z-index:1000;
+ padding:12px 0;
 }
 
-.header-inner{
- max-width:1200px;
- margin:auto;
+.site-header-inner{
+ width:100%;
+ max-width:1400px;
+ margin:0 auto;
+ padding:0 15px;
  display:flex;
  align-items:center;
- justify-content:space-between;
- gap:15px;
- flex-wrap:wrap;
+ gap:18px;
 }
 
-.brand{
- font-size:22px;
- font-weight:bold;
- white-space:nowrap;
-}
-
-nav{
- display:flex;
- align-items:center;
- justify-content:flex-end;
- gap:9px 14px;
- flex-wrap:wrap;
-}
-
-nav a{
+.site-brand{
+ flex-shrink:0;
  color:#fff;
  text-decoration:none;
- font-size:13px;
+ font-size:19px;
+ font-weight:800;
+ letter-spacing:.2px;
  white-space:nowrap;
 }
 
-nav a:hover{
- color:#d9eaf7;
- text-decoration:underline;
-}
-
-/* ================= MORE DROPDOWN ================= */
-.dropdown{
- position:relative;
- display:inline-block;
-}
-
-.dropbtn{
- background:transparent;
- color:#fff;
- border:none;
- padding:0;
- font-family:Arial,Helvetica,sans-serif;
- font-size:13px;
- cursor:pointer;
+.site-navigation{
+ display:flex;
+ align-items:center;
+ gap:0;
+ flex:1;
+ min-width:0;
+ overflow-x:auto;
+ overflow-y:hidden;
  white-space:nowrap;
+ scrollbar-width:none;
+ -ms-overflow-style:none;
 }
 
-.dropbtn:hover{
- color:#d9eaf7;
-}
-
-.dropdown-content{
+.site-navigation::-webkit-scrollbar{
  display:none;
- position:absolute;
- right:0;
- top:100%;
+}
+
+.site-navigation>a,
+.more-button{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ flex-shrink:0;
+ color:#fff;
+ background:transparent;
+ border:0;
+ padding:9px 8px;
+ font-family:Arial,Helvetica,sans-serif;
+ font-size:12px;
+ line-height:1.4;
+ text-decoration:none;
+ white-space:nowrap;
+ cursor:pointer;
+}
+
+.site-navigation>a:hover,
+.more-button:hover{
+ background:#173f5f;
+ color:#d9eaf7;
+}
+
+.more-menu{
+ display:inline-flex;
+ align-items:center;
+ flex-shrink:0;
+}
+
+.more-button{
+ gap:4px;
+}
+
+.more-dropdown{
+ display:none;
+ position:fixed;
  min-width:150px;
  background:#fff;
- box-shadow:0 5px 14px rgba(16,42,67,.18);
  border:1px solid #d9e2ec;
  border-radius:6px;
- overflow:hidden;
+ box-shadow:0 5px 14px rgba(16,42,67,.18);
  z-index:2000;
+ overflow:hidden;
 }
 
-.dropdown-content a{
+.more-dropdown.show{
  display:block;
- color:#243b53;
+}
+
+.more-dropdown a{
+ display:block;
  padding:10px 14px;
+ color:#243b53;
  font-size:13px;
  text-decoration:none;
  white-space:nowrap;
 }
 
-.dropdown-content a:hover{
+.more-dropdown a:hover{
  background:#eef6fb;
  color:#102a43;
- text-decoration:none;
 }
 
-.dropdown-content.show{
- display:block;
-}
-
-/* ================= BACK NAVIGATION ================= */
+/* ================= BACK NAVIGATION - ANALOGY FORMAT ================= */
 .back-navigation{
  max-width:1200px;
  margin:0 auto;
@@ -396,8 +407,8 @@ nav a:hover{
  margin:18px 0;
 }
 
-/* ================= FOOTER ================= */
-.site-footer{
+/* ================= FOOTER - ANALOGY FORMAT ================= */
+footer{
  background:#102a43;
  color:#d9eaf7;
  text-align:center;
@@ -406,82 +417,59 @@ nav a:hover{
  border-top:4px solid #173f5f;
 }
 
-.site-footer .footer-brand{
- color:#fff;
- font-size:18px;
- font-weight:800;
- letter-spacing:.3px;
- margin-bottom:5px;
-}
-
-.site-footer p{
+footer p{
  margin:5px 0;
  font-size:13px;
  line-height:1.7;
 }
 
-.site-footer .footer-tagline{
+footer p strong{
+ color:#fff;
+ font-size:18px;
+ font-weight:800;
+ letter-spacing:.3px;
+}
+
+footer .tagline{
  color:#d9eaf7;
  font-size:14px;
  font-weight:600;
 }
 
-.site-footer .footer-faculty{
- color:#fff;
- font-weight:700;
-}
-
-.site-footer a{
- color:#d9eaf7;
- text-decoration:none;
-}
-
-.site-footer a:hover{
- text-decoration:underline;
-}
-
 /* ================= MOBILE ================= */
-@media(max-width:1000px){
- .header-inner{
-  justify-content:center;
+@media(max-width:900px){
+ .site-header-inner{
+  display:block;
+  padding:0;
+ }
+
+ .site-brand{
+  display:block;
   text-align:center;
+  padding:2px 12px 8px;
+  font-size:19px;
  }
 
- .brand{
+ .site-navigation{
   width:100%;
-  font-size:21px;
+  padding:0 8px;
+  gap:0;
+  justify-content:flex-start;
+  -webkit-overflow-scrolling:touch;
  }
 
- nav{
-  justify-content:center;
- }
-
- .dropdown-content{
-  right:0;
- }
-}
-
-@media(max-width:700px){
- header{
-  padding:13px 12px;
- }
-
- nav{
-  gap:9px 12px;
- }
-
- nav a{
+ .site-navigation>a,
+ .more-button{
   font-size:12px;
- }
-
- .dropbtn{
-  font-size:12px;
+  padding:9px 8px;
  }
 
  .hero h1{
   font-size:23px;
  }
+}
 
+@media(max-width:700px){
  .process{
   grid-template-columns:1fr;
  }
@@ -510,16 +498,16 @@ nav a:hover{
   font-size:13px;
  }
 
- .site-footer{
+ footer{
   padding:20px 12px;
  }
 
- .site-footer .footer-brand{
-  font-size:16px;
+ footer p{
+  font-size:12px;
  }
 
- .site-footer p{
-  font-size:12px;
+ footer p strong{
+  font-size:16px;
  }
 }
 </style>
@@ -527,37 +515,43 @@ nav a:hover{
 
 <body>
 
-<header>
- <div class="header-inner">
-  <div class="brand">LET'S QUALIFYNOW</div>
+<!-- ================= HEADER & NAVIGATION ================= -->
+<header class="site-header">
+ <div class="site-header-inner">
 
-  <nav>
-   <a href="https://sites.google.com/view/lets-qualify-now/home">Home</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation">Government Exam Preparation</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/courses">Courses</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course">SSC Reasoning Course</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course">State Exams Reasoning Course</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course">Railway Reasoning Course</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course">Banking Reasoning Course</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/youtube">YouTube</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/study-material">Study Material</a>
-   <a href="https://sites.google.com/view/lets-qualify-now/live-classes">Live Classes</a>
+  <a class="site-brand" href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">LET'S QUALIFYNOW</a>
 
-   <div class="dropdown">
-    <button class="dropbtn" type="button" onclick="toggleDropdown()">More ▾</button>
-    <div class="dropdown-content" id="moreDropdown">
-     <a href="https://sites.google.com/view/lets-qualify-now/test-series">Test Series</a>
-     <a href="https://sites.google.com/view/lets-qualify-now/exams">Exams</a>
-    </div>
+  <nav class="site-navigation" id="siteNavigation">
+   <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
+
+   <div class="more-menu" id="moreMenu">
+    <button class="more-button" id="moreButton" type="button" aria-expanded="false" aria-controls="moreDropdown">More ▾</button>
    </div>
   </nav>
+
+  <div class="more-dropdown" id="moreDropdown">
+   <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+   <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+  </div>
+
  </div>
 </header>
 
+<!-- ================= BACK NAVIGATION ================= -->
 <div class="back-navigation">
  <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html">← Back to SSC Topic-wise Practice</a>
 </div>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
  <h1>📄 SSC Paper Folding Practice</h1>
  <p>50 Practice Questions with Answers &amp; Solutions</p>
@@ -616,16 +610,103 @@ nav a:hover{
 
 </main>
 
-<footer class="site-footer">
- <p class="footer-brand">LET'S QUALIFYNOW</p>
- <p class="footer-tagline">You Are Closer To Success</p>
- <p class="footer-faculty">N Saurabh Sir | Reasoning Faculty</p>
+<!-- ================= FOOTER - ANALOGY FORMAT ================= -->
+<footer>
+ <p><strong>LET'S QUALIFYNOW</strong></p>
+ <p class="tagline">You Are Closer To Success</p>
+ <p>N Saurabh Sir | Reasoning Faculty</p>
  <p>SSC • Banking • Railway • Government Exams</p>
  <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
- <p>YouTube: <a href="https://www.youtube.com/@letsqualifynow7636" target="_blank" rel="noopener noreferrer">@letsqualifynow7636</a></p>
+ <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
 </footer>
 
 <script>
+/* ================= MORE DROPDOWN - ANALOGY BEHAVIOUR ================= */
+const moreMenu = document.getElementById("moreMenu");
+const moreButton = document.getElementById("moreButton");
+const moreDropdown = document.getElementById("moreDropdown");
+const siteNavigation = document.getElementById("siteNavigation");
+
+document.body.appendChild(moreDropdown);
+
+function positionMoreDropdown(){
+ const buttonRect = moreButton.getBoundingClientRect();
+
+ moreDropdown.style.left = "8px";
+ moreDropdown.style.top = "0px";
+ moreDropdown.style.visibility = "hidden";
+ moreDropdown.classList.add("show");
+
+ const dropdownRect = moreDropdown.getBoundingClientRect();
+ const dropdownWidth = dropdownRect.width;
+ const dropdownHeight = dropdownRect.height;
+
+ let left = buttonRect.left;
+ let top = buttonRect.bottom;
+
+ if(left + dropdownWidth > window.innerWidth - 8){
+  left = window.innerWidth - dropdownWidth - 8;
+ }
+
+ if(left < 8){
+  left = 8;
+ }
+
+ if(top + dropdownHeight > window.innerHeight - 8){
+  top = buttonRect.top - dropdownHeight;
+ }
+
+ if(top < 8){
+  top = 8;
+ }
+
+ moreDropdown.style.left = left + "px";
+ moreDropdown.style.top = top + "px";
+ moreDropdown.style.visibility = "visible";
+}
+
+function openMoreMenu(){
+ positionMoreDropdown();
+ moreButton.setAttribute("aria-expanded","true");
+}
+
+function closeMoreMenu(){
+ moreDropdown.classList.remove("show");
+ moreDropdown.style.visibility = "";
+ moreButton.setAttribute("aria-expanded","false");
+}
+
+moreButton.addEventListener("click",function(event){
+ event.stopPropagation();
+
+ if(moreDropdown.classList.contains("show")){
+  closeMoreMenu();
+ }else{
+  openMoreMenu();
+ }
+});
+
+document.addEventListener("click",function(event){
+ if(!moreMenu.contains(event.target) && !moreDropdown.contains(event.target)){
+  closeMoreMenu();
+ }
+});
+
+moreDropdown.addEventListener("click",function(event){
+ event.stopPropagation();
+});
+
+document.addEventListener("keydown",function(event){
+ if(event.key === "Escape"){
+  closeMoreMenu();
+  moreButton.focus();
+ }
+});
+
+siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("resize",closeMoreMenu);
+
 /*
 COORDINATE SYSTEM
 The original paper uses x and y coordinates from 0 to 100.
@@ -1019,21 +1100,6 @@ function resetTest(){
  updateScore();
  window.scrollTo({top:0,behavior:"smooth"});
 }
-
-/* ================= MORE DROPDOWN ================= */
-function toggleDropdown(){
- const dropdown=document.getElementById("moreDropdown");
- dropdown.classList.toggle("show");
-}
-
-window.addEventListener("click",function(event){
- if(!event.target.matches(".dropbtn")){
-  const dropdown=document.getElementById("moreDropdown");
-  if(dropdown && dropdown.classList.contains("show")){
-   dropdown.classList.remove("show");
-  }
- }
-});
 </script>
 
 </body>
