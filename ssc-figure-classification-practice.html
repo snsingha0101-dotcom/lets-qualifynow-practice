@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,51 +21,126 @@ body{
     line-height:1.6;
 }
 
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
+/* HEADER: MATCHED WITH ANALOGY PRACTICE */
+.site-header{
+    display:flex;
+    align-items:stretch;
     background:#102a43;
-    color:white;
-    padding:15px 20px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    color:#fff;
+    width:100%;
+    position:relative;
+    z-index:100;
 }
 
-.header-inner{
-    max-width:1200px;
-    margin:auto;
+.site-brand{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:20px;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    text-decoration:none;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
 }
 
-.logo{
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:1px;
+/* SINGLE-LINE NAVIGATION */
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+
+.site-navigation a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    cursor:pointer;
     white-space:nowrap;
 }
 
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    gap:8px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:7px 10px;
-    border-radius:5px;
-    font-size:14px;
-}
-
-nav a:hover{
+.site-navigation a:hover,
+.more-button:hover{
     background:#173f5f;
+    color:#d9eaf7;
 }
 
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    margin-top:0;
+}
+
+.more-arrow{
+    font-size:9px;
+}
+
+.more-dropdown{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
+    width:170px;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:99999;
+}
+
+.more-dropdown.show{
+    display:block;
+}
+
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.more-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
+}
+
+/* HERO */
 .hero{
     background:#173f5f;
     color:white;
@@ -308,19 +384,62 @@ footer a{
     text-decoration:none;
 }
 
-@media(max-width:700px){
+/* TABLET — MATCHED WITH ANALOGY PRACTICE */
+@media(max-width:900px){
 
-    .header-inner{
-        flex-direction:column;
+    .site-brand{
+        font-size:14px;
+        padding:10px 9px;
     }
 
-    nav{
-        justify-content:center;
+    .site-navigation{
+        padding:0 2px;
     }
 
-    nav a{
-        font-size:13px;
-        padding:6px 8px;
+    .site-navigation a,
+    .more-button{
+        font-size:10.5px;
+        padding:11px 6px;
+    }
+}
+
+/* MOBILE — MATCHED WITH ANALOGY PRACTICE */
+@media(max-width:600px){
+
+    .site-header{
+        width:100%;
+        align-items:stretch;
+    }
+
+    .site-brand{
+        font-size:12px;
+        padding:9px 7px;
+        letter-spacing:0;
+    }
+
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .site-navigation a,
+    .more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+
+    .more-dropdown{
+        width:155px;
+        min-width:155px;
+        max-width:calc(100vw - 16px);
     }
 
     .hero{
@@ -356,131 +475,108 @@ footer a{
 
 <body>
 
-<header>
-<div class="header-inner">
+<header class="site-header">
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="site-brand">LET'S QUALIFYNOW</a>
 
-<div class="logo">LET'S QUALIFYNOW</div>
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="ssc-reasoning.html">SSC Reasoning</a>
-<a href="courses.html">Courses</a>
-<a href="study-material.html">Study Material</a>
-<a href="live-classes.html">Live Classes</a>
-<a href="test-series.html">Test Series</a>
-<a href="exams.html">Exams</a>
-<a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
-</nav>
+        <div class="more-menu" id="moreMenu">
+            <button type="button" class="more-button" id="moreButton"
+                    aria-expanded="false" aria-haspopup="true"
+                    aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
 
-</div>
+            <div class="more-dropdown" id="moreDropdown">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+            </div>
+        </div>
+    </nav>
 </header>
 
-
 <section class="hero">
-
-<h1>🧩 SSC Figure Classification Practice</h1>
-
-<p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
-
+    <h1>🧩 SSC Figure Classification Practice</h1>
+    <p>50 Exam-Oriented Questions with Answers &amp; Detailed Solutions</p>
 </section>
-
 
 <div class="container">
 
-<div class="intro">
+    <div class="intro">
+        <h2>SSC Figure Classification Practice Set</h2>
 
-<h2>SSC Figure Classification Practice Set</h2>
+        <p>
+        This practice set contains figure-based classification questions designed for SSC CGL and other Government Exams. In each question, three figures follow a common structural rule while one figure is different.
+        </p>
 
-<p>
-This practice set contains figure-based classification questions designed for SSC CGL and other Government Exams. In each question, three figures follow a common structural rule while one figure is different.
-</p>
+        <ul>
+            <li>Shape and structural classification</li>
+            <li>Symmetry and orientation based classification</li>
+            <li>Internal line and region based figures</li>
+            <li>Dot, intersection and enclosure patterns</li>
+            <li>Open and closed figure relationships</li>
+            <li>Nested and embedded figure classification</li>
+            <li>Rotation and positional relationships</li>
+            <li>Mixed SSC CGL level non-verbal reasoning patterns</li>
+        </ul>
+    </div>
 
-<ul>
-<li>Shape and structural classification</li>
-<li>Symmetry and orientation based classification</li>
-<li>Internal line and region based figures</li>
-<li>Dot, intersection and enclosure patterns</li>
-<li>Open and closed figure relationships</li>
-<li>Nested and embedded figure classification</li>
-<li>Rotation and positional relationships</li>
-<li>Mixed SSC CGL level non-verbal reasoning patterns</li>
-</ul>
+    <div class="note">
+        <strong>📌 How to Attempt</strong>
 
-</div>
+        <ul style="margin:10px 0 0 20px;">
+            <li>Observe all four figures carefully.</li>
+            <li>Three figures follow one common structural rule and one figure is different.</li>
+            <li>Do not judge the figures only by their size or orientation.</li>
+            <li>Pay attention to lines, symmetry, regions, dots, intersections, enclosure and internal arrangement.</li>
+            <li>After selecting an option, the correct answer and detailed solution will appear.</li>
+            <li>Options are shuffled automatically while the correct answer remains logically unchanged.</li>
+            <li>Try all 50 questions and check your final score.</li>
+        </ul>
+    </div>
 
+    <div id="quiz"></div>
 
-<div class="note">
+    <div class="score-box">
+        <h2>📊 Practice Result / अभ्यास परिणाम</h2>
+        <div class="score-number" id="score">0 / 50</div>
 
-<strong>📌 How to Attempt</strong>
+        <div class="stats">
+            <span>Attempted / प्रयास: <b id="attempted">0</b></span>
+            <span>Correct / सही: <b id="correct">0</b></span>
+            <span>Wrong / गलत: <b id="wrong">0</b></span>
+        </div>
+    </div>
 
-<ul style="margin:10px 0 0 20px;">
-
-<li>Observe all four figures carefully.</li>
-<li>Three figures follow one common structural rule and one figure is different.</li>
-<li>Do not judge the figures only by their size or orientation.</li>
-<li>Pay attention to lines, symmetry, regions, dots, intersections, enclosure and internal arrangement.</li>
-<li>After selecting an option, the correct answer and detailed solution will appear.</li>
-<li>Options are shuffled automatically while the correct answer remains logically unchanged.</li>
-<li>Try all 50 questions and check your final score.</li>
-
-</ul>
-
-</div>
-
-
-<div id="quiz"></div>
-
-
-<div class="score-box">
-
-<h2>📊 Practice Result / अभ्यास परिणाम</h2>
-
-<div class="score-number" id="score">0 / 50</div>
-
-<div class="stats">
-
-<span>Attempted / प्रयास: <b id="attempted">0</b></span>
-<span>Correct / सही: <b id="correct">0</b></span>
-<span>Wrong / गलत: <b id="wrong">0</b></span>
+    <div class="button-area">
+        <button class="btn" onclick="resetQuiz()">🔄 Reset Practice / पुनः प्रयास करें</button>
+    </div>
 
 </div>
-
-</div>
-
-
-<div class="button-area">
-
-<button class="btn" onclick="resetQuiz()">🔄 Reset Practice / पुनः प्रयास करें</button>
-
-</div>
-
-</div>
-
 
 <footer>
-
-<strong>LET'S QUALIFYNOW</strong><br>
-
-N Saurabh Sir — Reasoning Faculty<br>
-
-SSC • Banking • Railway • Government Exams<br><br>
-
-Concept Clarity • Practice • Exam-Oriented Preparation<br><br>
-
-YouTube — Let's QualifyNow
-
+    <strong>LET'S QUALIFYNOW</strong><br>
+    N Saurabh Sir — Reasoning Faculty<br>
+    SSC • Banking • Railway • Government Exams<br><br>
+    Concept Clarity • Practice • Exam-Oriented Preparation<br><br>
+    YouTube — Let's QualifyNow
 </footer>
 
-
 <script>
-
 /* =========================================================
    FIGURE DRAWING ENGINE
    ========================================================= */
-
-function esc(s){
-    return s;
-}
 
 function line(x1,y1,x2,y2,w=4){
     return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
@@ -506,10 +602,8 @@ function rect(x,y,w,h,fill="none"){
 }
 
 function figureSVG(f){
-
     let s = "";
 
-    /* 1. Triangle family */
     if(f.type==="triangle"){
         s += polygon("75,18 125,102 25,102");
         if(f.inner==="v") s += line(75,42,75,82);
@@ -525,7 +619,6 @@ function figureSVG(f){
         }
     }
 
-    /* 2. Square family */
     if(f.type==="square"){
         s += rect(28,28,94,94);
         if(f.inner==="v") s += line(75,28,75,122);
@@ -547,7 +640,6 @@ function figureSVG(f){
         }
     }
 
-    /* 3. Circle family */
     if(f.type==="circle"){
         s += circle(75,75,47);
         if(f.inner==="v") s += line(75,28,75,122);
@@ -568,7 +660,6 @@ function figureSVG(f){
         }
     }
 
-    /* 4. Diamond family */
     if(f.type==="diamond"){
         s += polygon("75,18 125,75 75,132 25,75");
         if(f.inner==="v") s += line(75,32,75,118);
@@ -583,7 +674,6 @@ function figureSVG(f){
         }
     }
 
-    /* 5. Hexagon family */
     if(f.type==="hexagon"){
         s += polygon("45,25 105,25 125,75 105,125 45,125 25,75");
         if(f.inner==="v") s += line(75,27,75,123);
@@ -598,7 +688,6 @@ function figureSVG(f){
         }
     }
 
-    /* 6. Outer shape with dots */
     if(f.type==="dots"){
         if(f.outer==="square") s += rect(28,28,94,94);
         if(f.outer==="circle") s += circle(75,75,47);
@@ -620,7 +709,6 @@ function figureSVG(f){
         });
     }
 
-    /* 7. Nested shapes */
     if(f.type==="nested"){
         if(f.outer==="square") s += rect(28,28,94,94);
         if(f.outer==="circle") s += circle(75,75,48);
@@ -632,26 +720,17 @@ function figureSVG(f){
         if(f.inner==="triangle") s += polygon("75,47 101,95 49,95");
     }
 
-    /* 8. Divided regions */
     if(f.type==="divide"){
         s += rect(28,28,94,94);
-
-        if(f.mode==="vertical"){
-            s += line(75,28,75,122);
-        }
-        if(f.mode==="horizontal"){
-            s += line(28,75,122,75);
-        }
-        if(f.mode==="diagonal"){
-            s += line(28,28,122,122);
-        }
+        if(f.mode==="vertical") s += line(75,28,75,122);
+        if(f.mode==="horizontal") s += line(28,75,122,75);
+        if(f.mode==="diagonal") s += line(28,28,122,122);
         if(f.mode==="both"){
             s += line(28,28,122,122);
             s += line(122,28,28,122);
         }
     }
 
-    /* 9. Open / closed paths */
     if(f.type==="path"){
         if(f.kind==="closed"){
             s += `<path d="M40 100 L40 45 L110 45 L110 100 Z"
@@ -674,7 +753,6 @@ function figureSVG(f){
         }
     }
 
-    /* 10. Intersecting lines */
     if(f.type==="intersect"){
         if(f.mode==="cross"){
             s += line(30,30,120,120);
@@ -695,7 +773,6 @@ function figureSVG(f){
         }
     }
 
-    /* 11. Arrows */
     if(f.type==="arrow"){
         let d = {
             up:"M75 110 L75 35 M75 35 L55 55 M75 35 L95 55",
@@ -708,7 +785,6 @@ function figureSVG(f){
                 stroke-linecap="round" stroke-linejoin="round"/>`;
     }
 
-    /* 12. Curved and straight */
     if(f.type==="curve"){
         s += rect(28,28,94,94);
 
@@ -729,7 +805,6 @@ function figureSVG(f){
         }
     }
 
-    /* 13. Symmetry figures */
     if(f.type==="symmetry"){
         s += rect(28,28,94,94);
 
@@ -751,18 +826,8 @@ function figureSVG(f){
         }
     }
 
-    /* 14. Corner relation */
     if(f.type==="corner"){
         s += rect(28,28,94,94);
-
-        let pts={
-            tl:[45,45],
-            tr:[105,45],
-            bl:[45,105],
-            br:[105,105],
-            diag:[45,45,105,105],
-            anti:[105,45,45,105]
-        };
 
         if(f.pos==="diag"){
             s += circle(45,45,7,"#243b53");
@@ -781,29 +846,19 @@ function figureSVG(f){
         }
     }
 
-    /* 15. Circle sector */
     if(f.type==="sector"){
         s += circle(75,75,47);
 
-        if(f.mode==="vertical"){
-            s += line(75,28,75,122);
-        }
-        if(f.mode==="horizontal"){
-            s += line(28,75,122,75);
-        }
+        if(f.mode==="vertical") s += line(75,28,75,122);
+        if(f.mode==="horizontal") s += line(28,75,122,75);
         if(f.mode==="both"){
             s += line(75,28,75,122);
             s += line(28,75,122,75);
         }
-        if(f.mode==="diagonal"){
-            s += line(42,42,108,108);
-        }
+        if(f.mode==="diagonal") s += line(42,42,108,108);
     }
 
-    return `
-    <svg viewBox="0 0 150 150" aria-label="Figure">
-        ${s}
-    </svg>`;
+    return `<svg viewBox="0 0 150 150" aria-label="Figure">${s}</svg>`;
 }
 
 
@@ -812,9 +867,6 @@ function figureSVG(f){
    ========================================================= */
 
 const questions = [
-
-/* PART 1 */
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -826,7 +878,6 @@ figs:[
 answer:3,
 solution:"In the first three figures, the internal line runs vertically from the upper region toward the base. In the fourth figure, the internal line is horizontal. Therefore, the fourth figure is different."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -838,7 +889,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain two diagonal lines crossing each other. The fourth contains vertical and horizontal lines instead. Hence, the fourth figure is the odd one."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -850,7 +900,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain a single central dot. The fourth contains a small circle instead of a dot. Thus, the fourth figure is different."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -862,7 +911,6 @@ figs:[
 answer:3,
 solution:"The internal division in the first three diamonds is vertical. In the fourth it is horizontal. Therefore, the fourth figure is different."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -874,7 +922,6 @@ figs:[
 answer:3,
 solution:"The first three hexagons contain two diagonal lines forming a cross. The fourth contains only one vertical line. Hence, the fourth figure is different."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -886,7 +933,6 @@ figs:[
 answer:3,
 solution:"In the first three figures, the inner and outer shapes are different. In the fourth figure, the inner and outer shapes are both squares. Therefore, the fourth figure is different."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -898,7 +944,6 @@ figs:[
 answer:3,
 solution:"The first three figures have vertical symmetry: their internal dots are placed symmetrically about the vertical axis. The fourth figure lacks this symmetry."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -910,7 +955,6 @@ figs:[
 answer:3,
 solution:"The first three figures have horizontal symmetry. The fourth has vertical symmetry instead. Hence, the fourth figure is different."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -922,7 +966,6 @@ figs:[
 answer:3,
 solution:"The square is divided vertically in the first three figures, whereas the fourth is divided horizontally."
 },
-
 {
 part:"Part 1 — Shape, Structure & Symmetry",
 figs:[
@@ -935,8 +978,6 @@ answer:3,
 solution:"The first three squares are divided by one diagonal line. The fourth has two diagonal lines crossing each other. Therefore, the fourth figure is different."
 },
 
-/* PART 2 */
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -948,7 +989,6 @@ figs:[
 answer:3,
 solution:"In the first three figures the two dots are vertically aligned. In the fourth they are horizontally aligned."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -960,7 +1000,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain two horizontally aligned dots. The fourth contains diagonally placed dots."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -972,7 +1011,6 @@ figs:[
 answer:3,
 solution:"The first three figures have two dots lying on the same diagonal. The fourth has a vertical arrangement."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -984,7 +1022,6 @@ figs:[
 answer:3,
 solution:"The first three figures have dots at opposite corners on the same diagonal. The fourth has dots on the other diagonal."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -996,7 +1033,6 @@ figs:[
 answer:3,
 solution:"The first three figures have dots at adjacent corners. The fourth has dots at opposite corners."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -1008,7 +1044,6 @@ figs:[
 answer:3,
 solution:"The circle is divided vertically in the first three figures. The fourth circle is divided horizontally."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -1020,7 +1055,6 @@ figs:[
 answer:3,
 solution:"The first three circles contain one horizontal dividing line. The fourth contains both horizontal and vertical lines."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -1032,7 +1066,6 @@ figs:[
 answer:3,
 solution:"A diagonal line divides each of the first three circles. The fourth uses a vertical division."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -1044,7 +1077,6 @@ figs:[
 answer:3,
 solution:"In the first three figures, the inner shape differs from the outer shape. The fourth repeats the same shape inside and outside."
 },
-
 {
 part:"Part 2 — Internal Arrangement",
 figs:[
@@ -1057,8 +1089,6 @@ answer:3,
 solution:"The first three figures show two different nested shapes. The fourth contains identical outer and inner circles."
 },
 
-/* PART 3 */
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1070,7 +1100,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain two intersecting diagonal lines. The fourth contains parallel lines which do not intersect."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1082,7 +1111,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain two parallel lines. The fourth contains intersecting lines."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1094,7 +1122,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain three lines meeting/intersecting in a central arrangement. The fourth has only a two-line arrangement."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1106,7 +1133,6 @@ figs:[
 answer:3,
 solution:"The first three figures form closed paths. The fourth path remains open because its final side is missing."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1118,7 +1144,6 @@ figs:[
 answer:3,
 solution:"The first three figures are open paths. The fourth forms a completely closed path."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1130,7 +1155,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain a closed path with the characteristic upper zig-zag structure. The fourth is a simple closed rectangular path."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1142,7 +1166,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain a curved internal line. The fourth contains only straight diagonal lines."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1154,7 +1177,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain two internal elements, including two curved/straight components. The fourth contains only one curved internal element."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1166,7 +1188,6 @@ figs:[
 answer:3,
 solution:"The first three figures have only straight internal lines. The fourth contains a curved internal line."
 },
-
 {
 part:"Part 3 — Lines, Intersections & Paths",
 figs:[
@@ -1179,8 +1200,6 @@ answer:3,
 solution:"The two lines properly cross each other in the first three figures. In the fourth, the lines meet in a different non-crossing arrangement."
 },
 
-/* PART 4 */
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1192,7 +1211,6 @@ figs:[
 answer:3,
 solution:"The first three arrows point upward. The fourth arrow points downward."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1204,7 +1222,6 @@ figs:[
 answer:3,
 solution:"The first three figures have arrows pointing right. The fourth points left."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1216,7 +1233,6 @@ figs:[
 answer:3,
 solution:"The first three arrows point downward, while the fourth points upward."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1228,7 +1244,6 @@ figs:[
 answer:3,
 solution:"The first three arrows point left. The fourth arrow points right."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1240,7 +1255,6 @@ figs:[
 answer:3,
 solution:"The internal line orientation is identical in the first three triangles but different in the fourth."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1252,7 +1266,6 @@ figs:[
 answer:3,
 solution:"The first three diamonds contain horizontal internal division, whereas the fourth contains vertical division."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1264,7 +1277,6 @@ figs:[
 answer:3,
 solution:"The internal line is vertical in the first three squares and horizontal in the fourth."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1276,7 +1288,6 @@ figs:[
 answer:3,
 solution:"The first three circles are vertically divided. The fourth is horizontally divided."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1288,7 +1299,6 @@ figs:[
 answer:3,
 solution:"The first three hexagons have a vertical internal line. The fourth has a horizontal internal line."
 },
-
 {
 part:"Part 4 — Orientation & Direction",
 figs:[
@@ -1301,8 +1311,6 @@ answer:3,
 solution:"The first three circles are divided diagonally. The fourth is divided horizontally."
 },
 
-/* PART 5 */
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1314,7 +1322,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain a diamond inside the square. The fourth contains a smaller square instead."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1326,7 +1333,6 @@ figs:[
 answer:3,
 solution:"The first three circles contain diagonal crossing lines. The fourth contains vertical and horizontal crossing lines."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1338,7 +1344,6 @@ figs:[
 answer:3,
 solution:"The first three hexagons contain a smaller hexagonal region inside. The fourth contains only a central dot."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1350,7 +1355,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain vertical and horizontal crossing lines. The fourth contains diagonal crossing lines."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1362,7 +1366,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain three dots arranged in the same triangular pattern. The fourth contains only two vertically aligned dots."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1374,7 +1377,6 @@ figs:[
 answer:3,
 solution:"The first three figures have two dots at opposite corners. The fourth has only one dot."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1386,7 +1388,6 @@ figs:[
 answer:3,
 solution:"In the first three figures the inner and outer shapes are different. In the fourth both shapes are circles."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1398,7 +1399,6 @@ figs:[
 answer:3,
 solution:"The first three squares contain two diagonal lines crossing each other. The fourth contains only one vertical dividing line."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1410,7 +1410,6 @@ figs:[
 answer:3,
 solution:"The first three figures have vertical symmetry. The fourth has horizontal symmetry."
 },
-
 {
 part:"Part 5 — Mixed SSC CGL Level Classification",
 figs:[
@@ -1423,8 +1422,6 @@ answer:3,
 solution:"The first three figures form closed structures. The fourth remains open because one side is missing."
 },
 
-/* PART 6 */
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1436,7 +1433,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain diagonal crossing internal lines. The fourth contains horizontal and vertical crossing lines."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1448,7 +1444,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain a single central dot. The fourth contains a small circular region."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1460,7 +1455,6 @@ figs:[
 answer:3,
 solution:"The first three figures have two vertically aligned dots irrespective of the outer shape. The fourth has horizontally aligned dots."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1472,7 +1466,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain two horizontally aligned dots. The fourth contains three dots."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1484,7 +1477,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain vertical and horizontal internal divisions. The fourth contains diagonal crossing lines instead."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1496,7 +1488,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain only straight internal elements. The fourth includes a curved internal element."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1508,7 +1499,6 @@ figs:[
 answer:3,
 solution:"The first three figures consist of two parallel lines. The fourth contains three intersecting lines."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1520,7 +1510,6 @@ figs:[
 answer:3,
 solution:"The first three figures contain different inner and outer shapes. The fourth contains identical inner and outer shapes."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1532,7 +1521,6 @@ figs:[
 answer:3,
 solution:"The first three figures have dots at diagonally opposite corners. The fourth has dots at adjacent corners."
 },
-
 {
 part:"Part 6 — Advanced Mixed Classification",
 figs:[
@@ -1544,99 +1532,54 @@ figs:[
 answer:3,
 solution:"The first three arrows point upward. The fourth points toward the right."
 }
-
 ];
 
 
-/* =========================================================
-   RENDER QUESTIONS
-   ========================================================= */
-
+/* RENDER QUESTIONS */
 let attempted = 0;
 let correct = 0;
 let wrong = 0;
 
 function shuffle(array){
-
     let a = [...array];
 
     for(let i=a.length-1;i>0;i--){
-
         const j = Math.floor(Math.random()*(i+1));
-
         [a[i],a[j]] = [a[j],a[i]];
     }
 
     return a;
 }
 
-
 function renderQuiz(){
-
     const quiz = document.getElementById("quiz");
-
     quiz.innerHTML = "";
 
     let currentPart = "";
+    let partElement = null;
 
     questions.forEach((q,index)=>{
-
         if(q.part !== currentPart){
-
             currentPart = q.part;
 
-            const part = document.createElement("div");
+            partElement = document.createElement("div");
+            partElement.className = "part";
+            partElement.innerHTML = `<div class="part-title">${currentPart}</div>`;
 
-            part.className = "part";
-
-            part.innerHTML = `
-                <div class="part-title">${currentPart}</div>
-            `;
-
-            quiz.appendChild(part);
-
-            q._partElement = part;
-
+            quiz.appendChild(partElement);
         }
 
-        const partElement = q._partElement || quiz.lastElementChild;
-
         const card = document.createElement("div");
-
         card.className = "question-card";
-
-        card.dataset.answer = "";
 
         const optionLetters = ["A","B","C","D"];
 
-        let figures = q.figs.map((fig,i)=>({
-            fig:fig,
-            original:i
-        }));
-
-        /*
-           Figure order is kept fixed so that the visual
-           classification rule remains clear.
-        */
-
-        const figureHTML = figures.map((item,i)=>`
-
+        const figureHTML = q.figs.map((fig,i)=>`
             <div class="figure-box">
-
-                <div class="figure-label">
-                    ${optionLetters[i]}
-                </div>
-
-                ${figureSVG(item.fig)}
-
+                <div class="figure-label">${optionLetters[i]}</div>
+                ${figureSVG(fig)}
             </div>
-
         `).join("");
-
-        /*
-           Shuffle option identity while keeping the
-           correct logical figure attached to its option.
-        */
 
         let optionData = q.figs.map((fig,i)=>({
             original:i,
@@ -1646,77 +1589,43 @@ function renderQuiz(){
         optionData = shuffle(optionData);
 
         const optionsHTML = optionData.map((item,i)=>`
-
             <div class="option"
                  data-original="${item.original}"
                  onclick="checkAnswer(this,${index})">
-
                 ${optionLetters[i]}. Figure ${item.letter}
-
             </div>
-
         `).join("");
 
         card.innerHTML = `
-
             <div class="question">
-
                 Q${index+1}. Select the figure which is different from the other three.
                 <br>
-
                 हिंदी: वह आकृति चुनिए जो अन्य तीन आकृतियों से भिन्न है।
-
             </div>
 
-            <div class="figure-row">
+            <div class="figure-row">${figureHTML}</div>
 
-                ${figureHTML}
-
-            </div>
-
-            <div class="options">
-
-                ${optionsHTML}
-
-            </div>
+            <div class="options">${optionsHTML}</div>
 
             <div class="solution">
-
-                <strong>
-                    Answer / उत्तर:
-                    Figure ${optionLetters[q.answer]}
-                </strong>
-
+                <strong>Answer / उत्तर: Figure ${optionLetters[q.answer]}</strong>
                 <br><br>
-
                 ${q.solution}
-
                 <br><br>
-
                 <strong>हिंदी:</strong>
                 ${translateSolution(q.solution)}
-
             </div>
-
         `;
 
         q._card = card;
-
         partElement.appendChild(card);
-
     });
-
 }
 
 
-/* =========================================================
-   SIMPLE HINDI SOLUTION SET
-   ========================================================= */
-
+/* HINDI SOLUTIONS */
 function translateSolution(text){
-
     const map = {
-
         "In the first three figures, the internal line runs vertically from the upper region toward the base. In the fourth figure, the internal line is horizontal. Therefore, the fourth figure is different.":
         "पहली तीन आकृतियों में आंतरिक रेखा ऊपरी भाग से नीचे की ओर लंबवत है। चौथी आकृति में यह रेखा क्षैतिज है। इसलिए चौथी आकृति भिन्न है।",
 
@@ -1725,24 +1634,17 @@ function translateSolution(text){
 
         "The first three figures contain a single central dot. The fourth contains a small circle instead of a dot. Thus, the fourth figure is different.":
         "पहली तीन आकृतियों में केंद्र में एक बिंदु है। चौथी आकृति में बिंदु के स्थान पर छोटा वृत्त है। इसलिए चौथी आकृति भिन्न है।"
-
     };
 
     if(map[text]) return map[text];
 
     return "पहली तीन आकृतियों में एक समान संरचनात्मक नियम पाया जाता है, जबकि चौथी आकृति उस नियम का पालन नहीं करती। इसलिए चौथी आकृति भिन्न है।";
-
 }
 
 
-/* =========================================================
-   ANSWER CHECK
-   ========================================================= */
-
+/* ANSWER CHECK */
 function checkAnswer(option,index){
-
     const q = questions[index];
-
     const card = q._card;
 
     if(card.classList.contains("answered")) return;
@@ -1750,73 +1652,44 @@ function checkAnswer(option,index){
     card.classList.add("answered");
 
     const selected = Number(option.dataset.original);
-
     const allOptions = card.querySelectorAll(".option");
 
     allOptions.forEach(opt=>{
-
         opt.style.cursor = "default";
-
         opt.onclick = null;
 
         const original = Number(opt.dataset.original);
 
         if(original === q.answer){
-
             opt.classList.add("correct");
-
         }
-
     });
 
     if(selected === q.answer){
-
         option.classList.add("correct");
-
         correct++;
-
     }else{
-
         option.classList.add("wrong");
-
         wrong++;
-
     }
 
     attempted++;
 
-    const solution = card.querySelector(".solution");
-
-    solution.style.display = "block";
+    card.querySelector(".solution").style.display = "block";
 
     updateScore();
-
 }
-
 
 function updateScore(){
-
-    document.getElementById("score").textContent =
-        correct + " / 50";
-
-    document.getElementById("attempted").textContent =
-        attempted;
-
-    document.getElementById("correct").textContent =
-        correct;
-
-    document.getElementById("wrong").textContent =
-        wrong;
-
+    document.getElementById("score").textContent = correct + " / 50";
+    document.getElementById("attempted").textContent = attempted;
+    document.getElementById("correct").textContent = correct;
+    document.getElementById("wrong").textContent = wrong;
 }
 
 
-/* =========================================================
-   RESET
-   ========================================================= */
-
+/* RESET */
 function resetQuiz(){
-
     attempted = 0;
     correct = 0;
     wrong = 0;
@@ -1826,23 +1699,115 @@ function resetQuiz(){
     });
 
     updateScore();
-
     renderQuiz();
 
     window.scrollTo({
         top:0,
         behavior:"smooth"
     });
-
 }
 
 
-/* =========================================================
-   START
-   ========================================================= */
-
+/* START */
 renderQuiz();
+updateScore();
+</script>
 
+<script>
+/* MORE DROPDOWN — MATCHED WITH ANALOGY PRACTICE */
+(function(){
+    const moreMenu = document.getElementById("moreMenu");
+    const moreButton = document.getElementById("moreButton");
+    const moreDropdown = document.getElementById("moreDropdown");
+    const siteNavigation = document.getElementById("siteNavigation");
+
+    if(!moreMenu || !moreButton || !moreDropdown || !siteNavigation){
+        return;
+    }
+
+    document.body.appendChild(moreDropdown);
+
+    function positionMoreDropdown(){
+        const buttonRect = moreButton.getBoundingClientRect();
+
+        moreDropdown.style.left = "8px";
+        moreDropdown.style.top = "0px";
+        moreDropdown.style.visibility = "hidden";
+        moreDropdown.classList.add("show");
+
+        const dropdownRect = moreDropdown.getBoundingClientRect();
+        const dropdownWidth = dropdownRect.width;
+        const dropdownHeight = dropdownRect.height;
+
+        let left = buttonRect.left;
+        let top = buttonRect.bottom;
+
+        if(left + dropdownWidth > window.innerWidth - 8){
+            left = window.innerWidth - dropdownWidth - 8;
+        }
+
+        if(left < 8){
+            left = 8;
+        }
+
+        if(top + dropdownHeight > window.innerHeight - 8){
+            top = buttonRect.top - dropdownHeight;
+        }
+
+        if(top < 8){
+            top = 8;
+        }
+
+        moreDropdown.style.left = left + "px";
+        moreDropdown.style.top = top + "px";
+        moreDropdown.style.visibility = "visible";
+    }
+
+    function openMoreMenu(){
+        positionMoreDropdown();
+        moreButton.setAttribute("aria-expanded","true");
+    }
+
+    function closeMoreMenu(){
+        moreDropdown.classList.remove("show");
+        moreDropdown.style.visibility = "";
+        moreButton.setAttribute("aria-expanded","false");
+    }
+
+    moreButton.addEventListener("click",function(event){
+        event.stopPropagation();
+
+        if(moreDropdown.classList.contains("show")){
+            closeMoreMenu();
+        }else{
+            openMoreMenu();
+        }
+    });
+
+    document.addEventListener("click",function(event){
+        if(
+            !moreMenu.contains(event.target) &&
+            !moreDropdown.contains(event.target)
+        ){
+            closeMoreMenu();
+        }
+    });
+
+    moreDropdown.addEventListener("click",function(event){
+        event.stopPropagation();
+    });
+
+    document.addEventListener("keydown",function(event){
+        if(event.key === "Escape"){
+            closeMoreMenu();
+            moreButton.focus();
+        }
+    });
+
+    siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+    window.addEventListener("scroll",closeMoreMenu);
+    window.addEventListener("resize",closeMoreMenu);
+})();
 </script>
 
 </body>
