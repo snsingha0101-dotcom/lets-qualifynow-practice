@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,34 +17,118 @@ body{
  line-height:1.6;
 }
 
-header{
+/* HEADER AND NAVIGATION — SAME AS ANALOGY PRACTICE */
+.site-header{
+ display:flex;
+ align-items:stretch;
  background:#102a43;
  color:#fff;
- padding:15px 5%;
+ width:100%;
+ position:relative;
+ z-index:100;
 }
 
-.header-inner{
- max-width:1200px;
- margin:auto;
+.site-brand{
  display:flex;
  align-items:center;
- justify-content:space-between;
- gap:15px;
- flex-wrap:wrap;
+ flex:0 0 auto;
+ padding:10px 14px;
+ color:#fff;
+ font-size:17px;
+ font-weight:800;
+ text-decoration:none;
+ letter-spacing:.2px;
+ white-space:nowrap;
+ border-right:1px solid rgba(255,255,255,.12);
 }
 
-.brand{font-size:22px;font-weight:bold}
+.site-navigation{
+ display:flex;
+ align-items:center;
+ flex:1 1 auto;
+ min-width:0;
+ flex-wrap:nowrap;
+ gap:0;
+ padding:0 4px;
+ overflow-x:auto;
+ overflow-y:hidden;
+ white-space:nowrap;
+ scrollbar-width:thin;
+ scrollbar-color:#627d98 #102a43;
+ -webkit-overflow-scrolling:touch;
+}
 
-nav{display:flex;gap:14px;flex-wrap:wrap}
-
-nav a{
+.site-navigation a,
+.more-button{
+ display:block;
+ flex:0 0 auto;
  color:#fff;
+ text-decoration:none;
+ font-family:Arial,Helvetica,sans-serif;
+ font-size:11px;
+ font-weight:600;
+ padding:11px 7px;
+ border:0;
+ border-radius:0;
+ background:transparent;
+ cursor:pointer;
+ white-space:nowrap;
+}
+
+.site-navigation a:hover,
+.more-button:hover{
+ background:#173f5f;
+ color:#d9eaf7;
+}
+
+.more-menu{
+ position:relative;
+ flex:0 0 auto;
+}
+
+.more-button{
+ display:flex;
+ align-items:center;
+ gap:4px;
+}
+
+.more-arrow{font-size:9px}
+
+.more-dropdown{
+ display:none;
+ position:fixed;
+ top:0;
+ left:0;
+ right:auto;
+ width:170px;
+ min-width:170px;
+ background:#fff;
+ border:1px solid #d9e2ec;
+ border-radius:0 0 8px 8px;
+ box-shadow:0 8px 20px rgba(16,42,67,.16);
+ z-index:99999;
+}
+
+.more-dropdown.show{display:block}
+
+.more-dropdown a{
+ display:block;
+ color:#102a43;
+ padding:11px 14px;
+ border-bottom:1px solid #edf1f5;
+ white-space:nowrap;
  text-decoration:none;
  font-size:13px;
 }
 
-nav a:hover{color:#d9eaf7;text-decoration:underline}
+.more-dropdown a:last-child{border-bottom:none}
 
+.more-dropdown a:hover{
+ background:#eef6fb;
+ color:#102a43;
+}
+
+/* HERO */
 .hero{
  background:#173f5f;
  color:#fff;
@@ -52,8 +136,12 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
  padding:28px 15px;
 }
 
-.hero h1{font-size:27px;margin-bottom:7px}
+.hero h1{
+ font-size:27px;
+ margin-bottom:7px;
+}
 
+/* MAIN CONTENT */
 .container{
  max-width:1100px;
  margin:25px auto;
@@ -68,10 +156,22 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
  margin-bottom:18px;
 }
 
-.intro h2{color:#102a43;margin-bottom:8px}
-.intro ul{padding-left:22px;margin-top:10px}
+.intro h2{
+ color:#102a43;
+ margin-bottom:8px;
+}
+
+.intro ul{
+ padding-left:22px;
+ margin-top:10px;
+}
+
 .intro li{margin:4px 0}
-.hindi{color:#52606d;margin-top:5px}
+
+.hindi{
+ color:#52606d;
+ margin-top:5px;
+}
 
 .part-title{
  background:#d9eaf7;
@@ -83,9 +183,17 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
  font-weight:bold;
 }
 
-.question{font-size:17px;font-weight:bold}
-.question-hindi{color:#52606d;margin:5px 0 15px}
+.question{
+ font-size:17px;
+ font-weight:bold;
+}
 
+.question-hindi{
+ color:#52606d;
+ margin:5px 0 15px;
+}
+
+/* PAPER CUTTING DIAGRAMS */
 .process{
  display:grid;
  grid-template-columns:repeat(2,minmax(0,1fr));
@@ -123,7 +231,10 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
  margin-top:8px;
 }
 
-.options-title{font-weight:bold;margin:18px 0 10px}
+.options-title{
+ font-weight:bold;
+ margin:18px 0 10px;
+}
 
 .options{
  display:grid;
@@ -165,8 +276,16 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
  flex-shrink:1;
 }
 
-.option.correct{background:#e6f4ea;border-color:#238636}
-.option.wrong{background:#fdecea;border-color:#c62828}
+.option.correct{
+ background:#e6f4ea;
+ border-color:#238636;
+}
+
+.option.wrong{
+ background:#fdecea;
+ border-color:#c62828;
+}
+
 .option:disabled{cursor:default}
 
 .solution{
@@ -179,7 +298,11 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
 }
 
 .solution.show{display:block}
-.feedback{font-weight:bold;margin-bottom:8px}
+
+.feedback{
+ font-weight:bold;
+ margin-bottom:8px;
+}
 
 .correct-answer{
  color:#102a43;
@@ -189,6 +312,7 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
 
 .explanation{margin-top:8px}
 
+/* TEST RESULT */
 .score-box{
  background:#102a43;
  color:#fff;
@@ -239,24 +363,112 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
  margin:18px 0;
 }
 
+/* BACK NAVIGATION — SAME AS ANALOGY PRACTICE */
+.back-navigation{
+ width:100%;
+ text-align:center;
+ padding:25px 15px;
+ background:#f7f9fc;
+ margin-top:10px;
+}
+
+.back-navigation a{
+ display:inline-block;
+ color:#173f5f;
+ background:#e8f1f8;
+ border:1px solid #d9e2ec;
+ border-radius:8px;
+ padding:11px 22px;
+ font-size:14px;
+ font-weight:700;
+ text-decoration:none;
+ transition:background .2s;
+}
+
+.back-navigation a:hover{background:#d9eaf7}
+
+/* FOOTER — SAME AS ANALOGY PRACTICE */
 footer{
  background:#102a43;
  color:#fff;
  text-align:center;
- padding:20px;
- margin-top:30px;
+ padding:28px 20px;
+ margin-top:0;
+}
+
+footer p{
+ margin:5px 0;
  font-size:14px;
 }
 
-@media(max-width:700px){
- .header-inner{justify-content:center;text-align:center}
- .brand{width:100%;font-size:21px}
- nav{justify-content:center;gap:9px 12px}
- nav a{font-size:12px}
+footer .tagline{color:#d9eaf7}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+ .site-brand{
+  font-size:14px;
+  padding:10px 9px;
+ }
+
+ .site-navigation{padding:0 2px}
+
+ .site-navigation a,
+ .more-button{
+  font-size:10.5px;
+  padding:11px 6px;
+ }
+
  .hero h1{font-size:23px}
+}
+
+@media(max-width:600px){
+ .site-header{
+  width:100%;
+  align-items:stretch;
+ }
+
+ .site-brand{
+  font-size:12px;
+  padding:9px 7px;
+  letter-spacing:0;
+ }
+
+ .site-navigation{
+  flex:1 1 auto;
+  min-width:0;
+  flex-wrap:nowrap;
+  justify-content:flex-start;
+  padding:0 2px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+ }
+
+ .site-navigation a,
+ .more-button{
+  flex:0 0 auto;
+  font-size:10px;
+  padding:10px 6px;
+  white-space:nowrap;
+ }
+
+ .more-dropdown{
+  width:155px;
+  min-width:155px;
+  max-width:calc(100vw - 16px);
+ }
+
+ .back-navigation{padding:22px 10px}
+
+ .back-navigation a{
+  padding:10px 15px;
+  font-size:13px;
+ }
+
  .process{grid-template-columns:1fr}
  .options{grid-template-columns:1fr}
  .score-grid{grid-template-columns:repeat(2,1fr)}
+
  .intro,.question-card{padding:14px}
 }
 </style>
@@ -264,20 +476,38 @@ footer{
 
 <body>
 
-<header>
- <div class="header-inner">
-  <div class="brand">LET'S QUALIFYNOW</div>
-  <nav>
-   <a href="index.html">Home</a>
-   <a href="ssc-reasoning.html">SSC Reasoning</a>
-   <a href="courses.html">Courses</a>
-   <a href="study-material.html">Study Material</a>
-   <a href="live-classes.html">Live Classes</a>
-   <a href="test-series.html">Test Series</a>
-   <a href="exams.html">Exams</a>
-   <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
-  </nav>
- </div>
+<header class="site-header">
+ <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+    class="site-brand">LET'S QUALIFYNOW</a>
+
+ <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+  <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+  <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
+
+  <div class="more-menu" id="moreMenu">
+   <button type="button"
+           class="more-button"
+           id="moreButton"
+           aria-expanded="false"
+           aria-haspopup="true"
+           aria-controls="moreDropdown">
+    More <span class="more-arrow">▼</span>
+   </button>
+
+   <div class="more-dropdown" id="moreDropdown">
+    <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+    <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+   </div>
+  </div>
+ </nav>
 </header>
 
 <section class="hero">
@@ -322,14 +552,17 @@ footer{
     <span>Correct | सही</span>
     <strong id="correct">0</strong>
    </div>
+
    <div class="score-item">
     <span>Wrong | गलत</span>
     <strong id="wrong">0</strong>
    </div>
+
    <div class="score-item">
     <span>Attempted | हल किए</span>
     <strong id="attempted">0/50</strong>
    </div>
+
    <div class="score-item">
     <span>Marks | अंक</span>
     <strong id="marks">0/50</strong>
@@ -351,12 +584,81 @@ footer{
 
 </main>
 
+<div class="back-navigation">
+ <a href="https://snsingha0101-dotcom.github.io/lets-qualifynow-practice/ssc-topic-wise-practice.html">
+  ← Back to SSC Topic-wise Practice
+ </a>
+</div>
+
 <footer>
- LET'S QUALIFYNOW | N Saurabh Sir — Reasoning Faculty
- <br>SSC • Banking • Railway • Government Exams
+ <p><strong>LET'S QUALIFYNOW</strong></p>
+ <p class="tagline">You Are Closer To Success</p>
+ <p>N Saurabh Sir | Reasoning Faculty</p>
+ <p>SSC • Banking • Railway • Government Exams</p>
+ <p>Concept Clarity • Practice • Exam-Oriented Preparation</p>
+ <p>© 2026 Let's QualifyNow. All Rights Reserved.</p>
 </footer>
 
 <script>
+/* ANALOGY-STYLE MORE DROPDOWN */
+(function(){
+ const moreMenu=document.getElementById("moreMenu");
+ const moreButton=document.getElementById("moreButton");
+ const moreDropdown=document.getElementById("moreDropdown");
+
+ if(!moreMenu||!moreButton||!moreDropdown)return;
+
+ document.body.appendChild(moreDropdown);
+
+ function positionDropdown(){
+  const rect=moreButton.getBoundingClientRect();
+  const dropdownWidth=window.innerWidth<=600?155:170;
+  const left=Math.max(
+   8,
+   Math.min(rect.left,window.innerWidth-dropdownWidth-8)
+  );
+
+  moreDropdown.style.top=rect.bottom+"px";
+  moreDropdown.style.left=left+"px";
+ }
+
+ function closeDropdown(){
+  moreDropdown.classList.remove("show");
+  moreButton.setAttribute("aria-expanded","false");
+ }
+
+ moreButton.addEventListener("click",function(event){
+  event.stopPropagation();
+
+  if(moreDropdown.classList.contains("show")){
+   closeDropdown();
+  }else{
+   positionDropdown();
+   moreDropdown.classList.add("show");
+   moreButton.setAttribute("aria-expanded","true");
+  }
+ });
+
+ document.addEventListener("click",function(event){
+  if(!moreMenu.contains(event.target)&&
+     !moreDropdown.contains(event.target)){
+   closeDropdown();
+  }
+ });
+
+ window.addEventListener("resize",function(){
+  if(moreDropdown.classList.contains("show"))positionDropdown();
+ });
+
+ window.addEventListener("scroll",function(){
+  if(moreDropdown.classList.contains("show"))positionDropdown();
+ },true);
+
+ document.addEventListener("keydown",function(event){
+  if(event.key==="Escape")closeDropdown();
+ });
+})();
+
 /*
 Coordinate system:
 The complete paper is a 100 x 100 square.
@@ -391,6 +693,7 @@ function makeQuestion(i){
 
  if(fold==="V"){
   const y=Math.min(start,78-len);
+
   if(type===0) points=[[0,y],[d,y],[d,y+len],[0,y+len]];
   else if(type===1) points=[[0,y],[d,y+len/2],[0,y+len]];
   else if(type===2) points=[[0,y],[d,y],[d/2,y+len],[0,y+len]];
@@ -399,6 +702,7 @@ function makeQuestion(i){
  }
  else if(fold==="H"){
   const x=Math.min(start,78-len);
+
   if(type===0) points=[[x,0],[x+len,0],[x+len,d],[x,d]];
   else if(type===1) points=[[x,0],[x+len/2,d],[x+len,0]];
   else if(type===2) points=[[x,0],[x+len,d],[x+len/2,d],[x+len/4,0]];
@@ -409,6 +713,7 @@ function makeQuestion(i){
   const edge=i%2===0?"V":"H";
   const s=12+((i*5)%20);
   const a=12+((i*9)%26);
+
   if(edge==="V"){
    if(type===0) points=[[0,a],[d,a],[d,a+s],[0,a+s]];
    else if(type===1) points=[[0,a],[d,a+s/2],[0,a+s]];
@@ -444,9 +749,11 @@ function getPolygons(q,mask){
  if(mask.includes("V")){
   copies.push(base.map(([x,y])=>[100-x,y]));
  }
+
  if(mask.includes("H")){
   copies.push(base.map(([x,y])=>[x,100-y]));
  }
+
  if(mask.includes("V")&&mask.includes("H")){
   copies.push(base.map(([x,y])=>[100-x,100-y]));
  }
@@ -454,7 +761,7 @@ function getPolygons(q,mask){
  return copies;
 }
 
-function makeSVG(polygons,folded=false,fold=q.fold){
+function makeSVG(polygons,folded=false,fold="V"){
  let rectW=98,rectH=98,rectX=1,rectY=1;
 
  if(folded&&fold.includes("V")) rectW=48;
@@ -462,6 +769,7 @@ function makeSVG(polygons,folded=false,fold=q.fold){
 
  const shapes=polygons.map(poly=>{
   const pts=poly.map(p=>p.join(",")).join(" ");
+
   return `<polygon points="${pts}" fill="#ffffff"
     stroke="#c62828" stroke-width="1.7"
     stroke-linejoin="round"/>`;
@@ -482,6 +790,7 @@ function originalSVG(fold){
  if(fold.includes("V")){
   lines+=`<line x1="50" y1="1" x2="50" y2="99"
     stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>`;
+
   arrows+=`<path d="M82 28 L58 28 M58 28 L65 21 M58 28 L65 35"
     fill="none" stroke="#173f5f" stroke-width="2.5"
     stroke-linecap="round" stroke-linejoin="round"/>`;
@@ -490,6 +799,7 @@ function originalSVG(fold){
  if(fold.includes("H")){
   lines+=`<line x1="1" y1="50" x2="99" y2="50"
     stroke="#c62828" stroke-width="2" stroke-dasharray="4 3"/>`;
+
   arrows+=`<path d="M28 82 L28 58 M28 58 L21 65 M28 58 L35 65"
     fill="none" stroke="#173f5f" stroke-width="2.5"
     stroke-linecap="round" stroke-linejoin="round"/>`;
@@ -506,10 +816,13 @@ function originalSVG(fold){
 function foldedSVG(q){
  const pts=q.points.map(([u,v])=>{
   let x=u,y=v;
+
   if(q.fold.includes("V")) x=u/2;
   if(q.fold.includes("H")) y=v/2;
+
   return [x,y];
  });
+
  return makeSVG([pts],true,q.fold);
 }
 
@@ -520,12 +833,14 @@ function foldText(fold){
    hi:"दाएँ आधे कागज़ को लंबवत रेखा पर बाईं ओर मोड़ें।"
   };
  }
+
  if(fold==="H"){
   return {
    en:"Fold the bottom half upwards along the horizontal line.",
    hi:"नीचे के आधे कागज़ को क्षैतिज रेखा पर ऊपर की ओर मोड़ें।"
   };
  }
+
  return {
   en:"Fold the right half to the left, then fold the bottom half upwards.",
   hi:"पहले दाएँ आधे कागज़ को बाईं ओर मोड़ें, फिर नीचे के आधे हिस्से को ऊपर मोड़ें।"
@@ -551,6 +866,7 @@ const host=document.getElementById("questions");
 prepared.forEach((q,i)=>{
  const optionsHTML=q.options.map((mask,j)=>{
   const svg=makeSVG(getPolygons(q,mask),false,q.fold);
+
   return `<button class="option" type="button"
    id="q${i}o${j}" onclick="chooseAnswer(${i},${j})">
    <span class="option-letter">${String.fromCharCode(65+j)}.</span>
@@ -639,6 +955,7 @@ function chooseAnswer(qi,oi){
  }
 
  const letter=String.fromCharCode(65+q.correct);
+
  document.getElementById(`answer${qi}`).innerHTML=
   `Correct Answer: Option ${letter}<br>
    <span class="hindi">सही उत्तर: विकल्प ${letter}</span>`;
@@ -695,4 +1012,3 @@ function resetTest(){
 
 </body>
 </html>
-```
