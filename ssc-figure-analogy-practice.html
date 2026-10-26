@@ -197,6 +197,123 @@ footer{background:#102a43;color:#e1e8ed;text-align:center;padding:18px 10px;font
     .option svg{height:65px}
     .figure-label{font-size:14px}
 }
+
+/* TEST RESULT: CENTER ALIGNMENT */
+.score-box{
+    background:#fff;
+    border:2px solid #173f5f;
+    border-radius:10px;
+    padding:22px;
+    margin:28px 0;
+    text-align:center;
+}
+
+.score-box h2{
+    color:#102a43;
+    margin-bottom:14px;
+    font-size:23px;
+    text-align:center;
+}
+
+.score-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+    margin-bottom:16px;
+    text-align:center;
+}
+
+.score-item{
+    background:#eef6fb;
+    border:1px solid #d9e2ec;
+    border-radius:8px;
+    padding:13px 7px;
+    text-align:center;
+}
+
+.score-item span{
+    display:block;
+    font-size:13px;
+    color:#52606d;
+    margin-bottom:5px;
+}
+
+.score-item strong{
+    display:block;
+    font-size:25px;
+    color:#102a43;
+}
+
+.score-box p{
+    text-align:center;
+    margin:8px 0;
+}
+
+/* RESET BUTTON: CENTER */
+.reset-btn{
+    display:block;
+    margin:16px auto 0;
+    background:#173f5f;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    padding:10px 17px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.reset-btn:hover{
+    background:#102a43;
+}
+
+/* FOOTER: CENTER ALIGNMENT */
+footer{
+    background:#102a43;
+    color:#e1e8ed;
+    text-align:center;
+    padding:18px 10px;
+    font-size:13px;
+    margin-top:30px;
+    line-height:1.8;
+}
+
+/* MOBILE ALIGNMENT */
+@media(max-width:600px){
+    .score-box{
+        padding:16px 10px;
+        text-align:center;
+    }
+
+    .score-box h2{
+        font-size:21px;
+        text-align:center;
+    }
+
+    .score-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+        text-align:center;
+    }
+
+    .score-item{
+        text-align:center;
+    }
+
+    .score-box p{
+        text-align:center;
+    }
+
+    .reset-btn{
+        margin:16px auto 0;
+    }
+
+    footer{
+        text-align:center;
+        padding:18px 10px;
+    }
+}
+    
 </style>
 </head>
 
