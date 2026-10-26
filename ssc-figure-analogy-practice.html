@@ -9,14 +9,106 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#243b53;line-height:1.6}
-header{background:#102a43;color:#fff;padding:16px 4%;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-.header-container{display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand-block{flex-shrink:0}
-.brand{font-size:23px;font-weight:bold;letter-spacing:.5px}
-.tagline{font-size:13px;color:#d9eaf7;margin-top:2px}
-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 15px}
-nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap}
-nav a:hover{color:#d9eaf7;text-decoration:underline}
+
+/* HEADER: BRAND AND NAVIGATION ON THE SAME LINE */
+.site-header{
+    display:flex;
+    align-items:stretch;
+    background:#102a43;
+    color:#fff;
+    width:100%;
+    position:relative;
+    z-index:100;
+}
+.site-brand{
+    display:flex;
+    align-items:center;
+    flex:0 0 auto;
+    padding:10px 14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    text-decoration:none;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    border-right:1px solid rgba(255,255,255,.12);
+}
+.site-navigation{
+    display:flex;
+    align-items:center;
+    flex:1 1 auto;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:0 4px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:#627d98 #102a43;
+    -webkit-overflow-scrolling:touch;
+}
+.site-navigation a,
+.more-button{
+    display:block;
+    flex:0 0 auto;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:600;
+    padding:11px 7px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    cursor:pointer;
+    white-space:nowrap;
+}
+.site-navigation a:hover,
+.more-button:hover{
+    background:#173f5f;
+    color:#d9eaf7;
+}
+.more-menu{
+    position:relative;
+    flex:0 0 auto;
+}
+.more-button{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+.more-arrow{font-size:9px}
+.more-dropdown{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:auto;
+    width:170px;
+    min-width:170px;
+    background:#fff;
+    border:1px solid #d9e2ec;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 8px 20px rgba(16,42,67,.16);
+    z-index:99999;
+}
+.more-dropdown.show{display:block}
+.more-dropdown a{
+    display:block;
+    color:#102a43;
+    padding:11px 14px;
+    border-bottom:1px solid #edf1f5;
+    white-space:nowrap;
+    text-decoration:none;
+    font-size:13px;
+}
+.more-dropdown a:last-child{border-bottom:none}
+.more-dropdown a:hover{
+    background:#eef6fb;
+    color:#102a43;
+}
+
 .hero{background:#173f5f;color:#fff;text-align:center;padding:30px 16px}
 .hero h1{font-size:27px;margin-bottom:8px}
 .hero p{font-size:15px;color:#e1e8ed}
@@ -57,56 +149,86 @@ nav a:hover{color:#d9eaf7;text-decoration:underline}
 .reset-btn{background:#52606d;color:#fff}
 .reset-btn:hover{background:#243b53}
 footer{background:#102a43;color:#e1e8ed;text-align:center;padding:18px 10px;font-size:13px;margin-top:30px}
+
 @media(max-width:900px){
-.header-container{flex-direction:column;align-items:flex-start;gap:12px}
-nav{justify-content:flex-start}
+    .site-brand{font-size:14px;padding:10px 9px}
+    .site-navigation{padding:0 2px}
+    .site-navigation a,.more-button{font-size:10.5px;padding:11px 6px}
 }
-@media(max-width:700px){
-header{padding:14px 4%}
-.brand{font-size:20px}
-nav{gap:9px 12px}
-nav a{font-size:12px}
-.hero h1{font-size:22px}
-.container{width:96%;margin:16px auto}
-.question-card{padding:13px}
-.analogy-row{gap:5px}
-.figure-box{padding:5px 2px}
-.figure-box svg{height:82px}
-.question-mark{height:82px;font-size:34px}
-.options-grid{gap:6px}
-.option{padding:5px 2px}
-.option svg{height:75px}
-.option-head{font-size:13px}
-.score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){
+    .site-header{width:100%;align-items:stretch}
+    .site-brand{font-size:12px;padding:9px 7px;letter-spacing:0}
+    .site-navigation{
+        flex:1 1 auto;
+        min-width:0;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        padding:0 2px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+    .site-navigation a,.more-button{
+        flex:0 0 auto;
+        font-size:10px;
+        padding:10px 6px;
+        white-space:nowrap;
+    }
+    .more-dropdown{width:155px;min-width:155px;max-width:calc(100vw - 16px)}
+    .hero{padding:35px 15px}
+    .hero h1{font-size:22px}
+    .hero p{font-size:15px}
+    .container{width:96%;margin:16px auto}
+    .question-card{padding:13px}
+    .analogy-row{gap:5px}
+    .figure-box{padding:5px 2px}
+    .figure-box svg{height:82px}
+    .question-mark{height:82px;font-size:34px}
+    .options-grid{gap:6px}
+    .option{padding:5px 2px}
+    .option svg{height:75px}
+    .option-head{font-size:13px}
+    .score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:390px){
-.analogy-row{gap:3px}
-.figure-box svg{height:70px}
-.question-mark{height:70px;font-size:28px}
-.option svg{height:65px}
-.figure-label{font-size:14px}
+    .analogy-row{gap:3px}
+    .figure-box svg{height:70px}
+    .question-mark{height:70px;font-size:28px}
+    .option svg{height:65px}
+    .figure-label{font-size:14px}
 }
 </style>
 </head>
 
 <body>
-<header>
-<div class="header-container">
-    <div class="brand-block">
-        <div class="brand">LET'S QUALIFYNOW</div>
-        <div class="tagline">You Are Closer To Success</div>
-    </div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="ssc-reasoning.html">SSC Reasoning</a>
-        <a href="courses.html">Courses</a>
-        <a href="study-material.html">Study Material</a>
-        <a href="live-classes.html">Live Classes</a>
-        <a href="test-series.html">Test Series</a>
-        <a href="exams.html">Exams</a>
-        <a href="https://youtube.com/@letsqualifynow7636" target="_blank" rel="noopener">YouTube</a>
+<header class="site-header">
+    <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0"
+       class="site-brand">LET'S QUALIFYNOW</a>
+
+    <nav class="site-navigation" id="siteNavigation" aria-label="Main navigation">
+        <a href="https://sites.google.com/view/lets-qualify-now/home?authuser=0">Home</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/government-exam-preparation?authuser=0">Government Exam Preparation</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/courses?authuser=0">Courses</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/ssc-reasoning-course?authuser=0">SSC Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/state-exams-reasoning-course?authuser=0">State Exams Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/railway-reasoning-course?authuser=0">Railway Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/banking-reasoning-course?authuser=0">Banking Reasoning Course</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/youtube?authuser=0">YouTube</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/study-material?authuser=0">Study Material</a>
+        <a href="https://sites.google.com/view/lets-qualify-now/live-classes?authuser=0">Live Classes</a>
+
+        <div class="more-menu" id="moreMenu">
+            <button type="button" class="more-button" id="moreButton"
+                    aria-expanded="false" aria-haspopup="true"
+                    aria-controls="moreDropdown">
+                More <span class="more-arrow">▼</span>
+            </button>
+            <div class="more-dropdown" id="moreDropdown">
+                <a href="https://sites.google.com/view/lets-qualify-now/test-series?authuser=0">Test Series</a>
+                <a href="https://sites.google.com/view/lets-qualify-now/exams?authuser=0">Exams</a>
+            </div>
+        </div>
     </nav>
-</div>
 </header>
 
 <section class="hero">
@@ -495,6 +617,90 @@ function resetTest(){
 
 renderQuestions();
 updateScore();
+</script>
+
+<script>
+"use strict";
+
+const moreMenu = document.getElementById("moreMenu");
+const moreButton = document.getElementById("moreButton");
+const moreDropdown = document.getElementById("moreDropdown");
+const siteNavigation = document.getElementById("siteNavigation");
+
+/* Move dropdown outside the scrolling navigation so it is not clipped. */
+document.body.appendChild(moreDropdown);
+
+function positionMoreDropdown(){
+    const buttonRect = moreButton.getBoundingClientRect();
+
+    moreDropdown.style.left = "8px";
+    moreDropdown.style.top = "0px";
+    moreDropdown.style.visibility = "hidden";
+    moreDropdown.classList.add("show");
+
+    const dropdownRect = moreDropdown.getBoundingClientRect();
+    const dropdownWidth = dropdownRect.width;
+    const dropdownHeight = dropdownRect.height;
+
+    let left = buttonRect.left;
+    let top = buttonRect.bottom;
+
+    if(left + dropdownWidth > window.innerWidth - 8){
+        left = window.innerWidth - dropdownWidth - 8;
+    }
+    if(left < 8) left = 8;
+
+    if(top + dropdownHeight > window.innerHeight - 8){
+        top = buttonRect.top - dropdownHeight;
+    }
+    if(top < 8) top = 8;
+
+    moreDropdown.style.left = left + "px";
+    moreDropdown.style.top = top + "px";
+    moreDropdown.style.visibility = "visible";
+}
+
+function openMoreMenu(){
+    positionMoreDropdown();
+    moreButton.setAttribute("aria-expanded","true");
+}
+
+function closeMoreMenu(){
+    moreDropdown.classList.remove("show");
+    moreDropdown.style.visibility = "";
+    moreButton.setAttribute("aria-expanded","false");
+}
+
+moreButton.addEventListener("click",function(event){
+    event.stopPropagation();
+
+    if(moreDropdown.classList.contains("show")){
+        closeMoreMenu();
+    }else{
+        openMoreMenu();
+    }
+});
+
+document.addEventListener("click",function(event){
+    if(!moreMenu.contains(event.target) && !moreDropdown.contains(event.target)){
+        closeMoreMenu();
+    }
+});
+
+moreDropdown.addEventListener("click",function(event){
+    event.stopPropagation();
+});
+
+document.addEventListener("keydown",function(event){
+    if(event.key==="Escape"){
+        closeMoreMenu();
+        moreButton.focus();
+    }
+});
+
+siteNavigation.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("scroll",closeMoreMenu,{passive:true});
+window.addEventListener("resize",closeMoreMenu);
 </script>
 </body>
 </html>
